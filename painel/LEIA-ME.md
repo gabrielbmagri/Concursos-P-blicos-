@@ -39,3 +39,7 @@ Se `firebase-config.js` tiver os valores de exemplo (`COLE_AQUI`), o painel abre
 ## Simulados e Biblioteca
 
 Os simulados não vêm programados: você cadastra cada um (data, composição), registra o resultado, envia o gabarito comentado, cola a análise por assunto gerada pelo Claude (formato em `FORMATO-ANALISE-SIMULADO.md`) e lança a nota das discursivas. A Biblioteca guarda edital, leis e resumos (até 10 MB por arquivo, sem plano pago: os arquivos ficam em pedaços no Firestore).
+
+## Subtópicos
+
+Na aba Questões, linhas escritas como "Assunto – Subtópico" com porcentagem (0,91 e 0,09, ou equivalente) viram subtópicos: não somam questões, e a aba Subtópicos mostra matéria, assunto e subtópico em menu suspenso, com ordenação e busca. A linha do assunto, com certas e erradas em números, continua entrando nas métricas e na meta correspondente.

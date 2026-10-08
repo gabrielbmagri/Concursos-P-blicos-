@@ -4,9 +4,9 @@
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
 :root{
-  --bg:#ffffff; --fg:#111827; --fg2:#4b5563; --fg3:#6b7280; --line:#e5e7eb; --soft:#f3f4f6; --soft2:#e5e7eb;
-  --blue:#2563eb; --green:#15803d; --purple:#6d28d9; --orange:#c2410c; --teal:#0f766e; --indigo:#4338ca; --red:#b91c1c; --pink:#be185d; --slate:#334155; --gold:#f59e0b;
-  --good:#15803d; --bad:#b91c1c; --good-t:#dcfce7; --bad-t:#fee2e2; --warn-t:#fef3c7; --blue-t:#eff6ff;
+  --bg:#ffffff; --fg:#111827; --fg2:#4b5563; --fg3:#6b7280; --line:#ece6df; --soft:#f6f2ed; --soft2:#ebe3da;
+  --blue:#cf4a1e; --green:#15803d; --purple:#6d28d9; --orange:#c2410c; --teal:#0f766e; --indigo:#4338ca; --red:#b91c1c; --pink:#be185d; --slate:#334155; --gold:#f59e0b;
+  --good:#15803d; --bad:#b91c1c; --good-t:#dcfce7; --bad-t:#fee2e2; --warn-t:#fef3c7; --blue-t:#fff0e8;
   --m-REG:#2a78d6; --m-POR:#eb6834; --m-LIN:#4a3aa7; --m-TI:#1baf7a; --m-CP:#e87ba4; --m-ADM:#eda100; --m-CON:#008300; --m-ASR:#e34948; --m-ING:#2f9bb5;
   --font:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --display:"Nunito","Arial Rounded MT Bold","Segoe UI",sans-serif;
@@ -87,8 +87,9 @@ h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:
 .kpi .num small{font-size:.42em;font-weight:500;letter-spacing:0;margin-left:4px;color:rgba(255,255,255,.9)}
 .kpi .sub{font-size:13px;color:rgba(255,255,255,.92);line-height:1.3}
 .kpi .viz{margin-top:auto;padding-top:12px;display:flex;align-items:flex-end;min-height:36px}
-.kpi.blue{--k:var(--blue)} .kpi.green{--k:var(--green)} .kpi.purple{--k:var(--purple)} .kpi.orange{--k:var(--orange)}
-.kpi.teal{--k:var(--teal)} .kpi.indigo{--k:var(--indigo)} .kpi.pink{--k:var(--pink)} .kpi.red{--k:var(--red)} .kpi.slate{--k:var(--slate)}
+.kpi.blue{--k:#be4219} .kpi.green{--k:#23803f} .kpi.purple{--k:#b82458} .kpi.orange{--k:#a8490a}
+.kpi.teal{--k:#9b2f85} .kpi.indigo{--k:#0e7c86} .kpi.pink{--k:#c42b63} .kpi.red{--k:#c93030} .kpi.slate{--k:#5b4636}
+.kpi{background:linear-gradient(140deg,var(--k) 0%,color-mix(in srgb,var(--k) 90%,#ffa94d) 100%)}
 .sbars{display:flex;align-items:flex-end;gap:3px;height:34px;width:100%}
 .sbars span{flex:1;background:#fff;min-height:3px;border-radius:4px 4px 0 0}
 .sbars span.z{background:rgba(255,255,255,.28)}
@@ -288,6 +289,22 @@ textarea.in:focus{outline:3px solid var(--blue)}
 .ir2{padding:9px 2px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;font-size:14px}.ir2 b{font-size:12px;color:var(--fg2);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
 .tbl{overflow-x:auto}.tbl table{border-collapse:collapse;width:100%;font-size:13.5px}.tbl th,.tbl td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:center}.tbl th{font-weight:700;color:var(--fg2);font-size:12px}.tbl tbody th{text-align:left;color:var(--fg);font-size:13.5px}
 ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direction:column;gap:7px}
+.sbtools{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:12px}
+.sbm{border:1px solid var(--line);border-radius:18px;margin-bottom:10px;overflow:hidden;background:var(--bg)}
+.sbh{display:grid;grid-template-columns:18px minmax(0,1fr) 120px auto;gap:2px 12px;align-items:center;width:100%;text-align:left;padding:14px 16px;font:inherit}
+.sbh small{grid-column:2/-1;color:var(--fg3);font-size:12px}
+.sbh.sub{padding:11px 16px 11px 12px}
+.sbn{font-weight:700;font-size:14.5px;min-width:0}.sbn .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:8px}
+.sbbar{display:block;height:8px;border-radius:99px;background:#f08a7e;overflow:hidden}.sbbar i{display:block;height:100%;background:#3fae5a;border-radius:99px 0 0 99px}
+.sbv{display:inline-flex;gap:2px;font-size:14px;font-weight:800;min-width:76px;justify-content:flex-end}.sbv .g{color:var(--good)}.sbv .r{color:var(--bad)}
+.car{width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:7px solid var(--fg3);transform:rotate(-90deg);transition:transform .15s}.car.o{transform:none}
+.sbl{list-style:none;margin:0;padding:0 0 6px 18px;border-top:1px solid var(--line)}
+.sba{border-bottom:1px solid var(--line)}.sba:last-child{border-bottom:0}
+.sba .sbl{padding-left:30px;background:var(--soft);border-radius:0 0 0 0}
+.sbs{display:grid;grid-template-columns:minmax(0,1fr) 120px auto;gap:2px 12px;align-items:center;padding:10px 16px 10px 0;border-bottom:1px solid var(--line)}.sbs:last-child{border-bottom:0}
+.sbs .sbn{font-weight:500}.sbs small{grid-column:1/-1;color:var(--fg3);font-size:12px}
+.up{color:var(--good);font-weight:700}.dn{color:var(--bad);font-weight:700}
+@media (max-width:820px){.sbtools{grid-template-columns:minmax(0,1fr)}.sbh,.sbs{grid-template-columns:minmax(0,1fr) auto}.sbh .car{display:none}.sbn{grid-column:1;grid-row:1}.sbv{grid-column:2;grid-row:1}.sbbar{grid-column:1/-1;grid-row:2;margin:4px 0}.sbh small,.sbs small{grid-column:1/-1;grid-row:3}.sbl,.sba .sbl{padding-left:14px}}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -632,6 +649,14 @@ function parseSheet(aoa,name){
   for(let r=hi+1;r<aoa.length;r++){
     const row=aoa[r],g=k=>cm[k]!=null?row[cm[k]]:"";
     const mat=String(g("mat")||"").trim(),ass=String(g("ass")||"").trim();
+    const cr=parseFloat(String(g("c")).replace(",",".")),er=parseFloat(String(g("e")).replace(",","."));
+    const sp=/\s[–—-]\s/.exec(ass);
+    const isPct=isFinite(cr)&&isFinite(er)&&cr>=0&&er>=0&&cr<=1&&er<=1&&Math.abs(cr+er-1)<.03&&!toN(g("b"))&&(!!sp||!Number.isInteger(cr));
+    if(isPct){
+      const par=sp?ass.slice(0,sp.index).trim():ass,sub=sp?ass.slice(sp.index+sp[0].length).trim():"";
+      const k=subjectMatch(mat),rk=k?metaRank(k,par):[];
+      rows.push({mat,ass:par,sub:sub||par,pc:Math.round(cr*1000)/1000,dt:cellDate(g("dt"))||dflt,c:0,e:0,b:0,k,mid:rk[0]&&rk[0].score>=.4?rk[0].m.id:""});continue;
+    }
     let c=toN(g("c")),e=toN(g("e")),b=toN(g("b")),t=toN(g("tot"));
     if(cm.e==null||g("e")==="")if(t)e=Math.max(0,t-c-b);
     if(!mat&&!ass&&!(c+e+b))continue;
@@ -697,12 +722,12 @@ function restoreBackup(file){
   rd.readAsText(file,"UTF-8");
 }
 function doImport(){
-  const rows=imp.rows.filter(r=>r.k).map(r=>({mid:r.mid||"",k:r.k,dt:r.dt,c:r.c,e:r.e,b:r.b}));
-  if(!rows.length)return;
+  const all=imp.rows.filter(r=>r.k),rows=all.filter(r=>!r.sub).map(r=>({mid:r.mid||"",k:r.k,dt:r.dt,c:r.c,e:r.e,b:r.b,ass:r.ass||""})),subs=all.filter(r=>r.sub).map(r=>({mid:r.mid||"",k:r.k,dt:r.dt,p:r.ass||"",s:r.sub,pc:r.pc}));
+  if(!rows.length&&!subs.length)return;
   const id="imp-"+Date.now().toString(36);
-  save(id,{imp:1,name:imp.name,dt:ymd(new Date()),rows});
+  save(id,{imp:1,name:imp.name,dt:ymd(new Date()),rows,...(subs.length?{subs}:{})});
   const q=rows.reduce((s,r)=>s+r.c+r.e+r.b,0);
-  imp={name:"",rows:[],err:"",msg:`Importei ${rows.length} ${rows.length===1?"linha":"linhas"} com ${num(q)} questões. Elas já entraram nas métricas de matéria, assunto e semana.`,date:imp.date};
+  imp={name:"",rows:[],err:"",msg:`Importei ${rows.length} ${rows.length===1?"linha":"linhas"} com ${num(q)} questões${subs.length?` e ${subs.length} subtópicos com porcentagem (veja a aba Subtópicos)`:""}. Elas já entraram nas métricas de matéria, assunto e semana.`,date:imp.date};
   render();
 }
 
@@ -1264,6 +1289,78 @@ function smChange(e){
   return false;
 }
 
+/* ---------- subtópicos (porcentagens por subtópico dentro de cada assunto) ---------- */
+const sb={om:"az",oa:"menor",open:{},busca:""};
+const strip=t=>String(t||"").replace(/\(.*?\)/g,"");
+const sbKey=(k,mid,t)=>k+"|"+(mid||"t:"+norm(strip(t)));
+function subTree(){
+  const T={};
+  const node=(k,mid,t)=>{const m=T[k]||(T[k]={k,as:{}});const key=sbKey(k,mid,t);return m.as[key]||(m.as[key]={key,mid,nome:mid&&BY[mid]?BY[mid].a:"",c:0,e:0,b:0,subs:{}})};
+  for(const id in P()){
+    if(id.slice(0,4)!=="imp-")continue;
+    const d=P()[id];
+    (d.rows||[]).forEach(r=>{if(!r.k||!SUBJ.includes(r.k))return;const a=node(r.k,r.mid,r.ass);if(!a.nome&&r.ass)a.nome=r.ass;a.c+=r.c||0;a.e+=r.e||0;a.b+=r.b||0});
+    (d.subs||[]).forEach(s=>{if(!s.k||!SUBJ.includes(s.k))return;const a=node(s.k,s.mid,s.p);if(!a.nome)a.nome=strip(s.p).trim()||s.p;const sk=norm(s.s),x=a.subs[sk]||(a.subs[sk]={nome:s.s,v:[]});x.v.push({dt:s.dt||d.dt||"",pc:s.pc})});
+  }
+  const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
+  const out=[];
+  for(const k in T){
+    const as=Object.values(T[k].as).filter(a=>Object.keys(a.subs).length).map(a=>{
+      const subs=Object.values(a.subs).map(x=>{x.v.sort((p,q)=>p.dt<q.dt?-1:p.dt>q.dt?1:0);const last=x.v[x.v.length-1],prev=x.v.length>1?x.v[x.v.length-2]:null;return {nome:x.nome,pc:last.pc,dt:last.dt,n:x.v.length,avg:mean(x.v.map(z=>z.pc)),delta:prev?last.pc-prev.pc:null}});
+      const n=a.c+a.e+a.b,pc=n?a.c/n:mean(subs.map(z=>z.pc));
+      return {...a,subs,n,pc,hasN:!!n,nsub:subs.length};
+    });
+    if(!as.length)continue;
+    const cnt=as.filter(a=>a.hasN),tn=cnt.reduce((z,a)=>({c:z.c+a.c,e:z.e+a.e,b:z.b+a.b}),{c:0,e:0,b:0});
+    out.push({k,as,n:tot_(tn),pc:cnt.length?rate(tn):mean(as.map(a=>a.pc)),nsub:as.reduce((z,a)=>z+a.nsub,0)});
+  }
+  return out;
+}
+const sbSort=(arr,mode,pcf,nf)=>arr.slice().sort((a,b)=>mode==="az"?nf(a).localeCompare(nf(b),"pt-BR"):mode==="maior"?(pcf(b)??-1)-(pcf(a)??-1):(pcf(a)??2)-(pcf(b)??2));
+const sbBar=(pc)=>pc==null?"":`<span class="sbbar" aria-hidden="true"><i style="width:${Math.round(pc*100)}%"></i></span>`;
+const sbPc=pc=>pc==null?`<span class="sbv">–</span>`:`<span class="sbv"><b class="g">${Math.round(pc*100)}%</b><b class="r">${Math.round((1-pc)*100)}%</b></span>`;
+function subHtml(){
+  const tree=subTree();
+  const all=tree.flatMap(m=>m.as.flatMap(a=>a.subs.map(s=>({...s,k:m.k,as:a.nome}))));
+  if(!all.length)return `<section class="sec" style="margin-top:20px"><h2>Subtópicos</h2>
+    <p class="lead">Aqui aparece o desempenho por subtópico, dentro de cada assunto e de cada matéria. A aba se monta sozinha: envie na aba Questões uma planilha em que os subtópicos venham com a porcentagem de acertos e de erros.</p>
+    <div class="box"><b>Como a planilha deve vir</b><p>Uma linha com o assunto e os números de certas e erradas, e uma linha para cada subtópico com a porcentagem (0,91 e 0,09, ou 91% e 9%), escrita como "Assunto – Subtópico".</p><small>Exemplo: "Poder Legislativo – Do Senado Federal (art. 52)" com 0,7 e 0,3.</small></div></section>`;
+  const q=norm(sb.busca);
+  const ms=sbSort(tree,sb.om,m=>m.pc,m=>SHORT[m.k]);
+  const weakL=all.slice().sort((a,b)=>a.pc-b.pc).slice(0,8);
+  const avg=all.reduce((z,x)=>z+x.pc,0)/all.length,best=all.slice().sort((a,b)=>b.pc-a.pc)[0],low=all.slice().sort((a,b)=>a.pc-b.pc)[0];
+  const nA=tree.reduce((z,m)=>z+m.as.length,0);
+  const subRow=s=>`<li class="sbs"><span class="sbn">${esc(s.nome)}</span>${sbBar(s.pc)}${sbPc(s.pc)}<small>${s.delta!=null?`<span class="${s.delta>=0?"up":"dn"}">${s.delta>=0?"▲":"▼"} ${Math.abs(Math.round(s.delta*100))} pontos</span> · `:""}${s.n>1?`média ${Math.round(s.avg*100)}% em ${s.n} registros · `:""}${fmtDay(s.dt)}</small></li>`;
+  const asRow=(m,a)=>{
+    const id=m.k+"/"+a.key,op=!!sb.open[id]||!!q;
+    const subs=sbSort(a.subs.filter(s=>!q||norm(s.nome+" "+a.nome).includes(q)),sb.oa,s=>s.pc,s=>s.nome);
+    return `<li class="sba"><button class="sbh sub" data-act="sb-t" data-id="${esc(id)}" aria-expanded="${op}"><span class="car ${op?"o":""}"></span><span class="sbn">${esc(a.nome)}</span>${sbBar(a.pc)}${sbPc(a.pc)}<small>${a.hasN?`${a.c} certas · ${a.e} erradas · ${a.b} brancas · `:""}${a.nsub} ${a.nsub===1?"subtópico":"subtópicos"}</small></button>${op?`<ul class="sbl">${subs.map(subRow).join("")||'<li class="muted" style="font-size:13px;padding:8px 0">Nenhum subtópico com esse filtro.</li>'}</ul>`:""}</li>`;
+  };
+  const mRow=m=>{
+    const as=sbSort(m.as.filter(a=>!q||norm(a.nome).includes(q)||a.subs.some(s=>norm(s.nome).includes(q))),sb.oa,a=>a.pc,a=>a.nome);
+    if(!as.length)return "";
+    const id="m/"+m.k,op=!!sb.open[id]||!!q;
+    return `<div class="sbm" style="--c:var(--m-${m.k})"><button class="sbh" data-act="sb-t" data-id="${id}" aria-expanded="${op}"><span class="car ${op?"o":""}"></span><span class="sbn"><i class="dot"></i>${SHORT[m.k]}</span>${sbBar(m.pc)}${sbPc(m.pc)}<small>${m.as.length} ${m.as.length===1?"assunto":"assuntos"} · ${m.nsub} subtópicos${m.n?` · ${num(m.n)} questões`:""}</small></button>${op?`<ul class="sbl">${as.map(a=>asRow(m,a)).join("")}</ul>`:""}</div>`;
+  };
+  const opt=(v,cur,l)=>`<option value="${v}" ${v===cur?"selected":""}>${l}</option>`;
+  return `<section class="sec" style="margin-top:20px"><h2>Subtópicos</h2>
+    <p class="lead">O desempenho dentro de cada assunto, montado a partir das planilhas que você envia. Abra uma matéria para ver os assuntos e, dentro deles, os subtópicos.</p>
+    <div class="kpis" style="margin-top:16px">
+      <div class="kpi blue"><div class="lab">Subtópicos</div><div class="num">${all.length}</div><div class="sub">em ${nA} ${nA===1?"assunto":"assuntos"} e ${tree.length} ${tree.length===1?"matéria":"matérias"}</div></div>
+      <div class="kpi green"><div class="lab">Acerto médio</div><div class="num">${Math.round(avg*100)}%</div><div class="sub">média simples dos subtópicos</div></div>
+      <div class="kpi orange"><div class="lab">Mais fraco</div><div class="num">${Math.round(low.pc*100)}%</div><div class="sub">${esc(low.nome)}</div></div>
+      <div class="kpi purple"><div class="lab">Mais forte</div><div class="num">${Math.round(best.pc*100)}%</div><div class="sub">${esc(best.nome)}</div></div>
+    </div></section>
+  <section class="sec"><div class="card"><div class="card-h"><div><h3>Onde estudar primeiro</h3><p>Os 8 subtópicos com menor acerto</p></div></div><ul class="sbl" style="padding:0;border:0">${weakL.map(x=>`<li class="sbs" style="padding-left:0"><span class="sbn"><i class="dot" style="--c:var(--m-${x.k})"></i>${esc(x.nome)}</span>${sbBar(x.pc)}${sbPc(x.pc)}<small>${SHORT[x.k]} · ${esc(x.as)}</small></li>`).join("")}</ul></div></section>
+  <section class="sec"><div class="sec-h"><h2>Matérias, assuntos e subtópicos</h2></div>
+    <div class="sbtools"><div><label class="lbl" for="sb-om">Ordenar matérias</label><select id="sb-om">${opt("az",sb.om,"De A a Z")}${opt("menor",sb.om,"Menor para maior acerto")}${opt("maior",sb.om,"Maior para menor acerto")}</select></div>
+      <div><label class="lbl" for="sb-oa">Ordenar assuntos e subtópicos</label><select id="sb-oa">${opt("menor",sb.oa,"Menor para maior acerto")}${opt("maior",sb.oa,"Maior para menor acerto")}${opt("az",sb.oa,"De A a Z")}</select></div>
+      <div><label class="lbl" for="sb-q">Buscar</label><input class="in" id="sb-q" type="search" placeholder="Nome do assunto ou subtópico" value="${esc(sb.busca)}"></div></div>
+    <div class="bar-act" style="margin:10px 0 14px"><button class="chip" data-act="sb-all" data-v="1">Abrir tudo</button><button class="chip" data-act="sb-all" data-v="0">Fechar tudo</button></div>
+    ${ms.map(mRow).join("")||'<div class="empty">Nada encontrado com essa busca.</div>'}
+  </section>`;
+}
+
 /* ---------- informações do concurso (do edital) ---------- */
 function infoHtml(){
   const I=D.info,c=I.cargo,T=today();
@@ -1331,15 +1428,15 @@ function bibHtml(){
 /* ---------- questões (importação) ---------- */
 function impHtml(){
   const batches=Object.entries(P()).filter(([id])=>id.slice(0,4)==="imp-").map(([id,d])=>({id,...d})).sort((a,b)=>b.id<a.id?-1:1);
-  const ok=imp.rows.filter(r=>r.k),skip=imp.rows.length-ok.length,q=ok.reduce((s,r)=>s+r.c+r.e+r.b,0);
+  const ok=imp.rows.filter(r=>r.k),skip=imp.rows.length-ok.length,q=ok.reduce((s,r)=>s+r.c+r.e+r.b,0),nsub=imp.rows.filter(r=>r.sub).length;
   const subjOpts=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(s=>`<option value="${s}" ${s===k?"selected":""}>${SHORT[s]}</option>`).join("");
   const asOpts=(r)=>r.k?`<option value="">Sem assunto (conta só na matéria)</option>`+metaRank(r.k,r.ass).map(x=>`<option value="${x.m.id}" ${x.m.id===r.mid?"selected":""}>S${x.m.wi+1} · ${esc(x.m.a.length>70?x.m.a.slice(0,68)+"…":x.m.a)}</option>`).join(""):`<option value="">Escolha a matéria primeiro</option>`;
   const prev=imp.rows.length?`
-    <div class="sec-h" style="margin-top:26px"><h2>Conferir antes de importar</h2><span class="muted" style="font-size:13px">${imp.rows.length} linhas · ${num(q)} questões${skip?` · ${skip} sem matéria (não serão importadas)`:""}</span></div>
+    <div class="sec-h" style="margin-top:26px"><h2>Conferir antes de importar</h2><span class="muted" style="font-size:13px">${imp.rows.length} linhas · ${num(q)} questões${nsub?` · ${nsub} subtópicos com porcentagem`:""}${skip?` · ${skip} sem matéria (não serão importadas)`:""}</span></div>
     <p class="lead">Confira a matéria e o assunto que reconheci em cada linha. Ajuste o que estiver errado. Cada linha entra nas métricas da matéria, do assunto e da semana da data informada.</p>
     <div style="border-top:2px solid var(--fg)">${imp.rows.map((r,i)=>`<div class="ir ${r.k?"":"skip"}"><div class="a"><b>${esc(r.mat||"(sem matéria)")}</b><span>${esc(r.ass||"(sem assunto)")}</span></div>
       <div class="sels"><select data-imp="k" data-i="${i}" aria-label="Matéria da linha ${i+1}">${subjOpts(r.k)}</select><select data-imp="mid" data-i="${i}" aria-label="Assunto da linha ${i+1}" ${r.k?"":"disabled"}>${asOpts(r)}</select></div>
-      <div class="n">${r.c} certas · ${r.e} erradas · ${r.b} brancas · ${fmtDay(r.dt)}</div></div>`).join("")}</div>
+      <div class="n">${r.sub?`Subtópico: ${esc(r.sub)} · ${Math.round(r.pc*100)}% certas · ${Math.round((1-r.pc)*100)}% erradas · só entra na aba Subtópicos, não soma questões · ${fmtDay(r.dt)}`:`${r.c} certas · ${r.e} erradas · ${r.b} brancas · ${fmtDay(r.dt)}`}</div></div>`).join("")}</div>
     <div class="bar-act"><button class="btn" data-act="doimport" ${ok.length?"":"disabled"}>Importar ${ok.length} ${ok.length===1?"linha":"linhas"}</button><button class="btn alt" data-act="cancelimp">Cancelar</button></div>`:"";
   return `
   <section class="sec" style="margin-top:20px"><h2>Questões</h2>
@@ -1687,14 +1784,14 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["subtopicos","Subtópicos"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
+  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
@@ -1864,6 +1961,8 @@ document.addEventListener("click",e=>{
   if(a==="plan"){sel=+t.dataset.i;tab="semana";render();window.scrollTo(0,0);return}
   if(a==="mat"){const k=t.dataset.k;openMat[k]=!openMat[k];render();return}
   if(a==="demo"){demo=!demo;demoChosen=demo;LS.set("painel-demo",demo?"1":"0");if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();sel=curWeek();render();return}
+  if(a==="sb-t"){const id=t.dataset.id;sb.open[id]=!sb.open[id];render();return}
+  if(a==="sb-all"){const on=t.dataset.v==="1";sb.open={};if(on)subTree().forEach(m=>{sb.open["m/"+m.k]=true;m.as.forEach(x=>{sb.open[m.k+"/"+x.key]=true})});render();return}
   if(a==="bib-pasta"){bib.pasta=t.dataset.v;bib.msg="";bib.err="";render();return}
   if(a==="bib-delask"){bib.ask=t.dataset.f;render();return}
   if(a==="bib-delno"){bib.ask="";render();return}
@@ -1901,6 +2000,7 @@ document.addEventListener("click",e=>{
   if(a==="backup"){exportBackup();return}
 });
 document.addEventListener("input",e=>{
+  if(e.target.id==="sb-q"){sb.busca=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("sb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sm-ana-paste"){sm.ana.paste=e.target.value;return}
   if(e.target.id==="ak-paste"){ak.paste=e.target.value;return}
   const i=e.target.closest("[data-f]");if(!i)return;
@@ -1911,6 +2011,8 @@ document.addEventListener("input",e=>{
   liveUpd();
 });
 document.addEventListener("change",e=>{
+  if(e.target.id==="sb-om"){sb.om=e.target.value;render();return}
+  if(e.target.id==="sb-oa"){sb.oa=e.target.value;render();return}
   if(smChange(e))return;
   const akf=e.target.closest("#ak-file");
   if(akf&&akf.files&&akf.files[0]){ak.msg="";akReadFile(akf.files[0]);return}
