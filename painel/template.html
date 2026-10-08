@@ -278,6 +278,13 @@ select:focus,.in:focus{outline:3px solid var(--blue);outline-offset:0}
 textarea.in{display:block;width:100%;min-height:150px;resize:vertical;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;padding:12px 14px;border:1px solid var(--soft2);border-radius:16px;background:var(--bg);color:var(--fg)}
 textarea.in:focus{outline:3px solid var(--blue)}
 .grpimp{padding:12px 2px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 16px;align-items:center}
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 14px;margin-top:12px}.fgrid .wide{grid-column:1/-1}
+.lbl{display:block;font-size:12px;font-weight:700;color:var(--fg2);margin:0 0 5px 2px}
+.files{margin-top:10px;display:flex;flex-direction:column;gap:8px}.frow{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:14px;background:var(--soft)}
+.frow .th{width:42px;height:42px;border-radius:10px;object-fit:cover;flex:none}.frow .th.doc{display:grid;place-items:center;background:var(--bg);font-size:11px;font-weight:800;color:var(--fg2)}
+.frow .fn{flex:1;min-width:0}.frow .fn b{display:block;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frow .fn span{font-size:12px;color:var(--fg3)}
+.card.wide{grid-column:1/-1}
+@media (max-width:820px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -324,7 +331,6 @@ const GTIT={estudo:"Estudo e inglês",aval:"Simulado e discursiva",dom:"Domingo"
 const FASE={1:"Fase 1 · 1ª passada",2:"Fase 2 · reforço",3:"Fase 3 · reta final"};
 const WK=D.sem, ALL=WK.flatMap((w,wi)=>w.m.map(m=>(m.wi=wi,m)));
 const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
-const SIMS=ALL.filter(m=>m.t==="simulado"), DISCS=ALL.filter(m=>m.t==="discursiva");
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
 const rp=m=>m.rp||1;
@@ -354,9 +360,10 @@ const getM=id=>{if(BY[id])return BY[id];if(id.endsWith("~RG")){const n=parseInt(
 let demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
 let col=null, sync="local", demoChosen=null, A=null, RL=[], WM=[], IM={by:{},rows:[]};
 let imp={name:"",rows:[],err:"",msg:"",date:""};
-let CARDS={},REVD={};
+let CARDS={},REVD={},SM={},FILES={},LOCALF={};
+const sm={view:"list",id:"",ed:null,ana:{paste:"",rows:[],errs:[],name:""},err:"",msg:"",busy:"",ask:"",lb:null,copied:false};
 const ak={view:"home",mat:"",mid:"",bar:"",tipo:"",modo:"hoje",queue:[],i:0,rev:false,pick:"",ses:{n:0,ok:0,er:0},paste:"",name:"",groups:[],cards:[],errs:[],err:"",msg:"",ask:"",copied:false};
-const fb={on:false,pReady:false,cReady:false,bkDone:false,cunsub:null,runsub:null,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
+const fb={scol:null,fcol:null,pcol:null,sunsub:null,funsub:null,on:false,pReady:false,cReady:false,bkDone:false,cunsub:null,runsub:null,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
 const P=()=>demo?DEMO:real;
 const today=()=>{if(demo)return pd(DEMO_TODAY);const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
 const weekOf=s=>{const t=pd(s);for(let i=0;i<WK.length;i++){if(t>=pd(WK[i].i)&&t<=pd(WK[i].f))return i}return t<START?0:lastWk};
@@ -369,7 +376,7 @@ const itemsOf=m=>{const o=ownItems(m),x=IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.
 
 /* ---------- armazenamento ---------- */
 const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1";try{CARDS=JSON.parse(LS.get("painel-cartoes")||"{}")||{}}catch(e){CARDS={}}try{REVD=JSON.parse(LS.get("painel-revd")||"{}")||{}}catch(e){REVD={}}}
+function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1";try{CARDS=JSON.parse(LS.get("painel-cartoes")||"{}")||{}}catch(e){CARDS={}}try{REVD=JSON.parse(LS.get("painel-revd")||"{}")||{}}catch(e){REVD={}}try{SM=JSON.parse(LS.get("painel-simulados")||"{}")||{}}catch(e){SM={}}}
 function persistLocal(){LS.set("painel-progresso",JSON.stringify(real))}
 function autoDemo(){demo=fb.on?false:(demoChosen===null?Object.keys(real).length===0:demoChosen)}
 async function initDb(){
@@ -415,6 +422,8 @@ function initFirebase(){
       if(fb.unsub){fb.unsub();fb.unsub=null}
       if(fb.cunsub){fb.cunsub();fb.cunsub=null}
       if(fb.runsub){fb.runsub();fb.runsub=null}
+      if(fb.sunsub){fb.sunsub();fb.sunsub=null}
+      if(fb.funsub){fb.funsub();fb.funsub=null}
       fb.user=u||null;fb.ready=true;
       if(u){
         fb.col=fb.fs.collection("usuarios").doc(u.uid).collection("progresso");
@@ -431,7 +440,10 @@ function initFirebase(){
         let cf=true;
         fb.cunsub=fb.ccol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});CARDS=m;if(cf){cf=false;fb.cReady=true;maybeBackup()}render()},()=>{fb.cReady=true;maybeBackup()});
         fb.runsub=fb.rcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});REVD=m;render()},()=>{});
-      }else{fb.col=null;real={};CARDS={};REVD={};persistLocal()}
+        fb.scol=ub.collection("simulados");fb.fcol=ub.collection("arquivos");fb.pcol=ub.collection("arquivo_partes");
+        fb.sunsub=fb.scol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});SM=m;fb.sReady=true;maybeBackup();render()},()=>{fb.sReady=true;maybeBackup()});
+        fb.funsub=fb.fcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});FILES=m;render()},()=>{});
+      }else{fb.col=null;fb.scol=fb.fcol=fb.pcol=null;real={};CARDS={};REVD={};SM={};FILES={};persistLocal()}
       render();
     });
     return true;
@@ -439,15 +451,16 @@ function initFirebase(){
 }
 /* backup automático: um instantâneo por dia, guardado por 30 dias, restaurável na aba Questões */
 const bkBase=()=>fb.fs.collection("usuarios").doc(fb.user.uid);
-const maybeBackup=()=>{if(fb.pReady&&fb.cReady&&!fb.bkDone){fb.bkDone=true;autoBackup()}};
+const maybeBackup=()=>{if(fb.pReady&&fb.cReady&&fb.sReady&&!fb.bkDone){fb.bkDone=true;autoBackup()}};
 async function autoBackup(){
   if(!fb.on||!fb.user)return;
   try{
     const base=bkBase(),meta=base.collection("meta").doc("backups"),m=await meta.get();
     let dias=(m.exists&&m.data().dias)||[];fb.bkList=dias.slice();
-    const day=ymd(new Date()),n=Object.keys(real).length,payload=JSON.stringify(real),cj=JSON.stringify(CARDS),nc=Object.keys(CARDS).length;
-    if((n||nc)&&payload.length<900000&&!dias.includes(day)){
+    const day=ymd(new Date()),n=Object.keys(real).length,payload=JSON.stringify(real),cj=JSON.stringify(CARDS),nc=Object.keys(CARDS).length,sj=JSON.stringify(SM),ns=Object.keys(SM).length;
+    if((n||nc||ns)&&payload.length<900000&&!dias.includes(day)){
       const bd={dia:day,n,docs:payload};if(nc&&payload.length+cj.length<900000){bd.cartoes=cj;bd.nc=nc}
+      if(ns&&payload.length+(bd.cartoes?cj.length:0)+sj.length<900000){bd.sim=sj;bd.ns=ns}
       await base.collection("backups").doc(day).set(bd);
       dias=dias.concat(day).sort();
       const keep=dias.slice(-30),drop=dias.slice(0,-30);
@@ -464,7 +477,8 @@ async function restoreAuto(day){
     if(!snap.exists)throw new Error("x");
     const docs=JSON.parse(snap.data().docs),col_=fb.col;
     const bd0=snap.data(),cartoes0=bd0.cartoes?JSON.parse(bd0.cartoes):null;
-    await base.collection("backups").doc("antes-da-restauracao").set({dia:ymd(new Date()),n:Object.keys(real).length,docs:JSON.stringify(real),...(Object.keys(CARDS).length&&JSON.stringify(real).length+JSON.stringify(CARDS).length<900000?{cartoes:JSON.stringify(CARDS)}:{})});
+    await base.collection("backups").doc("antes-da-restauracao").set({dia:ymd(new Date()),n:Object.keys(real).length,docs:JSON.stringify(real),...(Object.keys(CARDS).length&&JSON.stringify(real).length+JSON.stringify(CARDS).length<900000?{cartoes:JSON.stringify(CARDS)}:{}),...(Object.keys(SM).length&&JSON.stringify(real).length+JSON.stringify(SM).length<900000?{sim:JSON.stringify(SM)}:{})});
+    if(bd0.sim){const sim0=JSON.parse(bd0.sim);Object.keys(SM).filter(id=>!(id in sim0)).forEach(id=>smPut(id,null));Object.entries(sim0).forEach(([id,d])=>smPut(id,d))}
     if(cartoes0)cardsWrite([...Object.keys(CARDS).filter(id=>!(id in cartoes0)).map(id=>[id,null]),...Object.entries(cartoes0)]);
     Object.keys(real).filter(id=>!(id in docs)).forEach(id=>col_.doc(id).delete().catch(()=>{}));
     Object.entries(docs).forEach(([id,d])=>col_.doc(id).set(d).catch(()=>{}));
@@ -569,6 +583,7 @@ function importMap(){
     if(id.slice(0,4)!=="imp-")continue;
     (P()[id].rows||[]).forEach(r=>{rows.push(r);if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}});
   }
+  for(const id in SM)smRows(SM[id]).forEach(r=>{rows.push(r);if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c;o.e+=r.e;o.b+=r.b}});
   return {by,rows};
 }
 const norm=s=>String(s??"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g," ").trim();
@@ -656,7 +671,7 @@ async function saveFile(blob,name){
   if(!done){const u=URL.createObjectURL(blob),an=document.createElement("a");an.href=u;an.download=name;document.body.appendChild(an);an.click();an.remove();setTimeout(()=>URL.revokeObjectURL(u),2000)}
 }
 function exportBackup(){
-  const blob=new Blob([JSON.stringify({painel:"metas",versao:2,gerado:ymd(new Date()),docs:real,cartoes:CARDS,revd:REVD})],{type:"application/json"});
+  const blob=new Blob([JSON.stringify({painel:"metas",versao:2,gerado:ymd(new Date()),docs:real,cartoes:CARDS,revd:REVD,simulados:SM})],{type:"application/json"});
   saveFile(blob,"backup-painel-"+ymd(new Date())+".json");
 }
 function restoreBackup(file){
@@ -668,6 +683,7 @@ function restoreBackup(file){
       const ids=Object.keys(docs);
       ids.forEach(id=>{real[id]=docs[id]});persistLocal();
       if(j.cartoes&&typeof j.cartoes==="object")cardsWrite(Object.entries(j.cartoes));
+      if(j.simulados&&typeof j.simulados==="object")Object.entries(j.simulados).forEach(([id,d])=>smPut(id,d));
       if(j.revd&&typeof j.revd==="object")Object.entries(j.revd).forEach(([d,o])=>revdWrite(d,o));
       const c=fb.on?fb.col:col;
       if(c)ids.forEach(id=>c.doc(id).set(docs[id]).catch(()=>{}));
@@ -720,6 +736,7 @@ function agg(){
     if(SUBJ.includes(m.k)){const s=a.mat[m.k];s.plan+=pi;if(m.t==="teoria_questoes"){s.blocks++;if(done)s.done++}}
     if(m.t==="teoria_questoes"){a.content.n++;if(done)a.content.done++}
   }
+  for(const id in SM)smRows(SM[id]).forEach(r=>{const wi=r.dt?weekOf(r.dt):0;addQ(wi,r.dt,r.c,r.e,r.b,r.k,"Simulados")});
   for(const id in p){
     const d=p[id];
     if(id.slice(0,4)==="imp-"){(d.rows||[]).forEach(r=>addQ(weekOf(r.dt),r.dt,r.c||0,r.e||0,r.b||0,r.k,"Importadas"));continue}
@@ -903,31 +920,318 @@ function revHtml(){
   </section>`;
 }
 
-/* ---------- simulados ---------- */
-function simHtml(){
-  const rows=SIMS.map(m=>({m,it:itemsOf(m),d:isDone(m)})).map(x=>({...x,n:tot_(x.it)}));
-  const dn=rows.filter(x=>x.d&&x.n);
-  const tot=dn.reduce((s,x)=>({c:s.c+x.it.c,e:s.e+x.it.e,b:s.b+x.it.b}),{c:0,e:0,b:0});
-  const best=dn.length?Math.max(...dn.map(x=>rate(x.it))):null;
-  const ddn=DISCS.filter(m=>{const p=P()[m.id];return p&&p.tl});
-  return `
-  <section class="sec" style="margin-top:20px"><h2>Simulados</h2>
-    <p class="lead">Provas cronometradas de Certo ou Errado. O acerto conta só os certos. A nota líquida desconta um certo para cada errado, como na prova.</p>
-    <div class="kpis" style="margin-top:16px">
-      <div class="kpi blue"><div class="lab">Simulados feitos</div><div class="num">${dn.length}<small>de ${SIMS.length}</small></div><div class="sub">${SIMS.length-dn.length} pendentes até a prova</div><div class="viz"><div class="bar2"><i style="width:${dn.length/SIMS.length*100}%"></i></div></div></div>
-      <div class="kpi green"><div class="lab">Acerto médio</div><div class="num">${pc(rate(tot))}</div><div class="sub">${dn.length?`${num(tot.c)} certos em ${num(tot_(tot))} itens`:"Sem simulado registrado"}</div></div>
-      <div class="kpi purple"><div class="lab">Nota líquida média</div><div class="num">${pc(net(tot))}</div><div class="sub">certos menos errados, sobre o total de itens</div></div>
-      <div class="kpi orange"><div class="lab">Melhor simulado</div><div class="num">${pc(best)}</div><div class="sub">${dn.length?"maior acerto até agora":"Registre o primeiro"}</div></div>
-    </div>
-  </section>
-  <section class="sec"><div class="card"><div class="card-h"><div><h3>Evolução dos simulados</h3><p>Acerto e nota líquida, em % dos itens</p></div><div class="legend"><span style="--c:var(--blue)"><i></i>Acerto</span><span style="--c:var(--purple)"><i></i>Nota líquida</span></div></div><div class="chart" data-kind="sims"></div></div></section>
-  <section class="sec"><div class="sec-h"><h2>Todos os simulados</h2><span class="muted" style="font-size:13px">Toque para ver como montar e registrar</span></div>
-    <ul class="list" style="border-top:2px solid var(--fg)">${rows.map(x=>{const m=x.m,r=rate(x.it),l=net(x.it);return `<li class="row ${x.d?"done":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button"><button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${x.d?"Desmarcar":"Concluir"}: ${esc(m.a)}">${CHECK}</button><div class="rt"><div class="t">${esc(m.a)}</div><div class="s"><span>Semana ${m.wi+1} · ${fmtD(WK[m.wi].i,WK[m.wi].f)}</span></div></div>${x.n?`<div class="res"><span class="sc ${scCls(r)}">${pc(r)}</span><small>líquida ${pc(l)}</small></div>`:""}</li>`}).join("")}</ul>
-  </section>
-  <section class="sec"><div class="sec-h"><h2>Discursivas</h2><span class="muted" style="font-size:13px">Nota = NC menos 2 vezes NE dividido por TL (padrão Cebraspe; confirme no edital)</span></div>
-    <ul class="list" style="border-top:2px solid var(--fg)">${DISCS.map(m=>{const p=P()[m.id],d=isDone(m);return `<li class="row ${d?"done":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button"><button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${d?"Desmarcar":"Concluir"}: ${esc(m.a)}">${CHECK}</button><div class="rt"><div class="t">${esc(m.a)}</div><div class="s"><span>Semana ${m.wi+1}</span>${p&&p.tl?`<span>NC ${f1(p.nc||0)} · NE ${p.ne||0} · TL ${p.tl}</span>`:""}</div></div>${p&&p.tl?`<div class="res"><span class="sc na">${npd(p)}</span><small>nota</small></div>`:""}</li>`}).join("")}</ul>
-    ${ddn.length?"":'<p class="muted" style="font-size:13px;margin:10px 2px 0">Ao concluir uma discursiva, lance NC, NE e TL para acompanhar a nota.</p>'}
+/* ---------- simulados (cadastrados por você) ---------- */
+const SMINSTR=[
+"Vou te enviar o gabarito comentado de um simulado (texto, PDF ou imagens) e as minhas respostas. Analise item por item e agrupe por assunto do edital. Responda SOMENTE com um bloco de codigo de texto simples, uma linha por assunto, neste formato:",
+"",
+"Constitucional | Poder Legislativo na CF e estatuto dos parlamentares | 5 | 2 | 1 | conteúdo",
+"Português | Classes de palavras | 3 | 1 | 0 | pegadinha",
+"",
+"Regras:",
+"1. Campos separados por | (barra vertical), nesta ordem: Matéria | Assunto | Certos | Errados | Brancos | Motivo principal dos erros. Nunca use | dentro do texto.",
+"2. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA.",
+"3. Assunto é o nome do assunto do edital a que o item pertence. Uma linha por assunto, somando os itens daquele assunto.",
+"4. Cada item da prova entra uma só vez. A soma de certos, errados e brancos de todas as linhas tem que ser igual ao total de itens da prova.",
+"5. Motivo é um destes: conteúdo, interpretação, pegadinha ou desatenção. Use o que mais se aplicou aos erros do assunto. Deixe vazio se não houve erro.",
+"6. Não escreva nada fora do bloco."
+].join("\n");
+const SMTIPO={completo:"Completo (objetiva e discursiva)",objetiva:"Só objetiva (Certo ou Errado)",discursiva:"Só discursiva",parcial:"Parcial (algumas matérias)"};
+const MOT={conteudo:"Conteúdo",interpretacao:"Interpretação",pegadinha:"Pegadinha",desatencao:"Desatenção"};
+const normMot=t=>{const n=norm(t);return n.indexOf("conte")===0?"conteudo":n.indexOf("interp")===0?"interpretacao":n.indexOf("pega")===0?"pegadinha":n.indexOf("desat")===0?"desatencao":""};
+const smId=()=>"sm"+Date.now().toString(36)+Math.random().toString(36).slice(2,4);
+const num2=x=>{const n=parseFloat(String(x).replace(",","."));return isFinite(n)&&n>=0?n:null};
+function smPut(id,doc){
+  if(doc)SM[id]=doc;else delete SM[id];
+  if(fb.on&&fb.scol){(doc?fb.scol.doc(id).set(doc):fb.scol.doc(id).delete()).catch(()=>{sync="erro";render()})}
+  else LS.set("painel-simulados",JSON.stringify(SM));
+}
+const smObj=s=>{if(s.analise&&s.analise.length){const o={c:0,e:0,b:0};s.analise.forEach(a=>{o.c+=a.c||0;o.e+=a.e||0;o.b+=a.b||0});return o}return s.res&&(s.res.c||s.res.e||s.res.b)?{c:s.res.c||0,e:s.res.e||0,b:s.res.b||0}:null};
+function smRows(s){
+  if(s.analise&&s.analise.length)return s.analise.map(a=>({mid:a.mid||"",k:a.k||"",dt:s.dt,c:a.c||0,e:a.e||0,b:a.b||0}));
+  const o=smObj(s);return o?[{mid:"",k:"",dt:s.dt,c:o.c,e:o.e,b:o.b}]:[];
+}
+const smDisc=s=>Array.from({length:s.nd||0},(_,i)=>(s.disc&&s.disc[i])||{});
+function smScore(s){
+  const o=smObj(s),n=o?tot_(o):0,liq=o?o.c-o.e:0,vo=s.vo>0?s.vo:n;
+  const ds=smDisc(s).filter(d=>d.nota!=null&&d.max>0),dN=ds.reduce((x,d)=>x+d.nota,0),dM=ds.reduce((x,d)=>x+d.max,0);
+  const objPts=n?Math.max(0,liq)/n*vo:0,total=(n?objPts:0)+dN,poss=(n?vo:0)+dM;
+  return {n,c:o?o.c:0,e:o?o.e:0,b:o?o.b:0,acc:n?o.c/n:null,liq:n?liq/n:null,objPts,vo,dN,dM,dPct:dM?dN/dM:null,total,poss,pct:poss?total/poss:null};
+}
+
+/* arquivos (gabaritos e imagens): guardados em pedaços no banco, sem plano pago */
+const FCH=700000;
+const blobB64=b=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(",")[1]||"");r.onerror=()=>rej(new Error("Não consegui ler o arquivo."));r.readAsDataURL(b)});
+const b64Blob=(parts,mime)=>new Blob(parts.map(p=>{const bin=atob(p),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u}),{type:mime});
+function imgCompress(file){
+  return new Promise((res,rej)=>{
+    const u=URL.createObjectURL(file),im=new Image();
+    im.onload=()=>{try{
+      const mk=mx=>{const k=Math.min(1,mx/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.max(1,Math.round(im.width*k));c.height=Math.max(1,Math.round(im.height*k));c.getContext("2d").drawImage(im,0,0,c.width,c.height);return c};
+      const big=mk(1800),th=mk(180);
+      big.toBlob(b=>{URL.revokeObjectURL(u);if(!b)return rej(new Error("Não consegui ler a imagem."));res({blob:b,th:th.toDataURL("image/jpeg",.6).split(",")[1]})},"image/jpeg",.82);
+    }catch(e){rej(e)}};
+    im.onerror=()=>{URL.revokeObjectURL(u);rej(new Error("Não consegui ler a imagem. Envie em JPG, PNG ou PDF."))};
+    im.src=u;
+  });
+}
+async function fileSave(file,scope){
+  let blob=file,mime=file.type||"application/octet-stream",th="";
+  if(/^image\//.test(mime)){const r=await imgCompress(file);blob=r.blob;th=r.th;mime="image/jpeg"}
+  if(blob.size>10*1024*1024)throw new Error("O arquivo passa de 10 MB. Reduza ou divida e envie de novo.");
+  const id="f"+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+  const meta={nome:file.name||"arquivo",tipo:mime,tam:blob.size,esc:scope,th,cr:ymd(new Date())};
+  if(fb.on&&fb.fcol){
+    const b64=await blobB64(blob),n=Math.max(1,Math.ceil(b64.length/FCH));meta.n=n;
+    try{
+      for(let i=0;i<n;i+=3)await Promise.all(Array.from({length:Math.min(3,n-i)},(_,j)=>fb.pcol.doc(id+"_"+(i+j)).set({d:b64.slice((i+j)*FCH,(i+j+1)*FCH)})));
+      await fb.fcol.doc(id).set(meta);
+    }catch(e){for(let i=0;i<n;i++)fb.pcol.doc(id+"_"+i).delete().catch(()=>{});throw new Error("Não consegui enviar o arquivo. Tente de novo.")}
+  }else{LOCALF[id]=blob;meta.n=0}
+  FILES[id]=meta;return id;
+}
+async function fileBlob(id){
+  const m=FILES[id];if(!m)throw new Error("Arquivo não encontrado.");
+  if(!(fb.on&&fb.pcol)){if(LOCALF[id])return LOCALF[id];throw new Error("Arquivo não disponível neste aparelho.")}
+  const parts=[];for(let i=0;i<m.n;i++){const d=await fb.pcol.doc(id+"_"+i).get();if(!d.exists)throw new Error("Faltam partes do arquivo.");parts.push(d.data().d)}
+  return b64Blob(parts,m.tipo);
+}
+function fileDel(id){
+  const m=FILES[id];delete FILES[id];delete LOCALF[id];
+  if(fb.on&&fb.fcol){for(let i=0;i<((m&&m.n)||0);i++)fb.pcol.doc(id+"_"+i).delete().catch(()=>{});fb.fcol.doc(id).delete().catch(()=>{})}
+}
+const fmtB=n=>n>1048576?(n/1048576).toFixed(1).replace(".",",")+" MB":Math.max(1,Math.round(n/1024))+" KB";
+async function fileOpen(id){
+  sm.busy="Abrindo o arquivo…";render();
+  try{const b=await fileBlob(id),m=FILES[id];if(sm.lb&&sm.lb.url)URL.revokeObjectURL(sm.lb.url);sm.lb={url:URL.createObjectURL(b),nome:m.nome,tipo:m.tipo};sm.err=""}
+  catch(e){sm.err=e.message||"Não consegui abrir o arquivo."}
+  sm.busy="";render();
+}
+const fileList=(ids,kind,idx)=>(ids&&ids.length)?`<div class="files">${ids.map(f=>{const m=FILES[f];return `<div class="frow">${m&&m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="th doc">PDF</span>`}<div class="fn"><b>${esc(m?m.nome:"arquivo")}</b><span>${m?fmtB(m.tam):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${f}">Abrir</button><button class="chip" data-act="sm-fdel" data-f="${f}" data-k="${kind}" data-i="${idx==null?"":idx}">Excluir</button></div>`}).join("")}</div>`:"";
+async function smUpload(files,kind,idx){
+  const s=SM[sm.id];if(!s||!files.length)return;
+  sm.busy="Enviando…";sm.err="";render();
+  try{
+    const ids=[];for(const f of files)ids.push(await fileSave(f,"sm:"+sm.id));
+    const d={...s};
+    if(kind==="gab")d.gab=[...(d.gab||[]),...ids];
+    else{d.disc=smDisc(d).map(x=>({...x}));d.disc[idx]={...d.disc[idx],arq:[...(d.disc[idx].arq||[]),...ids]}}
+    smPut(sm.id,d);sm.msg=`Enviei ${ids.length} ${ids.length===1?"arquivo":"arquivos"}.`;
+  }catch(e){sm.err=e.message||"Não consegui enviar o arquivo."}
+  sm.busy="";render();
+}
+
+/* leitura da análise por assunto (texto colado ou planilha) */
+function parseAnaliseText(t){
+  const rows=[],errs=[];
+  String(t).split(/\r?\n/).forEach((raw,i)=>{
+    const ln=raw.trim();if(!ln||/^```/.test(ln)||ln.charAt(0)==="#")return;
+    const p=ln.split("|").map(z=>z.trim());
+    if(p.length<5){errs.push(`Linha ${i+1}: faltam campos. Use Matéria | Assunto | Certos | Errados | Brancos | Motivo.`);return}
+    const c=toN(p[2]),e=toN(p[3]),b=toN(p[4]);
+    if(!(c+e+b)){errs.push(`Linha ${i+1}: nenhum item contado.`);return}
+    rows.push({mat:p[0],ass:p[1],c,e,b,mot:normMot(p[5]||"")});
+  });
+  return {rows,errs};
+}
+const SMH={mat:["materia","disciplina"],ass:["assunto","topico","tema"],c:["certas","certos","acertos","acerto"],e:["erradas","errados","erros","erro"],b:["brancas","brancos","em branco","branco"],mot:["motivo","causa","tipo de erro"]};
+function parseAnaliseSheet(aoa){
+  let hi=-1,cm={};
+  for(let r=0;r<Math.min(aoa.length,10)&&hi<0;r++){const m={};aoa[r].forEach((h,ci)=>{const n=norm(h);for(const k in SMH){if(m[k]==null&&SMH[k].includes(n))m[k]=ci}});if(m.mat!=null&&m.ass!=null&&(m.c!=null||m.e!=null)){hi=r;cm=m}}
+  if(hi<0)return {rows:[],errs:["Não encontrei os cabeçalhos. A planilha precisa ter Matéria, Assunto, Certos, Errados e Brancos."]};
+  const rows=[],errs=[];
+  for(let r=hi+1;r<aoa.length;r++){const row=aoa[r],g=k=>cm[k]!=null?row[cm[k]]:"";const c=toN(g("c")),e=toN(g("e")),b=toN(g("b"));if(!(c+e+b))continue;rows.push({mat:String(g("mat")).trim(),ass:String(g("ass")).trim(),c,e,b,mot:normMot(String(g("mot")))})}
+  return {rows,errs};
+}
+function smAnaPrepare(res,name){
+  sm.ana.errs=res.errs.slice(0,10);sm.ana.name=name;sm.err="";sm.msg="";
+  sm.ana.rows=res.rows.map(r=>{const k=subjectMatch(r.mat),rk=k?metaRank(k,r.ass):[];return {...r,k,mid:rk[0]&&rk[0].score>=.4?rk[0].m.id:""}});
+  if(!sm.ana.rows.length&&!sm.ana.errs.length)sm.err="Não encontrei nenhuma linha de análise.";
+}
+function smAnaFile(file){
+  const csv=/\.(csv|txt|tsv)$/i.test(file.name),rd=new FileReader();
+  rd.onload=ev=>{
+    try{
+      if(/\.txt$/i.test(file.name))smAnaPrepare(parseAnaliseText(String(ev.target.result)),file.name);
+      else{
+        if(!window.XLSX)throw new Error("Não consegui carregar o leitor de planilhas. Recarregue a página.");
+        const wb=csv?XLSX.read(String(ev.target.result).replace(/^﻿/,""),{type:"string"}):XLSX.read(new Uint8Array(ev.target.result),{type:"array"});
+        smAnaPrepare(parseAnaliseSheet(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:true,defval:""})),file.name);
+      }
+    }catch(er){sm.ana.rows=[];sm.err=er.message||"Não consegui ler o arquivo."}
+    render();
+  };
+  if(csv||/\.txt$/i.test(file.name))rd.readAsText(file,"UTF-8");else rd.readAsArrayBuffer(file);
+}
+async function smCopy(t){try{await navigator.clipboard.writeText(t);sm.copied=true}catch(e){const ta=$("#sm-instr");if(ta){ta.focus();ta.select()}sm.copied=false}render()}
+
+/* telas */
+const smNum=(id,l,v,ph)=>`<div><label class="lbl" for="${id}">${l}</label><input class="in" id="${id}" type="number" inputmode="decimal" step="any" min="0" value="${v==null?"":v}" ${ph?`placeholder="${ph}"`:""}></div>`;
+function smForm(){
+  const e=sm.ed;
+  return `<section class="sec" style="margin-top:20px"><div class="ak-top"><button class="chip" data-act="sm-back">Voltar</button></div>
+  <h2 style="margin-top:12px">${e.id?"Editar simulado":"Novo simulado"}</h2>
+  ${sm.err?`<div class="msg err">${esc(sm.err)}</div>`:""}
+  <div class="fgrid">
+    <div class="wide"><label class="lbl" for="sm-nome">Nome</label><input class="in" id="sm-nome" type="text" value="${esc(e.nome)}" placeholder="Ex.: Simulado 1, completo"></div>
+    <div><label class="lbl" for="sm-dt">Data</label><input class="in" id="sm-dt" type="date" value="${esc(e.dt)}"></div>
+    <div><label class="lbl" for="sm-tipo">Tipo</label><select id="sm-tipo">${Object.entries(SMTIPO).map(([k,l])=>`<option value="${k}" ${e.tipo===k?"selected":""}>${l}</option>`).join("")}</select></div>
+    ${smNum("sm-itens","Itens da parte objetiva",e.itens,"Ex.: 120")}
+    <div><label class="lbl" for="sm-nd">Questões discursivas</label><select id="sm-nd">${[0,1,2,3].map(n=>`<option value="${n}" ${+e.nd===n?"selected":""}>${n}</option>`).join("")}</select></div>
+    ${smNum("sm-vo","Valor da parte objetiva (pontos)",e.vo,"Em branco: um ponto por item")}
+  </div>
+  <div class="sec-h" style="margin-top:22px"><h3>Itens por matéria (opcional)</h3><span class="muted" style="font-size:13px">A composição da prova</span></div>
+  <div class="fgrid">${SUBJ.map(k=>smNum("sm-c-"+k,SHORT[k],(e.comp||{})[k])).join("")}</div>
+  <div class="wide" style="margin-top:14px"><label class="lbl" for="sm-obs">Observações</label><textarea class="in" id="sm-obs" style="min-height:90px" placeholder="Fonte da prova, condições, o que quer testar">${esc(e.obs||"")}</textarea></div>
+  <div class="bar-act"><button class="btn" data-act="sm-saveform">${e.id?"Salvar alterações":"Cadastrar simulado"}</button><button class="btn alt" data-act="sm-back">Cancelar</button></div></section>`;
+}
+function smDetail(){
+  const s=SM[sm.id];if(!s){sm.view="list";return smList()}
+  const sc=smScore(s),o=smObj(s),hasAna=!!(s.analise&&s.analise.length),dd=smDisc(s);
+  const sub=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(x=>`<option value="${x}" ${x===k?"selected":""}>${SHORT[x]}</option>`).join("");
+  // análise: resumo por matéria e por assunto
+  let anaHtml="";
+  if(hasAna){
+    const byK={},by=[];
+    s.analise.forEach(a=>{const k=a.k||"?";const x=byK[k]||(byK[k]={c:0,e:0,b:0});x.c+=a.c;x.e+=a.e;x.b+=a.b;by.push(a)});
+    const kRows=Object.keys(byK).map(k=>{const x=byK[k],r=rate(x);return {l:SHORT[k]||k,c:SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)",f:r||0,v:pc(r),s:tot_(x)+" itens",tip:`${SHORT[k]||k}: ${x.c} certos, ${x.e} errados, ${x.b} brancos`,r:r==null?-1:r}}).sort((a,b)=>a.r-b.r);
+    const aRows=by.slice().sort((a,b)=>(rate(a)??2)-(rate(b)??2));
+    const mot={};s.analise.forEach(a=>{if(a.mot&&a.e)mot[a.mot]=(mot[a.mot]||0)+a.e});
+    const mRows=Object.entries(mot).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({l:MOT[k],c:"var(--red)",f:v/Math.max(1,sc.e),v:v+"",s:"erros",tip:`${MOT[k]}: ${v} erros`}));
+    anaHtml=`<div class="grid2" style="margin-top:14px"><div class="card"><div class="card-h"><div><h3>Por matéria</h3><p>Do menor para o maior acerto neste simulado</p></div></div>${barsHtml(kRows)}</div>
+      ${mRows.length?`<div class="card"><div class="card-h"><div><h3>Por que você errou</h3><p>Erros por motivo</p></div></div>${barsHtml(mRows)}</div>`:""}
+      <div class="card wide"><div class="card-h"><div><h3>Por assunto</h3><p>Do que você mais errou para o que menos errou</p></div></div><ul class="list">${aRows.map(a=>{const r=rate(a),m=a.mid&&BY[a.mid];return `<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(m?m.a:(a.as||"Sem assunto"))}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${a.c} certos · ${a.e} errados · ${a.b} brancos</span>${a.mot?`<span class="rb mv">${MOT[a.mot]}</span>`:""}</div></div><div class="res"><span class="sc ${scCls(r)}">${pc(r)}</span></div></li>`}).join("")}</ul></div></div>`;
+  }
+  const prev=sm.ana.rows.length?`<div class="sec-h" style="margin-top:18px"><h3>Conferir antes de salvar</h3><span class="muted" style="font-size:13px">${sm.ana.rows.length} linhas · ${num(sm.ana.rows.reduce((x,r)=>x+r.c+r.e+r.b,0))} itens</span></div>
+    <div style="border-top:2px solid var(--fg)">${sm.ana.rows.map((r,i)=>`<div class="ir ${r.k?"":"skip"}"><div class="a"><b>${esc(r.mat||"(sem matéria)")}</b><span>${esc(r.ass||"(sem assunto)")}</span></div>
+      <div class="sels"><select data-sma="k" data-i="${i}" aria-label="Matéria da linha ${i+1}">${sub(r.k)}</select><select data-sma="mid" data-i="${i}" ${r.k?"":"disabled"} aria-label="Assunto da linha ${i+1}">${r.k?`<option value="">Sem assunto (conta só na matéria)</option>`+metaRank(r.k,r.ass).map(x=>`<option value="${x.m.id}" ${x.m.id===r.mid?"selected":""}>S${x.m.wi+1} · ${esc(x.m.a.length>60?x.m.a.slice(0,58)+"…":x.m.a)}</option>`).join(""):`<option value="">Escolha a matéria primeiro</option>`}</select></div>
+      <div class="n">${r.c} certos · ${r.e} errados · ${r.b} brancos${r.mot?` · ${MOT[r.mot]}`:""}</div></div>`).join("")}</div>
+    <div class="bar-act"><button class="btn" data-act="sm-anasave" ${sm.ana.rows.some(r=>r.k)?"":"disabled"}>${hasAna?"Substituir a análise":"Salvar a análise"}</button><button class="btn alt" data-act="sm-anacancel">Cancelar</button></div>`:"";
+  return `<section class="sec" style="margin-top:20px">
+  <div class="ak-top"><button class="chip" data-act="sm-back">Voltar aos simulados</button><span><button class="chip" data-act="sm-edit">Editar</button> ${sm.ask===sm.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="sm-delok">Confirmar exclusão</button><button class="chip" data-act="sm-delno">Cancelar</button>`:`<button class="chip" data-act="sm-delask">Excluir</button>`}</span></div>
+  <h2 style="margin-top:14px">${esc(s.nome)}</h2>
+  <p class="muted" style="margin:2px 0 0">${s.dt?fmtDay(s.dt)+" de "+pd(s.dt).getFullYear():"Sem data"} · ${SMTIPO[s.tipo]||""}${s.itens?` · ${s.itens} itens`:""}${s.nd?` · ${s.nd} ${s.nd===1?"discursiva":"discursivas"}`:""}</p>
+  ${s.obs?`<p class="muted" style="margin:6px 0 0">${esc(s.obs)}</p>`:""}
+  ${sm.msg?`<div class="msg">${esc(sm.msg)}</div>`:""}${sm.err?`<div class="msg err">${esc(sm.err)}</div>`:""}${sm.busy?`<div class="msg" style="background:var(--blue-t)">${esc(sm.busy)}</div>`:""}
+  <div class="kpis" style="margin-top:16px">
+    <div class="kpi blue"><div class="lab">Acerto</div><div class="num">${pc(sc.acc)}</div><div class="sub">${o?`${sc.c} certos em ${sc.n} itens`:"Falta o resultado"}</div></div>
+    <div class="kpi purple"><div class="lab">Nota líquida</div><div class="num">${pc(sc.liq)}</div><div class="sub">${o?`${sc.c} menos ${sc.e} = ${sc.c-sc.e} pontos`:"certos menos errados"}</div></div>
+    <div class="kpi teal"><div class="lab">Discursivas</div><div class="num">${sc.dM?f1(sc.dN):"–"}${sc.dM?`<small>de ${f1(sc.dM)}</small>`:""}</div><div class="sub">${sc.dM?pc(sc.dPct)+" da nota":"Falta a nota das discursivas"}</div></div>
+    <div class="kpi green"><div class="lab">Nota geral</div><div class="num">${sc.poss?pc(sc.pct):"–"}</div><div class="sub">${sc.poss?`${f1(sc.total)} de ${f1(sc.poss)} pontos`:"Objetiva e discursivas juntas"}</div></div>
+  </div>
+  <div class="sec-h" style="margin-top:30px"><h3>Resultado da parte objetiva</h3></div>
+  ${hasAna?`<p class="lead">O resultado vem da análise por assunto abaixo. Para digitar à mão, limpe a análise.</p>`:`<div class="fgrid">${smNum("sm-rc","Certos",s.res&&s.res.c)}${smNum("sm-re","Errados",s.res&&s.res.e)}${smNum("sm-rb","Brancos",s.res&&s.res.b)}</div>
+  <div class="bar-act"><button class="btn" data-act="sm-saveres">Salvar resultado</button></div>`}
+  <div class="sec-h" style="margin-top:30px"><h3>Gabarito comentado</h3><label class="file-btn" style="background:var(--soft);color:var(--fg);padding:9px 16px">Enviar arquivo<input type="file" id="sm-up-gab" accept="application/pdf,image/*,.doc,.docx,.txt" multiple></label></div>
+  ${(s.gab&&s.gab.length)?fileList(s.gab,"gab"):`<div class="empty">Envie o PDF ou as fotos do gabarito comentado. Ele fica guardado neste simulado.</div>`}
+  <div class="sec-h" style="margin-top:30px"><h3>Análise por assunto</h3></div>
+  <p class="lead">Peça ao Claude para analisar o gabarito comentado por assunto e cole aqui o que ele responder (ou envie como planilha). Os números entram no desempenho por assunto e nos gráficos gerais.</p>
+  <label class="vh" for="sm-ana-paste">Texto da análise</label><textarea class="in" id="sm-ana-paste" placeholder="Cole aqui a análise do Claude">${esc(sm.ana.paste)}</textarea>
+  <div class="bar-act"><button class="btn" data-act="sm-anaread">Ler texto</button><label class="file-btn" style="background:var(--soft);color:var(--fg)">Ou enviar planilha<input type="file" id="sm-ana-file" accept=".txt,.csv,.xlsx,.xls"></label>${hasAna?`<button class="chip" data-act="sm-anaclear">Limpar análise</button>`:""}</div>
+  ${sm.ana.errs.length?`<div class="msg err"><b>Algumas linhas foram ignoradas:</b><br>${sm.ana.errs.map(esc).join("<br>")}</div>`:""}
+  ${prev}${anaHtml}
+  <details class="how"><summary>Como pedir a análise ao Claude</summary><p class="lead" style="margin-top:10px">Envie ao Claude o gabarito comentado e as suas respostas, junto com estas instruções.</p>
+    <textarea class="in" id="sm-instr" readonly style="min-height:240px">${esc(SMINSTR)}</textarea><div class="bar-act"><button class="btn alt" data-act="sm-anacopy">${sm.copied?"Copiado":"Copiar instruções"}</button></div></details>
+  ${dd.length?`<div class="sec-h" style="margin-top:34px"><h3>Discursivas</h3><span class="muted" style="font-size:13px">Imagens da redação e a nota dada por quem avaliou</span></div>
+  ${dd.map((d,i)=>`<div class="card" style="margin-bottom:12px"><div class="card-h"><h3>Discursiva ${i+1}</h3>${d.nota!=null&&d.max>0?`<span class="sc ${scCls(d.nota/d.max)}">${f1(d.nota)} de ${f1(d.max)}</span>`:""}</div>
+    <div class="fgrid"><div class="wide"><label class="lbl" for="sd-tema-${i}">Tema ou enunciado</label><input class="in" id="sd-tema-${i}" type="text" value="${esc(d.tema||"")}"></div>
+    ${smNum("sd-nota-"+i,"Nota recebida",d.nota)}${smNum("sd-max-"+i,"Nota máxima",d.max)}
+    <div class="wide"><label class="lbl" for="sd-obs-${i}">Comentário de quem avaliou</label><textarea class="in" id="sd-obs-${i}" style="min-height:80px">${esc(d.obs||"")}</textarea></div></div>
+    ${fileList(d.arq,"disc",i)}
+    <div class="bar-act"><button class="btn" data-act="sm-discsave" data-i="${i}">Salvar discursiva ${i+1}</button><label class="file-btn" style="background:var(--soft);color:var(--fg)">Enviar imagens<input type="file" class="sm-up-disc" data-i="${i}" accept="image/*,application/pdf" multiple></label></div></div>`).join("")}`:""}
+  <div class="box" style="margin-top:26px"><b>Pontuação geral deste simulado</b><p>${sc.poss?`${f1(sc.total)} de ${f1(sc.poss)} pontos (${pc(sc.pct)})`:"Preencha o resultado e as notas para ver a pontuação."}</p><small>Parte objetiva: certos menos errados, de ${sc.n||0} itens, valendo ${f1(sc.vo||0)} pontos${sc.n?` (${f1(sc.objPts)} pontos). `:". "}Discursivas: soma das notas recebidas${sc.dM?` (${f1(sc.dN)} de ${f1(sc.dM)}). `:". "}Nota negativa na objetiva conta como zero.</small></div>
   </section>`;
+}
+function smList(){
+  const all=Object.entries(SM).map(([id,s])=>({id,s,sc:smScore(s),feito:!!smObj(s)||smDisc(s).some(d=>d.nota!=null)}));
+  const feitos=all.filter(x=>x.feito).sort((a,b)=>(b.s.dt||"")<(a.s.dt||"")?-1:1),agend=all.filter(x=>!x.feito).sort((a,b)=>(a.s.dt||"")<(b.s.dt||"")?-1:1);
+  const withObj=feitos.filter(x=>x.sc.n),tot=withObj.reduce((z,x)=>({c:z.c+x.sc.c,e:z.e+x.sc.e,b:z.b+x.sc.b}),{c:0,e:0,b:0});
+  const comNota=feitos.filter(x=>x.sc.pct!=null),nm=comNota.length?comNota.reduce((z,x)=>z+x.sc.pct,0)/comNota.length:null;
+  // por assunto em todos os simulados
+  const byA={},byK={},mot={};
+  all.forEach(({s})=>(s.analise||[]).forEach(a=>{const key=a.mid||("t:"+norm(a.as||""));const x=byA[key]||(byA[key]={nome:a.mid&&BY[a.mid]?BY[a.mid].a:(a.as||"Sem assunto"),k:a.k,c:0,e:0,b:0,mid:a.mid});x.c+=a.c;x.e+=a.e;x.b+=a.b;const y=byK[a.k]||(byK[a.k]={c:0,e:0,b:0});y.c+=a.c;y.e+=a.e;y.b+=a.b;if(a.mot&&a.e)mot[a.mot]=(mot[a.mot]||0)+a.e}));
+  const wk=Object.values(byA).filter(x=>tot_(x)>=3).map(x=>({...x,r:rate(x)})).sort((a,b)=>a.r-b.r).slice(0,8);
+  const kRows=SUBJ.filter(k=>byK[k]).map(k=>{const r=rate(byK[k]);return {l:SHORT[k],c:`var(--m-${k})`,f:r||0,v:pc(r),s:tot_(byK[k])+" itens",tip:`${SHORT[k]}: ${byK[k].c} certos, ${byK[k].e} errados, ${byK[k].b} brancos`,r:r==null?-1:r}}).sort((a,b)=>a.r-b.r);
+  const mRows=Object.entries(mot).sort((a,b)=>b[1]-a[1]).map(([k,v])=>({l:MOT[k],c:"var(--red)",f:v/Math.max(1,Object.values(mot).reduce((x,y)=>x+y,0)),v:v+"",s:"erros",tip:`${MOT[k]}: ${v} erros`}));
+  const row=x=>`<li class="row" data-act="sm-open" data-id="${x.id}" tabindex="0" role="button"><div class="rt"><div class="t">${esc(x.s.nome)}</div><div class="s"><span>${x.s.dt?fmtDay(x.s.dt):"Sem data"}</span><span class="rb">${esc((SMTIPO[x.s.tipo]||"").split(" (")[0])}</span>${x.s.itens?`<span>${x.s.itens} itens</span>`:""}${x.s.nd?`<span>${x.s.nd} ${x.s.nd===1?"discursiva":"discursivas"}</span>`:""}</div></div>${x.feito?`<div class="res">${x.sc.pct!=null?`<span class="sc ${scCls(x.sc.pct)}">${pc(x.sc.pct)}</span><small>nota geral</small>`:`<span class="sc ${scCls(x.sc.acc)}">${pc(x.sc.acc)}</span><small>líquida ${pc(x.sc.liq)}</small>`}</div>`:`<span class="pill">${x.s.dt&&x.s.dt<ymd(today())?"Sem resultado":"Agendado"}</span>`}</li>`;
+  return `
+  <section class="sec" style="margin-top:20px"><div class="sec-h"><h2>Simulados</h2><button class="btn" style="width:auto;margin:0;padding:10px 20px" data-act="sm-new">Novo simulado</button></div>
+    <p class="lead">Cadastre cada simulado com data e composição. Depois registre o resultado, envie o gabarito comentado, a análise por assunto e as discursivas. Cada simulado tem a sua análise, e aqui você vê o conjunto.</p>
+    ${sm.msg?`<div class="msg">${esc(sm.msg)}</div>`:""}${sm.err?`<div class="msg err">${esc(sm.err)}</div>`:""}
+    <div class="kpis" style="margin-top:16px">
+      <div class="kpi blue"><div class="lab">Simulados feitos</div><div class="num">${feitos.length}</div><div class="sub">${agend.length} ${agend.length===1?"agendado":"agendados"}</div></div>
+      <div class="kpi green"><div class="lab">Acerto médio</div><div class="num">${pc(rate(tot))}</div><div class="sub">${withObj.length?`${num(tot.c)} certos em ${num(tot_(tot))} itens`:"Sem resultado ainda"}</div></div>
+      <div class="kpi purple"><div class="lab">Nota líquida média</div><div class="num">${pc(net(tot))}</div><div class="sub">certos menos errados</div></div>
+      <div class="kpi teal"><div class="lab">Nota geral média</div><div class="num">${nm==null?"–":pc(nm)}</div><div class="sub">${comNota.length?`objetiva e discursivas, em ${comNota.length} ${comNota.length===1?"simulado":"simulados"}`:"Preencha as notas das discursivas"}</div></div>
+    </div></section>
+  ${feitos.length?`<section class="sec"><div class="card"><div class="card-h"><div><h3>Evolução dos simulados</h3><p>Acerto, nota líquida e nota geral, em ordem de data</p></div><div class="legend"><span style="--c:var(--blue)"><i></i>Acerto</span><span style="--c:var(--purple)"><i></i>Nota líquida</span><span style="--c:var(--green)"><i></i>Nota geral</span></div></div><div class="chart" data-kind="smEvo"></div></div></section>`:""}
+  ${agend.length?`<section class="sec"><div class="grp"><div class="grp-t"><span>Agendados</span><span>${agend.length}</span></div><ul class="list">${agend.map(row).join("")}</ul></div></section>`:""}
+  <section class="sec"><div class="grp"><div class="grp-t"><span>Realizados</span><span>${feitos.length}</span></div>${feitos.length?`<ul class="list">${feitos.map(row).join("")}</ul>`:`<div class="empty">Nenhum simulado com resultado ainda. Cadastre um e registre o resultado.</div>`}</div></section>
+  ${kRows.length?`<section class="sec"><div class="sec-h"><h2>Desempenho nos simulados</h2><span class="muted" style="font-size:13px">Somando todos os simulados com análise por assunto</span></div><div class="grid2">
+    <div class="card"><div class="card-h"><div><h3>Por matéria</h3><p>Do menor para o maior acerto</p></div></div>${barsHtml(kRows)}</div>
+    ${mRows.length?`<div class="card"><div class="card-h"><div><h3>Por que você errou</h3><p>Erros por motivo, em todos os simulados</p></div></div>${barsHtml(mRows)}</div>`:""}
+    <div class="card wide"><div class="card-h"><div><h3>Assuntos mais fracos nos simulados</h3><p>Menor acerto, com ao menos 3 itens</p></div></div>${wk.length?`<ul class="list">${wk.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${SUBJ.includes(x.k)?`<span class="tag" style="--c:var(--m-${x.k})"><i></i>${SHORT[x.k]}</span>`:""}<span>${x.c} certos · ${x.e} errados · ${x.b} brancos</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 itens ou mais.</div>'}</div></div></section>`:""}
+  ${D.ideias&&D.ideias.length?`<details class="how"><summary>Ideias de discursiva para os seus simulados</summary><p class="lead" style="margin-top:10px">Temas e peças técnicas que montei a partir do conteúdo programático. Use como quiser.</p>${D.ideias.map(i=>`<p style="margin:8px 0"><b>Ideia ${i.n}.</b> ${i.linhas.map(esc).join(" ")}</p>`).join("")}</details>`:""}`;
+}
+function simHtml(){
+  const lb=sm.lb?`<div class="ov" data-act="sm-lbclose"><div class="sheet" style="max-width:760px;text-align:center"><h3 style="margin-bottom:12px">${esc(sm.lb.nome)}</h3>${/^image\//.test(sm.lb.tipo)?`<img alt="${esc(sm.lb.nome)}" src="${sm.lb.url}" style="max-width:100%;border-radius:14px">`:`<p class="muted">Toque para abrir o arquivo em uma nova aba.</p>`}<div class="bar-act" style="justify-content:center"><a class="btn" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" target="_blank" rel="noopener">Abrir em nova aba</a><a class="btn alt" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" download="${esc(sm.lb.nome)}">Baixar</a><button class="btn alt" style="width:auto;margin:0;padding:12px 22px" data-act="sm-lbclose">Fechar</button></div></div></div>`:"";
+  return (sm.view==="form"?smForm():sm.view==="detail"?smDetail():smList())+lb;
+}
+
+/* eventos dos simulados */
+const gv=id=>{const x=document.getElementById(id);return x?x.value:""};
+const gn=id=>{const v=gv(id);return v===""?null:num2(v)};
+function smDiscRead(i){
+  const s=SM[sm.id];if(!s)return;
+  const d=smDisc(s).map(x=>({...x}));
+  d[i]={...d[i],tema:gv("sd-tema-"+i).trim(),nota:gn("sd-nota-"+i),max:gn("sd-max-"+i),obs:gv("sd-obs-"+i).trim()};
+  smPut(sm.id,{...s,disc:d});
+}
+function smClick(a,t,e){
+  const s=SM[sm.id];
+  if(a==="sm-lbclose"){if(t.classList.contains("ov")&&e.target!==t)return;if(sm.lb&&sm.lb.url)URL.revokeObjectURL(sm.lb.url);sm.lb=null;render();return}
+  if(a==="sm-new"){sm.ed={id:"",nome:"",dt:ymd(today()),tipo:"completo",itens:"",nd:0,vo:"",comp:{},obs:""};sm.view="form";sm.err="";sm.msg="";render();window.scrollTo(0,0);return}
+  if(a==="sm-edit"&&s){sm.ed={id:sm.id,...s,itens:s.itens||"",vo:s.vo||"",comp:s.comp||{}};sm.view="form";sm.err="";render();window.scrollTo(0,0);return}
+  if(a==="sm-back"){sm.err="";sm.msg="";sm.ask="";sm.view=(sm.view==="form"&&sm.ed&&sm.ed.id)?"detail":"list";if(sm.view==="list")sm.id="";render();window.scrollTo(0,0);return}
+  if(a==="sm-open"){sm.id=t.dataset.id;sm.view="detail";sm.err="";sm.msg="";sm.ask="";sm.ana={paste:"",rows:[],errs:[],name:""};render();window.scrollTo(0,0);return}
+  if(a==="sm-saveform"){
+    const nome=gv("sm-nome").trim();
+    if(!nome){sm.err="Dê um nome ao simulado.";render();return}
+    const comp={};SUBJ.forEach(k=>{const v=gn("sm-c-"+k);if(v)comp[k]=Math.round(v)});
+    const id=sm.ed.id||smId(),old=SM[id]||{};
+    smPut(id,{...old,nome,dt:gv("sm-dt"),tipo:gv("sm-tipo"),itens:Math.round(gn("sm-itens")||0),nd:+gv("sm-nd")||0,vo:gn("sm-vo")||0,comp,obs:gv("sm-obs").trim()});
+    sm.err="";sm.id=id;sm.view="detail";sm.msg=sm.ed.id?"Alterações salvas.":"Simulado cadastrado. Registre o resultado quando fizer a prova.";sm.ed=null;render();window.scrollTo(0,0);return}
+  if(!s&&a!=="sm-anacopy")return;
+  if(a==="sm-delask"){sm.ask=sm.id;render();return}
+  if(a==="sm-delno"){sm.ask="";render();return}
+  if(a==="sm-delok"){const ids=[...(s.gab||[]),...smDisc(s).flatMap(d=>d.arq||[])];ids.forEach(fileDel);smPut(sm.id,null);sm.ask="";sm.view="list";sm.id="";sm.msg="Simulado excluído.";render();return}
+  if(a==="sm-saveres"){const c=gn("sm-rc")||0,er=gn("sm-re")||0,b=gn("sm-rb")||0;smPut(sm.id,{...s,res:{c:Math.round(c),e:Math.round(er),b:Math.round(b)}});sm.msg="Resultado salvo.";sm.err="";render();return}
+  if(a==="sm-anaread"){const r=parseAnaliseText(sm.ana.paste);if(!r.rows.length&&!r.errs.length){sm.err="Cole primeiro o texto da análise.";render();return}smAnaPrepare(r,"texto colado");render();return}
+  if(a==="sm-anacancel"){sm.ana={paste:"",rows:[],errs:[],name:""};render();return}
+  if(a==="sm-anasave"){
+    const rows=sm.ana.rows.filter(r=>r.k).map(r=>({k:r.k,mid:r.mid||"",as:r.ass||"",c:r.c,e:r.e,b:r.b,mot:r.mot||""}));
+    if(!rows.length)return;
+    smPut(sm.id,{...s,analise:rows});sm.ana={paste:"",rows:[],errs:[],name:""};sm.msg=`Análise salva: ${rows.length} ${rows.length===1?"assunto":"assuntos"}. Ela já entrou no desempenho por matéria e assunto.`;sm.err="";render();return}
+  if(a==="sm-anaclear"){const d={...s};delete d.analise;smPut(sm.id,d);sm.msg="Análise removida.";render();return}
+  if(a==="sm-anacopy"){smCopy(SMINSTR);return}
+  if(a==="sm-discsave"){smDiscRead(+t.dataset.i);sm.msg="Discursiva salva.";sm.err="";render();return}
+  if(a==="sm-fopen"){fileOpen(t.dataset.f);return}
+  if(a==="sm-fdel"){
+    const f=t.dataset.f,i=t.dataset.i;fileDel(f);
+    const d={...s};
+    if(t.dataset.k==="gab")d.gab=(d.gab||[]).filter(x=>x!==f);
+    else{d.disc=smDisc(d).map(x=>({...x}));const j=+i;d.disc[j]={...d.disc[j],arq:(d.disc[j].arq||[]).filter(x=>x!==f)}}
+    smPut(sm.id,d);sm.msg="Arquivo excluído.";render();return}
+}
+function smChange(e){
+  const t=e.target;
+  if(t.id==="sm-up-gab"&&t.files&&t.files.length){const fs=Array.from(t.files);t.value="";smUpload(fs,"gab");return true}
+  if(t.classList&&t.classList.contains("sm-up-disc")&&t.files&&t.files.length){const fs=Array.from(t.files),i=+t.dataset.i;t.value="";smDiscRead(i);smUpload(fs,"disc",i);return true}
+  if(t.id==="sm-ana-file"&&t.files&&t.files[0]){smAnaFile(t.files[0]);return true}
+  const sa=t.closest&&t.closest("[data-sma]");
+  if(sa){const r=sm.ana.rows[+sa.dataset.i];if(!r)return true;
+    if(sa.dataset.sma==="k"){r.k=sa.value;const rk=r.k?metaRank(r.k,r.ass):[];r.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else r.mid=sa.value;
+    render();return true}
+  return false;
 }
 
 /* ---------- questões (importação) ---------- */
@@ -1372,10 +1676,9 @@ function drawCharts(){
       const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),v=(REVD[key]||{}).n||0;bars.push({l:d.getDate(),v,hi:i===0,t:`${fmtDay(key)}: ${v} respostas`})}
       const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
       cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Respostas por dia"});
-    }else if(k==="sims"){
-      const acc=SIMS.map(m=>{const it=itemsOf(m),r=isDone(m)?rate(it):null;return r==null?null:r*100});
-      const nl=SIMS.map(m=>{const it=itemsOf(m),r=isDone(m)?net(it):null;return r==null?null:r*100});
-      lines(el,SIMS.map((m,i)=>i+1),[{vals:acc,color:"var(--blue)",dots:true,end:x=>Math.round(x)+"%"},{vals:nl,color:"var(--purple)",dots:true}],{max:100,ticks:[0,25,50,75,100],tf:t=>t+"%",aria:"Evolução dos simulados",tip:i=>{const it=itemsOf(SIMS[i]);return isDone(SIMS[i])?`Simulado ${i+1}: acerto ${pc(rate(it))}, líquida ${pc(net(it))}`:`Simulado ${i+1}: pendente`}});
+    }else if(k==="smEvo"){
+      const L=Object.values(SM).map(x=>({s:x,sc:smScore(x)})).filter(x=>x.sc.n||x.sc.pct!=null).sort((a,b)=>(a.s.dt||"")<(b.s.dt||"")?-1:1);
+      lines(el,L.map((x,i)=>i+1),[{vals:L.map(x=>x.sc.acc==null?null:x.sc.acc*100),color:"var(--blue)",dots:true},{vals:L.map(x=>x.sc.liq==null?null:Math.max(0,x.sc.liq*100)),color:"var(--purple)",dots:true},{vals:L.map(x=>x.sc.pct==null?null:x.sc.pct*100),color:"var(--green)",dots:true,end:x=>Math.round(x)+"%"}],{max:100,ticks:[0,25,50,75,100],tf:t=>t+"%",aria:"Evolução dos simulados",tip:i=>{const x=L[i];return `${x.s.nome}: acerto ${pc(x.sc.acc)}, líquida ${pc(x.sc.liq)}${x.sc.pct!=null?`, nota geral ${pc(x.sc.pct)}`:""}`}});
     }
   });
 }
@@ -1467,6 +1770,7 @@ document.addEventListener("click",e=>{
   if(a==="plan"){sel=+t.dataset.i;tab="semana";render();window.scrollTo(0,0);return}
   if(a==="mat"){const k=t.dataset.k;openMat[k]=!openMat[k];render();return}
   if(a==="demo"){demo=!demo;demoChosen=demo;LS.set("painel-demo",demo?"1":"0");if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();sel=curWeek();render();return}
+  if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
   if(a==="clear"){save(sheetId,null);closeSheet();return}
   if(a==="move"){moveTo(sheetId,+t.dataset.w);return}
@@ -1499,6 +1803,7 @@ document.addEventListener("click",e=>{
   if(a==="backup"){exportBackup();return}
 });
 document.addEventListener("input",e=>{
+  if(e.target.id==="sm-ana-paste"){sm.ana.paste=e.target.value;return}
   if(e.target.id==="ak-paste"){ak.paste=e.target.value;return}
   const i=e.target.closest("[data-f]");if(!i)return;
   const k=i.dataset.f,v=i.value.replace(",",".");
@@ -1508,6 +1813,7 @@ document.addEventListener("input",e=>{
   liveUpd();
 });
 document.addEventListener("change",e=>{
+  if(smChange(e))return;
   const akf=e.target.closest("#ak-file");
   if(akf&&akf.files&&akf.files[0]){ak.msg="";akReadFile(akf.files[0]);return}
   const aks=e.target.closest("[data-ak]");
