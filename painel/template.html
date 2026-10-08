@@ -5,8 +5,8 @@
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
 :root{
   --bg:#ffffff; --fg:#111827; --fg2:#4b5563; --fg3:#6b7280; --line:#ece6df; --soft:#f6f2ed; --soft2:#ebe3da;
-  --blue:#cf4a1e; --green:#15803d; --purple:#6d28d9; --orange:#c2410c; --teal:#0f766e; --indigo:#4338ca; --red:#b91c1c; --pink:#be185d; --slate:#334155; --gold:#f59e0b;
-  --good:#15803d; --bad:#b91c1c; --good-t:#dcfce7; --bad-t:#fee2e2; --warn-t:#fef3c7; --blue-t:#fff0e8;
+  --blue:#087a40; --green:#0b7a3c; --purple:#1557b6; --orange:#b57f00; --teal:#0b7a6b; --indigo:#1f6fc2; --red:#b42318; --pink:#3d7a1a; --slate:#1d3b5c; --gold:#ffd21a;
+  --good:#0b7a3c; --bad:#b42318; --good-t:#dcfce7; --bad-t:#fee2e2; --warn-t:#fef3c7; --blue-t:#e6f5ec;
   --m-REG:#2a78d6; --m-POR:#eb6834; --m-LIN:#4a3aa7; --m-TI:#1baf7a; --m-CP:#e87ba4; --m-ADM:#eda100; --m-CON:#008300; --m-ASR:#e34948; --m-ING:#2f9bb5;
   --font:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --display:"Nunito","Arial Rounded MT Bold","Segoe UI",sans-serif;
@@ -20,9 +20,10 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .muted{color:var(--fg2)} .faint{color:var(--fg3)}
 
 /* cabeçalho */
-.top{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-bottom:16px}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:20px 22px 18px;margin-bottom:14px;border-radius:26px;background:linear-gradient(115deg,#d9f1e2 0%,#fff3b8 48%,#d6e8fb 100%)}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
-h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:.02em;text-transform:uppercase}
+.top .eyebrow{color:#33503f}
+h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(95deg,#0a5c3a 0%,#087a40 45%,#1557b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .sw{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg2)}
 .sw .note{max-width:220px;line-height:1.25;text-align:right}
 .switch{position:relative;width:46px;height:26px;border-radius:99px;background:#cbd5e1;transition:background .15s;flex:none}
@@ -30,8 +31,23 @@ h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:
 .switch[aria-checked="true"]{background:var(--green)} .switch[aria-checked="true"]::after{transform:translateX(20px)}
 .switch[disabled]{opacity:.5;cursor:default}
 
+/* menu lateral */
+.dots{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--soft);flex:none}
+.dots:hover{background:var(--soft2)}.dots svg{width:20px;height:20px;fill:var(--fg)}
+.curt{font-weight:800;font-size:16px;font-family:var(--display);letter-spacing:.01em}
+.tabs .bd{margin-left:6px}
+.dov{position:fixed;inset:0;z-index:60;background:rgba(10,40,25,.42);animation:fade .15s}
+.drawer{position:absolute;left:0;top:0;bottom:0;width:min(320px,86vw);background:var(--bg);border-radius:0 28px 28px 0;box-shadow:12px 0 40px rgba(10,40,25,.2);display:flex;flex-direction:column;animation:slidein .2s ease-out;overflow:auto;padding-bottom:20px}
+.drawer .dh{padding:max(22px,env(safe-area-inset-top,0px)) 22px 18px;background:linear-gradient(160deg,#0a8f4b 0%,#14a653 30%,#ffd21a 62%,#2f8be0 86%,#1557b6 100%);color:#fff}
+.drawer .dh b{display:block;font:900 22px/1.1 var(--display);text-transform:uppercase;text-shadow:0 2px 8px rgba(0,60,30,.3)}
+.drawer .dh span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.95;text-shadow:0 1px 6px rgba(0,60,30,.35)}
+.drawer nav{padding:12px 12px 0;display:flex;flex-direction:column;gap:2px}
+.drawer nav button{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:13px 16px;border-radius:16px;font-size:16px;font-weight:600;color:var(--fg2)}
+.drawer nav button:hover{background:var(--soft)}
+.drawer nav button[aria-selected="true"]{background:#e3f4ea;color:#0a5c3a;font-weight:800}
+@keyframes slidein{from{transform:translateX(-100%)}to{transform:none}}
 /* abas */
-.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:8px 0}
 .seg{display:flex;gap:clamp(14px,2.4vw,28px);overflow-x:auto;scrollbar-width:none}
 .seg::-webkit-scrollbar{display:none}
 .seg button{padding:12px 2px 11px;font-size:15px;font-weight:600;color:var(--fg3);white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:6px}
@@ -87,9 +103,13 @@ h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:
 .kpi .num small{font-size:.42em;font-weight:500;letter-spacing:0;margin-left:4px;color:rgba(255,255,255,.9)}
 .kpi .sub{font-size:13px;color:rgba(255,255,255,.92);line-height:1.3}
 .kpi .viz{margin-top:auto;padding-top:12px;display:flex;align-items:flex-end;min-height:36px}
-.kpi.blue{--k:#be4219} .kpi.green{--k:#23803f} .kpi.purple{--k:#b82458} .kpi.orange{--k:#a8490a}
-.kpi.teal{--k:#9b2f85} .kpi.indigo{--k:#0e7c86} .kpi.pink{--k:#c42b63} .kpi.red{--k:#c93030} .kpi.slate{--k:#5b4636}
-.kpi{background:linear-gradient(140deg,var(--k) 0%,color-mix(in srgb,var(--k) 90%,#ffa94d) 100%)}
+.kpi.blue{--k:#1557b6} .kpi.green{--k:#087a40} .kpi.purple{--k:#0b7a6b} .kpi.orange{--k:#ffd21a}
+.kpi.teal{--k:#0a5c3a} .kpi.indigo{--k:#1f6fc2} .kpi.pink{--k:#3d7a1a} .kpi.red{--k:#b42318} .kpi.slate{--k:#1d3b5c}
+.kpi{background:linear-gradient(140deg,var(--k) 0%,color-mix(in srgb,var(--k) 84%,#14a653) 100%)}
+.kpi.orange{background:linear-gradient(140deg,#ffd21a 0%,#ffe36b 100%);color:#14301f}
+.kpi.orange .lab,.kpi.orange .num small,.kpi.orange .sub{color:rgba(20,48,31,.88)}
+.kpi.orange .bar2{background:rgba(20,48,31,.18)}.kpi.orange .bar2 i,.kpi.orange .sbars span{background:#14301f}
+.kpi.orange .spark .pt{background:#14301f}
 .sbars{display:flex;align-items:flex-end;gap:3px;height:34px;width:100%}
 .sbars span{flex:1;background:#fff;min-height:3px;border-radius:4px 4px 0 0}
 .sbars span.z{background:rgba(255,255,255,.28)}
@@ -377,7 +397,7 @@ function rgMeta(wi){return {id:WK[wi].id+"~RG",rg:true,k:"RG",a:`Revisão geral 
 const getM=id=>{if(BY[id])return BY[id];if(id.endsWith("~RG")){const n=parseInt(id.slice(1),10)-1;return n>=0&&n<WK.length?rgMeta(n):null}const i=id.indexOf("~R");if(i<0)return null;const b=BY[id.slice(0,i)];return b?revMeta(b,+id.slice(i+2)):null};
 
 /* ---------- estado ---------- */
-let demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
+let menu=false, demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
 let col=null, sync="local", demoChosen=null, A=null, RL=[], WM=[], IM={by:{},rows:[]};
 let imp={name:"",rows:[],err:"",msg:"",date:""};
 let CARDS={},REVD={},SM={},FILES={},LOCALF={};
@@ -1210,7 +1230,7 @@ function smList(){
       <div class="kpi purple"><div class="lab">Nota líquida média</div><div class="num">${pc(net(tot))}</div><div class="sub">certos menos errados</div></div>
       <div class="kpi teal"><div class="lab">Nota geral média</div><div class="num">${nm==null?"–":pc(nm)}</div><div class="sub">${comNota.length?`objetiva e discursivas, em ${comNota.length} ${comNota.length===1?"simulado":"simulados"}`:"Preencha as notas das discursivas"}</div></div>
     </div></section>
-  ${feitos.length?`<section class="sec"><div class="card"><div class="card-h"><div><h3>Evolução dos simulados</h3><p>Acerto, nota líquida e nota geral, em ordem de data</p></div><div class="legend"><span style="--c:var(--blue)"><i></i>Acerto</span><span style="--c:var(--purple)"><i></i>Nota líquida</span><span style="--c:var(--green)"><i></i>Nota geral</span></div></div><div class="chart" data-kind="smEvo"></div></div></section>`:""}
+  ${feitos.length?`<section class="sec"><div class="card"><div class="card-h"><div><h3>Evolução dos simulados</h3><p>Acerto, nota líquida e nota geral, em ordem de data</p></div><div class="legend"><span style="--c:var(--purple)"><i></i>Acerto</span><span style="--c:var(--teal)"><i></i>Nota líquida</span><span style="--c:var(--blue)"><i></i>Nota geral</span></div></div><div class="chart" data-kind="smEvo"></div></div></section>`:""}
   ${agend.length?`<section class="sec"><div class="grp"><div class="grp-t"><span>Agendados</span><span>${agend.length}</span></div><ul class="list">${agend.map(row).join("")}</ul></div></section>`:""}
   <section class="sec"><div class="grp"><div class="grp-t"><span>Realizados</span><span>${feitos.length}</span></div>${feitos.length?`<ul class="list">${feitos.map(row).join("")}</ul>`:`<div class="empty">Nenhum simulado com resultado ainda. Cadastre um e registre o resultado.</div>`}</div></section>
   ${kRows.length?`<section class="sec"><div class="sec-h"><h2>Desempenho nos simulados</h2><span class="muted" style="font-size:13px">Somando todos os simulados com análise por assunto</span></div><div class="grid2">
@@ -1796,8 +1816,8 @@ function render(){
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>
-  <nav class="tabs"><div class="seg" role="tablist">${TABS.map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" data-act="tab" data-v="${k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</div></nav>
-  ${body}${lbHtml()}`;
+  <nav class="tabs"><button class="dots" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg></button><span class="curt">${esc((TABS.find(x=>x[0]===tab)||[0,""])[1])}</span>${dueNow&&tab!=="revisoes"?`<span class="bd">${dueNow}</span>`:""}</nav>
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
@@ -1869,7 +1889,7 @@ function drawCharts(){
       cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Respostas por dia"});
     }else if(k==="smEvo"){
       const L=Object.values(SM).map(x=>({s:x,sc:smScore(x)})).filter(x=>x.sc.n||x.sc.pct!=null).sort((a,b)=>(a.s.dt||"")<(b.s.dt||"")?-1:1);
-      lines(el,L.map((x,i)=>i+1),[{vals:L.map(x=>x.sc.acc==null?null:x.sc.acc*100),color:"var(--blue)",dots:true},{vals:L.map(x=>x.sc.liq==null?null:Math.max(0,x.sc.liq*100)),color:"var(--purple)",dots:true},{vals:L.map(x=>x.sc.pct==null?null:x.sc.pct*100),color:"var(--green)",dots:true,end:x=>Math.round(x)+"%"}],{max:100,ticks:[0,25,50,75,100],tf:t=>t+"%",aria:"Evolução dos simulados",tip:i=>{const x=L[i];return `${x.s.nome}: acerto ${pc(x.sc.acc)}, líquida ${pc(x.sc.liq)}${x.sc.pct!=null?`, nota geral ${pc(x.sc.pct)}`:""}`}});
+      lines(el,L.map((x,i)=>i+1),[{vals:L.map(x=>x.sc.acc==null?null:x.sc.acc*100),color:"var(--purple)",dots:true},{vals:L.map(x=>x.sc.liq==null?null:Math.max(0,x.sc.liq*100)),color:"var(--teal)",dots:true},{vals:L.map(x=>x.sc.pct==null?null:x.sc.pct*100),color:"var(--blue)",dots:true,end:x=>Math.round(x)+"%"}],{max:100,ticks:[0,25,50,75,100],tf:t=>t+"%",aria:"Evolução dos simulados",tip:i=>{const x=L[i];return `${x.s.nome}: acerto ${pc(x.sc.acc)}, líquida ${pc(x.sc.liq)}${x.sc.pct!=null?`, nota geral ${pc(x.sc.pct)}`:""}`}});
     }
   });
 }
@@ -1954,7 +1974,9 @@ document.addEventListener("click",e=>{
   if(a==="close"){if(e.target===t)closeSheet();return}
   if(a==="toggle"){e.stopPropagation();toggle(t.dataset.id);return}
   if(a==="open"){openSheet(t.dataset.id);return}
-  if(a==="tab"){tab=t.dataset.v;render();window.scrollTo(0,0);return}
+  if(a==="menu"){menu=true;render();return}
+  if(a==="menu-close"){if(e.target===t){menu=false;render()}return}
+  if(a==="tab"){tab=t.dataset.v;menu=false;render();window.scrollTo(0,0);return}
   if(a==="wk"){sel=Math.max(0,Math.min(lastWk,sel+ +t.dataset.d));render();return}
   if(a==="cur"){sel=curWeek();render();return}
   if(a==="only"){onlyPend=!onlyPend;render();return}
@@ -2034,6 +2056,7 @@ document.addEventListener("change",e=>{
 });
 document.addEventListener("keydown",e=>{
   if(e.key==="Enter"&&e.target.id&&e.target.id.indexOf("lg-")===0){e.preventDefault();if(e.target.id.indexOf("lg-new")===0)doSetPass();else doLogin();return}
+  if(e.key==="Escape"&&menu){menu=false;render();return}
   if(e.key==="Escape"&&sheetId)closeSheet();
   if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("row")){e.preventDefault();openSheet(e.target.dataset.id)}
 });
