@@ -1,52 +1,33 @@
-# Painel de metas: como colocar no ar com login e senha
+# Painel de metas: como funciona no ar
 
-O painel hospedado no Firebase tem um endereço próprio (`https://SEU-PROJETO.web.app`), pede e-mail e senha e guarda tudo no banco de dados do Google (Firestore). Funciona em qualquer aparelho. O plano gratuito (Spark) é suficiente.
+- **Endereços:** https://painel-de-metas.web.app (principal) e https://educacional-511014.web.app (mesmo painel).
+- **Projeto Firebase:** `educacional-511014` (nome "educacional").
+- **Login:** e-mail e senha, só para quem foi cadastrado no console do Firebase. O cadastro aberto está desligado. A sessão fica salva no aparelho e o painel não pede a senha de novo.
+- **Primeiro acesso:** abra o e-mail "Reset your password" (ou "Redefinir senha") enviado pelo Firebase, crie a senha, toque em Continuar e entre no painel uma vez. Se perder o e-mail, na tela de entrada toque em "Primeiro acesso ou esqueci a senha".
 
-## 1. Criar o projeto
+## Backups dos dados
 
-1. Entre em https://console.firebase.google.com e clique em **Adicionar projeto**. Dê um nome (por exemplo `painel-metas`). O Google Analytics pode ficar desligado.
-2. Em **Criação > Authentication > Começar > Método de login**, ative **E-mail/senha**.
-3. Em **Authentication > Usuários > Adicionar usuário**, cadastre o seu e-mail e uma senha.
-4. Ainda em Authentication, abra **Configurações > Ações do usuário** e desmarque **Ativar criação (cadastro)**. Assim ninguém mais consegue criar conta.
-5. Em **Criação > Firestore Database > Criar banco de dados**, escolha **modo de produção** e a região **southamerica-east1 (São Paulo)**. A região não pode ser mudada depois.
+1. **Backup do Google, automático:** recuperação a qualquer momento dos últimos 7 dias, um backup por dia (guardado 14 dias) e um por semana (guardado 14 semanas). A restauração desses backups é feita pelo console ou pela linha de comando do Firebase e cria um banco novo.
+2. **Backup diário dentro do painel:** um instantâneo por dia, guardado 30 dias, com botão "Restaurar" na aba Questões. Antes de restaurar, o estado atual é guardado como "antes da restauração".
+3. **Arquivo:** na aba Questões, "Baixar backup" gera um arquivo JSON com tudo, e "Restaurar backup" lê esse arquivo.
 
-## 2. Ligar o painel ao projeto
+O banco também tem proteção contra exclusão.
 
-1. Em **Configurações do projeto (engrenagem) > Seus apps**, clique no ícone **Web (`</>`)**, registre um app e copie o bloco `firebaseConfig`.
-2. Cole os valores em `painel/firebase-config.js`. Esses valores não são segredo: quem protege os dados são o login e as regras do banco.
-3. No arquivo `.firebaserc`, troque `SEU-PROJETO` pelo ID do projeto.
+## Atualizar o painel
 
-## 3. Publicar
-
-Precisa do Node.js. No terminal, dentro da pasta do repositório:
-
-```
-npm install -g firebase-tools
-firebase login
-firebase deploy --only hosting,firestore:rules
-```
-
-O comando mostra o endereço do painel. Abra, entre com o e-mail e a senha do passo 1 e pronto.
-
-## Segurança
-
-O arquivo `firestore.rules` só deixa cada pessoa ler e gravar dentro da própria pasta (`usuarios/{seu id}`). Sem login, nada é lido nem gravado.
-
-## Atualizar o cronograma ou o painel
-
-Depois de mudar `dados/cronograma.json` ou `painel/template.html`:
+Depois de mudar `dados/cronograma.json` ou `painel/template.html`, no computador:
 
 ```
 python3 painel/build.py
-firebase deploy --only hosting
+firebase deploy --only hosting --project educacional-511014
 ```
 
 Os seus registros ficam no banco e não são afetados.
 
-## Levar os dados que já estão na versão de teste
+## Segurança
 
-Na aba **Questões**, no fim da página, use **Baixar backup** na versão antiga. Na versão nova, depois de entrar, use **Restaurar backup** e escolha o arquivo. Dá para fazer um backup quando quiser, por segurança.
+O arquivo `firestore.rules` só deixa cada pessoa ler e gravar dentro da própria pasta (`usuarios/{id}`). Sem login, nada é lido nem gravado. Os valores em `painel/firebase-config.js` são públicos por natureza.
 
-## Sem configurar o Firebase
+## Sem o Firebase
 
-Enquanto `firebase-config.js` tiver os valores de exemplo, o painel abre sem login e salva só no aparelho em que você está.
+Se `firebase-config.js` tiver os valores de exemplo (`COLE_AQUI`), o painel abre sem login e salva só no aparelho.

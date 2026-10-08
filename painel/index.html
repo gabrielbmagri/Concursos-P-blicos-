@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body><title>Painel de Metas</title>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas"><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body><title>Painel de Metas</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
@@ -242,11 +242,21 @@ select:focus,.in:focus{outline:3px solid var(--blue);outline-offset:0}
 .soon{border:2px dashed var(--soft2);border-radius:20px;padding:40px 20px;text-align:center;margin-top:14px}
 .soon h2{font:900 30px/1.1 var(--display);letter-spacing:.02em;text-transform:uppercase}
 .soon p{max-width:52ch;margin:10px auto 0;color:var(--fg2)}
-.login{max-width:440px;margin:10vh auto 0;padding:34px 30px 30px;border:1px solid var(--line);border-radius:26px}
-.login h1{font-size:38px;margin-bottom:6px}
-.login label{display:block;font-size:13px;font-weight:600;margin:18px 0 6px;color:var(--fg2)}
-.login .btn{margin-top:20px}
-.login .link{background:none;margin-top:14px}
+.login{max-width:430px;margin:8vh auto 0;padding:36px 30px 30px;border-radius:32px;color:#fff;
+  background:linear-gradient(168deg,#0a8f4b 0%,#14a653 24%,#ffd21a 50%,#2f8be0 76%,#1557b6 100%);
+  box-shadow:0 22px 60px rgba(21,87,182,.22),0 4px 14px rgba(10,143,75,.18)}
+.login .eyebrow{color:rgba(255,255,255,.92)}
+.login h1{color:#fff;font-size:42px;margin:6px 0 4px;text-shadow:0 2px 10px rgba(0,60,30,.25)}
+.login .sub{margin:0 0 54px;font-size:15px;font-weight:600;color:#fff;text-shadow:0 1px 8px rgba(0,60,30,.3)}
+.login input.in{display:block;width:100%;margin-top:12px;padding:16px 18px;border:0;border-radius:18px;background:#fff;color:#111827;font-size:16px;box-shadow:0 2px 8px rgba(17,24,39,.12)}
+.login input.in::placeholder{color:#6b7280}
+.login input.in:focus{outline:3px solid rgba(255,255,255,.9);outline-offset:2px}
+.login .btn{margin-top:58px;background:#fff;color:#0f2f66;font-weight:800;box-shadow:0 6px 18px rgba(8,40,96,.28)}
+.login .btn[disabled]{opacity:.7}
+.login .link{display:block;margin:16px auto 0;color:#fff;font-weight:700;text-decoration:underline;background:none;text-align:center}
+.login .msg{margin-top:14px;border-radius:14px;background:#fff;color:#111827;font-size:14px}
+.login .msg.err{background:#fff;color:#b91c1c}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .wait{max-width:440px;margin:22vh auto 0;text-align:center;color:var(--fg2);font-weight:600}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -323,7 +333,7 @@ const getM=id=>{if(BY[id])return BY[id];if(id.endsWith("~RG")){const n=parseInt(
 let demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
 let col=null, sync="local", demoChosen=null, A=null, RL=[], WM=[], IM={by:{},rows:[]};
 let imp={name:"",rows:[],err:"",msg:"",date:""};
-const fb={on:false,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:""};
+const fb={on:false,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
 const P=()=>demo?DEMO:real;
 const today=()=>{if(demo)return pd(DEMO_TODAY);const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
 const weekOf=s=>{const t=pd(s);for(let i=0;i<WK.length;i++){if(t>=pd(WK[i].i)&&t<=pd(WK[i].f))return i}return t<START?0:lastWk};
@@ -371,6 +381,13 @@ function initFirebase(){
     fb.auth=firebase.auth();fb.fs=firebase.firestore();
     try{fb.fs.enablePersistence({synchronizeTabs:true}).catch(()=>{})}catch(e){}
     fb.on=true;sync="firebase";
+    fb.auth.languageCode="pt-BR";
+    try{fb.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(()=>{})}catch(e){}
+    const q=new URLSearchParams(location.search);
+    if(q.get("mode")==="resetPassword"&&q.get("oobCode")){
+      fb.mode="setpass";fb.code=q.get("oobCode");
+      fb.auth.verifyPasswordResetCode(fb.code).then(em=>{fb.email=em;fb.codeOk=true;render()}).catch(()=>{fb.mode="login";fb.code="";fb.err="Este link expirou ou já foi usado. Peça um novo link aqui embaixo.";cleanUrl();render()});
+    }
     fb.auth.onAuthStateChanged(u=>{
       if(fb.unsub){fb.unsub();fb.unsub=null}
       fb.user=u||null;fb.ready=true;
@@ -381,7 +398,7 @@ function initFirebase(){
           const m={};snap.forEach(d=>{m[d.id]=d.data()});
           if(first&&snap.empty&&Object.keys(real).length){Object.entries(real).forEach(([id,v])=>fb.col.doc(id).set(v).catch(()=>{}))}
           else real=m;
-          if(first){first=false;sel=curWeek()}
+          if(first){first=false;sel=curWeek();autoBackup()}
           persistLocal();autoDemo();sync="firebase";render();
         },err=>{sync="erro";fb.err="Não consegui sincronizar: "+(err.code||err.message);render()});
       }else{fb.col=null;real={};persistLocal()}
@@ -390,12 +407,56 @@ function initFirebase(){
     return true;
   }catch(e){fb.on=false;return false}
 }
+/* backup automático: um instantâneo por dia, guardado por 30 dias, restaurável na aba Questões */
+const bkBase=()=>fb.fs.collection("usuarios").doc(fb.user.uid);
+async function autoBackup(){
+  if(!fb.on||!fb.user)return;
+  try{
+    const base=bkBase(),meta=base.collection("meta").doc("backups"),m=await meta.get();
+    let dias=(m.exists&&m.data().dias)||[];fb.bkList=dias.slice();
+    const day=ymd(new Date()),n=Object.keys(real).length,payload=JSON.stringify(real);
+    if(n&&payload.length<900000&&!dias.includes(day)){
+      await base.collection("backups").doc(day).set({dia:day,n,docs:payload});
+      dias=dias.concat(day).sort();
+      const keep=dias.slice(-30),drop=dias.slice(0,-30);
+      await meta.set({dias:keep});
+      drop.forEach(d=>base.collection("backups").doc(d).delete().catch(()=>{}));
+      fb.bkList=keep;
+    }
+    render();
+  }catch(e){}
+}
+async function restoreAuto(day){
+  try{
+    const base=bkBase(),snap=await base.collection("backups").doc(day).get();
+    if(!snap.exists)throw new Error("x");
+    const docs=JSON.parse(snap.data().docs),col_=fb.col;
+    await base.collection("backups").doc("antes-da-restauracao").set({dia:ymd(new Date()),n:Object.keys(real).length,docs:JSON.stringify(real)});
+    Object.keys(real).filter(id=>!(id in docs)).forEach(id=>col_.doc(id).delete().catch(()=>{}));
+    Object.entries(docs).forEach(([id,d])=>col_.doc(id).set(d).catch(()=>{}));
+    real=docs;persistLocal();fb.bkAsk="";fb.bkMsg=`Restaurei o backup de ${fmtDay(day)} (${Object.keys(docs).length} registros). O estado de antes ficou guardado como "antes da restauração".`;
+  }catch(e){fb.bkAsk="";fb.bkMsg="Não consegui restaurar esse backup. Tente de novo."}
+  render();
+}
 const authMsg=er=>{const c=er&&er.code||"";
   if(/invalid-credential|wrong-password|user-not-found|invalid-email|invalid-login/.test(c))return "E-mail ou senha incorretos.";
   if(/api-key|app-not-authorized|operation-not-allowed|configuration/.test(c))return "A configuração do Firebase está incorreta ou o login por e-mail e senha não foi ativado. Confira o arquivo firebase-config.js e o console do Firebase.";
   if(c==="auth/too-many-requests")return "Muitas tentativas. Aguarde alguns minutos e tente de novo.";
   if(c==="auth/network-request-failed")return "Sem conexão. Tente de novo.";
   return "Não consegui entrar. Tente de novo."};
+const cleanUrl=()=>{try{history.replaceState(null,"",location.pathname)}catch(e){}};
+async function doSetPass(){
+  const a=($("#lg-new")||{}).value||"",b=($("#lg-new2")||{}).value||"";
+  if(a.length<8){fb.err="Use pelo menos 8 caracteres.";render();return}
+  if(a!==b){fb.err="As duas senhas precisam ser iguais.";render();return}
+  fb.busy=true;fb.err="";render();
+  try{
+    await fb.auth.confirmPasswordReset(fb.code,a);
+    await fb.auth.signInWithEmailAndPassword(fb.email,a);
+    fb.mode="login";fb.code="";cleanUrl();
+  }catch(er){fb.err=/expired|invalid-action-code/.test(er&&er.code||"")?"Este link expirou ou já foi usado. Volte à tela de entrada e peça um novo.":"Não consegui criar a senha. Tente de novo."}
+  fb.busy=false;render();
+}
 async function doLogin(){
   const e=$("#lg-email"),p=$("#lg-pass");if(!e||!p)return;
   fb.email=e.value.trim();
@@ -406,19 +467,23 @@ async function doLogin(){
 }
 async function doReset(){
   const e=$("#lg-email");fb.email=e?e.value.trim():fb.email;
-  if(!fb.email){fb.err="Digite seu e-mail para receber o link de nova senha.";fb.msg="";render();return}
-  try{await fb.auth.sendPasswordResetEmail(fb.email);fb.err="";fb.msg="Se esse e-mail tiver conta, enviei um link para criar uma nova senha."}catch(er){fb.err=authMsg(er);fb.msg=""}
+  if(!fb.email){fb.err="Digite o seu e-mail para receber o link.";fb.msg="";render();return}
+  try{await fb.auth.sendPasswordResetEmail(fb.email);fb.err="";fb.msg="Enviei um e-mail com o link para criar a senha. Se não aparecer, olhe o spam."}catch(er){fb.err=authMsg(er);fb.msg=""}
   render();
 }
 function loginHtml(){
-  if(!fb.ready)return `<div class="wait">Carregando…</div>`;
-  return `<div class="login"><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1>
-    <p class="lead" style="margin-top:6px">Entre para ver as suas metas de qualquer aparelho.</p>
-    <label for="lg-email">E-mail</label><input class="in" id="lg-email" type="email" inputmode="email" autocomplete="username" value="${esc(fb.email)}">
-    <label for="lg-pass">Senha</label><input class="in" id="lg-pass" type="password" autocomplete="current-password">
-    ${fb.err?`<div class="msg err">${esc(fb.err)}</div>`:""}${fb.msg?`<div class="msg">${esc(fb.msg)}</div>`:""}
-    <button class="btn" data-act="login" ${fb.busy?"disabled":""}>${fb.busy?"Entrando…":"Entrar"}</button>
-    <button class="link" data-act="reset">Esqueci a senha</button></div>`;
+  if(!fb.ready||(fb.mode==="setpass"&&!fb.codeOk&&!fb.err))return `<div class="wait">Carregando…</div>`;
+  const head=`<div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1>`;
+  const msgs=`${fb.err?`<div class="msg err">${esc(fb.err)}</div>`:""}${fb.msg?`<div class="msg">${esc(fb.msg)}</div>`:""}`;
+  if(fb.mode==="setpass"&&fb.codeOk)return `<div class="login">${head}<p class="sub">Crie a sua senha para ${esc(fb.email)}</p>
+    <label class="vh" for="lg-new">Nova senha</label><input class="in" id="lg-new" type="password" autocomplete="new-password" placeholder="Nova senha (mínimo 8 caracteres)">
+    <label class="vh" for="lg-new2">Repita a senha</label><input class="in" id="lg-new2" type="password" autocomplete="new-password" placeholder="Repita a senha">
+    ${msgs}<button class="btn" data-act="setpass" ${fb.busy?"disabled":""}>${fb.busy?"Salvando…":"Criar senha e entrar"}</button></div>`;
+  return `<div class="login">${head}<p class="sub">Entre para continuar</p>
+    <label class="vh" for="lg-email">E-mail</label><input class="in" id="lg-email" type="email" inputmode="email" autocapitalize="off" autocorrect="off" autocomplete="username" placeholder="E-mail" value="${esc(fb.email)}">
+    <label class="vh" for="lg-pass">Senha</label><input class="in" id="lg-pass" type="password" autocomplete="current-password" placeholder="Senha">
+    ${msgs}<button class="btn" data-act="login" ${fb.busy?"disabled":""}>${fb.busy?"Entrando…":"Entrar"}</button>
+    <button class="link" data-act="reset">Primeiro acesso ou esqueci a senha</button></div>`;
 }
 
 /* ---------- exemplo ---------- */
@@ -857,6 +922,10 @@ function impHtml(){
     <div class="sec-h" style="margin-top:34px"><h2>Backup dos dados</h2></div>
     <p class="lead">Baixe um arquivo com tudo o que você registrou: metas, questões, revisões e importações. Use para guardar uma cópia ou levar os dados de um lugar para outro.</p>
     <div class="bar-act"><button class="btn alt" data-act="backup">Baixar backup</button>${demo?"":`<label class="file-btn" style="background:var(--soft);color:var(--fg)">Restaurar backup<input type="file" id="bk-file" accept=".json,application/json"></label>`}</div>
+    ${fb.on?`<div class="sec-h" style="margin-top:28px"><h3>Backups automáticos</h3><span class="muted" style="font-size:13px">Um por dia, guardados por 30 dias</span></div>
+      ${fb.bkMsg?`<div class="msg">${esc(fb.bkMsg)}</div>`:""}
+      ${fb.bkList.length?`<ul class="list" style="border-top:2px solid var(--fg)">${fb.bkList.slice().reverse().slice(0,30).map(d=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${fmtDay(d)}</div></div>${fb.bkAsk===d?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bkgo" data-d="${d}">Confirmar: substituir os dados atuais</button><button class="chip" data-act="bkno">Cancelar</button>`:`<button class="chip" data-act="bkask" data-d="${d}">Restaurar</button>`}</li>`).join("")}</ul>`:`<div class="empty">O primeiro backup automático é criado quando você abre o painel com registros salvos.</div>`}
+      <p class="muted" style="font-size:13px;margin:10px 2px 0">Além disso, o Google guarda uma cópia do banco todo dia (por 14 dias) e uma por semana (por 14 semanas), e permite voltar a qualquer momento dos últimos 7 dias.</p>`:""}
   </section>`;
 }
 
@@ -925,7 +994,7 @@ function planHtml(){
 /* ---------- render ---------- */
 const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["ankis","Ankis"]];
 function render(){
-  if(fb.on&&!fb.user){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
+  if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
   IM=importMap();A=agg();RL=reviewList();
@@ -934,7 +1003,7 @@ function render(){
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
-    <div class="sw"><span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>${fb.on?`<button class="chip" data-act="logout">Sair</button>`:""}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>
+    <div class="sw"><span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span><button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>
   <nav class="tabs"><div class="seg" role="tablist">${TABS.map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" data-act="tab" data-v="${k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</div></nav>
   ${body}`;
   const y=window.scrollY;
@@ -1103,7 +1172,10 @@ document.addEventListener("click",e=>{
   if(a==="undoimp"){save(t.dataset.id,null);return}
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
-  if(a==="logout"){if(fb.auth)fb.auth.signOut();return}
+  if(a==="setpass"){doSetPass();return}
+  if(a==="bkask"){fb.bkAsk=t.dataset.d;fb.bkMsg="";render();return}
+  if(a==="bkno"){fb.bkAsk="";render();return}
+  if(a==="bkgo"){restoreAuto(t.dataset.d);return}
   if(a==="backup"){exportBackup();return}
 });
 document.addEventListener("input",e=>{
@@ -1126,7 +1198,7 @@ document.addEventListener("change",e=>{
     render()}
 });
 document.addEventListener("keydown",e=>{
-  if(e.key==="Enter"&&e.target.id&&e.target.id.indexOf("lg-")===0){e.preventDefault();doLogin();return}
+  if(e.key==="Enter"&&e.target.id&&e.target.id.indexOf("lg-")===0){e.preventDefault();if(e.target.id.indexOf("lg-new")===0)doSetPass();else doLogin();return}
   if(e.key==="Escape"&&sheetId)closeSheet();
   if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("row")){e.preventDefault();openSheet(e.target.dataset.id)}
 });

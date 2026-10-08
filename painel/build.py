@@ -27,6 +27,7 @@ if out:
     pathlib.Path(out).write_text(frag, encoding="utf-8")
 head = ('<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+        '<meta name="theme-color" content="#ffffff"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas">'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>'

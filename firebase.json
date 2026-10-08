@@ -1,8 +1,53 @@
 {
-  "hosting": {
-    "public": "painel",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "template.html", "build.py", "LEIA-ME.md"],
-    "headers": [{ "source": "**/*.@(html|js)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }]
-  },
-  "firestore": { "rules": "firestore.rules" }
+  "hosting": [
+    {
+      "site": "painel-de-metas",
+      "public": "painel",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "template.html",
+        "build.py",
+        "LEIA-ME.md"
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(html|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "educacional-511014",
+      "public": "painel",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "template.html",
+        "build.py",
+        "LEIA-ME.md"
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(html|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules"
+  }
 }
