@@ -35,3 +35,7 @@ O arquivo `firestore.rules` só deixa cada pessoa ler e gravar dentro da própri
 ## Sem o Firebase
 
 Se `firebase-config.js` tiver os valores de exemplo (`COLE_AQUI`), o painel abre sem login e salva só no aparelho.
+
+## Simulados e Biblioteca
+
+Os simulados não vêm programados: você cadastra cada um (data, composição), registra o resultado, envia o gabarito comentado, cola a análise por assunto gerada pelo Claude (formato em `FORMATO-ANALISE-SIMULADO.md`) e lança a nota das discursivas. A Biblioteca guarda edital, leis e resumos (até 10 MB por arquivo, sem plano pago: os arquivos ficam em pedaços no Firestore).

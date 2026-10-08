@@ -1172,10 +1172,13 @@ function smList(){
     <div class="card wide"><div class="card-h"><div><h3>Assuntos mais fracos nos simulados</h3><p>Menor acerto, com ao menos 3 itens</p></div></div>${wk.length?`<ul class="list">${wk.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${SUBJ.includes(x.k)?`<span class="tag" style="--c:var(--m-${x.k})"><i></i>${SHORT[x.k]}</span>`:""}<span>${x.c} certos · ${x.e} errados · ${x.b} brancos</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 itens ou mais.</div>'}</div></div></section>`:""}
   ${D.ideias&&D.ideias.length?`<details class="how"><summary>Ideias de discursiva para os seus simulados</summary><p class="lead" style="margin-top:10px">Temas e peças técnicas que montei a partir do conteúdo programático. Use como quiser.</p>${D.ideias.map(i=>`<p style="margin:8px 0"><b>Ideia ${i.n}.</b> ${i.linhas.map(esc).join(" ")}</p>`).join("")}</details>`:""}`;
 }
-function simHtml(){
-  const lb=sm.lb?`<div class="ov" data-act="sm-lbclose"><div class="sheet" style="max-width:760px;text-align:center"><h3 style="margin-bottom:12px">${esc(sm.lb.nome)}</h3>${/^image\//.test(sm.lb.tipo)?`<img alt="${esc(sm.lb.nome)}" src="${sm.lb.url}" style="max-width:100%;border-radius:14px">`:`<p class="muted">Toque para abrir o arquivo em uma nova aba.</p>`}<div class="bar-act" style="justify-content:center"><a class="btn" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" target="_blank" rel="noopener">Abrir em nova aba</a><a class="btn alt" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" download="${esc(sm.lb.nome)}">Baixar</a><button class="btn alt" style="width:auto;margin:0;padding:12px 22px" data-act="sm-lbclose">Fechar</button></div></div></div>`:"";
-  return (sm.view==="form"?smForm():sm.view==="detail"?smDetail():smList())+lb;
+function lbHtml(){
+  return sm.lb?`<div class="ov" data-act="sm-lbclose"><div class="sheet" style="max-width:760px;text-align:center"><h3 style="margin-bottom:12px">${esc(sm.lb.nome)}</h3>${/^image\//.test(sm.lb.tipo)?`<img alt="${esc(sm.lb.nome)}" src="${sm.lb.url}" style="max-width:100%;border-radius:14px">`:`<p class="muted">Toque para abrir o arquivo em uma nova aba.</p>`}<div class="bar-act" style="justify-content:center"><a class="btn" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" target="_blank" rel="noopener">Abrir em nova aba</a><a class="btn alt" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" download="${esc(sm.lb.nome)}">Baixar</a><button class="btn alt" style="width:auto;margin:0;padding:12px 22px" data-act="sm-lbclose">Fechar</button></div></div></div>`:"";
 }
+function simHtml(){
+  return sm.view==="form"?smForm():sm.view==="detail"?smDetail():smList();
+}
+
 
 /* eventos dos simulados */
 const gv=id=>{const x=document.getElementById(id);return x?x.value:""};
@@ -1200,6 +1203,7 @@ function smClick(a,t,e){
     const id=sm.ed.id||smId(),old=SM[id]||{};
     smPut(id,{...old,nome,dt:gv("sm-dt"),tipo:gv("sm-tipo"),itens:Math.round(gn("sm-itens")||0),nd:+gv("sm-nd")||0,vo:gn("sm-vo")||0,comp,obs:gv("sm-obs").trim()});
     sm.err="";sm.id=id;sm.view="detail";sm.msg=sm.ed.id?"Alterações salvas.":"Simulado cadastrado. Registre o resultado quando fizer a prova.";sm.ed=null;render();window.scrollTo(0,0);return}
+  if(a==="sm-fopen"){fileOpen(t.dataset.f);return}
   if(!s&&a!=="sm-anacopy")return;
   if(a==="sm-delask"){sm.ask=sm.id;render();return}
   if(a==="sm-delno"){sm.ask="";render();return}
@@ -1224,6 +1228,7 @@ function smClick(a,t,e){
 }
 function smChange(e){
   const t=e.target;
+  if(t.id==="bib-up"&&t.files&&t.files.length){const fs=Array.from(t.files);t.value="";bibUpload(fs);return true}
   if(t.id==="sm-up-gab"&&t.files&&t.files.length){const fs=Array.from(t.files);t.value="";smUpload(fs,"gab");return true}
   if(t.classList&&t.classList.contains("sm-up-disc")&&t.files&&t.files.length){const fs=Array.from(t.files),i=+t.dataset.i;t.value="";smDiscRead(i);smUpload(fs,"disc",i);return true}
   if(t.id==="sm-ana-file"&&t.files&&t.files[0]){smAnaFile(t.files[0]);return true}
@@ -1232,6 +1237,29 @@ function smChange(e){
     if(sa.dataset.sma==="k"){r.k=sa.value;const rk=r.k?metaRank(r.k,r.ass):[];r.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else r.mid=sa.value;
     render();return true}
   return false;
+}
+
+/* ---------- biblioteca de arquivos ---------- */
+const PASTAS=["Edital","Leis","Resumos","Outros"];
+const bib={pasta:"Todos",busy:"",err:"",msg:"",ask:""};
+async function bibUpload(files){
+  const pasta=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
+  bib.busy="Enviando…";bib.err="";bib.msg="";render();
+  let ok=0;
+  for(const f of files){try{await fileSave(f,"bib:"+pasta);ok++}catch(e){bib.err=e.message||"Não consegui enviar o arquivo."}}
+  bib.busy="";if(ok)bib.msg=`Enviei ${ok} ${ok===1?"arquivo":"arquivos"} para ${pasta}.`;render();
+}
+function bibHtml(){
+  const all=Object.entries(FILES).filter(([id,m])=>/^bib:/.test(m.esc||"")).map(([id,m])=>({id,m,p:m.esc.slice(4)})).sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
+  const cnt=p=>all.filter(x=>p==="Todos"||x.p===p).length;
+  const list=all.filter(x=>bib.pasta==="Todos"||x.p===bib.pasta);
+  const lbl=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
+  return `<section class="sec" style="margin-top:20px"><div class="sec-h"><h2>Biblioteca</h2><label class="file-btn" style="padding:10px 20px">Enviar arquivo<input type="file" id="bib-up" accept="application/pdf,image/*,.txt,.doc,.docx" multiple></label></div>
+  <p class="lead">Guarde aqui o edital, as leis e seus resumos para abrir quando precisar. PDF ou imagem de até 10 MB cada. ${bib.pasta==="Todos"?"Arquivos enviados com Todos selecionado vão para Outros.":`Os arquivos enviados agora vão para ${lbl}.`}</p>
+  ${bib.msg?`<div class="msg">${esc(bib.msg)}</div>`:""}${bib.err?`<div class="msg err">${esc(bib.err)}</div>`:""}${bib.busy||sm.busy?`<div class="msg" style="background:var(--blue-t)">${esc(bib.busy||sm.busy)}</div>`:""}${sm.err&&tab==="biblioteca"?`<div class="msg err">${esc(sm.err)}</div>`:""}
+  <div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${["Todos",...PASTAS].map(p=>`<button class="chip" style="${bib.pasta===p?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-pasta" data-v="${p}">${p} · ${cnt(p)}</button>`).join("")}</div>
+  ${list.length?`<div class="files" style="margin-top:14px">${list.map(({id,m,p})=>`<div class="frow">${m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="th doc">${/pdf/.test(m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(m.nome)}</b><span>${p} · ${fmtB(m.tam)}${m.cr?" · "+fmtDay(m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${id}">Abrir</button>${bib.ask===id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${id}">Excluir</button>`}</div>`).join("")}</div>`:`<div class="empty">${all.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
+  </section>`;
 }
 
 /* ---------- questões (importação) ---------- */
@@ -1593,20 +1621,20 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["ankis","Ankis"]];
+const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,ankis:ankiHtml}[tab]();
+  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>
   <nav class="tabs"><div class="seg" role="tablist">${TABS.map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" data-act="tab" data-v="${k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</div></nav>
-  ${body}`;
+  ${body}${lbHtml()}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
@@ -1770,6 +1798,10 @@ document.addEventListener("click",e=>{
   if(a==="plan"){sel=+t.dataset.i;tab="semana";render();window.scrollTo(0,0);return}
   if(a==="mat"){const k=t.dataset.k;openMat[k]=!openMat[k];render();return}
   if(a==="demo"){demo=!demo;demoChosen=demo;LS.set("painel-demo",demo?"1":"0");if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();sel=curWeek();render();return}
+  if(a==="bib-pasta"){bib.pasta=t.dataset.v;bib.msg="";bib.err="";render();return}
+  if(a==="bib-delask"){bib.ask=t.dataset.f;render();return}
+  if(a==="bib-delno"){bib.ask="";render();return}
+  if(a==="bib-delok"){fileDel(t.dataset.f);bib.ask="";bib.msg="Arquivo excluído.";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
   if(a==="clear"){save(sheetId,null);closeSheet();return}
