@@ -348,7 +348,7 @@ const itemsOf=m=>{const o=ownItems(m),x=IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.
 const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
 function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1"}
 function persistLocal(){LS.set("painel-progresso",JSON.stringify(real))}
-function autoDemo(){demo=demoChosen===null?Object.keys(real).length===0:demoChosen}
+function autoDemo(){demo=fb.on?false:(demoChosen===null?Object.keys(real).length===0:demoChosen)}
 async function initDb(){
   try{
     const c=window.claude&&window.claude.use?await window.claude.use("db"):null;
@@ -1003,7 +1003,7 @@ function render(){
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
-    <div class="sw"><span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span><button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>
+    <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>
   <nav class="tabs"><div class="seg" role="tablist">${TABS.map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" data-act="tab" data-v="${k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</div></nav>
   ${body}`;
   const y=window.scrollY;
