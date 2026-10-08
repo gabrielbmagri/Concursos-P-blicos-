@@ -20,10 +20,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .muted{color:var(--fg2)} .faint{color:var(--fg3)}
 
 /* cabeçalho */
-.top{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:20px 22px 18px;margin-bottom:14px;border-radius:26px;background:linear-gradient(115deg,#d9f1e2 0%,#fff3b8 48%,#d6e8fb 100%)}
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:20px 66px 18px 22px;margin-bottom:14px;border-radius:26px;background:linear-gradient(115deg,#d9f1e2 0%,#fff3b8 48%,#d6e8fb 100%)}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
 .top .eyebrow{color:#33503f}
-h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(95deg,#0a5c3a 0%,#087a40 45%,#1557b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(95deg,#0a5c3a 0%,#087a40 45%,#1557b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.sw:empty{display:none}
 .sw{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg2)}
 .sw .note{max-width:220px;line-height:1.25;text-align:right}
 .switch{position:relative;width:46px;height:26px;border-radius:99px;background:#cbd5e1;transition:background .15s;flex:none}
@@ -32,10 +33,9 @@ h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:
 .switch[disabled]{opacity:.5;cursor:default}
 
 /* menu lateral */
-.dots{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--soft);flex:none}
-.dots:hover{background:var(--soft2)}.dots svg{width:20px;height:20px;fill:var(--fg)}
-.curt{font-weight:800;font-size:16px;font-family:var(--display);letter-spacing:.01em}
-.tabs .bd{margin-left:6px}
+.mbtn{position:fixed;z-index:30;top:calc(env(safe-area-inset-top,0px) + 14px);right:max(14px,calc(env(safe-area-inset-right,0px) + 14px));width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);box-shadow:0 2px 12px rgba(10,60,35,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.mbtn svg{width:20px;height:20px;fill:#0a5c3a}
+.mbtn .mb{position:absolute;top:-3px;right:-3px;min-width:18px;height:18px;padding:0 5px;border-radius:99px;background:var(--red);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center}
 .dov{position:fixed;inset:0;z-index:60;background:rgba(10,40,25,.42);animation:fade .15s}
 .drawer{position:absolute;left:0;top:0;bottom:0;width:min(320px,86vw);background:var(--bg);border-radius:0 28px 28px 0;box-shadow:12px 0 40px rgba(10,40,25,.2);display:flex;flex-direction:column;animation:slidein .2s ease-out;overflow:auto;padding-bottom:20px}
 .drawer .dh{padding:max(22px,env(safe-area-inset-top,0px)) 22px 18px;background:linear-gradient(160deg,#0a8f4b 0%,#14a653 30%,#ffd21a 62%,#2f8be0 86%,#1557b6 100%);color:#fff}
@@ -47,7 +47,7 @@ h1{margin:2px 0 0;font:900 clamp(34px,6vw,54px)/1 var(--display);letter-spacing:
 .drawer nav button[aria-selected="true"]{background:#e3f4ea;color:#0a5c3a;font-weight:800}
 @keyframes slidein{from{transform:translateX(-100%)}to{transform:none}}
 /* abas */
-.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:8px 0}
+.tabs{display:none}
 .seg{display:flex;gap:clamp(14px,2.4vw,28px);overflow-x:auto;scrollbar-width:none}
 .seg::-webkit-scrollbar{display:none}
 .seg button{padding:12px 2px 11px;font-size:15px;font-weight:600;color:var(--fg3);white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px;display:flex;align-items:center;gap:6px}
@@ -331,7 +331,7 @@ details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;ma
 @media (max-width:1000px){.cols{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:820px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.mats{grid-template-columns:minmax(0,1fr)}.stats{width:100%}.st{flex:1;min-width:0}.ir,.grpimp,.filt{grid-template-columns:minmax(0,1fr)}.filt{grid-template-columns:repeat(2,minmax(0,1fr))}.ak-btns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-height:480px) and (min-width:560px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}.kpi{min-height:130px}.ov{align-items:center}}
-@media (max-width:560px){.sw .note{display:none}.hb-r{grid-template-columns:100px minmax(0,1fr) auto}.pr{grid-template-columns:40px minmax(0,1fr) auto}.pr .pg{grid-column:1/-1;grid-row:2}.heat{grid-template-columns:34px repeat(var(--n),minmax(0,1fr))}.heat .y span{display:none}.cell{font-size:0;height:22px}.kpi{min-height:140px;padding:14px}.st b{font-size:28px}.ir .sels{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.top{padding:16px 62px 14px 16px;border-radius:22px;margin-bottom:10px}.top .eyebrow{font-size:10.5px;letter-spacing:.04em;line-height:1.3}.sw{width:100%;justify-content:flex-end}.wrap{padding-block:12px 48px}.sw .note{display:none}.hb-r{grid-template-columns:100px minmax(0,1fr) auto}.pr{grid-template-columns:40px minmax(0,1fr) auto}.pr .pg{grid-column:1/-1;grid-row:2}.heat{grid-template-columns:34px repeat(var(--n),minmax(0,1fr))}.heat .y span{display:none}.cell{font-size:0;height:22px}.kpi{min-height:140px;padding:14px}.st b{font-size:28px}.ir .sels{grid-template-columns:minmax(0,1fr)}}
 @media (min-width:561px){.heat .y .sh{display:none}}
 @media (max-width:560px){.heat .y .sh{display:inline}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -924,7 +924,7 @@ function homeHtml(){
       <div class="sub">${over.length} atrasadas · ${nxt7.length} nos próximos 7 dias</div>
       <div class="viz"><div class="bar2"><i style="width:${RL.length?doneRv/RL.length*100:0}%"></i></div></div></button>
     <div class="kpi pink"><div class="lab">Ponto de atenção</div>
-      <div class="num" style="font-size:24px;line-height:1.2">${weak?SHORT[weak.k]:"Sem dados"}</div>
+      <div class="num" style="font-size:clamp(17px,5.4vw,24px);line-height:1.2;overflow-wrap:anywhere">${weak?SHORT[weak.k]:"Sem dados"}</div>
       <div class="sub">${weak?`${pc(weak.r)} de acertos em ${num(weak.n)} questões`:"Aparece após 10 questões por matéria"}</div>
       <div class="viz">${weak?`<div class="bar2"><i style="width:${weak.r*100}%"></i></div>`:""}</div></div>
   </section>
@@ -1816,7 +1816,7 @@ function render(){
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>
-  <nav class="tabs"><button class="dots" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg></button><span class="curt">${esc((TABS.find(x=>x[0]===tab)||[0,""])[1])}</span>${dueNow&&tab!=="revisoes"?`<span class="bd">${dueNow}</span>`:""}</nav>
+  <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
