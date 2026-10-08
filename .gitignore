@@ -1,2 +1,9 @@
 .firebase/
 node_modules/
+
+# chaves e credenciais nunca vão para o repositório
+*firebase-adminsdk*.json
+educacional-*.json
+*service-account*.json
+*.pem
+.env

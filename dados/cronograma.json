@@ -3,9 +3,9 @@
   "concurso": "Câmara dos Deputados 2026 — Analista Legislativo, Registro e Redação (Cargo 11, Cebraspe)",
   "prova": "2027-01-17",
   "prova_obs": "data provável (Anexo I do edital) — conferir comunicados",
-  "versao": 4,
+  "versao": 5,
   "gerado": "2026-10-08",
-  "regra_blocos": "Cada meta de estudo é um assunto: teoria e questões, com a lei seca dentro da própria meta. Não há metas por horas. As revisões não ficam no cronograma: cada assunto concluído gera uma revisão para 7 dias depois; ao concluí-la nasce a de 15 dias e depois a de 30 dias, contadas a partir da revisão anterior. Todo domingo há ainda uma revisão geral da semana.",
+  "regra_blocos": "Cada meta de estudo é um assunto: teoria e questões, com a lei seca dentro da própria meta. Não há metas por horas. As revisões não ficam no cronograma: cada assunto concluído gera uma revisão para 7 dias depois; ao concluí-la nasce a de 15 dias e depois a de 30 dias, contadas a partir da revisão anterior. Todo domingo há ainda uma revisão geral da semana. Simulados e discursivas não são programados: você os cadastra no painel, com data e composição.",
   "materias": {
    "REG": {
     "nome": "Proc. Legislativo + Regimentos",
@@ -86,7 +86,111 @@
    ],
    "itens": 10,
    "revisao_geral_semanal": true
-  }
+  },
+  "ideias_discursiva": [
+   {
+    "n": 1,
+    "linhas": [
+     "Questão sugerida: Processo legislativo: o que é e quais espécies normativas a Constituição prevê. Conteúdo: Processo Legislativo (CF arts. 59 a 69)."
+    ]
+   },
+   {
+    "n": 2,
+    "linhas": [
+     "Questão sugerida: Denotação e conotação no discurso político. Conteúdo: Linguística 1."
+    ]
+   },
+   {
+    "n": 3,
+    "linhas": [
+     "Questão sugerida: Coesão e coerência: como cada uma contribui para a clareza de um texto. Conteúdo: Linguística 3.1 e 3.4."
+    ]
+   },
+   {
+    "n": 4,
+    "linhas": [
+     "Questão sugerida: Enunciação: quem fala, para quem e em que situação, numa sessão deliberativa. Conteúdo: Linguística 5.1 e RICD, sessões."
+    ]
+   },
+   {
+    "n": 5,
+    "linhas": [
+     "Questão: Texto e discurso: dialogismo e polifonia no debate parlamentar. Conteúdo: Linguística 5.2.",
+     "Peça técnica: Retextualização: transforme um trecho de discurso falado (o Claude fornece) em texto escrito formal, sem alterar o sentido (Linguística 6.2)."
+    ]
+   },
+   {
+    "n": 6,
+    "linhas": [
+     "Questão: Variação linguística: o que muda do discurso falado para o escrito. Conteúdo: Linguística 7.1 a 7.3.",
+     "Peça técnica: Revisão de transcrição automática: corrija pontuação, maiúsculas e erros de reconhecimento em um trecho de cerca de 30 linhas (Fala e IA 1.5 e 1.6)."
+    ]
+   },
+   {
+    "n": 7,
+    "linhas": [
+     "Questão: Funções da linguagem e retórica na oratória parlamentar. Conteúdo: Linguística 9, 10 e 5.3.",
+     "Questão: Pronomes de tratamento e fechos adequados nas comunicações oficiais. Conteúdo: Linguística 11.",
+     "Peça técnica: Ofício da Câmara dos Deputados com vocativo, fecho e assinatura corretos (Linguística 11)."
+    ]
+   },
+   {
+    "n": 8,
+    "linhas": [
+     "Questão: Estrutura e finalidade dos documentos oficiais. Conteúdo: Linguística 11.",
+     "Questão: Argumentos e conectivos lógicos: validade e notação. Conteúdo: Linguística 12.",
+     "Peça técnica: Degravação: transforme 20 linhas de fala parlamentar em texto revisado, com identificação de oradores e marcação de pausas (Fala e IA 2.1 a 2.4)."
+    ]
+   },
+   {
+    "n": 9,
+    "linhas": [
+     "Questão: Técnica legislativa: estrutura da lei e regras de redação (LC 95/1998). Conteúdo: Linguística 13.",
+     "Questão: IA e proteção de dados em sistemas de transcrição parlamentar. Conteúdo: Fala e IA 3 e 4.",
+     "Peça técnica: Ementa e artigos 1º a 3º de um projeto de lei, seguindo a LC 95/1998 (objeto, âmbito de aplicação e vigência)."
+    ]
+   },
+   {
+    "n": 10,
+    "linhas": [
+     "Questão: Sistemas eleitorais: majoritário e proporcional. Conteúdo: Ciência Política 5.",
+     "Questão: Enunciação e análise do discurso na retórica parlamentar. Conteúdo: Linguística 5.",
+     "Peça técnica: Parecer curto de comissão sobre um projeto de lei fictício: relatório, voto e conclusão."
+    ]
+   },
+   {
+    "n": 11,
+    "linhas": [
+     "Questão: Procedimentos legislativos: ordinário, sumário e especial. Conteúdo: Processo Legislativo 1.1.",
+     "Questão: Retextualização e variação linguística na redação final de discursos. Conteúdo: Linguística 6.2 e 7.",
+     "Peça técnica: Ata resumida de uma sessão deliberativa a partir de um trecho de transcrição."
+    ]
+   },
+   {
+    "n": 12,
+    "linhas": [
+     "Questão: Poder Legislativo e relações entre os poderes. Conteúdo: Ciência Política 4 e CF arts. 44 a 58.",
+     "Questão: LC 95/1998: alteração e consolidação das leis. Conteúdo: Linguística 13.",
+     "Peça técnica: Artigo que altera outra lei, usando a forma de alteração correta (LC 95/1998, art. 12)."
+    ]
+   },
+   {
+    "n": 13,
+    "linhas": [
+     "Questão: Teoria da enunciação e polifonia. Conteúdo: Linguística 5.",
+     "Questão: Representação política e partidos. Conteúdo: Ciência Política 3 e 6.",
+     "Peça técnica: Ofício que responde a um requerimento de informação."
+    ]
+   },
+   {
+    "n": 14,
+    "linhas": [
+     "Questão: Tema livre: o assunto com pior nota nos simulados. Conteúdo: Ponto fraco do painel.",
+     "Questão: Ética e direitos autorais no uso de IA para conteúdo gerado. Conteúdo: Fala e IA 4.2.",
+     "Peça técnica: Peça livre (parecer, ofício ou degravação) no formato em que você mais errou nas correções."
+    ]
+   }
+  ]
  },
  "semanas": [
   {
@@ -95,7 +199,7 @@
    "fim": "2026-10-11",
    "fase": 1,
    "feriado": null,
-   "observacao": "Discursiva desta semana = diagnóstica (sem preparo, para medir o ponto de partida).",
+   "observacao": null,
    "metas": [
     {
      "id": "S1-K8",
@@ -434,85 +538,9 @@
      "lei_seca": "CF/88, arts. 1º a 4º (princípios fundamentais) e arts. 6º a 11 (direitos sociais)"
     },
     {
-     "id": "S1-SIM",
-     "semana": "S1",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 1 · 60 itens C/E dos assuntos já estudados",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "60 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: peça ao Claude ou filtre no TEC (Cebraspe, Certo/Errado) 60 itens só de assuntos da semana 1.",
-      "Faça de uma vez só, sem consulta e sem pausa, no ritmo da prova (cerca de 1,5 min por item).",
-      "Marque o gabarito e lance aqui certos, errados e brancos. Cada erro anula um acerto, então deixe em branco o que não souber.",
-      "No domingo você corrige a prova na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S1-DIS",
-     "semana": "S1",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 1 · Processo legislativo: o que é e quais espécies normativas a Constituição prevê",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva à mão, sem consulta, até 20 linhas. Depois, corrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Esta é a discursiva diagnóstica: escreva sem preparo para medir o ponto de partida.",
-      "Questão sugerida: Processo legislativo: o que é e quais espécies normativas a Constituição prevê. Conteúdo: Processo Legislativo (CF arts. 59 a 69).",
-      "Escreva à mão, até 20 linhas, sem consulta: introdução com a tese, dois parágrafos de desenvolvimento (conceito + exemplo) e conclusão.",
-      "Releia procurando erros de português e conte as linhas escritas.",
-      "Depois, envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S1-DOM1",
-     "semana": "S1",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S1-DOM2",
      "semana": "S1",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -537,7 +565,7 @@
     {
      "id": "S1-ING",
      "semana": "S1",
-     "ordem": 17,
+     "ordem": 14,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -947,84 +975,9 @@
      "lei_seca": "CF/88, art. 5º, caput e incisos I a LXVII"
     },
     {
-     "id": "S2-SIM",
-     "semana": "S2",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 2 · 60 itens C/E dos assuntos já estudados",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "60 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: peça ao Claude ou filtre no TEC (Cebraspe, Certo/Errado) 60 itens só de assuntos das semanas 1 a 2.",
-      "Faça de uma vez só, sem consulta e sem pausa, no ritmo da prova (cerca de 1,5 min por item).",
-      "Marque o gabarito e lance aqui certos, errados e brancos. Cada erro anula um acerto, então deixe em branco o que não souber.",
-      "No domingo você corrige a prova na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S2-DIS",
-     "semana": "S2",
-     "ordem": 16,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 2 · Denotação e conotação no discurso político",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva à mão, sem consulta, até 20 linhas. Depois, corrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão sugerida: Denotação e conotação no discurso político. Conteúdo: Linguística 1.",
-      "Escreva à mão, até 20 linhas, sem consulta: introdução com a tese, dois parágrafos de desenvolvimento (conceito + exemplo) e conclusão.",
-      "Releia procurando erros de português e conte as linhas escritas.",
-      "Depois, envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S2-DOM1",
-     "semana": "S2",
-     "ordem": 17,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S2-DOM2",
      "semana": "S2",
-     "ordem": 18,
+     "ordem": 15,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -1049,7 +1002,7 @@
     {
      "id": "S2-ING",
      "semana": "S2",
-     "ordem": 19,
+     "ordem": 16,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -1415,84 +1368,9 @@
      "lei_seca": "Lei 8.112/1990, arts. 40 a 115"
     },
     {
-     "id": "S3-SIM",
-     "semana": "S3",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 3 · 60 itens C/E dos assuntos já estudados",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "60 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: peça ao Claude ou filtre no TEC (Cebraspe, Certo/Errado) 60 itens só de assuntos das semanas 1 a 3.",
-      "Faça de uma vez só, sem consulta e sem pausa, no ritmo da prova (cerca de 1,5 min por item).",
-      "Marque o gabarito e lance aqui certos, errados e brancos. Cada erro anula um acerto, então deixe em branco o que não souber.",
-      "No domingo você corrige a prova na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S3-DIS",
-     "semana": "S3",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 3 · Coesão e coerência: como cada uma contribui para a clareza de um texto",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva à mão, sem consulta, até 20 linhas. Depois, corrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão sugerida: Coesão e coerência: como cada uma contribui para a clareza de um texto. Conteúdo: Linguística 3.1 e 3.4.",
-      "Escreva à mão, até 20 linhas, sem consulta: introdução com a tese, dois parágrafos de desenvolvimento (conceito + exemplo) e conclusão.",
-      "Releia procurando erros de português e conte as linhas escritas.",
-      "Depois, envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S3-DOM1",
-     "semana": "S3",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S3-DOM2",
      "semana": "S3",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -1517,7 +1395,7 @@
     {
      "id": "S3-ING",
      "semana": "S3",
-     "ordem": 17,
+     "ordem": 14,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -1836,84 +1714,9 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 95 a 110 (parte 1 de 7 do trecho 95–200)"
     },
     {
-     "id": "S4-SIM",
-     "semana": "S4",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 4 · 120 itens C/E de Prova 1 e Prova 2 (semanas 1 a 4)",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "120 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: 120 itens C/E dos assuntos das semanas 1 a 4, divididos entre Prova 1 (Português, Administrativo, Constitucional, TI e Inglês) e Prova 2 (Linguística, Ciência Política, Fala e IA, Processo Legislativo e Regimentos).",
-      "Use itens do TEC (Cebraspe) e complete com itens autorais do Claude em Linguística e Fala e IA, onde o banco é pequeno.",
-      "Faça de uma vez só, sem consulta, no ritmo da prova (cerca de 1,5 min por item).",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S4-DIS",
-     "semana": "S4",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 4 · Enunciação: quem fala, para quem e em que situação, numa sessão deliberativa",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva à mão, sem consulta, até 20 linhas. Depois, corrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão sugerida: Enunciação: quem fala, para quem e em que situação, numa sessão deliberativa. Conteúdo: Linguística 5.1 e RICD, sessões.",
-      "Escreva à mão, até 20 linhas, sem consulta: introdução com a tese, dois parágrafos de desenvolvimento (conceito + exemplo) e conclusão.",
-      "Releia procurando erros de português e conte as linhas escritas.",
-      "Depois, faça a autocorreção pelos critérios e lance aqui NC (nota de conteúdo), NE (número de erros) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S4-DOM1",
-     "semana": "S4",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S4-DOM2",
      "semana": "S4",
-     "ordem": 15,
+     "ordem": 12,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -1938,7 +1741,7 @@
     {
      "id": "S4-ING",
      "semana": "S4",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -2316,84 +2119,9 @@
      ]
     },
     {
-     "id": "S5-SIM",
-     "semana": "S5",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 5 · 120 itens C/E de Prova 1 e Prova 2 (semanas 1 a 5)",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "120 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: 120 itens C/E dos assuntos das semanas 1 a 5, divididos entre Prova 1 (Português, Administrativo, Constitucional, TI e Inglês) e Prova 2 (Linguística, Ciência Política, Fala e IA, Processo Legislativo e Regimentos).",
-      "Use itens do TEC (Cebraspe) e complete com itens autorais do Claude em Linguística e Fala e IA, onde o banco é pequeno.",
-      "Faça de uma vez só, sem consulta, no ritmo da prova (cerca de 1,5 min por item).",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S5-DIS",
-     "semana": "S5",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 5 · Questão e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva a questão e a peça técnica à mão, sem consulta. Depois, autocorrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão sugerida (até 20 linhas): Texto e discurso: dialogismo e polifonia no debate parlamentar. Conteúdo: Linguística 5.2.",
-      "Peça técnica sugerida (até 50 linhas): Retextualização: transforme um trecho de discurso falado (o Claude fornece) em texto escrito formal, sem alterar o sentido (Linguística 6.2).",
-      "Escreva as duas à mão, sem consulta. Questão: tese, desenvolvimento e conclusão. Peça: siga o formato do documento.",
-      "Autocorrija pelos critérios: NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas). Lance aqui os valores."
-     ]
-    },
-    {
-     "id": "S5-DOM1",
-     "semana": "S5",
-     "ordem": 16,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S5-DOM2",
      "semana": "S5",
-     "ordem": 17,
+     "ordem": 14,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -2418,7 +2146,7 @@
     {
      "id": "S5-ING",
      "semana": "S5",
-     "ordem": 18,
+     "ordem": 15,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -2737,84 +2465,9 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 186 a 200 (parte 7 de 7)"
     },
     {
-     "id": "S6-SIM",
-     "semana": "S6",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 6 · 120 itens C/E de Prova 1 e Prova 2 (semanas 1 a 6)",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "120 itens C/E cronometrados, sem consulta. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova: 120 itens C/E dos assuntos das semanas 1 a 6, divididos entre Prova 1 (Português, Administrativo, Constitucional, TI e Inglês) e Prova 2 (Linguística, Ciência Política, Fala e IA, Processo Legislativo e Regimentos).",
-      "Use itens do TEC (Cebraspe) e complete com itens autorais do Claude em Linguística e Fala e IA, onde o banco é pequeno.",
-      "Faça de uma vez só, sem consulta, no ritmo da prova (cerca de 1,5 min por item).",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S6-DIS",
-     "semana": "S6",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 6 · Questão e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva a questão e a peça técnica à mão, sem consulta. Depois, autocorrija e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão sugerida (até 20 linhas): Variação linguística: o que muda do discurso falado para o escrito. Conteúdo: Linguística 7.1 a 7.3.",
-      "Peça técnica sugerida (até 50 linhas): Revisão de transcrição automática: corrija pontuação, maiúsculas e erros de reconhecimento em um trecho de cerca de 30 linhas (Fala e IA 1.5 e 1.6).",
-      "Escreva as duas à mão, sem consulta. Questão: tese, desenvolvimento e conclusão. Peça: siga o formato do documento.",
-      "Autocorrija pelos critérios: NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas). Lance aqui os valores."
-     ]
-    },
-    {
-     "id": "S6-DOM1",
-     "semana": "S6",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S6-DOM2",
      "semana": "S6",
-     "ordem": 15,
+     "ordem": 12,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -2839,7 +2492,7 @@
     {
      "id": "S6-ING",
      "semana": "S6",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -3204,85 +2857,9 @@
      ]
     },
     {
-     "id": "S7-SIM",
-     "semana": "S7",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 7 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S7-DIS",
-     "semana": "S7",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 7 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Funções da linguagem e retórica na oratória parlamentar. Conteúdo: Linguística 9, 10 e 5.3.",
-      "Questão 2 sugerida (até 20 linhas): Pronomes de tratamento e fechos adequados nas comunicações oficiais. Conteúdo: Linguística 11.",
-      "Peça técnica sugerida (até 50 linhas): Ofício da Câmara dos Deputados com vocativo, fecho e assinatura corretos (Linguística 11).",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S7-DOM1",
-     "semana": "S7",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S7-DOM2",
      "semana": "S7",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -3307,7 +2884,7 @@
     {
      "id": "S7-ING",
      "semana": "S7",
-     "ordem": 17,
+     "ordem": 14,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -3618,85 +3195,9 @@
      ]
     },
     {
-     "id": "S8-SIM",
-     "semana": "S8",
-     "ordem": 11,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 8 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S8-DIS",
-     "semana": "S8",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 8 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Estrutura e finalidade dos documentos oficiais. Conteúdo: Linguística 11.",
-      "Questão 2 sugerida (até 20 linhas): Argumentos e conectivos lógicos: validade e notação. Conteúdo: Linguística 12.",
-      "Peça técnica sugerida (até 50 linhas): Degravação: transforme 20 linhas de fala parlamentar em texto revisado, com identificação de oradores e marcação de pausas (Fala e IA 2.1 a 2.4).",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S8-DOM1",
-     "semana": "S8",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S8-DOM2",
      "semana": "S8",
-     "ordem": 14,
+     "ordem": 11,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -3721,7 +3222,7 @@
     {
      "id": "S8-ING",
      "semana": "S8",
-     "ordem": 15,
+     "ordem": 12,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -4018,85 +3519,9 @@
      "status": "pendente"
     },
     {
-     "id": "S9-SIM",
-     "semana": "S9",
-     "ordem": 11,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 9 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S9-DIS",
-     "semana": "S9",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 9 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Técnica legislativa: estrutura da lei e regras de redação (LC 95/1998). Conteúdo: Linguística 13.",
-      "Questão 2 sugerida (até 20 linhas): IA e proteção de dados em sistemas de transcrição parlamentar. Conteúdo: Fala e IA 3 e 4.",
-      "Peça técnica sugerida (até 50 linhas): Ementa e artigos 1º a 3º de um projeto de lei, seguindo a LC 95/1998 (objeto, âmbito de aplicação e vigência).",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S9-DOM1",
-     "semana": "S9",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S9-DOM2",
      "semana": "S9",
-     "ordem": 14,
+     "ordem": 11,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -4121,7 +3546,7 @@
     {
      "id": "S9-ING",
      "semana": "S9",
-     "ordem": 15,
+     "ordem": 12,
      "bloco": null,
      "materia": "ING",
      "materia_nome": "Inglês",
@@ -4460,85 +3885,9 @@
      "ajustavel": false
     },
     {
-     "id": "S10-SIM",
-     "semana": "S10",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 10 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S10-DIS",
-     "semana": "S10",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 10 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Sistemas eleitorais: majoritário e proporcional. Conteúdo: Ciência Política 5.",
-      "Questão 2 sugerida (até 20 linhas): Enunciação e análise do discurso na retórica parlamentar. Conteúdo: Linguística 5.",
-      "Peça técnica sugerida (até 50 linhas): Parecer curto de comissão sobre um projeto de lei fictício: relatório, voto e conclusão.",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S10-DOM1",
-     "semana": "S10",
-     "ordem": 15,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S10-DOM2",
      "semana": "S10",
-     "ordem": 16,
+     "ordem": 13,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -4857,85 +4206,9 @@
      "ajustavel": false
     },
     {
-     "id": "S11-SIM",
-     "semana": "S11",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 11 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S11-DIS",
-     "semana": "S11",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 11 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Procedimentos legislativos: ordinário, sumário e especial. Conteúdo: Processo Legislativo 1.1.",
-      "Questão 2 sugerida (até 20 linhas): Retextualização e variação linguística na redação final de discursos. Conteúdo: Linguística 6.2 e 7.",
-      "Peça técnica sugerida (até 50 linhas): Ata resumida de uma sessão deliberativa a partir de um trecho de transcrição.",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S11-DOM1",
-     "semana": "S11",
-     "ordem": 14,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S11-DOM2",
      "semana": "S11",
-     "ordem": 15,
+     "ordem": 12,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -5202,85 +4475,9 @@
      "ajustavel": true
     },
     {
-     "id": "S12-SIM",
-     "semana": "S12",
-     "ordem": 10,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 12 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S12-DIS",
-     "semana": "S12",
-     "ordem": 11,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 12 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Poder Legislativo e relações entre os poderes. Conteúdo: Ciência Política 4 e CF arts. 44 a 58.",
-      "Questão 2 sugerida (até 20 linhas): LC 95/1998: alteração e consolidação das leis. Conteúdo: Linguística 13.",
-      "Peça técnica sugerida (até 50 linhas): Artigo que altera outra lei, usando a forma de alteração correta (LC 95/1998, art. 12).",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S12-DOM1",
-     "semana": "S12",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S12-DOM2",
      "semana": "S12",
-     "ordem": 13,
+     "ordem": 10,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -5573,85 +4770,9 @@
      "ajustavel": false
     },
     {
-     "id": "S13-SIM",
-     "semana": "S13",
-     "ordem": 11,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 13 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S13-DIS",
-     "semana": "S13",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 13 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Teoria da enunciação e polifonia. Conteúdo: Linguística 5.",
-      "Questão 2 sugerida (até 20 linhas): Representação política e partidos. Conteúdo: Ciência Política 3 e 6.",
-      "Peça técnica sugerida (até 50 linhas): Ofício que responde a um requerimento de informação.",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S13-DOM1",
-     "semana": "S13",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S13-DOM2",
      "semana": "S13",
-     "ordem": 14,
+     "ordem": 11,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
@@ -5944,85 +5065,9 @@
      "ajustavel": false
     },
     {
-     "id": "S14-SIM",
-     "semana": "S14",
-     "ordem": 11,
-     "bloco": null,
-     "materia": "SIM",
-     "materia_nome": "Simulado",
-     "prova": "P1+P2",
-     "assunto": "Simulado 14 · completo (Prova 1 e Prova 2), 180 itens C/E no formato da prova",
-     "edital": null,
-     "tipo": "simulado",
-     "o_que_fazer": "180 itens C/E no formato e na duração da prova. Depois, marque o gabarito e lance o resultado.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Monte a prova com 180 itens C/E cobrindo todo o edital, na proporção entre Prova 1 e Prova 2. Use provas anteriores do Cebraspe no TEC e itens autorais do Claude em Linguística e Fala e IA.",
-      "Faça de manhã, em uma sentada, sem consulta e na duração da prova.",
-      "Estratégia: não gaste mais de 1,5 min por item; marque em branco o que não souber, porque cada erro anula um acerto.",
-      "Lance certos, errados e brancos. No domingo você corrige na meta \"Corrigir o simulado\"."
-     ]
-    },
-    {
-     "id": "S14-DIS",
-     "semana": "S14",
-     "ordem": 12,
-     "bloco": null,
-     "materia": "DIS",
-     "materia_nome": "Discursiva",
-     "prova": "Discursiva",
-     "assunto": "Discursiva 14 · Duas questões e peça técnica",
-     "edital": null,
-     "tipo": "discursiva",
-     "o_que_fazer": "Escreva as duas questões e a peça técnica à mão, sem consulta, como na prova. Depois, envie ao Claude para correção e lance NC, NE e TL.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Questão 1 sugerida (até 20 linhas): Tema livre: o assunto com pior nota nos simulados. Conteúdo: Ponto fraco do painel.",
-      "Questão 2 sugerida (até 20 linhas): Ética e direitos autorais no uso de IA para conteúdo gerado. Conteúdo: Fala e IA 4.2.",
-      "Peça técnica sugerida (até 50 linhas): Peça livre (parecer, ofício ou degravação) no formato em que você mais errou nas correções.",
-      "Escreva tudo à mão, sem consulta, como na prova.",
-      "Envie ao Claude para correção e lance aqui NC (nota de conteúdo), NE (número de erros de português) e TL (total de linhas)."
-     ]
-    },
-    {
-     "id": "S14-DOM1",
-     "semana": "S14",
-     "ordem": 13,
-     "bloco": null,
-     "materia": "DOM",
-     "materia_nome": "Domingo — revisão da semana",
-     "prova": "-",
-     "assunto": "Corrigir o simulado da semana",
-     "edital": null,
-     "tipo": "domingo",
-     "o_que_fazer": "Leia o comentário de cada erro e de cada acerto no chute.",
-     "como_concluir": "Concluída quando: atividade feita e resultado lançado no painel (simulado/discursiva/registro).",
-     "tec_filtro": null,
-     "tec_url": null,
-     "resumo_ia": null,
-     "repeticoes": 1,
-     "status": "pendente",
-     "guia": [
-      "Refaça mentalmente cada questão errada e leia o comentário completo.",
-      "Leia também as que você acertou chutando.",
-      "Classifique cada erro: conteúdo, interpretação, pegadinha ou desatenção.",
-      "Lance tudo no caderno de erros com o motivo."
-     ]
-    },
-    {
      "id": "S14-DOM2",
      "semana": "S14",
-     "ordem": 14,
+     "ordem": 11,
      "bloco": null,
      "materia": "DOM",
      "materia_nome": "Domingo — revisão da semana",
