@@ -1815,7 +1815,7 @@ function render(){
   const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
-  ${tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
+  ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>`:`<div class="mgap"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav></aside></div>`:""}`;
