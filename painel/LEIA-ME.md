@@ -43,3 +43,7 @@ Os simulados não vêm programados: você cadastra cada um (data, composição),
 ## Subtópicos
 
 Na aba Questões, linhas escritas como "Assunto – Subtópico" com porcentagem (0,91 e 0,09, ou equivalente) viram subtópicos: não somam questões, e a aba Subtópicos mostra matéria, assunto e subtópico em menu suspenso, com ordenação e busca. A linha do assunto, com certas e erradas em números, continua entrando nas métricas e na meta correspondente.
+
+## Modo estudando e material da meta
+
+Um toque no quadradinho de uma meta a coloca em "estudando" (quadradinho amarelo) e o aviso do topo vira "Estudando", em verde. Um segundo toque conclui. Só uma meta fica em estudo por vez. Dentro da meta há a pasta de questões (Tec Concursos), observações, links de vídeo e anexos (PDF ou imagem). Tudo isso aparece na Biblioteca, em Arquivos, Vídeos, Galeria, Anotações e Links, separado por matéria e assunto.

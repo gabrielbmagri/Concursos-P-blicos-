@@ -327,6 +327,20 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .sbs .sbn{font-weight:500}.sbs small{grid-column:1/-1;color:var(--fg3);font-size:12px}
 .up{color:var(--good);font-weight:700}.dn{color:var(--bad);font-weight:700}
 @media (max-width:820px){.sbtools{grid-template-columns:minmax(0,1fr)}.sbh,.sbs{grid-template-columns:minmax(0,1fr) auto}.sbh .car{display:none}.sbn{grid-column:1;grid-row:1}.sbv{grid-column:2;grid-row:1}.sbbar{grid-column:1/-1;grid-row:2;margin:4px 0}.sbh small,.sbs small{grid-column:1/-1;grid-row:3}.sbl,.sba .sbl{padding-left:14px}}
+.row.stu .chk{background:#ffd21a;border-color:#d9a800}.row.stu .chk svg{display:none}.row.stu .chk::after{content:"";width:9px;height:9px;border-radius:50%;background:#14301f}
+.rb.stu{background:#fff0b3;color:#6b4e00}
+.next.study{background:linear-gradient(120deg,#cdeed9 0%,#e3f6ea 100%);border-color:#2f9e5a}
+.next.study .l{color:#0a5c3a;display:flex;align-items:center;gap:7px}.next.study .muted{color:#245a3a}
+.ld{width:9px;height:9px;border-radius:50%;background:#14a653;display:inline-block;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(20,166,83,.5)}50%{box-shadow:0 0 0 6px rgba(20,166,83,0)}}
+.mrow{display:flex;gap:8px;align-items:center;margin-top:4px}.mrow .in{flex:1;min-width:0}
+.vrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.vrow a,.vl{flex:1;min-width:0;display:block;text-decoration:none;color:var(--fg)}
+.vrow b,.vl b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.vrow span,.vl span{font-size:12px;color:var(--fg3)}
+.vl{padding:7px 12px;border-radius:12px;background:var(--soft);margin-top:6px}
+.box.mt label.lbl{margin-top:12px}.box.mt .vrow b,.bi .vl b{text-transform:none;letter-spacing:0;font-size:14px;color:var(--fg);margin:0}#mt-nt{font:14px/1.5 var(--font)}.bi .vl b{display:block}.box.mt small{margin-top:10px}
+.bi{padding:12px 2px;border-bottom:1px solid var(--line)}.bt{font-weight:700;font-size:14.5px;text-align:left}.bn{margin:6px 0 0;font-size:14px;white-space:pre-wrap;color:var(--fg2)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin-top:14px}
+.gi{display:flex;flex-direction:column;gap:5px;text-align:left}.gi img,.gi span{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;background:var(--soft)}.gi small{font-size:11.5px;color:var(--fg3);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -831,9 +845,10 @@ function rowHtml(m){
   const bits=[m.i?"cerca de "+m.i+" itens":null,r>1?`${r} repetições`:null].filter(Boolean).join(" · ");
   const mv=m.wi!==ew(m)?`<span class="rb mv">adiada da semana ${m.wi+1}</span>`:"";
   const res=n?`<div class="res"><span class="sc ${scCls(rt)}">${pc(rt)}</span><small>${it.c}/${n}</small></div>`:(m.t==="discursiva"&&pr&&pr.tl?`<div class="res"><span class="sc na">${npd(pr)}</span></div>`:(r>1&&rd?`<div class="res">${rd}/${r}</div>`:""));
-  return `<li class="row ${done?"done":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
-    <button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":"Concluir"}: ${esc(m.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
+  const stu=!done&&!!(pr&&pr.st);
+  return `<li class="row ${done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
+    <button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>
+    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
 function revRow(r){
@@ -855,7 +870,7 @@ function homeHtml(){
   const frac=ws.fr, isCur=sel===cw;
   const dayN=Math.max(1,Math.min(7,dday(T,pd(w.i))+1));
   const expect=isCur?dayN/7:(sel<cw?1:0);
-  const nxt=L.filter(m=>!isDone(m))[0];
+  const nxt=L.filter(m=>!isDone(m))[0],cs=demo?null:curStudy();
   const dots=L.map(m=>`<span class="dt ${isDone(m)?"d":rdone(m)?"p":""}" style="--c:${mcolor(m)}" data-tip="${esc(m.a)}"></span>`).join("");
   const movedOut=ALL.filter(m=>m.wi===sel&&ew(m)!==sel).length;
   const days=dday(EXAM,T), wkLeft=Math.ceil(days/7);
@@ -899,7 +914,7 @@ function homeHtml(){
       <div class="xp-ms">${ms}</div>
     </div>
     ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
-    ${nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
+    ${cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div></div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
 
   <section class="kpis" aria-label="Indicadores">
@@ -1242,7 +1257,7 @@ function smList(){
   ${D.ideias&&D.ideias.length?`<details class="how"><summary>Ideias de discursiva para os seus simulados</summary><p class="lead" style="margin-top:10px">Temas e peças técnicas que montei a partir do conteúdo programático. Use como quiser.</p>${D.ideias.map(i=>`<p style="margin:8px 0"><b>Ideia ${i.n}.</b> ${i.linhas.map(esc).join(" ")}</p>`).join("")}</details>`:""}`;
 }
 function lbHtml(){
-  return sm.lb?`<div class="ov" data-act="sm-lbclose"><div class="sheet" style="max-width:760px;text-align:center"><h3 style="margin-bottom:12px">${esc(sm.lb.nome)}</h3>${/^image\//.test(sm.lb.tipo)?`<img alt="${esc(sm.lb.nome)}" src="${sm.lb.url}" style="max-width:100%;border-radius:14px">`:`<p class="muted">Toque para abrir o arquivo em uma nova aba.</p>`}<div class="bar-act" style="justify-content:center"><a class="btn" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" target="_blank" rel="noopener">Abrir em nova aba</a><a class="btn alt" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" download="${esc(sm.lb.nome)}">Baixar</a><button class="btn alt" style="width:auto;margin:0;padding:12px 22px" data-act="sm-lbclose">Fechar</button></div></div></div>`:"";
+  return sm.lb?`<div class="ov" style="z-index:70" data-act="sm-lbclose"><div class="sheet" style="max-width:760px;text-align:center"><h3 style="margin-bottom:12px">${esc(sm.lb.nome)}</h3>${/^image\//.test(sm.lb.tipo)?`<img alt="${esc(sm.lb.nome)}" src="${sm.lb.url}" style="max-width:100%;border-radius:14px">`:`<p class="muted">Toque para abrir o arquivo em uma nova aba.</p>`}<div class="bar-act" style="justify-content:center"><a class="btn" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" target="_blank" rel="noopener">Abrir em nova aba</a><a class="btn alt" style="width:auto;margin:0;padding:12px 22px;text-decoration:none" href="${sm.lb.url}" download="${esc(sm.lb.nome)}">Baixar</a><button class="btn alt" style="width:auto;margin:0;padding:12px 22px" data-act="sm-lbclose">Fechar</button></div></div></div>`:"";
 }
 function simHtml(){
   return sm.view==="form"?smForm():sm.view==="detail"?smDetail():smList();
@@ -1424,9 +1439,9 @@ function infoHtml(){
     <div class="card"><div class="card-h"><h3>Critérios de desempate, em ordem</h3></div><ol class="bul">${I.final.desempate.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div></div></section>`;
 }
 
-/* ---------- biblioteca de arquivos ---------- */
+/* ---------- biblioteca: arquivos, vídeos, galeria, anotações e links ---------- */
 const PASTAS=["Edital","Leis","Resumos","Outros"];
-const bib={pasta:"Todos",busy:"",err:"",msg:"",ask:""};
+const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:""};
 async function bibUpload(files){
   const pasta=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
   bib.busy="Enviando…";bib.err="";bib.msg="";render();
@@ -1434,17 +1449,58 @@ async function bibUpload(files){
   for(const f of files){try{await fileSave(f,"bib:"+pasta);ok++}catch(e){bib.err=e.message||"Não consegui enviar o arquivo."}}
   bib.busy="";if(ok)bib.msg=`Enviei ${ok} ${ok===1?"arquivo":"arquivos"} para ${pasta}.`;render();
 }
+const isImg=m=>/^image\//.test((m&&m.tipo)||"");
+const kName=k=>SHORT[k]||OTHERN[k]||"Outras";
+const hostOf=u=>{try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){return u}};
+function metaGroups(pred){
+  const by={};
+  for(const id in real){
+    const m=BY[id],d=real[id];if(!m||!pred(d))continue;
+    (by[m.k]||(by[m.k]=[])).push({m,d});
+  }
+  const ord=k=>SUBJ.includes(k)?SUBJ.indexOf(k):99;
+  return Object.keys(by).sort((a,b)=>ord(a)-ord(b)).map(k=>({k,items:by[k].sort((a,b)=>a.m.wi-b.m.wi||a.m.o-b.m.o)}));
+}
+const grpHtml=(g,body)=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
+const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}</button>${inner}</div>`;
 function bibHtml(){
-  const all=Object.entries(FILES).filter(([id,m])=>/^bib:/.test(m.esc||"")).map(([id,m])=>({id,m,p:m.esc.slice(4)})).sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
-  const cnt=p=>all.filter(x=>p==="Todos"||x.p===p).length;
-  const list=all.filter(x=>bib.pasta==="Todos"||x.p===bib.pasta);
-  const lbl=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
-  return `<section class="sec" style="margin-top:20px"><div class="sec-h"><h2>Biblioteca</h2><label class="file-btn" style="padding:10px 20px">Enviar arquivo<input type="file" id="bib-up" accept="application/pdf,image/*,.txt,.doc,.docx" multiple></label></div>
-  <p class="lead">Guarde aqui o edital, as leis e seus resumos para abrir quando precisar. PDF ou imagem de até 10 MB cada. ${bib.pasta==="Todos"?"Arquivos enviados com Todos selecionado vão para Outros.":`Os arquivos enviados agora vão para ${lbl}.`}</p>
+  const fAll=Object.entries(FILES).map(([id,m])=>({id,m}));
+  const pastaF=fAll.filter(x=>/^bib:/.test(x.m.esc||"")).map(x=>({...x,p:x.m.esc.slice(4)}));
+  const metaF=[];
+  for(const id in real){const m=BY[id];if(!m)continue;(real[id].ar||[]).forEach(f=>{if(FILES[f])metaF.push({id:f,m:FILES[f],meta:m})})}
+  const imgs=[...pastaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:x.p})),...metaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:kName(x.meta.k)+" · "+x.meta.a}))].sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
+  const gV=metaGroups(d=>d.vd&&d.vd.length),gN=metaGroups(d=>d.nt),gL=metaGroups(d=>d.lk);
+  const nV=gV.reduce((z,g)=>z+g.items.reduce((y,x)=>y+x.d.vd.length,0),0),nN=gN.reduce((z,g)=>z+g.items.length,0),nL=gL.reduce((z,g)=>z+g.items.length,0);
+  const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
+  const chips=`<div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${VIEWS.map(([k,l,n])=>`<button class="chip" style="${bib.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-view" data-v="${k}">${l} · ${n}</button>`).join("")}</div>`;
+  const frow=(x,lab)=>`<div class="frow">${x.m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span class="th doc">${/pdf/.test(x.m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(x.m.nome)}</b><span>${esc(lab)} · ${fmtB(x.m.tam)}${x.m.cr?" · "+fmtDay(x.m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${x.id}">Abrir</button>${bib.ask===x.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${x.id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${x.id}">Excluir</button>`}</div>`;
+  let body="";
+  if(bib.view==="arq"){
+    const cnt=p=>pastaF.filter(x=>p==="Todos"||x.p===p).length;
+    const list=pastaF.filter(x=>bib.pasta==="Todos"||x.p===bib.pasta).sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
+    const lbl=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
+    const mf=metaF.filter(x=>!isImg(x.m));
+    const mg={};mf.forEach(x=>{(mg[x.meta.k]||(mg[x.meta.k]=[])).push(x)});
+    const mgs=Object.keys(mg).sort((a,b)=>(SUBJ.includes(a)?SUBJ.indexOf(a):99)-(SUBJ.includes(b)?SUBJ.indexOf(b):99));
+    body=`<div class="sec-h" style="margin-top:14px"><h3>Pastas</h3><label class="file-btn" style="padding:10px 20px">Enviar arquivo<input type="file" id="bib-up" accept="application/pdf,image/*,.txt,.doc,.docx" multiple></label></div>
+    <p class="lead">PDF ou imagem de até 10 MB cada. ${bib.pasta==="Todos"?"Arquivos enviados com Todos selecionado vão para Outros.":`Os arquivos enviados agora vão para ${lbl}.`}</p>
+    <div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px">${["Todos",...PASTAS].map(p=>`<button class="chip" style="${bib.pasta===p?"background:var(--soft2);border-color:var(--fg3)":""}" data-act="bib-pasta" data-v="${p}">${p} · ${cnt(p)}</button>`).join("")}</div>
+    ${list.length?`<div class="files" style="margin-top:12px">${list.map(x=>frow(x,x.p)).join("")}</div>`:`<div class="empty">${pastaF.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
+    <div class="sec-h" style="margin-top:30px"><h3>Anexados às metas</h3></div>
+    ${mgs.length?mgs.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)"}"></i>${esc(kName(k))}</span><span>${mg[k].length}</span></div><div class="files">${mg[k].map(x=>frow(x,x.meta.a)).join("")}</div></div>`).join(""):`<div class="empty">Os PDFs que você enviar dentro de uma meta aparecem aqui, separados por matéria.</div>`}`;
+  }else if(bib.view==="vid"){
+    body=gV.length?gV.map(g=>grpHtml(g,g.items.map(x=>bitem(x,x.d.vd.map(v=>`<a class="vl" href="${esc(v.u)}" target="_blank" rel="noopener"><b>${esc(v.t||hostOf(v.u))}</b><span>${esc(hostOf(v.u))}</span></a>`).join(""))).join(""))).join(""):`<div class="empty">Adicione links de vídeo dentro de uma meta. Eles aparecem aqui, por matéria e assunto.</div>`;
+  }else if(bib.view==="gal"){
+    body=imgs.length?`<div class="gal">${imgs.map(x=>`<button class="gi" data-act="sm-fopen" data-f="${x.id}" aria-label="Abrir ${esc(x.m.nome)}">${x.m.th?`<img alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span></span>`}<small>${esc(x.lab)}</small></button>`).join("")}</div>`:`<div class="empty">As imagens que você enviar na Biblioteca ou dentro de uma meta aparecem aqui.</div>`;
+  }else if(bib.view==="not"){
+    body=gN.length?gN.map(g=>grpHtml(g,g.items.map(x=>bitem(x,`<p class="bn">${esc(x.d.nt)}</p>`)).join(""))).join(""):`<div class="empty">As observações que você escrever dentro de uma meta aparecem aqui.</div>`;
+  }else{
+    body=gL.length?gL.map(g=>grpHtml(g,g.items.map(x=>bitem(x,`<a class="vl" href="${esc(x.d.lk)}" target="_blank" rel="noopener"><b>Pasta de questões</b><span>${esc(hostOf(x.d.lk))}</span></a>`)).join(""))).join(""):`<div class="empty">Cole o link da pasta de questões (Tec Concursos) dentro de uma meta. Os links aparecem aqui.</div>`;
+  }
+  return `<section class="sec" style="margin-top:20px"><h2>Biblioteca</h2>
+  <p class="lead">Tudo o que você guarda fica aqui: arquivos, vídeos, imagens, anotações e links, inclusive o que foi anexado dentro das metas.</p>
   ${bib.msg?`<div class="msg">${esc(bib.msg)}</div>`:""}${bib.err?`<div class="msg err">${esc(bib.err)}</div>`:""}${bib.busy||sm.busy?`<div class="msg" style="background:var(--blue-t)">${esc(bib.busy||sm.busy)}</div>`:""}${sm.err&&tab==="biblioteca"?`<div class="msg err">${esc(sm.err)}</div>`:""}
-  <div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${["Todos",...PASTAS].map(p=>`<button class="chip" style="${bib.pasta===p?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-pasta" data-v="${p}">${p} · ${cnt(p)}</button>`).join("")}</div>
-  ${list.length?`<div class="files" style="margin-top:14px">${list.map(({id,m,p})=>`<div class="frow">${m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="th doc">${/pdf/.test(m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(m.nome)}</b><span>${p} · ${fmtB(m.tam)}${m.cr?" · "+fmtDay(m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${id}">Abrir</button>${bib.ask===id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${id}">Excluir</button>`}</div>`).join("")}</div>`:`<div class="empty">${all.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
-  </section>`;
+  ${chips}${body}</section>`;
 }
 
 /* ---------- questões (importação) ---------- */
@@ -1896,6 +1952,73 @@ function drawCharts(){
   });
 }
 
+/* ---------- modo estudando e material da meta ---------- */
+const mt={busy:"",err:""};
+const hasEnr=d=>!!(d&&(d.lk||d.nt||(d.vd&&d.vd.length)||(d.ar&&d.ar.length)||d.st));
+function saveMeta(id,patch){
+  if(demo)return;
+  const d={...(real[id]||{}),...patch};
+  Object.keys(d).forEach(k=>{const v=d[k];if(v===""||v==null||(Array.isArray(v)&&!v.length))delete d[k]});
+  if(empty_(d))save(id,null);else save(id,d);
+}
+function curStudy(){
+  let best=null;
+  for(const id in real){const d=real[id];if(!d.st)continue;const m=getM(id);if(!m||m.rv||m.rg||isDone(m))continue;if(!best||d.st>best.st)best={id,m,st:d.st}}
+  return best;
+}
+function startStudy(id){
+  for(const o in real){if(o!==id&&real[o].st){const d={...real[o]};delete d.st;if(empty_(d))save(o,null);else save(o,d)}}
+  saveMeta(id,{st:Date.now()});
+}
+function stopStudy(id){const d={...(real[id]||{})};delete d.st;if(empty_(d))save(id,null);else save(id,d)}
+const stTxt=ts=>{const d=ymd(new Date(ts));return d===ymd(today())?"Iniciada hoje":"Iniciada em "+fmtDay(d)};
+const fixUrl=u=>{u=String(u||"").trim();if(!u)return "";if(!/^https?:\/\//i.test(u))u="https://"+u;try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:""}catch(e){return ""}};
+function mtBoxHtml(id){
+  const p=P()[id]||{},vd=p.vd||[],ar=p.ar||[];
+  return `<div class="box mt"><b>Material desta meta</b>
+    <label class="lbl" for="mt-lk">Pasta de questões (Tec Concursos)</label>
+    <div class="mrow"><input class="in" id="mt-lk" type="url" inputmode="url" placeholder="Cole o link da pasta" value="${esc(p.lk||"")}"><a class="chip" id="mt-lkopen" href="${esc(p.lk||"")}" target="_blank" rel="noopener" ${p.lk?"":"hidden"}>Abrir</a></div><div id="mt-lkerr" class="muted" style="font-size:12.5px;color:var(--bad)" hidden>Esse link não parece válido.</div>
+    <label class="lbl" for="mt-nt">Observações</label>
+    <textarea class="in" id="mt-nt" style="min-height:90px" placeholder="Anotações sobre esta meta">${esc(p.nt||"")}</textarea>
+    <label class="lbl">Vídeos e aulas</label>
+    ${vd.length?vd.map((v,i)=>`<div class="vrow"><a href="${esc(v.u)}" target="_blank" rel="noopener"><b>${esc(v.t||hostOf(v.u))}</b><span>${esc(hostOf(v.u))}</span></a><button class="chip" data-act="mt-vdel" data-i="${i}">Remover</button></div>`).join(""):""}
+    <div class="mrow" style="margin-top:8px"><input class="in" id="mt-vu" type="url" inputmode="url" placeholder="Link do vídeo (YouTube, etc.)"><input class="in" id="mt-vt" type="text" placeholder="Título (opcional)"></div>
+    <div class="bar-act" style="margin-top:8px"><button class="btn alt" style="padding:9px 16px;font-size:14px" data-act="mt-vadd">Adicionar vídeo</button></div>
+    <label class="lbl" style="margin-top:12px">Arquivos e imagens</label>
+    ${ar.length?`<div class="files">${ar.map(f=>{const m=FILES[f];return `<div class="frow">${m&&m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="th doc">${m&&/pdf/.test(m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(m?m.nome:"arquivo")}</b><span>${m?fmtB(m.tam):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${f}">Abrir</button><button class="chip" data-act="mt-fdel" data-f="${f}">Excluir</button></div>`}).join("")}</div>`:""}
+    ${mt.busy?`<div class="msg" style="background:var(--blue-t)">${esc(mt.busy)}</div>`:""}${mt.err?`<div class="msg err">${esc(mt.err)}</div>`:""}
+    <div class="bar-act" style="margin-top:8px"><label class="file-btn" style="background:var(--soft2);color:var(--fg);padding:9px 16px;font-size:14px">Enviar PDF ou imagem<input type="file" id="mt-up" accept="application/pdf,image/*" multiple></label></div>
+    <small>Tudo isso também aparece na Biblioteca, separado por matéria e assunto.</small></div>`;
+}
+const refreshMt=()=>{const b=$("#mt-box");if(b&&sheetId)b.innerHTML=mtBoxHtml(sheetId)};
+async function mtUpload(files){
+  const id=sheetId;if(!id)return;
+  mt.busy="Enviando…";mt.err="";refreshMt();
+  const ids=[];
+  for(const f of files){try{ids.push(await fileSave(f,"meta:"+id))}catch(e){mt.err=e.message||"Não consegui enviar o arquivo."}}
+  if(ids.length)saveMeta(id,{ar:[...((real[id]||{}).ar||[]),...ids]});
+  mt.busy="";refreshMt();
+}
+function mtClick(a,t){
+  const id=sheetId;
+  if(a==="mt-start"){startStudy(id);closeSheet();return true}
+  if(a==="mt-stop"){stopStudy(id);closeSheet();return true}
+  if(a==="mt-vadd"){
+    const u=fixUrl(gv("mt-vu")),ti=gv("mt-vt").trim();
+    if(!u){mt.err="Cole um link de vídeo válido.";refreshMt();return true}
+    mt.err="";saveMeta(id,{vd:[...((real[id]||{}).vd||[]),{u,t:ti}]});refreshMt();return true}
+  if(a==="mt-vdel"){const vd=((real[id]||{}).vd||[]).filter((_,i)=>i!==+t.dataset.i);saveMeta(id,{vd});refreshMt();return true}
+  if(a==="mt-fdel"){const f=t.dataset.f;fileDel(f);saveMeta(id,{ar:((real[id]||{}).ar||[]).filter(x=>x!==f)});refreshMt();return true}
+  return false;
+}
+function mtChange(e){
+  const t=e.target;
+  if(t.id==="mt-lk"&&sheetId){const u=fixUrl(t.value),bad=!!t.value.trim()&&!u;if(!bad){saveMeta(sheetId,{lk:u});t.value=u}const a=$("#mt-lkopen"),er=$("#mt-lkerr");if(a){a.href=u||"#";a.hidden=!u}if(er)er.hidden=!bad;return true}
+  if(t.id==="mt-nt"&&sheetId){saveMeta(sheetId,{nt:t.value.trim()});return true}
+  if(t.id==="mt-up"&&t.files&&t.files.length){const fs=Array.from(t.files);t.value="";mtUpload(fs);return true}
+  return false;
+}
+
 /* ---------- ficha da meta ---------- */
 let sheetId=null,draft=null;
 function openSheet(id){
@@ -1915,11 +2038,13 @@ function openSheet(id){
     <h2 class="sh-t">${esc(m.a)}</h2>
     <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
     ${rvInfo}
+    ${!dyn&&!ro&&!isDone(m)?`<div class="bar-act" style="margin:12px 0 0">${(P()[id]||{}).st?`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-stop">Estudando agora. Toque para parar</button>`:`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-start">Começar a estudar</button>`}</div>`:""}
     ${m.ls?`<div class="box"><b>Lei seca sugerida</b><p>${esc(m.ls)}</p><small>Confira a numeração no texto oficial atualizado.</small></div>`:""}
     ${m.tp&&m.tp.length?`<div class="box"><b>${dyn?"O que revisar":"O que estudar"}</b><ul class="tp">${m.tp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
     ${m.w?`<p class="sh-p">${esc(m.w)}</p>`:""}
     ${m.g?`<ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
     ${m.ft?`<p class="sh-p"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
+    ${!dyn&&!ro?`<div id="mt-box">${mtBoxHtml(id)}</div>`:""}
     <div class="f">
       ${r>1?fld("r","Repetições feitas",`de ${r}`):`<div class="fr"><div class="fl">Concluída</div><button class="switch" role="switch" id="f-done" aria-checked="${draft.r>=1}" ${ro?"disabled":""}></button></div>`}
     </div>
@@ -1937,7 +2062,7 @@ function liveUpd(){
   const d=$("#lv-d");if(d)d.textContent=draft.tl?f1((draft.nc||0)-2*(draft.ne||0)/draft.tl):"–";
 }
 function closeSheet(){sheetId=null;$("#sheet").innerHTML=""}
-function empty_(d){return !(d.r||0)&&!d.c&&!d.e&&!d.b&&d.nc==null&&d.ne==null&&d.tl==null&&d.mw==null}
+function empty_(d){return !(d.r||0)&&!d.c&&!d.e&&!d.b&&d.nc==null&&d.ne==null&&d.tl==null&&d.mw==null&&!hasEnr(d)}
 function sheetSave(){
   const m=getM(sheetId);if(!m)return;
   const old=P()[sheetId]||{};
@@ -1946,6 +2071,7 @@ function sheetSave(){
   if(tot_(draft)){doc.c=draft.c;doc.e=draft.e;doc.b=draft.b}
   if(draft.nc!=null)doc.nc=draft.nc;if(draft.ne!=null)doc.ne=draft.ne;if(draft.tl!=null)doc.tl=draft.tl;
   if(old.mw!=null)doc.mw=old.mw;
+  ["lk","nt","vd","ar"].forEach(k=>{if(old[k])doc[k]=old[k]});if(old.st&&!done)doc.st=old.st;
   if(done||tot_(draft)||draft.nc!=null||draft.tl!=null)doc.dt=draft.dt||ymd(new Date());
   if(empty_(doc)){save(sheetId,null)}else save(sheetId,doc);
   closeSheet();
@@ -1954,7 +2080,9 @@ function toggle(id){
   if(demo)return openSheet(id);
   const m=getM(id),p=real[id];if(!m)return;
   if(isDone(m)){const d={...p,r:0};if(empty_(d)){save(id,null)}else{save(id,d)}return}
-  save(id,{...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())});
+  if(!m.rv&&!m.rg&&!(p&&p.st)){startStudy(id);return}
+  const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())};delete d.st;
+  save(id,d);
 }
 function moveTo(id,wi){
   const m=getM(id);if(!m||demo)return;
@@ -1990,10 +2118,12 @@ document.addEventListener("click",e=>{
   if(a==="bib-pasta"){bib.pasta=t.dataset.v;bib.msg="";bib.err="";render();return}
   if(a==="bib-delask"){bib.ask=t.dataset.f;render();return}
   if(a==="bib-delno"){bib.ask="";render();return}
-  if(a==="bib-delok"){fileDel(t.dataset.f);bib.ask="";bib.msg="Arquivo excluído.";render();return}
+  if(a==="bib-delok"){const f=t.dataset.f,fm=FILES[f];fileDel(f);if(fm&&/^meta:/.test(fm.esc||"")){const mid=fm.esc.slice(5);saveMeta(mid,{ar:((real[mid]||{}).ar||[]).filter(x=>x!==f)})}bib.ask="";bib.msg="Arquivo excluído.";render();return}
+  if(a.slice(0,3)==="mt-"&&mtClick(a,t))return;
+  if(a==="bib-view"){bib.view=t.dataset.v;bib.msg="";bib.err="";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
-  if(a==="clear"){save(sheetId,null);closeSheet();return}
+  if(a==="clear"){const o=real[sheetId]||{},d={};["lk","nt","vd","ar"].forEach(k=>{if(o[k])d[k]=o[k]});if(empty_(d))save(sheetId,null);else save(sheetId,d);closeSheet();return}
   if(a==="move"){moveTo(sheetId,+t.dataset.w);return}
   if(a==="movesel"){moveTo(sheetId,+$("#f-mw").value);return}
   if(a==="template"){downloadTemplate();return}
@@ -2035,6 +2165,7 @@ document.addEventListener("input",e=>{
   liveUpd();
 });
 document.addEventListener("change",e=>{
+  if(mtChange(e))return;
   if(e.target.id==="sb-om"){sb.om=e.target.value;render();return}
   if(e.target.id==="sb-oa"){sb.oa=e.target.value;render();return}
   if(smChange(e))return;
