@@ -1,0 +1,94 @@
+{
+  "fonte": "Edital nº 1 – Câmara dos Deputados – Analista Legislativo, de 2 de outubro de 2026 (Cebraspe). Os números entre parênteses são os itens do edital.",
+  "cargo": {
+    "nome": "Analista Legislativo – Especialidade: Registro e Redação",
+    "orgao": "Câmara dos Deputados",
+    "banca": "Cebraspe",
+    "requisito": "Diploma de graduação de nível superior em qualquer área, reconhecido pelo MEC (2.7).",
+    "remuneracao": "R$ 32.070,88",
+    "jornada": "40 horas semanais",
+    "lotacao": "Brasília/DF, em unidade de registro de debates. Permanência mínima de três anos na primeira lotação (1.4 e 2.7).",
+    "atividades": "Registro dos discursos e debates do Plenário e das Comissões da Câmara e do Congresso Nacional, inclusão de documentos lidos ou autorizados pela Mesa no registro, pesquisas necessárias ao trabalho e elaboração de sumários de discursos e intervenções em sessões plenárias (2.7)."
+  },
+  "vagas": {
+    "ref": "4.1",
+    "colunas": ["Ampla concorrência", "Pessoa com deficiência", "Pretos e pardos", "Indígena", "Quilombola", "Total"],
+    "imediatas": [15, 2, 6, 1, 1, 25],
+    "cadastro": [16, 1, 7, 1, 0, 25],
+    "nota": "Este cargo não entra no agrupamento de vagas reservadas (5.1.1.1)."
+  },
+  "inscricao": {
+    "taxa": "R$ 130,00 (6.1)",
+    "periodo": "15/10 a 17/11/2026",
+    "pagamento": "Até 19/11/2026",
+    "isencao": "Pedido de isenção de 15 a 23/10/2026"
+  },
+  "datas": [
+    {"d": "2026-10-02", "t": "Publicação do edital", "r": "Edital"},
+    {"d": "2026-10-08", "t": "Sorteio das vagas reservadas (indígena e quilombola)", "r": "Anexo I"},
+    {"d": "2026-10-14", "t": "Resultado final do sorteio e quadro de vagas atualizado", "r": "Anexo I"},
+    {"d": "2026-10-15", "t": "Início das inscrições e do pedido de isenção (isenção até 23/10)", "r": "Anexo I"},
+    {"d": "2026-11-17", "t": "Fim das inscrições", "r": "Anexo I"},
+    {"d": "2026-11-19", "t": "Último dia para pagar a taxa de inscrição", "r": "Anexo I"},
+    {"d": "2026-12-22", "t": "Divulgação da consulta aos locais de prova", "r": "Anexo I"},
+    {"d": "2027-01-17", "t": "PROVAS: objetivas pela manhã (5 horas) e discursiva à tarde (3 horas)", "r": "7.2, 7.3 e Anexo I", "prova": true},
+    {"d": "2027-01-19", "t": "Padrão preliminar de resposta da discursiva; consulta ao gabarito preliminar das objetivas (19 a 21/1)", "r": "Anexo I"},
+    {"d": "2027-01-20", "t": "Recursos contra gabaritos e padrão de resposta (20 e 21/1)", "r": "Anexo I"},
+    {"d": "2027-01-22", "t": "Gabaritos oficiais preliminares das objetivas", "r": "Anexo I"},
+    {"d": "2027-02-18", "t": "Resultado final nas provas objetivas", "r": "Anexo I"},
+    {"d": "2027-04-09", "t": "Resultado provisório da prova discursiva", "r": "Anexo I"},
+    {"d": "2027-04-12", "t": "Recursos contra o resultado provisório da discursiva (12 e 13/4)", "r": "Anexo I"},
+    {"d": "2027-04-30", "t": "Resultado final da discursiva e resultado final do concurso", "r": "Anexo I"}
+  ],
+  "provas": [
+    {"n": "P1", "nome": "Conhecimentos básicos", "itens": 90, "valor": 90, "corte": 18, "ref": "7.1 e 8.11.5",
+     "mat": ["Língua Portuguesa", "Língua Inglesa", "Noções de Direito Administrativo e Administração Pública", "Noções de Direito Constitucional e de Regimento Interno da Câmara dos Deputados", "Tecnologia da Informação e Dados"]},
+    {"n": "P2", "nome": "Conhecimentos específicos", "itens": 90, "valor": 90, "corte": 27, "ref": "7.1 e 8.11.5",
+     "mat": ["Linguística", "Reconhecimento de fala, transcrição e inteligência artificial", "Congresso Nacional (procedimento legislativo)", "Ciência Política"]}
+  ],
+  "objetiva": [
+    "Itens de Certo ou Errado: acerto vale +1,00, erro vale −1,00 e item em branco ou com marcação dupla vale 0 (8.2 e 8.11.2).",
+    "Cada prova objetiva soma 90 itens e a nota é a soma dos itens. As duas somam 180 pontos (8.1 e 8.11.3).",
+    "Eliminado quem tirar menos de 18 pontos na P1, menos de 27 na P2 ou menos de 54 na soma das duas (8.11.5).",
+    "Só têm a discursiva corrigida os mais bem classificados nas objetivas: 62 por modalidade de vaga (ampla, PcD, pretos e pardos, indígena e quilombola), respeitados empates (8.11.6 e 9.8.1). Quem fica fora é eliminado."
+  ],
+  "discursiva": {
+    "ref": "9.1 e 9.8.5",
+    "total": 60,
+    "partes": [
+      {"nome": "Questão discursiva 1", "max": 15, "linhas": 20, "k": 3},
+      {"nome": "Questão discursiva 2", "max": 15, "linhas": 20, "k": 3},
+      {"nome": "Peça técnica", "max": 30, "linhas": 50, "k": 6}
+    ],
+    "tema": "Temas relacionados aos conhecimentos específicos do cargo (9.1). Texto dissertativo, com coerência e coesão (9.8.4).",
+    "avalia": "Conteúdo (conhecimento do tema), capacidade de expressão na modalidade escrita e uso do registro formal padrão da Língua Portuguesa (9.8.4).",
+    "formulas": [
+      "Questão: NQ = NC − 3 × NE ÷ TL (9.8.5.1)",
+      "Peça técnica: NPT = NC − 6 × NE ÷ TL (9.8.5.2)",
+      "Nota final da discursiva: NFPD = NQ1 + NQ2 + NPT (9.8.5.3)"
+    ],
+    "legenda": "NC é a nota de conteúdo, NE é o número de erros de língua portuguesa (grafia, morfossintaxe e propriedade vocabular) e TL é o número de linhas efetivamente escritas.",
+    "regras": [
+      "Nota zero se NQ ou NPT der menos que zero, se houver fuga ao tema ou se não houver texto.",
+      "Qualquer trecho escrito fora do local apropriado ou além do limite de linhas é desconsiderado.",
+      "A nota de conteúdo é a média de duas notas de examinadores distintos. Se elas diferirem em mais de 25% da nota máxima, há uma terceira correção (9.8.4.1).",
+      "Aprovado na discursiva quem tiver NFPD de 30,00 pontos ou mais, a metade dos 60 (9.8.5.4).",
+      "Texto manuscrito, com caneta esferográfica preta de material transparente. Só vale o documento de textos definitivos, e qualquer marca que identifique o candidato anula a prova (9.4 a 9.6).",
+      "O padrão de resposta preliminar sai em 19/1/2027 e cabe recurso contra ele (9.9)."
+    ]
+  },
+  "final": {
+    "nota": "Nota final = NFPO (objetivas, máximo 180) + NFPD (discursiva, máximo 60), até 240 pontos (11.1).",
+    "corte": "Além das notas mínimas de cada etapa, só permanece quem ficar dentro do número de vagas do item 4.1 (imediatas mais cadastro de reserva: 31 em ampla concorrência: 15 imediatas e 16 de cadastro), respeitados empates (11.8).",
+    "desempate": [
+      "Idade de 60 anos ou mais até o último dia de inscrição",
+      "Maior nota na P2",
+      "Maior número de acertos na P2",
+      "Maior nota na discursiva (P3)",
+      "Maior número de acertos na P1",
+      "Maior idade",
+      "Ter exercido a função de jurado"
+    ],
+    "ref": "11 e 12"
+  }
+}

@@ -285,6 +285,9 @@ textarea.in:focus{outline:3px solid var(--blue)}
 .frow .fn{flex:1;min-width:0}.frow .fn b{display:block;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.frow .fn span{font-size:12px;color:var(--fg3)}
 .card.wide{grid-column:1/-1}
 @media (max-width:820px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ir2{padding:9px 2px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;font-size:14px}.ir2 b{font-size:12px;color:var(--fg2);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.tbl{overflow-x:auto}.tbl table{border-collapse:collapse;width:100%;font-size:13.5px}.tbl th,.tbl td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:center}.tbl th{font-weight:700;color:var(--fg2);font-size:12px}.tbl tbody th{text-align:left;color:var(--fg);font-size:13.5px}
+ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direction:column;gap:7px}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -950,7 +953,23 @@ function smRows(s){
   if(s.analise&&s.analise.length)return s.analise.map(a=>({mid:a.mid||"",k:a.k||"",dt:s.dt,c:a.c||0,e:a.e||0,b:a.b||0}));
   const o=smObj(s);return o?[{mid:"",k:"",dt:s.dt,c:o.c,e:o.e,b:o.b}]:[];
 }
-const smDisc=s=>Array.from({length:s.nd||0},(_,i)=>(s.disc&&s.disc[i])||{});
+const smDisc=s=>Array.from({length:s.nd||0},(_,i)=>{const d=(s.disc&&s.disc[i])||{};const ed=s.nd===3&&d.max==null?{max:[15,15,30][i]}:{};return {...d,...ed}});
+const discK=(s,i)=>s.nd===3&&i===2?6:3;
+const discNome=(s,i)=>s.nd===3?(i===2?"Peça técnica":"Questão discursiva "+(i+1)):"Discursiva "+(i+1);
+const discCalc=(s,i,nc,ne,tl)=>tl>0&&nc!=null?Math.max(0,Math.round((nc-discK(s,i)*(ne||0)/tl)*100)/100):null;
+const P1K=["POR","ING","ADM","CON","TI"],P2K=["LIN","REG","ASR","CP"];
+function smCortes(s,sc){
+  const out=[];
+  if(s.analise&&s.analise.length){
+    const sum=ks=>s.analise.filter(a=>ks.includes(a.k)).reduce((z,a)=>({c:z.c+a.c,e:z.e+a.e,b:z.b+a.b}),{c:0,e:0,b:0});
+    const a1=sum(P1K),a2=sum(P2K),n1=tot_(a1),n2=tot_(a2);
+    if(n1)out.push({l:"P1, conhecimentos básicos",v:a1.c-a1.e,n:n1,min:.2});
+    if(n2)out.push({l:"P2, conhecimentos específicos",v:a2.c-a2.e,n:n2,min:.3});
+  }
+  if(sc.n)out.push({l:"Soma das objetivas",v:sc.c-sc.e,n:sc.n,min:.3});
+  if(sc.dM){const all=smDisc(s).reduce((z,d)=>z+(d.max||0),0);out.push({l:"Discursiva",v:sc.dN,n:Math.max(all,sc.dM),min:.5,pts:true})}
+  return out;
+}
 function smScore(s){
   const o=smObj(s),n=o?tot_(o):0,liq=o?o.c-o.e:0,vo=s.vo>0?s.vo:n;
   const ds=smDisc(s).filter(d=>d.nota!=null&&d.max>0),dN=ds.reduce((x,d)=>x+d.nota,0),dM=ds.reduce((x,d)=>x+d.max,0);
@@ -1071,6 +1090,7 @@ function smForm(){
   return `<section class="sec" style="margin-top:20px"><div class="ak-top"><button class="chip" data-act="sm-back">Voltar</button></div>
   <h2 style="margin-top:12px">${e.id?"Editar simulado":"Novo simulado"}</h2>
   ${sm.err?`<div class="msg err">${esc(sm.err)}</div>`:""}
+  <div class="bar-act" style="margin-top:6px"><button class="chip" data-act="sm-edital">Usar o formato da prova do edital</button><span class="muted" style="font-size:12.5px">180 itens (P1 90 e P2 90), 2 questões de 15 pontos e 1 peça técnica de 30</span></div>
   <div class="fgrid">
     <div class="wide"><label class="lbl" for="sm-nome">Nome</label><input class="in" id="sm-nome" type="text" value="${esc(e.nome)}" placeholder="Ex.: Simulado 1, completo"></div>
     <div><label class="lbl" for="sm-dt">Data</label><input class="in" id="sm-dt" type="date" value="${esc(e.dt)}"></div>
@@ -1118,6 +1138,7 @@ function smDetail(){
     <div class="kpi teal"><div class="lab">Discursivas</div><div class="num">${sc.dM?f1(sc.dN):"–"}${sc.dM?`<small>de ${f1(sc.dM)}</small>`:""}</div><div class="sub">${sc.dM?pc(sc.dPct)+" da nota":"Falta a nota das discursivas"}</div></div>
     <div class="kpi green"><div class="lab">Nota geral</div><div class="num">${sc.poss?pc(sc.pct):"–"}</div><div class="sub">${sc.poss?`${f1(sc.total)} de ${f1(sc.poss)} pontos`:"Objetiva e discursivas juntas"}</div></div>
   </div>
+  ${(()=>{const cs=smCortes(s,sc);return cs.length?`<div class="box" style="margin-top:16px"><b>Corte do edital (itens 8.11.5 e 9.8.5.4)</b>${cs.map(c=>{const r=c.v/c.n,ok=r>=c.min-1e-9,need=Math.ceil(c.min*c.n-1e-9);return `<p style="display:flex;justify-content:space-between;gap:10px;margin-top:6px"><span>${c.l}: ${f1(c.v)} de ${c.n} ${c.pts?"pontos":"itens"}</span><span class="sc ${ok?"hi":"lo"}">${ok?"acima do corte":"abaixo do corte"}</span></p><small>Mínimo ${need} ${c.pts?"pontos":"pontos líquidos"} (${Math.round(c.min*100)}%)${c.pts?"":", acertos menos erros"}</small>`}).join("")}<small style="margin-top:8px">${sc.n===180||sc.n===0?"":"Este simulado não tem 180 itens, então o corte aparece em proporção ao edital (20% na P1, 30% na P2 e na soma). "}A P1 reúne Português, Inglês, Administrativo, Constitucional e TI. A P2 reúne Linguística, Fala e IA, Ciência Política e Legislativo.</small></div>`:""})()}
   <div class="sec-h" style="margin-top:30px"><h3>Resultado da parte objetiva</h3></div>
   ${hasAna?`<p class="lead">O resultado vem da análise por assunto abaixo. Para digitar à mão, limpe a análise.</p>`:`<div class="fgrid">${smNum("sm-rc","Certos",s.res&&s.res.c)}${smNum("sm-re","Errados",s.res&&s.res.e)}${smNum("sm-rb","Brancos",s.res&&s.res.b)}</div>
   <div class="bar-act"><button class="btn" data-act="sm-saveres">Salvar resultado</button></div>`}
@@ -1132,9 +1153,10 @@ function smDetail(){
   <details class="how"><summary>Como pedir a análise ao Claude</summary><p class="lead" style="margin-top:10px">Envie ao Claude o gabarito comentado e as suas respostas, junto com estas instruções.</p>
     <textarea class="in" id="sm-instr" readonly style="min-height:240px">${esc(SMINSTR)}</textarea><div class="bar-act"><button class="btn alt" data-act="sm-anacopy">${sm.copied?"Copiado":"Copiar instruções"}</button></div></details>
   ${dd.length?`<div class="sec-h" style="margin-top:34px"><h3>Discursivas</h3><span class="muted" style="font-size:13px">Imagens da redação e a nota dada por quem avaliou</span></div>
-  ${dd.map((d,i)=>`<div class="card" style="margin-bottom:12px"><div class="card-h"><h3>Discursiva ${i+1}</h3>${d.nota!=null&&d.max>0?`<span class="sc ${scCls(d.nota/d.max)}">${f1(d.nota)} de ${f1(d.max)}</span>`:""}</div>
+  ${dd.map((d,i)=>`<div class="card" style="margin-bottom:12px"><div class="card-h"><h3>${discNome(s,i)}</h3>${d.nota!=null&&d.max>0?`<span class="sc ${scCls(d.nota/d.max)}">${f1(d.nota)} de ${f1(d.max)}</span>`:""}</div>
     <div class="fgrid"><div class="wide"><label class="lbl" for="sd-tema-${i}">Tema ou enunciado</label><input class="in" id="sd-tema-${i}" type="text" value="${esc(d.tema||"")}"></div>
-    ${smNum("sd-nota-"+i,"Nota recebida",d.nota)}${smNum("sd-max-"+i,"Nota máxima",d.max)}
+    ${smNum("sd-nc-"+i,"NC, nota de conteúdo",d.nc)}${smNum("sd-ne-"+i,"NE, erros de português",d.ne)}${smNum("sd-tl-"+i,"TL, linhas escritas",d.tl)}
+    ${smNum("sd-nota-"+i,"Nota recebida",d.nota)}${smNum("sd-max-"+i,"Nota máxima",d.max)}<div class="wide"><p class="muted" style="font-size:12.5px;margin:0">Fórmula do edital: nota = NC − ${discK(s,i)} × NE ÷ TL, nunca menor que zero. Preenchendo NC, NE e TL a nota é calculada ao salvar. Se a banca só informou a nota final, preencha só "Nota recebida".</p></div>
     <div class="wide"><label class="lbl" for="sd-obs-${i}">Comentário de quem avaliou</label><textarea class="in" id="sd-obs-${i}" style="min-height:80px">${esc(d.obs||"")}</textarea></div></div>
     ${fileList(d.arq,"disc",i)}
     <div class="bar-act"><button class="btn" data-act="sm-discsave" data-i="${i}">Salvar discursiva ${i+1}</button><label class="file-btn" style="background:var(--soft);color:var(--fg)">Enviar imagens<input type="file" class="sm-up-disc" data-i="${i}" accept="image/*,application/pdf" multiple></label></div></div>`).join("")}`:""}
@@ -1186,13 +1208,16 @@ const gn=id=>{const v=gv(id);return v===""?null:num2(v)};
 function smDiscRead(i){
   const s=SM[sm.id];if(!s)return;
   const d=smDisc(s).map(x=>({...x}));
-  d[i]={...d[i],tema:gv("sd-tema-"+i).trim(),nota:gn("sd-nota-"+i),max:gn("sd-max-"+i),obs:gv("sd-obs-"+i).trim()};
+  const nc=gn("sd-nc-"+i),ne=gn("sd-ne-"+i),tl=gn("sd-tl-"+i);let nota=gn("sd-nota-"+i);
+  const cl=discCalc(s,i,nc,ne,tl);if(cl!=null)nota=cl;
+  d[i]={...d[i],tema:gv("sd-tema-"+i).trim(),nc,ne,tl,nota,max:gn("sd-max-"+i),obs:gv("sd-obs-"+i).trim()};
   smPut(sm.id,{...s,disc:d});
 }
 function smClick(a,t,e){
   const s=SM[sm.id];
   if(a==="sm-lbclose"){if(t.classList.contains("ov")&&e.target!==t)return;if(sm.lb&&sm.lb.url)URL.revokeObjectURL(sm.lb.url);sm.lb=null;render();return}
   if(a==="sm-new"){sm.ed={id:"",nome:"",dt:ymd(today()),tipo:"completo",itens:"",nd:0,vo:"",comp:{},obs:""};sm.view="form";sm.err="";sm.msg="";render();window.scrollTo(0,0);return}
+  if(a==="sm-edital"){sm.ed={...sm.ed,nome:gv("sm-nome")||sm.ed.nome,dt:gv("sm-dt")||sm.ed.dt,obs:gv("sm-obs"),tipo:"completo",itens:180,nd:3,vo:180};render();return}
   if(a==="sm-edit"&&s){sm.ed={id:sm.id,...s,itens:s.itens||"",vo:s.vo||"",comp:s.comp||{}};sm.view="form";sm.err="";render();window.scrollTo(0,0);return}
   if(a==="sm-back"){sm.err="";sm.msg="";sm.ask="";sm.view=(sm.view==="form"&&sm.ed&&sm.ed.id)?"detail":"list";if(sm.view==="list")sm.id="";render();window.scrollTo(0,0);return}
   if(a==="sm-open"){sm.id=t.dataset.id;sm.view="detail";sm.err="";sm.msg="";sm.ask="";sm.ana={paste:"",rows:[],errs:[],name:""};render();window.scrollTo(0,0);return}
@@ -1237,6 +1262,47 @@ function smChange(e){
     if(sa.dataset.sma==="k"){r.k=sa.value;const rk=r.k?metaRank(r.k,r.ass):[];r.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else r.mid=sa.value;
     render();return true}
   return false;
+}
+
+/* ---------- informações do concurso (do edital) ---------- */
+function infoHtml(){
+  const I=D.info,c=I.cargo,T=today();
+  const nxt=I.datas.find(x=>pd(x.d)>=T);
+  const row=(l,v)=>`<div class="ir2"><b>${l}</b><span>${v}</span></div>`;
+  const li=a=>`<ul class="bul">${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+  const v=I.vagas,dd=I.discursiva;
+  return `<section class="sec" style="margin-top:20px"><h2>Informações do concurso</h2>
+  <p class="lead">${esc(I.fonte)}</p>
+  <div class="kpis" style="margin-top:16px">
+    <div class="kpi blue"><div class="lab">Remuneração</div><div class="num" style="font-size:26px">${esc(c.remuneracao)}</div><div class="sub">${esc(c.jornada)}</div></div>
+    <div class="kpi green"><div class="lab">Vagas imediatas</div><div class="num">${v.imediatas[5]}<small>+ ${v.cadastro[5]} no cadastro</small></div><div class="sub">${v.imediatas[0]} em ampla concorrência</div></div>
+    <div class="kpi purple"><div class="lab">Dia da prova</div><div class="num" style="font-size:26px">17 jan 2027</div><div class="sub">${Math.max(0,dday(EXAM,T))} dias · objetivas de manhã, discursiva à tarde</div></div>
+    <div class="kpi teal"><div class="lab">Nota máxima</div><div class="num">240<small>pontos</small></div><div class="sub">180 objetivas + 60 discursiva</div></div>
+  </div></section>
+  <section class="sec"><div class="grid2">
+    <div class="card"><div class="card-h"><h3>O cargo</h3></div>
+      ${row("Cargo",esc(c.nome))}${row("Órgão e banca",esc(c.orgao)+", banca "+esc(c.banca))}${row("Requisito",esc(c.requisito))}${row("Lotação",esc(c.lotacao))}${row("Atividades",esc(c.atividades))}</div>
+    <div class="card"><div class="card-h"><h3>Vagas e inscrição</h3></div>
+      <div class="tbl"><table><thead><tr><th></th>${["AC","PcD","PP","PI","PQ","Total"].map((x,i)=>`<th title="${esc(v.colunas[i])}">${x}</th>`).join("")}</tr></thead><tbody>
+      <tr><th>Imediatas</th>${v.imediatas.map(x=>`<td>${x}</td>`).join("")}</tr><tr><th>Cadastro de reserva</th>${v.cadastro.map(x=>`<td>${x}</td>`).join("")}</tr></tbody></table></div>
+      <p class="muted" style="font-size:12.5px;margin:8px 0 12px">AC ampla concorrência, PcD pessoa com deficiência, PP pretos e pardos, PI indígena, PQ quilombola. ${esc(v.nota)} (item ${v.ref})</p>
+      ${row("Taxa",esc(I.inscricao.taxa))}${row("Inscrições",esc(I.inscricao.periodo))}${row("Pagamento",esc(I.inscricao.pagamento))}${row("Isenção",esc(I.inscricao.isencao))}</div>
+  </div></section>
+  <section class="sec"><div class="sec-h"><h2>Datas importantes</h2>${nxt?`<span class="muted" style="font-size:13px">Próxima: ${fmtDay(nxt.d)}</span>`:""}</div>
+    <ul class="list">${I.datas.map(x=>{const past=pd(x.d)<T,nx=nxt&&nxt.d===x.d;return `<li class="row ${past?"done":""}" style="cursor:default"><div class="rt"><div class="t" style="${x.prova?"color:var(--blue)":""}">${esc(x.t)}</div><div class="s"><span>${fmtDay(x.d)} de ${pd(x.d).getFullYear()}</span><span>${esc(x.r)}</span></div></div>${nx?`<span class="pill blue">próxima</span>`:past?`<span class="pill">passou</span>`:""}</li>`}).join("")}</ul>
+    <p class="muted" style="font-size:12.5px;margin:8px 2px 0">Datas previstas. O edital diz que podem mudar por novo edital.</p></section>
+  <section class="sec"><div class="sec-h"><h2>Provas e pontuação</h2></div><div class="grid2">
+    ${I.provas.map(x=>`<div class="card"><div class="card-h"><div><h3>${x.n} · ${esc(x.nome)}</h3><p>${x.itens} itens, até ${x.valor} pontos. Mínimo ${x.corte} pontos (${x.ref})</p></div></div>${li(x.mat)}</div>`).join("")}
+    <div class="card wide"><div class="card-h"><h3>Como a objetiva é corrigida</h3></div>${li(I.objetiva)}</div></div></section>
+  <section class="sec"><div class="sec-h"><h2>Prova discursiva</h2><span class="muted" style="font-size:13px">${dd.total} pontos · itens ${dd.ref}</span></div><div class="grid2">
+    <div class="card"><div class="card-h"><h3>O que cai</h3></div>
+      <div class="tbl"><table><thead><tr><th>Parte</th><th>Vale</th><th>Linhas</th><th>Desconto por erro</th></tr></thead><tbody>${dd.partes.map(x=>`<tr><th>${esc(x.nome)}</th><td>${x.max}</td><td>até ${x.linhas}</td><td>${x.k} × NE ÷ TL</td></tr>`).join("")}</tbody></table></div>
+      <p style="margin:12px 0 0;font-size:14px">${esc(dd.tema)}</p><p class="muted" style="font-size:13.5px;margin:8px 0 0">${esc(dd.avalia)}</p></div>
+    <div class="card"><div class="card-h"><h3>Como é a nota</h3></div>${li(dd.formulas)}<p class="muted" style="font-size:13px;margin:8px 0 0">${esc(dd.legenda)}</p></div>
+    <div class="card wide"><div class="card-h"><h3>Regras</h3></div>${li(dd.regras)}</div></div></section>
+  <section class="sec"><div class="sec-h"><h2>Nota final e desempate</h2><span class="muted" style="font-size:13px">itens ${I.final.ref}</span></div><div class="grid2">
+    <div class="card"><div class="card-h"><h3>Nota final e corte</h3></div><p style="margin:0 0 8px;font-size:14px">${esc(I.final.nota)}</p><p style="margin:0;font-size:14px">${esc(I.final.corte)}</p></div>
+    <div class="card"><div class="card-h"><h3>Critérios de desempate, em ordem</h3></div><ol class="bul">${I.final.desempate.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div></div></section>`;
 }
 
 /* ---------- biblioteca de arquivos ---------- */
@@ -1621,14 +1687,14 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
+  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
