@@ -91,8 +91,10 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 .ms.on{background:var(--gold);border-color:var(--gold);color:#111827}
 .xp-cap{margin:8px 0 0;font-size:13px;color:var(--fg2)}
 @keyframes stripes{to{background-position:28px 0}}
-.next{margin-top:12px;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:16px;background:var(--soft);cursor:pointer;text-align:left;width:100%}
-.next .l{font-size:11.5px;font-weight:700;color:var(--fg3);letter-spacing:.08em;text-transform:uppercase}
+.next{margin-top:12px;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:16px;background:linear-gradient(120deg,#ffdcae 0%,#ffe9c8 100%);border:1.5px solid #f2a33a;cursor:pointer;text-align:left;width:100%}
+.next::before{content:"!";flex:none;width:30px;height:30px;border-radius:50%;background:#e8870c;color:#fff;font-weight:900;font-size:17px;display:grid;place-items:center}
+.next .muted{color:#6b3a05}
+.next .l{font-size:11.5px;font-weight:700;color:#8a4300;letter-spacing:.08em;text-transform:uppercase}
 .next .t{font-size:16px;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .next .grow{min-width:0;flex:1}
 
