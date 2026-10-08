@@ -4,7 +4,7 @@ import json, sys, pathlib
 root = pathlib.Path(__file__).resolve().parent
 src = json.load(open(root.parent / "dados" / "cronograma.json", encoding="utf-8"))
 K = dict(ordem="o", bloco="b", materia="k", assunto="a", edital="e", duracao_min="d", tipo="t",
-         itens_alvo="i", repeticoes="rp", o_que_fazer="w", fonte_teoria="ft", revisa="rv")
+         itens_alvo="i", repeticoes="rp", o_que_fazer="w", fonte_teoria="ft", lei_seca="ls", guia="g", topicos="tp")
 def meta(m):
     out = {"id": m["id"]}
     for a, b in K.items():
@@ -15,6 +15,7 @@ def meta(m):
 data = {
     "curso": src["meta"]["concurso"].split(" (")[0],
     "prova": src["meta"]["prova"],
+    "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "d": src["meta"]["revisoes"]["duracao_min"], "i": src["meta"]["revisoes"]["itens"]},
     "mat": {k: {"n": v["nome"], "p": v["prova"]} for k, v in src["meta"]["materias"].items()},
     "sem": [{"id": s["id"], "i": s["inicio"], "f": s["fim"], "fase": s["fase"], "fer": s["feriado"],
              "obs": s["observacao"], "m": [meta(m) for m in s["metas"]]} for s in src["semanas"]],
