@@ -258,10 +258,31 @@ select:focus,.in:focus{outline:3px solid var(--blue);outline-offset:0}
 .login .msg.err{background:#fff;color:#b91c1c}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .wait{max-width:440px;margin:22vh auto 0;text-align:center;color:var(--fg2);font-weight:600}
+.ak-bar{height:10px;background:var(--soft2);border-radius:99px;overflow:hidden;margin:6px 0 18px}.ak-bar i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .3s}
+.ak-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--fg2);font-size:14px;font-weight:600}
+.ak-card{border:1px solid var(--line);border-radius:26px;padding:26px 24px;min-height:240px;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 28px rgba(17,24,39,.06)}
+.ak-meta{display:flex;gap:8px;flex-wrap:wrap}
+.ak-q{font-size:clamp(19px,3.4vw,25px);font-weight:600;line-height:1.4;letter-spacing:-.01em}
+.ak-a{font-size:clamp(17px,3vw,21px);line-height:1.45;padding-top:16px;border-top:1px dashed var(--soft2)}
+.ak-x{font-size:14px;color:var(--fg2)}
+.blank{display:inline-block;min-width:64px;text-align:center;border-bottom:3px solid var(--blue);color:var(--blue);font-weight:800;margin:0 3px}
+.ak-a mark,.ak-q mark{background:var(--good-t);color:var(--good);padding:1px 6px;border-radius:8px;font-weight:700}
+.ak-btns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.ak-btns.two{grid-template-columns:repeat(2,minmax(0,1fr))}.ak-btns.one{grid-template-columns:minmax(0,1fr)}
+.gbtn{padding:14px 8px;border-radius:18px;font-weight:800;font-size:15px;color:#fff;display:flex;flex-direction:column;align-items:center;gap:2px}
+.gbtn small{font-weight:600;font-size:12px;opacity:.92}
+.g1{background:var(--red)}.g2{background:var(--orange)}.g3{background:var(--green)}.g4{background:var(--blue)}.g0{background:var(--fg)}
+.modes{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.filt label{font-size:12px;font-weight:700;color:var(--fg3);display:block;margin-bottom:4px}
+textarea.in{display:block;width:100%;min-height:150px;resize:vertical;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;padding:12px 14px;border:1px solid var(--soft2);border-radius:16px;background:var(--bg);color:var(--fg)}
+textarea.in:focus{outline:3px solid var(--blue)}
+.grpimp{padding:12px 2px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:6px 16px;align-items:center}
+details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
 @media (max-width:1000px){.cols{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:820px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.mats{grid-template-columns:minmax(0,1fr)}.stats{width:100%}.st{flex:1;min-width:0}.ir{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2,.mats{grid-template-columns:minmax(0,1fr)}.stats{width:100%}.st{flex:1;min-width:0}.ir,.grpimp,.filt{grid-template-columns:minmax(0,1fr)}.filt{grid-template-columns:repeat(2,minmax(0,1fr))}.ak-btns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-height:480px) and (min-width:560px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}.kpi{min-height:130px}.ov{align-items:center}}
 @media (max-width:560px){.sw .note{display:none}.hb-r{grid-template-columns:100px minmax(0,1fr) auto}.pr{grid-template-columns:40px minmax(0,1fr) auto}.pr .pg{grid-column:1/-1;grid-row:2}.heat{grid-template-columns:34px repeat(var(--n),minmax(0,1fr))}.heat .y span{display:none}.cell{font-size:0;height:22px}.kpi{min-height:140px;padding:14px}.st b{font-size:28px}.ir .sels{grid-template-columns:minmax(0,1fr)}}
 @media (min-width:561px){.heat .y .sh{display:none}}
@@ -333,7 +354,9 @@ const getM=id=>{if(BY[id])return BY[id];if(id.endsWith("~RG")){const n=parseInt(
 let demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
 let col=null, sync="local", demoChosen=null, A=null, RL=[], WM=[], IM={by:{},rows:[]};
 let imp={name:"",rows:[],err:"",msg:"",date:""};
-const fb={on:false,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
+let CARDS={},REVD={};
+const ak={view:"home",mat:"",mid:"",bar:"",tipo:"",modo:"hoje",queue:[],i:0,rev:false,pick:"",ses:{n:0,ok:0,er:0},paste:"",name:"",groups:[],cards:[],errs:[],err:"",msg:"",ask:"",copied:false};
+const fb={on:false,pReady:false,cReady:false,bkDone:false,cunsub:null,runsub:null,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
 const P=()=>demo?DEMO:real;
 const today=()=>{if(demo)return pd(DEMO_TODAY);const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
 const weekOf=s=>{const t=pd(s);for(let i=0;i<WK.length;i++){if(t>=pd(WK[i].i)&&t<=pd(WK[i].f))return i}return t<START?0:lastWk};
@@ -346,7 +369,7 @@ const itemsOf=m=>{const o=ownItems(m),x=IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.
 
 /* ---------- armazenamento ---------- */
 const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1"}
+function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1";try{CARDS=JSON.parse(LS.get("painel-cartoes")||"{}")||{}}catch(e){CARDS={}}try{REVD=JSON.parse(LS.get("painel-revd")||"{}")||{}}catch(e){REVD={}}}
 function persistLocal(){LS.set("painel-progresso",JSON.stringify(real))}
 function autoDemo(){demo=fb.on?false:(demoChosen===null?Object.keys(real).length===0:demoChosen)}
 async function initDb(){
@@ -390,6 +413,8 @@ function initFirebase(){
     }
     fb.auth.onAuthStateChanged(u=>{
       if(fb.unsub){fb.unsub();fb.unsub=null}
+      if(fb.cunsub){fb.cunsub();fb.cunsub=null}
+      if(fb.runsub){fb.runsub();fb.runsub=null}
       fb.user=u||null;fb.ready=true;
       if(u){
         fb.col=fb.fs.collection("usuarios").doc(u.uid).collection("progresso");
@@ -398,10 +423,15 @@ function initFirebase(){
           const m={};snap.forEach(d=>{m[d.id]=d.data()});
           if(first&&snap.empty&&Object.keys(real).length){Object.entries(real).forEach(([id,v])=>fb.col.doc(id).set(v).catch(()=>{}))}
           else real=m;
-          if(first){first=false;sel=curWeek();autoBackup()}
+          if(first){first=false;sel=curWeek();fb.pReady=true;maybeBackup()}
           persistLocal();autoDemo();sync="firebase";render();
         },err=>{sync="erro";fb.err="Não consegui sincronizar: "+(err.code||err.message);render()});
-      }else{fb.col=null;real={};persistLocal()}
+        const ub=fb.fs.collection("usuarios").doc(u.uid);
+        fb.ccol=ub.collection("cartoes");fb.rcol=ub.collection("revlog");
+        let cf=true;
+        fb.cunsub=fb.ccol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});CARDS=m;if(cf){cf=false;fb.cReady=true;maybeBackup()}render()},()=>{fb.cReady=true;maybeBackup()});
+        fb.runsub=fb.rcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});REVD=m;render()},()=>{});
+      }else{fb.col=null;real={};CARDS={};REVD={};persistLocal()}
       render();
     });
     return true;
@@ -409,14 +439,16 @@ function initFirebase(){
 }
 /* backup automático: um instantâneo por dia, guardado por 30 dias, restaurável na aba Questões */
 const bkBase=()=>fb.fs.collection("usuarios").doc(fb.user.uid);
+const maybeBackup=()=>{if(fb.pReady&&fb.cReady&&!fb.bkDone){fb.bkDone=true;autoBackup()}};
 async function autoBackup(){
   if(!fb.on||!fb.user)return;
   try{
     const base=bkBase(),meta=base.collection("meta").doc("backups"),m=await meta.get();
     let dias=(m.exists&&m.data().dias)||[];fb.bkList=dias.slice();
-    const day=ymd(new Date()),n=Object.keys(real).length,payload=JSON.stringify(real);
-    if(n&&payload.length<900000&&!dias.includes(day)){
-      await base.collection("backups").doc(day).set({dia:day,n,docs:payload});
+    const day=ymd(new Date()),n=Object.keys(real).length,payload=JSON.stringify(real),cj=JSON.stringify(CARDS),nc=Object.keys(CARDS).length;
+    if((n||nc)&&payload.length<900000&&!dias.includes(day)){
+      const bd={dia:day,n,docs:payload};if(nc&&payload.length+cj.length<900000){bd.cartoes=cj;bd.nc=nc}
+      await base.collection("backups").doc(day).set(bd);
       dias=dias.concat(day).sort();
       const keep=dias.slice(-30),drop=dias.slice(0,-30);
       await meta.set({dias:keep});
@@ -431,7 +463,9 @@ async function restoreAuto(day){
     const base=bkBase(),snap=await base.collection("backups").doc(day).get();
     if(!snap.exists)throw new Error("x");
     const docs=JSON.parse(snap.data().docs),col_=fb.col;
-    await base.collection("backups").doc("antes-da-restauracao").set({dia:ymd(new Date()),n:Object.keys(real).length,docs:JSON.stringify(real)});
+    const bd0=snap.data(),cartoes0=bd0.cartoes?JSON.parse(bd0.cartoes):null;
+    await base.collection("backups").doc("antes-da-restauracao").set({dia:ymd(new Date()),n:Object.keys(real).length,docs:JSON.stringify(real),...(Object.keys(CARDS).length&&JSON.stringify(real).length+JSON.stringify(CARDS).length<900000?{cartoes:JSON.stringify(CARDS)}:{})});
+    if(cartoes0)cardsWrite([...Object.keys(CARDS).filter(id=>!(id in cartoes0)).map(id=>[id,null]),...Object.entries(cartoes0)]);
     Object.keys(real).filter(id=>!(id in docs)).forEach(id=>col_.doc(id).delete().catch(()=>{}));
     Object.entries(docs).forEach(([id,d])=>col_.doc(id).set(d).catch(()=>{}));
     real=docs;persistLocal();fb.bkAsk="";fb.bkMsg=`Restaurei o backup de ${fmtDay(day)} (${Object.keys(docs).length} registros). O estado de antes ficou guardado como "antes da restauração".`;
@@ -622,7 +656,7 @@ async function saveFile(blob,name){
   if(!done){const u=URL.createObjectURL(blob),an=document.createElement("a");an.href=u;an.download=name;document.body.appendChild(an);an.click();an.remove();setTimeout(()=>URL.revokeObjectURL(u),2000)}
 }
 function exportBackup(){
-  const blob=new Blob([JSON.stringify({painel:"metas",versao:1,gerado:ymd(new Date()),docs:real})],{type:"application/json"});
+  const blob=new Blob([JSON.stringify({painel:"metas",versao:2,gerado:ymd(new Date()),docs:real,cartoes:CARDS,revd:REVD})],{type:"application/json"});
   saveFile(blob,"backup-painel-"+ymd(new Date())+".json");
 }
 function restoreBackup(file){
@@ -633,9 +667,11 @@ function restoreBackup(file){
       if(!docs||typeof docs!=="object"||j.painel!=="metas")throw new Error("x");
       const ids=Object.keys(docs);
       ids.forEach(id=>{real[id]=docs[id]});persistLocal();
+      if(j.cartoes&&typeof j.cartoes==="object")cardsWrite(Object.entries(j.cartoes));
+      if(j.revd&&typeof j.revd==="object")Object.entries(j.revd).forEach(([d,o])=>revdWrite(d,o));
       const c=fb.on?fb.col:col;
       if(c)ids.forEach(id=>c.doc(id).set(docs[id]).catch(()=>{}));
-      imp.err="";imp.msg=`Restaurei ${ids.length} registros do backup.`;autoDemo();
+      imp.err="";imp.msg=`Restaurei ${ids.length} registros${j.cartoes?` e ${Object.keys(j.cartoes).length} cartões`:""} do backup.`;autoDemo();
     }catch(e){imp.msg="";imp.err="Esse arquivo não parece um backup deste painel."}
     render();
   };
@@ -930,8 +966,269 @@ function impHtml(){
 }
 
 /* ---------- ankis ---------- */
+const AKINSTR=[
+"Quando eu pedir um baralho de estudo, responda SOMENTE com um bloco de codigo de texto simples, neste formato:",
+"",
+"# Matéria: Constitucional",
+"# Assunto: Poder Legislativo na CF e estatuto dos parlamentares",
+"# Baralho: CF - Poder Legislativo",
+"P | Quantos senadores cada estado elege? | Três senadores, cada um com dois suplentes. | CF art. 46",
+"L | O Senado é composto por {{três}} senadores por estado. | | CF art. 46",
+"CE | A Câmara dos Deputados é composta por representantes eleitos pelo sistema majoritário. | E | É o sistema proporcional (CF art. 45).",
+"",
+"Regras:",
+"1. As linhas que começam com # valem para todos os cartões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital.",
+"2. Uma linha por cartão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
+"3. Tipos: P = pergunta e resposta; L = lacuna, com a parte escondida entre {{ e }}; CE = afirmação para marcar Certo ou Errado como na prova (resposta C ou E, e a explicação no último campo).",
+"4. Último campo é a fonte ou a explicação (artigo, lei, justificativa). Pode ficar vazio.",
+"5. Cartões curtos, um conceito por cartão. Misture os três tipos, com cerca de metade em CE, no estilo Cebraspe (afirmações com pegadinhas comuns).",
+"6. Se eu enviar um texto, baseie os cartões só nele e não invente artigos de lei nem números. Se não souber, deixe o campo da fonte vazio.",
+"7. De 20 a 40 cartões por pedido, a não ser que eu peça outra quantidade."
+].join("\n");
+const hstr=t=>{let h=5381;for(let i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return (h>>>0).toString(36)};
+const cardId=(k,f)=>{const n=norm(f);return "c"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
+const T0=()=>ymd(today());
+const AKNOV=()=>+(LS.get("painel-novos")||20)||20;
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const ivTxt=d=>d<=0?"hoje":d===1?"1 dia":d<30?d+" dias":d<365?Math.round(d/30)+" meses":"1 ano";
+
+function cardsWrite(list){
+  list.forEach(([id,d])=>{if(d)CARDS[id]=d;else delete CARDS[id]});
+  if(fb.on&&fb.ccol){
+    const cs=list.slice(),run=()=>{const part=cs.splice(0,400);if(!part.length)return;const b=fb.fs.batch();part.forEach(([id,d])=>{const r=fb.ccol.doc(id);if(d)b.set(r,d);else b.delete(r)});b.commit().then(run).catch(()=>{sync="erro";render()})};
+    run();
+  }else LS.set("painel-cartoes",JSON.stringify(CARDS));
+}
+function revdWrite(day,obj){
+  REVD[day]=obj;
+  if(fb.on&&fb.rcol)fb.rcol.doc(day).set(obj).catch(()=>{});
+  else LS.set("painel-revd",JSON.stringify(REVD));
+}
+
+/* leitura do baralho (texto colado ou planilha) */
+function mkCard(mat,ass,bar,tipoRaw,f,v,x,ref){
+  const t0=String(tipoRaw||"").toUpperCase().replace(/[^A-Z]/g,"");
+  const t=t0==="P"||t0==="PERGUNTA"?"P":t0==="L"||t0==="LACUNA"?"L":(t0==="CE"||t0==="C"||t0==="VF"||t0==="CERTOERRADO")?"CE":"";
+  if(!t)return {err:`${ref}: tipo "${String(tipoRaw||"").slice(0,12)}" não reconhecido. Use P, L ou CE.`};
+  f=String(f||"").trim();v=String(v||"").trim();x=String(x||"").trim();
+  if(!f)return {err:`${ref}: falta o texto do cartão.`};
+  if(t==="P"&&!v)return {err:`${ref}: falta a resposta.`};
+  if(t==="L"&&!/\{\{[^}]+\}\}/.test(f))return {err:`${ref}: a lacuna precisa estar entre {{ e }}.`};
+  if(t==="CE"){const a=norm(v).charAt(0);if(a==="c")v="C";else if(a==="e")v="E";else return {err:`${ref}: a resposta de Certo ou Errado deve ser C ou E.`}}
+  return {card:{mat,ass,bar,t,f,v,x}};
+}
+function parseDeckText(text){
+  const cards=[],errs=[];let mat="",ass="",bar="";
+  String(text).split(/\r?\n/).forEach((raw,i)=>{
+    const ln=raw.trim();if(!ln||/^```/.test(ln))return;
+    const m=/^#\s*(mat[eé]ria|assunto|baralho)\s*:\s*(.*)$/i.exec(ln);
+    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else bar=m[2].trim();return}
+    if(ln.charAt(0)==="#")return;
+    const p=ln.split("|").map(z=>z.trim());
+    const r=mkCard(mat,ass,bar,p[0],p[1],p[2],p[3],"Linha "+(i+1));
+    if(r.err)errs.push(r.err);else cards.push(r.card);
+  });
+  return {cards,errs};
+}
+const AKH={mat:["materia","disciplina"],ass:["assunto","topico","tema"],bar:["baralho","deck"],t:["tipo"],f:["frente","pergunta","front"],v:["verso","resposta","back"],x:["explicacao","fonte","extra","comentario"]};
+function parseDeckSheet(aoa){
+  let hi=-1,cm={};
+  for(let r=0;r<Math.min(aoa.length,10)&&hi<0;r++){const m={};aoa[r].forEach((h,ci)=>{const n=norm(h);for(const k in AKH){if(m[k]==null&&AKH[k].includes(n))m[k]=ci}});if(m.f!=null&&m.t!=null){hi=r;cm=m}}
+  if(hi<0)return {cards:[],errs:["Não encontrei os cabeçalhos. A planilha precisa ter as colunas Tipo e Frente (e, se quiser, Matéria, Assunto, Baralho, Verso e Explicação)."]};
+  const cards=[],errs=[];
+  for(let r=hi+1;r<aoa.length;r++){const row=aoa[r],g=k=>cm[k]!=null?row[cm[k]]:"";if(!String(g("f")).trim()&&!String(g("t")).trim())continue;
+    const x=mkCard(String(g("mat")||"").trim(),String(g("ass")||"").trim(),String(g("bar")||"").trim(),g("t"),g("f"),g("v"),g("x"),"Linha "+(r+1));
+    if(x.err)errs.push(x.err);else cards.push(x.card)}
+  return {cards,errs};
+}
+function akPrepare(res,name){
+  ak.errs=res.errs.slice(0,12);ak.err="";ak.msg="";ak.name=name;
+  const gm={},groups=[];
+  res.cards.forEach(c=>{const key=norm(c.mat)+"|"+norm(c.ass)+"|"+norm(c.bar);let g=gm[key];if(!g){const k=subjectMatch(c.mat),rk=k?metaRank(k,c.ass):[];g=gm[key]={mat:c.mat,ass:c.ass,bar:c.bar,k,mid:rk[0]&&rk[0].score>=.4?rk[0].m.id:"",n:0};groups.push(g)}g.n++;c.g=groups.indexOf(g)});
+  ak.groups=groups;ak.cards=res.cards;
+  if(!res.cards.length&&!ak.errs.length)ak.err="Não encontrei nenhum cartão no texto.";
+}
+function akReadText(){const ta=$("#ak-paste");ak.paste=ta?ta.value:ak.paste;akPrepare(parseDeckText(ak.paste),"texto colado");render()}
+function akReadFile(file){
+  const isCsv=/\.(csv|txt|tsv)$/i.test(file.name),rd=new FileReader();
+  rd.onload=ev=>{
+    try{
+      if(/\.(txt)$/i.test(file.name)){akPrepare(parseDeckText(String(ev.target.result)),file.name)}
+      else{
+        if(!window.XLSX)throw new Error("Não consegui carregar o leitor de planilhas. Recarregue a página.");
+        const wb=isCsv?XLSX.read(String(ev.target.result).replace(/^﻿/,""),{type:"string"}):XLSX.read(new Uint8Array(ev.target.result),{type:"array"});
+        akPrepare(parseDeckSheet(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:true,defval:""})),file.name);
+      }
+    }catch(er){ak.groups=[];ak.cards=[];ak.errs=[];ak.err=er.message||"Não consegui ler o arquivo."}
+    render();
+  };
+  if(isCsv||/\.txt$/i.test(file.name))rd.readAsText(file,"UTF-8");else rd.readAsArrayBuffer(file);
+}
+function akImport(){
+  const list=[],seen=new Set();let skipped=0,dup=0;
+  ak.cards.forEach(c=>{
+    const g=ak.groups[c.g];if(!g||!g.k){skipped++;return}
+    const id=cardId(g.k,c.f);if(CARDS[id]||seen.has(id)){dup++;return}seen.add(id);
+    const nm=g.bar||g.ass||SHORT[g.k];
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",b:nm,t:c.t,f:c.f,v:c.v,x:c.x,cr:T0(),reps:0,ivl:0,ez:2.5,lap:0,ok:0,er:0,due:"",ult:"",last:0}]);
+  });
+  if(list.length)cardsWrite(list);
+  ak.msg=`Importei ${list.length} ${list.length===1?"cartão":"cartões"}.${dup?` ${dup} já existiam e foram ignorados.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
+  ak.groups=[];ak.cards=[];ak.errs=[];ak.paste="";ak.err="";render();
+}
+async function akCopy(){
+  try{await navigator.clipboard.writeText(AKINSTR);ak.copied=true}catch(e){const ta=$("#ak-instr");if(ta){ta.focus();ta.select()}ak.copied=false}
+  render();
+}
+
+/* repetição espaçada (tipo Anki): Errei, Difícil, Bom, Fácil */
+function srsApply(c,g){
+  const T=today(),maxI=Math.max(1,dday(EXAM,T)-1);
+  if(g===1){c.lap=(c.lap||0)+1;c.er=(c.er||0)+1;c.ez=Math.max(1.3,(c.ez||2.5)-.2);c.ivl=0;c.reps=Math.max(c.reps||0,1);c.due=ymd(T)}
+  else{
+    c.ok=(c.ok||0)+1;
+    if(!c.ivl){c.ivl=g===4?4:1}
+    else if(g===2){c.ivl=Math.max(c.ivl+1,Math.round(c.ivl*1.2));c.ez=Math.max(1.3,c.ez-.15)}
+    else if(g===3){c.ivl=c.reps<=1?Math.max(3,c.ivl+1):Math.max(c.ivl+1,Math.round(c.ivl*c.ez))}
+    else{c.ivl=Math.max(c.ivl+1,Math.round(c.ivl*c.ez*1.3));c.ez=c.ez+.15}
+    c.ivl=Math.min(c.ivl,maxI);c.reps=(c.reps||0)+1;c.due=ymd(addDays(T,c.ivl));
+  }
+  c.ult=ymd(T);c.last=g;return c;
+}
+const srsPreview=(c,g)=>g===1?"hoje":ivTxt(srsApply({...c},g).ivl);
+
+function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter(c=>(!ak.mat||c.k===ak.mat)&&(!ak.mid||c.mid===ak.mid)&&(!ak.bar||c.b===ak.bar)&&(!ak.tipo||c.t===ak.tipo))}
+function akBuild(m){
+  const T=T0(),p=akPool();
+  if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
+  if(m==="erros")return p.filter(c=>c.ult&&(c.lap>0||c.last===1)).sort((a,b)=>b.lap-a.lap).slice(0,40);
+  if(m==="acertos")return shuf(p.filter(c=>c.ult&&c.last>=3)).slice(0,30);
+  if(m==="dificeis")return p.filter(c=>c.ult&&(c.ez<2.2||c.lap>=2)).sort((a,b)=>a.ez-b.ez).slice(0,40);
+  if(m==="novos")return shuf(p.filter(c=>!c.ult)).slice(0,AKNOV());
+  if(m==="aleatorio")return shuf(p).slice(0,25);
+  return shuf(p).slice(0,100);
+}
+function akStart(){
+  const q=akBuild(ak.modo);
+  if(!q.length){ak.err="Nenhum cartão encontrado com esses filtros. Troque o modo ou os filtros.";render();return}
+  ak.err="";ak.msg="";ak.queue=q.map(c=>c.id);ak.i=0;ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
+}
+function akAnswer(g){
+  const id=ak.queue[ak.i];if(!CARDS[id])return;
+  const c={...CARDS[id]},isNew=!c.ult;
+  srsApply(c,g);cardsWrite([[id,c]]);
+  const T=T0(),r=REVD[T]?JSON.parse(JSON.stringify(REVD[T])):{n:0,ok:0,er:0,nv:0,k:{}};
+  r.n++;if(g>1)r.ok++;else r.er++;if(isNew)r.nv=(r.nv||0)+1;
+  r.k=r.k||{};const kx=r.k[c.k]||[0,0];kx[0]++;if(g>1)kx[1]++;r.k[c.k]=kx;revdWrite(T,r);
+  ak.ses.n++;if(g>1)ak.ses.ok++;else ak.ses.er++;
+  if(g===1)ak.queue.splice(Math.min(ak.queue.length,ak.i+4),0,id);
+  ak.i++;ak.rev=false;ak.pick="";render();window.scrollTo(0,0);
+}
+const lacF=t=>esc(t).replace(/\{\{(?:c\d+::)?([^}]*?)(?:::[^}]*)?\}\}/g,'<span class="blank">[…]</span>');
+const lacV=t=>esc(t).replace(/\{\{(?:c\d+::)?([^}]*?)(?:::[^}]*)?\}\}/g,'<mark>$1</mark>');
+
+function akStats(){
+  const T=T0(),o={n:0,due:0,nov:0,ok:0,er:0,dueDay:Array(14).fill(0),est:{novo:0,apr:0,jov:0,mad:0},byK:{},byA:{},byB:{}};
+  Object.entries(CARDS).forEach(([id,c])=>{
+    o.n++;const isNew=!c.ult;
+    const kk=o.byK[c.k]||(o.byK[c.k]={n:0,ok:0,er:0,lap:0});kk.n++;kk.ok+=c.ok||0;kk.er+=c.er||0;kk.lap+=c.lap||0;
+    const ak_=c.mid||("t:"+norm(c.as||c.b||""));const aa=o.byA[ak_]||(o.byA[ak_]={mid:c.mid,k:c.k,nome:c.mid&&BY[c.mid]?BY[c.mid].a:(c.as||c.b||"Sem assunto"),n:0,ok:0,er:0,lap:0});aa.n++;aa.ok+=c.ok||0;aa.er+=c.er||0;aa.lap+=c.lap||0;
+    const bb=o.byB[c.b]||(o.byB[c.b]={n:0,due:0,k:c.k});bb.n++;
+    o.ok+=c.ok||0;o.er+=c.er||0;
+    if(isNew){o.nov++;o.est.novo++;return}
+    if(c.due<=T){o.due++;bb.due++}
+    const dd=Math.max(0,dday(pd(c.due),pd(T)));if(dd<14)o.dueDay[dd]++;
+    if(c.ivl>=21)o.est.mad++;else if(c.ivl>=7)o.est.jov++;else o.est.apr++;
+  });
+  return o;
+}
+let AKS=null;
+function akSession(){
+  const id=ak.queue[ak.i],tot=ak.queue.length;
+  if(id==null||!CARDS[id]){
+    const s=ak.ses,p=s.n?Math.round(s.ok/s.n*100):0;
+    return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.n} ${s.n===1?"resposta":"respostas"}, ${p}% sem errar</div><p class="muted" style="margin:0">${s.ok} acertos · ${s.er} erros. Os cartões que você errou voltam logo e entram no modo "Só os que errei".</p></div><div class="ak-btns one"><button class="gbtn g0" data-act="ak-quit">Voltar aos Ankis</button></div></section>`;
+  }
+  const c=CARDS[id],pct=Math.round(ak.i/tot*100),ce=c.t==="CE",answered=ak.rev;
+  const front=c.t==="L"?lacF(c.f):esc(c.f);
+  const ass=c.mid&&BY[c.mid]?BY[c.mid].a:(c.as||"");
+  let back="",btns="";
+  if(answered){
+    back=c.t==="P"?`<div class="ak-a">${esc(c.v)}</div>`:c.t==="L"?`<div class="ak-a">${lacV(c.f)}${c.v?`<div class="ak-x" style="margin-top:8px">${esc(c.v)}</div>`:""}</div>`:`<div class="ak-a"><b>Gabarito: ${c.v==="C"?"Certo":"Errado"}.</b> ${ak.pick===c.v?`Você acertou.`:`Você marcou ${ak.pick==="C"?"Certo":"Errado"}.`}</div>`;
+    if(c.x)back+=`<div class="ak-x">${esc(c.x)}</div>`;
+    const wrongCE=ce&&ak.pick!==c.v;
+    btns=wrongCE?`<div class="ak-btns one"><button class="gbtn g1" data-act="ak-grade" data-g="1">Entendi, continuar<small>volta hoje</small></button></div>`
+      :`<div class="ak-btns">${[[1,"Errei"],[2,"Difícil"],[3,"Bom"],[4,"Fácil"]].map(([g,l])=>`<button class="gbtn g${g}" data-act="ak-grade" data-g="${g}">${l}<small>${srsPreview(c,g)}</small></button>`).join("")}</div>`;
+  }else{
+    btns=ce?`<div class="ak-btns two"><button class="gbtn g3" data-act="ak-pick" data-v="C">Certo</button><button class="gbtn g1" data-act="ak-pick" data-v="E">Errado</button></div>`:`<div class="ak-btns one"><button class="gbtn g0" data-act="ak-show">Mostrar resposta</button></div>`;
+  }
+  return `<section class="sec" style="margin-top:20px">
+    <div class="ak-top"><button class="chip" data-act="ak-quit">Sair da sessão</button><span>${Math.min(ak.i+1,tot)} de ${tot}</span></div>
+    <div class="ak-bar"><i style="width:${pct}%"></i></div>
+    <div class="ak-card"><div class="ak-meta">${c.k&&SUBJ.includes(c.k)?`<span class="pill"><span class="tag" style="--c:var(--m-${c.k})"><i></i>${SHORT[c.k]}</span></span>`:""}${ass?`<span class="pill">${esc(ass.length>60?ass.slice(0,58)+"…":ass)}</span>`:""}<span class="pill">${c.t==="CE"?"Certo ou Errado":c.t==="L"?"Lacuna":"Pergunta"}</span></div>
+      <div class="ak-q">${front}</div>${back}</div>${btns}</section>`;
+}
 function ankiHtml(){
-  return `<section class="sec" style="margin-top:20px"><div class="soon"><h2>Ankis</h2><p>Esta aba está reservada. Quando você descrever o projeto, montamos aqui o controle dos baralhos e dos cartões de revisão.</p></div></section>`;
+  if(ak.view==="session")return akSession();
+  const S=AKS,hasC=S.n>0,T=T0();
+  const nvHoje=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0)),paraHoje=S.due+Math.min(S.nov,nvHoje);
+  const ret=S.ok+S.er?S.ok/(S.ok+S.er):null;
+  const pool=akPool(),cnt=akBuild(ak.modo).length;
+  const mats=SUBJ.filter(k=>S.byK[k]);
+  const mids=[...new Map(Object.values(CARDS).filter(c=>(!ak.mat||c.k===ak.mat)&&c.mid&&BY[c.mid]).map(c=>[c.mid,BY[c.mid].a])).entries()];
+  const bars=Object.keys(S.byB).sort();
+  const MODOS=[["hoje","Para hoje"],["erros","Só os que errei"],["acertos","Só os que acertei"],["dificeis","Mais difíceis"],["novos","Novos"],["aleatorio","Aleatório"],["tudo","Tudo do filtro"]];
+  const retK=SUBJ.filter(k=>S.byK[k]&&S.byK[k].ok+S.byK[k].er>0).map(k=>{const x=S.byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.n+" cartões",tip:`${SHORT[k]}: ${x.ok} acertos e ${x.er} erros em cartões`,r}}).sort((a,b)=>a.r-b.r);
+  const weak=Object.values(S.byA).filter(a=>a.ok+a.er>=3).map(a=>({...a,tx:a.er/(a.ok+a.er)})).sort((a,b)=>b.tx-a.tx||b.lap-a.lap).slice(0,8);
+  const cmp=SUBJ.filter(k=>S.byK[k]).map(k=>({k,q:rate(A.mat[k]),r:(S.byK[k].ok+S.byK[k].er)?S.byK[k].ok/(S.byK[k].ok+S.byK[k].er):null}));
+  const sub=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(s=>`<option value="${s}" ${s===k?"selected":""}>${SHORT[s]}</option>`).join("");
+  const preview=ak.groups.length?`
+    <div class="sec-h" style="margin-top:22px"><h3>Conferir antes de importar</h3><span class="muted" style="font-size:13px">${ak.cards.length} cartões em ${ak.groups.length} ${ak.groups.length===1?"grupo":"grupos"}</span></div>
+    <p class="lead">Confira a matéria e o assunto de cada grupo. Cartões de grupos sem matéria não são importados. Cartões repetidos são ignorados.</p>
+    <div style="border-top:2px solid var(--fg)">${ak.groups.map((g,i)=>`<div class="grpimp"><div class="a"><b style="display:block;font-size:14px">${esc(g.mat||"(sem matéria)")} · ${esc(g.ass||"(sem assunto)")}</b><span class="muted" style="font-size:13px">${g.n} cartões${g.bar?` · baralho ${esc(g.bar)}`:""}</span></div>
+      <div class="sels" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px"><select data-akg="k" data-i="${i}" aria-label="Matéria do grupo ${i+1}">${sub(g.k)}</select><select data-akg="mid" data-i="${i}" ${g.k?"":"disabled"} aria-label="Assunto do grupo ${i+1}">${g.k?`<option value="">Sem assunto (conta só na matéria)</option>`+metaRank(g.k,g.ass).map(x=>`<option value="${x.m.id}" ${x.m.id===g.mid?"selected":""}>S${x.m.wi+1} · ${esc(x.m.a.length>60?x.m.a.slice(0,58)+"…":x.m.a)}</option>`).join(""):`<option value="">Escolha a matéria primeiro</option>`}</select></div></div>`).join("")}</div>
+    <div class="bar-act"><button class="btn" data-act="ak-import" ${ak.groups.some(g=>g.k)?"":"disabled"}>Importar ${ak.cards.filter(c=>ak.groups[c.g]&&ak.groups[c.g].k).length} cartões</button><button class="btn alt" data-act="ak-cancel">Cancelar</button></div>`:"";
+  return `
+  <section class="sec" style="margin-top:20px"><h2>Ankis</h2>
+    <p class="lead">Cartões para fixar o que você estudou. Peça o baralho ao Claude na conversa, cole o texto aqui (ou envie o arquivo) e estude com repetição espaçada.</p>
+    ${ak.msg?`<div class="msg">${esc(ak.msg)}</div>`:""}${ak.err?`<div class="msg err">${esc(ak.err)}</div>`:""}
+    ${hasC?`<div class="kpis" style="margin-top:16px">
+      <div class="kpi blue"><div class="lab">Para hoje</div><div class="num">${paraHoje}</div><div class="sub">${S.due} vencidos · ${Math.min(S.nov,nvHoje)} novos</div></div>
+      <div class="kpi teal"><div class="lab">Cartões</div><div class="num">${num(S.n)}</div><div class="sub">${S.nov} ainda novos</div></div>
+      <div class="kpi green"><div class="lab">Lembrança</div><div class="num">${pc(ret)}</div><div class="sub">${S.ok+S.er?`${num(S.ok)} lembrados em ${num(S.ok+S.er)} respostas`:"Responda alguns cartões"}</div></div>
+      <div class="kpi purple"><div class="lab">Dominados</div><div class="num">${S.est.mad}</div><div class="sub">intervalo de 21 dias ou mais</div></div></div>
+    <div class="sec-h" style="margin-top:30px"><h3>Estudar</h3><span class="muted" style="font-size:13px">${pool.length} cartões neste filtro</span></div>
+    <div class="modes">${MODOS.map(([m,l])=>`<button class="chip" data-act="ak-modo" data-m="${m}" aria-pressed="${ak.modo===m}">${l}</button>`).join("")}</div>
+    <div class="filt">
+      <div><label for="ak-f-mat">Matéria</label><select id="ak-f-mat" data-ak="mat"><option value="">Todas</option>${mats.map(k=>`<option value="${k}" ${ak.mat===k?"selected":""}>${SHORT[k]}</option>`).join("")}</select></div>
+      <div><label for="ak-f-mid">Assunto</label><select id="ak-f-mid" data-ak="mid"><option value="">Todos</option>${mids.map(([id,n])=>`<option value="${id}" ${ak.mid===id?"selected":""}>${esc(n.length>46?n.slice(0,44)+"…":n)}</option>`).join("")}</select></div>
+      <div><label for="ak-f-bar">Baralho</label><select id="ak-f-bar" data-ak="bar"><option value="">Todos</option>${bars.map(b=>`<option value="${esc(b)}" ${ak.bar===b?"selected":""}>${esc(b.length>40?b.slice(0,38)+"…":b)}</option>`).join("")}</select></div>
+      <div><label for="ak-f-tipo">Tipo</label><select id="ak-f-tipo" data-ak="tipo"><option value="">Todos</option><option value="P" ${ak.tipo==="P"?"selected":""}>Pergunta</option><option value="L" ${ak.tipo==="L"?"selected":""}>Lacuna</option><option value="CE" ${ak.tipo==="CE"?"selected":""}>Certo ou Errado</option></select></div>
+    </div>
+    <div class="bar-act"><button class="btn" data-act="ak-start" ${cnt?"":"disabled"}>Começar${cnt?` (${cnt} ${cnt===1?"cartão":"cartões"})`:""}</button>
+      <label class="muted" style="font-size:13px;display:flex;gap:8px;align-items:center">Novos por dia <select id="ak-nov" data-ak="nov" style="width:auto">${[10,20,30,50].map(n=>`<option value="${n}" ${AKNOV()===n?"selected":""}>${n}</option>`).join("")}</select></label></div>
+    <div class="sec-h" style="margin-top:34px"><h3>Estatísticas de memória</h3></div>
+    <div class="grid2">
+      <div class="card"><div class="card-h"><div><h3>Cartões a vencer</h3><p>Próximos 14 dias, contando os atrasados no dia de hoje</p></div></div><div class="chart" data-kind="akDue"></div></div>
+      <div class="card"><div class="card-h"><div><h3>Respostas por dia</h3><p>Últimos 14 dias</p></div></div><div class="chart" data-kind="akDay"></div></div>
+      <div class="card"><div class="card-h"><div><h3>Lembrança por matéria</h3><p>Do que você menos lembra para o que mais lembra</p></div></div>${retK.length?barsHtml(retK):'<div class="empty">Aparece depois das primeiras respostas.</div>'}</div>
+      <div class="card"><div class="card-h"><div><h3>Estágio dos cartões</h3><p>Novos, aprendendo, jovens e dominados</p></div></div>${(()=>{const e=S.est,t=Math.max(1,S.n);return `<div class="stk"><i style="--c:var(--fg3);width:${e.novo/t*100}%" data-tip="Novos ${e.novo}"></i><i style="--c:var(--orange);width:${e.apr/t*100}%" data-tip="Aprendendo ${e.apr}"></i><i style="--c:var(--blue);width:${e.jov/t*100}%" data-tip="Jovens ${e.jov}"></i><i style="--c:var(--green);width:${e.mad/t*100}%" data-tip="Dominados ${e.mad}"></i></div><div class="legend"><span style="--c:var(--fg3)"><i></i>Novos ${e.novo}</span><span style="--c:var(--orange)"><i></i>Aprendendo ${e.apr}</span><span style="--c:var(--blue)"><i></i>Jovens ${e.jov}</span><span style="--c:var(--green)"><i></i>Dominados ${e.mad}</span></div>`})()}</div>
+      <div class="card wide"><div class="card-h"><div><h3>Assuntos que você mais esquece</h3><p>Taxa de erro nos cartões, com ao menos 3 respostas</p></div></div>${weak.length?`<ul class="list">${weak.map(a=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(a.nome)}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${a.lap} ${a.lap===1?"esquecimento":"esquecimentos"} · ${a.n} cartões</span></div></div><div class="res"><span class="sc ${scCls(1-a.tx)}">${Math.round(a.tx*100)}% de erro</span></div>${a.mid?`<button class="chip" data-act="ak-weak" data-mid="${a.mid}">Estudar</button>`:""}</li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 respostas ou mais.</div>'}</div>
+      <div class="card wide"><div class="card-h"><div><h3>Questões e cartões, lado a lado</h3><p>Onde as duas medidas concordam e onde não</p></div></div><div class="hb">${cmp.map(x=>`<div class="hb-r" style="grid-template-columns:128px minmax(0,1fr) minmax(0,1fr)"><div class="hb-l" style="--c:var(--m-${x.k})"><i></i><span>${SHORT[x.k]}</span></div><div style="font-size:13px"><span class="muted">Questões </span><b>${pc(x.q)}</b></div><div style="font-size:13px"><span class="muted">Cartões </span><b>${pc(x.r)}</b></div></div>`).join("")}</div></div>
+    </div>
+    <div class="sec-h" style="margin-top:34px"><h3>Baralhos</h3></div>
+    <ul class="list" style="border-top:2px solid var(--fg)">${Object.entries(S.byB).sort().map(([b,x])=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(b)}</div><div class="s">${x.k&&SUBJ.includes(x.k)?`<span class="tag" style="--c:var(--m-${x.k})"><i></i>${SHORT[x.k]}</span>`:""}<span>${x.n} cartões · ${x.due} para hoje</span></div></div><button class="chip" data-act="ak-deck" data-b="${esc(b)}">Estudar</button>${ak.ask===b?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="ak-delok" data-b="${esc(b)}">Confirmar exclusão</button><button class="chip" data-act="ak-delno">Cancelar</button>`:`<button class="chip" data-act="ak-delask" data-b="${esc(b)}">Excluir</button>`}</li>`).join("")}</ul>`:`<div class="empty" style="margin-top:16px">Você ainda não tem cartões. Peça um baralho ao Claude, cole o texto aqui embaixo e importe.</div>`}
+    <div class="sec-h" style="margin-top:36px"><h3>Importar baralho</h3></div>
+    <label class="vh" for="ak-paste">Texto do baralho</label>
+    <textarea class="in" id="ak-paste" placeholder="Cole aqui o texto que o Claude gerou">${esc(ak.paste)}</textarea>
+    <div class="bar-act"><button class="btn" data-act="ak-read">Ler texto</button><label class="file-btn" style="background:var(--soft);color:var(--fg)">Ou enviar arquivo<input type="file" id="ak-file" accept=".txt,.csv,.xlsx,.xls"></label></div>
+    ${ak.errs.length?`<div class="msg err"><b>Algumas linhas foram ignoradas:</b><br>${ak.errs.map(esc).join("<br>")}</div>`:""}
+    ${preview}
+    <details class="how"><summary>Como pedir o baralho ao Claude</summary>
+      <p class="lead" style="margin-top:10px">Cole estas instruções uma vez no início da conversa, ou nas instruções de um Projeto do Claude. Depois é só pedir, por exemplo: "Faça um baralho de Poder Legislativo na CF". Ou: "Faça um baralho com este texto: …".</p>
+      <textarea class="in" id="ak-instr" readonly style="min-height:260px">${esc(AKINSTR)}</textarea>
+      <div class="bar-act"><button class="btn alt" data-act="ak-copy">${ak.copied?"Copiado":"Copiar instruções"}</button></div></details>
+  </section>`;
 }
 
 /* ---------- desempenho ---------- */
@@ -997,7 +1294,7 @@ function render(){
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
-  IM=importMap();A=agg();RL=reviewList();
+  IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
   const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,ankis:ankiHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
@@ -1067,6 +1364,14 @@ function drawCharts(){
       const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),v=A.day[key]||0;bars.push({l:d.getDate(),v,hi:i===0,t:`${fmtDay(key)}: ${v} questões`})}
       const m=Math.max(20,Math.ceil(Math.max(...bars.map(b=>b.v))/20)*20);
       cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Questões por dia"});
+    }else if(k==="akDue"&&AKS){
+      const bars=AKS.dueDay.map((v,i)=>{const d=addDays(T,i);return {l:d.getDate(),v,hi:i===0,t:`${fmtDay(d)}: ${v} cartões`}});
+      const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
+      cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Cartões a vencer"});
+    }else if(k==="akDay"){
+      const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),v=(REVD[key]||{}).n||0;bars.push({l:d.getDate(),v,hi:i===0,t:`${fmtDay(key)}: ${v} respostas`})}
+      const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
+      cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Respostas por dia"});
     }else if(k==="sims"){
       const acc=SIMS.map(m=>{const it=itemsOf(m),r=isDone(m)?rate(it):null;return r==null?null:r*100});
       const nl=SIMS.map(m=>{const it=itemsOf(m),r=isDone(m)?net(it):null;return r==null?null:r*100});
@@ -1173,12 +1478,28 @@ document.addEventListener("click",e=>{
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
+  if(a==="ak-modo"){ak.modo=t.dataset.m;ak.err="";render();return}
+  if(a==="ak-start"){akStart();return}
+  if(a==="ak-quit"){ak.view="home";render();window.scrollTo(0,0);return}
+  if(a==="ak-show"){ak.rev=true;render();return}
+  if(a==="ak-pick"){ak.pick=t.dataset.v;ak.rev=true;render();return}
+  if(a==="ak-grade"){akAnswer(+t.dataset.g);return}
+  if(a==="ak-read"){akReadText();return}
+  if(a==="ak-import"){akImport();return}
+  if(a==="ak-cancel"){ak.groups=[];ak.cards=[];ak.errs=[];ak.err="";ak.paste="";render();return}
+  if(a==="ak-copy"){akCopy();return}
+  if(a==="ak-deck"){ak.bar=t.dataset.b;ak.mat="";ak.mid="";ak.tipo="";ak.modo="hoje";akStart();return}
+  if(a==="ak-weak"){const m=BY[t.dataset.mid];ak.mid=t.dataset.mid;ak.mat=m?m.k:"";ak.bar="";ak.tipo="";ak.modo="tudo";akStart();return}
+  if(a==="ak-delask"){ak.ask=t.dataset.b;render();return}
+  if(a==="ak-delno"){ak.ask="";render();return}
+  if(a==="ak-delok"){const b=t.dataset.b;cardsWrite(Object.entries(CARDS).filter(([id,c])=>c.b===b).map(([id])=>[id,null]));ak.ask="";if(ak.bar===b)ak.bar="";ak.msg=`Excluí o baralho "${b}".`;render();return}
   if(a==="bkask"){fb.bkAsk=t.dataset.d;fb.bkMsg="";render();return}
   if(a==="bkno"){fb.bkAsk="";render();return}
   if(a==="bkgo"){restoreAuto(t.dataset.d);return}
   if(a==="backup"){exportBackup();return}
 });
 document.addEventListener("input",e=>{
+  if(e.target.id==="ak-paste"){ak.paste=e.target.value;return}
   const i=e.target.closest("[data-f]");if(!i)return;
   const k=i.dataset.f,v=i.value.replace(",",".");
   if(k==="nc")draft.nc=v===""?null:Math.max(0,parseFloat(v)||0);
@@ -1187,6 +1508,14 @@ document.addEventListener("input",e=>{
   liveUpd();
 });
 document.addEventListener("change",e=>{
+  const akf=e.target.closest("#ak-file");
+  if(akf&&akf.files&&akf.files[0]){ak.msg="";akReadFile(akf.files[0]);return}
+  const aks=e.target.closest("[data-ak]");
+  if(aks){const k=aks.dataset.ak;
+    if(k==="nov"){LS.set("painel-novos",aks.value);render();return}
+    ak[k]=aks.value;if(k==="mat")ak.mid="";ak.err="";render();return}
+  const akg=e.target.closest("[data-akg]");
+  if(akg){const g=ak.groups[+akg.dataset.i];if(g){if(akg.dataset.akg==="k"){g.k=akg.value;const rk=g.k?metaRank(g.k,g.ass):[];g.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else g.mid=akg.value;render()}return}
   const bk=e.target.closest("#bk-file");
   if(bk&&bk.files&&bk.files[0]){restoreBackup(bk.files[0]);return}
   const f=e.target.closest("#imp-file");

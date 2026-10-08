@@ -5,6 +5,10 @@
 - **Login:** e-mail e senha, só para quem foi cadastrado no console do Firebase. O cadastro aberto está desligado. A sessão fica salva no aparelho e o painel não pede a senha de novo.
 - **Primeiro acesso:** abra o e-mail "Reset your password" (ou "Redefinir senha") enviado pelo Firebase, crie a senha, toque em Continuar e entre no painel uma vez. Se perder o e-mail, na tela de entrada toque em "Primeiro acesso ou esqueci a senha".
 
+## Ankis
+
+A aba **Ankis** guarda os cartões de estudo (repetição espaçada, com filtros e estatísticas de memória). Para gerar baralhos com o Claude, veja `FORMATO-BARALHOS.md`. Os cartões entram nos backups abaixo.
+
 ## Backups dos dados
 
 1. **Backup do Google, automático:** recuperação a qualquer momento dos últimos 7 dias, um backup por dia (guardado 14 dias) e um por semana (guardado 14 semanas). A restauração desses backups é feita pelo console ou pela linha de comando do Firebase e cria um banco novo.
