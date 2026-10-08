@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "public": "painel",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "template.html", "build.py", "LEIA-ME.md"],
+    "headers": [{ "source": "**/*.@(html|js)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }]
+  },
+  "firestore": { "rules": "firestore.rules" }
+}
