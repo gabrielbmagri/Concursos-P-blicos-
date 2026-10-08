@@ -730,7 +730,7 @@ function homeHtml(){
         ${[25,50,75].map(v=>`<i class="xp-tick" style="left:${v}%"></i>`).join("")}</div>
       <div class="xp-ms">${ms}</div>
     </div>
-    ${isCur&&expect<1?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
+    ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
     ${nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
 
@@ -931,7 +931,7 @@ function render(){
   IM=importMap();A=agg();RL=reviewList();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
   const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,ankis:ankiHtml}[tab]();
-  const label=sync==="firebase"?"Sincronizado · "+(fb.user?fb.user.email:""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
+  const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   <header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw"><span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>${fb.on?`<button class="chip" data-act="logout">Sair</button>`:""}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>
