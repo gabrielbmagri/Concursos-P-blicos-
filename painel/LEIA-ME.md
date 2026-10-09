@@ -47,3 +47,7 @@ Na aba Questões, linhas escritas como "Assunto – Subtópico" com porcentagem 
 ## Modo estudando e material da meta
 
 Um toque no quadradinho de uma meta a coloca em "estudando" (quadradinho amarelo) e o aviso do topo vira "Estudando", em verde. Um segundo toque conclui. Só uma meta fica em estudo por vez. Dentro da meta há a pasta de questões (Tec Concursos), observações, links de vídeo e anexos (PDF ou imagem). Tudo isso aparece na Biblioteca, em Arquivos, Vídeos, Galeria, Anotações e Links, separado por matéria e assunto.
+
+## Banco de questões
+
+Questões inéditas de Certo ou Errado e de múltipla escolha, com gabarito comentado. O formato que o Claude deve usar está em `FORMATO-QUESTOES.md`. Cada resposta é somada automaticamente às estatísticas de matéria, assunto, meta e semana (um registro diário "Banco de questões" na aba Questões).

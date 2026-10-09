@@ -352,6 +352,22 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .unlock{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:12px;padding:14px 18px;border-radius:16px;background:linear-gradient(120deg,#0b7a3c,#14a653);color:#fff}
 .unlock b{display:block;font-size:16px}.unlock span{font-size:13px;opacity:.95}.unlock .btn{width:auto;margin:0;background:#fff;color:#0a5c3a;padding:11px 20px}
 .pr.lkp{opacity:.6}.lkm svg{width:12px;height:12px;stroke:var(--fg2);fill:none;margin-left:4px}
+.qfil{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.qrow{display:flex;align-items:stretch;gap:6px}.qrow .qopt{flex:1;min-width:0}
+.qopt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;padding:12px 14px;border:1.5px solid var(--line);border-radius:16px;margin-top:8px;background:var(--bg);font-size:15px;line-height:1.4}
+.qopt .lt{flex:none;width:28px;height:28px;border-radius:50%;background:var(--soft2);display:grid;place-items:center;font-weight:800;font-size:13px}
+.qopt.sel{border-color:var(--green);background:#e6f5ec}.qopt.sel .lt{background:var(--green);color:#fff}
+.qopt.ok{border-color:var(--good);background:var(--good-t)}.qopt.ok .lt{background:var(--good);color:#fff}
+.qopt.bad{border-color:var(--bad);background:var(--bad-t)}.qopt.bad .lt{background:var(--bad);color:#fff}
+.qopt.strk .tx{text-decoration:line-through;opacity:.5}
+.qx{flex:none;align-self:center;width:32px;height:32px;border-radius:50%;margin-top:8px;color:var(--fg3);font-size:15px}.qx:hover{background:var(--soft)}
+.qres{padding:12px 16px;border-radius:14px;font-weight:800;font-size:16px}.qres small{display:block;font-weight:600;font-size:13px;margin-top:2px}
+.qres.ok{background:var(--good-t);color:var(--good)}.qres.er{background:var(--bad-t);color:var(--bad)}.qres.bl{background:var(--soft2);color:var(--fg2)}
+.qul{list-style:none;margin:14px 0 0;padding:0;border-top:2px solid var(--fg)}
+.qli{border-bottom:1px solid var(--line)}.qh{display:block;width:100%;text-align:left;padding:13px 2px}
+.qt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600;font-size:14.5px;margin-bottom:6px}
+.qh .s{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--fg3)}.star{color:#e0a800;font-weight:800}
+.qd{padding:0 2px 16px}.qg{margin:10px 0 0;font-size:14px}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -430,7 +446,7 @@ let imp={name:"",rows:[],err:"",msg:"",date:""};
 let CARDS={},REVD={},SM={},FILES={},LOCALF={};
 const sm={view:"list",id:"",ed:null,ana:{paste:"",rows:[],errs:[],name:""},err:"",msg:"",busy:"",ask:"",lb:null,copied:false};
 const ak={view:"home",mat:"",mid:"",bar:"",tipo:"",modo:"hoje",queue:[],i:0,rev:false,pick:"",ses:{n:0,ok:0,er:0},paste:"",name:"",groups:[],cards:[],errs:[],err:"",msg:"",ask:"",copied:false};
-const fb={scol:null,fcol:null,pcol:null,sunsub:null,funsub:null,on:false,pReady:false,cReady:false,bkDone:false,cunsub:null,runsub:null,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
+const fb={qcol:null,qunsub:null,scol:null,fcol:null,pcol:null,sunsub:null,funsub:null,on:false,pReady:false,cReady:false,bkDone:false,cunsub:null,runsub:null,ready:false,user:null,fs:null,auth:null,col:null,unsub:null,err:"",msg:"",busy:false,email:"",mode:"login",code:"",codeOk:false,bk:false,bkList:[],bkAsk:"",bkMsg:""};
 const P=()=>demo?DEMO:real;
 const today=()=>{if(demo)return pd(DEMO_TODAY);const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
 const weekOf=s=>{const t=pd(s);for(let i=0;i<WK.length;i++){if(t>=pd(WK[i].i)&&t<=pd(WK[i].f))return i}return t<START?0:lastWk};
@@ -443,7 +459,7 @@ const itemsOf=m=>{const o=ownItems(m),x=IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.
 
 /* ---------- armazenamento ---------- */
 const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1";try{CARDS=JSON.parse(LS.get("painel-cartoes")||"{}")||{}}catch(e){CARDS={}}try{REVD=JSON.parse(LS.get("painel-revd")||"{}")||{}}catch(e){REVD={}}try{SM=JSON.parse(LS.get("painel-simulados")||"{}")||{}}catch(e){SM={}}}
+function loadLocal(){try{real=JSON.parse(LS.get("painel-progresso")||"{}")||{}}catch(e){real={}}const d=LS.get("painel-demo");demoChosen=d===null?null:d==="1";try{CARDS=JSON.parse(LS.get("painel-cartoes")||"{}")||{}}catch(e){CARDS={}}try{REVD=JSON.parse(LS.get("painel-revd")||"{}")||{}}catch(e){REVD={}}try{SM=JSON.parse(LS.get("painel-simulados")||"{}")||{}}catch(e){SM={}}try{QS=JSON.parse(LS.get("painel-questoes")||"{}")||{}}catch(e){QS={}}}
 function persistLocal(){LS.set("painel-progresso",JSON.stringify(real))}
 function autoDemo(){demo=fb.on?false:(demoChosen===null?Object.keys(real).length===0:demoChosen)}
 async function initDb(){
@@ -490,6 +506,7 @@ function initFirebase(){
       if(fb.cunsub){fb.cunsub();fb.cunsub=null}
       if(fb.runsub){fb.runsub();fb.runsub=null}
       if(fb.sunsub){fb.sunsub();fb.sunsub=null}
+      if(fb.qunsub){fb.qunsub();fb.qunsub=null}
       if(fb.funsub){fb.funsub();fb.funsub=null}
       fb.user=u||null;fb.ready=true;
       if(u){
@@ -510,8 +527,9 @@ function initFirebase(){
         fb.runsub=fb.rcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});REVD=m;render()},()=>{});
         fb.scol=ub.collection("simulados");fb.fcol=ub.collection("arquivos");fb.pcol=ub.collection("arquivo_partes");
         fb.sunsub=fb.scol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});SM=m;fb.sReady=true;maybeBackup();render()},()=>{fb.sReady=true;maybeBackup()});
+        fb.qcol=ub.collection("questoes");fb.qunsub=fb.qcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});QS=m;render()},()=>{});
         fb.funsub=fb.fcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});FILES=m;render()},()=>{});
-      }else{fb.col=null;fb.scol=fb.fcol=fb.pcol=null;real={};CARDS={};REVD={};SM={};FILES={};persistLocal()}
+      }else{fb.col=null;fb.scol=fb.fcol=fb.pcol=fb.qcol=null;real={};CARDS={};REVD={};SM={};FILES={};QS={};persistLocal()}
       render();
     });
     return true;
@@ -747,7 +765,7 @@ async function saveFile(blob,name){
   if(!done){const u=URL.createObjectURL(blob),an=document.createElement("a");an.href=u;an.download=name;document.body.appendChild(an);an.click();an.remove();setTimeout(()=>URL.revokeObjectURL(u),2000)}
 }
 function exportBackup(){
-  const blob=new Blob([JSON.stringify({painel:"metas",versao:2,gerado:ymd(new Date()),docs:real,cartoes:CARDS,revd:REVD,simulados:SM})],{type:"application/json"});
+  const blob=new Blob([JSON.stringify({painel:"metas",versao:2,gerado:ymd(new Date()),docs:real,cartoes:CARDS,revd:REVD,simulados:SM,questoes:QS})],{type:"application/json"});
   saveFile(blob,"backup-painel-"+ymd(new Date())+".json");
 }
 function restoreBackup(file){
@@ -759,6 +777,7 @@ function restoreBackup(file){
       const ids=Object.keys(docs);
       ids.forEach(id=>{real[id]=docs[id]});persistLocal();
       if(j.cartoes&&typeof j.cartoes==="object")cardsWrite(Object.entries(j.cartoes));
+      if(j.questoes&&typeof j.questoes==="object")qsWrite(Object.entries(j.questoes));
       if(j.simulados&&typeof j.simulados==="object")Object.entries(j.simulados).forEach(([id,d])=>smPut(id,d));
       if(j.revd&&typeof j.revd==="object")Object.entries(j.revd).forEach(([d,o])=>revdWrite(d,o));
       const c=fb.on?fb.col:col;
@@ -1415,6 +1434,272 @@ function subHtml(){
   </section>`;
 }
 
+/* ---------- banco de questões ---------- */
+const QBINSTR=[
+"Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um bloco de codigo de texto simples, neste formato:",
+"",
+"# Matéria: Linguística",
+"# Assunto: Teoria do signo linguístico",
+"# Caderno: Signo linguístico I",
+"CE | O signo linguístico une um significante e um significado. | C | Correto: é a definição saussuriana de signo.",
+"CE | Para Saussure, a relação entre significante e significado é necessariamente motivada. | E | Errado: Saussure defende a arbitrariedade do signo.",
+"ME | Assinale a alternativa que apresenta um exemplo de arbitrariedade do signo. | B | A palavra é formada por derivação ;; Palavras diferentes designam o mesmo referente em línguas distintas ;; O som imita o ruído do objeto ;; O significado depende do contexto ;; O signo é imutável na fala | Letra B: línguas diferentes usam significantes distintos para o mesmo referente. As demais não tratam de arbitrariedade.",
+"",
+"Regras:",
+"1. As linhas que começam com # valem para todas as questões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno é opcional e agrupa as questões do pedido.",
+"2. Uma linha por questão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
+"3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário.",
+"4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.",
+"5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
+"6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
+"7. De 15 a 30 questões por pedido, a não ser que eu peça outra quantidade.",
+"8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
+].join("\n");
+let QS={};
+const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
+const LTR=["A","B","C","D","E"];
+const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"todas",n:"20",ord:"aleatoria",q:"",more:50,queue:[],i:0,ans:null,sel:"",strike:{},ses:{ok:0,er:0,bl:0,errs:[]},paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
+function qsWrite(list){
+  list.forEach(([id,d])=>{if(d)QS[id]=d;else delete QS[id]});
+  if(fb.on&&fb.qcol){
+    const cs=list.slice(),run=()=>{const part=cs.splice(0,400);if(!part.length)return;const b=fb.fs.batch();part.forEach(([id,d])=>{const r=fb.qcol.doc(id);if(d)b.set(r,d);else b.delete(r)});b.commit().then(run).catch(()=>{sync="erro";render()})};
+    run();
+  }else LS.set("painel-questoes",JSON.stringify(QS));
+}
+function mkQ(mat,ass,cad,tipoRaw,e,g,o,c,ref){
+  const t0=String(tipoRaw||"").toUpperCase().replace(/[^A-Z]/g,"");
+  const t=t0==="CE"||t0==="C"||t0==="VF"||t0==="CERTOERRADO"?"CE":t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA"?"ME":"";
+  if(!t)return {err:`${ref}: tipo "${String(tipoRaw||"").slice(0,12)}" não reconhecido. Use CE ou ME.`};
+  e=String(e||"").trim();c=String(c||"").trim();g=String(g||"").trim();
+  if(!e)return {err:`${ref}: falta o texto da questão.`};
+  if(t==="CE"){const a=norm(g).charAt(0);if(a==="c")g="C";else if(a==="e")g="E";else return {err:`${ref}: o gabarito de Certo ou Errado deve ser C ou E.`};return {q:{mat,ass,cad,t,e,g,o:[],c}}}
+  const opts=String(o||"").split(";;").map(x=>x.trim().replace(/^[A-Ea-e][\)\.]\s+/,"")).filter(Boolean);
+  if(opts.length<2||opts.length>5)return {err:`${ref}: informe de 2 a 5 alternativas separadas por ;;.`};
+  g=g.toUpperCase().charAt(0);
+  if(LTR.indexOf(g)<0||LTR.indexOf(g)>=opts.length)return {err:`${ref}: o gabarito deve ser uma letra de A a ${LTR[opts.length-1]}.`};
+  return {q:{mat,ass,cad,t,e,g,o:opts,c}};
+}
+function parseQText(text){
+  const items=[],errs=[];let mat="",ass="",cad="";
+  String(text).split(/\r?\n/).forEach((raw,i)=>{
+    const ln=raw.trim();if(!ln||/^```/.test(ln))return;
+    const m=/^#\s*(mat[eé]ria|assunto|caderno)\s*:\s*(.*)$/i.exec(ln);
+    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else cad=m[2].trim();return}
+    if(ln.charAt(0)==="#")return;
+    const p=ln.split("|").map(z=>z.trim());
+    const t0=String(p[0]||"").toUpperCase().replace(/[^A-Z]/g,"");
+    const isME=t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA";
+    const r=isME?mkQ(mat,ass,cad,p[0],p[1],p[2],p[3],p[4],"Linha "+(i+1)):mkQ(mat,ass,cad,p[0],p[1],p[2],"",p[3],"Linha "+(i+1));
+    if(r.err)errs.push(r.err);else items.push(r.q);
+  });
+  return {items,errs};
+}
+function qbPrepare(res,name){
+  qb.errs=res.errs.slice(0,12);qb.err="";qb.msg="";qb.name=name;
+  const gm={},groups=[];
+  res.items.forEach(c=>{const key=norm(c.mat)+"|"+norm(c.ass)+"|"+norm(c.cad);let g=gm[key];if(!g){const k=subjectMatch(c.mat),rk=k?metaRank(k,c.ass):[];g=gm[key]={mat:c.mat,ass:c.ass,cad:c.cad,k,mid:rk[0]&&rk[0].score>=.4?rk[0].m.id:"",n:0};groups.push(g)}g.n++;c.gi=groups.indexOf(g)});
+  qb.groups=groups;qb.items=res.items;
+  if(!res.items.length&&!qb.errs.length)qb.err="Não encontrei nenhuma questão no texto.";
+}
+function qbReadFile(file){
+  const rd=new FileReader();
+  rd.onload=ev=>{try{qbPrepare(parseQText(String(ev.target.result)),file.name)}catch(er){qb.groups=[];qb.items=[];qb.errs=[];qb.err="Não consegui ler o arquivo."}render()};
+  rd.readAsText(file,"UTF-8");
+}
+function qbImport(){
+  const list=[],seen=new Set();let skipped=0,dup=0;
+  qb.items.forEach(c=>{
+    const g=qb.groups[c.gi];if(!g||!g.k){skipped++;return}
+    const id=qbId(g.k,c.e);if(QS[id]||seen.has(id)){dup++;return}seen.add(id);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
+  });
+  qb.msg=`Importei ${list.length} ${list.length===1?"questão":"questões"}.${dup?` ${dup} já existiam e foram ignoradas.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
+  if(list.length)qsWrite(list);
+  qb.groups=[];qb.items=[];qb.errs=[];qb.paste="";qb.err="";render();
+}
+const qbList=()=>Object.entries(QS).map(([id,q])=>({id,...q}));
+function qbFilter(withStatus){
+  const s=norm(qb.q);
+  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qb.st==="todas"||(qb.st==="novas"?!(q.ok+q.er+q.bl):qb.st==="erradas"?q.last==="er":qb.st==="feitas"?(q.ok+q.er)>0:qb.st==="favoritas"?!!q.fav:qb.st==="comentadas"?!!q.nt:true)));
+}
+const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:x.id<y.id?-1:1);
+function qbStart(ids){
+  let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true);
+  if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
+  pool=qb.ord==="aleatoria"?shuf(pool):qbOrdered(pool);
+  const n=qb.n==="todas"?pool.length:+qb.n;
+  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qb.ans=null;qb.sel="";qb.strike={};qb.ses={ok:0,er:0,bl:0,errs:[]};qb.err="";qb.view="session";render();window.scrollTo(0,0);
+}
+function qbLog(q,res){
+  if(demo)return;
+  const day=T0(),id="imp-qb-"+day,d=real[id]||{imp:1,qb:1,name:"Banco de questões",dt:day,rows:[]};
+  const rows=(d.rows||[]).map(r=>({...r}));
+  let r=rows.find(x=>x.k===q.k&&(x.mid||"")===(q.mid||"")&&(x.ass||"")===(q.as||""));
+  if(!r){r={k:q.k,mid:q.mid||"",dt:day,c:0,e:0,b:0,ass:q.as||""};rows.push(r)}
+  r[res==="ok"?"c":res==="er"?"e":"b"]++;
+  save(id,{...d,rows});
+}
+function qbAnswer(resp){
+  const id=qb.queue[qb.i],q=QS[id];if(!q||qb.ans)return;
+  const res=resp===""?"bl":resp===q.g?"ok":"er";
+  qb.ans={resp,res};
+  const nq={...q,[res]:(q[res]||0)+1,last:res,lt:T0()};
+  qb.ses[res]++;if(res==="er")qb.ses.errs.push(id);
+  qsWrite([[id,nq]]);
+  qbLog(q,res);
+  render();
+}
+function qbNext(){
+  if(qb.i+1>=qb.queue.length){qb.view="done"}else{qb.i++}
+  qb.ans=null;qb.sel="";qb.strike={};render();window.scrollTo(0,0);
+}
+function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
+const qbTag=k=>SUBJ.includes(k)?`<span class="tag" style="--c:var(--m-${k})"><i></i>${SHORT[k]}</span>`:"";
+function qbOpts(q,st){
+  // st: null (antes de responder) ou {resp}
+  return q.o.map((tx,i)=>{const L=LTR[i],isG=q.g===L,isR=st&&st.resp===L;
+    const cls=["qopt",st?(isG?"ok":isR?"bad":""):(qb.sel===L?"sel":""),!st&&qb.strike[i]?"strk":""].join(" ");
+    return `<div class="qrow"><button class="${cls}" ${st?"disabled":`data-act="qb-sel" data-v="${L}"`}><span class="lt">${L}</span><span class="tx">${esc(tx)}</span></button>${st?"":`<button class="qx" data-act="qb-strike" data-i="${i}" aria-label="${qb.strike[i]?"Desfazer o risco":"Riscar"} da alternativa ${L}">${qb.strike[i]?"↺":"✕"}</button>`}</div>`}).join("");
+}
+function qbSession(){
+  const id=qb.queue[qb.i],q=QS[id];
+  if(!q){qb.view="home";return qbHome()}
+  const tot=qb.queue.length,a=qb.ans;
+  const gTxt=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
+  const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot}</span></div><div class="ak-bar"><i style="width:${(qb.i+(a?1:0))/tot*100}%"></i></div>`;
+  const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
+  let ans="";
+  if(!a){
+    ans=q.t==="CE"?`<div class="ak-btns two"><button class="gbtn g3" data-act="qb-ans" data-v="C">Certo</button><button class="gbtn g1" data-act="qb-ans" data-v="E">Errado</button></div>`
+      :`<div style="margin-top:6px">${qbOpts(q,null)}</div><div class="bar-act"><button class="btn" data-act="qb-ans" data-v="${qb.sel}" ${qb.sel?"":"disabled"}>Confirmar resposta</button></div>`;
+    ans+=`<div style="margin-top:10px;text-align:center"><button class="link" data-act="qb-ans" data-v="">Pular, deixar em branco</button></div>`;
+  }else{
+    const ok=a.res==="ok";
+    ans=`<div class="qres ${a.res}">${ok?"Você acertou":a.res==="bl"?"Em branco":"Você errou"}<small>Gabarito: ${gTxt}${!ok&&a.resp?` · sua resposta: ${q.t==="CE"?(a.resp==="C"?"Certo":"Errado"):a.resp}`:""}</small></div>
+    ${q.t==="ME"?`<div style="margin-top:8px">${qbOpts(q,a)}</div>`:""}
+    <div class="box" style="margin-top:14px"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
+    <label class="lbl" for="qb-nt" style="margin-top:14px">Meu comentário</label>
+    <textarea class="in" id="qb-nt" style="min-height:80px;font-family:var(--font)" placeholder="Anote o que errou, uma pegadinha, uma dúvida">${esc(q.nt||"")}</textarea>
+    <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button><button class="btn" data-act="qb-next">${qb.i+1>=tot?"Ver resultado":"Próxima questão"}</button></div>`;
+  }
+  return `<section class="sec" style="margin-top:20px">${head}<div class="ak-card" style="align-items:stretch">${metaL}${q.as?`<div class="muted" style="font-size:13px">${esc(q.as)}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div></section>`;
+}
+function qbDone(){
+  const s=qb.ses,n=s.ok+s.er+s.bl;
+  return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.ok} ${s.ok===1?"acerto":"acertos"} em ${n} ${n===1?"questão":"questões"}</div>
+    <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div></div>
+    <div class="bar-act">${s.errs.length?`<button class="btn" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
+    <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div></section>`;
+}
+function qbFilters(withStatus){
+  const all=qbList(),mats=SUBJ.filter(k=>all.some(q=>q.k===k));
+  const mids=[...new Map(all.filter(q=>(!qb.mat||q.k===qb.mat)&&q.mid&&BY[q.mid]).map(q=>[q.mid,BY[q.mid].a])).entries()];
+  const cads=[...new Set(all.filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)).map(q=>q.cad).filter(Boolean))].sort();
+  const o=(v,c,l)=>`<option value="${esc(v)}" ${v===c?"selected":""}>${esc(l)}</option>`;
+  return `<div class="qfil"><div><label class="lbl" for="qf-mat">Matéria</label><select id="qf-mat" data-qbf="mat">${o("",qb.mat,"Todas")}${mats.map(k=>o(k,qb.mat,SHORT[k])).join("")}</select></div>
+    <div><label class="lbl" for="qf-mid">Assunto</label><select id="qf-mid" data-qbf="mid">${o("",qb.mid,"Todos")}${mids.map(([id,a])=>o(id,qb.mid,a.length>60?a.slice(0,58)+"…":a)).join("")}</select></div>
+    <div><label class="lbl" for="qf-cad">Caderno</label><select id="qf-cad" data-qbf="cad">${o("",qb.cad,"Todos")}${cads.map(c=>o(c,qb.cad,c)).join("")}</select></div>
+    <div><label class="lbl" for="qf-tipo">Tipo</label><select id="qf-tipo" data-qbf="tipo">${o("",qb.tipo,"Todos")}${o("CE",qb.tipo,"Certo ou Errado")}${o("ME",qb.tipo,"Múltipla escolha")}</select></div>
+    ${withStatus?`<div><label class="lbl" for="qf-st">Situação</label><select id="qf-st" data-qbf="st">${[["todas","Todas"],["novas","Novas"],["erradas","Que errei na última"],["feitas","Já respondidas"],["favoritas","Favoritas"],["comentadas","Com meu comentário"]].map(([v,l])=>o(v,qb.st,l)).join("")}</select></div>`:""}</div>`;
+}
+function qbHome(){
+  const all=qbList(),n=all.length;
+  if(!n)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><p class="lead">Aqui você resolve questões inéditas, com gabarito comentado, de Certo ou Errado e de múltipla escolha. Peça as questões ao Claude no formato abaixo e adicione aqui. Tudo o que você resolver entra sozinho nas estatísticas.</p>${qbAddBox()}</section>`;
+  const feitas=all.reduce((z,q)=>z+q.ok+q.er+q.bl,0),ok=all.reduce((z,q)=>z+q.ok,0),er=all.reduce((z,q)=>z+q.er,0);
+  const fav=all.filter(q=>q.fav).length,wrong=all.filter(q=>q.last==="er").length,novas=all.filter(q=>!(q.ok+q.er+q.bl)).length;
+  const cnt=qbFilter(true).length;
+  const byK={};all.forEach(q=>{const x=byK[q.k]||(byK[q.k]={ok:0,er:0,n:0});x.ok+=q.ok;x.er+=q.er;x.n++});
+  const kRows=SUBJ.filter(k=>byK[k]&&byK[k].ok+byK[k].er>0).map(k=>{const x=byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.ok+x.er+" respostas",tip:`${SHORT[k]}: ${x.ok} certas e ${x.er} erradas no banco`,r}}).sort((a,b)=>a.r-b.r);
+  const byA={};all.forEach(q=>{if(q.ok+q.er<1)return;const key=q.k+"|"+(q.mid||norm(q.as));const x=byA[key]||(byA[key]={nome:q.mid&&BY[q.mid]?BY[q.mid].a:(q.as||SHORT[q.k]),k:q.k,ok:0,er:0});x.ok+=q.ok;x.er+=q.er});
+  const weak=Object.values(byA).filter(x=>x.ok+x.er>=3).map(x=>({...x,r:x.ok/(x.ok+x.er)})).sort((a,b)=>a.r-b.r).slice(0,6);
+  return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2>
+    <p class="lead">Resolva questões inéditas com gabarito comentado. Cada resposta soma sozinha nas estatísticas de matéria, assunto, meta e semana.</p>
+    ${qb.msg?`<div class="msg">${esc(qb.msg)}</div>`:""}${qb.err?`<div class="msg err">${esc(qb.err)}</div>`:""}
+    <div class="kpis" style="margin-top:16px">
+      <div class="kpi blue"><div class="lab">No banco</div><div class="num">${n}</div><div class="sub">${novas} ainda não resolvidas</div></div>
+      <div class="kpi green"><div class="lab">Acerto no banco</div><div class="num">${ok+er?pc(ok/(ok+er)):"–"}</div><div class="sub">${feitas} ${feitas===1?"resposta":"respostas"}</div></div>
+      <div class="kpi orange"><div class="lab">Para revisar</div><div class="num">${wrong}</div><div class="sub">erradas na última vez</div></div>
+      <div class="kpi purple"><div class="lab">Favoritas</div><div class="num">${fav}</div><div class="sub">marcadas com estrela</div></div>
+    </div></section>
+  <section class="sec"><div class="sec-h"><h2>Montar uma sessão</h2></div>
+    ${qbFilters(true)}
+    <div class="qfil" style="margin-top:10px"><div><label class="lbl" for="qf-n">Quantas questões</label><select id="qf-n" data-qbf="n">${["10","20","30","50","todas"].map(v=>`<option value="${v}" ${qb.n===v?"selected":""}>${v==="todas"?"Todas do filtro":v}</option>`).join("")}</select></div>
+      <div><label class="lbl" for="qf-ord">Ordem</label><select id="qf-ord" data-qbf="ord"><option value="aleatoria" ${qb.ord==="aleatoria"?"selected":""}>Aleatória</option><option value="cadastro" ${qb.ord==="cadastro"?"selected":""}>Ordem em que foram adicionadas</option></select></div></div>
+    <div class="bar-act"><button class="btn" data-act="qb-start" ${cnt?"":"disabled"}>Começar${cnt?` (${Math.min(cnt,qb.n==="todas"?cnt:+qb.n)} de ${cnt})`:""}</button><button class="btn alt" data-act="qb-view" data-v="lista">Ver todas as questões</button></div></section>
+  ${kRows.length||weak.length?`<section class="sec"><div class="grid2">${kRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por matéria</h3><p>Só as questões do banco</p></div></div>${barsHtml(kRows)}</div>`:""}
+    ${weak.length?`<div class="card"><div class="card-h"><div><h3>Assuntos mais fracos</h3><p>Menor acerto, com ao menos 3 respostas</p></div></div><ul class="list">${weak.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${qbTag(x.k)}<span>${x.ok} certas · ${x.er} erradas</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul></div>`:""}</div></section>`:""}
+  <section class="sec"><div class="sec-h"><h2>Adicionar questões</h2></div>${qbAddBox()}</section>`;
+}
+function qbAddBox(){
+  const gs=qb.groups.length;
+  const subjOpts=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(s=>`<option value="${s}" ${s===k?"selected":""}>${SHORT[s]}</option>`).join("");
+  const asOpts=g=>g.k?`<option value="">Sem assunto (conta só na matéria)</option>`+metaRank(g.k,g.ass).map(x=>`<option value="${x.m.id}" ${x.m.id===g.mid?"selected":""}>S${x.m.wi+1} · ${esc(x.m.a.length>60?x.m.a.slice(0,58)+"…":x.m.a)}</option>`).join(""):`<option value="">Escolha a matéria primeiro</option>`;
+  const prev=gs?`<div class="sec-h" style="margin-top:20px"><h3>Conferir antes de adicionar</h3><span class="muted" style="font-size:13px">${qb.items.length} questões em ${gs} ${gs===1?"grupo":"grupos"}</span></div>
+    <div style="border-top:2px solid var(--fg)">${qb.groups.map((g,i)=>`<div class="ir ${g.k?"":"skip"}"><div class="a"><b>${esc(g.mat||"(sem matéria)")}</b><span>${esc(g.ass||"(sem assunto)")}${g.cad?` · ${esc(g.cad)}`:""}</span></div><div class="sels"><select data-qbg="k" data-i="${i}" aria-label="Matéria do grupo ${i+1}">${subjOpts(g.k)}</select><select data-qbg="mid" data-i="${i}" ${g.k?"":"disabled"} aria-label="Assunto do grupo ${i+1}">${asOpts(g)}</select></div><div class="n">${g.n} ${g.n===1?"questão":"questões"}</div></div>`).join("")}</div>
+    <div class="bar-act"><button class="btn" data-act="qb-import" ${qb.groups.some(g=>g.k)?"":"disabled"}>Adicionar ${qb.items.filter(c=>qb.groups[c.gi]&&qb.groups[c.gi].k).length} questões</button><button class="btn alt" data-act="qb-cancel">Cancelar</button></div>`:"";
+  return `${qb.msg&&!gs&&qb.view!=="home"?`<div class="msg">${esc(qb.msg)}</div>`:""}${qb.err&&qb.view!=="home"?`<div class="msg err">${esc(qb.err)}</div>`:""}
+    <div class="imp-box" style="margin-top:12px"><b>Colar ou enviar as questões</b><p>Cole o texto que o Claude gerou no formato abaixo, ou envie um arquivo .txt. Questões repetidas são ignoradas.</p>
+      <label class="vh" for="qb-paste">Texto das questões</label><textarea class="in" id="qb-paste" placeholder="Cole aqui as questões">${esc(qb.paste)}</textarea>
+      <div class="bar-act"><button class="btn" data-act="qb-read">Ler texto</button><label class="file-btn" style="background:var(--soft);color:var(--fg)">Ou enviar .txt<input type="file" id="qb-file" accept=".txt"></label></div></div>
+    ${qb.errs.length?`<div class="msg err"><b>Algumas linhas foram ignoradas:</b><br>${qb.errs.map(esc).join("<br>")}</div>`:""}${prev}
+    <details class="how"><summary>Como pedir questões ao Claude</summary><p class="lead" style="margin-top:10px">Envie estas instruções ao Claude, junto com o assunto, o resumo ou o texto em que as questões devem se basear.</p>
+      <textarea class="in" id="qb-instr" readonly style="min-height:260px">${esc(QBINSTR)}</textarea><div class="bar-act"><button class="btn alt" data-act="qb-copy">${qb.copied?"Copiado":"Copiar instruções"}</button></div></details>`;
+}
+function qbLista(){
+  const items=qbOrdered(qbFilter(true)),sh=items.slice(0,qb.more);
+  const row=q=>{
+    const op=!!qb.open[q.id],n=q.ok+q.er+q.bl,gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
+    return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
+      ${op?`<div class="qd">${q.t==="ME"?q.o.map((t,i)=>`<div class="qopt ${LTR[i]===q.g?"ok":""}" style="cursor:default"><span class="lt">${LTR[i]}</span><span class="tx">${esc(t)}</span></div>`).join(""):""}<p class="qg"><b>Gabarito:</b> ${gT}</p><div class="box"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Sem comentário."}</p></div>
+      <label class="lbl" for="qn-${q.id}" style="margin-top:10px">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:70px;font-family:var(--font)">${esc(q.nt||"")}</textarea>
+      <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${q.id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver só esta</button>${qb.ask===q.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="qb-delok" data-id="${q.id}">Confirmar exclusão</button><button class="chip" data-act="qb-delno">Cancelar</button>`:`<button class="chip" data-act="qb-delask" data-id="${q.id}">Excluir</button>`}</div></div>`:""}</li>`;
+  };
+  return `<section class="sec" style="margin-top:20px"><div class="ak-top"><button class="chip" data-act="qb-view" data-v="home">Voltar</button><span>${items.length} ${items.length===1?"questão":"questões"}</span></div><h2 style="margin-top:12px">Todas as questões</h2>
+    ${qb.msg?`<div class="msg">${esc(qb.msg)}</div>`:""}
+    ${qbFilters(true)}<div style="margin-top:10px"><label class="lbl" for="qb-q">Buscar</label><input class="in" id="qb-q" type="search" placeholder="Palavra do enunciado ou do assunto" value="${esc(qb.q)}"></div>
+    ${sh.length?`<ul class="qul">${sh.map(row).join("")}</ul>${items.length>sh.length?`<div class="bar-act"><button class="btn alt" data-act="qb-more">Mostrar mais (${items.length-sh.length})</button></div>`:""}`:`<div class="empty">Nenhuma questão com esses filtros.</div>`}</section>`;
+}
+function qbHtml(){
+  if(demo)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><div class="empty">Desligue os dados de exemplo para usar o banco de questões.</div></section>`;
+  if(qb.view==="session")return qbSession();
+  if(qb.view==="done")return qbDone();
+  if(qb.view==="lista")return qbLista();
+  return qbHome();
+}
+function qbClick(a,t,e){
+  if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
+  if(a==="qb-start"){qbStart();return true}
+  if(a==="qb-one"){qbStart([t.dataset.id]);return true}
+  if(a==="qb-quit"){qb.view="home";qb.ans=null;render();window.scrollTo(0,0);return true}
+  if(a==="qb-sel"){qb.sel=t.dataset.v;render();return true}
+  if(a==="qb-strike"){const i=t.dataset.i;qb.strike[i]=!qb.strike[i];if(qb.strike[i]&&qb.sel===LTR[+i])qb.sel="";render();return true}
+  if(a==="qb-ans"){qbAnswer(t.dataset.v);return true}
+  if(a==="qb-next"){qbNext();return true}
+  if(a==="qb-redo"){const ids=qb.ses.errs.slice();qbStart(ids);return true}
+  if(a==="qb-fav"){const q=QS[t.dataset.id];if(q)qbPatch(t.dataset.id,{fav:q.fav?0:1});render();return true}
+  if(a==="qb-open"){qb.open[t.dataset.id]=!qb.open[t.dataset.id];render();return true}
+  if(a==="qb-more"){qb.more+=50;render();return true}
+  if(a==="qb-delask"){qb.ask=t.dataset.id;render();return true}
+  if(a==="qb-delno"){qb.ask="";render();return true}
+  if(a==="qb-delok"){qsWrite([[t.dataset.id,null]]);qb.ask="";qb.msg="Questão excluída.";render();return true}
+  if(a==="qb-read"){const ta=$("#qb-paste");qb.paste=ta?ta.value:qb.paste;qbPrepare(parseQText(qb.paste),"texto colado");render();return true}
+  if(a==="qb-import"){qbImport();return true}
+  if(a==="qb-cancel"){qb.groups=[];qb.items=[];qb.errs=[];qb.err="";qb.paste="";render();return true}
+  if(a==="qb-copy"){(async()=>{try{await navigator.clipboard.writeText(QBINSTR);qb.copied=true}catch(er){const ta=$("#qb-instr");if(ta){ta.focus();ta.select()}qb.copied=false}render()})();return true}
+  return false;
+}
+function qbChange(e){
+  const t=e.target;
+  const f=t.closest&&t.closest("[data-qbf]");
+  if(f){const k=f.dataset.qbf;qb[k]=f.value;if(k==="mat"){qb.mid="";qb.cad=""}if(k==="mid")qb.cad="";qb.err="";qb.more=50;render();return true}
+  const g=t.closest&&t.closest("[data-qbg]");
+  if(g){const gr=qb.groups[+g.dataset.i];if(gr){if(g.dataset.qbg==="k"){gr.k=g.value;const rk=gr.k?metaRank(gr.k,gr.ass):[];gr.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else gr.mid=g.value;render()}return true}
+  if(t.id==="qb-file"&&t.files&&t.files[0]){qb.msg="";qbReadFile(t.files[0]);return true}
+  if(t.id==="qb-nt"){const id=qb.queue[qb.i];if(id)qbPatch(id,{nt:t.value.trim()});return true}
+  if(t.dataset&&t.dataset.qn){qbPatch(t.dataset.qn,{nt:t.value.trim()});return true}
+  return false;
+}
+
 /* ---------- informações do concurso (do edital) ---------- */
 function infoHtml(){
   const I=D.info,c=I.cargo,T=today();
@@ -1885,7 +2170,7 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["subtopicos","Subtópicos"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["banco","Banco de questões"],["subtopicos","Subtópicos"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
@@ -1894,7 +2179,7 @@ function render(){
   LOCKON=lockOn();LIB=libEff();
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
+  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,banco:qbHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
@@ -2173,6 +2458,7 @@ document.addEventListener("click",e=>{
   if(a==="bib-delask"){bib.ask=t.dataset.f;render();return}
   if(a==="bib-delno"){bib.ask="";render();return}
   if(a==="bib-delok"){const f=t.dataset.f,fm=FILES[f];fileDel(f);if(fm&&/^meta:/.test(fm.esc||"")){const mid=fm.esc.slice(5);saveMeta(mid,{ar:((real[mid]||{}).ar||[]).filter(x=>x!==f)})}bib.ask="";bib.msg="Arquivo excluído.";render();return}
+  if(a.slice(0,3)==="qb-"&&qbClick(a,t,e))return;
   if(a.slice(0,3)==="mt-"&&mtClick(a,t))return;
   if(a==="bib-view"){bib.view=t.dataset.v;bib.msg="";bib.err="";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
@@ -2208,6 +2494,8 @@ document.addEventListener("click",e=>{
   if(a==="backup"){exportBackup();return}
 });
 document.addEventListener("input",e=>{
+  if(e.target.id==="qb-paste"){qb.paste=e.target.value;return}
+  if(e.target.id==="qb-q"){qb.q=e.target.value;qb.more=50;const pos=e.target.selectionStart;render();const n=document.getElementById("qb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sb-q"){sb.busca=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("sb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sm-ana-paste"){sm.ana.paste=e.target.value;return}
   if(e.target.id==="ak-paste"){ak.paste=e.target.value;return}
@@ -2219,6 +2507,7 @@ document.addEventListener("input",e=>{
   liveUpd();
 });
 document.addEventListener("change",e=>{
+  if(qbChange(e))return;
   if(mtChange(e))return;
   if(e.target.id==="sb-om"){sb.om=e.target.value;render();return}
   if(e.target.id==="sb-oa"){sb.oa=e.target.value;render();return}
