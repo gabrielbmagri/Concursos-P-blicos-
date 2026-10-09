@@ -342,6 +342,16 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .bi{padding:12px 2px;border-bottom:1px solid var(--line)}.bt{font-weight:700;font-size:14.5px;text-align:left}.bn{margin:6px 0 0;font-size:14px;white-space:pre-wrap;color:var(--fg2)}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin-top:14px}
 .gi{display:flex;flex-direction:column;gap:5px;text-align:left}.gi img,.gi span{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;background:var(--soft)}.gi small{font-size:11.5px;color:var(--fg3);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row.lk{opacity:.5}.row.lk .rt .t{color:var(--fg2)}
+.chk.lkc{border-color:transparent;background:var(--soft2);cursor:default}.chk.lkc svg{opacity:1;stroke:var(--fg2);fill:none;width:15px;height:15px}
+.pill.lockp{background:#4b5563;color:#fff}.pill.lockp svg{width:13px;height:13px;stroke:#fff;fill:none}
+.pill.late{background:#ffe3b8;color:#7a3d00}
+.next.lockn{background:linear-gradient(120deg,#e7e9ec,#f2f3f5);border-color:#9ca3af}.next.lockn .l{color:#4b5563}.next.lockn .muted{color:#4b5563}
+.lkic{flex:none;width:34px;height:34px;border-radius:50%;background:#4b5563;display:grid;place-items:center}.lkic svg{width:18px;height:18px;stroke:#fff;fill:none}
+.lockbox{background:#eceef1}
+.unlock{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:12px;padding:14px 18px;border-radius:16px;background:linear-gradient(120deg,#0b7a3c,#14a653);color:#fff}
+.unlock b{display:block;font-size:16px}.unlock span{font-size:13px;opacity:.95}.unlock .btn{width:auto;margin:0;background:#fff;color:#0a5c3a;padding:11px 20px}
+.pr.lkp{opacity:.6}.lkm svg{width:12px;height:12px;stroke:var(--fg2);fill:none;margin-left:4px}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -445,7 +455,7 @@ async function initDb(){
       const m={};snap.docs.forEach(d=>{m[d.id]=d.data()});
       if(first&&snap.empty&&Object.keys(real).length){Object.entries(real).forEach(([id,v])=>col.doc(id).set(v).catch(()=>{}));}
       else real=m;
-      if(first){first=false;persistLocal();autoDemo();sel=curWeek()}else{persistLocal();autoDemo()}
+      if(first){first=false;persistLocal();autoDemo();ensureCfg();sel=homeWeek()}else{persistLocal();autoDemo()}
       render();
     },()=>{sync="local";col=null;render()});
     render();
@@ -489,7 +499,7 @@ function initFirebase(){
           const m={};snap.forEach(d=>{m[d.id]=d.data()});
           if(first&&snap.empty&&Object.keys(real).length){Object.entries(real).forEach(([id,v])=>fb.col.doc(id).set(v).catch(()=>{}))}
           else real=m;
-          if(first){first=false;sel=curWeek();fb.pReady=true;maybeBackup()}
+          if(first){first=false;ensureCfg();sel=homeWeek();fb.pReady=true;maybeBackup()}
           persistLocal();autoDemo();sync="firebase";render();
         },err=>{sync="erro";fb.pReady=true;fb.err="Não consegui sincronizar: "+(err.code||err.message);render()});
         setTimeout(()=>{if(fb.user&&!fb.pReady){fb.pReady=true;render()}},7000);
@@ -847,9 +857,9 @@ function rowHtml(m){
   const bits=[m.i?"cerca de "+m.i+" itens":null,r>1?`${r} repetições`:null].filter(Boolean).join(" · ");
   const mv=m.wi!==ew(m)?`<span class="rb mv">adiada da semana ${m.wi+1}</span>`:"";
   const res=n?`<div class="res"><span class="sc ${scCls(rt)}">${pc(rt)}</span><small>${it.c}/${n}</small></div>`:(m.t==="discursiva"&&pr&&pr.tl?`<div class="res"><span class="sc na">${npd(pr)}</span></div>`:(r>1&&rd?`<div class="res">${rd}/${r}</div>`:""));
-  const stu=!done&&!!(pr&&pr.st);
-  return `<li class="row ${done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
-    <button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>
+  const stu=!done&&!!(pr&&pr.st),lk=isLocked(m);
+  return `<li class="row ${lk?"lk":done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
+    ${lk?`<span class="chk lkc" aria-label="Bloqueada">${LOCK}</span>`:`<button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>`}
     <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
@@ -873,6 +883,8 @@ function homeHtml(){
   const dayN=Math.max(1,Math.min(7,dday(T,pd(w.i))+1));
   const expect=isCur?dayN/7:(sel<cw?1:0);
   const nxt=L.filter(m=>!isDone(m))[0],cs=demo?null:curStudy(),DA=durList(),DW=DA.filter(x=>x.wi===sel);
+  const hw=homeWeek(),wLocked=LOCKON&&sel>LIB,canUnlock=LOCKON&&sel===LIB&&LIB<lastWk&&weekDone(LIB);
+  const weekPill=wLocked?`<span class="pill lockp">${LOCK}Bloqueada</span><button class="pill blue" data-act="cur">Ir para a semana liberada</button>`:sel!==hw?`<button class="pill blue" data-act="cur">${LOCKON?"Ir para a semana liberada":"Ir para hoje"}</button>`:LOCKON&&LIB<cw?`<span class="pill late">Atrasada · ${cw-LIB} ${cw-LIB===1?"semana":"semanas"} do calendário</span>`:LOCKON&&LIB>cw?`<span class="pill green">Adiantada</span>`:`<span class="pill green">Semana atual</span>`;
   const dots=L.map(m=>`<span class="dt ${isDone(m)?"d":rdone(m)?"p":""}" style="--c:${mcolor(m)}" data-tip="${esc(m.a)}"></span>`).join("");
   const movedOut=ALL.filter(m=>m.wi===sel&&ew(m)!==sel).length;
   const days=dday(EXAM,T), wkLeft=Math.ceil(days/7);
@@ -899,7 +911,7 @@ function homeHtml(){
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
         <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
         <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${!isCur?`<button class="pill blue" data-act="cur">Ir para hoje</button>`:`<span class="pill green">Semana atual</span>`}<span class="pill">${FASE[w.fase]||""}</span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
     </div>
     <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
@@ -916,7 +928,8 @@ function homeHtml(){
       <div class="xp-ms">${ms}</div>
     </div>
     ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
-    ${cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div></div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
+    ${canUnlock?`<div class="unlock"><div><b>Semana ${LIB+1} concluída</b><span>Libere a semana ${LIB+2} para continuar.</span></div><button class="btn" data-act="unlock-next">Liberar a semana ${LIB+2}</button></div>`:""}
+    ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div></div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
 
   <section class="kpis" aria-label="Indicadores">
@@ -1862,9 +1875,10 @@ function matHtml(){
 /* ---------- plano ---------- */
 function planHtml(){
   const cw=A.cw;
-  return `<section class="sec" style="margin-top:20px"><div class="sec-h"><h2>15 semanas até a prova</h2><span class="muted" style="font-size:13px">Toque numa semana para abrir as metas</span></div>
+  const off=!!(real["cfg-semana"]||{}).off;
+  return `<section class="sec" style="margin-top:20px"><div class="box" style="margin:0 0 18px;display:flex;align-items:center;justify-content:space-between;gap:14px"><div><b>Bloqueio de semanas</b><p style="font-weight:500;font-size:14px;margin-top:4px">${off?"Desligado: todas as semanas aceitam registros.":`Ligado: só a semana ${LIB+1} aceita registros. Ao concluir todas as metas dela, você libera a próxima.`}</p></div><button class="switch" role="switch" aria-checked="${!off}" aria-label="Bloqueio de semanas" data-act="lock-toggle" ${demo?"disabled":""}></button></div><div class="sec-h"><h2>15 semanas até a prova</h2><span class="muted" style="font-size:13px">Toque numa semana para abrir as metas</span></div>
   <div class="list plan">${WK.map((w,i)=>{const ws=weekStats(i),r=rate({c:ws.c,e:ws.e,b:ws.b});
-    return `<button class="pr ${i===cw?"cur":""}" data-act="plan" data-i="${i}"><div class="w">S${i+1}</div><div class="d">${fmtD(w.i,w.f)}<small>${FASE[w.fase]}${w.fer?" · "+esc(w.fer):""}</small></div>
+    return `<button class="pr ${i===cw?"cur":""} ${LOCKON&&i>LIB?"lkp":""}" data-act="plan" data-i="${i}"><div class="w">S${i+1}${LOCKON&&i>LIB?`<span class="lkm">${LOCK}</span>`:""}</div><div class="d">${fmtD(w.i,w.f)}<small>${FASE[w.fase]}${w.fer?" · "+esc(w.fer):""}</small></div>
       <div class="pg"><div class="bar2" style="--k:${ws.fr>=1?"var(--green)":"var(--blue)"}"><i style="width:${Math.min(100,ws.fr*100)}%"></i></div><span>${ws.done}/${ws.n} metas · ${num(ws.q)} questões</span></div>
       <div class="a">${r!=null?`<span class="sc ${scCls(r)}">${pc(r)}</span>`:`<span class="faint">–</span>`}</div></button>`}).join("")}</div>
   <p class="muted" style="font-size:13px;margin:12px 4px 0">A prova é em ${fmtDay(D.prova)} de ${EXAM.getFullYear()} (data provável do edital).</p></section>`;
@@ -1877,6 +1891,7 @@ function render(){
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
+  LOCKON=lockOn();LIB=libEff();
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
   const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
@@ -1962,6 +1977,19 @@ function drawCharts(){
   });
 }
 
+/* ---------- bloqueio de semanas ---------- */
+let LIB=0,LOCKON=false;
+const LOCK='<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+const weekMetas=i=>ALL.filter(m=>ew(m)===i);
+const weekDone=i=>weekMetas(i).every(isDone);
+function frontier(){for(let i=0;i<lastWk;i++)if(!weekDone(i))return i;return lastWk}
+const lockOn=()=>!demo&&!((real["cfg-semana"]||{}).off);
+function libEff(){const c=real["cfg-semana"];return c&&c.lib!=null?Math.max(0,Math.min(lastWk,c.lib)):frontier()}
+const homeWeek=()=>lockOn()?libEff():curWeek();
+const isLocked=m=>LOCKON&&!m.rv&&!m.rg&&ew(m)>LIB;
+function cfgSave(patch){if(demo)return;save("cfg-semana",{...(real["cfg-semana"]||{}),...patch})}
+function ensureCfg(){if(!demo&&!real["cfg-semana"])save("cfg-semana",{lib:frontier()})}
+
 /* ---------- modo estudando e material da meta ---------- */
 const mt={busy:"",err:""};
 const hasEnr=d=>!!(d&&(d.lk||d.nt||(d.vd&&d.vd.length)||(d.ar&&d.ar.length)||d.st||d.st0));
@@ -2042,7 +2070,7 @@ let sheetId=null,draft=null;
 function openSheet(id){
   const m=getM(id);if(!m)return;sheetId=id;
   const p=P()[id]||{};draft={r:p.r||0,c:p.c||0,e:p.e||0,b:p.b||0,dt:p.dt||null,nc:p.nc!=null?p.nc:null,ne:p.ne!=null?p.ne:null,tl:p.tl!=null?p.tl:null};
-  const ro=demo,r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg;
+  const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg;
   const fld=(k,l,sub)=>`<div class="fr"><div class="fl">${l}${sub?`<small>${sub}</small>`:""}</div><div class="step"><button data-s="${k}" data-d="-1" aria-label="Menos ${l}" ${ro?"disabled":""}>−</button><input type="number" inputmode="numeric" min="0" id="f-${k}" data-f="${k}" value="${draft[k]||0}" ${ro?"disabled":""}><button data-s="${k}" data-d="1" aria-label="Mais ${l}" ${ro?"disabled":""}>+</button></div></div>`;
   const dfld=(k,l,sub,step)=>`<div class="fr"><div class="fl">${l}<small>${sub}</small></div><input class="num-in" type="number" inputmode="decimal" step="${step}" min="0" id="f-${k}" data-f="${k}" value="${draft[k]==null?"":draft[k]}" ${ro?"disabled":""}></div>`;
   const kick=m.rg?"Revisão geral":m.rv?RVTXT[m.step].t:(TIPO[m.t]||"Meta");
@@ -2056,6 +2084,7 @@ function openSheet(id){
     <h2 class="sh-t">${esc(m.a)}</h2>
     <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
     ${rvInfo}
+    ${isLocked(m)?`<div class="box lockbox"><b>Semana bloqueada</b><p>Você pode ler tudo aqui, mas só consegue registrar depois de concluir as metas da semana ${LIB+1} e liberar esta.</p></div>`:""}
     ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
     ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
     ${!dyn&&!ro&&!isDone(m)?`<div class="bar-act" style="margin:12px 0 0">${(P()[id]||{}).st?`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-stop">Estudando agora. Toque para parar</button>`:`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-start">Começar a estudar</button>`}</div>`:""}
@@ -2072,7 +2101,7 @@ function openSheet(id){
     <div class="live"><div><b id="lv-a">–</b><span>desempenho</span></div><div><b id="lv-l">–</b><span>nota líquida</span></div><div><b id="lv-n">0</b><span>questões</span></div></div>`:""}
     ${isD?`<div class="f">${dfld("nc","NC","nota de conteúdo","0.1")}${dfld("ne","NE","número de erros de português","1")}${dfld("tl","TL","total de linhas escritas","1")}</div><div class="live"><div><b id="lv-d">–</b><span>nota (NC − 2·NE÷TL)</span></div></div>`:""}
     ${moveBox}
-    ${ro?`<button class="btn" disabled>Desligue os dados de exemplo para registrar</button>`:`<button class="btn" data-act="save">Salvar</button>${P()[id]?`<button class="btn ghost" data-act="clear">Limpar registro</button>`:""}`}
+    ${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`<button class="btn" data-act="save">Salvar</button>${P()[id]?`<button class="btn ghost" data-act="clear">Limpar registro</button>`:""}`}
   </div></div>`;
   liveUpd();
 }
@@ -2099,6 +2128,7 @@ function sheetSave(){
 function toggle(id){
   if(demo)return openSheet(id);
   const m=getM(id),p=real[id];if(!m)return;
+  if(isLocked(m))return;
   if(isDone(m)){const d={...p,r:0};delete d.dur;delete d.st0;if(empty_(d)){save(id,null)}else{save(id,d)}return}
   if(!m.rv&&!m.rg&&!(p&&p.st)){startStudy(id);return}
   const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())},t0=p&&(p.st0||p.st);
@@ -2107,7 +2137,7 @@ function toggle(id){
   save(id,d);
 }
 function moveTo(id,wi){
-  const m=getM(id);if(!m||demo)return;
+  const m=getM(id);if(!m||demo||isLocked(m))return;
   const d={...(real[id]||{})};d.r=d.r||0;
   if(wi===m.wi)delete d.mw;else d.mw=wi;
   if(empty_(d))save(id,null);else save(id,d);
@@ -2130,11 +2160,13 @@ document.addEventListener("click",e=>{
   if(a==="menu-close"){if(e.target===t){menu=false;render()}return}
   if(a==="tab"){tab=t.dataset.v;menu=false;render();window.scrollTo(0,0);return}
   if(a==="wk"){sel=Math.max(0,Math.min(lastWk,sel+ +t.dataset.d));render();return}
-  if(a==="cur"){sel=curWeek();render();return}
+  if(a==="cur"){sel=homeWeek();render();return}
+  if(a==="unlock-next"){const n=Math.min(lastWk,libEff()+1);sel=n;cfgSave({lib:n});window.scrollTo(0,0);return}
+  if(a==="lock-toggle"){cfgSave({off:!(real["cfg-semana"]||{}).off});return}
   if(a==="only"){onlyPend=!onlyPend;render();return}
   if(a==="plan"){sel=+t.dataset.i;tab="semana";render();window.scrollTo(0,0);return}
   if(a==="mat"){const k=t.dataset.k;openMat[k]=!openMat[k];render();return}
-  if(a==="demo"){demo=!demo;demoChosen=demo;LS.set("painel-demo",demo?"1":"0");if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();sel=curWeek();render();return}
+  if(a==="demo"){demo=!demo;demoChosen=demo;LS.set("painel-demo",demo?"1":"0");if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();if(!demo)ensureCfg();sel=homeWeek();render();return}
   if(a==="sb-t"){const id=t.dataset.id;sb.open[id]=!sb.open[id];render();return}
   if(a==="sb-all"){const on=t.dataset.v==="1";sb.open={};if(on)subTree().forEach(m=>{sb.open["m/"+m.k]=true;m.as.forEach(x=>{sb.open[m.k+"/"+x.key]=true})});render();return}
   if(a==="bib-pasta"){bib.pasta=t.dataset.v;bib.msg="";bib.err="";render();return}
@@ -2224,8 +2256,9 @@ addEventListener("orientationchange",()=>setTimeout(()=>A&&drawCharts(),250));
 
 /* ---------- início ---------- */
 loadLocal();autoDemo();
-sel=curWeek();
+sel=homeWeek();
 const fbStarted=initFirebase();
+if(!fbStarted)ensureCfg();
 render();
 if(!fbStarted)initDb();
 })();
