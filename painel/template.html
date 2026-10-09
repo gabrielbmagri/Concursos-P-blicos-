@@ -368,6 +368,11 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .qt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600;font-size:14.5px;margin-bottom:6px}
 .qh .s{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--fg3)}.star{color:#e0a800;font-weight:800}
 .qd{padding:0 2px 16px}.qg{margin:10px 0 0;font-size:14px}
+.rb.qbk{background:#e3f4ea;color:#0a5c3a}
+.box.stip ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.box.stip li{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-top:1px solid var(--soft2)}.box.stip li:first-child{border-top:0}
+.box.stip .tx b{display:block;text-transform:none;letter-spacing:0;font-size:14.5px;color:var(--fg);margin:0}.box.stip .tx span{font-size:13px;color:var(--fg2)}
+.box.stip .tb{display:flex;gap:8px;flex-wrap:wrap}.chip.pri{background:var(--green);border-color:var(--green);color:#fff;text-decoration:none}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -879,7 +884,7 @@ function rowHtml(m){
   const stu=!done&&!!(pr&&pr.st),lk=isLocked(m);
   return `<li class="row ${lk?"lk":done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
     ${lk?`<span class="chk lkc" aria-label="Bloqueada">${LOCK}</span>`:`<button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>`}
-    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${(()=>{const q=qbList().filter(x=>x.mid===m.id);if(!q.length)return "";const nv=q.filter(x=>qbStat(x,"novas")).length;return `<span class="rb qbk">${nv?nv+(nv===1?" questão nova":" questões novas")+" no banco":q.length+" no banco"}</span>`})()}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
 function revRow(r){
@@ -1458,7 +1463,7 @@ const QBINSTR=[
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
 const LTR=["A","B","C","D","E"];
-const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"todas",n:"20",ord:"aleatoria",q:"",more:50,queue:[],i:0,ans:null,sel:"",strike:{},ses:{ok:0,er:0,bl:0,errs:[]},paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
+const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"novas",stL:"todas",n:"20",ord:"aleatoria",q:"",more:50,queue:[],i:0,ans:null,sel:"",strike:{},ses:{ok:0,er:0,bl:0,errs:[]},paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
 function qsWrite(list){
   list.forEach(([id,d])=>{if(d)QS[id]=d;else delete QS[id]});
   if(fb.on&&fb.qcol){
@@ -1518,13 +1523,15 @@ function qbImport(){
   qb.groups=[];qb.items=[];qb.errs=[];qb.paste="";qb.err="";render();
 }
 const qbList=()=>Object.entries(QS).map(([id,q])=>({id,...q}));
-function qbFilter(withStatus){
+const QST=[["novas","Ainda não resolvidas"],["erradas","Errei na última vez"],["acertadas","Acertei na última vez"],["jaerrei","Já errei alguma vez"],["feitas","Já resolvidas"],["favoritas","Favoritas"],["comentadas","Com meu comentário"],["todas","Todas"]];
+const qbStat=(q,st)=>st==="todas"?true:st==="novas"?!(q.ok+q.er+q.bl):st==="erradas"?q.last==="er":st==="acertadas"?q.last==="ok":st==="jaerrei"?q.er>0:st==="feitas"?(q.ok+q.er+q.bl)>0:st==="favoritas"?!!q.fav:st==="comentadas"?!!q.nt:true;
+function qbFilter(withStatus,key){
   const s=norm(qb.q);
-  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qb.st==="todas"||(qb.st==="novas"?!(q.ok+q.er+q.bl):qb.st==="erradas"?q.last==="er":qb.st==="feitas"?(q.ok+q.er)>0:qb.st==="favoritas"?!!q.fav:qb.st==="comentadas"?!!q.nt:true)));
+  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
 }
 const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:x.id<y.id?-1:1);
 function qbStart(ids){
-  let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true);
+  let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true,"st");
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
   pool=qb.ord==="aleatoria"?shuf(pool):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
@@ -1591,7 +1598,7 @@ function qbDone(){
     <div class="bar-act">${s.errs.length?`<button class="btn" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
     <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div></section>`;
 }
-function qbFilters(withStatus){
+function qbFilters(withStatus,key){key=key||"st";
   const all=qbList(),mats=SUBJ.filter(k=>all.some(q=>q.k===k));
   const mids=[...new Map(all.filter(q=>(!qb.mat||q.k===qb.mat)&&q.mid&&BY[q.mid]).map(q=>[q.mid,BY[q.mid].a])).entries()];
   const cads=[...new Set(all.filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)).map(q=>q.cad).filter(Boolean))].sort();
@@ -1600,14 +1607,14 @@ function qbFilters(withStatus){
     <div><label class="lbl" for="qf-mid">Assunto</label><select id="qf-mid" data-qbf="mid">${o("",qb.mid,"Todos")}${mids.map(([id,a])=>o(id,qb.mid,a.length>60?a.slice(0,58)+"…":a)).join("")}</select></div>
     <div><label class="lbl" for="qf-cad">Caderno</label><select id="qf-cad" data-qbf="cad">${o("",qb.cad,"Todos")}${cads.map(c=>o(c,qb.cad,c)).join("")}</select></div>
     <div><label class="lbl" for="qf-tipo">Tipo</label><select id="qf-tipo" data-qbf="tipo">${o("",qb.tipo,"Todos")}${o("CE",qb.tipo,"Certo ou Errado")}${o("ME",qb.tipo,"Múltipla escolha")}</select></div>
-    ${withStatus?`<div><label class="lbl" for="qf-st">Situação</label><select id="qf-st" data-qbf="st">${[["todas","Todas"],["novas","Novas"],["erradas","Que errei na última"],["feitas","Já respondidas"],["favoritas","Favoritas"],["comentadas","Com meu comentário"]].map(([v,l])=>o(v,qb.st,l)).join("")}</select></div>`:""}</div>`;
+    ${withStatus?`<div><label class="lbl" for="qf-${key}">Situação</label><select id="qf-${key}" data-qbf="${key}">${QST.map(([v,l])=>o(v,qb[key],l)).join("")}</select></div>`:""}</div>`;
 }
 function qbHome(){
   const all=qbList(),n=all.length;
   if(!n)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><p class="lead">Aqui você resolve questões inéditas, com gabarito comentado, de Certo ou Errado e de múltipla escolha. Peça as questões ao Claude no formato abaixo e adicione aqui. Tudo o que você resolver entra sozinho nas estatísticas.</p>${qbAddBox()}</section>`;
   const feitas=all.reduce((z,q)=>z+q.ok+q.er+q.bl,0),ok=all.reduce((z,q)=>z+q.ok,0),er=all.reduce((z,q)=>z+q.er,0);
   const fav=all.filter(q=>q.fav).length,wrong=all.filter(q=>q.last==="er").length,novas=all.filter(q=>!(q.ok+q.er+q.bl)).length;
-  const cnt=qbFilter(true).length;
+  const cnt=qbFilter(true,"st").length;
   const byK={};all.forEach(q=>{const x=byK[q.k]||(byK[q.k]={ok:0,er:0,n:0});x.ok+=q.ok;x.er+=q.er;x.n++});
   const kRows=SUBJ.filter(k=>byK[k]&&byK[k].ok+byK[k].er>0).map(k=>{const x=byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.ok+x.er+" respostas",tip:`${SHORT[k]}: ${x.ok} certas e ${x.er} erradas no banco`,r}}).sort((a,b)=>a.r-b.r);
   const byA={};all.forEach(q=>{if(q.ok+q.er<1)return;const key=q.k+"|"+(q.mid||norm(q.as));const x=byA[key]||(byA[key]={nome:q.mid&&BY[q.mid]?BY[q.mid].a:(q.as||SHORT[q.k]),k:q.k,ok:0,er:0});x.ok+=q.ok;x.er+=q.er});
@@ -1622,9 +1629,10 @@ function qbHome(){
       <div class="kpi purple"><div class="lab">Favoritas</div><div class="num">${fav}</div><div class="sub">marcadas com estrela</div></div>
     </div></section>
   <section class="sec"><div class="sec-h"><h2>Montar uma sessão</h2></div>
-    ${qbFilters(true)}
+    ${qbFilters(true,"st")}
     <div class="qfil" style="margin-top:10px"><div><label class="lbl" for="qf-n">Quantas questões</label><select id="qf-n" data-qbf="n">${["10","20","30","50","todas"].map(v=>`<option value="${v}" ${qb.n===v?"selected":""}>${v==="todas"?"Todas do filtro":v}</option>`).join("")}</select></div>
       <div><label class="lbl" for="qf-ord">Ordem</label><select id="qf-ord" data-qbf="ord"><option value="aleatoria" ${qb.ord==="aleatoria"?"selected":""}>Aleatória</option><option value="cadastro" ${qb.ord==="cadastro"?"selected":""}>Ordem em que foram adicionadas</option></select></div></div>
+    <p class="muted" style="font-size:13px;margin:10px 2px 0">Por padrão aparecem só as questões que você ainda não resolveu. Troque a situação para refazer as que errou, as que acertou ou as favoritas.</p>
     <div class="bar-act"><button class="btn" data-act="qb-start" ${cnt?"":"disabled"}>Começar${cnt?` (${Math.min(cnt,qb.n==="todas"?cnt:+qb.n)} de ${cnt})`:""}</button><button class="btn alt" data-act="qb-view" data-v="lista">Ver todas as questões</button></div></section>
   ${kRows.length||weak.length?`<section class="sec"><div class="grid2">${kRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por matéria</h3><p>Só as questões do banco</p></div></div>${barsHtml(kRows)}</div>`:""}
     ${weak.length?`<div class="card"><div class="card-h"><div><h3>Assuntos mais fracos</h3><p>Menor acerto, com ao menos 3 respostas</p></div></div><ul class="list">${weak.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${qbTag(x.k)}<span>${x.ok} certas · ${x.er} erradas</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul></div>`:""}</div></section>`:""}
@@ -1646,7 +1654,7 @@ function qbAddBox(){
       <textarea class="in" id="qb-instr" readonly style="min-height:260px">${esc(QBINSTR)}</textarea><div class="bar-act"><button class="btn alt" data-act="qb-copy">${qb.copied?"Copiado":"Copiar instruções"}</button></div></details>`;
 }
 function qbLista(){
-  const items=qbOrdered(qbFilter(true)),sh=items.slice(0,qb.more);
+  const items=qbOrdered(qbFilter(true,"stL")),sh=items.slice(0,qb.more);
   const row=q=>{
     const op=!!qb.open[q.id],n=q.ok+q.er+q.bl,gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
     return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
@@ -1656,7 +1664,7 @@ function qbLista(){
   };
   return `<section class="sec" style="margin-top:20px"><div class="ak-top"><button class="chip" data-act="qb-view" data-v="home">Voltar</button><span>${items.length} ${items.length===1?"questão":"questões"}</span></div><h2 style="margin-top:12px">Todas as questões</h2>
     ${qb.msg?`<div class="msg">${esc(qb.msg)}</div>`:""}
-    ${qbFilters(true)}<div style="margin-top:10px"><label class="lbl" for="qb-q">Buscar</label><input class="in" id="qb-q" type="search" placeholder="Palavra do enunciado ou do assunto" value="${esc(qb.q)}"></div>
+    ${qbFilters(true,"stL")}<div style="margin-top:10px"><label class="lbl" for="qb-q">Buscar</label><input class="in" id="qb-q" type="search" placeholder="Palavra do enunciado ou do assunto" value="${esc(qb.q)}"></div>
     ${sh.length?`<ul class="qul">${sh.map(row).join("")}</ul>${items.length>sh.length?`<div class="bar-act"><button class="btn alt" data-act="qb-more">Mostrar mais (${items.length-sh.length})</button></div>`:""}`:`<div class="empty">Nenhuma questão com esses filtros.</div>`}</section>`;
 }
 function qbHtml(){
@@ -1669,7 +1677,13 @@ function qbHtml(){
 function qbClick(a,t,e){
   if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
   if(a==="qb-start"){qbStart();return true}
+  if(a==="qb-add"){closeSheet();tab="banco";menu=false;qb.view="home";render();const el=document.querySelector(".imp-box");if(el)el.scrollIntoView({behavior:"smooth",block:"center"});return true}
   if(a==="qb-one"){qbStart([t.dataset.id]);return true}
+  if(a==="qb-meta"){
+    const m=BY[t.dataset.id];if(!m)return true;
+    const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
+    qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.tipo="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
+    closeSheet();tab="banco";menu=false;qbStart();return true}
   if(a==="qb-quit"){qb.view="home";qb.ans=null;render();window.scrollTo(0,0);return true}
   if(a==="qb-sel"){qb.sel=t.dataset.v;render();return true}
   if(a==="qb-strike"){const i=t.dataset.i;qb.strike[i]=!qb.strike[i];if(qb.strike[i]&&qb.sel===LTR[+i])qb.sel="";render();return true}
@@ -2350,6 +2364,26 @@ function mtChange(e){
   return false;
 }
 
+/* ---------- sugestão de como estudar a meta ---------- */
+function studyTip(m,ro){
+  const p=P()[m.id]||{},qs=qbList().filter(q=>q.mid===m.id),n=qs.length;
+  const nNov=qs.filter(q=>qbStat(q,"novas")).length,nErr=qs.filter(q=>q.last==="er").length;
+  const nv=(p.vd||[]).length,na=(p.ar||[]).length;
+  const li=(t,sub,btn)=>`<li><div class="tx"><b>${t}</b><span>${sub}</span></div>${btn&&!ro?`<div class="tb">${btn}</div>`:""}</li>`;
+  const rows=[];
+  if(n){
+    const btns=`${nNov?`<button class="chip pri" data-act="qb-meta" data-id="${m.id}" data-m="novas">Resolver as ${nNov} novas</button>`:""}${nErr?`<button class="chip" data-act="qb-meta" data-id="${m.id}" data-m="erradas">Refazer as ${nErr} que errei</button>`:""}${!nNov&&!nErr?`<button class="chip" data-act="qb-meta" data-id="${m.id}" data-m="todas">Resolver de novo</button>`:""}`;
+    rows.push(li("Estude pelas questões do banco",`${n} ${n===1?"questão":"questões"} desta meta: ${nNov} ${nNov===1?"nova":"novas"}, ${nErr} para refazer`,btns));
+  }else if(!p.lk&&(m.k==="LIN"||m.k==="ASR")){
+    rows.push(li("Estude por resumo e questões inéditas","Esta matéria quase não tem questões prontas. Peça ao Claude um resumo e questões inéditas desta meta e adicione no Banco de questões.",`<button class="chip pri" data-act="qb-add">Abrir o Banco de questões</button>`));
+  }else if(!p.lk){
+    rows.push(li("Estude a teoria e resolva questões","Esta meta ainda não tem questões no banco. Cole abaixo a pasta do Tec Concursos ou peça questões inéditas ao Claude.",`<button class="chip" data-act="qb-add">Adicionar questões ao banco</button>`));
+  }
+  if(p.lk)rows.push(li("Questões no Tec Concursos","Pasta já vinculada a esta meta.",`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`));
+  if(nv||na||p.nt)rows.push(li("Material guardado",[nv?`${nv} ${nv===1?"vídeo":"vídeos"}`:"",na?`${na} ${na===1?"arquivo":"arquivos"}`:"",p.nt?"observações":""].filter(Boolean).join(" · "),""));
+  return `<div class="box stip"><b>Como estudar esta meta</b><ul>${rows.join("")}</ul></div>`;
+}
+
 /* ---------- ficha da meta ---------- */
 let sheetId=null,draft=null;
 function openSheet(id){
@@ -2378,6 +2412,7 @@ function openSheet(id){
     ${m.w?`<p class="sh-p">${esc(m.w)}</p>`:""}
     ${m.g?`<ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
     ${m.ft?`<p class="sh-p"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
+    ${!dyn?studyTip(m,ro):""}
     ${!dyn&&!ro?`<div id="mt-box">${mtBoxHtml(id)}</div>`:""}
     <div class="f">
       ${r>1?fld("r","Repetições feitas",`de ${r}`):`<div class="fr"><div class="fl">Concluída</div><button class="switch" role="switch" id="f-done" aria-checked="${draft.r>=1}" ${ro?"disabled":""}></button></div>`}
