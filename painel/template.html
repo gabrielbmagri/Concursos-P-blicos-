@@ -25,6 +25,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .top .eyebrow{color:#33503f}
 h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spacing:.02em;text-transform:uppercase;background:linear-gradient(95deg,#0a5c3a 0%,#087a40 45%,#1557b6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .mgap{height:46px}
+.splash{min-height:70vh;display:grid;place-items:center}.splash i{width:30px;height:30px;border-radius:50%;border:4px solid #d9efe2;border-top-color:#0b7a3c;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
 .sw:empty{display:none}
 .sw{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg2)}
 .sw .note{max-width:220px;line-height:1.25;text-align:right}
@@ -490,7 +491,8 @@ function initFirebase(){
           else real=m;
           if(first){first=false;sel=curWeek();fb.pReady=true;maybeBackup()}
           persistLocal();autoDemo();sync="firebase";render();
-        },err=>{sync="erro";fb.err="Não consegui sincronizar: "+(err.code||err.message);render()});
+        },err=>{sync="erro";fb.pReady=true;fb.err="Não consegui sincronizar: "+(err.code||err.message);render()});
+        setTimeout(()=>{if(fb.user&&!fb.pReady){fb.pReady=true;render()}},7000);
         const ub=fb.fs.collection("usuarios").doc(u.uid);
         fb.ccol=ub.collection("cartoes");fb.rcol=ub.collection("revlog");
         let cf=true;
@@ -848,7 +850,7 @@ function rowHtml(m){
   const stu=!done&&!!(pr&&pr.st);
   return `<li class="row ${done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
     <button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
 function revRow(r){
@@ -870,7 +872,7 @@ function homeHtml(){
   const frac=ws.fr, isCur=sel===cw;
   const dayN=Math.max(1,Math.min(7,dday(T,pd(w.i))+1));
   const expect=isCur?dayN/7:(sel<cw?1:0);
-  const nxt=L.filter(m=>!isDone(m))[0],cs=demo?null:curStudy();
+  const nxt=L.filter(m=>!isDone(m))[0],cs=demo?null:curStudy(),DA=durList(),DW=DA.filter(x=>x.wi===sel);
   const dots=L.map(m=>`<span class="dt ${isDone(m)?"d":rdone(m)?"p":""}" style="--c:${mcolor(m)}" data-tip="${esc(m.a)}"></span>`).join("");
   const movedOut=ALL.filter(m=>m.wi===sel&&ew(m)!==sel).length;
   const days=dday(EXAM,T), wkLeft=Math.ceil(days/7);
@@ -944,6 +946,8 @@ function homeHtml(){
       <div class="num" style="font-size:clamp(17px,5.4vw,24px);line-height:1.2;overflow-wrap:anywhere">${weak?SHORT[weak.k]:"Sem dados"}</div>
       <div class="sub">${weak?`${pc(weak.r)} de acertos em ${num(weak.n)} questões`:"Aparece após 10 questões por matéria"}</div>
       <div class="viz">${weak?`<div class="bar2"><i style="width:${weak.r*100}%"></i></div>`:""}</div></div>
+    <div class="kpi slate"><div class="lab">Tempo por meta na semana</div><div class="num" style="font-size:clamp(22px,6vw,32px)">${DW.length?fmtDur(avgDur(DW)):"–"}</div><div class="sub">${DW.length?`média de ${DW.length} ${DW.length===1?"meta concluída":"metas concluídas"} na semana ${sel+1}`:"Aparece quando você concluir uma meta que começou pelo modo estudando"}</div></div>
+    <div class="kpi indigo"><div class="lab">Tempo por meta, geral</div><div class="num" style="font-size:clamp(22px,6vw,32px)">${DA.length?fmtDur(avgDur(DA)):"–"}</div><div class="sub">${DA.length?`média de ${DA.length} ${DA.length===1?"meta":"metas"}, do primeiro toque até concluir`:"Média de todas as semanas"}</div></div>
   </section>
 
   <section class="sec" aria-label="Panorama da semana">
@@ -1813,6 +1817,9 @@ function perfHtml(){
   const cRows=SUBJ.map(k=>{const s=A.mat[k];return {l:SHORT[k],c:`var(--m-${k})`,f:s.blocks?s.done/s.blocks:0,v:s.done+"/"+s.blocks,s:"",tip:`${SHORT[k]}: ${s.done} de ${s.blocks} assuntos vistos`,m:s.blocks?s.done/s.blocks:0}}).sort((a,b)=>b.m-a.m);
   const tmax=Math.max(1,...Object.values(A.tipo));
   const tRows=Object.entries(A.tipo).sort((a,b)=>b[1]-a[1]).map(([l,v])=>({l,c:"var(--blue)",f:v/tmax,v:num(v),s:n?Math.round(v/n*100)+"%":"",tip:`${l}: ${v} questões`}));
+  const DL=durList(),dmx=Math.max(1,...SUBJ.map(k=>avgDur(DL.filter(x=>x.m.k===k))||0));
+  const dmRows=SUBJ.map(k=>{const a=DL.filter(x=>x.m.k===k),v=avgDur(a);return v==null?null:{l:SHORT[k],c:`var(--m-${k})`,f:v/dmx,v:fmtDur(v),s:a.length+(a.length===1?" meta":" metas"),tip:`${SHORT[k]}: média de ${fmtDur(v)} em ${a.length} metas`,m:v}}).filter(Boolean).sort((a,b)=>b.m-a.m);
+  const dTop=DL.slice().sort((a,b)=>b.dur-a.dur).slice(0,8);
   const hm=`<div class="heat" style="--n:${WK.length}"><div></div>${WK.map((w,i)=>`<div class="h">${i+1}</div>`).join("")}${SUBJ.map(k=>`<div class="y" style="--c:var(--m-${k})"><i></i><span>${SHORT[k]}</span><span class="sh">${k}</span></div>${A.heat[k].map((c,i)=>{const r=rate(c),nn=tot_(c);if(r==null)return `<div class="cell ${i===cw?"cur":""}" data-tip="${SHORT[k]} · semana ${i+1}: sem questões"></div>`;const al=.12+.88*Math.pow(r,1.3);return `<div class="cell ${al>.5?"hot":""} ${i===cw?"cur":""}" style="background:rgba(37,99,235,${al.toFixed(2)})" data-tip="${SHORT[k]} · semana ${i+1}: ${pc(r)} em ${nn} questões">${Math.round(r*100)}</div>`}).join("")}`).join("")}</div>`;
   return `
   <section class="sec" style="margin-top:20px"><div class="grid2">
@@ -1824,6 +1831,8 @@ function perfHtml(){
     <div class="card"><div class="card-h"><div><h3>Questões por matéria</h3><p>Feitas e previstas</p></div></div>${barsHtml(qRows)}</div>
     <div class="card"><div class="card-h"><div><h3>Cobertura do edital</h3><p>Assuntos novos vistos, sem revisões, simulados ou reforços</p></div></div>${barsHtml(cRows)}</div>
     <div class="card"><div class="card-h"><div><h3>De onde vieram as questões</h3><p>Questões feitas por tipo de atividade</p></div></div>${n?barsHtml(tRows):'<div class="empty">Sem questões registradas.</div>'}</div>
+    ${DL.length?`<div class="card"><div class="card-h"><div><h3>Tempo por matéria</h3><p>Média para concluir uma meta, da maior para a menor</p></div></div>${barsHtml(dmRows)}</div>
+    <div class="card"><div class="card-h"><div><h3>Metas que mais demoraram</h3><p>Do primeiro toque em estudando até a conclusão</p></div></div><ul class="list">${dTop.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.m.a)}</div><div class="s">${tagHtml(x.m)}<span>Semana ${x.wi+1}</span></div></div><div class="res"><span class="sc na">${fmtDur(x.dur)}</span></div></li>`).join("")}</ul></div>`:`<div class="card wide"><div class="card-h"><div><h3>Tempo para concluir metas</h3></div></div><div class="empty">Quando você concluir metas que começou pelo modo estudando, aparecem aqui a média por matéria e as metas que mais demoraram.</div></div>`}
     <div class="card wide"><div class="card-h"><div><h3>Mapa de acertos</h3><p>Matéria por semana. Quanto mais forte o azul, maior o acerto.</p></div><div class="legend"><span style="--c:rgba(37,99,235,.2)"><i></i>0%</span><span style="--c:rgba(37,99,235,1)"><i></i>100%</span></div></div>${hm}</div>
   </div></section>`;
 }
@@ -1864,6 +1873,7 @@ function planHtml(){
 /* ---------- render ---------- */
 const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["subtopicos","Subtópicos"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
+  if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
   WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
@@ -1954,7 +1964,15 @@ function drawCharts(){
 
 /* ---------- modo estudando e material da meta ---------- */
 const mt={busy:"",err:""};
-const hasEnr=d=>!!(d&&(d.lk||d.nt||(d.vd&&d.vd.length)||(d.ar&&d.ar.length)||d.st));
+const hasEnr=d=>!!(d&&(d.lk||d.nt||(d.vd&&d.vd.length)||(d.ar&&d.ar.length)||d.st||d.st0));
+const fmtDur=ms=>{const m=Math.round(ms/60000);if(m<1)return "menos de 1 min";if(m<60)return m+" min";const h=Math.floor(m/60),r=m%60;if(h<48)return h+" h"+(r?" "+r+" min":"");const d=Math.floor(h/24),hh=h%24;return d+" d"+(hh?" "+hh+" h":"")};
+const avgDur=a=>a.length?a.reduce((z,x)=>z+x.dur,0)/a.length:null;
+function durList(){
+  if(demo)return [];
+  const out=[];
+  for(const id in real){const d=real[id];if(!d.dur)continue;const m=BY[id];if(!m)continue;out.push({m,dur:d.dur,wi:ew(m),dt:d.dt})}
+  return out;
+}
 function saveMeta(id,patch){
   if(demo)return;
   const d={...(real[id]||{}),...patch};
@@ -1968,7 +1986,7 @@ function curStudy(){
 }
 function startStudy(id){
   for(const o in real){if(o!==id&&real[o].st){const d={...real[o]};delete d.st;if(empty_(d))save(o,null);else save(o,d)}}
-  saveMeta(id,{st:Date.now()});
+  const now=Date.now();saveMeta(id,{st:now,st0:(real[id]||{}).st0||now});
 }
 function stopStudy(id){const d={...(real[id]||{})};delete d.st;if(empty_(d))save(id,null);else save(id,d)}
 const stTxt=ts=>{const d=ymd(new Date(ts));return d===ymd(today())?"Iniciada hoje":"Iniciada em "+fmtDay(d)};
@@ -2038,6 +2056,8 @@ function openSheet(id){
     <h2 class="sh-t">${esc(m.a)}</h2>
     <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
     ${rvInfo}
+    ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
+    ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
     ${!dyn&&!ro&&!isDone(m)?`<div class="bar-act" style="margin:12px 0 0">${(P()[id]||{}).st?`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-stop">Estudando agora. Toque para parar</button>`:`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-start">Começar a estudar</button>`}</div>`:""}
     ${m.ls?`<div class="box"><b>Lei seca sugerida</b><p>${esc(m.ls)}</p><small>Confira a numeração no texto oficial atualizado.</small></div>`:""}
     ${m.tp&&m.tp.length?`<div class="box"><b>${dyn?"O que revisar":"O que estudar"}</b><ul class="tp">${m.tp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
@@ -2071,7 +2091,7 @@ function sheetSave(){
   if(tot_(draft)){doc.c=draft.c;doc.e=draft.e;doc.b=draft.b}
   if(draft.nc!=null)doc.nc=draft.nc;if(draft.ne!=null)doc.ne=draft.ne;if(draft.tl!=null)doc.tl=draft.tl;
   if(old.mw!=null)doc.mw=old.mw;
-  ["lk","nt","vd","ar"].forEach(k=>{if(old[k])doc[k]=old[k]});if(old.st&&!done)doc.st=old.st;
+  ["lk","nt","vd","ar"].forEach(k=>{if(old[k])doc[k]=old[k]});if(old.st&&!done)doc.st=old.st;if(old.st0&&!done)doc.st0=old.st0;if(done){const t0=old.st0||old.st;if(old.dur)doc.dur=old.dur;else if(t0)doc.dur=Math.max(0,Date.now()-t0)}
   if(done||tot_(draft)||draft.nc!=null||draft.tl!=null)doc.dt=draft.dt||ymd(new Date());
   if(empty_(doc)){save(sheetId,null)}else save(sheetId,doc);
   closeSheet();
@@ -2079,9 +2099,11 @@ function sheetSave(){
 function toggle(id){
   if(demo)return openSheet(id);
   const m=getM(id),p=real[id];if(!m)return;
-  if(isDone(m)){const d={...p,r:0};if(empty_(d)){save(id,null)}else{save(id,d)}return}
+  if(isDone(m)){const d={...p,r:0};delete d.dur;delete d.st0;if(empty_(d)){save(id,null)}else{save(id,d)}return}
   if(!m.rv&&!m.rg&&!(p&&p.st)){startStudy(id);return}
-  const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())};delete d.st;
+  const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())},t0=p&&(p.st0||p.st);
+  if(t0)d.dur=Math.max(0,Date.now()-t0);
+  delete d.st;delete d.st0;
   save(id,d);
 }
 function moveTo(id,wi){
@@ -2203,7 +2225,8 @@ addEventListener("orientationchange",()=>setTimeout(()=>A&&drawCharts(),250));
 /* ---------- início ---------- */
 loadLocal();autoDemo();
 sel=curWeek();
+const fbStarted=initFirebase();
 render();
-if(!initFirebase())initDb();
+if(!fbStarted)initDb();
 })();
 </script>
