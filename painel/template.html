@@ -360,6 +360,11 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .qopt.ok{border-color:var(--good);background:var(--good-t)}.qopt.ok .lt{background:var(--good);color:#fff}
 .qopt.bad{border-color:var(--bad);background:var(--bad-t)}.qopt.bad .lt{background:var(--bad);color:#fff}
 .qopt.strk .tx{text-decoration:line-through;opacity:.5}
+.qpal{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.qpd{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--soft2);font-size:12.5px;font-weight:700;color:var(--fg2);background:var(--bg)}
+.qpd.ok{background:var(--good);border-color:var(--good);color:#fff}.qpd.er{background:var(--bad);border-color:var(--bad);color:#fff}.qpd.bl{background:var(--soft2);color:var(--fg2)}
+.qpd.cur{outline:3px solid #ffd21a;outline-offset:1px}
+.qnav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.qnav .btn{margin:0;padding:13px}.qnav .btn:disabled{opacity:.4}
 .qx{flex:none;align-self:center;width:32px;height:32px;border-radius:50%;margin-top:8px;color:var(--fg3);font-size:15px}.qx:hover{background:var(--soft)}
 .qres{padding:12px 16px;border-radius:14px;font-weight:800;font-size:16px}.qres small{display:block;font-weight:600;font-size:13px;margin-top:2px}
 .qres.ok{background:var(--good-t);color:var(--good)}.qres.er{background:var(--bad-t);color:var(--bad)}.qres.bl{background:var(--soft2);color:var(--fg2)}
@@ -1463,7 +1468,7 @@ const QBINSTR=[
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
 const LTR=["A","B","C","D","E"];
-const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"novas",stL:"todas",n:"20",ord:"aleatoria",q:"",more:50,queue:[],i:0,ans:null,sel:"",strike:{},ses:{ok:0,er:0,bl:0,errs:[]},paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
+const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"novas",stL:"todas",n:"20",ord:"aleatoria",q:"",more:50,queue:[],i:0,sans:{},dr:{},confirm:false,paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
 function qsWrite(list){
   list.forEach(([id,d])=>{if(d)QS[id]=d;else delete QS[id]});
   if(fb.on&&fb.qcol){
@@ -1512,11 +1517,11 @@ function qbReadFile(file){
   rd.readAsText(file,"UTF-8");
 }
 function qbImport(){
-  const list=[],seen=new Set();let skipped=0,dup=0;
+  const list=[],seen=new Set(),base=Date.now();let skipped=0,dup=0;
   qb.items.forEach(c=>{
     const g=qb.groups[c.gi];if(!g||!g.k){skipped++;return}
     const id=qbId(g.k,c.e);if(QS[id]||seen.has(id)){dup++;return}seen.add(id);
-    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),o:base+list.length,ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
   });
   qb.msg=`Importei ${list.length} ${list.length===1?"questão":"questões"}.${dup?` ${dup} já existiam e foram ignoradas.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
   if(list.length)qsWrite(list);
@@ -1529,13 +1534,13 @@ function qbFilter(withStatus,key){
   const s=norm(qb.q);
   return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
 }
-const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:x.id<y.id?-1:1);
+const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:(x.o||0)!==(y.o||0)?(x.o||0)-(y.o||0):x.id<y.id?-1:1);
 function qbStart(ids){
   let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true,"st");
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
   pool=qb.ord==="aleatoria"?shuf(pool):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
-  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qb.ans=null;qb.sel="";qb.strike={};qb.ses={ok:0,er:0,bl:0,errs:[]};qb.err="";qb.view="session";render();window.scrollTo(0,0);
+  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
 }
 function qbLog(q,res){
   if(demo)return;
@@ -1547,56 +1552,70 @@ function qbLog(q,res){
   save(id,{...d,rows});
 }
 function qbAnswer(resp){
-  const id=qb.queue[qb.i],q=QS[id];if(!q||qb.ans)return;
+  const id=qb.queue[qb.i],q=QS[id];if(!q||qb.sans[id])return;
   const res=resp===""?"bl":resp===q.g?"ok":"er";
-  qb.ans={resp,res};
-  const nq={...q,[res]:(q[res]||0)+1,last:res,lt:T0()};
-  qb.ses[res]++;if(res==="er")qb.ses.errs.push(id);
-  qsWrite([[id,nq]]);
+  qb.sans[id]={resp,res};
+  qsWrite([[id,{...q,[res]:(q[res]||0)+1,last:res,lt:T0()}]]);
   qbLog(q,res);
   render();
 }
-function qbNext(){
-  if(qb.i+1>=qb.queue.length){qb.view="done"}else{qb.i++}
-  qb.ans=null;qb.sel="";qb.strike={};render();window.scrollTo(0,0);
+const qd=id=>qb.dr[id]||(qb.dr[id]={sel:"",strike:{}});
+function qbGo(i){
+  if(i<0||i>=qb.queue.length)return;
+  qb.i=i;qb.confirm=false;render();window.scrollTo(0,0);
+}
+const qbPend=()=>qb.queue.filter(id=>!qb.sans[id]).length;
+function qbSum(){
+  const r={ok:0,er:0,bl:0,errs:[]};
+  qb.queue.forEach(id=>{const a=qb.sans[id];if(!a)return;r[a.res]++;if(a.res==="er")r.errs.push(id)});
+  r.pend=qb.queue.length-r.ok-r.er-r.bl;return r;
+}
+function qbFinish(force){
+  if(qbPend()&&!force){qb.confirm=true;render();window.scrollTo(0,0);return}
+  qb.confirm=false;qb.view="done";render();window.scrollTo(0,0);
 }
 function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
 const qbTag=k=>SUBJ.includes(k)?`<span class="tag" style="--c:var(--m-${k})"><i></i>${SHORT[k]}</span>`:"";
-function qbOpts(q,st){
-  // st: null (antes de responder) ou {resp}
+function qbOpts(q,st,id){
+  const d=qd(id);
   return q.o.map((tx,i)=>{const L=LTR[i],isG=q.g===L,isR=st&&st.resp===L;
-    const cls=["qopt",st?(isG?"ok":isR?"bad":""):(qb.sel===L?"sel":""),!st&&qb.strike[i]?"strk":""].join(" ");
-    return `<div class="qrow"><button class="${cls}" ${st?"disabled":`data-act="qb-sel" data-v="${L}"`}><span class="lt">${L}</span><span class="tx">${esc(tx)}</span></button>${st?"":`<button class="qx" data-act="qb-strike" data-i="${i}" aria-label="${qb.strike[i]?"Desfazer o risco":"Riscar"} da alternativa ${L}">${qb.strike[i]?"↺":"✕"}</button>`}</div>`}).join("");
+    const cls=["qopt",st?(isG?"ok":isR?"bad":""):(d.sel===L?"sel":""),!st&&d.strike[i]?"strk":""].join(" ");
+    return `<div class="qrow"><button class="${cls}" ${st?"disabled":`data-act="qb-sel" data-v="${L}"`}><span class="lt">${L}</span><span class="tx">${esc(tx)}</span></button>${st?"":`<button class="qx" data-act="qb-strike" data-i="${i}" aria-label="${d.strike[i]?"Desfazer o risco":"Riscar"} da alternativa ${L}">${d.strike[i]?"↺":"✕"}</button>`}</div>`}).join("");
 }
 function qbSession(){
   const id=qb.queue[qb.i],q=QS[id];
   if(!q){qb.view="home";return qbHome()}
-  const tot=qb.queue.length,a=qb.ans;
+  const tot=qb.queue.length,a=qb.sans[id],S=qbSum(),answered=tot-S.pend,d=qd(id);
   const gTxt=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
-  const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot}</span></div><div class="ak-bar"><i style="width:${(qb.i+(a?1:0))/tot*100}%"></i></div>`;
+  const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot} · ${answered} ${answered===1?"respondida":"respondidas"}</span><button class="chip" data-act="qb-fin">Finalizar</button></div><div class="ak-bar"><i style="width:${answered/tot*100}%"></i></div>
+  <div class="qpal" role="group" aria-label="Ir para a questão">${qb.queue.map((x,i)=>{const r=qb.sans[x];return `<button class="qpd ${r?r.res:""} ${i===qb.i?"cur":""}" data-act="qb-go" data-i="${i}" aria-label="Questão ${i+1}${r?(r.res==="ok"?", certa":r.res==="er"?", errada":", em branco"):", sem resposta"}" ${i===qb.i?'aria-current="true"':""}>${i+1}</button>`}).join("")}</div>`;
+  const conf=qb.confirm?`<div class="msg" style="background:var(--warn-t);margin-bottom:12px"><b>Faltam ${S.pend} ${S.pend===1?"questão sem resposta":"questões sem resposta"}.</b><br>Elas não serão contadas e continuam como não resolvidas no banco.<div class="bar-act" style="margin-top:10px"><button class="btn" style="padding:10px 18px" data-act="qb-fincont">Voltar para responder</button><button class="btn alt" style="padding:10px 18px" data-act="qb-finok">Finalizar assim mesmo</button></div></div>`:"";
   const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
   let ans="";
   if(!a){
     ans=q.t==="CE"?`<div class="ak-btns two"><button class="gbtn g3" data-act="qb-ans" data-v="C">Certo</button><button class="gbtn g1" data-act="qb-ans" data-v="E">Errado</button></div>`
-      :`<div style="margin-top:6px">${qbOpts(q,null)}</div><div class="bar-act"><button class="btn" data-act="qb-ans" data-v="${qb.sel}" ${qb.sel?"":"disabled"}>Confirmar resposta</button></div>`;
-    ans+=`<div style="margin-top:10px;text-align:center"><button class="link" data-act="qb-ans" data-v="">Pular, deixar em branco</button></div>`;
+      :`<div style="margin-top:6px">${qbOpts(q,null,id)}</div><div class="bar-act"><button class="btn" data-act="qb-ans" data-v="${d.sel}" ${d.sel?"":"disabled"}>Confirmar resposta</button></div>`;
+    ans+=`<div style="margin-top:12px;text-align:center"><button class="link" data-act="qb-blank">Marcar esta questão como em branco</button></div>`;
   }else{
     const ok=a.res==="ok";
     ans=`<div class="qres ${a.res}">${ok?"Você acertou":a.res==="bl"?"Em branco":"Você errou"}<small>Gabarito: ${gTxt}${!ok&&a.resp?` · sua resposta: ${q.t==="CE"?(a.resp==="C"?"Certo":"Errado"):a.resp}`:""}</small></div>
-    ${q.t==="ME"?`<div style="margin-top:8px">${qbOpts(q,a)}</div>`:""}
+    ${q.t==="ME"?`<div style="margin-top:8px">${qbOpts(q,a,id)}</div>`:""}
     <div class="box" style="margin-top:14px"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
     <label class="lbl" for="qb-nt" style="margin-top:14px">Meu comentário</label>
     <textarea class="in" id="qb-nt" style="min-height:80px;font-family:var(--font)" placeholder="Anote o que errou, uma pegadinha, uma dúvida">${esc(q.nt||"")}</textarea>
-    <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button><button class="btn" data-act="qb-next">${qb.i+1>=tot?"Ver resultado":"Próxima questão"}</button></div>`;
+    <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button></div>`;
   }
-  return `<section class="sec" style="margin-top:20px">${head}<div class="ak-card" style="align-items:stretch">${metaL}${q.as?`<div class="muted" style="font-size:13px">${esc(q.as)}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div></section>`;
+  const last=qb.i+1>=tot;
+  const nav=`<div class="qnav"><button class="btn alt" data-act="qb-prev" ${qb.i?"":"disabled"}>‹ Anterior</button><button class="btn ${a?"":"alt"}" data-act="qb-next">${last?"Finalizar":"Próxima ›"}</button></div>`;
+  return `<section class="sec" style="margin-top:20px">${head}${conf}<div class="ak-card" style="align-items:stretch">${metaL}${q.as?`<div class="muted" style="font-size:13px">${esc(q.as)}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div>${nav}</section>`;
 }
 function qbDone(){
-  const s=qb.ses,n=s.ok+s.er+s.bl;
-  return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.ok} ${s.ok===1?"acerto":"acertos"} em ${n} ${n===1?"questão":"questões"}</div>
+  const s=qbSum(),n=s.ok+s.er+s.bl;
+  return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.ok} ${s.ok===1?"acerto":"acertos"} em ${n} ${n===1?"questão respondida":"questões respondidas"}</div>
     <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div></div>
-    <div class="bar-act">${s.errs.length?`<button class="btn" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
-    <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div></section>`;
+    ${s.pend?`<p class="muted" style="font-size:13.5px;margin:6px 0 0">${s.pend} ${s.pend===1?"questão ficou sem resposta":"questões ficaram sem resposta"}. Elas não foram contadas e continuam como não resolvidas.</p>`:""}
+    <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
+    <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div></section>`;
 }
 function qbFilters(withStatus,key){key=key||"st";
   const all=qbList(),mats=SUBJ.filter(k=>all.some(q=>q.k===k));
@@ -1684,12 +1703,19 @@ function qbClick(a,t,e){
     const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
     qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.tipo="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
     closeSheet();tab="banco";menu=false;qbStart();return true}
-  if(a==="qb-quit"){qb.view="home";qb.ans=null;render();window.scrollTo(0,0);return true}
-  if(a==="qb-sel"){qb.sel=t.dataset.v;render();return true}
-  if(a==="qb-strike"){const i=t.dataset.i;qb.strike[i]=!qb.strike[i];if(qb.strike[i]&&qb.sel===LTR[+i])qb.sel="";render();return true}
+  if(a==="qb-quit"){qb.view="home";qb.confirm=false;render();window.scrollTo(0,0);return true}
+  if(a==="qb-sel"){const id=qb.queue[qb.i];if(id&&!qb.sans[id]){qd(id).sel=t.dataset.v;render()}return true}
+  if(a==="qb-strike"){const id=qb.queue[qb.i],d=qd(id),i=t.dataset.i;d.strike[i]=!d.strike[i];if(d.strike[i]&&d.sel===LTR[+i])d.sel="";render();return true}
   if(a==="qb-ans"){qbAnswer(t.dataset.v);return true}
-  if(a==="qb-next"){qbNext();return true}
-  if(a==="qb-redo"){const ids=qb.ses.errs.slice();qbStart(ids);return true}
+  if(a==="qb-blank"){qbAnswer("");return true}
+  if(a==="qb-prev"){qbGo(qb.i-1);return true}
+  if(a==="qb-next"){if(qb.i+1>=qb.queue.length)qbFinish();else qbGo(qb.i+1);return true}
+  if(a==="qb-go"){qbGo(+t.dataset.i);return true}
+  if(a==="qb-fin"){qbFinish();return true}
+  if(a==="qb-finok"){qbFinish(true);return true}
+  if(a==="qb-fincont"){qb.confirm=false;const i=qb.queue.findIndex(id=>!qb.sans[id]);if(i>=0)qbGo(i);else render();return true}
+  if(a==="qb-back"){qb.view="session";const i=qb.queue.findIndex(id=>!qb.sans[id]);qb.i=i>=0?i:0;render();window.scrollTo(0,0);return true}
+  if(a==="qb-redo"){const ids=qbSum().errs;qbStart(ids);return true}
   if(a==="qb-fav"){const q=QS[t.dataset.id];if(q)qbPatch(t.dataset.id,{fav:q.fav?0:1});render();return true}
   if(a==="qb-open"){qb.open[t.dataset.id]=!qb.open[t.dataset.id];render();return true}
   if(a==="qb-more"){qb.more+=50;render();return true}
