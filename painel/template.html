@@ -1521,20 +1521,28 @@ function qbImport(){
   qb.items.forEach(c=>{
     const g=qb.groups[c.gi];if(!g||!g.k){skipped++;return}
     const id=qbId(g.k,c.e);if(QS[id]||seen.has(id)){dup++;return}seen.add(id);
-    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),o:base+list.length,ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ix:base+list.length,ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
   });
   qb.msg=`Importei ${list.length} ${list.length===1?"questão":"questões"}.${dup?` ${dup} já existiam e foram ignoradas.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
   if(list.length)qsWrite(list);
   qb.groups=[];qb.items=[];qb.errs=[];qb.paste="";qb.err="";render();
 }
-const qbList=()=>Object.entries(QS).map(([id,q])=>({id,...q}));
+const qbBad=q=>q.t==="ME"&&!Array.isArray(q.o);
+let qbFixing=false;
+function qbRepair(){
+  if(qbFixing)return;const bad=Object.entries(QS).filter(([id,q])=>qbBad(q));
+  if(!bad.length)return;
+  qbFixing=true;setTimeout(()=>{qbFixing=false},0);
+  qsWrite(bad.map(([id])=>[id,null]));
+}
+const qbList=()=>{qbRepair();return Object.entries(QS).map(([id,q])=>({id,...q}))};
 const QST=[["novas","Ainda não resolvidas"],["erradas","Errei na última vez"],["acertadas","Acertei na última vez"],["jaerrei","Já errei alguma vez"],["feitas","Já resolvidas"],["favoritas","Favoritas"],["comentadas","Com meu comentário"],["todas","Todas"]];
 const qbStat=(q,st)=>st==="todas"?true:st==="novas"?!(q.ok+q.er+q.bl):st==="erradas"?q.last==="er":st==="acertadas"?q.last==="ok":st==="jaerrei"?q.er>0:st==="feitas"?(q.ok+q.er+q.bl)>0:st==="favoritas"?!!q.fav:st==="comentadas"?!!q.nt:true;
 function qbFilter(withStatus,key){
   const s=norm(qb.q);
   return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
 }
-const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:(x.o||0)!==(y.o||0)?(x.o||0)-(y.o||0):x.id<y.id?-1:1);
+const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:(x.ix||0)!==(y.ix||0)?(x.ix||0)-(y.ix||0):x.id<y.id?-1:1);
 function qbStart(ids){
   let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true,"st");
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
