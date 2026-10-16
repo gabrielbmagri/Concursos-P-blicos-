@@ -424,6 +424,7 @@ const GTIT={estudo:"Estudo e inglês",aval:"Simulado e discursiva",dom:"Domingo"
 const FASE={1:"Fase 1 · 1ª passada",2:"Fase 2 · reforço",3:"Fase 3 · reta final"};
 const WK=D.sem, ALL=WK.flatMap((w,wi)=>w.m.map(m=>(m.wi=wi,m)));
 const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
+const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
 const rp=m=>m.rp||1;
@@ -813,7 +814,7 @@ const rgItem=wi=>{const id=WK[wi].id+"~RG",doc=P()[id],due=pd(WK[wi].f);return {
 function reviewList(){
   const p=P(),T=today(),cw=curWeek(),out=[];
   for(const b of ALL){
-    if(b.t!=="teoria_questoes"||b.wi>=9)continue;
+    if(b.t!=="teoria_questoes"||b.wi>=9||b.k==="POR")continue;
     const bp=p[b.id];if(!bp||(bp.r||0)<1||!bp.dt)continue;
     let prev=bp.dt;
     for(let ix=0;ix<RV.iv.length;ix++){
@@ -834,10 +835,11 @@ function agg(){
   const addT=(g,v)=>{if(v)a.tipo[g]=(a.tipo[g]||0)+v};
   const addQ=(wi,dt,c,e,b,k,g)=>{const w=a.wk[wi];w.c+=c;w.e+=e;w.b+=b;a.tot.c+=c;a.tot.e+=e;a.tot.b+=b;const q=c+e+b;if(dt&&q)a.day[dt]=(a.day[dt]||0)+q;addT(g,q);if(k&&SUBJ.includes(k)){const s=a.mat[k];s.c+=c;s.e+=e;s.b+=b;const h=a.heat[k][wi];h.c+=c;h.e+=e;h.b+=b}};
   for(const m of ALL){
+    if(hid(m))continue;
     const wi=ew(m),w=a.wk[wi],done=isDone(m),it=ownItems(m),pr=p[m.id],pi=planItems(m);
     w.plan+=pi;w.n++;if(done)w.done++;
     a.tot.metas++;if(done)a.tot.done++;
-    addQ(wi,pr&&pr.dt,it.c,it.e,it.b,m.k,m.t==="teoria_questoes"?"Teoria e questões":m.t==="ingles"?"Inglês":grp(m)==="aval"?"Simulados":grp(m)==="dom"?"Domingo":"Reforço e outras");
+    addQ(wi,pr&&pr.dt,it.c,it.e,it.b,m.k,m.t==="teoria_questoes"?"Teoria e questões":m.t==="ingles"?"Inglês":m.t==="questoes"?"Blocos de questões":grp(m)==="aval"?"Simulados":grp(m)==="dom"?"Domingo":"Reforço e outras");
     if(SUBJ.includes(m.k)){const s=a.mat[m.k];s.plan+=pi;if(m.t==="teoria_questoes"){s.blocks++;if(done)s.done++}}
     if(m.t==="teoria_questoes"){a.content.n++;if(done)a.content.done++}
   }
@@ -2186,12 +2188,12 @@ function perfHtml(){
 /* ---------- matérias ---------- */
 function matHtml(){
   const weak=[];
-  ALL.forEach(m=>{if(!SUBJ.includes(m.k)||m.t!=="teoria_questoes")return;const it=itemsOf(m),n=tot_(it);if(n>=10)weak.push({m,r:rate(it),n})});
+  ALL.forEach(m=>{if(!SUBJ.includes(m.k)||m.t!=="teoria_questoes"||hid(m))return;const it=itemsOf(m),n=tot_(it);if(n>=10)weak.push({m,r:rate(it),n})});
   weak.sort((a,b)=>a.r-b.r);
   const W=weak.slice(0,6);
   const cards=SUBJ.map(k=>{
     const s=A.mat[k],r=rate(s),nn=tot_(s),open=!!openMat[k];
-    const items=ALL.filter(m=>m.k===k).map(m=>{const it=itemsOf(m),n=tot_(it),rr=rate(it),d=isDone(m);
+    const items=ALL.filter(m=>m.k===k&&!hid(m)).map(m=>{const it=itemsOf(m),n=tot_(it),rr=rate(it),d=isDone(m);
       return `<button class="as" data-act="open" data-id="${m.id}"><span class="w">S${m.wi+1}</span><span class="t">${esc(m.a)}</span>${n?`<span class="sc ${scCls(rr)}">${pc(rr)}</span>`:`<span class="sc na">${d?"visto":"–"}</span>`}</button>`}).join("");
     return `<div class="mat ${open?"open":""}"><button class="mat-h" data-act="mat" data-k="${k}" aria-expanded="${open}" style="--c:var(--m-${k})">
       <div class="mat-top"><div class="mat-n">${esc(MAT[k].n)}</div><span class="pill">${MAT[k].p} <span class="chev" style="margin-left:2px">›</span></span></div>
@@ -2223,7 +2225,7 @@ function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
-  WM=WK.map(()=>[]);ALL.forEach(m=>WM[ew(m)].push(m));
+  WM=WK.map(()=>[]);ALL.forEach(m=>{if(!hid(m))WM[ew(m)].push(m)});
   LOCKON=lockOn();LIB=libEff();
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
@@ -2313,7 +2315,7 @@ function drawCharts(){
 /* ---------- bloqueio de semanas ---------- */
 let LIB=0,LOCKON=false;
 const LOCK='<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
-const weekMetas=i=>ALL.filter(m=>ew(m)===i);
+const weekMetas=i=>ALL.filter(m=>!hid(m)&&ew(m)===i);
 const weekDone=i=>weekMetas(i).every(isDone);
 function frontier(){for(let i=0;i<lastWk;i++)if(!weekDone(i))return i;return lastWk}
 const lockOn=()=>!demo&&!((real["cfg-semana"]||{}).off);
@@ -2405,15 +2407,19 @@ function studyTip(m,ro){
   const nv=(p.vd||[]).length,na=(p.ar||[]).length;
   const li=(t,sub,btn)=>`<li><div class="tx"><b>${t}</b><span>${sub}</span></div>${btn&&!ro?`<div class="tb">${btn}</div>`:""}</li>`;
   const rows=[];
-  if(n){
+  if(m.t==="questoes"&&m.k==="POR"){
+    rows.push(li("Bloco geral de 30 questões",p.lk?"Pasta do Tec Concursos já vinculada abaixo.":"Cole abaixo a pasta do Tec Concursos para abrir direto daqui.",p.lk?`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`:""));
+  }else if(n){
     const btns=`${nNov?`<button class="chip pri" data-act="qb-meta" data-id="${m.id}" data-m="novas">Resolver as ${nNov} novas</button>`:""}${nErr?`<button class="chip" data-act="qb-meta" data-id="${m.id}" data-m="erradas">Refazer as ${nErr} que errei</button>`:""}${!nNov&&!nErr?`<button class="chip" data-act="qb-meta" data-id="${m.id}" data-m="todas">Resolver de novo</button>`:""}`;
     rows.push(li("Estude pelas questões do banco",`${n} ${n===1?"questão":"questões"} desta meta: ${nNov} ${nNov===1?"nova":"novas"}, ${nErr} para refazer`,btns));
+  }else if(m.t==="questoes"){
+    /* bloco geral: sem sugestão de teoria */
   }else if(!p.lk&&(m.k==="LIN"||m.k==="ASR")){
     rows.push(li("Estude por resumo e questões inéditas","Esta matéria quase não tem questões prontas. Peça ao Claude um resumo e questões inéditas desta meta e adicione no Banco de questões.",`<button class="chip pri" data-act="qb-add">Abrir o Banco de questões</button>`));
   }else if(!p.lk){
     rows.push(li("Estude a teoria e resolva questões","Esta meta ainda não tem questões no banco. Cole abaixo a pasta do Tec Concursos ou peça questões inéditas ao Claude.",`<button class="chip" data-act="qb-add">Adicionar questões ao banco</button>`));
   }
-  if(p.lk)rows.push(li("Questões no Tec Concursos","Pasta já vinculada a esta meta.",`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`));
+  if(p.lk&&m.t!=="questoes")rows.push(li("Questões no Tec Concursos","Pasta já vinculada a esta meta.",`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`));
   if(nv||na||p.nt)rows.push(li("Material guardado",[nv?`${nv} ${nv===1?"vídeo":"vídeos"}`:"",na?`${na} ${na===1?"arquivo":"arquivos"}`:"",p.nt?"observações":""].filter(Boolean).join(" · "),""));
   return `<div class="box stip"><b>Como estudar esta meta</b><ul>${rows.join("")}</ul></div>`;
 }

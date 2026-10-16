@@ -4,7 +4,7 @@ import json, sys, pathlib
 root = pathlib.Path(__file__).resolve().parent
 src = json.load(open(root.parent / "dados" / "cronograma.json", encoding="utf-8"))
 K = dict(ordem="o", bloco="b", materia="k", assunto="a", edital="e", tipo="t",
-         itens_alvo="i", repeticoes="rp", o_que_fazer="w", fonte_teoria="ft", lei_seca="ls", guia="g", topicos="tp")
+         itens_alvo="i", repeticoes="rp", o_que_fazer="w", fonte_teoria="ft", lei_seca="ls", guia="g", topicos="tp", legado="lg")
 def meta(m):
     out = {"id": m["id"]}
     for a, b in K.items():

@@ -3,9 +3,9 @@
   "concurso": "Câmara dos Deputados 2026 — Analista Legislativo, Registro e Redação (Cargo 11, Cebraspe)",
   "prova": "2027-01-17",
   "prova_obs": "data provável (Anexo I do edital) — conferir comunicados",
-  "versao": 5,
+  "versao": 6,
   "gerado": "2026-10-08",
-  "regra_blocos": "Cada meta de estudo é um assunto: teoria e questões, com a lei seca dentro da própria meta. Não há metas por horas. As revisões não ficam no cronograma: cada assunto concluído gera uma revisão para 7 dias depois; ao concluí-la nasce a de 15 dias e depois a de 30 dias, contadas a partir da revisão anterior. Todo domingo há ainda uma revisão geral da semana. Simulados e discursivas não são programados: você os cadastra no painel, com data e composição.",
+  "regra_blocos": "Cada meta de estudo é um assunto: teoria e questões, com a lei seca dentro da própria meta. Não há metas por horas. As revisões não ficam no cronograma: cada assunto concluído gera uma revisão para 7 dias depois; ao concluí-la nasce a de 15 dias e depois a de 30 dias, contadas a partir da revisão anterior. Todo domingo há ainda uma revisão geral da semana. Simulados e discursivas não são programados: você os cadastra no painel, com data e composição. Português: a partir da semana 2, dois blocos gerais de 30 questões por semana, sem assuntos separados e sem revisões de 7, 15 e 30 dias; as metas antigas de Português (marcadas como legado) só aparecem quando já têm registro.",
   "materias": {
    "REG": {
     "nome": "Proc. Legislativo + Regimentos",
@@ -257,7 +257,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S1-L1a",
@@ -368,7 +369,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S1-CP1",
@@ -619,6 +621,32 @@
      "lei_seca": "CF/88, arts. 62 e 68; art. 59, incisos IV a VII; art. 49 (decreto legislativo)"
     },
     {
+     "id": "S2-PB1",
+     "semana": "S2",
+     "ordem": 2,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S2-P2a",
      "semana": "S2",
      "ordem": 2,
@@ -642,7 +670,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S2-L2a",
@@ -787,6 +816,32 @@
      "status": "pendente"
     },
     {
+     "id": "S2-PB2",
+     "semana": "S2",
+     "ordem": 8,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S2-P2b",
      "semana": "S2",
      "ordem": 8,
@@ -810,7 +865,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S2-G3a",
@@ -918,7 +974,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S2-G3b",
@@ -1056,6 +1113,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 25 a 38"
     },
     {
+     "id": "S3-PB1",
+     "semana": "S3",
+     "ordem": 2,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S3-P3",
      "semana": "S3",
      "ordem": 2,
@@ -1079,7 +1162,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S3-L3",
@@ -1288,6 +1372,32 @@
      ]
     },
     {
+     "id": "S3-PB2",
+     "semana": "S3",
+     "ordem": 10,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S3-P4a",
      "semana": "S3",
      "ordem": 10,
@@ -1311,7 +1421,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S3-G4c",
@@ -1449,6 +1560,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 65 a 79"
     },
     {
+     "id": "S4-PB1",
+     "semana": "S4",
+     "ordem": 2,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S4-P4b",
      "semana": "S4",
      "ordem": 2,
@@ -1468,6 +1605,33 @@
       "materia": "Português",
       "assunto": "Concordância nominal",
       "obs": null
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente",
+     "legado": true
+    },
+    {
+     "id": "S4-PB2",
+     "semana": "S4",
+     "ordem": 2.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
      },
      "tec_url": null,
      "resumo_ia": null,
@@ -1795,6 +1959,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 111 a 125 (parte 2 de 7)"
     },
     {
+     "id": "S5-PB1",
+     "semana": "S5",
+     "ordem": 2,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S5-P5a",
      "semana": "S5",
      "ordem": 2,
@@ -1818,7 +2008,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S5-L6a",
@@ -1954,6 +2145,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 126 a 140 (parte 3 de 7)"
     },
     {
+     "id": "S5-PB2",
+     "semana": "S5",
+     "ordem": 8,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S5-P5b",
      "semana": "S5",
      "ordem": 8,
@@ -1977,7 +2194,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S5-L6b",
@@ -2200,6 +2418,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 156 a 170 (parte 5 de 7)"
     },
     {
+     "id": "S6-PB1",
+     "semana": "S6",
+     "ordem": 2,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S6-P6",
      "semana": "S6",
      "ordem": 2,
@@ -2223,7 +2467,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S6-L7a",
@@ -2359,6 +2604,32 @@
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 171 a 185 (parte 6 de 7)"
     },
     {
+     "id": "S6-PB2",
+     "semana": "S6",
+     "ordem": 8,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S6-P8",
      "semana": "S6",
      "ordem": 8,
@@ -2382,7 +2653,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S6-L7b",
@@ -2603,6 +2875,32 @@
      "status": "pendente"
     },
     {
+     "id": "S7-PB1",
+     "semana": "S7",
+     "ordem": 4,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S7-P9a",
      "semana": "S7",
      "ordem": 4,
@@ -2626,7 +2924,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S7-CP5b",
@@ -2766,6 +3065,32 @@
      "status": "pendente"
     },
     {
+     "id": "S7-PB2",
+     "semana": "S7",
+     "ordem": 10,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S7-P9b",
      "semana": "S7",
      "ordem": 10,
@@ -2789,7 +3114,8 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "legado": true
     },
     {
      "id": "S7-G10b",
@@ -2995,6 +3321,32 @@
      "status": "pendente"
     },
     {
+     "id": "S8-PB1",
+     "semana": "S8",
+     "ordem": 4,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S8-P10",
      "semana": "S8",
      "ordem": 4,
@@ -3014,6 +3366,33 @@
       "materia": "Português",
       "assunto": "Interpretação, tipos e gêneros + ortografia",
       "obs": null
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente",
+     "legado": true
+    },
+    {
+     "id": "S8-PB2",
+     "semana": "S8",
+     "ordem": 4.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
      },
      "tec_url": null,
      "resumo_ia": null,
@@ -3328,6 +3707,32 @@
      "status": "pendente"
     },
     {
+     "id": "S9-PB1",
+     "semana": "S9",
+     "ordem": 4,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S9-PREV",
      "semana": "S9",
      "ordem": 4,
@@ -3347,6 +3752,33 @@
       "materia": "Português",
       "assunto": "Português — questões mistas (pontuação, crase, reescrita)",
       "obs": null
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente",
+     "legado": true
+    },
+    {
+     "id": "S9-PB2",
+     "semana": "S9",
+     "ordem": 4.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
      },
      "tec_url": null,
      "resumo_ia": null,
@@ -3625,6 +4057,32 @@
      "ajustavel": false
     },
     {
+     "id": "S10-PB1",
+     "semana": "S10",
+     "ordem": 3,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S10-POR1",
      "semana": "S10",
      "ordem": 3,
@@ -3648,7 +4106,34 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "legado": true
+    },
+    {
+     "id": "S10-PB2",
+     "semana": "S10",
+     "ordem": 4,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
     },
     {
      "id": "S10-POR2",
@@ -3674,7 +4159,8 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "legado": true
     },
     {
      "id": "S10-LIN1",
@@ -4050,6 +4536,32 @@
      "ajustavel": false
     },
     {
+     "id": "S11-PB1",
+     "semana": "S11",
+     "ordem": 6,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S11-POR1",
      "semana": "S11",
      "ordem": 6,
@@ -4073,7 +4585,34 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "legado": true
+    },
+    {
+     "id": "S11-PB2",
+     "semana": "S11",
+     "ordem": 7,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
     },
     {
      "id": "S11-POR2",
@@ -4099,7 +4638,8 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "legado": true
     },
     {
      "id": "S11-ADM1",
@@ -4345,6 +4885,32 @@
      "ajustavel": false
     },
     {
+     "id": "S12-PB1",
+     "semana": "S12",
+     "ordem": 5,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S12-POR1",
      "semana": "S12",
      "ordem": 5,
@@ -4368,7 +4934,34 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "legado": true
+    },
+    {
+     "id": "S12-PB2",
+     "semana": "S12",
+     "ordem": 5.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
     },
     {
      "id": "S12-CON1",
@@ -4614,6 +5207,32 @@
      "ajustavel": false
     },
     {
+     "id": "S13-PB1",
+     "semana": "S13",
+     "ordem": 5,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S13-POR1",
      "semana": "S13",
      "ordem": 5,
@@ -4637,7 +5256,34 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "legado": true
+    },
+    {
+     "id": "S13-PB2",
+     "semana": "S13",
+     "ordem": 5.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
     },
     {
      "id": "S13-CP1",
@@ -4987,6 +5633,32 @@
      "ajustavel": false
     },
     {
+     "id": "S14-PB1",
+     "semana": "S14",
+     "ordem": 8,
+     "bloco": "PB1",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (1 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
+    },
+    {
      "id": "S14-POR1",
      "semana": "S14",
      "ordem": 8,
@@ -5010,7 +5682,34 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "legado": true
+    },
+    {
+     "id": "S14-PB2",
+     "semana": "S14",
+     "ordem": 8.5,
+     "bloco": "PB2",
+     "materia": "POR",
+     "materia_nome": "Português",
+     "prova": "P1",
+     "assunto": "Português · bloco de 30 questões (2 de 2)",
+     "edital": "Port 1–6",
+     "tipo": "questoes",
+     "itens_alvo": 30,
+     "o_que_fazer": "Resolva 30 questões gerais de Português (Cebraspe, itens C/E), misturando os assuntos do edital. Registre certos, errados e brancos, ou importe o Excel. Os erros vão para o caderno de erros de domingo.",
+     "como_concluir": "Concluída quando: as 30 questões foram feitas e certos, errados e brancos registrados.",
+     "fonte_teoria": "Questões do Tec Concursos (cole a pasta nesta meta)",
+     "tec_filtro": {
+      "banca": "Cebraspe",
+      "materia": "Português",
+      "assunto": null,
+      "obs": "Questões gerais, sem filtro de assunto"
+     },
+     "tec_url": null,
+     "resumo_ia": null,
+     "repeticoes": 1,
+     "status": "pendente"
     },
     {
      "id": "S14-ADM1",
