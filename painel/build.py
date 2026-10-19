@@ -20,7 +20,7 @@ data = {
     "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "i": src["meta"]["revisoes"]["itens"]},
     "mat": {k: {"n": v["nome"], "p": v["prova"]} for k, v in src["meta"]["materias"].items()},
     "sem": [{"id": s["id"], "i": s["inicio"], "f": s["fim"], "fase": s["fase"], "fer": s["feriado"],
-             "obs": s["observacao"], "m": [meta(m) for m in s["metas"]]} for s in src["semanas"]],
+             "obs": s["observacao"], "rg": 0 if s.get("rg") is False else 1, "m": [meta(m) for m in s["metas"]]} for s in src["semanas"]],
 }
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 frag = (root / "template.html").read_text(encoding="utf-8").replace("__DATA__", blob)

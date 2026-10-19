@@ -823,7 +823,7 @@ function reviewList(){
       if(!done)break;prev=doc.dt||ymd(due);
     }
   }
-  for(let wi=0;wi<lastWk;wi++)if(wi<=cw)out.push(rgItem(wi));
+  for(let wi=0;wi<lastWk;wi++)if(wi<=cw&&WK[wi].rg!==0)out.push(rgItem(wi));
   return out;
 }
 
@@ -933,7 +933,7 @@ function homeHtml(){
   L.forEach(m=>{if(!onlyPend||!isDone(m))grouped[grp(m)].push(m)});
   const sect=k=>{const Lk=grouped[k],tot=L.filter(m=>grp(m)===k);if(!tot.length)return"";const dn=tot.filter(isDone).length;
     return `<div class="grp"><div class="grp-t"><span>${GTIT[k]}</span><span>${dn}/${tot.length}</span></div>${Lk.length?`<ul class="list">${Lk.map(rowHtml).join("")}</ul>`:`<div class="empty">Tudo concluído aqui.</div>`}</div>`};
-  const rgS=sel<lastWk?`<div class="grp"><div class="grp-t"><span>Revisão geral da semana</span><span>${rgItem(sel).done?"1/1":"0/1"}</span></div><ul class="list">${revRow(rgItem(sel))}</ul></div>`:"";
+  const rgS=sel<lastWk&&WK[sel].rg!==0?`<div class="grp"><div class="grp-t"><span>Revisão geral da semana</span><span>${rgItem(sel).done?"1/1":"0/1"}</span></div><ul class="list">${revRow(rgItem(sel))}</ul></div>`:"";
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   return `
@@ -2319,7 +2319,11 @@ const weekMetas=i=>ALL.filter(m=>!hid(m)&&ew(m)===i);
 const weekDone=i=>weekMetas(i).every(isDone);
 function frontier(){for(let i=0;i<lastWk;i++)if(!weekDone(i))return i;return lastWk}
 const lockOn=()=>!demo&&!((real["cfg-semana"]||{}).off);
-function libEff(){const c=real["cfg-semana"];return c&&c.lib!=null?Math.max(0,Math.min(lastWk,c.lib)):frontier()}
+function libEff(){
+  const c=real["cfg-semana"];let b=c&&c.lib!=null?Math.max(0,Math.min(lastWk,c.lib)):frontier();
+  while(b<lastWk&&(weekMetas(b).length===0||(weekDone(b)&&weekMetas(b+1).length===0)))b++;
+  return b;
+}
 const homeWeek=()=>lockOn()?libEff():curWeek();
 const isLocked=m=>LOCKON&&!m.rv&&!m.rg&&ew(m)>LIB;
 function cfgSave(patch){if(demo)return;save("cfg-semana",{...(real["cfg-semana"]||{}),...patch})}
