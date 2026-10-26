@@ -10,6 +10,7 @@ remanejamentos anteriores.
 Uso:
   python3 dados/reorganizar.py              # só mostra o resultado (nada é gravado)
   python3 dados/reorganizar.py --aplicar    # grava dados/cronograma.json
+  python3 dados/reorganizar.py --cortar-excedente   # se não couber, lista as últimas metas da fila em fora_do_plano
 Opções: --plano ARQ  --estado ARQ  --crono ARQ (para testar com outros arquivos)
 """
 import json, sys, datetime, pathlib, collections
@@ -92,10 +93,16 @@ def main():
     aplicar = "--aplicar" in sys.argv
     crono, plano, estado = carregar()
     W, novas, sobra, resumo, w0 = reorganizar(crono, plano, estado)
+    fora = set(plano.get("fora_do_plano", []))
     print(f"Metas por semana: {plano['metas_por_semana']} | início: {plano['inicio']} | dias sem estudo: {plano.get('dias_sem_estudo', [])}")
     print("semana  dias  teto  metas")
     for sid, dias, cap, n in resumo:
         print(f"{sid:>6}  {dias:>4}  {cap:>4}  {n:>5}")
+    if sobra and "--cortar-excedente" in sys.argv:
+        plano["fora_do_plano"] = sorted(set(plano.get("fora_do_plano", [])) | {m["id"] for m in sobra})
+        json.dump(plano, open(opcao("--plano", PLANO), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"{len(sobra)} metas colocadas em fora_do_plano; rode de novo para simular/aplicar.")
+        return
     if sobra:
         print(f"\nATENÇÃO: {len(sobra)} metas não cabem até a última semana de estudo:")
         tipos = collections.Counter(m["tipo"] for m in sobra)
@@ -106,6 +113,13 @@ def main():
     if not aplicar:
         print("\n(simulação: nada foi gravado; use --aplicar)")
         return
+    # "fora do plano" = escondida (mesma marca das metas antigas de Português); volta sozinha se ganhar registro
+    for s_ in W:
+        for m in s_["metas"]:
+            if m["id"] in fora:
+                m["legado"] = True; m["fora_do_plano"] = True
+            elif m.get("fora_do_plano"):
+                m.pop("legado", None); m.pop("fora_do_plano", None)
     for i, s in enumerate(W):
         if s["id"] in plano.get("semanas_fixas", ["S15"]): continue
         s["metas"] = novas[i]

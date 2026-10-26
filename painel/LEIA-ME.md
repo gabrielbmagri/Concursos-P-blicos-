@@ -51,3 +51,7 @@ Um toque no quadradinho de uma meta a coloca em "estudando" (quadradinho amarelo
 ## Banco de questões
 
 Questões inéditas de Certo ou Errado e de múltipla escolha, com gabarito comentado. O formato que o Claude deve usar está em `FORMATO-QUESTOES.md`. Cada resposta é somada automaticamente às estatísticas de matéria, assunto, meta e semana (um registro diário "Banco de questões" na aba Questões).
+
+## Reorganizar as metas por semana
+
+Veja `dados/REORGANIZAR.md`. Em resumo: edite `dados/plano.json` (metas por semana, dias sem estudo) e rode `python3 dados/reorganizar.py --aplicar`. A ordem original das metas nunca muda e o resultado não depende de remanejamentos anteriores.
