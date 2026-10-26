@@ -379,6 +379,7 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .box.stip li{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-top:1px solid var(--soft2)}.box.stip li:first-child{border-top:0}
 .box.stip .tx b{display:block;text-transform:none;letter-spacing:0;font-size:14.5px;color:var(--fg);margin:0}.box.stip .tx span{font-size:13px;color:var(--fg2)}
 .box.stip .tb{display:flex;gap:8px;flex-wrap:wrap}.chip.pri{background:var(--green);border-color:var(--green);color:#fff;text-decoration:none}
+.rep .rph{font-size:15px;font-weight:700;margin:6px 0 0;text-transform:none;letter-spacing:0;color:var(--fg)}.rep .rps h4{margin:16px 0 2px;font-size:14px;text-transform:none}.rep .rps.mal h4{color:var(--bad)}.rep .rps.reg h4{color:#8a6200}.rep .rps.bem h4{color:var(--good)}.rep .rps p.muted{margin:0 0 4px;font-size:12.5px}
 .bza h4{margin:14px 0 6px;font-size:14px;color:var(--fg2)}
 .bz{border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:10px;background:var(--bg)}
 .bz .bq{font-weight:600;font-size:15px;line-height:1.4}.bz .bg{margin:10px 0 0;font-size:14px}
@@ -1393,11 +1394,14 @@ function subTree(){
     (d.rows||[]).forEach(r=>{if(!r.k||!SUBJ.includes(r.k))return;const a=node(r.k,r.mid,r.ass);if(!a.nome&&r.ass)a.nome=r.ass;a.c+=r.c||0;a.e+=r.e||0;a.b+=r.b||0});
     (d.subs||[]).forEach(s=>{if(!s.k||!SUBJ.includes(s.k))return;const a=node(s.k,s.mid,s.p);if(!a.nome)a.nome=strip(s.p).trim()||s.p;const sk=norm(s.s),x=a.subs[sk]||(a.subs[sk]={nome:s.s,v:[]});x.v.push({dt:s.dt||d.dt||"",pc:s.pc})});
   }
+  const bk={};
+  qbList().forEach(q=>{if(!q.sb||!SUBJ.includes(q.k)||(q.ok+q.er)<1)return;const key=q.k+"|"+(q.mid||norm(strip(q.as)))+"|"+norm(q.sb);const x=bk[key]||(bk[key]={q,ok:0,er:0,lt:""});x.ok+=q.ok;x.er+=q.er;if((q.lt||"")>x.lt)x.lt=q.lt||""});
+  Object.values(bk).forEach(x=>{const q=x.q,a=node(q.k,q.mid,q.as);if(!a.nome)a.nome=strip(q.as).trim()||SHORT[q.k];const sk=norm(q.sb),y=a.subs[sk]||(a.subs[sk]={nome:q.sb,v:[]});y.v.push({dt:x.lt,pc:x.ok/(x.ok+x.er),ct:{ok:x.ok,er:x.er}})});
   const mean=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
   const out=[];
   for(const k in T){
     const as=Object.values(T[k].as).filter(a=>Object.keys(a.subs).length).map(a=>{
-      const subs=Object.values(a.subs).map(x=>{x.v.sort((p,q)=>p.dt<q.dt?-1:p.dt>q.dt?1:0);const last=x.v[x.v.length-1],prev=x.v.length>1?x.v[x.v.length-2]:null;return {nome:x.nome,pc:last.pc,dt:last.dt,n:x.v.length,avg:mean(x.v.map(z=>z.pc)),delta:prev?last.pc-prev.pc:null}});
+      const subs=Object.values(a.subs).map(x=>{x.v.sort((p,q)=>p.dt<q.dt?-1:p.dt>q.dt?1:0);const last=x.v[x.v.length-1],prev=x.v.length>1?x.v[x.v.length-2]:null;return {nome:x.nome,pc:last.pc,dt:last.dt,n:x.v.length,avg:mean(x.v.map(z=>z.pc)),delta:prev?last.pc-prev.pc:null,ct:last.ct}});
       const n=a.c+a.e+a.b,pc=n?a.c/n:mean(subs.map(z=>z.pc));
       return {...a,subs,n,pc,hasN:!!n,nsub:subs.length};
     });
@@ -1421,7 +1425,7 @@ function subHtml(){
   const weakL=all.slice().sort((a,b)=>a.pc-b.pc).slice(0,8);
   const avg=all.reduce((z,x)=>z+x.pc,0)/all.length,best=all.slice().sort((a,b)=>b.pc-a.pc)[0],low=all.slice().sort((a,b)=>a.pc-b.pc)[0];
   const nA=tree.reduce((z,m)=>z+m.as.length,0);
-  const subRow=s=>`<li class="sbs"><span class="sbn">${esc(s.nome)}</span>${sbBar(s.pc)}${sbPc(s.pc)}<small>${s.delta!=null?`<span class="${s.delta>=0?"up":"dn"}">${s.delta>=0?"▲":"▼"} ${Math.abs(Math.round(s.delta*100))} pontos</span> · `:""}${s.n>1?`média ${Math.round(s.avg*100)}% em ${s.n} registros · `:""}${fmtDay(s.dt)}</small></li>`;
+  const subRow=s=>`<li class="sbs"><span class="sbn">${esc(s.nome)}</span>${sbBar(s.pc)}${sbPc(s.pc)}<small>${s.ct?`banco: ${s.ct.ok} certas · ${s.ct.er} erradas · `:""}${s.delta!=null?`<span class="${s.delta>=0?"up":"dn"}">${s.delta>=0?"▲":"▼"} ${Math.abs(Math.round(s.delta*100))} pontos</span> · `:""}${s.n>1?`média ${Math.round(s.avg*100)}% em ${s.n} registros · `:""}${fmtDay(s.dt)}</small></li>`;
   const asRow=(m,a)=>{
     const id=m.k+"/"+a.key,op=!!sb.open[id]||!!q;
     const subs=sbSort(a.subs.filter(s=>!q||norm(s.nome+" "+a.nome).includes(q)),sb.oa,s=>s.pc,s=>s.nome);
@@ -1459,6 +1463,7 @@ const QBINSTR=[
 "# Matéria: Linguística",
 "# Assunto: Teoria do signo linguístico",
 "# Caderno: Signo linguístico I",
+"# Subtópico: Arbitrariedade e motivação",
 "CE | O signo linguístico une um significante e um significado. | C | Correto: é a definição saussuriana de signo. | fácil",
 "CE | Para Saussure, a relação entre significante e significado é necessariamente motivada. | E | Errado: Saussure defende a arbitrariedade do signo.",
 "ME | Assinale a alternativa que apresenta um exemplo de arbitrariedade do signo. | B | A palavra é formada por derivação ;; Palavras diferentes designam o mesmo referente em línguas distintas ;; O som imita o ruído do objeto ;; O significado depende do contexto ;; O signo é imutável na fala | Letra B: línguas diferentes usam significantes distintos para o mesmo referente. As demais não tratam de arbitrariedade. | médio",
@@ -1466,18 +1471,19 @@ const QBINSTR=[
 "Regras:",
 "1. As linhas que começam com # valem para todas as questões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno é opcional e agrupa as questões do pedido.",
 "2. Uma linha por questão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
-"3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário | dificuldade. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário | dificuldade.",
+"3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário | dificuldade | subtópico. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário | dificuldade | subtópico.",
 "4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.",
 "5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
 "6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
 "7. De 15 a 30 questões por pedido, a não ser que eu peça outra quantidade.",
 "7a. O último campo, a dificuldade, é fácil, médio ou difícil (opcional). Coloque as questões em ordem crescente de dificuldade, da mais fácil para a mais difícil. Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
+"7b. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha \"# Subtópico: nome\" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, \"Do Senado Federal (art. 52)\"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto.",
 "8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
 ].join("\n");
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
 const LTR=["A","B","C","D","E"];
-const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",df:"",st:"novas",stL:"todas",n:"todas",ord:"cadastro",q:"",more:50,queue:[],i:0,sans:{},dr:{},confirm:false,paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
+const qb={view:"home",mat:"",mid:"",sb:"",cad:"",tipo:"",df:"",st:"novas",stL:"todas",n:"todas",ord:"cadastro",q:"",more:50,queue:[],i:0,sans:{},dr:{},confirm:false,paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
 function qsWrite(list){
   list.forEach(([id,d])=>{if(d)QS[id]=d;else delete QS[id]});
   if(fb.on&&fb.qcol){
@@ -1487,31 +1493,31 @@ function qsWrite(list){
 }
 const normDf=t=>{const n=norm(t);if(!n)return "";if(/^(f|facil|1|baixa)/.test(n))return "facil";if(/^(m|medi|2|intermed)/.test(n))return "medio";if(/^(d|dificil|3|alta)/.test(n))return "dificil";return null};
 const DFN={facil:"Fácil",medio:"Média",dificil:"Difícil"},DFR={"":9,facil:1,medio:2,dificil:3};
-function mkQ(mat,ass,cad,tipoRaw,e,g,o,c,df,ref){
+function mkQ(mat,ass,cad,tipoRaw,e,g,o,c,df,sb,ref){
   const t0=String(tipoRaw||"").toUpperCase().replace(/[^A-Z]/g,"");
   const t=t0==="CE"||t0==="C"||t0==="VF"||t0==="CERTOERRADO"?"CE":t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA"?"ME":"";
   if(!t)return {err:`${ref}: tipo "${String(tipoRaw||"").slice(0,12)}" não reconhecido. Use CE ou ME.`};
   e=String(e||"").trim();c=String(c||"").trim();g=String(g||"").trim();
   const dn=normDf(df);if(dn===null)return {err:`${ref}: dificuldade "${String(df).slice(0,12)}" não reconhecida. Use fácil, médio ou difícil.`};df=dn;
   if(!e)return {err:`${ref}: falta o texto da questão.`};
-  if(t==="CE"){const a=norm(g).charAt(0);if(a==="c")g="C";else if(a==="e")g="E";else return {err:`${ref}: o gabarito de Certo ou Errado deve ser C ou E.`};return {q:{mat,ass,cad,t,e,g,o:[],c,df}}}
+  if(t==="CE"){const a=norm(g).charAt(0);if(a==="c")g="C";else if(a==="e")g="E";else return {err:`${ref}: o gabarito de Certo ou Errado deve ser C ou E.`};return {q:{mat,ass,cad,t,e,g,o:[],c,df,sb:String(sb||"").trim()}}}
   const opts=String(o||"").split(";;").map(x=>x.trim().replace(/^[A-Ea-e][\)\.]\s+/,"")).filter(Boolean);
   if(opts.length<2||opts.length>5)return {err:`${ref}: informe de 2 a 5 alternativas separadas por ;;.`};
   g=g.toUpperCase().charAt(0);
   if(LTR.indexOf(g)<0||LTR.indexOf(g)>=opts.length)return {err:`${ref}: o gabarito deve ser uma letra de A a ${LTR[opts.length-1]}.`};
-  return {q:{mat,ass,cad,t,e,g,o:opts,c,df}};
+  return {q:{mat,ass,cad,t,e,g,o:opts,c,df,sb:String(sb||"").trim()}};
 }
 function parseQText(text){
-  const items=[],errs=[];let mat="",ass="",cad="",dfh="";
+  const items=[],errs=[];let mat="",ass="",cad="",dfh="",sbh="";
   String(text).split(/\r?\n/).forEach((raw,i)=>{
     const ln=raw.trim();if(!ln||/^```/.test(ln))return;
-    const m=/^#\s*(mat[eé]ria|assunto|caderno|dificuldade)\s*:\s*(.*)$/i.exec(ln);
-    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else if(k==="caderno")cad=m[2].trim();else dfh=m[2].trim();return}
+    const m=/^#\s*(mat[eé]ria|assunto|caderno|dificuldade|subt[oó]pico)\s*:\s*(.*)$/i.exec(ln);
+    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0){mat=m[2].trim();sbh=""}else if(k==="assunto"){ass=m[2].trim();sbh=""}else if(k==="caderno")cad=m[2].trim();else if(k==="subtopico")sbh=m[2].trim();else dfh=m[2].trim();return}
     if(ln.charAt(0)==="#")return;
     const p=ln.split("|").map(z=>z.trim());
     const t0=String(p[0]||"").toUpperCase().replace(/[^A-Z]/g,"");
     const isME=t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA";
-    const r=isME?mkQ(mat,ass,cad,p[0],p[1],p[2],p[3],p[4],p[5]||dfh,"Linha "+(i+1)):mkQ(mat,ass,cad,p[0],p[1],p[2],"",p[3],p[4]||dfh,"Linha "+(i+1));
+    const r=isME?mkQ(mat,ass,cad,p[0],p[1],p[2],p[3],p[4],p[5]||dfh,p[6]||sbh,"Linha "+(i+1)):mkQ(mat,ass,cad,p[0],p[1],p[2],"",p[3],p[4]||dfh,p[5]||sbh,"Linha "+(i+1));
     if(r.err)errs.push(r.err);else items.push(r.q);
   });
   return {items,errs};
@@ -1533,7 +1539,7 @@ function qbImport(){
   qb.items.forEach(c=>{
     const g=qb.groups[c.gi];if(!g||!g.k){skipped++;return}
     const id=qbId(g.k,c.e);if(QS[id]||seen.has(id)){dup++;return}seen.add(id);
-    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ix:base+list.length,df:c.df||"",ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ix:base+list.length,df:c.df||"",sb:c.sb||"",ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
   });
   qb.msg=`Importei ${list.length} ${list.length===1?"questão":"questões"}.${dup?` ${dup} já existiam e foram ignoradas.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
   if(list.length)qsWrite(list);
@@ -1552,7 +1558,7 @@ const QST=[["novas","Ainda não resolvidas"],["erradas","Errei na última vez"],
 const qbStat=(q,st)=>st==="todas"?true:st==="novas"?!(q.ok+q.er+q.bl):st==="erradas"?q.last==="er":st==="acertadas"?q.last==="ok":st==="jaerrei"?q.er>0:st==="feitas"?(q.ok+q.er+q.bl)>0:st==="favoritas"?!!q.fav:st==="comentadas"?!!q.nt:true;
 function qbFilter(withStatus,key){
   const s=norm(qb.q);
-  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!qb.df||q.df===qb.df)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
+  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!qb.df||q.df===qb.df)&&(!qb.sb||(qb.sb==="__none"?!q.sb:q.sb===qb.sb))&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
 }
 const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:(x.ix||0)!==(y.ix||0)?(x.ix||0)-(y.ix||0):x.id<y.id?-1:1);
 function qbStart(ids){
@@ -1628,7 +1634,26 @@ function qbSession(){
   }
   const last=qb.i+1>=tot;
   const nav=`<div class="qnav"><button class="btn alt" data-act="qb-prev" ${qb.i?"":"disabled"}>‹ Anterior</button><button class="btn ${a?"":"alt"}" data-act="qb-next">${last?"Finalizar":"Próxima ›"}</button></div>`;
-  return `<section class="sec" style="margin-top:20px">${head}${conf}<div class="ak-card" style="align-items:stretch">${metaL}${q.as?`<div class="muted" style="font-size:13px">${esc(q.as)}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div>${nav}</section>`;
+  return `<section class="sec" style="margin-top:20px">${head}${conf}<div class="ak-card" style="align-items:stretch">${metaL}${q.as||q.sb?`<div class="muted" style="font-size:13px">${esc([q.as,q.sb].filter(Boolean).join(" · "))}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div>${nav}</section>`;
+}
+function qbRepGroups(list){
+  const g={};
+  list.forEach(q=>{const nm=q.sb||"Sem subtópico",x=g[nm]||(g[nm]={nome:nm,sb:q.sb||"__none",ok:0,er:0,bl:0,n:0,feitas:0,k:q.k,mid:q.mid||""});x.n++;x.ok+=q.ok;x.er+=q.er;x.bl+=q.bl;if(q.ok+q.er+q.bl>0)x.feitas++});
+  return Object.values(g).map(x=>({...x,r:(x.ok+x.er)?x.ok/(x.ok+x.er):null}));
+}
+function qbReport(list,titulo,ro){
+  const G=qbRepGroups(list),tot=list.length,feitas=list.filter(q=>q.ok+q.er+q.bl>0).length;
+  const ok=list.reduce((z,q)=>z+q.ok,0),er=list.reduce((z,q)=>z+q.er,0),comp=feitas===tot&&tot>0;
+  const lv=r=>r>=.75?"bem":r>=.6?"reg":"mal";
+  const bem=G.filter(x=>x.r!=null&&lv(x.r)==="bem").sort((a,b)=>b.r-a.r),reg=G.filter(x=>x.r!=null&&lv(x.r)==="reg").sort((a,b)=>a.r-b.r),mal=G.filter(x=>x.r!=null&&lv(x.r)==="mal").sort((a,b)=>a.r-b.r),nd=G.filter(x=>x.r==null);
+  const li=x=>`<li class="sbs" style="padding-left:0"><span class="sbn">${esc(x.nome)}</span>${sbBar(x.r)}${sbPc(x.r)}<small>${x.ok} certas · ${x.er} erradas · ${x.feitas} de ${x.n} ${x.n===1?"questão resolvida":"questões resolvidas"}${ro?"":` · <button class="link" data-act="qb-sub" data-k="${x.k}" data-mid="${esc(x.mid)}" data-sb="${esc(x.sb)}" data-m="${x.er?"erradas":x.feitas<x.n?"novas":"todas"}">${x.er?"Refazer as erradas":x.feitas<x.n?"Resolver as que faltam":"Treinar de novo"}</button>`}</small></li>`;
+  const sec=(t,sub,arr,cls)=>arr.length?`<div class="rps ${cls}"><h4>${t}</h4><p class="muted">${sub}</p><ul class="sbl" style="padding:0;border:0">${arr.map(li).join("")}</ul></div>`:"";
+  const pior=mal[0]||reg[0];
+  return `<div class="box rep"><b>${esc(titulo)}</b>
+    <p class="rph">${feitas} de ${tot} ${tot===1?"questão resolvida":"questões resolvidas"} · acerto ${ok+er?pc(ok/(ok+er)):"–"} <span class="pill ${comp?"green":"warn"}">${comp?"Concluído":"Em andamento"}</span></p>
+    ${pior?`<p class="muted" style="font-size:13.5px;margin:4px 0 0">Prioridade para estudar: <b style="text-transform:none;letter-spacing:0;font-size:13.5px;color:var(--fg);display:inline;margin:0">${esc(pior.nome)}</b> (${pc(pior.r)}).</p>`:""}
+    ${sec("Onde você está mal","Abaixo de 60% de acerto",mal,"mal")}${sec("O que melhorar","De 60% a 74%",reg,"reg")}${sec("Onde você está bem","75% ou mais",bem,"bem")}${sec("Ainda sem resposta","Nenhuma questão resolvida neste subtópico",nd,"nd")}
+    ${G.length===1&&G[0].sb==="__none"?`<p class="muted" style="font-size:12.5px;margin:10px 0 0">Estas questões não têm subtópico. Peça ao Claude para classificar as próximas e o relatório separa o que está bem do que está mal.</p>`:""}</div>`;
 }
 function qbDone(){
   const s=qbSum(),n=s.ok+s.er+s.bl;
@@ -1636,15 +1661,19 @@ function qbDone(){
     <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div></div>
     ${s.pend?`<p class="muted" style="font-size:13.5px;margin:6px 0 0">${s.pend} ${s.pend===1?"questão ficou sem resposta":"questões ficaram sem resposta"}. Elas não foram contadas e continuam como não resolvidas.</p>`:""}
     <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
-    <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div></section>`;
+    <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div>${(()=>{const qs=qb.queue.map(id=>({id,...QS[id]})).filter(q=>q.e),mids=[...new Set(qs.map(q=>q.mid))],meta=mids.length===1&&mids[0]&&BY[mids[0]]?BY[mids[0]]:null;
+      if(meta){const all=qbList().filter(q=>q.mid===meta.id);return `<div style="margin-top:14px">${qbReport(all,"Relatório da meta: "+meta.a)}<div class="bar-act"><button class="btn alt" data-act="open" data-id="${meta.id}">Abrir a meta</button></div></div>`}
+      return `<div style="margin-top:14px">${qbReport(qs,"Relatório da sessão por subtópico")}</div>`})()}</section>`;
 }
 function qbFilters(withStatus,key){key=key||"st";
   const all=qbList(),mats=SUBJ.filter(k=>all.some(q=>q.k===k));
   const mids=[...new Map(all.filter(q=>(!qb.mat||q.k===qb.mat)&&q.mid&&BY[q.mid]).map(q=>[q.mid,BY[q.mid].a])).entries()];
   const cads=[...new Set(all.filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)).map(q=>q.cad).filter(Boolean))].sort();
+  const sbs=[...new Set(all.filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)).map(q=>q.sb).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"pt-BR"));
   const o=(v,c,l)=>`<option value="${esc(v)}" ${v===c?"selected":""}>${esc(l)}</option>`;
   return `<div class="qfil"><div><label class="lbl" for="qf-mat">Matéria</label><select id="qf-mat" data-qbf="mat">${o("",qb.mat,"Todas")}${mats.map(k=>o(k,qb.mat,SHORT[k])).join("")}</select></div>
     <div><label class="lbl" for="qf-mid">Assunto</label><select id="qf-mid" data-qbf="mid">${o("",qb.mid,"Todos")}${mids.map(([id,a])=>o(id,qb.mid,a.length>60?a.slice(0,58)+"…":a)).join("")}</select></div>
+    <div><label class="lbl" for="qf-sb">Subtópico</label><select id="qf-sb" data-qbf="sb">${o("",qb.sb,"Todos")}${sbs.map(c=>o(c,qb.sb,c.length>50?c.slice(0,48)+"…":c)).join("")}${all.some(q=>!q.sb)?o("__none",qb.sb,"Sem subtópico"):""}</select></div>
     <div><label class="lbl" for="qf-cad">Caderno</label><select id="qf-cad" data-qbf="cad">${o("",qb.cad,"Todos")}${cads.map(c=>o(c,qb.cad,c)).join("")}</select></div>
     <div><label class="lbl" for="qf-df">Dificuldade</label><select id="qf-df" data-qbf="df">${o("",qb.df,"Todas")}${o("facil",qb.df,"Fácil")}${o("medio",qb.df,"Média")}${o("dificil",qb.df,"Difícil")}</select></div>
     <div><label class="lbl" for="qf-tipo">Tipo</label><select id="qf-tipo" data-qbf="tipo">${o("",qb.tipo,"Todos")}${o("CE",qb.tipo,"Certo ou Errado")}${o("ME",qb.tipo,"Múltipla escolha")}</select></div>
@@ -1700,7 +1729,7 @@ function qbLista(){
   const items=qbOrdered(qbFilter(true,"stL")),sh=items.slice(0,qb.more);
   const row=q=>{
     const op=!!qb.open[q.id],n=q.ok+q.er+q.bl,gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
-    return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${dfTag(q.df)}${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
+    return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${dfTag(q.df)}${q.sb?`<span>${esc(q.sb)}</span>`:q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
       ${op?`<div class="qd">${q.t==="ME"?q.o.map((t,i)=>`<div class="qopt ${LTR[i]===q.g?"ok":""}" style="cursor:default"><span class="lt">${LTR[i]}</span><span class="tx">${esc(t)}</span></div>`).join(""):""}<p class="qg"><b>Gabarito:</b> ${gT}</p><div class="box"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Sem comentário."}</p></div>
       <label class="lbl" for="qn-${q.id}" style="margin-top:10px">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:70px;font-family:var(--font)">${esc(q.nt||"")}</textarea>
       <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${q.id}" aria-pressed="${!!q.fav}">${q.fav?"★ Bizu (favorita)":"☆ Favoritar como bizu"}</button><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver só esta</button>${qb.ask===q.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="qb-delok" data-id="${q.id}">Confirmar exclusão</button><button class="chip" data-act="qb-delno">Cancelar</button>`:`<button class="chip" data-act="qb-delask" data-id="${q.id}">Excluir</button>`}</div></div>`:""}</li>`;
@@ -1722,10 +1751,15 @@ function qbClick(a,t,e){
   if(a==="qb-start"){qbStart();return true}
   if(a==="qb-add"){closeSheet();tab="banco";menu=false;qb.view="home";render();const el=document.querySelector(".imp-box");if(el)el.scrollIntoView({behavior:"smooth",block:"center"});return true}
   if(a==="qb-one"){tab="banco";menu=false;qbStart([t.dataset.id]);return true}
+  if(a==="qb-sub"){
+    qb.mat=t.dataset.k;qb.mid=t.dataset.mid||"";qb.cad="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.sb=t.dataset.sb;
+    const lst=qbList().filter(q=>q.k===qb.mat&&(!qb.mid||q.mid===qb.mid)&&(qb.sb==="__none"?!q.sb:q.sb===qb.sb)),mode=t.dataset.m||"todas";
+    qb.st=lst.some(q=>qbStat(q,mode))?mode:"todas";
+    closeSheet();tab="banco";menu=false;qbStart();return true}
   if(a==="qb-meta"){
     const m=BY[t.dataset.id];if(!m)return true;
     const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
-    qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.tipo="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
+    qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.sb="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
     closeSheet();tab="banco";menu=false;qbStart();return true}
   if(a==="qb-quit"){qb.view="home";qb.confirm=false;render();window.scrollTo(0,0);return true}
   if(a==="qb-sel"){const id=qb.queue[qb.i];if(id&&!qb.sans[id]){qd(id).sel=t.dataset.v;render()}return true}
@@ -1757,7 +1791,7 @@ function qbChange(e){
   const bz=t.closest&&t.closest("[data-bzf]");
   if(bz){const k=bz.dataset.bzf;bib[k]=bz.value;if(k==="bk")bib.ba="";render();return true}
   const f=t.closest&&t.closest("[data-qbf]");
-  if(f){const k=f.dataset.qbf;qb[k]=f.value;if(k==="mat"){qb.mid="";qb.cad=""}if(k==="mid")qb.cad="";qb.err="";qb.more=50;render();return true}
+  if(f){const k=f.dataset.qbf;qb[k]=f.value;if(k==="mat"){qb.mid="";qb.cad="";qb.sb=""}if(k==="mid"){qb.cad="";qb.sb=""}qb.err="";qb.more=50;render();return true}
   const g=t.closest&&t.closest("[data-qbg]");
   if(g){const gr=qb.groups[+g.dataset.i];if(gr){if(g.dataset.qbg==="k"){gr.k=g.value;const rk=gr.k?metaRank(gr.k,gr.ass):[];gr.mid=rk[0]&&rk[0].score>=.4?rk[0].m.id:""}else gr.mid=g.value;render()}return true}
   if(t.id==="qb-file"&&t.files&&t.files[0]){qb.msg="";qbReadFile(t.files[0]);return true}
@@ -2504,6 +2538,7 @@ function openSheet(id){
     ${m.g?`<ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
     ${m.ft?`<p class="sh-p"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
     ${!dyn?studyTip(m,ro):""}
+    ${!dyn?(()=>{const qs=qbList().filter(q=>q.mid===m.id);return qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório das questões desta meta",ro):""})():""}
     ${!dyn&&!ro?`<div id="mt-box">${mtBoxHtml(id)}</div>`:""}
     <div class="f">
       ${r>1?fld("r","Repetições feitas",`de ${r}`):`<div class="fr"><div class="fl">Concluída</div><button class="switch" role="switch" id="f-done" aria-checked="${draft.r>=1}" ${ro?"disabled":""}></button></div>`}
