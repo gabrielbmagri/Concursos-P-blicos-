@@ -1,9 +1,9 @@
 # Questões inéditas para o Banco de questões
 
-Na aba Banco de questões, envie ao Claude estas instruções junto com o assunto, o resumo ou o texto-base. Cole a resposta no campo "Colar ou enviar as questões".
+Na aba Questões (Adicionar), envie ao Claude estas instruções junto com o assunto, o resumo ou o texto-base. Cole a resposta no campo "Colar ou enviar as questões".
 
 ```
-Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um bloco de codigo de texto simples, neste formato:
+Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:
 
 # Matéria: Linguística
 # Assunto: Teoria do signo linguístico
@@ -20,7 +20,9 @@ Regras:
 4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.
 5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.
 6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.
-7. De 15 a 30 questões por pedido, a não ser que eu peça outra quantidade.
+7. Gere no mínimo 60 questões por pedido, a não ser que eu peça outra quantidade. Entregue tudo em um arquivo .txt.
+7c. Ordem pedagógica: além de crescer em dificuldade, siga a ordem dos conceitos, de modo que cada conceito seja aprendido antes de ser cobrado. Ao resolver todas, eu devo dominar o que a aula ou meta pede, ter revisto os conceitos e ter visto na prática questões como as que caem na prova. Se ajudar, intercale ME e CE.
+7d. Cada comentário deve ser explicativo o bastante para eu entender o porquê, mas curto: objetivo, sem ser vago.
 7a. O último campo, a dificuldade, é fácil, médio ou difícil (opcional). Coloque as questões em ordem crescente de dificuldade, da mais fácil para a mais difícil. Se todas tiverem o mesmo nível, pode usar a linha "# Dificuldade: médio" no topo em vez de repetir em cada questão.
 7b. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha "# Subtópico: nome" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, "Do Senado Federal (art. 52)"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto.
 8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato.

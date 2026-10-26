@@ -87,7 +87,7 @@
    "itens": 10,
    "revisao_geral_semanal": true,
    "por_desempenho": {
-    "minimo_questoes": 30,
+    "minimo_questoes": 50,
     "firme_questoes": 50,
     "faixas": {
      "excelente": 0.75,

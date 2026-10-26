@@ -819,7 +819,7 @@ function doImport(){
 }
 
 /* ---------- revisões: prazo conforme o desempenho da meta ---------- */
-const PD=RV.pd||{minimo_questoes:30,firme_questoes:50,faixas:{excelente:.75,razoavel:.6},intervalos_dias:{excelente:[14,30,60],razoavel:[7,15,30],ruim:[3,7,15]}};
+const PD=RV.pd||{minimo_questoes:50,firme_questoes:50,faixas:{excelente:.75,razoavel:.6},intervalos_dias:{excelente:[14,30,60],razoavel:[7,15,30],ruim:[3,7,15]}};
 const NV={excelente:"Excelente",razoavel:"Razoável",ruim:"Ruim"};
 function metaPerf(b){
   const p=P(),it=itemsOf(b);let c=it.c,e=it.e,bl=it.b;
@@ -1049,7 +1049,7 @@ function revHtml(){
       <p class="lead" style="margin-top:10px">O desempenho é o acerto nas questões da meta: as que você marcou nela, as dos Excels importados e as do Banco de questões, mais as das próprias revisões.</p>
       <div class="tbl"><table><thead><tr><th>Desempenho</th><th>Acerto</th><th>1ª</th><th>2ª</th><th>3ª</th></tr></thead><tbody>
       ${["excelente","razoavel","ruim"].map(k=>`<tr><th>${NV[k]}</th><td>${k==="excelente"?`${Math.round(PD.faixas.excelente*100)}% ou mais`:k==="razoavel"?`${Math.round(PD.faixas.razoavel*100)}% a ${Math.round(PD.faixas.excelente*100)-1}%`:`menos de ${Math.round(PD.faixas.razoavel*100)}%`}</td>${PD.intervalos_dias[k].map(x=>`<td>${x} dias</td>`).join("")}</tr>`).join("")}</tbody></table></div>
-      <p class="lead" style="margin-top:10px"><b>Mínimo de ${PD.minimo_questoes} questões</b> na meta para classificar. Abaixo disso, vale o prazo de Razoável. Entre ${PD.minimo_questoes} e ${PD.firme_questoes - 1} a classificação é provisória, e a partir de ${PD.firme_questoes} questões é firme. Os prazos se ajustam sozinhos conforme você resolve mais questões. Nenhuma revisão é marcada para depois da prova.</p></details>
+      <p class="lead" style="margin-top:10px"><b>Mínimo de ${PD.minimo_questoes} questões</b> na meta para classificar. Abaixo disso, vale o prazo de Razoável. ${PD.firme_questoes>PD.minimo_questoes?`Entre ${PD.minimo_questoes} e ${PD.firme_questoes-1} a classificação é provisória, e a partir de ${PD.firme_questoes} questões é firme. `:""}Os prazos se ajustam sozinhos conforme você resolve mais questões. Nenhuma revisão é marcada para depois da prova.</p></details>
     <div class="kpis" style="margin-top:16px">
       <div class="kpi red"><div class="lab">Atrasadas</div><div class="num">${over.length}</div><div class="sub">Já passaram do dia previsto</div></div>
       <div class="kpi blue"><div class="lab">Para hoje</div><div class="num">${tod.length}</div><div class="sub">Vencem hoje</div></div>
@@ -1479,7 +1479,7 @@ function subHtml(){
 
 /* ---------- banco de questões ---------- */
 const QBINSTR=[
-"Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um bloco de codigo de texto simples, neste formato:",
+"Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:",
 "",
 "# Matéria: Linguística",
 "# Assunto: Teoria do signo linguístico",
@@ -1496,7 +1496,9 @@ const QBINSTR=[
 "4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.",
 "5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
 "6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
-"7. De 15 a 30 questões por pedido, a não ser que eu peça outra quantidade.",
+"7. Gere no mínimo 60 questões por pedido, a não ser que eu peça outra quantidade. Entregue tudo em um arquivo .txt.",
+"7c. Ordem pedagógica: além de crescer em dificuldade, siga a ordem dos conceitos, de modo que cada conceito seja aprendido antes de ser cobrado. Ao resolver todas, eu devo dominar o que a aula ou meta pede, ter revisto os conceitos e ter visto na prática questões como as que caem na prova. Se ajudar, intercale ME e CE.",
+"7d. Cada comentário deve ser explicativo o bastante para eu entender o porquê, mas curto: objetivo, sem ser vago.",
 "7a. O último campo, a dificuldade, é fácil, médio ou difícil (opcional). Coloque as questões em ordem crescente de dificuldade, da mais fácil para a mais difícil. Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
 "7b. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha \"# Subtópico: nome\" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, \"Do Senado Federal (art. 52)\"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto.",
 "8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
@@ -1702,7 +1704,7 @@ function qbFilters(withStatus,key){key=key||"st";
 }
 function qbHome(){
   const all=qbList(),n=all.length;
-  if(!n)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><p class="lead">Aqui você resolve questões inéditas, com gabarito comentado, de Certo ou Errado e de múltipla escolha. Peça as questões ao Claude no formato abaixo e adicione aqui. Tudo o que você resolver entra sozinho nas estatísticas.</p>${qbAddBox()}</section>`;
+  if(!n)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><p class="lead">Aqui você resolve questões inéditas, com gabarito comentado, de Certo ou Errado e de múltipla escolha. Peça as questões ao Claude e adicione. Tudo o que você resolver entra sozinho nas estatísticas.</p><div class="bar-act"><button class="btn" data-act="qb-view" data-v="add">Adicionar questões</button></div></section>`;
   const feitas=all.reduce((z,q)=>z+q.ok+q.er+q.bl,0),ok=all.reduce((z,q)=>z+q.ok,0),er=all.reduce((z,q)=>z+q.er,0);
   const fav=all.filter(q=>q.fav).length,wrong=all.filter(q=>q.last==="er").length,novas=all.filter(q=>!(q.ok+q.er+q.bl)).length;
   const cnt=qbFilter(true,"st").length;
@@ -1728,8 +1730,7 @@ function qbHome(){
     <p class="muted" style="font-size:13px;margin:10px 2px 0">Por padrão aparecem só as questões que você ainda não resolveu. Troque a situação para refazer as que errou, as que acertou ou as favoritas.</p>
     <div class="bar-act"><button class="btn" data-act="qb-start" ${cnt?"":"disabled"}>Começar${cnt?` (${Math.min(cnt,qb.n==="todas"?cnt:+qb.n)} de ${cnt})`:""}</button><button class="btn alt" data-act="qb-view" data-v="lista">Ver todas as questões</button></div></section>
   ${kRows.length||weak.length||dRows.length?`<section class="sec"><div class="grid2">${dRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por dificuldade</h3><p>Só as questões do banco</p></div></div>${barsHtml(dRows)}</div>`:""}${kRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por matéria</h3><p>Só as questões do banco</p></div></div>${barsHtml(kRows)}</div>`:""}
-    ${weak.length?`<div class="card"><div class="card-h"><div><h3>Assuntos mais fracos</h3><p>Menor acerto, com ao menos 3 respostas</p></div></div><ul class="list">${weak.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${qbTag(x.k)}<span>${x.ok} certas · ${x.er} erradas</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul></div>`:""}</div></section>`:""}
-  <section class="sec"><div class="sec-h"><h2>Adicionar questões</h2></div>${qbAddBox()}</section>`;
+    ${weak.length?`<div class="card"><div class="card-h"><div><h3>Assuntos mais fracos</h3><p>Menor acerto, com ao menos 3 respostas</p></div></div><ul class="list">${weak.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${qbTag(x.k)}<span>${x.ok} certas · ${x.er} erradas</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul></div>`:""}</div></section>`:""}`;
 }
 function qbAddBox(){
   const gs=qb.groups.length;
@@ -1760,28 +1761,40 @@ function qbLista(){
     ${qbFilters(true,"stL")}<div style="margin-top:10px"><label class="lbl" for="qb-q">Buscar</label><input class="in" id="qb-q" type="search" placeholder="Palavra do enunciado ou do assunto" value="${esc(qb.q)}"></div>
     ${sh.length?`<ul class="qul">${sh.map(row).join("")}</ul>${items.length>sh.length?`<div class="bar-act"><button class="btn alt" data-act="qb-more">Mostrar mais (${items.length-sh.length})</button></div>`:""}`:`<div class="empty">Nenhuma questão com esses filtros.</div>`}</section>`;
 }
+function qbAdd(){
+  return `<section class="sec" style="margin-top:20px"><h2>Adicionar questões</h2>
+    <p class="lead">Duas formas de alimentar o painel: questões inéditas feitas pelo Claude, para resolver aqui, e planilhas com o resultado do que você fez no Tec Concursos.</p>
+    <div class="sec-h" style="margin-top:18px"><h3>Questões inéditas do Claude</h3></div>${qbAddBox()}</section>
+  <section class="sec"><div class="sec-h"><h3>Resultados do Tec Concursos (planilha)</h3></div>
+    <p class="lead">Envie no fim do dia a planilha do que você resolveu fora do painel. Cada linha vai para a matéria, o assunto e a semana certos e entra no desempenho, no caderno de erros e nos gráficos.</p>${impUploadHtml()}</section>`;
+}
+function qbHist(){return `<section class="sec" style="margin-top:20px"><h2>Importações e backup</h2>${impHistHtml()}</section>`}
+function qbNav(){
+  const V=[["home","Resolver"],["lista","Todas as questões"],["add","Adicionar"],["hist","Importações e backup"]];
+  return `<section class="sec" style="margin-top:20px"><div class="chips" style="display:flex;gap:8px;flex-wrap:wrap">${V.map(([k,l])=>`<button class="chip" style="${qb.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="qb-view" data-v="${k}">${l}</button>`).join("")}</div></section>`;
+}
 function qbHtml(){
-  if(demo)return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2><div class="empty">Desligue os dados de exemplo para usar o banco de questões.</div></section>`;
+  if(demo)return `<section class="sec" style="margin-top:20px"><h2>Questões</h2><div class="empty">Desligue os dados de exemplo para usar as questões.</div></section>`;
   if(qb.view==="session")return qbSession();
   if(qb.view==="done")return qbDone();
-  if(qb.view==="lista")return qbLista();
-  return qbHome();
+  const body=qb.view==="lista"?qbLista():qb.view==="add"?qbAdd():qb.view==="hist"?qbHist():qbHome();
+  return qbNav()+body.replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
 }
 function qbClick(a,t,e){
   if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
   if(a==="qb-start"){qbStart();return true}
-  if(a==="qb-add"){closeSheet();tab="banco";menu=false;qb.view="home";render();const el=document.querySelector(".imp-box");if(el)el.scrollIntoView({behavior:"smooth",block:"center"});return true}
-  if(a==="qb-one"){tab="banco";menu=false;qbStart([t.dataset.id]);return true}
+  if(a==="qb-add"){closeSheet();tab="questoes";menu=false;qb.view="add";render();window.scrollTo(0,0);return true}
+  if(a==="qb-one"){tab="questoes";menu=false;qbStart([t.dataset.id]);return true}
   if(a==="qb-sub"){
     qb.mat=t.dataset.k;qb.mid=t.dataset.mid||"";qb.cad="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.sb=t.dataset.sb;
     const lst=qbList().filter(q=>q.k===qb.mat&&(!qb.mid||q.mid===qb.mid)&&(qb.sb==="__none"?!q.sb:q.sb===qb.sb)),mode=t.dataset.m||"todas";
     qb.st=lst.some(q=>qbStat(q,mode))?mode:"todas";
-    closeSheet();tab="banco";menu=false;qbStart();return true}
+    closeSheet();tab="questoes";menu=false;qbStart();return true}
   if(a==="qb-meta"){
     const m=BY[t.dataset.id];if(!m)return true;
     const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
     qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.sb="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
-    closeSheet();tab="banco";menu=false;qbStart();return true}
+    closeSheet();tab="questoes";menu=false;qbStart();return true}
   if(a==="qb-quit"){qb.view="home";qb.confirm=false;render();window.scrollTo(0,0);return true}
   if(a==="qb-sel"){const id=qb.queue[qb.i];if(id&&!qb.sans[id]){qd(id).sel=t.dataset.v;render()}return true}
   if(a==="qb-strike"){const id=qb.queue[qb.i],d=qd(id),i=t.dataset.i;d.strike[i]=!d.strike[i];if(d.strike[i]&&d.sel===LTR[+i])d.sel="";render();return true}
@@ -1957,7 +1970,7 @@ function bibHtml(){
 }
 
 /* ---------- questões (importação) ---------- */
-function impHtml(){
+function impParts(){
   const batches=Object.entries(P()).filter(([id])=>id.slice(0,4)==="imp-").map(([id,d])=>({id,...d})).sort((a,b)=>b.id<a.id?-1:1);
   const ok=imp.rows.filter(r=>r.k),skip=imp.rows.length-ok.length,q=ok.reduce((s,r)=>s+r.c+r.e+r.b,0),nsub=imp.rows.filter(r=>r.sub).length;
   const subjOpts=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(s=>`<option value="${s}" ${s===k?"selected":""}>${SHORT[s]}</option>`).join("");
@@ -1969,9 +1982,7 @@ function impHtml(){
       <div class="sels"><select data-imp="k" data-i="${i}" aria-label="Matéria da linha ${i+1}">${subjOpts(r.k)}</select><select data-imp="mid" data-i="${i}" aria-label="Assunto da linha ${i+1}" ${r.k?"":"disabled"}>${asOpts(r)}</select></div>
       <div class="n">${r.sub?`Subtópico: ${esc(r.sub)} · ${Math.round(r.pc*100)}% certas · ${Math.round((1-r.pc)*100)}% erradas · só entra na aba Subtópicos, não soma questões · ${fmtDay(r.dt)}`:`${r.c} certas · ${r.e} erradas · ${r.b} brancas · ${fmtDay(r.dt)}`}</div></div>`).join("")}</div>
     <div class="bar-act"><button class="btn" data-act="doimport" ${ok.length?"":"disabled"}>Importar ${ok.length} ${ok.length===1?"linha":"linhas"}</button><button class="btn alt" data-act="cancelimp">Cancelar</button></div>`:"";
-  return `
-  <section class="sec" style="margin-top:20px"><h2>Questões</h2>
-    <p class="lead">Marque as questões direto em cada meta ou, no fim do dia, envie uma planilha com tudo o que resolveu. Cada linha vai para a matéria, o assunto e a semana certos e entra no desempenho, no caderno de erros e nos gráficos.</p>
+  const up=`
     ${imp.msg?`<div class="msg">${esc(imp.msg)}</div>`:""}${imp.err?`<div class="msg err">${esc(imp.err)}</div>`:""}
     <div class="imp-box" style="margin-top:16px"><b>Enviar planilha de questões</b>
       <p>Aceita Excel (.xlsx, .xls) e CSV. Colunas: Data, Matéria, Assunto, Certas, Erradas e Brancas. Se a planilha trouxer só Total e Certas, calculo as erradas.</p>
@@ -1979,6 +1990,8 @@ function impHtml(){
       <div style="margin-top:14px"><button class="link" data-act="template">Baixar modelo de planilha</button></div>
     </div>
     ${prev}
+`;
+  const hist=`
     <div class="sec-h" style="margin-top:34px"><h2>Importações feitas</h2></div>
     ${batches.length?`<ul class="list" style="border-top:2px solid var(--fg)">${batches.map(b=>{const n=(b.rows||[]).reduce((s,r)=>s+(r.c||0)+(r.e||0)+(r.b||0),0);return `<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(b.name||"Planilha")}</div><div class="s"><span>${(b.rows||[]).length} linhas · ${num(n)} questões · enviada em ${fmtDay(b.dt)}</span></div></div>${demo?"":`<button class="chip" data-act="undoimp" data-id="${b.id}">Desfazer</button>`}</li>`}).join("")}</ul>`:`<div class="empty">Nenhuma planilha importada ainda.</div>`}
     <div class="sec-h" style="margin-top:34px"><h2>Backup dos dados</h2></div>
@@ -1988,8 +2001,10 @@ function impHtml(){
       ${fb.bkMsg?`<div class="msg">${esc(fb.bkMsg)}</div>`:""}
       ${fb.bkList.length?`<ul class="list" style="border-top:2px solid var(--fg)">${fb.bkList.slice().reverse().slice(0,30).map(d=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${fmtDay(d)}</div></div>${fb.bkAsk===d?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bkgo" data-d="${d}">Confirmar: substituir os dados atuais</button><button class="chip" data-act="bkno">Cancelar</button>`:`<button class="chip" data-act="bkask" data-d="${d}">Restaurar</button>`}</li>`).join("")}</ul>`:`<div class="empty">O primeiro backup automático é criado quando você abre o painel com registros salvos.</div>`}
       <p class="muted" style="font-size:13px;margin:10px 2px 0">Além disso, o Google guarda uma cópia do banco todo dia (por 14 dias) e uma por semana (por 14 semanas), e permite voltar a qualquer momento dos últimos 7 dias.</p>`:""}
-  </section>`;
+`;
+  return {up,hist};
 }
+const impUploadHtml=()=>impParts().up,impHistHtml=()=>impParts().hist;
 
 /* ---------- ankis ---------- */
 const AKINSTR=[
@@ -2275,6 +2290,11 @@ function ankiHtml(){
 
 /* ---------- desempenho ---------- */
 function barsHtml(rows){return `<div class="hb">${rows.map(r=>`<div class="hb-r" data-tip="${esc(r.tip||"")}"><div class="hb-l" style="--c:${r.c}"><i></i><span>${esc(r.l)}</span></div><div class="hb-t" style="--c:${r.c}"><i style="width:${Math.max(0,Math.min(100,r.f*100))}%"></i></div><div class="hb-v">${r.v}${r.s?`<small>${r.s}</small>`:""}</div></div>`).join("")}</div>`}
+const pf={view:"geral"};
+function perfTab(){
+  const V=[["geral","Visão geral"],["materias","Matérias"],["subtopicos","Subtópicos"]];
+  return `<section class="sec" style="margin-top:20px"><div class="chips" style="display:flex;gap:8px;flex-wrap:wrap">${V.map(([k,l])=>`<button class="chip" style="${pf.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="pf-view" data-v="${k}">${l}</button>`).join("")}</div></section>`+({geral:perfHtml,materias:matHtml,subtopicos:subHtml}[pf.view]()).replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
+}
 function perfHtml(){
   const cw=A.cw, tot=A.tot, n=tot_(tot);
   const accRows=SUBJ.map(k=>{const s=A.mat[k],nn=tot_(s),r=rate(s);return {k,l:SHORT[k],c:`var(--m-${k})`,f:r||0,v:pc(r),s:nn?nn+" questões":"",tip:`${SHORT[k]}: ${s.c} certas, ${s.e} erradas, ${s.b} brancas`,r:r==null?-1:r}}).sort((a,b)=>b.r-a.r);
@@ -2337,7 +2357,7 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["banco","Banco de questões"],["subtopicos","Subtópicos"],["desempenho","Desempenho"],["materias","Matérias"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
@@ -2346,7 +2366,7 @@ function render(){
   LOCKON=lockOn();LIB=libEff();
   IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:impHtml,banco:qbHtml,subtopicos:subHtml,desempenho:perfHtml,materias:matHtml,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
+  const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
@@ -2675,6 +2695,7 @@ document.addEventListener("click",e=>{
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
+  if(a==="pf-view"){pf.view=t.dataset.v;render();window.scrollTo(0,0);return}
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="ak-meta"){
     const m=BY[t.dataset.id];if(!m)return;
