@@ -24,13 +24,15 @@ data = {
              "obs": s["observacao"], "rg": 0 if s.get("rg") is False else 1, "m": [meta(m) for m in s["metas"]]} for s in src["semanas"]],
 }
 blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-frag = (root / "template.html").read_text(encoding="utf-8").replace("__DATA__", blob)
+import datetime
+build = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+frag = (root / "template.html").read_text(encoding="utf-8").replace("__DATA__", blob).replace("__BUILD__", build)
 out = sys.argv[1] if len(sys.argv) > 1 else None
 if out:
     pathlib.Path(out).write_text(frag, encoding="utf-8")
 head = ('<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-        '<meta name="theme-color" content="#087a40"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png">'
+        '<meta name="theme-color" content="#087a40"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png?v=3"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=3"><link rel="shortcut icon" href="favicon.ico?v=3">'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>'
         '<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>'
