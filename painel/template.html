@@ -111,6 +111,10 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 @media (max-width:560px){.ins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px}.ic{flex:0 0 84%;scroll-snap-align:start}}
 .hero-head>div:last-child{flex-basis:100%}.hero-head .cd{margin-left:auto;flex:none}
 @media (max-width:560px){.hero-head{flex-wrap:wrap;gap:10px 8px}.hero-head .nav{width:30px;height:30px;font-size:17px}.hero-head .wk{gap:4px}.hero-head .wk-t{font-size:21px;padding-inline:2px}.hero-head .wk-d{padding-inline:2px;font-size:13px}.hero-head .cd{padding:6px 10px;gap:7px}.hero-head .cd-n{font-size:24px}.hero-head .cd-t b{font-size:10.5px;max-width:52px}.hero-head .cd-t span{display:none}}
+.gl{margin-top:8px}.gl-b{position:relative;display:flex;height:8px;border-radius:99px;background:var(--soft2);overflow:hidden}.gl-b i{display:block;height:100%}.gl-b u{position:absolute;top:0;bottom:0;width:2px;background:var(--fg)}
+.gl-t{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--fg2);margin-top:4px}.gl-t b{color:var(--fg)}.gl .gs{font-weight:700;color:var(--amber)}.gl.ok .gs{color:var(--good)}.gl-n{font-size:12.5px;font-weight:700;color:var(--fg);margin-bottom:5px}
+.gl-f .gl-b{height:12px;margin-top:10px}.gl-f.ok{background:var(--good-t)}.gl-s{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}.gl-s div{text-align:center}.gl-s b{display:block;font:900 20px/1.1 var(--display);text-transform:none;letter-spacing:0;color:var(--fg);margin:0}.gl-s span{font-size:11px;color:var(--fg2)}.gl-n2{font-weight:500;font-size:13px;color:var(--fg2);margin:10px 0 0;line-height:1.45}
+.qpal+.gl,.ak-bar+.fzr+.gl{margin:6px 0 8px}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -941,6 +945,20 @@ function weekStats(wi){
   const x=A.wk[wi];
   return {n:L.length,done,part,pi,fr:L.length?fr/L.length:0,q:x.c+x.e+x.b,c:x.c,e:x.e,b:x.b};
 }
+const goalOf=m=>m&&m.t==="teoria_questoes"&&!m.rv&&!m.rg?(planItems(m)||50):0;
+function goalHtml(m,mode){
+  const g=goalOf(m);if(!g)return "";
+  const it=itemsOf(m),n=tot_(it),mx=Math.max(g,n),ok=n>=g,falt=Math.max(0,g-n),r=rate(it),w=v=>(v/mx*100).toFixed(1)+"%";
+  const bar=`<div class="gl-b" role="img" aria-label="${n} de ${g} questões"><i style="width:${w(it.c)};background:var(--good)"></i><i style="width:${w(it.e)};background:var(--bad)"></i><i style="width:${w(it.b)};background:var(--fg3)"></i>${n>g?`<u style="left:${w(g)}"></u>`:""}</div>`;
+  const stat=ok?`objetivo atingido${n>g?` (+${n-g})`:""}`:n?`faltam ${falt}`:`faltam ${g}`;
+  if(mode==="full"){
+    const pf=metaPerf(m);
+    return `<div class="box gl gl-f ${ok?"ok":""}"><b>Objetivo de questões da primeira passada</b>${bar}
+      <div class="gl-s"><div><b>${n}<small style="font-size:12px;font-weight:700;color:var(--fg2)">/${g}</small></b><span>realizadas</span></div><div><b>${falt}</b><span>faltam</span></div><div><b>${pc(r)}</b><span>de acerto</span></div><div><b>${ok&&pf.nivel?NV[pf.nivel]:"–"}</b><span>classificação</span></div></div>
+      <p class="gl-n2">${ok?`Base formada: a meta já tem as ${g} questões. ${pf.nivel?`Classificação ${NV[pf.nivel].toLowerCase()}, que define o prazo das revisões.`:""}`:`Para concluir a primeira passada desta meta, faltam ${falt} ${falt===1?"questão":"questões"}. Certas, erradas e brancas contam, e as do banco entram sozinhas.`}</p></div>`;
+  }
+  return `<div class="gl ${ok?"ok":""}">${mode==="bank"?`<div class="gl-n">Objetivo desta meta: ${esc(m.a.length>60?m.a.slice(0,58)+"…":m.a)}</div>`:""}${bar}<div class="gl-t"><span><b>${n}</b> de ${g} questões</span><span class="gs">${stat}</span></div></div>`;
+}
 function rowHtml(m){
   const rd=rdone(m),r=rp(m),done=rd>=r,it=itemsOf(m),n=tot_(it),rt=rate(it),pr=P()[m.id];
   const bits=[m.i?"cerca de "+m.i+" itens":null,r>1?`${r} repetições`:null].filter(Boolean).join(" · ");
@@ -949,7 +967,7 @@ function rowHtml(m){
   const stu=!done&&!!(pr&&pr.st),lk=isLocked(m);
   return `<li class="row ${lk?"lk":done?"done":stu?"stu":rd?"part":""}" data-act="open" data-id="${m.id}" tabindex="0" role="button">
     ${lk?`<span class="chk lkc" aria-label="Bloqueada">${LOCK}</span>`:`<button class="chk" data-act="toggle" data-id="${m.id}" aria-label="${done?"Desmarcar":stu?"Concluir":"Começar a estudar"}: ${esc(m.a)}">${CHECK}</button>`}
-    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${(()=>{const q=qbList().filter(x=>x.mid===m.id);if(!q.length)return "";const nv=q.filter(x=>qbStat(x,"novas")).length;const er=q.filter(x=>x.last==="er").length,mode=nv?"novas":er?"erradas":"todas";return `<button class="rb qbk" data-act="qb-meta" data-id="${m.id}" data-m="${mode}" aria-label="Resolver as questões desta meta no banco">${nv?nv+(nv===1?" questão nova":" questões novas")+" no banco":er?er+" para refazer no banco":q.length+" no banco"} ›</button>`})()}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${(()=>{const q=qbList().filter(x=>x.mid===m.id);if(!q.length)return "";const nv=q.filter(x=>qbStat(x,"novas")).length;const er=q.filter(x=>x.last==="er").length,mode=nv?"novas":er?"erradas":"todas";return `<button class="rb qbk" data-act="qb-meta" data-id="${m.id}" data-m="${mode}" aria-label="Resolver as questões desta meta no banco">${nv?nv+(nv===1?" questão nova":" questões novas")+" no banco":er?er+" para refazer no banco":q.length+" no banco"} ›</button>`})()}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}${goalHtml(m,"mini")}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
 function revRow(r){
@@ -1019,7 +1037,7 @@ function homeHtml(){
     </div>
     ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
     ${canUnlock?`<div class="unlock"><div><b>Semana ${LIB+1} concluída</b><span>Libere a semana ${LIB+2} para continuar.</span></div><button class="btn" data-act="unlock-next">Liberar a semana ${LIB+2}</button></div>`:""}
-    ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div></div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
+    ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div>${goalHtml(cs.m,"mini")}</div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
 
   <section class="kpis" aria-label="Indicadores">
@@ -1750,6 +1768,7 @@ function qbSession(){
   const gTxt=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
   const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot} · ${answered} ${answered===1?"respondida":"respondidas"}</span><button class="chip" data-act="qb-fin">Finalizar</button></div><div class="ak-bar"><i style="width:${answered/tot*100}%"></i></div>
   <div class="fzr"><span class="clk" title="Tempo líquido nesta sessão">⏱ <b id="qb-clk">${fmtClock(qt.sess)}</b></span>${fzTools()}</div>
+  ${goalHtml(BY[q.mid],"bank")}
   <div class="qpal" role="group" aria-label="Ir para a questão">${qb.queue.map((x,i)=>{const r=qb.sans[x];return `<button class="qpd ${r?r.res:""} ${i===qb.i?"cur":""}" data-act="qb-go" data-i="${i}" aria-label="Questão ${i+1}${r?(r.res==="ok"?", certa":r.res==="er"?", errada":", em branco"):", sem resposta"}" ${i===qb.i?'aria-current="true"':""}>${i+1}</button>`}).join("")}</div>`;
   const conf=qb.confirm?`<div class="msg" style="background:var(--warn-t);margin-bottom:12px"><b>Faltam ${S.pend} ${S.pend===1?"questão sem resposta":"questões sem resposta"}.</b><br>Elas não serão contadas e continuam como não resolvidas no banco.<div class="bar-act" style="margin-top:10px"><button class="btn" style="padding:10px 18px" data-act="qb-fincont">Voltar para responder</button><button class="btn alt" style="padding:10px 18px" data-act="qb-finok">Finalizar assim mesmo</button></div></div>`:"";
   const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${dfTag(q.df)}${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
@@ -1797,7 +1816,7 @@ function qbDone(){
     ${s.pend?`<p class="muted" style="font-size:13.5px;margin:6px 0 0">${s.pend} ${s.pend===1?"questão ficou sem resposta":"questões ficaram sem resposta"}. Elas não foram contadas e continuam como não resolvidas.</p>`:""}
     <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
     <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div>${(()=>{const qs=qb.queue.map(id=>({id,...QS[id]})).filter(q=>q.e),mids=[...new Set(qs.map(q=>q.mid))],meta=mids.length===1&&mids[0]&&BY[mids[0]]?BY[mids[0]]:null;
-      if(meta){const all=qbList().filter(q=>q.mid===meta.id);return `<div style="margin-top:14px">${qbReport(all,"Relatório da meta: "+meta.a)}<div class="bar-act"><button class="btn alt" data-act="open" data-id="${meta.id}">Abrir a meta</button></div></div>`}
+      if(meta){const all=qbList().filter(q=>q.mid===meta.id);return `<div style="margin-top:14px">${goalHtml(meta,"full")}${qbReport(all,"Relatório da meta: "+meta.a)}<div class="bar-act"><button class="btn alt" data-act="open" data-id="${meta.id}">Abrir a meta</button></div></div>`}
       return `<div style="margin-top:14px">${qbReport(qs,"Relatório da sessão por subtópico")}</div>`})()}</section>`;
 }
 function qbFilters(withStatus,key){key=key||"st";
@@ -1890,7 +1909,7 @@ function qbHtml(){
   if(qb.view==="session")return qbSession();
   if(qb.view==="done")return qbDone();
   const body=qb.view==="lista"?qbLista():qb.view==="add"?qbAdd():qb.view==="hist"?qbHist():qbHome();
-  return qbNav()+body.replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
+  return qbNav()+(qb.mid&&BY[qb.mid]?`<section class="sec" style="margin-top:14px">${goalHtml(BY[qb.mid],"full")}</section>`:"")+body.replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
 }
 function qbClick(a,t,e){
   if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
@@ -2859,6 +2878,7 @@ function openSheet(id){
     ${m.rv?`<div class="box stip"><b>Revisar com o Anki</b><ul>${akRow(m.base.id,ro,true)}</ul></div>`:""}
     ${r_&&r_.pf?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(r_.pf))}. Prazo desta revisão: ${r_.days} dias depois da anterior.</p>`:""}
     ${!dyn?(()=>{const pf=metaPerf(m);return pf.n?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(pf))}. Revisões em ${pf.dias.join(", ")} dias.</p>`:""})():""}
+    ${!dyn?goalHtml(m,"full"):""}
     ${isLocked(m)?`<div class="box lockbox"><b>Semana bloqueada</b><p>Você pode ler tudo aqui, mas só consegue registrar depois de concluir as metas da semana ${LIB+1} e liberar esta.</p></div>`:""}
     ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
     ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
