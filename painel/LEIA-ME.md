@@ -55,3 +55,10 @@ Questões inéditas de Certo ou Errado e de múltipla escolha, com gabarito come
 ## Reorganizar as metas por semana
 
 Veja `dados/REORGANIZAR.md`. Em resumo: edite `dados/plano.json` (metas por semana, dias sem estudo) e rode `python3 dados/reorganizar.py --aplicar`. A ordem original das metas nunca muda e o resultado não depende de remanejamentos anteriores.
+
+## Tempo líquido e Desempenho
+
+- O tempo em que você resolve questões no banco e estuda cartões no Anki é cronometrado (só com a tela ativa e com toque nos últimos 3 minutos) e vira "horas líquidas" por dia, semana, meta, matéria e hora do dia. Fechar a aba encerra a contagem; os dados são salvos a cada 20 segundos.
+- A aba Desempenho reúne tudo em uma página: Resumo, O que fazer (recomendações automáticas), Tempo, Questões, Matérias, Metas, Anki e Subtópicos.
+- Nas sessões de questões e de Anki há botões A− e A+ para o tamanho da letra.
+- Na Biblioteca, o Caderno de erros guarda o gabarito comentado de toda questão que você errou.

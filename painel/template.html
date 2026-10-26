@@ -101,6 +101,14 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 /* indicadores: blocos de cor sólida */
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}
 .cd{display:flex;align-items:center;gap:14px;margin:0 0 12px;padding:12px 18px;border-radius:20px;background:linear-gradient(135deg,#ffd21a,#ffe36b);color:#14301f;box-shadow:0 10px 26px rgba(20,48,31,.28),0 2px 0 rgba(255,255,255,.5) inset;animation:cdf 4s ease-in-out infinite}.cd-n{font-size:42px;font-weight:800;line-height:1;letter-spacing:-.02em}.cd-t{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.cd-t span{font-size:13px;opacity:.85}.cd-b{display:block;height:6px;border-radius:9px;background:rgba(20,48,31,.18);margin-top:5px;overflow:hidden}.cd-b u{display:block;height:100%;background:#14301f;border-radius:9px}@keyframes cdf{50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.cd{animation:none}}
+.kpi.sea{--k:#0b5e8a}
+.pfnav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;padding:10px 60px 10px 0;margin-top:14px;background:var(--bg);scrollbar-width:none}.pfnav::-webkit-scrollbar{display:none}.pfnav .chip{flex:none}
+.pfh{margin:40px 0 14px;scroll-margin-top:64px}.pfh h2{font-size:26px;margin:0;letter-spacing:-.01em}.pfh p{margin:4px 0 0;font-size:14px;color:var(--fg2)}
+.hs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 2px 12px;margin:0 -2px;scrollbar-width:thin}.hs .kpi{flex:0 0 184px;scroll-snap-align:start;min-height:150px}
+.ins{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}.ic{border:1px solid var(--line);border-left:6px solid var(--c);border-radius:16px;padding:14px 16px;background:var(--bg)}.ic b{display:block;font-size:15px}.ic p{margin:5px 0 0;font-size:13.5px;line-height:1.5;color:var(--fg2)}.ic.bad{--c:var(--bad)}.ic.warn{--c:var(--orange)}.ic.info{--c:var(--blue)}.ic.good{--c:var(--good)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:18px;-webkit-overflow-scrolling:touch}.mt{border-collapse:collapse;width:100%;min-width:660px;font-size:13.5px}.mt th,.mt td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}.mt th:first-child,.mt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg);z-index:1}.mt th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--fg2)}.mt tr.tt td{font-weight:800;border-bottom:0;background:var(--soft)}.mt tr.tt td:first-child{background:var(--soft)}
+.fzr{display:flex;align-items:center;justify-content:space-between;margin:10px 0 2px;font-size:13.5px;color:var(--fg2)}.fzr .clk b{font-variant-numeric:tabular-nums;color:var(--fg)}.fzb{display:inline-flex;gap:6px}.fzb .chip{padding:6px 12px;font-weight:800}
+@media (max-width:560px){.ins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px}.ic{flex:0 0 84%;scroll-snap-align:start}}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -677,6 +685,13 @@ function genDemo(){
   });
   WK.forEach((w,wi)=>{if(wi>=cw||wi>=lastWk||hash(w.id+"rg")>.88)return;const ok=Math.round(8*(.6+hash(w.id+"rgq")*.35));out[w.id+"~RG"]={r:1,dt:w.f,c:ok,e:8-ok,b:0}});
   out["S6-A9"]={r:0,mw:6};
+  for(let i=0;i<14;i++){
+    const dd=ymd(addDays(T,-i)),ks=["POR","CON","ADM","LIN","TI"].filter((k,j)=>hash(dd+k+j)>.35);
+    if(!ks.length)continue;
+    const rows=ks.map(k=>{const n=Math.round(15+hash(dd+k+"n")*30),sp=55+hash(dd+k+"s")*70+(k==="LIN"?35:0),tot=n*sp;return {k,mid:"",s:Math.round(tot),n,tc:Math.round(n*.7*sp*.6),te:Math.round(n*.3*sp*.75),tb:0}});
+    const hh={};[8,9,10,20,21].forEach(h=>{if(hash(dd+"h"+h)>.4)hh[h]={s:Math.round(600+hash(dd+h)*1500),c:Math.round(10+hash(dd+h+"c")*20*(h<11?1.1:.85)),e:Math.round(4+hash(dd+h+"e")*10),b:0}});
+    out["qt-"+dd]={qt:1,dt:dd,rows,hh};
+  }
   out["imp-demo"]={imp:1,name:"questoes-de-hoje.xlsx",dt:DEMO_TODAY,rows:[
     {mid:"S6-P6",k:"POR",dt:DEMO_TODAY,c:20,e:6,b:0},{mid:"S5-K6a",k:"CON",dt:DEMO_TODAY,c:15,e:5,b:0},
     {mid:"S6-A8",k:"ADM",dt:DEMO_TODAY,c:12,e:8,b:2},{mid:"",k:"LIN",dt:DEMO_TODAY,c:10,e:10,b:0}]};
@@ -878,6 +893,22 @@ function agg(){
     addQ(d.dt?weekOf(d.dt):b.wi,d.dt,c,e,bb,b.k,"Revisões");
     if((d.r||0)>=1)a.revDone++;
   }
+  const z=()=>({s:0,n:0,tc:0,te:0,tb:0});
+  const tm=a.tm={q:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},hh:Array.from({length:24},()=>({s:0,c:0,e:0,b:0})),tc:0,te:0,tb:0},k:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},tok:0,ter:0,okN:0,erN:0}};
+  for(const id in p){
+    if(id.slice(0,3)!=="qt-")continue;
+    const d=p[id],wi=d.dt?weekOf(d.dt):0,Q=tm.q;
+    (d.rows||[]).forEach(r=>{const s=r.s||0;Q.tot+=s;Q.n+=r.n||0;Q.tc+=r.tc||0;Q.te+=r.te||0;Q.tb+=r.tb||0;Q.day[d.dt]=(Q.day[d.dt]||0)+s;Q.wk[wi]+=s;
+      if(SUBJ.includes(r.k)){const x=Q.mat[r.k]||(Q.mat[r.k]=z());x.s+=s;x.n+=r.n||0;x.tc+=r.tc||0;x.te+=r.te||0;x.tb+=r.tb||0}
+      if(r.mid){const x=Q.meta[r.mid]||(Q.meta[r.mid]=z());x.s+=s;x.n+=r.n||0}});
+    Object.entries(d.hh||{}).forEach(([h,x])=>{const y=Q.hh[+h];if(y){y.s+=x.s||0;y.c+=x.c||0;y.e+=x.e||0;y.b+=x.b||0}});
+  }
+  for(const day in REVD){
+    const r=REVD[day],s=r.s||0;if(!s)continue;
+    const K=tm.k,wi=weekOf(day);K.tot+=s;K.n+=r.n||0;K.day[day]=(K.day[day]||0)+s;K.wk[wi]+=s;K.tok+=r.tok||0;K.ter+=r.ter||0;K.okN+=r.ok||0;K.erN+=r.er||0;
+    for(const k in (r.ks||{}))if(SUBJ.includes(k))K.mat[k]=(K.mat[k]||0)+r.ks[k];
+    for(const k in (r.ms||{}))K.meta[k]=(K.meta[k]||0)+r.ms[k];
+  }
   let planned=0;
   for(let i=0;i<WK.length;i++){const n=WM[i].length;if(i<cw)planned+=n;else if(i===cw){const di=dday(today(),pd(WK[i].i));planned+=di<0?0:Math.min(n,Math.floor(n*(di+1)/7))}}
   a.planned=planned;
@@ -999,6 +1030,9 @@ function homeHtml(){
       <div class="num">${A.content.n?Math.round(A.content.done/A.content.n*100):0}<small>%</small></div>
       <div class="sub">${A.content.done} de ${A.content.n} assuntos · só estudo novo</div>
       <div class="viz"><div class="bar2"><i style="width:${A.content.n?A.content.done/A.content.n*100:0}%"></i></div></div></div>
+    <div class="kpi sea"><div class="lab">Horas líquidas</div><div class="num">${fmtH(tmTot())}</div>
+      <div class="sub">hoje ${fmtH(tmDay(ymd(T)))} · semana ${fmtH(tmWkT(sel))}</div>
+      <div class="viz"><div class="sbars" aria-label="Horas por dia, últimos 7 dias">${(()=>{const d7=[];for(let i=6;i>=0;i--)d7.push(tmDay(ymd(addDays(T,-i))));const m7=Math.max(1,...d7);return d7.map(v=>`<span class="${v?"":"z"}" style="height:${v?Math.max(8,v/m7*100):10}%" data-tip="${fmtH(v)}"></span>`).join("")})()}</div></div></div>
     <div class="kpi ${lag>=0?"green":"red"}"><div class="lab">Ritmo</div><div class="num">${lag>=0?(lag===0?"Em dia":"+"+lag):lag}<small>${lag===0?"":"metas"}</small></div>
       <div class="sub">${A.tot.done} concluídas · ${A.planned} previstas até hoje</div>
       <div class="viz"><div class="bar2"><i style="width:${A.planned?Math.min(100,A.tot.done/A.planned*100):0}%"></i></div></div></div>
@@ -1588,7 +1622,7 @@ function qbStart(ids){
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
   pool=qb.ord==="aleatoria"?shuf(pool):qb.ord==="dificuldade"?qbOrdered(pool).sort((a,b)=>DFR[a.df||""]-DFR[b.df||""]):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
-  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
+  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qt.sess=0;qt.tq={};qt.act=Date.now();qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
 }
 function qbLog(q,res){
   if(demo)return;
@@ -1602,9 +1636,10 @@ function qbLog(q,res){
 function qbAnswer(resp){
   const id=qb.queue[qb.i],q=QS[id];if(!q||qb.sans[id])return;
   const res=resp===""?"bl":resp===q.g?"ok":"er";
+  qtTick();
   qb.sans[id]={resp,res};
-  qsWrite([[id,{...q,[res]:(q[res]||0)+1,last:res,lt:T0()}]]);
-  qbLog(q,res);
+  qsWrite([[id,{...q,[res]:(q[res]||0)+1,last:res,lt:T0(),ts:rd1((q.ts||0)+(qt.tq[id]||0))}]]);
+  qbLog(q,res);qtAnswer(q,id,res);
   render();
 }
 const qd=id=>qb.dr[id]||(qb.dr[id]={sel:"",strike:{}});
@@ -1623,6 +1658,80 @@ function qbFinish(force){
   qb.confirm=false;qb.view="done";render();window.scrollTo(0,0);
 }
 function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
+
+/* ---------- tempo líquido (questões e Anki) ---------- */
+const rd1=x=>Math.round(x*10)/10;
+const qt={tk:Date.now(),act:Date.now(),lf:Date.now(),pend:{},apend:{},tq:{},acq:{},sess:0,asess:0};
+const qtDay=day=>qt.pend[day]||(qt.pend[day]={rows:{},hh:{}});
+const qtRow=(day,k,mid)=>{const R=qtDay(day).rows,key=k+"|"+mid;return R[key]||(R[key]={k,mid,s:0,n:0,tc:0,te:0,tb:0})};
+const qtHh=day=>{const H=qtDay(day).hh,h=String(new Date().getHours());return H[h]||(H[h]={s:0,c:0,e:0,b:0})};
+function qtTick(){
+  const n=Date.now(),d=n-qt.tk;qt.tk=n;
+  if(demo||d<=0||document.hidden||n-qt.act>180000)return;
+  const s=Math.min(d,5000)/1000,day=T0();
+  if(tab==="questoes"&&qb.view==="session"){
+    const id=qb.queue[qb.i],q=QS[id];if(!q)return;
+    qtRow(day,q.k,q.mid||"").s+=s;qtHh(day).s+=s;
+    if(!qb.sans[id])qt.tq[id]=(qt.tq[id]||0)+s;
+    qt.sess+=s;const c=$("#qb-clk");if(c)c.textContent=fmtClock(qt.sess);
+  }else if(tab==="ankis"&&ak.view==="session"){
+    const id=ak.queue[ak.i],c=CARDS[id];if(!c)return;
+    const P_=qt.apend[day]||(qt.apend[day]={s:0,ks:{},ms:{}});
+    P_.s+=s;if(c.k)P_.ks[c.k]=(P_.ks[c.k]||0)+s;if(c.mid)P_.ms[c.mid]=(P_.ms[c.mid]||0)+s;
+    if(!ak.rev)qt.acq[id]=(qt.acq[id]||0)+s;
+    qt.asess+=s;const e=$("#ak-clk");if(e)e.textContent=fmtClock(qt.asess);
+  }
+  if(n-qt.lf>20000)qtFlush();
+}
+function akTmMerge(r,p){
+  if(!p)return r;
+  r.s=rd1((r.s||0)+p.s);r.ks={...(r.ks||{})};r.ms={...(r.ms||{})};
+  for(const k in p.ks)r.ks[k]=rd1((r.ks[k]||0)+p.ks[k]);
+  for(const k in p.ms)r.ms[k]=rd1((r.ms[k]||0)+p.ms[k]);
+  return r;
+}
+function qtSave(id,doc){real[id]=doc;persistLocal();const c=fb.on?fb.col:col;if(c)c.doc(id).set(doc).catch(()=>{})}
+function qtFlush(force){
+  qt.lf=Date.now();
+  if(demo)return;
+  const a=document.activeElement;
+  if(!force&&a&&/^(TEXTAREA|INPUT|SELECT)$/.test(a.tagName))return;
+  const P_=qt.pend,A_=qt.apend;qt.pend={};qt.apend={};
+  Object.keys(P_).forEach(day=>{
+    const id="qt-"+day,d=real[id]||{qt:1,name:"Tempo nas questões",dt:day,rows:[],hh:{}};
+    const rows=(d.rows||[]).map(r=>({...r})),hh={...(d.hh||{})};
+    Object.values(P_[day].rows).forEach(x=>{
+      let r=rows.find(z=>z.k===x.k&&(z.mid||"")===x.mid);
+      if(!r){r={k:x.k,mid:x.mid,s:0,n:0,tc:0,te:0,tb:0};rows.push(r)}
+      ["s","n","tc","te","tb"].forEach(f=>{r[f]=rd1((r[f]||0)+x[f])});
+    });
+    Object.entries(P_[day].hh).forEach(([h,x])=>{const y=hh[h]=hh[h]?{...hh[h]}:{s:0,c:0,e:0,b:0};["s","c","e","b"].forEach(f=>{y[f]=rd1((y[f]||0)+x[f])})});
+    qtSave(id,{...d,rows,hh});
+  });
+  Object.keys(A_).forEach(day=>{
+    const r=REVD[day]?JSON.parse(JSON.stringify(REVD[day])):{n:0,ok:0,er:0,nv:0,k:{}};
+    akTmMerge(r,A_[day]);revdWrite(day,r);
+  });
+}
+function qtAnswer(q,id,res){
+  if(demo)return;
+  qtTick();
+  const day=T0(),sec=qt.tq[id]||0,r=qtRow(day,q.k,q.mid||"");
+  r.n++;r[res==="ok"?"tc":res==="er"?"te":"tb"]+=sec;
+  qtHh(day)[res==="ok"?"c":res==="er"?"e":"b"]++;
+  qtFlush();
+}
+["pointerdown","keydown","touchstart","scroll","wheel"].forEach(ev=>addEventListener(ev,()=>{qt.act=Date.now()},{passive:true,capture:true}));
+setInterval(qtTick,1000);
+addEventListener("pagehide",()=>{qtTick();qtFlush(true)});
+document.addEventListener("visibilitychange",()=>{if(document.hidden)qtFlush(true);else{qt.tk=Date.now();qt.act=Date.now()}});
+
+/* tamanho da letra nas sessões */
+const FZS=[.85,1,1.15,1.3,1.5,1.75];
+const fzI=()=>{const v=parseInt(LS.get("painel-fz"),10);return isFinite(v)&&v>=0&&v<FZS.length?v:1};
+const fzTools=()=>`<span class="fzb"><button class="chip" data-act="fz" data-d="-1" aria-label="Diminuir a letra">A−</button><button class="chip" data-act="fz" data-d="1" aria-label="Aumentar a letra">A+</button></span>`;
+function fzStep(d){const i=Math.max(0,Math.min(FZS.length-1,fzI()+d));LS.set("painel-fz",String(i));document.querySelectorAll(".ak-card").forEach(e=>{e.style.zoom=FZS[i]})}
+
 const dfTag=df=>df?`<span class="rb df-${df}">${DFN[df]}</span>`:"";
 const qbTag=k=>SUBJ.includes(k)?`<span class="tag" style="--c:var(--m-${k})"><i></i>${SHORT[k]}</span>`:"";
 function qbOpts(q,st,id){
@@ -1637,6 +1746,7 @@ function qbSession(){
   const tot=qb.queue.length,a=qb.sans[id],S=qbSum(),answered=tot-S.pend,d=qd(id);
   const gTxt=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
   const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot} · ${answered} ${answered===1?"respondida":"respondidas"}</span><button class="chip" data-act="qb-fin">Finalizar</button></div><div class="ak-bar"><i style="width:${answered/tot*100}%"></i></div>
+  <div class="fzr"><span class="clk" title="Tempo líquido nesta sessão">⏱ <b id="qb-clk">${fmtClock(qt.sess)}</b></span>${fzTools()}</div>
   <div class="qpal" role="group" aria-label="Ir para a questão">${qb.queue.map((x,i)=>{const r=qb.sans[x];return `<button class="qpd ${r?r.res:""} ${i===qb.i?"cur":""}" data-act="qb-go" data-i="${i}" aria-label="Questão ${i+1}${r?(r.res==="ok"?", certa":r.res==="er"?", errada":", em branco"):", sem resposta"}" ${i===qb.i?'aria-current="true"':""}>${i+1}</button>`}).join("")}</div>`;
   const conf=qb.confirm?`<div class="msg" style="background:var(--warn-t);margin-bottom:12px"><b>Faltam ${S.pend} ${S.pend===1?"questão sem resposta":"questões sem resposta"}.</b><br>Elas não serão contadas e continuam como não resolvidas no banco.<div class="bar-act" style="margin-top:10px"><button class="btn" style="padding:10px 18px" data-act="qb-fincont">Voltar para responder</button><button class="btn alt" style="padding:10px 18px" data-act="qb-finok">Finalizar assim mesmo</button></div></div>`:"";
   const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${dfTag(q.df)}${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
@@ -1656,7 +1766,7 @@ function qbSession(){
   }
   const last=qb.i+1>=tot;
   const nav=`<div class="qnav"><button class="btn alt" data-act="qb-prev" ${qb.i?"":"disabled"}>‹ Anterior</button><button class="btn ${a?"":"alt"}" data-act="qb-next">${last?"Finalizar":"Próxima ›"}</button></div>`;
-  return `<section class="sec" style="margin-top:20px">${head}${conf}<div class="ak-card" style="align-items:stretch">${metaL}${q.as||q.sb?`<div class="muted" style="font-size:13px">${esc([q.as,q.sb].filter(Boolean).join(" · "))}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div>${nav}</section>`;
+  return `<section class="sec" style="margin-top:20px">${head}${conf}<div class="ak-card" style="align-items:stretch;zoom:${FZS[fzI()]}">${metaL}${q.as||q.sb?`<div class="muted" style="font-size:13px">${esc([q.as,q.sb].filter(Boolean).join(" · "))}</div>`:""}<div class="ak-q" style="font-weight:600">${esc(q.e)}</div>${ans}</div>${nav}</section>`;
 }
 function qbRepGroups(list){
   const g={};
@@ -1680,7 +1790,7 @@ function qbReport(list,titulo,ro){
 function qbDone(){
   const s=qbSum(),n=s.ok+s.er+s.bl;
   return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.ok} ${s.ok===1?"acerto":"acertos"} em ${n} ${n===1?"questão respondida":"questões respondidas"}</div>
-    <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div></div>
+    <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div><div class="kpi teal"><div class="lab">Tempo líquido</div><div class="num">${fmtH(qt.sess)}</div><div class="sub">${n?Math.round(qt.sess/n)+" s por questão":"sem respostas"}</div></div></div>
     ${s.pend?`<p class="muted" style="font-size:13.5px;margin:6px 0 0">${s.pend} ${s.pend===1?"questão ficou sem resposta":"questões ficaram sem resposta"}. Elas não foram contadas e continuam como não resolvidas.</p>`:""}
     <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
     <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div>${(()=>{const qs=qb.queue.map(id=>({id,...QS[id]})).filter(q=>q.e),mids=[...new Set(qs.map(q=>q.mid))],meta=mids.length===1&&mids[0]&&BY[mids[0]]?BY[mids[0]]:null;
@@ -1783,6 +1893,7 @@ function qbClick(a,t,e){
   if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
   if(a==="qb-start"){qbStart();return true}
   if(a==="qb-add"){closeSheet();tab="questoes";menu=false;qb.view="add";render();window.scrollTo(0,0);return true}
+  if(a==="bz-redo"){const sq=norm(bib.bq),ids=qbList().filter(q=>q.er>0&&(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!bib.bs||(bib.bs==="ativo"?q.last==="er":q.last!=="er"))&&(!sq||norm((q.c||"")+" "+(q.nt||"")).includes(sq))).map(q=>q.id);if(ids.length){tab="questoes";menu=false;qb.mat=qb.mid=qb.sb="";qbStart(ids)}return true}
   if(a==="qb-one"){tab="questoes";menu=false;qbStart([t.dataset.id]);return true}
   if(a==="qb-sub"){
     qb.mat=t.dataset.k;qb.mid=t.dataset.mid||"";qb.cad="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.sb=t.dataset.sb;
@@ -1876,7 +1987,7 @@ function infoHtml(){
 
 /* ---------- biblioteca: arquivos, vídeos, galeria, anotações e links ---------- */
 const PASTAS=["Edital","Leis","Resumos","Outros"];
-const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:"",bk:"",ba:"",bq:""};
+const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:"",bk:"",ba:"",bq:"",bs:""};
 async function bibUpload(files){
   const pasta=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
   bib.busy="Enviando…";bib.err="";bib.msg="";render();
@@ -1900,29 +2011,32 @@ const grpHtml=(g,body)=>`<div class="grp"><div class="grp-t"><span style="displa
 const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}</button>${inner}</div>`;
 const bzKey=q=>q.mid||"t:"+norm(strip(q.as));
 const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto");
-function bzCard(q){
-  const gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
-  return `<div class="bz"><div class="bq">${esc(q.e)}</div>
-    ${q.df?`<div class="s" style="margin-top:6px">${dfTag(q.df)}</div>`:""}${q.t==="ME"&&Array.isArray(q.o)?q.o.map((t,i)=>`<div class="bo ${LTR[i]===q.g?"ok":""}"><b>${LTR[i]}</b><span>${esc(t)}</span></div>`).join(""):""}
+function bzCard(q,mode){
+  const er=mode==='err',gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
+  return `<div class="bz">${q.df?`<div class="s">${dfTag(q.df)}</div>`:""}
+    ${er?`<p class="muted" style="font-size:13px;margin:6px 0 0">Errou ${q.er} ${q.er===1?"vez":"vezes"} · acertou ${q.ok}${q.last==="er"?" · último resultado: erro":" · último resultado: acerto"}${q.lt?" · "+fmtDay(q.lt):""}</p>`:""}
     <p class="bg"><b>Gabarito:</b> ${gT}</p>
-    ${q.c?`<div class="bc"><b>Bizu (gabarito comentado)</b><p>${esc(q.c)}</p></div>`:""}
+    <div class="bc"><b>Gabarito comentado</b><p>${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
     <label class="lbl" for="qn-${q.id}">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:64px;font-family:var(--font)" placeholder="Acrescente a sua anotação">${esc(q.nt||"")}</textarea>
-    <div class="bar-act"><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver de novo</button>${q.mid&&BY[q.mid]?`<button class="chip" data-act="open" data-id="${q.mid}">Abrir a meta</button>`:""}<button class="chip" data-act="qb-fav" data-id="${q.id}">Tirar dos bizus</button></div></div>`;
+    <div class="bar-act"><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver de novo</button>${q.mid&&BY[q.mid]?`<button class="chip" data-act="open" data-id="${q.mid}">Abrir a meta</button>`:""}<button class="chip" data-act="qb-fav" data-id="${q.id}">${er?(q.fav?"★ Tirar dos bizus":"☆ Favoritar como bizu"):"Tirar dos bizus"}</button></div></div>`;
 }
-function bizHtml(favs){
-  if(!favs.length)return `<div class="empty">Favorite uma questão no Banco de questões e o comentário dela vira um bizu aqui, separado por matéria e assunto.</div>`;
+function bizHtml(favs,mode){
+  const er=mode==='err',nm=er?['caderno de erros','erros']:['bizu','bizus'];
+  if(!favs.length)return er?`<div class="empty">Quando você errar uma questão do banco, o comentário dela vai sozinho para cá, separado por matéria e assunto. Ainda não há nenhum erro registrado.</div>`:`<div class="empty">Favorite uma questão no Banco de questões e o comentário dela vira um bizu aqui, separado por matéria e assunto.</div>`;
   const sq=norm(bib.bq),o=(v,c,l)=>`<option value="${esc(v)}" ${v===c?"selected":""}>${esc(l)}</option>`;
   const mats=SUBJ.filter(k=>favs.some(q=>q.k===k));
   const ass=[...new Map(favs.filter(q=>!bib.bk||q.k===bib.bk).map(q=>[bzKey(q),bzNome(q)])).entries()].sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"));
   if(bib.ba&&!ass.some(([k])=>k===bib.ba))bib.ba="";
-  const fil=favs.filter(q=>(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!sq||norm(q.e+" "+(q.c||"")+" "+(q.nt||"")).includes(sq)));
+  const fil=favs.filter(q=>(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!er||!bib.bs||(bib.bs==="ativo"?q.last==="er":q.last!=="er"))&&(!sq||norm((q.c||"")+" "+(q.nt||"")).includes(sq)));
   const byK={};fil.forEach(q=>{(byK[q.k]||(byK[q.k]={}))[bzKey(q)]=(byK[q.k][bzKey(q)]||[]).concat(q)});
   const ks=SUBJ.filter(k=>byK[k]);
-  const grp=ks.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:var(--m-${k})"></i>${esc(SHORT[k])}</span><span>${Object.values(byK[k]).reduce((z,a)=>z+a.length,0)}</span></div>${Object.entries(byK[k]).sort((a,b)=>bzNome(a[1][0]).localeCompare(bzNome(b[1][0]),"pt-BR")).map(([key,arr])=>`<div class="bza"><h4>${esc(bzNome(arr[0]))}</h4>${arr.map(bzCard).join("")}</div>`).join("")}</div>`).join("");
+  const grp=ks.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:var(--m-${k})"></i>${esc(SHORT[k])}</span><span>${Object.values(byK[k]).reduce((z,a)=>z+a.length,0)}</span></div>${Object.entries(byK[k]).sort((a,b)=>bzNome(a[1][0]).localeCompare(bzNome(b[1][0]),"pt-BR")).map(([key,arr])=>`<div class="bza"><h4>${esc(bzNome(arr[0]))}</h4>${arr.map(x=>bzCard(x,mode)).join("")}</div>`).join("")}</div>`).join("");
   return `<div class="qfil" style="margin-top:14px"><div><label class="lbl" for="bz-k">Matéria</label><select id="bz-k" data-bzf="bk">${o("",bib.bk,"Todas as matérias")}${mats.map(k=>o(k,bib.bk,SHORT[k])).join("")}</select></div>
     <div><label class="lbl" for="bz-a">Assunto</label><select id="bz-a" data-bzf="ba">${o("",bib.ba,bib.bk?"Todos os assuntos":"Todos os assuntos")}${ass.map(([k,n])=>o(k,bib.ba,n.length>60?n.slice(0,58)+"…":n)).join("")}</select></div>
-    <div><label class="lbl" for="bz-q">Buscar</label><input class="in" id="bz-q" type="search" placeholder="Palavra do bizu" value="${esc(bib.bq)}"></div></div>
-    <p class="muted" style="font-size:13px;margin:10px 2px 0">${fil.length} ${fil.length===1?"bizu":"bizus"}${bib.bk||bib.ba?" neste filtro":" em todas as matérias"}</p>
+    ${er?`<div><label class="lbl" for="bz-s">Situação</label><select id="bz-s" data-bzf="bs">${o("",bib.bs,"Todos os erros")}${o("ativo",bib.bs,"Ainda erro (último resultado errado)")}${o("superado",bib.bs,"Já acertei depois")}</select></div>`:""}
+    <div><label class="lbl" for="bz-q">Buscar</label><input class="in" id="bz-q" type="search" placeholder="Palavra do comentário" value="${esc(bib.bq)}"></div></div>
+    ${er?`<div class="bar-act" style="margin-top:10px"><button class="btn" data-act="bz-redo">Refazer os erros deste filtro</button></div>`:""}
+    <p class="muted" style="font-size:13px;margin:10px 2px 0">${fil.length} ${fil.length===1?nm[0]:nm[1]}${bib.bk||bib.ba?" neste filtro":" em todas as matérias"}</p>
     ${grp||'<div class="empty">Nenhum bizu com esses filtros.</div>'}`;
 }
 function bibHtml(){
@@ -1933,8 +2047,8 @@ function bibHtml(){
   const imgs=[...pastaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:x.p})),...metaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:kName(x.meta.k)+" · "+x.meta.a}))].sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
   const gV=metaGroups(d=>d.vd&&d.vd.length),gN=metaGroups(d=>d.nt),gL=metaGroups(d=>d.lk);
   const nV=gV.reduce((z,g)=>z+g.items.reduce((y,x)=>y+x.d.vd.length,0),0),nN=gN.reduce((z,g)=>z+g.items.length,0),nL=gL.reduce((z,g)=>z+g.items.length,0);
-  const favs=qbList().filter(q=>q.fav),nB=favs.length;
-  const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["biz","Bizus",nB],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
+  const favs=qbList().filter(q=>q.fav),nB=favs.length,errs=qbList().filter(q=>q.er>0),nE=errs.length;
+  const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["biz","Bizus",nB],["err","Caderno de erros",nE],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
   const chips=`<div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${VIEWS.map(([k,l,n])=>`<button class="chip" style="${bib.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-view" data-v="${k}">${l} · ${n}</button>`).join("")}</div>`;
   const frow=(x,lab)=>`<div class="frow">${x.m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span class="th doc">${/pdf/.test(x.m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(x.m.nome)}</b><span>${esc(lab)} · ${fmtB(x.m.tam)}${x.m.cr?" · "+fmtDay(x.m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${x.id}">Abrir</button>${bib.ask===x.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${x.id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${x.id}">Excluir</button>`}</div>`;
   let body="";
@@ -1952,7 +2066,9 @@ function bibHtml(){
     <div class="sec-h" style="margin-top:30px"><h3>Anexados às metas</h3></div>
     ${mgs.length?mgs.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)"}"></i>${esc(kName(k))}</span><span>${mg[k].length}</span></div><div class="files">${mg[k].map(x=>frow(x,x.meta.a)).join("")}</div></div>`).join(""):`<div class="empty">Os PDFs que você enviar dentro de uma meta aparecem aqui, separados por matéria.</div>`}`;
   }else if(bib.view==="biz"){
-    body=bizHtml(favs);
+    body=bizHtml(favs,"biz");
+  }else if(bib.view==="err"){
+    body=bizHtml(errs,"err");
   }else if(bib.view==="vid"){
     body=gV.length?gV.map(g=>grpHtml(g,g.items.map(x=>bitem(x,x.d.vd.map(v=>`<a class="vl" href="${esc(v.u)}" target="_blank" rel="noopener"><b>${esc(v.t||hostOf(v.u))}</b><span>${esc(hostOf(v.u))}</span></a>`).join(""))).join(""))).join(""):`<div class="empty">Adicione links de vídeo dentro de uma meta. Eles aparecem aqui, por matéria e assunto.</div>`;
   }else if(bib.view==="gal"){
@@ -2167,15 +2283,16 @@ function akRow(mid,ro,vazio){
 function akStart(){
   const q=akBuild(ak.modo);
   if(!q.length){ak.err="Nenhum cartão encontrado com esses filtros. Troque o modo ou os filtros.";render();return}
-  ak.err="";ak.msg="";ak.queue=q.map(c=>c.id);ak.i=0;ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
+  ak.err="";ak.msg="";ak.queue=q.map(c=>c.id);ak.i=0;qt.asess=0;qt.acq={};qt.act=Date.now();ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
 }
 function akAnswer(g){
   const id=ak.queue[ak.i];if(!CARDS[id])return;
+  qtTick();
   const c={...CARDS[id]},isNew=!c.ult;
   srsApply(c,g);cardsWrite([[id,c]]);
   const T=T0(),r=REVD[T]?JSON.parse(JSON.stringify(REVD[T])):{n:0,ok:0,er:0,nv:0,k:{}};
   r.n++;if(g>1)r.ok++;else r.er++;if(isNew)r.nv=(r.nv||0)+1;
-  r.k=r.k||{};const kx=r.k[c.k]||[0,0];kx[0]++;if(g>1)kx[1]++;r.k[c.k]=kx;revdWrite(T,r);
+  r.k=r.k||{};const kx=r.k[c.k]||[0,0];kx[0]++;if(g>1)kx[1]++;r.k[c.k]=kx;{const w=g>1?"tok":"ter";r[w]=rd1((r[w]||0)+(qt.acq[id]||0));qt.acq[id]=0;const pp=qt.apend[T];delete qt.apend[T];akTmMerge(r,pp)}revdWrite(T,r);
   ak.ses.n++;if(g>1)ak.ses.ok++;else ak.ses.er++;
   if(g===1)ak.queue.splice(Math.min(ak.queue.length,ak.i+4),0,id);
   ak.i++;ak.rev=false;ak.pick="";render();window.scrollTo(0,0);
@@ -2203,7 +2320,7 @@ function akSession(){
   const id=ak.queue[ak.i],tot=ak.queue.length;
   if(id==null||!CARDS[id]){
     const s=ak.ses,p=s.n?Math.round(s.ok/s.n*100):0;
-    return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.n} ${s.n===1?"resposta":"respostas"}, ${p}% sem errar</div><p class="muted" style="margin:0">${s.ok} acertos · ${s.er} erros. Os cartões que você errou voltam logo e entram no modo "Só os que errei".</p></div><div class="ak-btns one"><button class="gbtn g0" data-act="ak-quit">Voltar aos Ankis</button></div></section>`;
+    return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.n} ${s.n===1?"resposta":"respostas"}, ${p}% sem errar</div><p class="muted" style="margin:0">Tempo líquido: ${fmtH(qt.asess)}${s.n?` · ${Math.round(qt.asess/s.n)} s por cartão`:""}.</p><p class="muted" style="margin:0">${s.ok} acertos · ${s.er} erros. Os cartões que você errou voltam logo e entram no modo "Só os que errei".</p></div><div class="ak-btns one"><button class="gbtn g0" data-act="ak-quit">Voltar aos Ankis</button></div></section>`;
   }
   const c=CARDS[id],pct=Math.round(ak.i/tot*100),ce=c.t==="CE",answered=ak.rev;
   const front=c.t==="L"?lacF(c.f):esc(c.f);
@@ -2221,8 +2338,30 @@ function akSession(){
   return `<section class="sec" style="margin-top:20px">
     <div class="ak-top"><button class="chip" data-act="ak-quit">Sair da sessão</button><span>${Math.min(ak.i+1,tot)} de ${tot}</span></div>
     <div class="ak-bar"><i style="width:${pct}%"></i></div>
-    <div class="ak-card"><div class="ak-meta">${c.k&&SUBJ.includes(c.k)?`<span class="pill"><span class="tag" style="--c:var(--m-${c.k})"><i></i>${SHORT[c.k]}</span></span>`:""}${ass?`<span class="pill">${esc(ass.length>60?ass.slice(0,58)+"…":ass)}</span>`:""}<span class="pill">${c.t==="CE"?"Certo ou Errado":c.t==="L"?"Lacuna":"Pergunta"}</span></div>
+    <div class="fzr"><span class="clk" title="Tempo líquido nesta sessão">⏱ <b id="ak-clk">${fmtClock(qt.asess)}</b></span>${fzTools()}</div>
+    <div class="ak-card" style="zoom:${FZS[fzI()]}"><div class="ak-meta">${c.k&&SUBJ.includes(c.k)?`<span class="pill"><span class="tag" style="--c:var(--m-${c.k})"><i></i>${SHORT[c.k]}</span></span>`:""}${ass?`<span class="pill">${esc(ass.length>60?ass.slice(0,58)+"…":ass)}</span>`:""}<span class="pill">${c.t==="CE"?"Certo ou Errado":c.t==="L"?"Lacuna":"Pergunta"}</span></div>
       <div class="ak-q">${front}</div>${back}</div>${btns}</section>`;
+}
+function akCards(S){
+  const retK=SUBJ.filter(k=>S.byK[k]&&S.byK[k].ok+S.byK[k].er>0).map(k=>{const x=S.byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.n+" cartões",tip:`${SHORT[k]}: ${x.ok} acertos e ${x.er} erros em cartões`,r}}).sort((a,b)=>a.r-b.r);
+  const weak=Object.values(S.byA).filter(a=>a.ok+a.er>=3).map(a=>({...a,tx:a.er/(a.ok+a.er)})).sort((a,b)=>b.tx-a.tx||b.lap-a.lap).slice(0,8);
+  const cmp=SUBJ.filter(k=>S.byK[k]).map(k=>({k,q:rate(A.mat[k]),r:(S.byK[k].ok+S.byK[k].er)?S.byK[k].ok/(S.byK[k].ok+S.byK[k].er):null}));
+  const KM=A.tm.k.mat,kmx=Math.max(1,...Object.values(KM));
+  const tkRows=SUBJ.filter(k=>KM[k]).map(k=>({l:SHORT[k],c:`var(--m-${k})`,f:KM[k]/kmx,v:fmtH(KM[k]),tip:`${SHORT[k]}: ${fmtH(KM[k])} de Anki`,m:KM[k]})).sort((a,b)=>b.m-a.m);
+  return `
+    <div class="grid2">
+      <div class="card"><div class="card-h"><div><h3>Cartões a vencer</h3><p>Próximos 14 dias, contando os atrasados no dia de hoje</p></div></div><div class="chart" data-kind="akDue"></div></div>
+      <div class="card"><div class="card-h"><div><h3>Respostas por dia</h3><p>Últimos 14 dias</p></div></div><div class="chart" data-kind="akDay"></div></div>
+      <div class="card"><div class="card-h"><div><h3>Lembrança por matéria</h3><p>Do que você menos lembra para o que mais lembra</p></div></div>${retK.length?barsHtml(retK):'<div class="empty">Aparece depois das primeiras respostas.</div>'}</div>
+      <div class="card"><div class="card-h"><div><h3>Estágio dos cartões</h3><p>Novos, aprendendo, jovens e dominados</p></div></div>${(()=>{const e=S.est,t=Math.max(1,S.n);return `<div class="stk"><i style="--c:var(--fg3);width:${e.novo/t*100}%" data-tip="Novos ${e.novo}"></i><i style="--c:var(--orange);width:${e.apr/t*100}%" data-tip="Aprendendo ${e.apr}"></i><i style="--c:var(--blue);width:${e.jov/t*100}%" data-tip="Jovens ${e.jov}"></i><i style="--c:var(--green);width:${e.mad/t*100}%" data-tip="Dominados ${e.mad}"></i></div><div class="legend"><span style="--c:var(--fg3)"><i></i>Novos ${e.novo}</span><span style="--c:var(--orange)"><i></i>Aprendendo ${e.apr}</span><span style="--c:var(--blue)"><i></i>Jovens ${e.jov}</span><span style="--c:var(--green)"><i></i>Dominados ${e.mad}</span></div>`})()}</div>
+
+      <div class="card"><div class="card-h"><div><h3>Horas líquidas de Anki</h3><p>Minutos por dia, últimos 14 dias</p></div></div><div class="chart" data-kind="tmAk"></div></div>
+      <div class="card"><div class="card-h"><div><h3>Tempo de Anki por matéria</h3><p>Onde você mais gasta tempo com cartões</p></div></div>${tkRows.length?barsHtml(tkRows):'<div class="empty">Aparece depois das primeiras sessões cronometradas.</div>'}</div>
+      <div class="card"><div class="card-h"><div><h3>Tempo para lembrar e para esquecer</h3><p>Média de reflexão antes de revelar a resposta</p></div></div>${(()=>{const K=A.tm.k;if(!K.okN||!K.erN||(!K.tok&&!K.ter))return '<div class="empty">Aparece com as próximas respostas.</div>';const a1=K.tok/K.okN,a2=K.ter/K.erN,m=Math.max(a1,a2,1);return barsHtml([{l:"Lembrou",c:"var(--good)",f:a1/m,v:Math.round(a1)+" s",s:"por cartão",tip:"Tempo médio nos cartões que você lembrou"},{l:"Esqueceu",c:"var(--bad)",f:a2/m,v:Math.round(a2)+" s",s:"por cartão",tip:"Tempo médio nos cartões que você errou"}])})()}</div>
+      <div class="card wide"><div class="card-h"><div><h3>Assuntos que você mais esquece</h3><p>Taxa de erro nos cartões, com ao menos 3 respostas</p></div></div>${weak.length?`<ul class="list">${weak.map(a=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(a.nome)}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${a.lap} ${a.lap===1?"esquecimento":"esquecimentos"} · ${a.n} cartões</span></div></div><div class="res"><span class="sc ${scCls(1-a.tx)}">${Math.round(a.tx*100)}% de erro</span></div>${a.mid?`<button class="chip" data-act="ak-weak" data-mid="${a.mid}">Estudar</button>`:""}</li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 respostas ou mais.</div>'}</div>
+      <div class="card wide"><div class="card-h"><div><h3>Questões e cartões, lado a lado</h3><p>Onde as duas medidas concordam e onde não</p></div></div><div class="hb">${cmp.map(x=>`<div class="hb-r" style="grid-template-columns:128px minmax(0,1fr) minmax(0,1fr)"><div class="hb-l" style="--c:var(--m-${x.k})"><i></i><span>${SHORT[x.k]}</span></div><div style="font-size:13px"><span class="muted">Questões </span><b>${pc(x.q)}</b></div><div style="font-size:13px"><span class="muted">Cartões </span><b>${pc(x.r)}</b></div></div>`).join("")}</div></div>
+    </div>
+`;
 }
 function ankiHtml(){
   if(ak.view==="session")return akSession();
@@ -2234,9 +2373,6 @@ function ankiHtml(){
   const mids=[...new Map(Object.values(CARDS).filter(c=>(!ak.mat||c.k===ak.mat)&&c.mid&&BY[c.mid]).map(c=>[c.mid,BY[c.mid].a])).entries()];
   const bars=Object.keys(S.byB).sort();
   const MODOS=[["hoje","Para hoje"],["erros","Só os que errei"],["acertos","Só os que acertei"],["dificeis","Mais difíceis"],["novos","Novos"],["aleatorio","Aleatório"],["tudo","Tudo do filtro"]];
-  const retK=SUBJ.filter(k=>S.byK[k]&&S.byK[k].ok+S.byK[k].er>0).map(k=>{const x=S.byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.n+" cartões",tip:`${SHORT[k]}: ${x.ok} acertos e ${x.er} erros em cartões`,r}}).sort((a,b)=>a.r-b.r);
-  const weak=Object.values(S.byA).filter(a=>a.ok+a.er>=3).map(a=>({...a,tx:a.er/(a.ok+a.er)})).sort((a,b)=>b.tx-a.tx||b.lap-a.lap).slice(0,8);
-  const cmp=SUBJ.filter(k=>S.byK[k]).map(k=>({k,q:rate(A.mat[k]),r:(S.byK[k].ok+S.byK[k].er)?S.byK[k].ok/(S.byK[k].ok+S.byK[k].er):null}));
   const sub=k=>`<option value="">Escolha a matéria</option>`+SUBJ.map(s=>`<option value="${s}" ${s===k?"selected":""}>${SHORT[s]}</option>`).join("");
   const preview=ak.groups.length?`
     <div class="sec-h" style="margin-top:22px"><h3>Conferir antes de importar</h3><span class="muted" style="font-size:13px">${ak.cards.length} cartões em ${ak.groups.length} ${ak.groups.length===1?"grupo":"grupos"}</span></div>
@@ -2253,6 +2389,7 @@ function ankiHtml(){
       <div class="kpi teal"><div class="lab">Cartões</div><div class="num">${num(S.n)}</div><div class="sub">${S.nov} ainda novos</div></div>
       <div class="kpi green"><div class="lab">Lembrança</div><div class="num">${pc(ret)}</div><div class="sub">${S.ok+S.er?`${num(S.ok)} lembrados em ${num(S.ok+S.er)} respostas`:"Responda alguns cartões"}</div></div>
       <div class="kpi purple"><div class="lab">Dominados</div><div class="num">${S.est.mad}</div><div class="sub">intervalo de 21 dias ou mais</div></div></div>
+    <p class="muted" style="font-size:13.5px;margin:10px 2px 0">Horas líquidas de Anki: hoje ${fmtH(A.tm.k.day[T]||0)} · semana ${fmtH(A.tm.k.wk[A.cw])} · total ${fmtH(A.tm.k.tot)}${A.tm.k.n&&A.tm.k.tot?` · ${Math.round(A.tm.k.tot/A.tm.k.n)} s por cartão`:""}</p>
     <div class="sec-h" style="margin-top:30px"><h3>Estudar</h3><span class="muted" style="font-size:13px">${pool.length} cartões neste filtro</span></div>
     <div class="modes">${MODOS.map(([m,l])=>`<button class="chip" data-act="ak-modo" data-m="${m}" aria-pressed="${ak.modo===m}">${l}</button>`).join("")}</div>
     <div class="filt">
@@ -2264,14 +2401,7 @@ function ankiHtml(){
     <div class="bar-act"><button class="btn" data-act="ak-start" ${cnt?"":"disabled"}>Começar${cnt?` (${cnt} ${cnt===1?"cartão":"cartões"})`:""}</button>
       <label class="muted" style="font-size:13px;display:flex;gap:8px;align-items:center">Novos por dia <select id="ak-nov" data-ak="nov" style="width:auto">${[10,20,30,50].map(n=>`<option value="${n}" ${AKNOV()===n?"selected":""}>${n}</option>`).join("")}</select></label></div>
     <div class="sec-h" style="margin-top:34px"><h3>Estatísticas de memória</h3></div>
-    <div class="grid2">
-      <div class="card"><div class="card-h"><div><h3>Cartões a vencer</h3><p>Próximos 14 dias, contando os atrasados no dia de hoje</p></div></div><div class="chart" data-kind="akDue"></div></div>
-      <div class="card"><div class="card-h"><div><h3>Respostas por dia</h3><p>Últimos 14 dias</p></div></div><div class="chart" data-kind="akDay"></div></div>
-      <div class="card"><div class="card-h"><div><h3>Lembrança por matéria</h3><p>Do que você menos lembra para o que mais lembra</p></div></div>${retK.length?barsHtml(retK):'<div class="empty">Aparece depois das primeiras respostas.</div>'}</div>
-      <div class="card"><div class="card-h"><div><h3>Estágio dos cartões</h3><p>Novos, aprendendo, jovens e dominados</p></div></div>${(()=>{const e=S.est,t=Math.max(1,S.n);return `<div class="stk"><i style="--c:var(--fg3);width:${e.novo/t*100}%" data-tip="Novos ${e.novo}"></i><i style="--c:var(--orange);width:${e.apr/t*100}%" data-tip="Aprendendo ${e.apr}"></i><i style="--c:var(--blue);width:${e.jov/t*100}%" data-tip="Jovens ${e.jov}"></i><i style="--c:var(--green);width:${e.mad/t*100}%" data-tip="Dominados ${e.mad}"></i></div><div class="legend"><span style="--c:var(--fg3)"><i></i>Novos ${e.novo}</span><span style="--c:var(--orange)"><i></i>Aprendendo ${e.apr}</span><span style="--c:var(--blue)"><i></i>Jovens ${e.jov}</span><span style="--c:var(--green)"><i></i>Dominados ${e.mad}</span></div>`})()}</div>
-      <div class="card wide"><div class="card-h"><div><h3>Assuntos que você mais esquece</h3><p>Taxa de erro nos cartões, com ao menos 3 respostas</p></div></div>${weak.length?`<ul class="list">${weak.map(a=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(a.nome)}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${a.lap} ${a.lap===1?"esquecimento":"esquecimentos"} · ${a.n} cartões</span></div></div><div class="res"><span class="sc ${scCls(1-a.tx)}">${Math.round(a.tx*100)}% de erro</span></div>${a.mid?`<button class="chip" data-act="ak-weak" data-mid="${a.mid}">Estudar</button>`:""}</li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 respostas ou mais.</div>'}</div>
-      <div class="card wide"><div class="card-h"><div><h3>Questões e cartões, lado a lado</h3><p>Onde as duas medidas concordam e onde não</p></div></div><div class="hb">${cmp.map(x=>`<div class="hb-r" style="grid-template-columns:128px minmax(0,1fr) minmax(0,1fr)"><div class="hb-l" style="--c:var(--m-${x.k})"><i></i><span>${SHORT[x.k]}</span></div><div style="font-size:13px"><span class="muted">Questões </span><b>${pc(x.q)}</b></div><div style="font-size:13px"><span class="muted">Cartões </span><b>${pc(x.r)}</b></div></div>`).join("")}</div></div>
-    </div>
+    ${akCards(S)}
     <div class="sec-h" style="margin-top:34px"><h3>Baralhos</h3></div>
     <ul class="list" style="border-top:2px solid var(--fg)">${Object.entries(S.byB).sort().map(([b,x])=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(b)}</div><div class="s">${x.k&&SUBJ.includes(x.k)?`<span class="tag" style="--c:var(--m-${x.k})"><i></i>${SHORT[x.k]}</span>`:""}<span>${x.n} cartões · ${x.due} para hoje</span></div></div><button class="chip" data-act="ak-deck" data-b="${esc(b)}">Estudar</button>${ak.ask===b?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="ak-delok" data-b="${esc(b)}">Confirmar exclusão</button><button class="chip" data-act="ak-delno">Cancelar</button>`:`<button class="chip" data-act="ak-delask" data-b="${esc(b)}">Excluir</button>`}</li>`).join("")}</ul>`:`<div class="empty" style="margin-top:16px">Você ainda não tem cartões. Peça um baralho ao Claude, cole o texto aqui embaixo e importe.</div>`}
     <div class="sec-h" style="margin-top:36px"><h3>Importar baralho</h3></div>
@@ -2289,10 +2419,128 @@ function ankiHtml(){
 
 /* ---------- desempenho ---------- */
 function barsHtml(rows){return `<div class="hb">${rows.map(r=>`<div class="hb-r" data-tip="${esc(r.tip||"")}"><div class="hb-l" style="--c:${r.c}"><i></i><span>${esc(r.l)}</span></div><div class="hb-t" style="--c:${r.c}"><i style="width:${Math.max(0,Math.min(100,r.f*100))}%"></i></div><div class="hb-v">${r.v}${r.s?`<small>${r.s}</small>`:""}</div></div>`).join("")}</div>`}
-const pf={view:"geral"};
+const tmDay=d=>(A.tm.q.day[d]||0)+(A.tm.k.day[d]||0);
+const tmWkT=i=>(A.tm.q.wk[i]||0)+(A.tm.k.wk[i]||0);
+const tmTot=()=>A.tm.q.tot+A.tm.k.tot;
+const tmMeta=id=>{const q=A.tm.q.meta[id],k=A.tm.k.meta[id];return {q:q?q.s:0,k:k||0,n:q?q.n:0}};
+const hhSum=()=>A.tm.q.hh.reduce((z,x)=>({c:z.c+x.c,e:z.e+x.e,b:z.b+x.b}),{c:0,e:0,b:0});
+function pfStreak(){let n=0;for(let i=0;i<400;i++){const d=ymd(addDays(today(),-i)),on=(A.day[d]||0)>0||tmDay(d)>0||((REVD[d]||{}).n||0)>0;if(on)n++;else if(i>0)break}return n}
+function pfActive(nd){let n=0;for(let i=0;i<nd;i++){const d=ymd(addDays(today(),-i));if((A.day[d]||0)>0||tmDay(d)>0||((REVD[d]||{}).n||0)>0)n++}return n}
+const pfH=(t,p,id)=>`<div class="pfh" id="pf-${id}"><h2>${t}</h2><p>${p}</p></div>`;
+function pfResumo(){
+  const T=today(),cw=A.cw,Q=A.tm.q,K=A.tm.k,nq=tot_(A.tot),accT=rate(A.tot),hs=hhSum();
+  const tD=tmDay(ymd(T)),wkT=tmWkT(cw),pvW=cw>0?tmWkT(cw-1):0,tot=tmTot();
+  const okT=Q.tot>=600&&Q.n?Q.tot/3600:0;
+  const accSeries=A.wk.map((x,i)=>i<=cw?rate(x):null);
+  const ret=AKS.ok+AKS.er?AKS.ok/(AKS.ok+AKS.er):null;
+  const lag=A.tot.done-A.planned,hojeQ=A.day[ymd(T)]||0,hojeK=(REVD[ymd(T)]||{}).n||0;
+  const d7=[];for(let i=6;i>=0;i--)d7.push(tmDay(ymd(addDays(T,-i))));const m7=Math.max(1,...d7);
+  const dl=wkT-pvW;
+  const C=(c,l,n,sub,viz)=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="num">${n}</div><div class="sub">${sub}</div>${viz?`<div class="viz">${viz}</div>`:""}</div>`;
+  return `<div class="hs" role="list" aria-label="Indicadores, role para o lado">
+  ${C("blue","Desempenho",pc(accT),nq?`${num(A.tot.c)} acertos em ${num(nq)} questões`:"Registre suas questões",sparkLine(accSeries.map(v=>v==null?null:v*100),"#fff"))}
+  ${C("sea","Horas líquidas",fmtH(tot),`questões ${fmtH(Q.tot)} · Anki ${fmtH(K.tot)}`,`<div class="sbars">${d7.map(v=>`<span class="${v?"":"z"}" style="height:${v?Math.max(8,v/m7*100):10}%" data-tip="${fmtH(v)}"></span>`).join("")}</div>`)}
+  ${C("teal","Hoje",fmtH(tD),`${hojeQ} questões · ${hojeK} cartões`)}
+  ${C("purple","Semana atual",fmtH(wkT),cw>0?(pvW?`${dl>=0?"+":"−"}${fmtH(Math.abs(dl))} que a semana passada`:"semana passada sem registro"):"primeira semana")}
+  ${C("orange","Tempo por questão",Q.n?Math.round(Q.tot/Q.n)+"<small>s</small>":"–",Q.n?`média em ${num(Q.n)} questões cronometradas`:"Resolva no banco para medir")}
+  ${C("indigo","Questões por hora",okT?Math.round(Q.n/okT):"–",okT?`${hs.c?Math.round(hs.c/okT):0} acertos por hora`:"precisa de 10 min de banco")}
+  ${C("pink","Memória (Anki)",pc(ret),AKS.ok+AKS.er?`${num(AKS.ok+AKS.er)} respostas · ${AKS.est.mad} dominados`:"Estude seus cartões")}
+  ${C("green","Edital visto",(A.content.n?Math.round(A.content.done/A.content.n*100):0)+"<small>%</small>",`${A.content.done} de ${A.content.n} assuntos`)}
+  ${C(lag>=0?"green":"red","Ritmo das metas",lag===0?"Em dia":(lag>0?"+":"")+lag,`${A.tot.done} concluídas · ${A.planned} previstas`)}
+  ${C("slate","Dias seguidos",pfStreak(),`${pfActive(14)} dos últimos 14 dias com estudo`)}
+  </div>`;
+}
+function insights(){
+  const L=[],add=(c,t,x)=>L.push({c,t,x}),Q=A.tm.q,K=A.tm.k,nq=tot_(A.tot),T=today(),hs=hhSum();
+  const MIN=PD.minimo_questoes;
+  if(nq<200)add("info","Poucos dados ainda",`Você tem ${num(nq)} questões registradas. Os alertas abaixo ficam mais confiáveis a partir de umas 200 questões, e cada meta só é classificada com ${MIN} ou mais.`);
+  const mm=SUBJ.map(k=>({k,n:tot_(A.mat[k]),r:rate(A.mat[k]),blocks:A.mat[k].blocks,done:A.mat[k].done})).filter(x=>x.n>=MIN&&x.r!=null).sort((a,b)=>a.r-b.r);
+  if(mm.length){const w=mm[0];add(w.r<.6?"bad":w.r<.75?"warn":"good",w.r<.75?`Prioridade: ${SHORT[w.k]}`:"Todas as matérias com boa base",w.r<.75?`${SHORT[w.k]} tem ${pc(w.r)} de acerto em ${num(w.n)} questões, o menor entre as matérias com ${MIN}+ questões. Dedique os próximos blocos de questões a ela.`:`A matéria mais fraca com ${MIN}+ questões é ${SHORT[w.k]}, com ${pc(w.r)}. Mantenha as revisões e suba o nível das questões.`)}
+  const pouca=SUBJ.map(k=>({k,n:tot_(A.mat[k]),d:A.mat[k].done})).filter(x=>x.d>=2&&x.n<MIN).sort((a,b)=>a.n-b.n)[0];
+  if(pouca)add("warn",`Pouca prática em ${SHORT[pouca.k]}`,`Você já viu ${pouca.d} assuntos, mas fez só ${pouca.n} questões. Sem ${MIN} questões não dá para saber onde está bem ou mal.`);
+  const tree=subTree(),all=tree.flatMap(m=>m.as.flatMap(a=>a.subs.map(x=>({...x,k:m.k,as:a.nome})))).filter(x=>x.pc!=null).sort((a,b)=>a.pc-b.pc);
+  if(all.length&&all[0].pc<.7)add(all[0].pc<.6?"bad":"warn","Subtópico mais fraco",`${all[0].nome} (${SHORT[all[0].k]}) está em ${pc(all[0].pc)}. Comece por ele na próxima sessão de questões.`);
+  const avg=Q.n?Q.tot/Q.n:0;
+  if(avg){SUBJ.forEach(k=>{const x=Q.mat[k],r=rate(A.mat[k]);if(!x||x.n<15||r==null||tot_(A.mat[k])<MIN)return;const sp=x.s/x.n;
+    if(sp>avg*1.3&&r<.65)add("warn",`${SHORT[k]}: demora e erra`,`${Math.round(sp)} s por questão (média ${Math.round(avg)} s) e ${pc(r)} de acerto. Isso costuma indicar base fraca: volte à teoria e aos cartões antes de mais questões.`);
+    else if(sp<avg*.75&&r<.65)add("warn",`${SHORT[k]}: responde rápido e erra`,`${Math.round(sp)} s por questão, abaixo da sua média de ${Math.round(avg)} s, com ${pc(r)} de acerto. Leia com mais calma e procure as pegadinhas.`)})}
+  if(hs.c>=10&&hs.e>=10){const a=Q.tc/hs.c,b=Q.te/hs.e;
+    if(b<a*.75)add("warn","Você erra rápido demais",`Nas questões que erra, pensa ${Math.round(b)} s em média, contra ${Math.round(a)} s nas que acerta. Releia o enunciado e marque negações e palavras como "apenas" e "sempre".`);
+    else if(b>a*1.3)add("info","Você erra quando hesita",`Gasta ${Math.round(b)} s nas questões que erra e ${Math.round(a)} s nas que acerta. Dúvida longa costuma ser lacuna de conteúdo: use o caderno de erros da Biblioteca para revisar.`)}
+  const hrs=Q.hh.map((x,h)=>({h,n:x.c+x.e+x.b,r:x.c+x.e+x.b?x.c/(x.c+x.e+x.b):null,s:x.s})).filter(x=>x.n>=15);
+  if(hrs.length>=2){hrs.sort((a,b)=>b.r-a.r);const b=hrs[0],w=hrs[hrs.length-1];if(b.r-w.r>=.08)add("good","Seu melhor horário",`Às ${b.h}h você acerta ${pc(b.r)} (${b.n} questões), contra ${pc(w.r)} às ${w.h}h. Reserve o horário mais forte para o que é mais difícil.`)}
+  const act=pfActive(14);
+  if(act<8&&tmTot()+nq>0)add("warn","Regularidade",`Você estudou em ${act} dos últimos 14 dias. Estudar pouco todo dia retém mais do que muito em poucos dias.`);
+  else if(pfStreak()>=5)add("good",`${pfStreak()} dias seguidos`,`Boa regularidade. Os intervalos de revisão dependem disso para funcionar.`);
+  let w1=0,w0=0;for(let i=0;i<7;i++){w1+=tmDay(ymd(addDays(T,-i)));w0+=tmDay(ymd(addDays(T,-i-7)))}
+  if(w1>0&&w0>0){const d=(w1-w0)/w0;if(Math.abs(d)>=.15)add(d>0?"good":"warn","Tempo líquido da semana",`Nos últimos 7 dias foram ${fmtH(w1)}, ${d>0?"+":"−"}${Math.round(Math.abs(d)*100)}% em relação aos 7 dias anteriores (${fmtH(w0)}).`)}
+  const left=A.content.n-A.content.done,days=Math.max(1,dday(EXAM,T));
+  if(left>0){const need=left/(days/7);let rec=0;ALL.forEach(m=>{if(m.t==="teoria_questoes"&&!hid(m)){const d=P()[m.id];if(d&&isDone(m)&&d.dt&&dday(T,pd(d.dt))<14&&dday(T,pd(d.dt))>=0)rec++}});const r2=rec/2;
+    if(r2<need*.9)add("warn","Cobertura do edital",`Para ver todos os ${A.content.n} assuntos até a prova são cerca de ${need.toFixed(1).replace(".",",")} por semana. Nas últimas 2 semanas você fez ${r2.toFixed(1).replace(".",",")} por semana.`)}
+  const rk=SUBJ.map(k=>{const x=AKS.byK[k];return x&&x.ok+x.er>=10?{k,r:x.ok/(x.ok+x.er),q:rate(A.mat[k]),nq:tot_(A.mat[k])}:null}).filter(Boolean);
+  if(rk.length){const lo=rk.slice().sort((a,b)=>a.r-b.r)[0];if(lo.r<.75)add("warn",`Esquecimento em ${SHORT[lo.k]}`,`Nos cartões de ${SHORT[lo.k]} você lembra só ${pc(lo.r)}. Faça o Anki dessa matéria antes de novas questões.`);
+    rk.forEach(x=>{if(x.nq>=MIN&&x.q!=null&&x.q<.65&&x.r>=.8)add("info",`${SHORT[x.k]}: lembra mas erra`,`Memória boa (${pc(x.r)}) e acerto de ${pc(x.q)} nas questões. O problema é aplicar: treine interpretação e pegadinhas da banca.`)})}
+  if(AKS.due>=30)add("warn","Cartões acumulados",`${AKS.due} cartões vencidos. Atrasar revisões faz você esquecer e gastar mais tempo depois.`);
+  const df={};qbList().forEach(q=>{const n=q.ok+q.er+q.bl;if(!n||!q.df)return;const x=df[q.df]||(df[q.df]={ok:0,er:0});x.ok+=q.ok;x.er+=q.er});
+  if(df.facil&&df.facil.ok+df.facil.er>=15&&df.facil.ok/(df.facil.ok+df.facil.er)<.75)add("bad","Erros em questões fáceis",`Você acerta só ${pc(df.facil.ok/(df.facil.ok+df.facil.er))} das questões fáceis. Antes de avançar para as difíceis, reforce os conceitos básicos.`);
+  const nErr=qbList().filter(q=>q.last==="er").length;
+  if(nErr>=10)add("info","Caderno de erros",`${nErr} questões ainda erradas no último resultado. Refaça-as pela Biblioteca, em Caderno de erros.`);
+  const ord={bad:0,warn:1,info:2,good:3};
+  return L.sort((a,b)=>ord[a.c]-ord[b.c]).slice(0,10);
+}
+function pfMatTable(){
+  const Q=A.tm.q,K=A.tm.k;
+  const rows=SUBJ.map(k=>{const s=A.mat[k],qm=Q.mat[k]||{s:0,n:0},ks=K.mat[k]||0,ax=AKS.byK[k];
+    return {k,r:rate(s),nq:tot_(s),h:qm.s+ks,spq:qm.n?qm.s/qm.n:null,qph:qm.s>=600&&qm.n?qm.n/(qm.s/3600):null,ret:ax&&ax.ok+ax.er?ax.ok/(ax.ok+ax.er):null,ed:s.blocks?s.done/s.blocks:null,edn:s.done+"/"+s.blocks}});
+  const T_={r:rate(A.tot),nq:tot_(A.tot),h:tmTot(),spq:Q.n?Q.tot/Q.n:null,qph:Q.tot>=600&&Q.n?Q.n/(Q.tot/3600):null,ret:AKS.ok+AKS.er?AKS.ok/(AKS.ok+AKS.er):null,ed:A.content.n?A.content.done/A.content.n:null,edn:A.content.done+"/"+A.content.n};
+  const row=(x,l,tot)=>`<tr class="${tot?"tt":""}"><td>${l}</td><td>${x.r==null?"–":`<span class="sc ${scCls(x.r)}">${pc(x.r)}</span>`}</td><td>${num(x.nq)}</td><td>${fmtH(x.h)}</td><td>${x.spq==null?"–":Math.round(x.spq)+" s"}</td><td>${x.qph==null?"–":Math.round(x.qph)}</td><td>${x.ret==null?"–":`<span class="sc ${scCls(x.ret)}">${pc(x.ret)}</span>`}</td><td>${x.ed==null?"–":x.edn}</td></tr>`;
+  return `<div class="tw" tabindex="0" aria-label="Comparativo das matérias, role para o lado"><table class="mt"><thead><tr><th>Matéria</th><th>Acerto</th><th>Questões</th><th>Horas líq.</th><th>s/questão</th><th>Quest./h</th><th>Anki</th><th>Edital</th></tr></thead><tbody>${rows.map(x=>row(x,`<span class="tag" style="--c:var(--m-${x.k})"><i></i>${SHORT[x.k]}</span>`)).join("")}${row(T_,"Total",true)}</tbody></table></div>`;
+}
+function pfTempo(){
+  const Q=A.tm.q,K=A.tm.k,hs=hhSum(),n=hs.c+hs.e+hs.b;
+  const hm={};SUBJ.forEach(k=>{const v=(Q.mat[k]?Q.mat[k].s:0)+(K.mat[k]||0);if(v)hm[k]=v});
+  const mx=Math.max(1,...Object.values(hm));
+  const hR=Object.entries(hm).map(([k,v])=>({l:SHORT[k],c:`var(--m-${k})`,f:v/mx,v:fmtH(v),s:Q.mat[k]&&Q.mat[k].s?`${fmtH(Q.mat[k].s)} questões`:"",tip:`${SHORT[k]}: ${fmtH(v)} líquidas`,m:v})).sort((a,b)=>b.m-a.m);
+  const sp=SUBJ.filter(k=>Q.mat[k]&&Q.mat[k].n>=5).map(k=>{const x=Q.mat[k];return {l:SHORT[k],c:`var(--m-${k})`,v:Math.round(x.s/x.n),m:x.s/x.n}}).sort((a,b)=>b.m-a.m);
+  const smx=Math.max(1,...sp.map(x=>x.m)),avg=Q.n?Q.tot/Q.n:0;
+  const spR=sp.map(x=>({l:x.l,c:x.c,f:x.m/smx,v:x.v+" s",s:avg?(x.m>avg*1.15?"mais lenta":x.m<avg*.85?"mais rápida":"na média"):"",tip:`${x.l}: ${x.v} s por questão`}));
+  const df={};qbList().forEach(q=>{const k=q.ok+q.er+q.bl;if(!k||!q.df)return;const x=df[q.df]||(df[q.df]={ok:0,er:0,k:0,ts:0});x.ok+=q.ok;x.er+=q.er;x.k+=k;x.ts+=q.ts||0});
+  const dR=["facil","medio","dificil"].filter(d=>df[d]).map(d=>{const x=df[d],r=x.ok+x.er?x.ok/(x.ok+x.er):null;return {l:DFN[d],c:d==="facil"?"var(--good)":d==="medio"?"var(--orange)":"var(--bad)",f:r||0,v:pc(r),s:x.ts?Math.round(x.ts/x.k)+" s/quest.":x.k+" questões",tip:`${DFN[d]}: ${x.ok} certas e ${x.er} erradas em ${x.k} respostas`}});
+  const tcmp=(hs.c&&hs.e)?(()=>{const a=Q.tc/hs.c,b=Q.te/hs.e,bb=hs.b?Q.tb/hs.b:0,m=Math.max(a,b,bb,1),rows=[{l:"Acertou",c:"var(--good)",f:a/m,v:Math.round(a)+" s",s:"por questão",tip:"Tempo antes de responder, nas que acertou"},{l:"Errou",c:"var(--bad)",f:b/m,v:Math.round(b)+" s",s:"por questão",tip:"Tempo antes de responder, nas que errou"}];if(hs.b)rows.push({l:"Em branco",c:"var(--fg3)",f:bb/m,v:Math.round(bb)+" s",s:"por questão",tip:"Tempo nas que deixou em branco"});return barsHtml(rows)})():'<div class="empty">Aparece depois de acertar e errar algumas questões cronometradas.</div>';
+  return `<div class="grid2">
+    <div class="card"><div class="card-h"><div><h3>Horas líquidas por dia</h3><p>Questões e Anki, últimos 14 dias</p></div></div><div class="chart" data-kind="tmDay"></div></div>
+    <div class="card"><div class="card-h"><div><h3>Horas líquidas por semana</h3><p>Da semana 1 até hoje</p></div></div><div class="chart" data-kind="tmWk"></div></div>
+    <div class="card"><div class="card-h"><div><h3>Horas por matéria</h3><p>Tempo líquido em questões e cartões</p></div></div>${hR.length?barsHtml(hR):'<div class="empty">Resolva questões no banco ou estude cartões para medir o tempo.</div>'}</div>
+    <div class="card"><div class="card-h"><div><h3>Segundos por questão</h3><p>Seu ritmo em cada matéria${avg?`, média de ${Math.round(avg)} s`:""}</p></div></div>${spR.length?barsHtml(spR):'<div class="empty">Aparece com 5 questões cronometradas por matéria.</div>'}</div>
+    <div class="card"><div class="card-h"><div><h3>Tempo para acertar e para errar</h3><p>Quanto você pensa antes de responder</p></div></div>${tcmp}</div>
+    <div class="card"><div class="card-h"><div><h3>Acerto por dificuldade</h3><p>Do banco de questões, com o tempo médio</p></div></div>${dR.length?barsHtml(dR):'<div class="empty">Importe questões com dificuldade e resolva algumas.</div>'}</div>
+    <div class="card wide"><div class="card-h"><div><h3>Seu relógio de estudo</h3><p>Minutos de questões por hora do dia. Verde: acima de 75% de acerto, laranja: 60 a 75%, vermelho: abaixo de 60%, azul: poucas questões.</p></div></div><div class="chart" data-kind="tmHr"></div>${n?"":'<div class="empty">Aparece depois das primeiras questões cronometradas.</div>'}</div>
+  </div>`;
+}
+function pfMetas(){
+  const ids=[...new Set([...Object.keys(A.tm.q.meta),...Object.keys(A.tm.k.meta)])];
+  const L=ids.map(id=>({m:BY[id],...tmMeta(id)})).filter(x=>x.m&&!hid(x.m)).map(x=>({...x,t:x.q+x.k})).sort((a,b)=>b.t-a.t).slice(0,8);
+  const slow=qbList().filter(q=>q.ts&&q.ok+q.er+q.bl>0).map(q=>({q,v:q.ts/(q.ok+q.er+q.bl)})).filter(x=>x.v>=1).sort((a,b)=>b.v-a.v).slice(0,6);
+  return `<div class="grid2">
+    <div class="card"><div class="card-h"><div><h3>Metas com mais tempo líquido</h3><p>Questões e Anki somados</p></div></div>${L.length?`<ul class="list">${L.map(x=>{const it=itemsOf(x.m),r=rate(it);return `<li class="row" data-act="open" data-id="${x.m.id}" tabindex="0" role="button"><div class="rt"><div class="t">${esc(x.m.a)}</div><div class="s">${tagHtml(x.m)}<span>Semana ${x.m.wi+1} · questões ${fmtH(x.q)} · Anki ${fmtH(x.k)}${x.n?` · ${Math.round(x.q/x.n)} s/questão`:""}</span></div></div><div class="res"><span class="sc na">${fmtH(x.t)}</span>${r!=null?`<span class="sc ${scCls(r)}">${pc(r)}</span>`:""}</div></li>`}).join("")}</ul>`:'<div class="empty">O tempo de cada meta aparece depois das primeiras sessões cronometradas com questões do banco ou cartões ligados a ela.</div>'}</div>
+    <div class="card"><div class="card-h"><div><h3>Questões que mais demoram</h3><p>Tempo médio de reflexão por questão</p></div></div>${slow.length?`<ul class="list">${slow.map(({q,v})=>`<li class="row" data-act="qb-one" data-id="${q.id}" tabindex="0" role="button"><div class="rt"><div class="t">${esc(q.e.length>110?q.e.slice(0,108)+"…":q.e)}</div><div class="s">${qbTag(q.k)}<span>${q.last==="ok"?"acertou":q.last==="er"?"errou":"em branco"} no último resultado</span></div></div><div class="res"><span class="sc na">${Math.round(v)} s</span></div></li>`).join("")}</ul>`:'<div class="empty">Aparece depois de resolver questões do banco.</div>'}</div>
+  </div>`;
+}
 function perfTab(){
-  const V=[["geral","Visão geral"],["materias","Matérias"],["subtopicos","Subtópicos"]];
-  return `<section class="sec" style="margin-top:20px"><div class="chips" style="display:flex;gap:8px;flex-wrap:wrap">${V.map(([k,l])=>`<button class="chip" style="${pf.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="pf-view" data-v="${k}">${l}</button>`).join("")}</div></section>`+({geral:perfHtml,materias:matHtml,subtopicos:subHtml}[pf.view]()).replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
+  const V=[["resumo","Resumo"],["insights","O que fazer"],["tempo","Tempo"],["questoes","Questões"],["materias","Matérias"],["metas","Metas"],["anki","Anki"],["subtopicos","Subtópicos"]];
+  const nav=`<nav class="pfnav" aria-label="Seções do desempenho">${V.map(([k,l])=>`<button class="chip" data-act="pf-go" data-v="${k}">${l}</button>`).join("")}</nav>`;
+  const ins=insights();
+  const clean=h=>h.replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
+  return `${nav}
+  ${pfH("Resumo","Os números principais, role para o lado","resumo")}${pfResumo()}
+  ${pfH("O que fazer agora","Leituras automáticas dos seus dados, da mais urgente para a mais positiva","insights")}
+  ${ins.length?`<div class="ins">${ins.map(x=>`<div class="ic ${x.c}"><b>${esc(x.t)}</b><p>${esc(x.x)}</p></div>`).join("")}</div>`:'<div class="empty">Com mais questões, tempo e cartões registrados, as recomendações aparecem aqui.</div>'}
+  ${pfH("Tempo líquido","Horas aproximadas de questões e Anki, só com a tela ativa","tempo")}${pfTempo()}
+  ${pfH("Questões e acertos","Volume, desempenho e evolução","questoes")}${clean(perfHtml())}
+  ${pfH("Matérias","Comparativo e assuntos de cada matéria","materias")}<section class="sec">${pfMatTable()}</section>${clean(matHtml())}
+  ${pfH("Metas","Onde o tempo foi gasto","metas")}${pfMetas()}
+  ${pfH("Anki","Memória, revisão e tempo dos cartões","anki")}<section class="sec">${AKS.n?akCards(AKS):'<div class="empty">Importe um baralho na aba Ankis para ver a memória aqui.</div>'}</section>
+  ${pfH("Subtópicos","Desempenho dentro de cada assunto","subtopicos")}${clean(subHtml())}`;
 }
 function perfHtml(){
   const cw=A.cw, tot=A.tot, n=tot_(tot);
@@ -2361,9 +2609,10 @@ function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
+  if(!(tab==="questoes"&&qb.view==="session")&&!(tab==="ankis"&&ak.view==="session")&&(Object.keys(qt.pend).length||Object.keys(qt.apend).length))qtFlush();
   WM=WK.map(()=>[]);ALL.forEach(m=>{if(!hid(m))WM[ew(m)].push(m)});
   LOCKON=lockOn();LIB=libEff();
-  IM=importMap();A=agg();RL=reviewList();if(tab==="ankis")AKS=akStats();
+  IM=importMap();A=agg();RL=reviewList();if(tab==="ankis"||tab==="desempenho")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
   const body={semana:homeHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
@@ -2434,6 +2683,22 @@ function drawCharts(){
       const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),v=A.day[key]||0;bars.push({l:d.getDate(),v,hi:i===0,t:`${fmtDay(key)}: ${v} questões`})}
       const m=Math.max(20,Math.ceil(Math.max(...bars.map(b=>b.v))/20)*20);
       cols(el,bars,{max:m,ticks:[0,m/2,m],aria:"Questões por dia"});
+    }else if(k==="tmDay"){
+      const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),q=A.tm.q.day[key]||0,a=A.tm.k.day[key]||0;bars.push({l:d.getDate(),v:(q+a)/3600,hi:i===0,t:`${fmtDay(key)}: ${fmtH(q+a)} (questões ${fmtH(q)} · Anki ${fmtH(a)})`})}
+      const m=Math.max(1,Math.ceil(Math.max(...bars.map(b=>b.v))));
+      cols(el,bars,{max:m,ticks:[0,m/2,m],tf:t=>(Math.round(t*10)/10).toString().replace(".",",")+"h",aria:"Horas líquidas por dia"});
+    }else if(k==="tmWk"){
+      const bars=WK.map((w,i)=>({l:i+1,v:i<=cw?tmWkT(i)/3600:0,hi:i===sel,t:`Semana ${i+1}: ${fmtH(tmWkT(i))} (questões ${fmtH(A.tm.q.wk[i])} · Anki ${fmtH(A.tm.k.wk[i])})`}));
+      const m=Math.max(2,Math.ceil(Math.max(...bars.map(b=>b.v))/2)*2);
+      cols(el,bars,{max:m,ticks:[0,m/2,m],tf:t=>Math.round(t)+"h",aria:"Horas líquidas por semana"});
+    }else if(k==="tmHr"){
+      const bars=A.tm.q.hh.map((x,h)=>{const n=x.c+x.e+x.b,r=n?x.c/n:null;return {l:h%3===0?h:"",v:x.s/60,c:n>=8&&r!=null?(r>=.75?"var(--good)":r>=.6?"var(--orange)":"var(--bad)"):"var(--blue)",t:`${h}h: ${fmtH(x.s)} · ${n} questões${r!=null?" · "+pc(r)+" de acerto":""}`}});
+      const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
+      cols(el,bars,{max:m,ticks:[0,m/2,m],tf:t=>Math.round(t)+"m",aria:"Minutos de questões por hora do dia"});
+    }else if(k==="tmAk"){
+      const bars=[];for(let i=13;i>=0;i--){const d=addDays(T,-i),key=ymd(d),v=A.tm.k.day[key]||0;bars.push({l:d.getDate(),v:v/60,hi:i===0,t:`${fmtDay(key)}: ${fmtH(v)} de Anki`})}
+      const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
+      cols(el,bars,{max:m,ticks:[0,m/2,m],tf:t=>Math.round(t)+"m",aria:"Minutos de Anki por dia"});
     }else if(k==="akDue"&&AKS){
       const bars=AKS.dueDay.map((v,i)=>{const d=addDays(T,i);return {l:d.getDate(),v,hi:i===0,t:`${fmtDay(d)}: ${v} cartões`}});
       const m=Math.max(10,Math.ceil(Math.max(...bars.map(b=>b.v))/10)*10);
@@ -2470,6 +2735,8 @@ function ensureCfg(){if(!demo&&!real["cfg-semana"])save("cfg-semana",{lib:fronti
 const mt={busy:"",err:""};
 const hasEnr=d=>!!(d&&(d.lk||d.nt||(d.vd&&d.vd.length)||(d.ar&&d.ar.length)||d.st||d.st0));
 const fmtDur=ms=>{const m=Math.round(ms/60000);if(m<1)return "menos de 1 min";if(m<60)return m+" min";const h=Math.floor(m/60),r=m%60;if(h<48)return h+" h"+(r?" "+r+" min":"");const d=Math.floor(h/24),hh=h%24;return d+" d"+(hh?" "+hh+" h":"")};
+const fmtH=s=>{s=Math.round(s||0);if(s<=0)return "0 min";if(s<60)return "<1 min";const m=Math.round(s/60);return m<60?m+" min":Math.floor(m/60)+"h"+String(m%60).padStart(2,"0")};
+const fmtClock=s=>{s=Math.floor(s);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60,z=n=>String(n).padStart(2,"0");return (h?h+":"+z(m):m)+":"+z(x)};
 const avgDur=a=>a.length?a.reduce((z,x)=>z+x.dur,0)/a.length:null;
 function durList(){
   if(demo)return [];
@@ -2560,6 +2827,7 @@ function studyTip(m,ro){
   }else if(!p.lk){
     rows.push(li("Estude a teoria e resolva questões","Esta meta ainda não tem questões no banco. Cole abaixo a pasta do Tec Concursos ou peça questões inéditas ao Claude.",`<button class="chip" data-act="qb-add">Adicionar questões ao banco</button>`));
   }
+  {const tmx=tmMeta(m.id);if(tmx.q+tmx.k>0)rows.push(li("Tempo líquido nesta meta",`${fmtH(tmx.q+tmx.k)}: questões ${fmtH(tmx.q)}${tmx.n?` (${Math.round(tmx.q/tmx.n)} s por questão)`:""}, Anki ${fmtH(tmx.k)}`,""))}
   rows.push(akRow(m.id,ro,false));
   if(p.lk&&m.t!=="questoes")rows.push(li("Questões no Tec Concursos","Pasta já vinculada a esta meta.",`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`));
   if(nv||na||p.nt)rows.push(li("Material guardado",[nv?`${nv} ${nv===1?"vídeo":"vídeos"}`:"",na?`${na} ${na===1?"arquivo":"arquivos"}`:"",p.nt?"observações":""].filter(Boolean).join(" · "),""));
@@ -2681,7 +2949,7 @@ document.addEventListener("click",e=>{
   if(a==="bib-delok"){const f=t.dataset.f,fm=FILES[f];fileDel(f);if(fm&&/^meta:/.test(fm.esc||"")){const mid=fm.esc.slice(5);saveMeta(mid,{ar:((real[mid]||{}).ar||[]).filter(x=>x!==f)})}bib.ask="";bib.msg="Arquivo excluído.";render();return}
   if(a.slice(0,3)==="qb-"&&qbClick(a,t,e))return;
   if(a.slice(0,3)==="mt-"&&mtClick(a,t))return;
-  if(a==="bib-view"){bib.view=t.dataset.v;bib.msg="";bib.err="";render();return}
+  if(a==="bib-view"){bib.view=t.dataset.v;bib.bk=bib.ba=bib.bq=bib.bs="";bib.msg="";bib.err="";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
   if(a==="clear"){const o=real[sheetId]||{},d={};["lk","nt","vd","ar"].forEach(k=>{if(o[k])d[k]=o[k]});if(empty_(d))save(sheetId,null);else save(sheetId,d);closeSheet();return}
@@ -2694,7 +2962,8 @@ document.addEventListener("click",e=>{
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
-  if(a==="pf-view"){pf.view=t.dataset.v;render();window.scrollTo(0,0);return}
+  if(a==="fz"){fzStep(+t.dataset.d);return}
+  if(a==="pf-go"){const e=document.getElementById("pf-"+t.dataset.v);if(e)e.scrollIntoView({behavior:"smooth",block:"start"});return}
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="ak-meta"){
     const m=BY[t.dataset.id];if(!m)return;
