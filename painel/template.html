@@ -2606,7 +2606,9 @@ function pfMetas(){
 
 /* ---------- jornada: ofensiva, XP e personagem ---------- */
 const FOL=D.fol||[];
-const LVS=[["Curioso do Edital",0],["Candidato",200],["Concurseiro",600],["Concurseiro Focado",1300],["Veterano de Apostila",2400],["Fera do Cebraspe",4000],["Aprovado",6200],["Nomeado",9000],["Servidor Público",12500]];
+const LVN=["Curioso do Edital","Candidato","Concurseiro","Concurseiro Focado","Veterano de Apostila","Fera do Cebraspe","Aprovado","Nomeado","Servidor Público"];
+const LVF=[0,.04,.12,.24,.38,.52,.66,.78,.90];
+let LVS=LVN.map((n,i)=>[n,Math.round(LVF[i]*10000/50)*50]);
 const LVD=["Está começando a entender o que cai na prova.","Já tem caderno e rotina.","Vive de resumo, questão e café.","Tem foco e começa a ver resultado.","Dorme sobre uma pilha de apostilas.","Enxerga a pegadinha antes de ler o item.","Passou! Falta só a nomeação.","Nomeado: o Diário Oficial saiu.","Chegou lá: servidor público da Câmara."];
 function actSet(){
   const a={},add=d=>{if(d)a[d]=1};
@@ -2632,11 +2634,19 @@ function streakCalc(){
   }
   return {cur:streak,best,shields:sh,risk:!act[T]&&streak>0,last:days[days.length-1],act};
 }
+function planXp(){
+  const metas=A.tot.metas*30,q=A.wk.reduce((z,x)=>z+x.plan,0),revs=(ALL.filter(m=>m.t==="teoria_questoes"&&!hid(m)&&m.k!=="POR"&&m.wi<9).length*RV.iv.length+lastWk)*10;
+  return {metas,q,revs,total:metas+q+revs};
+}
 function xpCalc(st){
-  const it=[["Metas concluídas",A.tot.done*30],["Questões feitas",tot_(A.tot)],["Revisões feitas",A.revDone*10],["Tempo líquido de estudo",Math.floor(tmTot()/180)],["Cartões de Anki",Math.floor(Object.values(REVD).reduce((z,r)=>z+(r.n||0),0)/2)],["Simulados",Object.keys(SM).length*50],["Ofensiva",st.best*4]];
+  const pl=planXp();
+  LVS=LVN.map((n,i)=>[n,Math.round(LVF[i]*pl.total/50)*50]);
+  const nCards=Object.values(REVD).reduce((z,r)=>z+(r.n||0),0);
+  const bonusRaw=Math.floor(tmTot()/600)+Math.floor(nCards/4)+st.best*2,bonus=Math.min(bonusRaw,Math.floor(pl.total*.05));
+  const it=[["Metas concluídas",A.tot.done*30],["Questões feitas",tot_(A.tot)],["Revisões feitas",A.revDone*10],["Bônus de dedicação (tempo, Anki e ofensiva)",bonus]];
   const xp=it.reduce((z,x)=>z+x[1],0);let lv=0;LVS.forEach(([n,m],i)=>{if(xp>=m)lv=i});
   const nx=LVS[lv+1],cu=LVS[lv][1];
-  return {xp,items:it,lv,name:LVS[lv][0],next:nx?nx[1]:null,nextName:nx?nx[0]:null,pct:nx?(xp-cu)/(nx[1]-cu):1};
+  return {xp,items:it,plan:pl,lv,name:LVS[lv][0],next:nx?nx[1]:null,nextName:nx?nx[0]:null,pct:nx?(xp-cu)/(nx[1]-cu):1};
 }
 function missionsCalc(){
   const T=ymd(today()),cw=A.cw,w=WK[cw],L=(WM[cw]||[]).filter(m=>grp(m)!=="dom"),dn=Math.max(1,Math.min(6,dday(today(),pd(w.i))+1));
@@ -2700,11 +2710,17 @@ function jornadaHtml(){
   const goalMetas=ALL.filter(m=>goalOf(m)&&tot_(itemsOf(m))>=goalOf(m)).length;
   const perfect=WK.some((w,i)=>weekMetas(i).length>0&&weekDone(i)&&i<=A.cw);
   const nCards=Object.values(REVD).reduce((z,r)=>z+(r.n||0),0);
-  const B=[["Primeiro passo","Concluir a primeira meta",A.tot.done>=1,`${Math.min(1,A.tot.done)}/1`],["Uma semana inteira","7 dias seguidos",st.best>=7,`${Math.min(7,st.best)}/7`],["Duas semanas","14 dias seguidos",st.best>=14,`${Math.min(14,st.best)}/14`],["Um mês de ferro","30 dias seguidos",st.best>=30,`${Math.min(30,st.best)}/30`],
-    ["Cem questões","100 questões feitas",nI>=100,`${Math.min(100,nI)}/100`],["Quinhentas","500 questões feitas",nI>=500,`${Math.min(500,nI)}/500`],["Mil questões","1.000 questões feitas",nI>=1000,`${Math.min(1000,nI)}/1000`],
-    ["Dez horas","10 horas líquidas",hs>=36000,`${Math.min(10,Math.floor(hs/3600))}/10 h`],["Cinquenta horas","50 horas líquidas",hs>=180000,`${Math.min(50,Math.floor(hs/3600))}/50 h`],
-    ["Base formada","Uma meta com 50 questões",goalMetas>=1,`${Math.min(1,goalMetas)}/1`],["Memória viva","100 cartões de Anki",nCards>=100,`${Math.min(100,nCards)}/100`],["Revisor","Primeira revisão feita",A.revDone>=1,`${Math.min(1,A.revDone)}/1`],
-    ["Semana perfeita","Todas as metas de uma semana",perfect,perfect?"1/1":"0/1"],["Cobaia do Cebraspe","Primeiro simulado",Object.keys(SM).length>=1,`${Math.min(1,Object.keys(SM).length)}/1`]];
+  const pm=Math.max(1,A.tot.metas),pq=Math.max(1,x.plan.q),pc_=v=>Math.max(1,Math.round(v));
+  const wkDone=WK.filter((w,i)=>i<=A.cw&&weekMetas(i).length>0&&weekDone(i)).length;
+  const bm=(f,t)=>{const n=pc_(pm*f);return [t,`Concluir ${n} metas (${Math.round(f*100)}% do plano)`,A.tot.done>=n,`${Math.min(n,A.tot.done)}/${n}`]};
+  const bq=(f,t)=>{const n=pc_(Math.round(pq*f/100)*100);return [t,`Fazer ${num(n)} questões (${Math.round(f*100)}% do previsto)`,nI>=n,`${num(Math.min(n,nI))}/${num(n)}`]};
+  const B=[["Primeiro passo","Concluir a primeira meta",A.tot.done>=1,`${Math.min(1,A.tot.done)}/1`],bm(.1,"Pegando o ritmo"),bm(.25,"Um quarto do caminho"),bm(.5,"Metade do plano"),bm(.75,"Reta final"),bm(.9,"Quase servidor"),
+    ["Duas semanas","14 dias seguidos",st.best>=14,`${Math.min(14,st.best)}/14`],["Um mês de ferro","30 dias seguidos",st.best>=30,`${Math.min(30,st.best)}/30`],["Dois meses sem falhar","60 dias seguidos",st.best>=60,`${Math.min(60,st.best)}/60`],
+    bq(.1,"Aquecimento"),bq(.25,"Mão na massa"),bq(.5,"Metade das questões"),bq(.9,"Maratonista"),
+    ["Cinquenta horas","50 horas líquidas",hs>=180000,`${Math.min(50,Math.floor(hs/3600))}/50 h`],["Cem horas","100 horas líquidas",hs>=360000,`${Math.min(100,Math.floor(hs/3600))}/100 h`],["Duzentas horas","200 horas líquidas",hs>=720000,`${Math.min(200,Math.floor(hs/3600))}/200 h`],
+    ["Base formada","Uma meta com 50 questões",goalMetas>=1,`${Math.min(1,goalMetas)}/1`],["Dez bases","10 metas com 50 questões",goalMetas>=10,`${Math.min(10,goalMetas)}/10`],["Trinta bases","30 metas com 50 questões",goalMetas>=30,`${Math.min(30,goalMetas)}/30`],
+    ["Memória viva","500 cartões de Anki",nCards>=500,`${Math.min(500,nCards)}/500`],["Revisor","20 revisões feitas",A.revDone>=20,`${Math.min(20,A.revDone)}/20`],
+    ["Semanas perfeitas","4 semanas com todas as metas",wkDone>=4,`${Math.min(4,wkDone)}/4`],["Oito semanas perfeitas","8 semanas com todas as metas",wkDone>=8,`${Math.min(8,wkDone)}/8`],["Cobaia do Cebraspe","3 simulados feitos",Object.keys(SM).length>=3,`${Math.min(3,Object.keys(SM).length)}/3`]];
   const nOk=B.filter(b=>b[2]).length;
   return `<section class="sec" style="margin-top:20px"><h2>Jornada</h2>
   <p class="lead" style="margin-bottom:0">Estude todo dia, ganhe XP e evolua de curioso a servidor público.</p>
@@ -2721,6 +2737,7 @@ function jornadaHtml(){
   <div class="sec-h" style="margin-top:28px"><h3>Sua evolução</h3><span class="muted" style="font-size:13px">Deslize para o lado</span></div>
   <div class="path">${path}</div>
   <div class="sec-h" style="margin-top:28px"><h3>De onde vem o XP</h3><span class="muted" style="font-size:13px">${num(x.xp)} XP no total</span></div>
+  <p class="muted" style="font-size:13px;margin:0 2px 10px">O plano completo vale ${num(x.plan.total)} XP (30 por meta, 1 por questão prevista, 10 por revisão prevista). Você vira Servidor Público ao chegar a ${num(LVS[8][1])} XP, cerca de 90% do previsto. Os níveis anteriores acompanham as semanas do plano.</p>
   ${barsHtml(x.items.map(([l,v])=>({l,c:"var(--blue)",f:x.xp?v/x.xp:0,v:num(v),s:x.xp?Math.round(v/x.xp*100)+"%":"",tip:l+": "+v+" XP"})))}
   <div class="sec-h" style="margin-top:28px"><h3>Conquistas</h3><span class="muted" style="font-size:13px">${nOk} de ${B.length}</span></div>
   <div class="badges">${B.map(([t,d,ok,pg])=>`<div class="bdg ${ok?"on":""}"><span class="bi2">${ok?CHECK:""}</span><b>${t}</b><small>${d}</small><em>${ok?"conquistada":pg}</em></div>`).join("")}</div></section>`;
