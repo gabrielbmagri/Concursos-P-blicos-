@@ -693,12 +693,12 @@ const lastWk=WK.length-1;
 
 /* revisões: 7, 15 e 30 dias por assunto + revisão geral todo domingo */
 const RVTXT={
-  7:{t:"Revisão de 7 dias",w:"Escreva de memória o que lembra do assunto, resolva cerca de 10 questões novas e refaça as que errou.",
-     g:["Feche o material e escreva de memória tudo o que lembra deste assunto.","Confira com o seu resumo ou com a lei seca indicada acima e marque o que esqueceu.","Resolva cerca de 10 questões novas deste assunto.","Refaça as que errou e lance o resultado aqui."]},
-  15:{t:"Revisão de 15 dias",w:"Responda de memória os pontos mais cobrados, resolva cerca de 10 questões novas e anote o que errou de novo.",
-     g:["Sem olhar o material, liste os pontos mais cobrados deste assunto.","Releia só os trechos que você esqueceu, na lei seca ou no resumo.","Resolva cerca de 10 questões novas, misturando níveis.","Anote no caderno de erros o que errou de novo e lance o resultado aqui."]},
+  7:{t:"Revisão de 7 dias",w:"Escreva de memória o que lembra do assunto, resolva cerca de 30 questões novas e refaça as que errou.",
+     g:["Feche o material e escreva de memória tudo o que lembra deste assunto.","Confira com o seu resumo ou com a lei seca indicada acima e marque o que esqueceu.","Resolva cerca de 30 questões novas deste assunto.","Refaça as que errou e lance o resultado aqui."]},
+  15:{t:"Revisão de 15 dias",w:"Responda de memória os pontos mais cobrados, resolva cerca de 30 questões novas e anote o que errou de novo.",
+     g:["Sem olhar o material, liste os pontos mais cobrados deste assunto.","Releia só os trechos que você esqueceu, na lei seca ou no resumo.","Resolva cerca de 30 questões novas, misturando níveis.","Anote no caderno de erros o que errou de novo e lance o resultado aqui."]},
   30:{t:"Revisão de 30 dias",w:"Faça primeiro as questões e depois confira onde errou. É a revisão final deste assunto.",
-     g:["Resolva cerca de 10 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de revisões."]}
+     g:["Resolva cerca de 30 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de revisões."]}
 };
 const RGTXT={w:"Feche a semana: escreva de memória o esqueleto de cada assunto estudado, resolva questões só do que faltou e confira o desempenho e o caderno de erros.",
   g:["Para cada assunto da lista abaixo, escreva de memória os pontos principais, sem olhar o material.","Confira com os seus resumos e marque o que esqueceu.","Resolva de 5 a 10 questões novas só do que ficou faltando e lance o resultado aqui.","Veja no painel o desempenho e o caderno de erros da semana e ajuste a próxima semana."]};
@@ -723,7 +723,7 @@ const ew=m=>{const p=P()[m.id];return p&&p.mw!=null?p.mw:m.wi};
 const rdone=m=>{const p=P()[m.id];return p?Math.min(p.r||0,rp(m)):0};
 const isDone=m=>rdone(m)>=rp(m);
 const ownItems=m=>{const p=P()[m.id];return p?{c:p.c||0,e:p.e||0,b:p.b||0}:{c:0,e:0,b:0}};
-const itemsOf=m=>{const o=ownItems(m),x=IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.e,b:o.b+x.b}:o};
+const itemsOf=m=>{const o=ownItems(m),x=m.rv?IM.byRv[m.id]:IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.e,b:o.b+x.b}:o};
 
 /* ---------- armazenamento ---------- */
 const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
@@ -942,13 +942,13 @@ function genDemo(){
 
 /* ---------- importação de questões ---------- */
 function importMap(){
-  const by={},rows=[];
+  const by={},byRv={},rows=[];
   for(const id in P()){
     if(id.slice(0,4)!=="imp-")continue;
-    (P()[id].rows||[]).forEach(r=>{rows.push(r);if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}});
+    (P()[id].rows||[]).forEach(r=>{rows.push(r);if(r.rv){const o=byRv[r.rv]||(byRv[r.rv]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}else if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}});
   }
   for(const id in SM)smRows(SM[id]).forEach(r=>{rows.push(r);if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c;o.e+=r.e;o.b+=r.b}});
-  return {by,rows};
+  return {by,byRv,rows};
 }
 const norm=s=>String(s??"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g," ").trim();
 const STOP=new Set("de da do das dos com para por uma que the and em no na nos nas ao aos ou um sao ser como mais sobre entre".split(" "));
@@ -1183,7 +1183,7 @@ function weekStats(wi){
   const x=A.wk[wi];
   return {n:L.length,done,part,pi,fr:L.length?fr/L.length:0,q:x.c+x.e+x.b,c:x.c,e:x.e,b:x.b};
 }
-const goalOf=m=>m&&m.t==="teoria_questoes"&&!m.rv&&!m.rg?(planItems(m)||50):0;
+const goalOf=m=>!m||m.rg?0:m.rv?(RV.i||30):m.t==="teoria_questoes"?(planItems(m)||50):0;
 function goalHtml(m,mode){
   const g=goalOf(m);if(!g)return "";
   const it=itemsOf(m),n=tot_(it),mx=Math.max(g,n),ok=n>=g,falt=Math.max(0,g-n),r=rate(it),w=v=>(v/mx*100).toFixed(1)+"%";
@@ -1195,7 +1195,7 @@ function goalHtml(m,mode){
       <div class="gl-s"><div><b>${n}<small style="font-size:12px;font-weight:700;color:var(--fg2)">/${g}</small></b><span>realizadas</span></div><div><b>${falt}</b><span>faltam</span></div><div><b>${pc(r)}</b><span>de acerto</span></div><div><b>${ok&&pf.nivel?NV[pf.nivel]:"–"}</b><span>classificação</span></div></div>
       <p class="gl-n2">${ok?`Base formada: a meta já tem as ${g} questões. ${pf.nivel?`Classificação ${NV[pf.nivel].toLowerCase()}, que define o prazo das revisões.`:""}`:`Para concluir a primeira passada desta meta, faltam ${falt} ${falt===1?"questão":"questões"}. Certas, erradas e brancas contam, e as do banco entram sozinhas.`}</p></div>`;
   }
-  return `<div class="gl ${ok?"ok":""}">${mode==="bank"?`<div class="gl-n">Objetivo desta meta: ${esc(m.a.length>60?m.a.slice(0,58)+"…":m.a)}</div>`:""}${bar}<div class="gl-t"><span><b>${n}</b> de ${g} questões</span><span class="gs">${stat}</span></div></div>`;
+  return `<div class="gl ${ok?"ok":""}">${mode==="bank"?`<div class="gl-n">${m.rv?"Objetivo desta revisão":"Objetivo desta meta"}: ${esc(m.a.length>60?m.a.slice(0,58)+"…":m.a)}</div>`:""}${bar}<div class="gl-t"><span><b>${n}</b> de ${g} questões</span><span class="gs">${stat}</span></div></div>`;
 }
 function rowHtml(m){
   const rd=rdone(m),r=rp(m),done=rd>=r,it=itemsOf(m),n=tot_(it),rt=rate(it),pr=P()[m.id];
@@ -2021,7 +2021,7 @@ function qbSession(){
   const gTxt=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
   const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot} · ${answered} ${answered===1?"respondida":"respondidas"}</span><button class="chip" data-act="qb-fin">Finalizar</button></div><div class="ak-bar"><i style="width:${answered/tot*100}%"></i></div>
   <div class="fzr"><span class="clk" title="Tempo líquido nesta sessão">⏱ <b id="qb-clk">${fmtClock(qt.sess)}</b></span>${fzTools()}</div>
-  ${goalHtml(BY[q.mid],"bank")}
+  ${goalHtml(qb.rv?getM(qb.rv):BY[q.mid],"bank")}
   <div class="qpal" role="group" aria-label="Ir para a questão">${qb.queue.map((x,i)=>{const r=qb.sans[x];return `<button class="qpd ${r?r.res:""} ${i===qb.i?"cur":""}" data-act="qb-go" data-i="${i}" aria-label="Questão ${i+1}${r?(r.res==="ok"?", certa":r.res==="er"?", errada":", em branco"):", sem resposta"}" ${i===qb.i?'aria-current="true"':""}>${i+1}</button>`}).join("")}</div>`;
   const conf=qb.confirm?`<div class="msg" style="background:var(--warn-t);margin-bottom:12px"><b>Faltam ${S.pend} ${S.pend===1?"questão sem resposta":"questões sem resposta"}.</b><br>Elas não serão contadas e continuam como não resolvidas no banco.<div class="bar-act" style="margin-top:10px"><button class="btn" style="padding:10px 18px" data-act="qb-fincont">Voltar para responder</button><button class="btn alt" style="padding:10px 18px" data-act="qb-finok">Finalizar assim mesmo</button></div></div>`:"";
   const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${dfTag(q.df)}${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
@@ -3547,7 +3547,7 @@ function openSheet(id){
     <header class="sh-hd"><div class="sh-top"><span class="sh-k">${esc(kick)}</span><button class="sh-x" data-act="sh-close" aria-label="Fechar">×</button></div>
       <h2 class="sh-t">${esc(m.a)}</h2>
       <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}${curW!==m.wi?" (adiada)":""}`}</span>${m.e&&!dyn?`<span class="pill">${esc(m.e)}</span>`:""}</div>
-      ${acao}${!dyn&&g?goalHtml(m,"mini"):""}</header>
+      ${acao}${g?goalHtml(m,"mini"):""}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
     ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
     <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
