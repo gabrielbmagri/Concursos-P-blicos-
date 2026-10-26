@@ -373,6 +373,7 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .qt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600;font-size:14.5px;margin-bottom:6px}
 .qh .s{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--fg3)}.star{color:#e0a800;font-weight:800}
 .qd{padding:0 2px 16px}.qg{margin:10px 0 0;font-size:14px}
+.rb.df-facil{background:#e3f4ea;color:#0a5c3a}.rb.df-medio{background:#fff0b3;color:#6b4e00}.rb.df-dificil{background:#fde1dc;color:#9a2a1c}
 .rb.qbk{background:#e3f4ea;color:#0a5c3a;cursor:pointer;font:inherit;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px}.rb.qbk:hover{background:#cdeadb}
 .box.stip ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
 .box.stip li{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-top:1px solid var(--soft2)}.box.stip li:first-child{border-top:0}
@@ -1458,24 +1459,25 @@ const QBINSTR=[
 "# Matéria: Linguística",
 "# Assunto: Teoria do signo linguístico",
 "# Caderno: Signo linguístico I",
-"CE | O signo linguístico une um significante e um significado. | C | Correto: é a definição saussuriana de signo.",
+"CE | O signo linguístico une um significante e um significado. | C | Correto: é a definição saussuriana de signo. | fácil",
 "CE | Para Saussure, a relação entre significante e significado é necessariamente motivada. | E | Errado: Saussure defende a arbitrariedade do signo.",
-"ME | Assinale a alternativa que apresenta um exemplo de arbitrariedade do signo. | B | A palavra é formada por derivação ;; Palavras diferentes designam o mesmo referente em línguas distintas ;; O som imita o ruído do objeto ;; O significado depende do contexto ;; O signo é imutável na fala | Letra B: línguas diferentes usam significantes distintos para o mesmo referente. As demais não tratam de arbitrariedade.",
+"ME | Assinale a alternativa que apresenta um exemplo de arbitrariedade do signo. | B | A palavra é formada por derivação ;; Palavras diferentes designam o mesmo referente em línguas distintas ;; O som imita o ruído do objeto ;; O significado depende do contexto ;; O signo é imutável na fala | Letra B: línguas diferentes usam significantes distintos para o mesmo referente. As demais não tratam de arbitrariedade. | médio",
 "",
 "Regras:",
 "1. As linhas que começam com # valem para todas as questões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno é opcional e agrupa as questões do pedido.",
 "2. Uma linha por questão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
-"3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário.",
+"3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário | dificuldade. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário | dificuldade.",
 "4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.",
 "5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
 "6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
 "7. De 15 a 30 questões por pedido, a não ser que eu peça outra quantidade.",
+"7a. O último campo, a dificuldade, é fácil, médio ou difícil (opcional). Coloque as questões em ordem crescente de dificuldade, da mais fácil para a mais difícil. Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
 "8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
 ].join("\n");
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
 const LTR=["A","B","C","D","E"];
-const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",st:"novas",stL:"todas",n:"todas",ord:"cadastro",q:"",more:50,queue:[],i:0,sans:{},dr:{},confirm:false,paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
+const qb={view:"home",mat:"",mid:"",cad:"",tipo:"",df:"",st:"novas",stL:"todas",n:"todas",ord:"cadastro",q:"",more:50,queue:[],i:0,sans:{},dr:{},confirm:false,paste:"",name:"",groups:[],items:[],errs:[],err:"",msg:"",copied:false,ask:"",open:{}};
 function qsWrite(list){
   list.forEach(([id,d])=>{if(d)QS[id]=d;else delete QS[id]});
   if(fb.on&&fb.qcol){
@@ -1483,30 +1485,33 @@ function qsWrite(list){
     run();
   }else LS.set("painel-questoes",JSON.stringify(QS));
 }
-function mkQ(mat,ass,cad,tipoRaw,e,g,o,c,ref){
+const normDf=t=>{const n=norm(t);if(!n)return "";if(/^(f|facil|1|baixa)/.test(n))return "facil";if(/^(m|medi|2|intermed)/.test(n))return "medio";if(/^(d|dificil|3|alta)/.test(n))return "dificil";return null};
+const DFN={facil:"Fácil",medio:"Média",dificil:"Difícil"},DFR={"":9,facil:1,medio:2,dificil:3};
+function mkQ(mat,ass,cad,tipoRaw,e,g,o,c,df,ref){
   const t0=String(tipoRaw||"").toUpperCase().replace(/[^A-Z]/g,"");
   const t=t0==="CE"||t0==="C"||t0==="VF"||t0==="CERTOERRADO"?"CE":t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA"?"ME":"";
   if(!t)return {err:`${ref}: tipo "${String(tipoRaw||"").slice(0,12)}" não reconhecido. Use CE ou ME.`};
   e=String(e||"").trim();c=String(c||"").trim();g=String(g||"").trim();
+  const dn=normDf(df);if(dn===null)return {err:`${ref}: dificuldade "${String(df).slice(0,12)}" não reconhecida. Use fácil, médio ou difícil.`};df=dn;
   if(!e)return {err:`${ref}: falta o texto da questão.`};
-  if(t==="CE"){const a=norm(g).charAt(0);if(a==="c")g="C";else if(a==="e")g="E";else return {err:`${ref}: o gabarito de Certo ou Errado deve ser C ou E.`};return {q:{mat,ass,cad,t,e,g,o:[],c}}}
+  if(t==="CE"){const a=norm(g).charAt(0);if(a==="c")g="C";else if(a==="e")g="E";else return {err:`${ref}: o gabarito de Certo ou Errado deve ser C ou E.`};return {q:{mat,ass,cad,t,e,g,o:[],c,df}}}
   const opts=String(o||"").split(";;").map(x=>x.trim().replace(/^[A-Ea-e][\)\.]\s+/,"")).filter(Boolean);
   if(opts.length<2||opts.length>5)return {err:`${ref}: informe de 2 a 5 alternativas separadas por ;;.`};
   g=g.toUpperCase().charAt(0);
   if(LTR.indexOf(g)<0||LTR.indexOf(g)>=opts.length)return {err:`${ref}: o gabarito deve ser uma letra de A a ${LTR[opts.length-1]}.`};
-  return {q:{mat,ass,cad,t,e,g,o:opts,c}};
+  return {q:{mat,ass,cad,t,e,g,o:opts,c,df}};
 }
 function parseQText(text){
-  const items=[],errs=[];let mat="",ass="",cad="";
+  const items=[],errs=[];let mat="",ass="",cad="",dfh="";
   String(text).split(/\r?\n/).forEach((raw,i)=>{
     const ln=raw.trim();if(!ln||/^```/.test(ln))return;
-    const m=/^#\s*(mat[eé]ria|assunto|caderno)\s*:\s*(.*)$/i.exec(ln);
-    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else cad=m[2].trim();return}
+    const m=/^#\s*(mat[eé]ria|assunto|caderno|dificuldade)\s*:\s*(.*)$/i.exec(ln);
+    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else if(k==="caderno")cad=m[2].trim();else dfh=m[2].trim();return}
     if(ln.charAt(0)==="#")return;
     const p=ln.split("|").map(z=>z.trim());
     const t0=String(p[0]||"").toUpperCase().replace(/[^A-Z]/g,"");
     const isME=t0==="ME"||t0==="M"||t0==="MULTIPLA"||t0==="MULTIPLAESCOLHA";
-    const r=isME?mkQ(mat,ass,cad,p[0],p[1],p[2],p[3],p[4],"Linha "+(i+1)):mkQ(mat,ass,cad,p[0],p[1],p[2],"",p[3],"Linha "+(i+1));
+    const r=isME?mkQ(mat,ass,cad,p[0],p[1],p[2],p[3],p[4],p[5]||dfh,"Linha "+(i+1)):mkQ(mat,ass,cad,p[0],p[1],p[2],"",p[3],p[4]||dfh,"Linha "+(i+1));
     if(r.err)errs.push(r.err);else items.push(r.q);
   });
   return {items,errs};
@@ -1528,7 +1533,7 @@ function qbImport(){
   qb.items.forEach(c=>{
     const g=qb.groups[c.gi];if(!g||!g.k){skipped++;return}
     const id=qbId(g.k,c.e);if(QS[id]||seen.has(id)){dup++;return}seen.add(id);
-    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ix:base+list.length,ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",cad:g.cad||g.ass||SHORT[g.k],t:c.t,e:c.e,g:c.g,o:c.o,c:c.c,cr:T0(),ix:base+list.length,df:c.df||"",ok:0,er:0,bl:0,last:"",lt:"",fav:0,nt:""}]);
   });
   qb.msg=`Importei ${list.length} ${list.length===1?"questão":"questões"}.${dup?` ${dup} já existiam e foram ignoradas.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
   if(list.length)qsWrite(list);
@@ -1547,13 +1552,13 @@ const QST=[["novas","Ainda não resolvidas"],["erradas","Errei na última vez"],
 const qbStat=(q,st)=>st==="todas"?true:st==="novas"?!(q.ok+q.er+q.bl):st==="erradas"?q.last==="er":st==="acertadas"?q.last==="ok":st==="jaerrei"?q.er>0:st==="feitas"?(q.ok+q.er+q.bl)>0:st==="favoritas"?!!q.fav:st==="comentadas"?!!q.nt:true;
 function qbFilter(withStatus,key){
   const s=norm(qb.q);
-  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
+  return qbList().filter(q=>(!qb.mat||q.k===qb.mat)&&(!qb.mid||q.mid===qb.mid)&&(!qb.cad||q.cad===qb.cad)&&(!qb.tipo||q.t===qb.tipo)&&(!qb.df||q.df===qb.df)&&(!s||norm(q.e+" "+(q.o||[]).join(" ")+" "+q.as).includes(s))&&(!withStatus||qbStat(q,qb[key||"st"])));
 }
 const qbOrdered=a=>a.slice().sort((x,y)=>(x.cr||"")<(y.cr||"")?-1:(x.cr||"")>(y.cr||"")?1:(x.ix||0)!==(y.ix||0)?(x.ix||0)-(y.ix||0):x.id<y.id?-1:1);
 function qbStart(ids){
   let pool=ids?ids.map(id=>({id,...QS[id]})).filter(q=>q.e):qbFilter(true,"st");
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
-  pool=qb.ord==="aleatoria"?shuf(pool):qbOrdered(pool);
+  pool=qb.ord==="aleatoria"?shuf(pool):qb.ord==="dificuldade"?qbOrdered(pool).sort((a,b)=>DFR[a.df||""]-DFR[b.df||""]):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
   qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
 }
@@ -1590,6 +1595,7 @@ function qbFinish(force){
   qb.confirm=false;qb.view="done";render();window.scrollTo(0,0);
 }
 function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
+const dfTag=df=>df?`<span class="rb df-${df}">${DFN[df]}</span>`:"";
 const qbTag=k=>SUBJ.includes(k)?`<span class="tag" style="--c:var(--m-${k})"><i></i>${SHORT[k]}</span>`:"";
 function qbOpts(q,st,id){
   const d=qd(id);
@@ -1605,7 +1611,7 @@ function qbSession(){
   const head=`<div class="ak-top"><button class="chip" data-act="qb-quit">Sair</button><span>${qb.i+1} de ${tot} · ${answered} ${answered===1?"respondida":"respondidas"}</span><button class="chip" data-act="qb-fin">Finalizar</button></div><div class="ak-bar"><i style="width:${answered/tot*100}%"></i></div>
   <div class="qpal" role="group" aria-label="Ir para a questão">${qb.queue.map((x,i)=>{const r=qb.sans[x];return `<button class="qpd ${r?r.res:""} ${i===qb.i?"cur":""}" data-act="qb-go" data-i="${i}" aria-label="Questão ${i+1}${r?(r.res==="ok"?", certa":r.res==="er"?", errada":", em branco"):", sem resposta"}" ${i===qb.i?'aria-current="true"':""}>${i+1}</button>`}).join("")}</div>`;
   const conf=qb.confirm?`<div class="msg" style="background:var(--warn-t);margin-bottom:12px"><b>Faltam ${S.pend} ${S.pend===1?"questão sem resposta":"questões sem resposta"}.</b><br>Elas não serão contadas e continuam como não resolvidas no banco.<div class="bar-act" style="margin-top:10px"><button class="btn" style="padding:10px 18px" data-act="qb-fincont">Voltar para responder</button><button class="btn alt" style="padding:10px 18px" data-act="qb-finok">Finalizar assim mesmo</button></div></div>`:"";
-  const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
+  const metaL=`<div class="ak-meta">${qbTag(q.k)}<span class="rb">${q.t==="CE"?"Certo ou Errado":"Múltipla escolha"}</span>${dfTag(q.df)}${q.cad?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.cad)}</span>`:""}</div>`;
   let ans="";
   if(!a){
     ans=q.t==="CE"?`<div class="ak-btns two"><button class="gbtn g3" data-act="qb-ans" data-v="C">Certo</button><button class="gbtn g1" data-act="qb-ans" data-v="E">Errado</button></div>`
@@ -1640,6 +1646,7 @@ function qbFilters(withStatus,key){key=key||"st";
   return `<div class="qfil"><div><label class="lbl" for="qf-mat">Matéria</label><select id="qf-mat" data-qbf="mat">${o("",qb.mat,"Todas")}${mats.map(k=>o(k,qb.mat,SHORT[k])).join("")}</select></div>
     <div><label class="lbl" for="qf-mid">Assunto</label><select id="qf-mid" data-qbf="mid">${o("",qb.mid,"Todos")}${mids.map(([id,a])=>o(id,qb.mid,a.length>60?a.slice(0,58)+"…":a)).join("")}</select></div>
     <div><label class="lbl" for="qf-cad">Caderno</label><select id="qf-cad" data-qbf="cad">${o("",qb.cad,"Todos")}${cads.map(c=>o(c,qb.cad,c)).join("")}</select></div>
+    <div><label class="lbl" for="qf-df">Dificuldade</label><select id="qf-df" data-qbf="df">${o("",qb.df,"Todas")}${o("facil",qb.df,"Fácil")}${o("medio",qb.df,"Média")}${o("dificil",qb.df,"Difícil")}</select></div>
     <div><label class="lbl" for="qf-tipo">Tipo</label><select id="qf-tipo" data-qbf="tipo">${o("",qb.tipo,"Todos")}${o("CE",qb.tipo,"Certo ou Errado")}${o("ME",qb.tipo,"Múltipla escolha")}</select></div>
     ${withStatus?`<div><label class="lbl" for="qf-${key}">Situação</label><select id="qf-${key}" data-qbf="${key}">${QST.map(([v,l])=>o(v,qb[key],l)).join("")}</select></div>`:""}</div>`;
 }
@@ -1651,6 +1658,8 @@ function qbHome(){
   const cnt=qbFilter(true,"st").length;
   const byK={};all.forEach(q=>{const x=byK[q.k]||(byK[q.k]={ok:0,er:0,n:0});x.ok+=q.ok;x.er+=q.er;x.n++});
   const kRows=SUBJ.filter(k=>byK[k]&&byK[k].ok+byK[k].er>0).map(k=>{const x=byK[k],r=x.ok/(x.ok+x.er);return {l:SHORT[k],c:`var(--m-${k})`,f:r,v:pc(r),s:x.ok+x.er+" respostas",tip:`${SHORT[k]}: ${x.ok} certas e ${x.er} erradas no banco`,r}}).sort((a,b)=>a.r-b.r);
+  const byD={};all.forEach(q=>{if(!q.df||q.ok+q.er<1)return;const x=byD[q.df]||(byD[q.df]={ok:0,er:0});x.ok+=q.ok;x.er+=q.er});
+  const dRows=['facil','medio','dificil'].filter(k=>byD[k]).map(k=>{const x=byD[k],r=x.ok/(x.ok+x.er);return {l:DFN[k],c:k==='facil'?'var(--green)':k==='medio'?'#e0a800':'var(--red)',f:r,v:pc(r),s:x.ok+x.er+' respostas',tip:`${DFN[k]}: ${x.ok} certas e ${x.er} erradas`}});
   const byA={};all.forEach(q=>{if(q.ok+q.er<1)return;const key=q.k+"|"+(q.mid||norm(q.as));const x=byA[key]||(byA[key]={nome:q.mid&&BY[q.mid]?BY[q.mid].a:(q.as||SHORT[q.k]),k:q.k,ok:0,er:0});x.ok+=q.ok;x.er+=q.er});
   const weak=Object.values(byA).filter(x=>x.ok+x.er>=3).map(x=>({...x,r:x.ok/(x.ok+x.er)})).sort((a,b)=>a.r-b.r).slice(0,6);
   return `<section class="sec" style="margin-top:20px"><h2>Banco de questões</h2>
@@ -1665,10 +1674,10 @@ function qbHome(){
   <section class="sec"><div class="sec-h"><h2>Montar uma sessão</h2></div>
     ${qbFilters(true,"st")}
     <div class="qfil" style="margin-top:10px"><div><label class="lbl" for="qf-n">Quantas questões</label><select id="qf-n" data-qbf="n">${["10","20","30","50","todas"].map(v=>`<option value="${v}" ${qb.n===v?"selected":""}>${v==="todas"?"Todas do filtro":v}</option>`).join("")}</select></div>
-      <div><label class="lbl" for="qf-ord">Ordem</label><select id="qf-ord" data-qbf="ord"><option value="aleatoria" ${qb.ord==="aleatoria"?"selected":""}>Aleatória</option><option value="cadastro" ${qb.ord==="cadastro"?"selected":""}>Ordem em que foram adicionadas</option></select></div></div>
+      <div><label class="lbl" for="qf-ord">Ordem</label><select id="qf-ord" data-qbf="ord"><option value="aleatoria" ${qb.ord==="aleatoria"?"selected":""}>Aleatória</option><option value="cadastro" ${qb.ord==="cadastro"?"selected":""}>Ordem em que foram adicionadas</option><option value="dificuldade" ${qb.ord==="dificuldade"?"selected":""}>Da mais fácil para a mais difícil</option></select></div></div>
     <p class="muted" style="font-size:13px;margin:10px 2px 0">Por padrão aparecem só as questões que você ainda não resolveu. Troque a situação para refazer as que errou, as que acertou ou as favoritas.</p>
     <div class="bar-act"><button class="btn" data-act="qb-start" ${cnt?"":"disabled"}>Começar${cnt?` (${Math.min(cnt,qb.n==="todas"?cnt:+qb.n)} de ${cnt})`:""}</button><button class="btn alt" data-act="qb-view" data-v="lista">Ver todas as questões</button></div></section>
-  ${kRows.length||weak.length?`<section class="sec"><div class="grid2">${kRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por matéria</h3><p>Só as questões do banco</p></div></div>${barsHtml(kRows)}</div>`:""}
+  ${kRows.length||weak.length||dRows.length?`<section class="sec"><div class="grid2">${dRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por dificuldade</h3><p>Só as questões do banco</p></div></div>${barsHtml(dRows)}</div>`:""}${kRows.length?`<div class="card"><div class="card-h"><div><h3>Acerto por matéria</h3><p>Só as questões do banco</p></div></div>${barsHtml(kRows)}</div>`:""}
     ${weak.length?`<div class="card"><div class="card-h"><div><h3>Assuntos mais fracos</h3><p>Menor acerto, com ao menos 3 respostas</p></div></div><ul class="list">${weak.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.nome)}</div><div class="s">${qbTag(x.k)}<span>${x.ok} certas · ${x.er} erradas</span></div></div><div class="res"><span class="sc ${scCls(x.r)}">${pc(x.r)}</span></div></li>`).join("")}</ul></div>`:""}</div></section>`:""}
   <section class="sec"><div class="sec-h"><h2>Adicionar questões</h2></div>${qbAddBox()}</section>`;
 }
@@ -1691,7 +1700,7 @@ function qbLista(){
   const items=qbOrdered(qbFilter(true,"stL")),sh=items.slice(0,qb.more);
   const row=q=>{
     const op=!!qb.open[q.id],n=q.ok+q.er+q.bl,gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
-    return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
+    return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${dfTag(q.df)}${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
       ${op?`<div class="qd">${q.t==="ME"?q.o.map((t,i)=>`<div class="qopt ${LTR[i]===q.g?"ok":""}" style="cursor:default"><span class="lt">${LTR[i]}</span><span class="tx">${esc(t)}</span></div>`).join(""):""}<p class="qg"><b>Gabarito:</b> ${gT}</p><div class="box"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Sem comentário."}</p></div>
       <label class="lbl" for="qn-${q.id}" style="margin-top:10px">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:70px;font-family:var(--font)">${esc(q.nt||"")}</textarea>
       <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${q.id}" aria-pressed="${!!q.fav}">${q.fav?"★ Bizu (favorita)":"☆ Favoritar como bizu"}</button><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver só esta</button>${qb.ask===q.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="qb-delok" data-id="${q.id}">Confirmar exclusão</button><button class="chip" data-act="qb-delno">Cancelar</button>`:`<button class="chip" data-act="qb-delask" data-id="${q.id}">Excluir</button>`}</div></div>`:""}</li>`;
@@ -1827,7 +1836,7 @@ const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto")
 function bzCard(q){
   const gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
   return `<div class="bz"><div class="bq">${esc(q.e)}</div>
-    ${q.t==="ME"&&Array.isArray(q.o)?q.o.map((t,i)=>`<div class="bo ${LTR[i]===q.g?"ok":""}"><b>${LTR[i]}</b><span>${esc(t)}</span></div>`).join(""):""}
+    ${q.df?`<div class="s" style="margin-top:6px">${dfTag(q.df)}</div>`:""}${q.t==="ME"&&Array.isArray(q.o)?q.o.map((t,i)=>`<div class="bo ${LTR[i]===q.g?"ok":""}"><b>${LTR[i]}</b><span>${esc(t)}</span></div>`).join(""):""}
     <p class="bg"><b>Gabarito:</b> ${gT}</p>
     ${q.c?`<div class="bc"><b>Bizu (gabarito comentado)</b><p>${esc(q.c)}</p></div>`:""}
     <label class="lbl" for="qn-${q.id}">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:64px;font-family:var(--font)" placeholder="Acrescente a sua anotação">${esc(q.nt||"")}</textarea>
