@@ -109,8 +109,8 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:18px;-webkit-overflow-scrolling:touch}.mtb{border-collapse:collapse;width:100%;min-width:660px;font-size:13.5px}.mtb th,.mtb td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}.mtb th:first-child,.mtb td:first-child{text-align:left;position:sticky;left:0;background:var(--bg);z-index:1}.mtb th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--fg2)}.mtb tr.tt td{font-weight:800;border-bottom:0;background:var(--soft)}.mtb tr.tt td:first-child{background:var(--soft)}
 .fzr{display:flex;align-items:center;justify-content:space-between;margin:10px 0 2px;font-size:13.5px;color:var(--fg2)}.fzr .clk b{font-variant-numeric:tabular-nums;color:var(--fg)}.fzb{display:inline-flex;gap:6px}.fzb .chip{padding:6px 12px;font-weight:800}
 @media (max-width:560px){.ins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px}.ic{flex:0 0 84%;scroll-snap-align:start}}
-.hero-head>div:last-child{flex-basis:100%}.hero-head .cd{margin-left:auto;flex:none}
-@media (max-width:560px){.hero-head{flex-wrap:wrap;gap:10px 8px}.hero-head .nav{width:30px;height:30px;font-size:17px}.hero-head .wk{gap:4px}.hero-head .wk-t{font-size:21px;padding-inline:2px}.hero-head .wk-d{padding-inline:2px;font-size:13px}.hero-head .cd{padding:6px 10px;gap:7px}.hero-head .cd-n{font-size:24px}.hero-head .cd-t b{font-size:10.5px;max-width:52px}.hero-head .cd-t span{display:none}}
+.hero-head>div:last-child{flex-basis:100%}.hside .cd{flex:none}
+@media (max-width:560px){.hero-head{flex-wrap:wrap;gap:10px 8px}.hero-head .nav{width:30px;height:30px;font-size:17px}.hero-head .wk{gap:4px}.hero-head .wk-t{font-size:21px;padding-inline:2px}.hero-head .wk-d{padding-inline:2px;font-size:13px}.hside .cd{padding:6px 10px;gap:7px}.hside .cd-n{font-size:24px}.hside .cd-t b{font-size:10.5px;max-width:52px}.hside .cd-t span{display:none}}
 .gl{margin-top:8px}.gl-b{position:relative;display:flex;height:8px;border-radius:99px;background:var(--soft2);overflow:hidden}.gl-b i{display:block;height:100%}.gl-b u{position:absolute;top:0;bottom:0;width:2px;background:var(--fg)}
 .gl-t{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--fg2);margin-top:4px}.gl-t b{color:var(--fg)}.gl .gs{font-weight:700;color:var(--amber)}.gl.ok .gs{color:var(--good)}.gl-n{font-size:12.5px;font-weight:700;color:var(--fg);margin-bottom:5px}
 .gl-f .gl-b{height:12px;margin-top:10px}.gl-f.ok{background:var(--good-t)}.gl-s{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}.gl-s div{text-align:center}.gl-s b{display:block;font:900 20px/1.1 var(--display);text-transform:none;letter-spacing:0;color:var(--fg);margin:0}.gl-s span{font-size:11px;color:var(--fg2)}.gl-n2{font-weight:500;font-size:13px;color:var(--fg2);margin:10px 0 0;line-height:1.45}
@@ -596,7 +596,7 @@ details.sh-d{border:1px solid var(--line);border-radius:14px;padding:0 14px}.sh-
 .sh-pane .box.rep{margin-top:14px}
 html[data-modo="escuro"] .sh-st.go{background:#3a3016}
 
-.hside{display:flex;flex-direction:column;gap:8px;align-items:stretch;margin-left:auto;flex:none}.hero-head .hside .cd{margin-left:0}
+.hside{display:flex;flex-direction:column;gap:8px;align-items:stretch;margin-left:auto;flex:none}.hside .cd{margin-left:0}
 .jmini{display:grid;grid-template-columns:30px 1fr;grid-template-rows:auto auto;column-gap:8px;row-gap:5px;align-items:center;padding:7px 12px;border-radius:16px;background:linear-gradient(135deg,#eaf7ef,#fff8dc);border:1.5px solid #cfe8d8;box-shadow:0 6px 16px rgba(20,48,31,.16);text-align:left;animation:cdf 4s ease-in-out infinite;animation-delay:-2s}.jmini.risk{background:linear-gradient(135deg,#fff1e6,#ffe3d6);border-color:#f3b79c}
 .jmini .ava{grid-row:1/3;width:30px;height:30px;border-radius:50%;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.2)}.jmini .ava svg{display:block}.jm-t{display:flex;align-items:center;gap:3px}.jm-t b{font:900 20px/1 var(--display);color:var(--fg)}.jmini .flame svg{width:18px;height:18px}.jmini.risk .flame{animation:flm 1s ease-in-out infinite}.jmini .jc-bar{height:5px}
 @media (prefers-reduced-motion:reduce){.jmini{animation:none}}
@@ -633,6 +633,17 @@ html[data-tema="olimpo"] .ws-fill{background:linear-gradient(90deg,#b8902a,#d4a7
 .rvd-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}.rvd-tools .chip{padding:6px 12px;font-size:12.5px}
 html[data-modo="escuro"] .rvdock{box-shadow:0 14px 40px rgba(0,0,0,.6)}
 .hleft .olv{display:block;height:64px;width:auto;margin:-6px 0 8px 2px;opacity:.92}html[data-modo="escuro"] .hleft .olv{filter:invert(1)}
+
+.mgap.tight{height:6px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px}
+.hero>*{grid-column:1/-1}
+.hero>.hero-head{grid-column:1;grid-row:1}
+.hero>.hside{grid-column:2;grid-row:1/3;align-self:end;margin:0}
+.hero>.hero-main{display:contents}
+.hero .big{grid-column:1;grid-row:2;align-self:end;margin-top:12px}
+.hero .stats{grid-column:1/-1;grid-row:3;margin-top:16px}
+.hero .big .bn{font-size:clamp(58px,17vw,84px)}
+@media (min-width:821px){.hero>.hside{grid-row:1/3;align-self:center}}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -1314,13 +1325,13 @@ function homeHtml(){
   return `
   <section class="hero" aria-label="Progresso da semana">
     <div class="hero-head">
-      <div class="hleft">${isOl()?`<img class="olv" src="atlas.png" alt="" aria-hidden="true">`:""}
+      <div class="hleft">
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
         <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
         <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div></div>
-      <div class="hside"><div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>${jornadaMini()}</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
     </div>
+  <div class="hside"><div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>${jornadaMini()}</div>
     ${limpo?sumNew:sumOld}
     ${canUnlock?`<div class="unlock"><div><b>Semana ${LIB+1} concluída</b><span>Libere a semana ${LIB+2} para continuar.</span></div><button class="btn" data-act="unlock-next">Liberar a semana ${LIB+2}</button></div>`:""}
     ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div>${goalHtml(cs.m,"mini")}</div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
@@ -3260,7 +3271,7 @@ function render(){
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
-    <div class="sw">${`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>`:`<div class="mgap"></div>`}
+    <div class="sw">${`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>`:`<div class="mgap ${tab==="semana"?"tight":""}"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${upd.novo?`<div class="updbar" role="status"><span>Nova versão disponível</span><button data-act="upd">Atualizar</button></div>`:""}
   ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
