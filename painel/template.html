@@ -100,7 +100,7 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 
 /* indicadores: blocos de cor sólida */
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}
-.cd{display:flex;align-items:center;gap:14px;margin:0 0 12px;padding:12px 18px;border-radius:20px;background:linear-gradient(135deg,#ffd21a,#ffe36b);color:#14301f;box-shadow:0 10px 26px rgba(20,48,31,.28),0 2px 0 rgba(255,255,255,.5) inset;animation:cdf 4s ease-in-out infinite}.cd-n{font-size:42px;font-weight:800;line-height:1;letter-spacing:-.02em}.cd-t{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.cd-t span{font-size:13px;opacity:.85}.cd-b{display:block;height:6px;border-radius:9px;background:rgba(20,48,31,.18);margin-top:5px;overflow:hidden}.cd-b u{display:block;height:100%;background:#14301f;border-radius:9px}@keyframes cdf{50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.cd{animation:none}}
+.cd{display:flex;align-items:center;gap:10px;padding:8px 14px;border-radius:16px;background:linear-gradient(135deg,#ffd21a,#ffe36b);color:#14301f;box-shadow:0 6px 16px rgba(20,48,31,.22),0 2px 0 rgba(255,255,255,.5) inset;animation:cdf 4s ease-in-out infinite}.cd-n{font-size:30px;font-weight:800;line-height:1;letter-spacing:-.02em}.cd-t{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.cd-t b{font-size:12px;line-height:1.15}.cd-t span{font-size:11.5px;opacity:.85}.cd-b{display:block;height:5px;border-radius:9px;background:rgba(20,48,31,.18);margin-top:5px;overflow:hidden}.cd-b u{display:block;height:100%;background:#14301f;border-radius:9px}@keyframes cdf{50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.cd{animation:none}}
 .kpi.sea{--k:#0b5e8a}
 .pfnav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;padding:10px 60px 10px 0;margin-top:14px;background:var(--bg);scrollbar-width:none}.pfnav::-webkit-scrollbar{display:none}.pfnav .chip{flex:none}
 .pfh{margin:40px 0 14px;scroll-margin-top:64px}.pfh h2{font-size:26px;margin:0;letter-spacing:-.01em}.pfh p{margin:4px 0 0;font-size:14px;color:var(--fg2)}
@@ -109,6 +109,8 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:18px;-webkit-overflow-scrolling:touch}.mt{border-collapse:collapse;width:100%;min-width:660px;font-size:13.5px}.mt th,.mt td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}.mt th:first-child,.mt td:first-child{text-align:left;position:sticky;left:0;background:var(--bg);z-index:1}.mt th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--fg2)}.mt tr.tt td{font-weight:800;border-bottom:0;background:var(--soft)}.mt tr.tt td:first-child{background:var(--soft)}
 .fzr{display:flex;align-items:center;justify-content:space-between;margin:10px 0 2px;font-size:13.5px;color:var(--fg2)}.fzr .clk b{font-variant-numeric:tabular-nums;color:var(--fg)}.fzb{display:inline-flex;gap:6px}.fzb .chip{padding:6px 12px;font-weight:800}
 @media (max-width:560px){.ins{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px}.ic{flex:0 0 84%;scroll-snap-align:start}}
+.hero-head>div:last-child{flex-basis:100%}.hero-head .cd{margin-left:auto;flex:none}
+@media (max-width:560px){.hero-head{flex-wrap:wrap;gap:10px 8px}.hero-head .nav{width:30px;height:30px;font-size:17px}.hero-head .wk{gap:4px}.hero-head .wk-t{font-size:21px;padding-inline:2px}.hero-head .wk-d{padding-inline:2px;font-size:13px}.hero-head .cd{padding:6px 10px;gap:7px}.hero-head .cd-n{font-size:24px}.hero-head .cd-t b{font-size:10.5px;max-width:52px}.hero-head .cd-t span{display:none}}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -993,12 +995,12 @@ function homeHtml(){
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   return `
-  <div class="cd" role="timer" aria-label="Contagem regressiva para a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)} de ${EXAM.getFullYear()} · ${wkLeft} semanas</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>
   <section class="hero" aria-label="Progresso da semana">
     <div class="hero-head">
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
         <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
         <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div>
+      <div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
     </div>
     <div class="hero-main">
