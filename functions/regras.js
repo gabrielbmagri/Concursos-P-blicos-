@@ -51,6 +51,7 @@ const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": 
 
 const HORAS = { manha: "07:00", duro: "14:00", revisoes: "17:00", questoes: "18:30", anki: "19:00", ofensiva: "20:00", meta_dia: "21:00", semana: "18:00", prazos: "08:00" };
 const JANELA = 120; // minutos depois do horário em que o aviso ainda pode sair
+const JANELA_LONGA = { manha: 360, prazos: 360, semana: 240 }; // resumos e e-mails: mais tolerância se o servidor atrasar ou for ligado depois do horário
 
 function emailHtml(titulo, linhas, rodape) {
   return `<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto;color:#14301f"><div style="background:#087a40;color:#fff;padding:18px 22px;border-radius:14px 14px 0 0"><div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.85">Painel de metas</div><div style="font-size:22px;font-weight:800;margin-top:4px">${esc(titulo)}</div></div><div style="border:1px solid #dfe8e2;border-top:0;padding:18px 22px;border-radius:0 0 14px 14px;font-size:15px;line-height:1.55">${linhas.map((l) => `<p style="margin:0 0 12px">${l}</p>`).join("")}<p style="margin:16px 0 0"><a href="https://painel-de-metas.web.app/" style="background:#ffd21a;color:#14301f;font-weight:800;text-decoration:none;padding:11px 20px;border-radius:99px;display:inline-block">Abrir o painel</a></p>${rodape ? `<p style="margin:18px 0 0;font-size:12px;color:#6b7a72">${esc(rodape)}</p>` : ""}</div></div>`;
@@ -64,7 +65,7 @@ function gerar({ estado: e, cfg, agora, log }) {
   const regras = cfg.regras || {}, horas = cfg.horas || {};
   const hoje = agora.data;
   const on = (k) => regras[k] !== false;
-  const janela = (k, extra) => { const h = minDe(extra || horas[k] || HORAS[k]); return agora.min >= h && agora.min < h + JANELA; };
+  const janela = (k, extra) => { const h = minDe(extra || horas[k] || HORAS[k]); return agora.min >= h && agora.min < h + (JANELA_LONGA[k] || JANELA); };
   const feito = (key) => !!(log && log[key]);
   const add = (tipo, key, titulo, corpo, email) => { if (!feito(key)) out.push({ tipo, key, titulo, corpo, email: email || null }); };
 

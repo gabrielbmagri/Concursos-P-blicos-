@@ -3121,6 +3121,8 @@ function ntClick(a,t){
   if(a==="nt-push"){ntPushOn();return true}
   if(a==="nt-test"){nt.msg="";nt.err="";if(!fb.on||!fb.user){nt.err="Entre na sua conta.";render();return true}
     fb.ncol.doc("pedido").set({tipo:"teste",ts:Date.now()}).then(()=>{nt.msg="Pedido enviado. Se o servidor de lembretes estiver ativo, o teste chega em alguns segundos.";render()}).catch(()=>{nt.err="Não consegui enviar o pedido.";render()});return true}
+  if(a==="nt-resumo"){nt.msg="";nt.err="";if(!fb.on||!fb.user){nt.err="Entre na sua conta.";render();return true}
+    fb.ncol.doc("pedido").set({tipo:"resumo",ts:Date.now()}).then(()=>{nt.msg="Pedido enviado. O resumo do dia chega em alguns segundos por notificação e, se estiver ligado, por e-mail.";render()}).catch(()=>{nt.err="Não consegui enviar o pedido.";render()});return true}
   if(a==="nt-tog"){const c=ntCfg(),k=t.dataset.k;ntSave({regras:{[k]:!c.regras[k]}});return true}
   if(a==="nt-etog"){const c=ntCfg(),k=t.dataset.k;if(k==="ativo")ntSave({email:{ativo:!c.email.ativo,addr:c.email.addr}});else ntSave({email:{[k]:!c.email[k]}});return true}
   if(a==="nt-off"){const T=LS.get("painel-push-token");const c=ntCfg(),patch={};if(T)patch.tokens={[hstr(T)]:firebase.firestore.FieldValue.delete()};patch.push=false;ntSave(patch);LS.set("painel-push-token","");nt.msg="Notificações desativadas neste aparelho.";render();return true}
@@ -3145,7 +3147,7 @@ function lembretesHtml(){
   <div class="ntc ${on?"ok":"off"}"><b>${on?"Servidor de lembretes ativo":"Servidor de lembretes ainda não ativado"}</b><span>${on?`Última checagem há ${min} min.`:"Os avisos só começam a chegar depois que o servidor for ligado no Firebase. Veja o passo a passo em LEMBRETES.md."}</span></div>
   <div class="sec-h" style="margin-top:22px"><h3>Neste aparelho</h3></div>
   <div class="ntc"><b>${perm==="granted"&&mine?"Notificações ativadas":perm==="denied"?"Notificações bloqueadas no navegador":"Notificações desligadas"}</b><span>${tok} ${tok===1?"aparelho cadastrado":"aparelhos cadastrados"} na sua conta.${ios&&!standalone?" No iPhone, as notificações só funcionam com o painel instalado na tela inicial: toque em Compartilhar e em Adicionar à Tela de Início, depois abra por lá.":""}</span>
-    <div class="bar-act" style="margin-top:10px"><button class="btn" data-act="nt-push" ${nt.busy?"disabled":""}>${perm==="granted"&&mine?"Registrar de novo":"Ativar neste aparelho"}</button>${mine?`<button class="btn alt" data-act="nt-off">Desativar aqui</button>`:""}<button class="btn alt" data-act="nt-test">Enviar teste</button></div></div>
+    <div class="bar-act" style="margin-top:10px"><button class="btn" data-act="nt-push" ${nt.busy?"disabled":""}>${perm==="granted"&&mine?"Registrar de novo":"Ativar neste aparelho"}</button>${mine?`<button class="btn alt" data-act="nt-off">Desativar aqui</button>`:""}<button class="btn alt" data-act="nt-test">Enviar teste</button><button class="btn alt" data-act="nt-resumo">Enviar resumo do dia agora</button></div></div>
   <div class="sec-h" style="margin-top:22px"><h3>E-mail</h3></div>
   <div class="ntc"><div class="ntr"><div><b>Receber por e-mail</b><span>Resumo do dia, resumo da semana e avisos de prazo.</span></div>${sw("nt-etog","ativo",c.email.ativo,"Receber por e-mail")}</div>
     <label class="lbl" for="nt-email" style="margin-top:12px">Endereço</label><input class="in" id="nt-email" type="email" inputmode="email" value="${esc(c.email.addr)}" placeholder="voce@email.com">

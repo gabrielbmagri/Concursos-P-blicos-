@@ -74,9 +74,19 @@ exports.lembretes = onSchedule({ schedule: "every 15 minutes", timeZone: "Americ
 
 exports.teste = onDocumentWritten({ document: "usuarios/{uid}/notif/pedido", region: REGION, secrets: [RESEND_API_KEY] }, async (ev) => {
   const d = ev.data && ev.data.after && ev.data.after.data();
-  if (!d || d.tipo !== "teste") return;
+  if (!d || (d.tipo !== "teste" && d.tipo !== "resumo")) return;
   const uid = ev.params.uid, c = await db.doc(`usuarios/${uid}/notif/config`).get();
   const cfg = c.exists ? c.data() : {};
+  if (d.tipo === "resumo") {
+    const e = await db.doc(`usuarios/${uid}/notif/estado`).get();
+    if (!e.exists) return;
+    const ag = { ...partes(new Date()), min: 8 * 60 };
+    const it = gerar({ estado: e.data(), cfg: { ...cfg, regras: { ...(cfg.regras || {}), manha: true } }, agora: ag, log: {} }).find((x) => x.tipo === "manha");
+    if (!it) return;
+    const n2 = await enviarPush(uid, cfg, it), m2 = await enviarEmail(cfg, it).catch((err) => { console.error(err); return false; });
+    await db.doc(`usuarios/${uid}/notif/servidor`).set({ ultimoResumo: Date.now(), resumoPush: n2, resumoEmail: m2 }, { merge: true });
+    return;
+  }
   const fr = FRASES[Math.floor(Math.random() * FRASES.length)];
   const item = { tipo: "teste", titulo: "Teste do Painel de metas", corpo: `Está funcionando. ${fr}`, email: { assunto: "Teste do Painel de metas", html: emailHtml("Teste do Painel de metas", ["Está funcionando.", `<b>${fr}</b>`]) } };
   const n = await enviarPush(uid, cfg, item), m = await enviarEmail(cfg, item).catch((err) => { console.error(err); return false; });

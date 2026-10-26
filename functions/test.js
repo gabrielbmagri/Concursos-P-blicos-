@@ -33,4 +33,6 @@ r = gerar({ estado: { ...base, hoje: "2026-12-18" }, cfg: {}, agora: ag("2026-12
 assert.ok(r.some((x) => x.tipo === "prazos" && x.titulo.includes("30")));
 r = gerar({ estado: { ...base, estudando: { n: "Crase", desde: Date.parse("2026-11-10T10:00:00Z") } }, cfg: {}, agora: ag("2026-11-10T16:00:00Z"), log: {} }); // 6h depois
 assert.ok(r.some((x) => x.tipo === "demora"));
+r = gerar({ estado: base, cfg: {}, agora: ag("2026-11-10T13:30:00Z"), log: {} }); // 10:30, atrasado mas ainda dentro da janela longa
+assert.ok(r.some((x) => x.tipo === "manha"), "resumo do dia ainda sai às 10:30");
 console.log("ok: regras dos lembretes");
