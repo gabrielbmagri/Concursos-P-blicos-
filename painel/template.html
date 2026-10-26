@@ -100,6 +100,7 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 
 /* indicadores: blocos de cor sólida */
 .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}
+.cd{display:flex;align-items:center;gap:14px;margin:0 0 12px;padding:12px 18px;border-radius:20px;background:linear-gradient(135deg,#ffd21a,#ffe36b);color:#14301f;box-shadow:0 10px 26px rgba(20,48,31,.28),0 2px 0 rgba(255,255,255,.5) inset;animation:cdf 4s ease-in-out infinite}.cd-n{font-size:42px;font-weight:800;line-height:1;letter-spacing:-.02em}.cd-t{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}.cd-t span{font-size:13px;opacity:.85}.cd-b{display:block;height:6px;border-radius:9px;background:rgba(20,48,31,.18);margin-top:5px;overflow:hidden}.cd-b u{display:block;height:100%;background:#14301f;border-radius:9px}@keyframes cdf{50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.cd{animation:none}}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -960,6 +961,7 @@ function homeHtml(){
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   return `
+  <div class="cd" role="timer" aria-label="Contagem regressiva para a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)} de ${EXAM.getFullYear()} · ${wkLeft} semanas</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>
   <section class="hero" aria-label="Progresso da semana">
     <div class="hero-head">
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
@@ -997,9 +999,6 @@ function homeHtml(){
       <div class="num">${A.content.n?Math.round(A.content.done/A.content.n*100):0}<small>%</small></div>
       <div class="sub">${A.content.done} de ${A.content.n} assuntos · só estudo novo</div>
       <div class="viz"><div class="bar2"><i style="width:${A.content.n?A.content.done/A.content.n*100:0}%"></i></div></div></div>
-    <div class="kpi orange"><div class="lab">Dias até a prova</div><div class="num">${Math.max(0,days)}</div>
-      <div class="sub">${fmtDay(D.prova)} de ${EXAM.getFullYear()} · ${wkLeft} semanas</div>
-      <div class="viz"><div class="bar2"><i style="width:${timeF*100}%"></i></div></div></div>
     <div class="kpi ${lag>=0?"green":"red"}"><div class="lab">Ritmo</div><div class="num">${lag>=0?(lag===0?"Em dia":"+"+lag):lag}<small>${lag===0?"":"metas"}</small></div>
       <div class="sub">${A.tot.done} concluídas · ${A.planned} previstas até hoje</div>
       <div class="viz"><div class="bar2"><i style="width:${A.planned?Math.min(100,A.tot.done/A.planned*100):0}%"></i></div></div></div>
@@ -2357,7 +2356,7 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Semana"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Início"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
 function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
