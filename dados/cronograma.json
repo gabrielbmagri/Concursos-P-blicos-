@@ -85,7 +85,32 @@
     30
    ],
    "itens": 10,
-   "revisao_geral_semanal": true
+   "revisao_geral_semanal": true,
+   "por_desempenho": {
+    "minimo_questoes": 30,
+    "firme_questoes": 50,
+    "faixas": {
+     "excelente": 0.75,
+     "razoavel": 0.6
+    },
+    "intervalos_dias": {
+     "excelente": [
+      14,
+      30,
+      60
+     ],
+     "razoavel": [
+      7,
+      15,
+      30
+     ],
+     "ruim": [
+      3,
+      7,
+      15
+     ]
+    }
+   }
   },
   "ideias_discursiva": [
    {

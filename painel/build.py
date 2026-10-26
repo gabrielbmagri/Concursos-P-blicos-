@@ -17,7 +17,7 @@ data = {
     "prova": src["meta"]["prova"],
     "ideias": src["meta"].get("ideias_discursiva", []),
     "info": json.load(open(root.parent / "dados" / "informacoes.json", encoding="utf-8")),
-    "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "i": src["meta"]["revisoes"]["itens"]},
+    "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "i": src["meta"]["revisoes"]["itens"], "pd": src["meta"]["revisoes"].get("por_desempenho")},
     "mat": {k: {"n": v["nome"], "p": v["prova"]} for k, v in src["meta"]["materias"].items()},
     "sem": [{"id": s["id"], "i": s["inicio"], "f": s["fim"], "fase": s["fase"], "fer": s["feriado"],
              "obs": s["observacao"], "rg": 0 if s.get("rg") is False else 1, "m": [meta(m) for m in s["metas"]]} for s in src["semanas"]],

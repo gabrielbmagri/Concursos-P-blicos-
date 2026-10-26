@@ -373,6 +373,7 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .qt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600;font-size:14.5px;margin-bottom:6px}
 .qh .s{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--fg3)}.star{color:#e0a800;font-weight:800}
 .qd{padding:0 2px 16px}.qg{margin:10px 0 0;font-size:14px}
+.rb.perf-excelente{background:#e3f4ea;color:#0a5c3a}.rb.perf-razoavel{background:#fff0b3;color:#6b4e00}.rb.perf-ruim{background:#fde1dc;color:#9a2a1c}
 .rb.df-facil{background:#e3f4ea;color:#0a5c3a}.rb.df-medio{background:#fff0b3;color:#6b4e00}.rb.df-dificil{background:#fde1dc;color:#9a2a1c}
 .rb.qbk{background:#e3f4ea;color:#0a5c3a;cursor:pointer;font:inherit;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px}.rb.qbk:hover{background:#cdeadb}
 .box.stip ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
@@ -448,7 +449,7 @@ const RVTXT={
   15:{t:"Revisão de 15 dias",w:"Responda de memória os pontos mais cobrados, resolva cerca de 10 questões novas e anote o que errou de novo.",
      g:["Sem olhar o material, liste os pontos mais cobrados deste assunto.","Releia só os trechos que você esqueceu, na lei seca ou no resumo.","Resolva cerca de 10 questões novas, misturando níveis.","Anote no caderno de erros o que errou de novo e lance o resultado aqui."]},
   30:{t:"Revisão de 30 dias",w:"Faça primeiro as questões e depois confira onde errou. É a revisão final deste assunto.",
-     g:["Resolva cerca de 10 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de 7, 15 e 30 dias."]}
+     g:["Resolva cerca de 10 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de revisões."]}
 };
 const RGTXT={w:"Feche a semana: escreva de memória o esqueleto de cada assunto estudado, resolva questões só do que faltou e confira o desempenho e o caderno de erros.",
   g:["Para cada assunto da lista abaixo, escreva de memória os pontos principais, sem olhar o material.","Confira com os seus resumos e marque o que esqueceu.","Resolva de 5 a 10 questões novas só do que ficou faltando e lance o resultado aqui.","Veja no painel o desempenho e o caderno de erros da semana e ajuste a próxima semana."]};
@@ -816,6 +817,19 @@ function doImport(){
   render();
 }
 
+/* ---------- revisões: prazo conforme o desempenho da meta ---------- */
+const PD=RV.pd||{minimo_questoes:30,firme_questoes:50,faixas:{excelente:.75,razoavel:.6},intervalos_dias:{excelente:[14,30,60],razoavel:[7,15,30],ruim:[3,7,15]}};
+const NV={excelente:"Excelente",razoavel:"Razoável",ruim:"Ruim"};
+function metaPerf(b){
+  const p=P(),it=itemsOf(b);let c=it.c,e=it.e,bl=it.b;
+  RV.iv.forEach(st=>{const d=p[b.id+"~R"+st];if(d){c+=d.c||0;e+=d.e||0;bl+=d.b||0}});
+  const n=c+e+bl,r=n?c/n:null;
+  let nivel=null;
+  if(n>=PD.minimo_questoes)nivel=r>=PD.faixas.excelente?"excelente":r>=PD.faixas.razoavel?"razoavel":"ruim";
+  return {n,c,e,b:bl,r,nivel,firme:n>=PD.firme_questoes,efetivo:nivel||"razoavel",dias:PD.intervalos_dias[nivel||"razoavel"]};
+}
+const perfTxt=pf=>pf.nivel?`${NV[pf.nivel]} · ${pc(pf.r)} em ${pf.n} questões${pf.firme?"":" (provisório)"}`:`Sem classificação ainda · ${pf.n} de ${PD.minimo_questoes} questões (usa o prazo de Razoável)`;
+
 /* ---------- revisões ---------- */
 const rgItem=wi=>{const id=WK[wi].id+"~RG",doc=P()[id],due=pd(WK[wi].f);return {id,rg:true,wi,due,done:!!(doc&&(doc.r||0)>=1),doc,late:dday(today(),due)}};
 function reviewList(){
@@ -823,10 +837,11 @@ function reviewList(){
   for(const b of ALL){
     if(b.t!=="teoria_questoes"||b.wi>=9||b.k==="POR")continue;
     const bp=p[b.id];if(!bp||(bp.r||0)<1||!bp.dt)continue;
-    let prev=bp.dt;
+    let prev=bp.dt;const pf=metaPerf(b);
     for(let ix=0;ix<RV.iv.length;ix++){
-      const st=RV.iv[ix],id=b.id+"~R"+st,doc=p[id],due=addDays(pd(prev),st),done=!!(doc&&(doc.r||0)>=1);
-      out.push({id,b,st,ix,due,done,doc,late:dday(T,due)});
+      const st=RV.iv[ix],id=b.id+"~R"+st,doc=p[id],days=pf.dias[ix],due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
+      if(!done&&due>=EXAM)break;
+      out.push({id,b,st,ix,days,pf,due,done,doc,late:dday(T,due)});
       if(!done)break;prev=doc.dt||ymd(due);
     }
   }
@@ -913,7 +928,7 @@ function revRow(r){
   const steps=`<span class="steps" aria-label="${doneC} de ${RV.iv.length} revisões feitas">${RV.iv.map((_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
   return `<li class="row ${r.done?"done":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
     <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":"Concluir"} revisão: ${esc(r.b.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${RVTXT[r.st].t}</span>${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
 }
 function homeHtml(){
   const w=WK[sel],ws=weekStats(sel),T=today(),cw=A.cw,L=WM[sel];
@@ -1028,7 +1043,12 @@ function revHtml(){
   return `
   <section class="sec" style="margin-top:20px">
     <h2>Revisões</h2>
-    <p class="lead">Cada assunto que você conclui gera uma revisão para 7 dias depois. Ao concluí-la, nasce a de 15 dias e, depois dela, a de 30 dias, sempre contadas a partir da revisão anterior. Todo domingo há também a revisão geral da semana.</p>
+    <p class="lead">Cada assunto que você conclui gera uma sequência de 3 revisões. O prazo de cada uma depende do seu desempenho na meta: quanto melhor, mais espaçadas; quanto pior, mais próximas. Os prazos contam a partir da revisão anterior. Todo domingo há também a revisão geral da semana.</p>
+    <details class="how"><summary>Como os prazos são calculados</summary>
+      <p class="lead" style="margin-top:10px">O desempenho é o acerto nas questões da meta: as que você marcou nela, as dos Excels importados e as do Banco de questões, mais as das próprias revisões.</p>
+      <div class="tbl"><table><thead><tr><th>Desempenho</th><th>Acerto</th><th>1ª</th><th>2ª</th><th>3ª</th></tr></thead><tbody>
+      ${["excelente","razoavel","ruim"].map(k=>`<tr><th>${NV[k]}</th><td>${k==="excelente"?`${Math.round(PD.faixas.excelente*100)}% ou mais`:k==="razoavel"?`${Math.round(PD.faixas.razoavel*100)}% a ${Math.round(PD.faixas.excelente*100)-1}%`:`menos de ${Math.round(PD.faixas.razoavel*100)}%`}</td>${PD.intervalos_dias[k].map(x=>`<td>${x} dias</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+      <p class="lead" style="margin-top:10px"><b>Mínimo de ${PD.minimo_questoes} questões</b> na meta para classificar. Abaixo disso, vale o prazo de Razoável. Entre ${PD.minimo_questoes} e ${PD.firme_questoes - 1} a classificação é provisória, e a partir de ${PD.firme_questoes} questões é firme. Os prazos se ajustam sozinhos conforme você resolve mais questões. Nenhuma revisão é marcada para depois da prova.</p></details>
     <div class="kpis" style="margin-top:16px">
       <div class="kpi red"><div class="lab">Atrasadas</div><div class="num">${over.length}</div><div class="sub">Já passaram do dia previsto</div></div>
       <div class="kpi blue"><div class="lab">Para hoje</div><div class="num">${tod.length}</div><div class="sub">Vencem hoje</div></div>
@@ -2517,8 +2537,8 @@ function openSheet(id){
   const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg;
   const fld=(k,l,sub)=>`<div class="fr"><div class="fl">${l}${sub?`<small>${sub}</small>`:""}</div><div class="step"><button data-s="${k}" data-d="-1" aria-label="Menos ${l}" ${ro?"disabled":""}>−</button><input type="number" inputmode="numeric" min="0" id="f-${k}" data-f="${k}" value="${draft[k]||0}" ${ro?"disabled":""}><button data-s="${k}" data-d="1" aria-label="Mais ${l}" ${ro?"disabled":""}>+</button></div></div>`;
   const dfld=(k,l,sub,step)=>`<div class="fr"><div class="fl">${l}<small>${sub}</small></div><input class="num-in" type="number" inputmode="decimal" step="${step}" min="0" id="f-${k}" data-f="${k}" value="${draft[k]==null?"":draft[k]}" ${ro?"disabled":""}></div>`;
-  const kick=m.rg?"Revisão geral":m.rv?RVTXT[m.step].t:(TIPO[m.t]||"Meta");
   const r_=dyn?RL.find(x=>x.id===id):null;
+  const kick=m.rg?"Revisão geral":m.rv?(r_?`${r_.ix+1}ª revisão · ${r_.days} dias`:"Revisão"):(TIPO[m.t]||"Meta");
   const rvInfo=r_?`<p class="sh-p">${r_.done?`Feita em ${fmtDay(r_.doc.dt)}.`:`Prevista para ${fmtDay(r_.due)}.`}${m.rv&&P()[m.base.id]?` Assunto concluído em ${fmtDay(P()[m.base.id].dt)}.`:""}</p>`:"";
   const curW=ew(m),canMove=!dyn&&!isDone(m)&&!ro;
   const moveBox=canMove?`<div class="f"><div class="fr"><div class="fl">Adiar meta<small>${curW!==m.wi?`Originalmente na semana ${m.wi+1}`:"Mover para outra semana"}</small></div><select id="f-mw" aria-label="Semana de destino">${WK.map((w,i)=>`<option value="${i}" ${i===curW?"selected":""}>Semana ${i+1} · ${fmtD(w.i,w.f)}</option>`).join("")}</select></div>
@@ -2528,6 +2548,8 @@ function openSheet(id){
     <h2 class="sh-t">${esc(m.a)}</h2>
     <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
     ${rvInfo}
+    ${r_&&r_.pf?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(r_.pf))}. Prazo desta revisão: ${r_.days} dias depois da anterior.</p>`:""}
+    ${!dyn&&(()=>{const pf=metaPerf(m);return pf.n?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(pf))}. Revisões em ${pf.dias.join(", ")} dias.</p>`:""})()}
     ${isLocked(m)?`<div class="box lockbox"><b>Semana bloqueada</b><p>Você pode ler tudo aqui, mas só consegue registrar depois de concluir as metas da semana ${LIB+1} e liberar esta.</p></div>`:""}
     ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
     ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
