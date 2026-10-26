@@ -604,6 +604,10 @@ html[data-modo="escuro"] .sh-st.go{background:#3a3016}
 html[data-tema="olimpo"] .jmini{background:linear-gradient(135deg,#f6efdc,#fffaf0 55%,#e6ecf7);border-color:#d9c88f}html[data-tema="olimpo"] .jmini.risk{background:linear-gradient(135deg,#f8e6dc,#fff3ec);border-color:#e0a78d}html[data-tema="olimpo"] .jmini .ava{box-shadow:0 0 0 2px #d4a72c}
 html[data-modo="escuro"] .jmini{background:linear-gradient(135deg,#222b25,#2b2a21);border-color:#3a443d;box-shadow:none}html[data-modo="escuro"] .jmini.risk{background:linear-gradient(135deg,#3a2216,#2e1a14);border-color:#7a4630}html[data-tema="olimpo"][data-modo="escuro"] .jmini{background:linear-gradient(135deg,#2a2b30,#2d2a1f);border-color:#4a4220}
 .sh-tabs button{padding:13px 6px;gap:4px;font-size:13.5px}
+
+.sh-ft.cc{align-items:stretch}.btn.conc{flex:1.8;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 18px;background:linear-gradient(135deg,#0b7a3c,#16a34a);color:#fff;box-shadow:0 8px 20px rgba(11,122,60,.38),inset 0 1px 0 rgba(255,255,255,.25);text-align:left;animation:pulseg 2.4s ease-in-out infinite}.btn.conc .ck{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center}.btn.conc .ck svg{width:16px;height:16px;stroke:#fff}.btn.conc .ct{display:flex;flex-direction:column;line-height:1.15}.btn.conc b{font-size:17px}.btn.conc small{font-size:11.5px;opacity:.9;font-weight:600}.sh-ft .btn.sv{flex:1;font-size:15px}
+@keyframes pulseg{50%{box-shadow:0 8px 26px rgba(22,163,74,.6),inset 0 1px 0 rgba(255,255,255,.25)}}@media (prefers-reduced-motion:reduce){.btn.conc{animation:none}}
+html[data-tema="olimpo"] .btn.conc{background:linear-gradient(135deg,#a87a0c,#d4a72c);color:#1f1604;box-shadow:0 8px 20px rgba(168,122,12,.4),inset 0 1px 0 rgba(255,255,255,.35)}html[data-tema="olimpo"] .btn.conc .ck{background:rgba(31,22,4,.2)}html[data-tema="olimpo"] .btn.conc .ck svg{stroke:#1f1604}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -1096,13 +1100,14 @@ function agg(){
     if((d.r||0)>=1)a.revDone++;
   }
   const z=()=>({s:0,n:0,tc:0,te:0,tb:0});
-  const tm=a.tm={q:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},hh:Array.from({length:24},()=>({s:0,c:0,e:0,b:0})),tc:0,te:0,tb:0},k:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},tok:0,ter:0,okN:0,erN:0}};
+  const tm=a.tm={q:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},rv:{},hh:Array.from({length:24},()=>({s:0,c:0,e:0,b:0})),tc:0,te:0,tb:0},k:{tot:0,n:0,day:{},wk:WK.map(()=>0),mat:{},meta:{},rv:{},tok:0,ter:0,okN:0,erN:0}};
   for(const id in p){
     if(id.slice(0,3)!=="qt-")continue;
     const d=p[id],wi=d.dt?weekOf(d.dt):0,Q=tm.q;
     (d.rows||[]).forEach(r=>{const s=r.s||0;Q.tot+=s;Q.n+=r.n||0;Q.tc+=r.tc||0;Q.te+=r.te||0;Q.tb+=r.tb||0;Q.day[d.dt]=(Q.day[d.dt]||0)+s;Q.wk[wi]+=s;
       if(SUBJ.includes(r.k)){const x=Q.mat[r.k]||(Q.mat[r.k]=z());x.s+=s;x.n+=r.n||0;x.tc+=r.tc||0;x.te+=r.te||0;x.tb+=r.tb||0}
-      if(r.mid){const x=Q.meta[r.mid]||(Q.meta[r.mid]=z());x.s+=s;x.n+=r.n||0}});
+      if(r.mid){const x=Q.meta[r.mid]||(Q.meta[r.mid]=z());x.s+=s;x.n+=r.n||0}
+      if(r.rv){const x=Q.rv[r.rv]||(Q.rv[r.rv]={s:0,n:0});x.s+=s;x.n+=r.n||0}});
     Object.entries(d.hh||{}).forEach(([h,x])=>{const y=Q.hh[+h];if(y){y.s+=x.s||0;y.c+=x.c||0;y.e+=x.e||0;y.b+=x.b||0}});
   }
   for(const day in REVD){
@@ -1110,6 +1115,7 @@ function agg(){
     const K=tm.k,wi=weekOf(day);K.tot+=s;K.n+=r.n||0;K.day[day]=(K.day[day]||0)+s;K.wk[wi]+=s;K.tok+=r.tok||0;K.ter+=r.ter||0;K.okN+=r.ok||0;K.erN+=r.er||0;
     for(const k in (r.ks||{}))if(SUBJ.includes(k))K.mat[k]=(K.mat[k]||0)+r.ks[k];
     for(const k in (r.ms||{}))K.meta[k]=(K.meta[k]||0)+r.ms[k];
+    for(const k in (r.rs||{}))K.rv[k]=(K.rv[k]||0)+r.rs[k];
   }
   let planned=0;
   for(let i=0;i<WK.length;i++){const n=WM[i].length;if(i<cw)planned+=n;else if(i===cw){const di=dday(today(),pd(WK[i].i));planned+=di<0?0:Math.min(n,Math.floor(n*(di+1)/7))}}
@@ -1167,18 +1173,19 @@ function rowHtml(m){
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
 function revRow(r){
+  const stu=!r.done&&!!(r.doc&&r.doc.st);
   const it=r.doc?{c:r.doc.c||0,e:r.doc.e||0,b:r.doc.b||0}:null,n=it?tot_(it):0;
   const res=n?`<div class="res"><span class="sc ${scCls(rate(it))}">${pc(rate(it))}</span><small>${it.c}/${n}</small></div>`:"";
   if(r.rg){
-    return `<li class="row ${r.done?"done":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
-    <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":"Concluir"} revisão geral da semana ${r.wi+1}">${CHECK}</button>
-    <div class="rt"><div class="t">Revisão geral da semana ${r.wi+1}</div><div class="s"><span class="tag ring"><i></i>Todas as matérias</span><span class="rb">Revisão geral</span>${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r).replace("atrasada","atrasada").replace("para hoje","para hoje (domingo)")}</span>`}</div></div>${res}</li>`;
+    return `<li class="row ${r.done?"done":stu?"stu":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
+    <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":stu?"Concluir":"Começar a estudar"} revisão geral da semana ${r.wi+1}">${CHECK}</button>
+    <div class="rt"><div class="t">Revisão geral da semana ${r.wi+1}</div><div class="s"><span class="tag ring"><i></i>Todas as matérias</span><span class="rb">Revisão geral</span>${stu?`<span class="rb stu">Estudando</span>`:""}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r).replace("atrasada","atrasada").replace("para hoje","para hoje (domingo)")}</span>`}</div></div>${res}</li>`;
   }
   const doneC=RL.filter(x=>!x.rg&&x.b.id===r.b.id&&x.done).length;
   const steps=`<span class="steps" aria-label="${doneC} de ${RV.iv.length} revisões feitas">${RV.iv.map((_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
-  return `<li class="row ${r.done?"done":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
-    <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":"Concluir"} revisão: ${esc(r.b.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${akChip(r.b.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
+  return `<li class="row ${r.done?"done":stu?"stu":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
+    <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":stu?"Concluir":"Começar a estudar"} revisão: ${esc(r.b.a)}">${CHECK}</button>
+    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${stu?`<span class="rb stu">Estudando</span>`:""}${akChip(r.b.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
 }
 function homeHtml(){
   const w=WK[sel],ws=weekStats(sel),T=today(),cw=A.cw,L=WM[sel];
@@ -1840,14 +1847,14 @@ function qbStart(ids){
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
   pool=qb.ord==="aleatoria"?shuf(pool):qb.ord==="dificuldade"?qbOrdered(pool).sort((a,b)=>DFR[a.df||""]-DFR[b.df||""]):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
-  qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qt.sess=0;qt.tq={};qt.act=Date.now();qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
+  qb.rv=qb.rvNext||"";qb.rvNext="";qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qt.sess=0;qt.tq={};qt.act=Date.now();qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
 }
 function qbLog(q,res){
   if(demo)return;
   const day=T0(),id="imp-qb-"+day,d=real[id]||{imp:1,qb:1,name:"Banco de questões",dt:day,rows:[]};
   const rows=(d.rows||[]).map(r=>({...r}));
-  let r=rows.find(x=>x.k===q.k&&(x.mid||"")===(q.mid||"")&&(x.ass||"")===(q.as||""));
-  if(!r){r={k:q.k,mid:q.mid||"",dt:day,c:0,e:0,b:0,ass:q.as||""};rows.push(r)}
+  let r=rows.find(x=>x.k===q.k&&(x.mid||"")===(q.mid||"")&&(x.ass||"")===(q.as||"")&&(x.rv||"")===(qb.rv||""));
+  if(!r){r={k:q.k,mid:q.mid||"",dt:day,c:0,e:0,b:0,ass:q.as||""};if(qb.rv)r.rv=qb.rv;rows.push(r)}
   r[res==="ok"?"c":res==="er"?"e":"b"]++;
   save(id,{...d,rows});
 }
@@ -1881,7 +1888,7 @@ function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
 const rd1=x=>Math.round(x*10)/10;
 const qt={tk:Date.now(),act:Date.now(),lf:Date.now(),pend:{},apend:{},tq:{},acq:{},sess:0,asess:0};
 const qtDay=day=>qt.pend[day]||(qt.pend[day]={rows:{},hh:{}});
-const qtRow=(day,k,mid)=>{const R=qtDay(day).rows,key=k+"|"+mid;return R[key]||(R[key]={k,mid,s:0,n:0,tc:0,te:0,tb:0})};
+const qtRow=(day,k,mid,rv)=>{const R=qtDay(day).rows,key=k+"|"+mid+"|"+(rv||"");return R[key]||(R[key]={k,mid,rv:rv||"",s:0,n:0,tc:0,te:0,tb:0})};
 const qtHh=day=>{const H=qtDay(day).hh,h=String(new Date().getHours());return H[h]||(H[h]={s:0,c:0,e:0,b:0})};
 function qtTick(){
   const n=Date.now(),d=n-qt.tk;qt.tk=n;
@@ -1889,13 +1896,13 @@ function qtTick(){
   const s=Math.min(d,5000)/1000,day=T0();
   if(tab==="questoes"&&qb.view==="session"){
     const id=qb.queue[qb.i],q=QS[id];if(!q)return;
-    qtRow(day,q.k,q.mid||"").s+=s;qtHh(day).s+=s;
+    qtRow(day,q.k,q.mid||"",qb.rv).s+=s;qtHh(day).s+=s;
     if(!qb.sans[id])qt.tq[id]=(qt.tq[id]||0)+s;
     qt.sess+=s;const c=$("#qb-clk");if(c)c.textContent=fmtClock(qt.sess);
   }else if(tab==="ankis"&&ak.view==="session"){
     const id=ak.queue[ak.i],c=CARDS[id];if(!c)return;
-    const P_=qt.apend[day]||(qt.apend[day]={s:0,ks:{},ms:{}});
-    P_.s+=s;if(c.k)P_.ks[c.k]=(P_.ks[c.k]||0)+s;if(c.mid)P_.ms[c.mid]=(P_.ms[c.mid]||0)+s;
+    const P_=qt.apend[day]||(qt.apend[day]={s:0,ks:{},ms:{},rs:{}});
+    P_.s+=s;if(c.k)P_.ks[c.k]=(P_.ks[c.k]||0)+s;if(c.mid)P_.ms[c.mid]=(P_.ms[c.mid]||0)+s;if(ak.rv)P_.rs[ak.rv]=(P_.rs[ak.rv]||0)+s;
     if(!ak.rev)qt.acq[id]=(qt.acq[id]||0)+s;
     qt.asess+=s;const e=$("#ak-clk");if(e)e.textContent=fmtClock(qt.asess);
   }
@@ -1903,9 +1910,10 @@ function qtTick(){
 }
 function akTmMerge(r,p){
   if(!p)return r;
-  r.s=rd1((r.s||0)+p.s);r.ks={...(r.ks||{})};r.ms={...(r.ms||{})};
+  r.s=rd1((r.s||0)+p.s);r.ks={...(r.ks||{})};r.ms={...(r.ms||{})};r.rs={...(r.rs||{})};
   for(const k in p.ks)r.ks[k]=rd1((r.ks[k]||0)+p.ks[k]);
   for(const k in p.ms)r.ms[k]=rd1((r.ms[k]||0)+p.ms[k]);
+  for(const k in (p.rs||{}))r.rs[k]=rd1((r.rs[k]||0)+p.rs[k]);
   return r;
 }
 function qtSave(id,doc){real[id]=doc;persistLocal();const c=fb.on?fb.col:col;if(c)c.doc(id).set(doc).catch(()=>{})}
@@ -1919,8 +1927,8 @@ function qtFlush(force){
     const id="qt-"+day,d=real[id]||{qt:1,name:"Tempo nas questões",dt:day,rows:[],hh:{}};
     const rows=(d.rows||[]).map(r=>({...r})),hh={...(d.hh||{})};
     Object.values(P_[day].rows).forEach(x=>{
-      let r=rows.find(z=>z.k===x.k&&(z.mid||"")===x.mid);
-      if(!r){r={k:x.k,mid:x.mid,s:0,n:0,tc:0,te:0,tb:0};rows.push(r)}
+      let r=rows.find(z=>z.k===x.k&&(z.mid||"")===x.mid&&(z.rv||"")===(x.rv||""));
+      if(!r){r={k:x.k,mid:x.mid,s:0,n:0,tc:0,te:0,tb:0};if(x.rv)r.rv=x.rv;rows.push(r)}
       ["s","n","tc","te","tb"].forEach(f=>{r[f]=rd1((r[f]||0)+x[f])});
     });
     Object.entries(P_[day].hh).forEach(([h,x])=>{const y=hh[h]=hh[h]?{...hh[h]}:{s:0,c:0,e:0,b:0};["s","c","e","b"].forEach(f=>{y[f]=rd1((y[f]||0)+x[f])})});
@@ -1934,7 +1942,7 @@ function qtFlush(force){
 function qtAnswer(q,id,res){
   if(demo)return;
   qtTick();
-  const day=T0(),sec=qt.tq[id]||0,r=qtRow(day,q.k,q.mid||"");
+  const day=T0(),sec=qt.tq[id]||0,r=qtRow(day,q.k,q.mid||"",qb.rv);
   r.n++;r[res==="ok"?"tc":res==="er"?"te":"tb"]+=sec;
   qtHh(day)[res==="ok"?"c":res==="er"?"e":"b"]++;
   qtFlush();
@@ -2123,6 +2131,7 @@ function qbClick(a,t,e){
     const m=BY[t.dataset.id];if(!m)return true;
     const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
     qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.sb="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
+    qb.rvNext=t.dataset.rv||"";if(qb.rvNext)qb.ord="aleatoria";
     closeSheet();tab="questoes";menu=false;qbStart();return true}
   if(a==="qb-quit"){qb.view="home";qb.confirm=false;render();window.scrollTo(0,0);return true}
   if(a==="qb-sel"){const id=qb.queue[qb.i];if(id&&!qb.sans[id]){qd(id).sel=t.dataset.v;render()}return true}
@@ -2508,7 +2517,7 @@ function akRow(mid,ro,vazio){
 function akStart(){
   const q=akBuild(ak.modo);
   if(!q.length){ak.err="Nenhum cartão encontrado com esses filtros. Troque o modo ou os filtros.";render();return}
-  ak.err="";ak.msg="";ak.queue=q.map(c=>c.id);ak.i=0;qt.asess=0;qt.acq={};qt.act=Date.now();ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
+  ak.err="";ak.msg="";ak.rv=ak.rvNext||"";ak.rvNext="";ak.queue=q.map(c=>c.id);ak.i=0;qt.asess=0;qt.acq={};qt.act=Date.now();ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
 }
 function akAnswer(g){
   const id=ak.queue[ak.i];if(!CARDS[id])return;
@@ -2647,6 +2656,7 @@ function barsHtml(rows){return `<div class="hb">${rows.map(r=>`<div class="hb-r"
 const tmDay=d=>(A.tm.q.day[d]||0)+(A.tm.k.day[d]||0);
 const tmWkT=i=>(A.tm.q.wk[i]||0)+(A.tm.k.wk[i]||0);
 const tmTot=()=>A.tm.q.tot+A.tm.k.tot;
+const tmRv=id=>((A.tm.q.rv[id]||{}).s||0)+(A.tm.k.rv[id]||0);
 const tmMeta=id=>{const q=A.tm.q.meta[id],k=A.tm.k.meta[id];return {q:q?q.s:0,k:k||0,n:q?q.n:0}};
 const hhSum=()=>A.tm.q.hh.reduce((z,x)=>({c:z.c+x.c,e:z.e+x.e,b:z.b+x.b}),{c:0,e:0,b:0});
 function pfStreak(){return jc().st.cur}
@@ -3077,8 +3087,29 @@ function lembretesHtml(){
   <div class="ntl">${NTR.map(([k,n,d,h])=>`<div class="nti"><div class="ntr"><div><b>${n}</b><span>${d}</span></div>${sw("nt-tog",k,c.regras[k],n)}</div>${h?`<div class="nth"><label for="nt-h-${k}">Horário</label><input id="nt-h-${k}" type="time" data-nth="${k}" value="${c.horas[k]}"></div>`:`<div class="nth"><label for="nt-hm">Limite</label><input id="nt-hm" type="number" min="1" max="12" step="0.5" value="${c.horasMeta}" style="width:70px"> <span class="muted">horas</span></div>`}</div>`).join("")}</div>
   </section>`;
 }
+function pfRevs(){
+  const dn=RL.filter(r=>r.done&&r.doc),pd_=RL.filter(r=>!r.done),late=pd_.filter(r=>r.late>0);
+  const name=i=>i===3?"Revisão geral":(i+1)+"ª revisão",G={};
+  RL.forEach(r=>{const i=r.rg?3:r.ix,g=G[i]||(G[i]={n:0,d:0,dn:0,c:0,e:0,b:0,late:0,nl:0});if(r.done&&r.doc){g.n++;g.c+=r.doc.c||0;g.e+=r.doc.e||0;g.b+=r.doc.b||0;if(r.doc.dur){g.d+=r.doc.dur;g.dn++}if(r.doc.dt){g.late+=Math.max(0,dday(pd(r.doc.dt),r.due));g.nl++}}});
+  for(const id in P()){if(id.slice(0,7)!=="imp-qb-")continue;(P()[id].rows||[]).forEach(r=>{if(!r.rv)return;const it=RL.find(x=>x.id===r.rv);if(!it)return;const i=it.rg?3:it.ix,g=G[i]||(G[i]={n:0,d:0,dn:0,c:0,e:0,b:0,late:0,nl:0});g.c+=r.c||0;g.e+=r.e||0;g.b+=r.b||0})}
+  const ks=Object.keys(G).map(Number).sort();
+  const durs=dn.filter(r=>r.doc.dur).map(r=>r.doc.dur),avgD=durs.length?durs.reduce((z,x)=>z+x,0)/durs.length:null;
+  const net=Object.values(A.tm.q.rv).reduce((z,x)=>z+x.s,0)+Object.values(A.tm.k.rv).reduce((z,x)=>z+x,0);
+  const lt=dn.filter(r=>r.doc.dt),avgL=lt.length?lt.reduce((z,r)=>z+Math.max(0,dday(pd(r.doc.dt),r.due)),0)/lt.length:null;
+  const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
+  const acc=ks.filter(i=>G[i].c+G[i].e+G[i].b).map(i=>{const g=G[i],r=rate(g);return {l:name(i),c:"var(--blue)",f:r||0,v:pc(r),s:(g.c+g.e+g.b)+" questões",tip:`${name(i)}: ${g.c} certas, ${g.e} erradas`}});
+  const tm_=ks.filter(i=>G[i].dn).map(i=>({i,v:G[i].d/G[i].dn})),tmx=Math.max(1,...tm_.map(x=>x.v));
+  const tbars=tm_.map(x=>({l:name(x.i),c:"var(--teal)",f:x.v/tmx,v:fmtDur(x.v),s:G[x.i].dn+(G[x.i].dn===1?" revisão":" revisões"),tip:`${name(x.i)}: média de ${fmtDur(x.v)}`}));
+  const lbars=ks.filter(i=>G[i].nl).map(i=>({l:name(i),c:G[i].late/G[i].nl>1?"var(--bad)":"var(--good)",f:Math.min(1,G[i].late/G[i].nl/7),v:(G[i].late/G[i].nl).toFixed(1).replace(".",",")+" d",s:"de atraso médio",tip:name(i)}));
+  return `<div class="kvs" style="grid-template-columns:repeat(auto-fit,minmax(110px,1fr));margin:0 0 14px">${kv(dn.length,"feitas")}${kv(pd_.length,"pendentes")}${kv(late.length,"atrasadas")}${kv(avgD?fmtDur(avgD):"–","tempo médio")}${kv(net?fmtH(net):"–","tempo líquido")}${kv(avgL==null?"–":avgL.toFixed(1).replace(".",",")+" d","atraso médio")}</div>
+  <div class="grid2">
+    <div class="card"><div class="card-h"><div><h3>Acerto por revisão</h3><p>Questões feitas em cada etapa</p></div></div>${acc.length?barsHtml(acc):'<div class="empty">Aparece depois das primeiras revisões com questões.</div>'}</div>
+    <div class="card"><div class="card-h"><div><h3>Tempo por revisão</h3><p>Do início do modo estudando até concluir</p></div></div>${tbars.length?barsHtml(tbars):'<div class="empty">Inicie revisões pelo modo estudando para medir o tempo.</div>'}</div>
+    <div class="card wide"><div class="card-h"><div><h3>Atraso na conclusão</h3><p>Dias entre o prazo e a revisão feita, por etapa</p></div></div>${lbars.length?barsHtml(lbars):'<div class="empty">Aparece depois das primeiras revisões feitas.</div>'}</div>
+  </div>`;
+}
 function perfTab(){
-  const V=[["resumo","Resumo"],["insights","O que fazer"],["tempo","Tempo"],["questoes","Questões"],["materias","Matérias"],["metas","Metas"],["anki","Anki"],["subtopicos","Subtópicos"]];
+  const V=[["resumo","Resumo"],["insights","O que fazer"],["tempo","Tempo"],["questoes","Questões"],["materias","Matérias"],["metas","Metas"],["revisoes","Revisões"],["anki","Anki"],["subtopicos","Subtópicos"]];
   const nav=`<nav class="pfnav" aria-label="Seções do desempenho">${V.map(([k,l])=>`<button class="chip" data-act="pf-go" data-v="${k}">${l}</button>`).join("")}</nav>`;
   const ins=insights();
   const clean=h=>h.replace('<section class="sec" style="margin-top:20px">','<section class="sec">');
@@ -3090,6 +3121,7 @@ function perfTab(){
   ${pfH("Questões e acertos","Volume, desempenho e evolução","questoes")}${clean(perfHtml())}
   ${pfH("Matérias","Comparativo e assuntos de cada matéria","materias")}<section class="sec">${pfMatTable()}</section>${clean(matHtml())}
   ${pfH("Metas","Onde o tempo foi gasto","metas")}${pfMetas()}
+  ${pfH("Revisões","Desempenho, tempo e atraso das revisões","revisoes")}<section class="sec">${pfRevs()}</section>
   ${pfH("Anki","Memória, revisão e tempo dos cartões","anki")}<section class="sec">${AKS.n?akCards(AKS):'<div class="empty">Importe um baralho na aba Ankis para ver a memória aqui.</div>'}</section>
   ${pfH("Subtópicos","Desempenho dentro de cada assunto","subtopicos")}${clean(subHtml())}`;
 }
@@ -3310,7 +3342,7 @@ function saveMeta(id,patch){
 }
 function curStudy(){
   let best=null;
-  for(const id in real){const d=real[id];if(!d.st)continue;const m=getM(id);if(!m||m.rv||m.rg||isDone(m))continue;if(!best||d.st>best.st)best={id,m,st:d.st}}
+  for(const id in real){const d=real[id];if(!d.st)continue;const m=getM(id);if(!m||isDone(m))continue;if(!best||d.st>best.st)best={id,m,st:d.st}}
   return best;
 }
 function startStudy(id){
@@ -3398,10 +3430,12 @@ const shIc={play:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy
 function shQuick(m,p,ro){
   if(ro)return "";
   const out=[];
+  if(m.rg)return "";
   if(m.rv){
-    const i=akMetaInfo(m.base.id);
-    out.push(i.n?`<button class="pri" data-act="ak-meta" data-id="${m.base.id}" data-m="${i.hoje?"hoje":"tudo"}"><b>Revisar no Anki</b><span>${i.hoje?i.hoje+" para hoje":i.n+" cartões"}</span></button>${i.err?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="erros"><b>Só os que errei</b><span>${i.err} cartões</span></button>`:""}`:`<button data-act="ak-go"><b>Anki</b><span>esta meta ainda não tem cartões</span></button>`);
-    return out.length?`<div class="qa">${out.join("")}</div>`:"";
+    const i=akMetaInfo(m.base.id),qs=qbList().filter(q=>q.mid===m.base.id),nNov=qs.filter(q=>qbStat(q,"novas")).length;
+    out.push(qs.length?`<button class="pri" data-act="qb-meta" data-id="${m.base.id}" data-m="novas" data-rv="${m.id}"><b>Questões não resolvidas</b><span>${nNov} ${nNov===1?"nova":"novas"} · ordem aleatória</span></button>`:`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
+    out.push(i.n?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="${i.hoje?"hoje":"tudo"}" data-rv="${m.id}"><b>Revisar no Anki</b><span>${i.hoje?i.hoje+" para hoje":i.n+" cartões"}</span></button>${i.err?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="erros" data-rv="${m.id}"><b>Só os que errei</b><span>${i.err} cartões</span></button>`:""}`:`<button data-act="ak-go"><b>Anki</b><span>esta meta ainda não tem cartões</span></button>`);
+    return `<div class="qa">${out.join("")}</div>`;
   }
   const qs=qbList().filter(q=>q.mid===m.id),nNov=qs.filter(q=>qbStat(q,"novas")).length,nErr=qs.filter(q=>q.last==="er").length,ai=akMetaInfo(m.id);
   if(m.t==="questoes"&&m.k==="POR"){if(p.lk)out.push(`<a class="pri" href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir as 30 questões</span></a>`)}
@@ -3416,7 +3450,7 @@ function openSheet(id){
   if(shId!==id){shTab="estudar";shId=id}
   sheetId=id;
   const p=P()[id]||{};draft={r:p.r||0,c:p.c||0,e:p.e||0,b:p.b||0,dt:p.dt||null,nc:p.nc!=null?p.nc:null,ne:p.ne!=null?p.ne:null,tl:p.tl!=null?p.tl:null};
-  const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg,done=isDone(m),stu=!dyn&&!done&&!!p.st;
+  const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg,done=isDone(m);
   const fld=(k,l,sub)=>`<div class="fr"><div class="fl">${l}${sub?`<small>${sub}</small>`:""}</div><div class="step"><button data-s="${k}" data-d="-1" aria-label="Menos ${l}" ${ro?"disabled":""}>−</button><input type="number" inputmode="numeric" min="0" id="f-${k}" data-f="${k}" value="${draft[k]||0}" ${ro?"disabled":""}><button data-s="${k}" data-d="1" aria-label="Mais ${l}" ${ro?"disabled":""}>+</button></div></div>`;
   const dfld=(k,l,sub,step)=>`<div class="fr"><div class="fl">${l}<small>${sub}</small></div><input class="num-in" type="number" inputmode="decimal" step="${step}" min="0" id="f-${k}" data-f="${k}" value="${draft[k]==null?"":draft[k]}" ${ro?"disabled":""}></div>`;
   const r_=dyn?RL.find(x=>x.id===id):null;
@@ -3427,12 +3461,13 @@ function openSheet(id){
   const it=itemsOf(m),nIt=tot_(it),g=goalOf(m);
   const lk=isLocked(m);
   /* cabeçalho: situação e ação principal */
+  const stuAny=!done&&!!p.st,tmN=dyn?tmRv(id):(tmx.q+tmx.k),netTxt=tmN>0?` · líquido ${fmtH(tmN)}`:"";
   let acao="";
   if(lk)acao=`<div class="sh-st lock">${LOCK}<span>Semana bloqueada. Você pode ler tudo, mas só registra depois de liberar a semana ${LIB+1}.</span></div>`;
-  else if(dyn){acao=r_?`<div class="sh-st ${r_.done?"ok":""}"><span>${r_.done?`Feita em ${fmtDay(r_.doc.dt)}`:`Prevista para ${fmtDay(r_.due)}`}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}</span></div>`:""}
-  else if(done)acao=`<div class="sh-st ok"><span>Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}${p.dur?` · levou ${fmtDur(p.dur)}`:""}</span></div>`;
-  else if(stu)acao=`<div class="sh-st go"><i class="ld"></i><span>${stTxt(p.st0||p.st)}</span>${ro?"":`<button class="chip" data-act="mt-stop">Parar</button>`}</div>`;
-  else if(!ro)acao=`<div class="sh-st"><span>Ainda não iniciada</span><button class="chip go" data-act="mt-start">Começar a estudar</button></div>`;
+  else if(done)acao=`<div class="sh-st ok"><span>${dyn&&r_&&r_.doc?`Feita em ${fmtDay(r_.doc.dt)}`:`Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}`}${p.dur?` · levou ${fmtDur(p.dur)}`:""}${netTxt}</span></div>`;
+  else if(stuAny)acao=`<div class="sh-st go"><i class="ld"></i><span>${stTxt(p.st0||p.st)}${netTxt}${dyn&&r_?` · prevista ${fmtDay(r_.due)}`:""}</span>${ro?"":`<button class="chip" data-act="mt-stop">Parar</button>`}</div>`;
+  else if(!ro)acao=`<div class="sh-st"><span>${dyn&&r_?`Prevista para ${fmtDay(r_.due)}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}`:"Ainda não iniciada"}</span><button class="chip go" data-act="mt-start">Começar a estudar</button></div>`;
+  const concl=!ro&&!done&&stuAny;
   /* aba Estudar */
   const generic=m.w&&/^Estude o assunto e resolva cerca de \d+ itens C\/E\.?$/.test(m.w);
   const estudar=`${shQuick(m,p,ro)}
@@ -3472,7 +3507,7 @@ function openSheet(id){
       ${acao}${!dyn&&g?goalHtml(m,"mini"):""}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
     ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
-    <footer class="sh-ft">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`<button class="btn" data-act="save">Salvar</button>${P()[id]?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
+    <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
   </div></div>`;
   liveUpd();
 }
@@ -3483,10 +3518,10 @@ function liveUpd(){
 }
 function closeSheet(){sheetId=null;$("#sheet").innerHTML=""}
 function empty_(d){return !(d.r||0)&&!d.c&&!d.e&&!d.b&&d.nc==null&&d.ne==null&&d.tl==null&&d.mw==null&&!hasEnr(d)}
-function sheetSave(){
+function sheetSave(force){
   const m=getM(sheetId);if(!m)return;
   const old=P()[sheetId]||{};
-  const r=rp(m),done=r===1?($("#f-done").getAttribute("aria-checked")==="true"?1:0):Math.min(r,draft.r);
+  const r=rp(m),done=force?r:(r===1?($("#f-done").getAttribute("aria-checked")==="true"?1:0):Math.min(r,draft.r));
   const doc={r:done};
   if(tot_(draft)){doc.c=draft.c;doc.e=draft.e;doc.b=draft.b}
   if(draft.nc!=null)doc.nc=draft.nc;if(draft.ne!=null)doc.ne=draft.ne;if(draft.tl!=null)doc.tl=draft.tl;
@@ -3501,7 +3536,7 @@ function toggle(id){
   const m=getM(id),p=real[id];if(!m)return;
   if(isLocked(m))return;
   if(isDone(m)){const d={...p,r:0};delete d.dur;delete d.st0;if(empty_(d)){save(id,null)}else{save(id,d)}return}
-  if(!m.rv&&!m.rg&&!(p&&p.st)){startStudy(id);return}
+  if(!(p&&p.st)){startStudy(id);return}
   const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())},t0=p&&(p.st0||p.st);
   if(t0)d.dur=Math.max(0,Date.now()-t0);
   delete d.st;delete d.st0;
@@ -3553,6 +3588,7 @@ document.addEventListener("click",e=>{
   if(a==="bib-view"){bib.ci=0;bib.view=t.dataset.v;bib.bk=bib.ba=bib.bq=bib.bs="";bib.msg="";bib.err="";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
+  if(a==="mt-done"){sheetSave(true);return}
   if(a==="clear"){const o=real[sheetId]||{},d={};["lk","nt","vd","ar"].forEach(k=>{if(o[k])d[k]=o[k]});if(empty_(d))save(sheetId,null);else save(sheetId,d);closeSheet();return}
   if(a==="move"){moveTo(sheetId,+t.dataset.w);return}
   if(a==="movesel"){moveTo(sheetId,+$("#f-mw").value);return}
@@ -3572,7 +3608,7 @@ document.addEventListener("click",e=>{
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="ak-meta"){
     const m=BY[t.dataset.id];if(!m)return;
-    ak.mat=m.k;ak.mid=m.id;ak.bar="";ak.tipo="";ak.modo=t.dataset.m||"hoje";
+    ak.mat=m.k;ak.mid=m.id;ak.bar="";ak.tipo="";ak.modo=t.dataset.m||"hoje";ak.rvNext=t.dataset.rv||"";
     closeSheet();tab="ankis";menu=false;ak.view="home";akStart();return}
   if(a==="ak-modo"){ak.modo=t.dataset.m;ak.err="";render();return}
   if(a==="ak-start"){akStart();return}
