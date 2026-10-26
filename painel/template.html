@@ -373,6 +373,7 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .qt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:600;font-size:14.5px;margin-bottom:6px}
 .qh .s{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--fg3)}.star{color:#e0a800;font-weight:800}
 .qd{padding:0 2px 16px}.qg{margin:10px 0 0;font-size:14px}
+.rb.akk{background:#fff0b3;color:#6b4e00;cursor:pointer;font:inherit;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px}.rb.akk:hover{background:#ffe680}
 .rb.perf-excelente{background:#e3f4ea;color:#0a5c3a}.rb.perf-razoavel{background:#fff0b3;color:#6b4e00}.rb.perf-ruim{background:#fde1dc;color:#9a2a1c}
 .rb.df-facil{background:#e3f4ea;color:#0a5c3a}.rb.df-medio{background:#fff0b3;color:#6b4e00}.rb.df-dificil{background:#fde1dc;color:#9a2a1c}
 .rb.qbk{background:#e3f4ea;color:#0a5c3a;cursor:pointer;font:inherit;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:99px}.rb.qbk:hover{background:#cdeadb}
@@ -928,7 +929,7 @@ function revRow(r){
   const steps=`<span class="steps" aria-label="${doneC} de ${RV.iv.length} revisões feitas">${RV.iv.map((_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
   return `<li class="row ${r.done?"done":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
     <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":"Concluir"} revisão: ${esc(r.b.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${akChip(r.b.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
 }
 function homeHtml(){
   const w=WK[sel],ws=weekStats(sel),T=today(),cw=A.cw,L=WM[sel];
@@ -2133,6 +2134,22 @@ function akBuild(m){
   if(m==="aleatorio")return shuf(p).slice(0,25);
   return shuf(p).slice(0,100);
 }
+function akMetaInfo(mid){
+  const T=T0(),cs=Object.values(CARDS).filter(c=>c.mid===mid),nvHoje=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));
+  const due=cs.filter(c=>c.ult&&c.due<=T).length,nov=cs.filter(c=>!c.ult).length,err=cs.filter(c=>c.ult&&(c.lap>0||c.last===1)).length;
+  return {n:cs.length,due,nov,err,hoje:due+Math.min(nov,nvHoje)};
+}
+function akChip(mid){
+  const i=akMetaInfo(mid);if(!i.n)return "";
+  const modo=i.hoje?"hoje":"tudo";
+  return `<button class="rb akk" data-act="ak-meta" data-id="${mid}" data-m="${modo}" aria-label="Abrir os cartões de Anki desta meta">Anki · ${i.hoje?i.hoje+(i.hoje===1?" cartão para hoje":" cartões para hoje"):i.n+(i.n===1?" cartão":" cartões")} ›</button>`;
+}
+function akRow(mid,ro,vazio){
+  const i=akMetaInfo(mid);
+  if(!i.n)return vazio?`<li><div class="tx"><b>Cartões de Anki desta meta</b><span>Esta meta ainda não tem cartões. Peça um baralho ao Claude, informando o assunto, e importe na aba Ankis.</span></div>${ro?"":`<div class="tb"><button class="chip" data-act="ak-go">Abrir a aba Ankis</button></div>`}</li>`:"";
+  const b=`${i.hoje?`<button class="chip pri" data-act="ak-meta" data-id="${mid}" data-m="hoje">Revisar hoje (${i.hoje})</button>`:""}${i.err?`<button class="chip" data-act="ak-meta" data-id="${mid}" data-m="erros">Só os que errei (${i.err})</button>`:""}<button class="chip" data-act="ak-meta" data-id="${mid}" data-m="tudo">Estudar todos (${i.n})</button>`;
+  return `<li><div class="tx"><b>Cartões de Anki desta meta</b><span>${i.n} ${i.n===1?"cartão":"cartões"}: ${i.due} ${i.due===1?"vencido":"vencidos"}, ${i.nov} ${i.nov===1?"novo":"novos"}${i.err?`, ${i.err} difíceis`:""}</span></div>${ro?"":`<div class="tb">${b}</div>`}</li>`;
+}
 function akStart(){
   const q=akBuild(ak.modo);
   if(!q.length){ak.err="Nenhum cartão encontrado com esses filtros. Troque o modo ou os filtros.";render();return}
@@ -2524,6 +2541,7 @@ function studyTip(m,ro){
   }else if(!p.lk){
     rows.push(li("Estude a teoria e resolva questões","Esta meta ainda não tem questões no banco. Cole abaixo a pasta do Tec Concursos ou peça questões inéditas ao Claude.",`<button class="chip" data-act="qb-add">Adicionar questões ao banco</button>`));
   }
+  rows.push(akRow(m.id,ro,false));
   if(p.lk&&m.t!=="questoes")rows.push(li("Questões no Tec Concursos","Pasta já vinculada a esta meta.",`<a class="chip pri" href="${esc(p.lk)}" target="_blank" rel="noopener">Abrir a pasta</a>`));
   if(nv||na||p.nt)rows.push(li("Material guardado",[nv?`${nv} ${nv===1?"vídeo":"vídeos"}`:"",na?`${na} ${na===1?"arquivo":"arquivos"}`:"",p.nt?"observações":""].filter(Boolean).join(" · "),""));
   return `<div class="box stip"><b>Como estudar esta meta</b><ul>${rows.join("")}</ul></div>`;
@@ -2548,8 +2566,9 @@ function openSheet(id){
     <h2 class="sh-t">${esc(m.a)}</h2>
     <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
     ${rvInfo}
+    ${m.rv?`<div class="box stip"><b>Revisar com o Anki</b><ul>${akRow(m.base.id,ro,true)}</ul></div>`:""}
     ${r_&&r_.pf?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(r_.pf))}. Prazo desta revisão: ${r_.days} dias depois da anterior.</p>`:""}
-    ${!dyn&&(()=>{const pf=metaPerf(m);return pf.n?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(pf))}. Revisões em ${pf.dias.join(", ")} dias.</p>`:""})()}
+    ${!dyn?(()=>{const pf=metaPerf(m);return pf.n?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(pf))}. Revisões em ${pf.dias.join(", ")} dias.</p>`:""})():""}
     ${isLocked(m)?`<div class="box lockbox"><b>Semana bloqueada</b><p>Você pode ler tudo aqui, mas só consegue registrar depois de concluir as metas da semana ${LIB+1} e liberar esta.</p></div>`:""}
     ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
     ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
@@ -2656,6 +2675,11 @@ document.addEventListener("click",e=>{
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
+  if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
+  if(a==="ak-meta"){
+    const m=BY[t.dataset.id];if(!m)return;
+    ak.mat=m.k;ak.mid=m.id;ak.bar="";ak.tipo="";ak.modo=t.dataset.m||"hoje";
+    closeSheet();tab="ankis";menu=false;ak.view="home";akStart();return}
   if(a==="ak-modo"){ak.modo=t.dataset.m;ak.err="";render();return}
   if(a==="ak-start"){akStart();return}
   if(a==="ak-quit"){ak.view="home";render();window.scrollTo(0,0);return}
