@@ -1,5 +1,5 @@
 <title>Painel de Metas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cinzel:wght@600;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -456,6 +456,45 @@ details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;ma
 @media (min-width:561px){.heat .y .sh{display:none}}
 @media (max-width:560px){.heat .y .sh{display:inline}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== tema Olimpo ===== */
+.med{position:relative;margin-top:14px;padding:14px 18px 12px 62px;border-radius:20px;background:var(--soft);border:1px solid var(--line)}.med svg{position:absolute;left:16px;top:16px;width:34px;height:34px;color:var(--fg3)}.med q{display:block;margin-top:2px;font:italic 600 17px/1.45 Georgia,serif;quotes:none;color:var(--fg)}.med small{display:block;font:700 11px var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--fg3)}.med small.au{margin-top:7px;letter-spacing:.06em;text-transform:none;font-weight:600}
+.tema-t{margin:6px 22px 4px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}.tema-t span{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
+html[data-tema="olimpo"]{--bg:#fbf8f1;--fg:#1a2233;--fg2:#475066;--fg3:#6b7388;--line:#e5dcc7;--soft:#f3ecdb;--soft2:#e8dec6;--blue:#1d3f7a;--green:#2f6b4f;--purple:#5b3a7a;--orange:#a87a0c;--teal:#1f6f78;--indigo:#2c3e7a;--red:#a8321f;--pink:#8a5a2b;--slate:#2b3347;--gold:#d4a72c;--amber:#a87a0c;--good:#2f7d4a;--bad:#a8321f;--good-t:#e1f0e3;--bad-t:#f8e1da;--warn-t:#f7ecc8;--blue-t:#e4eaf5;--display:"Cinzel","Times New Roman",serif}
+html[data-tema="olimpo"] body{background:var(--bg)}
+html[data-tema="olimpo"] h1,html[data-tema="olimpo"] h2,html[data-tema="olimpo"] h3{font-family:var(--display);letter-spacing:.02em}
+html[data-tema="olimpo"] .top{position:relative;overflow:hidden;padding-bottom:34px;background:linear-gradient(115deg,#f3ead2 0%,#fffaf0 50%,#dfe7f4 100%);border:1px solid #d9c88f}
+html[data-tema="olimpo"] .top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'><path d='M0 13H6V2h16v8H11V6h6' fill='none' stroke='%23b8902a' stroke-width='1.800'/></svg>") repeat-x;opacity:.85}
+html[data-tema="olimpo"] .top .eyebrow{color:#5a4a1c}
+html[data-tema="olimpo"] h1{background:linear-gradient(95deg,#14284f 0%,#1d3f7a 52%,#a87a0c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;letter-spacing:.06em}
+html[data-tema="olimpo"] .splash i{border-color:#efe3c0;border-top-color:#b8902a}
+html[data-tema="olimpo"] .mbtn{background:rgba(251,248,241,.96);box-shadow:0 2px 10px rgba(20,40,79,.2),inset 0 0 0 1px #d9c88f}
+html[data-tema="olimpo"] .dov{background:rgba(14,26,56,.5)}
+html[data-tema="olimpo"] .drawer{background:var(--bg);box-shadow:12px 0 40px rgba(14,26,56,.3)}
+html[data-tema="olimpo"] .drawer .dh{background:linear-gradient(160deg,#0e1a38 0%,#1d3f7a 58%,#b8902a 100%);position:relative}
+html[data-tema="olimpo"] .drawer .dh::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'><path d='M0 13H6V2h16v8H11V6h6' fill='none' stroke='%23e8c65a' stroke-width='1.800'/></svg>") repeat-x;opacity:.9}
+html[data-tema="olimpo"] .xp-fill{background:repeating-linear-gradient(-45deg,#b8902a 0 10px,#d4a72c 10px 20px);background-size:28px 28px}
+html[data-tema="olimpo"] .xp-fill.done{background:repeating-linear-gradient(-45deg,#2f6b4f 0 10px,#3e8460 10px 20px);background-size:28px 28px}
+html[data-tema="olimpo"] .next{background:linear-gradient(120deg,#f6ead0 0%,#fbf3e0 100%);border-color:#c9a227}
+html[data-tema="olimpo"] .next.study{background:linear-gradient(120deg,#e4eaf5,#f1f4fa);border-color:#1d3f7a}
+html[data-tema="olimpo"] .kpi{background:linear-gradient(140deg,var(--k) 0%,color-mix(in srgb,var(--k) 82%,#b8902a) 100%);box-shadow:inset 0 0 0 1px rgba(232,198,90,.38)}
+html[data-tema="olimpo"] .kpi.blue{--k:#1d3f7a}html[data-tema="olimpo"] .kpi.green{--k:#2f6b4f}html[data-tema="olimpo"] .kpi.purple{--k:#4f3a78}html[data-tema="olimpo"] .kpi.teal{--k:#1f6f78}html[data-tema="olimpo"] .kpi.indigo{--k:#2c3e7a}html[data-tema="olimpo"] .kpi.red{--k:#a8321f}html[data-tema="olimpo"] .kpi.pink{--k:#8a5a2b}html[data-tema="olimpo"] .kpi.slate{--k:#2b3347}html[data-tema="olimpo"] .kpi.sea{--k:#1b4f72}
+html[data-tema="olimpo"] .kpi.orange{background:linear-gradient(140deg,#d4a72c 0%,#ecd488 100%);color:#2e2306}html[data-tema="olimpo"] .kpi.orange .lab,html[data-tema="olimpo"] .kpi.orange .num small,html[data-tema="olimpo"] .kpi.orange .sub{color:rgba(46,35,6,.85)}
+html[data-tema="olimpo"] .cd{background:linear-gradient(135deg,#d4a72c,#ecd488);color:#2e2306}html[data-tema="olimpo"] .cd-b u,html[data-tema="olimpo"] .cd-b{--x:0}html[data-tema="olimpo"] .cd-b u{background:#14284f}
+html[data-tema="olimpo"] .chip.pri{background:var(--blue);border-color:var(--blue)}
+html[data-tema="olimpo"] .switch[aria-checked="true"]{background:var(--blue)}
+html[data-tema="olimpo"] .jcard,html[data-tema="olimpo"] .jhero{background:linear-gradient(135deg,#f6efdc,#fffaf0 55%,#e6ecf7);border-color:#d9c88f}
+html[data-tema="olimpo"] .jcard.risk,html[data-tema="olimpo"] .jhero.risk{background:linear-gradient(135deg,#f8e6dc,#fff3ec);border-color:#e0a78d}
+html[data-tema="olimpo"] .jcard .ava,html[data-tema="olimpo"] .jh-a{box-shadow:0 0 0 3px #d4a72c,0 6px 16px rgba(20,40,79,.25)}
+html[data-tema="olimpo"] .jc-bar i{background:linear-gradient(90deg,#1d3f7a,#d4a72c)}
+html[data-tema="olimpo"] .jc-t em{background:#14284f;color:#ecd488;font-family:var(--display);letter-spacing:.04em}
+html[data-tema="olimpo"] .pth.cur{border-color:#b8902a;background:#faf1d6;box-shadow:0 6px 16px rgba(184,144,42,.25)}
+html[data-tema="olimpo"] .pth .pa{box-shadow:0 0 0 2px #d9c88f}
+html[data-tema="olimpo"] .bdg.on{background:linear-gradient(135deg,#faf1d6,#fffaf0);border-color:#d9c88f}
+html[data-tema="olimpo"] .med{background:linear-gradient(135deg,#fffaf0,#f6efdc);border-color:#d9c88f}html[data-tema="olimpo"] .med svg{color:#a87a0c}html[data-tema="olimpo"] .med q{font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;font-weight:600}html[data-tema="olimpo"] .med small{color:#a87a0c}html[data-tema="olimpo"] .med small.au{color:#5a4a1c}
+html[data-tema="olimpo"] .bbt.on,html[data-tema="olimpo"] .bbseg button[aria-pressed="true"]{background:#14284f;border-color:#14284f;color:#ecd488}
+html[data-tema="olimpo"] .bbprog i{background:#b8902a}
+html[data-tema="olimpo"] .bbcard{border-top-color:var(--c)}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -1088,6 +1127,7 @@ function homeHtml(){
   </section>
 
   ${jornadaCard()}
+  ${medCard()}
   <section class="kpis" aria-label="Indicadores">
     <div class="kpi blue"><div class="lab">Desempenho</div><div class="num">${pc(accT)}</div>
       <div class="sub">${nItems?`${num(A.tot.c)} acertos em ${num(nItems)} questões`:"Registre suas questões"}</div>
@@ -2640,7 +2680,7 @@ function planXp(){
 }
 function xpCalc(st){
   const pl=planXp();
-  LVS=LVN.map((n,i)=>[n,Math.round(LVF[i]*pl.total/50)*50]);
+  LVS=lvNames().map((n,i)=>[n,Math.round(LVF[i]*pl.total/50)*50]);
   const nCards=Object.values(REVD).reduce((z,r)=>z+(r.n||0),0);
   const bonusRaw=Math.floor(tmTot()/600)+Math.floor(nCards/4)+st.best*2,bonus=Math.min(bonusRaw,Math.floor(pl.total*.05));
   const it=[["Metas concluídas",A.tot.done*30],["Questões feitas",tot_(A.tot)],["Revisões feitas",A.revDone*10],["Bônus de dedicação (tempo, Anki e ofensiva)",bonus]];
@@ -2661,7 +2701,8 @@ function missionsCalc(){
 let JC=null;
 const jc=()=>{if(JC)return JC;const st=streakCalc();return JC={st,xp:xpCalc(st)}};
 const FLAME='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 3.5-1.5 5-3 7.5-1.2 2-.5 4 1 5-.2-1.800.8-3 2-4 .2 2.500 2 3.500 2 6a3.500 3.500 0 1 1-7 0c0-5 5.500-7 5-14.500z" fill="currentColor"/></svg>';
-function avatarSvg(lv,mood,px){
+const avatarSvg=(lv,mood,px)=>isOl()?avatarOl(lv,mood,px):avatarSvgC(lv,mood,px);
+function avatarSvgC(lv,mood,px){
   const bg=["#d5ddd9","#cde7d6","#b9e0c6","#a4d8b6","#8fd0a8","#fbe27a","#f6cd2a","#efb90a","#e2a200"][lv];
   const shirt=["#7d8b84","#4f7cc4","#4f7cc4","#2f6f9f","#2f6f9f","#c8431f","#1d3b5c","#1d3b5c","#14301f"][lv];
   const skin="#f2c79b",suit=lv>=6;
@@ -2687,6 +2728,81 @@ function avatarSvg(lv,mood,px){
   return o+`</g></svg>`;
 }
 const jcWeek=(act,n)=>{const T=today();let o="";for(let i=n-1;i>=0;i--){const d=ymd(addDays(T,-i));o+=`<i class="${act[d]?"on":FOL.includes(d)?"fol":""} ${i===0?"hoje":""}" data-tip="${fmtDay(d)}${act[d]?": estudou":FOL.includes(d)?": folga":""}"></i>`}return o};
+
+/* ---------- tema Olimpo: Grécia, estoicismo e a jornada do acólito ---------- */
+const temaAtual=()=>(real["cfg-semana"]||{}).tema||LS.get("painel-tema")||"olimpo";
+const isOl=()=>temaAtual()==="olimpo";
+const LVN_O=["Acólito","Discípulo do Pórtico","Hoplita","Cavaleiro de Bronze","Cavaleiro de Prata","Cavaleiro de Ouro","Berserker","Herói do Olimpo","Servidor Público"];
+const LVD_O=["Serve no altar do saber e aprende o ritual da rotina.","Estuda no Pórtico: o obstáculo é o caminho.","Marcha em formação, com disciplina e escudo erguido.","Primeira armadura. Cada meta forja uma peça.","Armadura de prata: a constância virou hábito.","Veste de ouro: domina o edital e a pegadinha.","Fúria indomável: não recua diante de nenhuma questão.","Coroado de louros: o Olimpo reconhece o esforço.","Atlas da República: carrega o Estado nos ombros."];
+const lvNames=()=>isOl()?LVN_O:LVN;
+const lvDesc=i=>(isOl()?LVD_O:LVD)[i];
+const MED=[
+ ["Ao amanhecer, quando custar levantar, pense: levanto para fazer o trabalho de um ser humano.","Marco Aurélio, Meditações"],
+ ["O que está no caminho se torna o caminho.","Marco Aurélio, Meditações"],
+ ["Não perca tempo discutindo como deve ser um homem bom. Seja um.","Marco Aurélio, Meditações"],
+ ["Sua mente terá a cor dos seus pensamentos habituais.","Marco Aurélio, Meditações"],
+ ["Não aja como se tivesse dez mil anos pela frente. A morte paira sobre você: enquanto pode, seja bom.","Marco Aurélio, Meditações"],
+ ["Faça agora o que tem de ser feito, com seriedade, sem queixa e com justiça.","Marco Aurélio, Meditações (adaptado)"],
+ ["Não é que tenhamos pouco tempo: é que perdemos muito.","Sêneca, Sobre a brevidade da vida"],
+ ["Enquanto adiamos, a vida passa.","Sêneca, Cartas a Lucílio"],
+ ["Sofremos mais na imaginação do que na realidade.","Sêneca, Cartas a Lucílio"],
+ ["Não são as coisas que perturbam os homens, mas a opinião que têm delas.","Epicteto, Manual"],
+ ["Primeiro diga a si mesmo o que você quer ser; depois faça o que tem de fazer.","Epicteto, Discursos"],
+ ["Somos o que fazemos repetidamente. A excelência não é um ato, é um hábito.","Will Durant, sobre Aristóteles"],
+ ["Diante da virtude, os deuses puseram o suor.","Hesíodo, Os Trabalhos e os Dias"],
+ ["Uma vida sem reflexão não vale a pena ser vivida.","Sócrates, Apologia"],
+ ["A alma do preguiçoso deseja e nada alcança, mas a dos diligentes se farta.","Provérbios 13,4"],
+ ["Vai ter com a formiga, preguiçoso: observa os seus caminhos e torna-te sábio.","Provérbios 6,6"],
+ ["Tudo posso naquele que me fortalece.","Filipenses 4,13"],
+ ["Quem semeia com lágrimas colherá com alegria.","Salmo 126,5"],
+ ["Tudo tem o seu tempo, e há tempo para cada coisa debaixo do céu.","Eclesiastes 3,1"],
+ ["Ora et labora: reza e trabalha.","Regra de São Bento"],
+ ["O homem que move montanhas começa carregando pequenas pedras.","Provérbio, atribuído a Confúcio"],
+ ["Seja a rocha contra a qual as ondas se quebram: ela fica de pé e acalma a água em volta.","Marco Aurélio, Meditações (adaptado)"],
+ ["A felicidade de uma vida depende da qualidade dos seus pensamentos.","Marco Aurélio, Meditações (adaptado)"],
+ ["Prepare-se de manhã para o que o dia exigir, e a tarde não te encontrará de mãos vazias.","Estoicismo, adaptado"],
+ ["Nenhum vento sopra a favor de quem não sabe para onde vai.","Sêneca, Cartas a Lucílio (adaptado)"],
+ ["O medo de sofrer é pior do que o próprio sofrimento.","Sêneca (adaptado)"],
+ ["Conhece-te a ti mesmo.","Inscrição no templo de Apolo, em Delfos"],
+ ["Nada em excesso.","Inscrição no templo de Apolo, em Delfos"],
+ ["Dificuldades fortalecem a mente, como o trabalho fortalece o corpo.","Sêneca, Sobre a Providência (adaptado)"],
+ ["Quem tem um porquê enfrenta quase qualquer como.","Nietzsche, sobre Viktor Frankl"]
+];
+const medHoje=()=>MED[parseInt(hstr(ymd(today())),36)%MED.length];
+const COLUNA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 18h14M7 18V9M11 18V9M13 18V9M17 18V9M4 9h16M6 6l6-3.500L18 6z"/></svg>';
+function medCard(){const m=medHoje();return `<section class="med" aria-label="Meditação do dia">${COLUNA}<small>Meditação do dia</small><q>${esc(m[0])}</q><small class="au">${esc(m[1])}</small></section>`}
+function avatarOl(lv,mood,px){
+  const skin="#efc29a",dk="#2b2118",tired=mood==="cansado";
+  const BG=[["#fbf3d9","#efe0ae"],["#e8eef8","#c9d6ee"],["#f4dccb","#e3b79a"],["#f2dcc2","#cf9a62"],["#e8edf4","#aeb9c9"],["#fff3c2","#f1c94e"],["#4a2229","#14090c"],["#d8ecfb","#8fc3ec"],["#14284f","#2c4d8f"]][lv];
+  let o=`<svg viewBox="0 0 120 120" width="${px}" height="${px}" role="img" aria-label="${esc(lvNames()[lv])}"><defs><radialGradient id="obg${lv}" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="${BG[0]}"/><stop offset="1" stop-color="${BG[1]}"/></radialGradient><clipPath id="ocp${lv}"><circle cx="60" cy="60" r="58"/></clipPath></defs><circle cx="60" cy="60" r="58" fill="url(#obg${lv})"/><g clip-path="url(#ocp${lv})">`;
+  const face=(eyeY=54)=>`<circle cx="51" cy="${eyeY}" r="2.4" fill="#1f2937"/><circle cx="69" cy="${eyeY}" r="2.4" fill="#1f2937"/>${tired?`<path d="M46 ${eyeY+5}q5 3 10 0M64 ${eyeY+5}q5 3 10 0" stroke="#8a6a8a" stroke-width="1.5" fill="none" opacity=".6"/><path d="M52 68q8-5 16 0" stroke="#7a3a2a" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M90 40q4 8 0 11-4-3 0-11z" fill="#6cc3f5"/>`:`<path d="M52 64q8 7 16 0" stroke="#7a3a2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>`}`;
+  const neck=`<rect x="54" y="70" width="12" height="14" fill="${skin}"/>`,head=`<circle cx="60" cy="52" r="21" fill="${skin}"/>`;
+  const body=(c,c2)=>`<path d="M16 126C16 96 36 83 60 83s44 13 44 43z" fill="${c}"/><path d="M60 83v43" stroke="${c2}" stroke-width="1.5" opacity=".5"/>`;
+  const pauld=(c,c2,rx=17)=>`<ellipse cx="26" cy="92" rx="${rx}" ry="11" fill="${c}" stroke="${c2}" stroke-width="2"/><ellipse cx="94" cy="92" rx="${rx}" ry="11" fill="${c}" stroke="${c2}" stroke-width="2"/>`;
+  if(lv===0){ // acólito
+    o+=body("#ffffff","#cfc6a4")+`<path d="M34 104q26 9 52 0" stroke="#b42318" stroke-width="3.500" fill="none"/><path d="M50 84q10 10 20 0" fill="none" stroke="#cfc6a4" stroke-width="2"/>`+neck+head+`<path d="M38 50C37 32 48 28 60 28s23 4 22 22c-5-7-12-9-22-9s-17 2-22 9z" fill="${dk}"/>`+face()+`<circle cx="92" cy="78" r="13" fill="#ffd27a" opacity=".4"/><rect x="88" y="88" width="7" height="26" rx="2" fill="#f6f1e0" stroke="#cfc6a4"/><path d="M91.500 76q5 6 0 12-5-6 0-12z" fill="#ff9d1c"/>`;
+  }else if(lv===1){ // discípulo
+    o+=body("#efe6cf","#c9bb94")+`<path d="M16 126C16 108 24 96 36 90l24 36z" fill="#1d3f7a" opacity=".85"/>`+neck+head+`<path d="M38 50C37 32 48 27 60 27s23 5 22 23c-5-6-12-9-22-9s-17 3-22 9z" fill="#5a4636"/><path d="M41 58q19 32 38 0-3 17-19 20-16-3-19-20z" fill="#5a4636"/>`+face()+`<g transform="rotate(-14 90 100)"><rect x="76" y="86" width="26" height="30" rx="4" fill="#f4e6bf" stroke="#b79c5c" stroke-width="2"/><path d="M81 95h16M81 101h16M81 107h10" stroke="#8a7440" stroke-width="2"/></g>`;
+  }else if(lv===2){ // hoplita
+    o+=body("#b9824a","#7a4f24")+`<path d="M44 96q16 8 32 0M46 106q14 7 28 0" stroke="#8c5a2b" stroke-width="2" fill="none"/>`+neck+head+`<path d="M37 56C35 30 47 21 60 21s25 9 23 35v6q-3 9-8 9H45q-5 0-8-9z" fill="#c8964f" stroke="#7a4f24" stroke-width="2"/><path d="M48 44h24v13H48z" fill="${skin}"/><path d="M60 57v14" stroke="#7a4f24" stroke-width="2"/><path d="M42 22q18-24 36 0-18-8-36 0z" fill="#b42318"/>`+`<circle cx="53" cy="50" r="2.2" fill="#1f2937"/><circle cx="67" cy="50" r="2.2" fill="#1f2937"/>`+`<circle cx="28" cy="102" r="21" fill="#c8964f" stroke="#7a4f24" stroke-width="3"/><circle cx="28" cy="102" r="14" fill="none" stroke="#7a4f24" stroke-width="1.500"/><path d="M20 112l8-19 8 19" stroke="#b42318" stroke-width="4.500" fill="none" stroke-linejoin="round"/>`;
+  }else if(lv===3){ // bronze
+    o+=body("#c98a4a","#7a4f24")+`<path d="M44 92h32v14H44z" fill="#d9a468" stroke="#7a4f24" stroke-width="1.500"/><circle cx="60" cy="99" r="4" fill="#4aa3e0" stroke="#7a4f24"/>`+pauld("#d9a468","#7a4f24")+neck+head+face()+`<path d="M37 50C35 27 48 20 60 20s25 7 23 30c-4-8-10-12-23-12S41 42 37 50z" fill="#c98a4a" stroke="#7a4f24" stroke-width="2"/><path d="M38 38l-12-14 4 18zM82 38l12-14-4 18z" fill="#d9a468" stroke="#7a4f24" stroke-width="2"/><circle cx="60" cy="31" r="3.500" fill="#4aa3e0"/>`;
+  }else if(lv===4){ // prata
+    o+=`<path d="M10 126C12 96 30 80 60 80s48 16 50 46z" fill="#2b4a86"/>`+body("#cfd6e0","#7b8798")+`<path d="M44 92h32v14H44z" fill="#e6ebf2" stroke="#7b8798" stroke-width="1.500"/><circle cx="60" cy="99" r="4" fill="#9b6bd6" stroke="#7b8798"/>`+pauld("#e6ebf2","#7b8798",19)+`<path d="M12 86l7-14 5 12zM108 86l-7-14-5 12z" fill="#e6ebf2" stroke="#7b8798" stroke-width="1.500"/>`+neck+head+face()+`<path d="M36 50C34 26 47 18 60 18s26 8 24 32c-4-9-11-13-24-13S40 41 36 50z" fill="#cfd6e0" stroke="#7b8798" stroke-width="2"/><path d="M54 20l6-14 6 14zM38 34l-14-10 6 16zM82 34l14-10-6 16z" fill="#e6ebf2" stroke="#7b8798" stroke-width="2"/>`;
+  }else if(lv===5){ // ouro
+    for(let i=0;i<9;i++){const a=(i-4)*.32-1.5708;o+=`<path d="M60 52L${(60+90*Math.cos(a)).toFixed(1)} ${(52+90*Math.sin(a)).toFixed(1)}" stroke="#fff6c9" stroke-width="5" opacity=".55"/>`}
+    o+=`<path d="M8 126C10 94 30 78 60 78s50 16 52 48z" fill="#b42318"/>`+body("#e8b923","#9a6b00")+`<path d="M42 90h36v16H42z" fill="#f6d65a" stroke="#9a6b00" stroke-width="1.500"/><path d="M60 92l5 7-5 7-5-7z" fill="#b42318" stroke="#9a6b00"/>`+pauld("#f6d65a","#9a6b00",20)+`<path d="M10 84l8-18 6 15zM110 84l-8-18-6 15z" fill="#f6d65a" stroke="#9a6b00" stroke-width="1.500"/>`+neck+head+face()+`<path d="M36 52C33 26 46 17 60 17s27 9 24 35c-4-10-11-14-24-14S40 42 36 52z" fill="#e8b923" stroke="#9a6b00" stroke-width="2"/><path d="M36 40C22 36 14 22 20 8c6 8 14 14 20 20zM84 40c14-4 22-18 16-32-6 8-14 14-20 20z" fill="#f6d65a" stroke="#9a6b00" stroke-width="2"/><path d="M60 17v14" stroke="#9a6b00" stroke-width="2"/>`;
+  }else if(lv===6){ // berserker
+    o+=`<path d="M100 4l10 6-38 92-8-4z" fill="#4b505c" stroke="#1a1c22" stroke-width="2"/><path d="M76 98l-10 8 4 8 12-6z" fill="#2a2d35"/>`+`<path d="M14 126C14 96 34 82 60 82s46 14 46 44z" fill="#23262e" stroke="#0e0f13" stroke-width="2"/><path d="M44 92h32M48 102h24" stroke="#3d424d" stroke-width="3"/>`+`<path d="M8 96l12-26 14 24zM112 96l-12-26-14 24z" fill="#2f333c" stroke="#0e0f13" stroke-width="2"/><path d="M14 80l6-14 4 12zM106 80l-6-14-4 12z" fill="#3d424d"/>`+neck.replace(skin,"#23262e")+`<path d="M36 56C33 26 46 16 60 16s27 10 24 40v10q-2 12-8 14l-5-6-5 6-6-8-6 8-5-6-5 6q-6-2-8-14z" fill="#2f333c" stroke="#0e0f13" stroke-width="2.500"/><path d="M34 34l-14-20 8 24zM86 34l14-20-8 24z" fill="#3d424d" stroke="#0e0f13" stroke-width="2"/><path d="M42 48h14v5H42zM64 48h14v5H64z" fill="#ff3a2a"/><ellipse cx="49" cy="50" rx="13" ry="7" fill="#ff3a2a" opacity=".28"/><ellipse cx="71" cy="50" rx="13" ry="7" fill="#ff3a2a" opacity=".28"/><path d="M48 66h24" stroke="#0e0f13" stroke-width="2"/>`;
+  }else if(lv===7){ // herói do olimpo
+    o+=`<circle cx="60" cy="52" r="32" fill="none" stroke="#fff3b0" stroke-width="3" opacity=".9"/>`+`<path d="M10 100C0 70 14 52 34 62l-6 28z" fill="#ffffff" stroke="#b9c9dc" stroke-width="1.500"/><path d="M110 100c10-30-4-48-24-38l6 28z" fill="#ffffff" stroke="#b9c9dc" stroke-width="1.500"/><path d="M6 86C-2 66 8 54 22 60M114 86c8-20-2-32-16-26" stroke="#b9c9dc" stroke-width="1.500" fill="none"/>`+`<path d="M14 126C14 96 34 83 60 83s46 13 46 43z" fill="#f7f3e6" stroke="#cfc6a4" stroke-width="1.500"/><path d="M26 126c4-24 18-36 34-36" stroke="#1d3f7a" stroke-width="7" fill="none" opacity=".85"/><circle cx="36" cy="92" r="5.500" fill="#e8b923" stroke="#9a6b00" stroke-width="1.500"/>`+neck+head+`<path d="M38 50C37 32 48 27 60 27s23 5 22 23c-5-6-12-9-22-9s-17 3-22 9z" fill="#6b4a2a"/>`+face();
+    for(let i=0;i<7;i++){const a=2.45+i*.2,x=60+27*Math.cos(a),y=48+27*Math.sin(a),x2=60-27*Math.cos(a)+0,y2=y;o+=`<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="6" ry="2.800" fill="#4a7c59" transform="rotate(${(a*57.3+90).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/><ellipse cx="${(120-x).toFixed(1)}" cy="${y.toFixed(1)}" rx="6" ry="2.800" fill="#4a7c59" transform="rotate(${(-a*57.3+270).toFixed(0)} ${(120-x).toFixed(1)} ${y.toFixed(1)})"/>`}
+    o+=`<path d="M40 30q20-10 40 0" stroke="#e8b923" stroke-width="3" fill="none"/>`;
+  }else{ // servidor público: atlas
+    o+=`<circle cx="60" cy="40" r="40" fill="none" stroke="#e8b923" stroke-width="3.500"/><ellipse cx="60" cy="40" rx="17" ry="40" fill="none" stroke="#e8b923" stroke-width="2"/><ellipse cx="60" cy="40" rx="40" ry="14" fill="none" stroke="#e8b923" stroke-width="2"/><path d="M60 0v80M20 40h80" stroke="#e8b923" stroke-width="1.500" opacity=".8"/><circle cx="60" cy="40" r="40" fill="#e8b923" opacity=".08"/>`+`<path d="M12 126C12 96 34 83 60 83s48 13 48 43z" fill="#14284f" stroke="#0b1633" stroke-width="2"/><path d="M48 83l12 20 12-20z" fill="#fff"/><path d="M57 88h6l3 22-6 7-6-7z" fill="#e8b923"/>`+`<path d="M22 100q-12-6-12-30M98 100q12-6 12-30" stroke="#14284f" stroke-width="9" fill="none" stroke-linecap="round"/><circle cx="10" cy="68" r="5" fill="${skin}"/><circle cx="110" cy="68" r="5" fill="${skin}"/>`+neck+head+`<path d="M38 50C37 31 48 27 60 27s23 4 22 23c-5-7-12-9-22-9s-17 2-22 9z" fill="${dk}"/>`+face()+`<rect x="74" y="98" width="16" height="20" rx="2" fill="#fff" stroke="#0b1633" stroke-width="1.500"/><rect x="74" y="98" width="16" height="6" rx="2" fill="#2f7d4a"/><circle cx="82" cy="111" r="3" fill="#ffd21a"/>`;
+  }
+  return o+`</g></svg>`;
+}
 function jornadaCard(){
   const J=jc(),st=J.st,x=J.xp,mood=st.risk&&st.cur>=3?"cansado":"ok";
   const msg=st.risk?`Estude hoje para não perder ${st.cur} ${st.cur===1?"dia":"dias"} de ofensiva.`:st.cur?`Ofensiva garantida hoje. Amanhã é o dia ${st.cur+1}.`:"Estude hoje para começar sua ofensiva.";
@@ -2705,7 +2821,7 @@ function jornadaHtml(){
   for(let c=11;c>=0;c--)for(let r=0;r<7;r++){const d=addDays(mon,-c*7+r),k=ymd(d);if(d>T){cells.push(`<i class="hm0 fut"></i>`);continue}
     const sec=tmDay(k),q=A.day[k]||0,lvl=!st.act[k]?0:(sec>=10800||q>=100)?3:(sec>=3600||q>=40)?2:1;
     cells.push(`<i class="hm${lvl} ${FOL.includes(k)&&!st.act[k]?"fol":""}" data-tip="${fmtDay(k)}: ${st.act[k]?`${fmtH(sec)} líquidas · ${q} questões`:FOL.includes(k)?"folga":"sem estudo"}"></i>`)}
-  const path=LVS.map(([n,m],i)=>`<div class="pth ${i<x.lv?"done":i===x.lv?"cur":"lock"}"><span class="pa">${avatarSvg(i,"ok",58)}</span><b>${n}</b><small>${i<=x.lv?LVD[i]:num(m)+" XP"}</small></div>`).join("");
+  const path=LVS.map(([n,m],i)=>`<div class="pth ${i<x.lv?"done":i===x.lv?"cur":"lock"}"><span class="pa">${avatarSvg(i,"ok",58)}</span><b>${n}</b><small>${i<=x.lv?lvDesc(i):num(m)+" XP"}</small></div>`).join("");
   const nI=tot_(A.tot),hs=tmTot();
   const goalMetas=ALL.filter(m=>goalOf(m)&&tot_(itemsOf(m))>=goalOf(m)).length;
   const perfect=WK.some((w,i)=>weekMetas(i).length>0&&weekDone(i)&&i<=A.cw);
@@ -2723,11 +2839,12 @@ function jornadaHtml(){
     ["Semanas perfeitas","4 semanas com todas as metas",wkDone>=4,`${Math.min(4,wkDone)}/4`],["Oito semanas perfeitas","8 semanas com todas as metas",wkDone>=8,`${Math.min(8,wkDone)}/8`],["Cobaia do Cebraspe","3 simulados feitos",Object.keys(SM).length>=3,`${Math.min(3,Object.keys(SM).length)}/3`]];
   const nOk=B.filter(b=>b[2]).length;
   return `<section class="sec" style="margin-top:20px"><h2>Jornada</h2>
-  <p class="lead" style="margin-bottom:0">Estude todo dia, ganhe XP e evolua de curioso a servidor público.</p>
+  <p class="lead" style="margin-bottom:0">${isOl()?"Estude todo dia, ganhe XP e suba de acólito a servidor público.":"Estude todo dia, ganhe XP e evolua de curioso a servidor público."}</p>
   <div class="jhero ${st.risk?"risk":""}"><div class="jh-a">${avatarSvg(x.lv,mood,132)}</div>
-    <div class="jh-b"><div class="jh-n">Nível ${x.lv+1} de ${LVS.length}</div><h3>${x.name}</h3><p>${LVD[x.lv]}</p>
+    <div class="jh-b"><div class="jh-n">Nível ${x.lv+1} de ${LVS.length}</div><h3>${x.name}</h3><p>${lvDesc(x.lv)}</p>
       <div class="jc-bar big"><i style="width:${Math.round(x.pct*100)}%"></i></div>
       <div class="jc-s">${x.next?`${num(x.xp)} XP · faltam ${num(x.next-x.xp)} para ${x.nextName}`:`${num(x.xp)} XP · você chegou ao topo`}</div></div></div>
+  ${medCard()}
   <div class="jstats"><div class="js ${st.risk?"warn":""}"><span class="flame">${FLAME}</span><b>${st.cur}</b><small>${st.cur===1?"dia":"dias"} seguidos</small></div><div class="js"><b>${st.best}</b><small>melhor ofensiva</small></div><div class="js"><b>${st.shields}</b><small>${st.shields===1?"escudo":"escudos"} de ofensiva</small></div></div>
   <p class="muted" style="font-size:13px;margin:8px 2px 0">${st.risk?`<b style="color:var(--bad)">Sua ofensiva acaba hoje.</b> Estude qualquer coisa: uma meta, 1 questão ou 1 cartão já conta.`:st.cur?"Hoje já conta. Volte amanhã.":"Estude hoje para começar uma ofensiva."} Cada 7 dias seguidos dão 1 escudo (máximo 2), que cobre um dia sem estudo sozinho. Folgas marcadas no plano não quebram a ofensiva.</p>
   <div class="sec-h" style="margin-top:28px"><h3>Missões de hoje</h3></div><div class="mis">${miss.map(mrow).join("")}</div>
@@ -2925,6 +3042,7 @@ function planHtml(){
 /* ---------- render ---------- */
 const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"],["lembretes","Lembretes"]];
 function render(){
+  {const t=temaAtual();document.documentElement.dataset.tema=t;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',t==='olimpo'?'#14284f':'#087a40')}
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
@@ -2939,7 +3057,7 @@ function render(){
   ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
     <div class="sw">${fb.on&&sync!=="erro"?"":`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}${fb.on?"":`<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button>`}</div></header>`:`<div class="mgap"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
-  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav></aside></div>`:""}`;
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div></div></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
@@ -3290,6 +3408,7 @@ document.addEventListener("click",e=>{
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
   if(a.slice(0,3)==="nt-"&&ntClick(a,t))return;
+  if(a==="tema"){LS.set("painel-tema",t.dataset.v);if(demo)render();else cfgSave({tema:t.dataset.v});return}
   if(a==="fz"){fzStep(+t.dataset.d);return}
   if(a==="pf-go"){const e=document.getElementById("pf-"+t.dataset.v);if(e)e.scrollIntoView({behavior:"smooth",block:"start"});return}
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}

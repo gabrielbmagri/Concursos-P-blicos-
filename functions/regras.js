@@ -21,6 +21,19 @@ const FRASES = [
   "Uma questão por dia não aprova ninguém. Faça cinquenta."
 ];
 
+const MEDITACOES = [
+  ["Ao amanhecer, quando custar levantar, pense: levanto para fazer o trabalho de um ser humano.", "Marco Aurélio, Meditações"],
+  ["O que está no caminho se torna o caminho.", "Marco Aurélio, Meditações"],
+  ["Não perca tempo discutindo como deve ser um homem bom. Seja um.", "Marco Aurélio, Meditações"],
+  ["Não é que tenhamos pouco tempo: é que perdemos muito.", "Sêneca, Sobre a brevidade da vida"],
+  ["Enquanto adiamos, a vida passa.", "Sêneca, Cartas a Lucílio"],
+  ["Primeiro diga a si mesmo o que você quer ser; depois faça o que tem de fazer.", "Epicteto, Discursos"],
+  ["Diante da virtude, os deuses puseram o suor.", "Hesíodo, Os Trabalhos e os Dias"],
+  ["Somos o que fazemos repetidamente. A excelência não é um ato, é um hábito.", "Will Durant, sobre Aristóteles"],
+  ["Ora et labora: reza e trabalha.", "Regra de São Bento"],
+  ["Tudo posso naquele que me fortalece.", "Filipenses 4,13"]
+];
+const meditacao = (data) => { let h = 0; for (const c of data) h = (h * 31 + c.charCodeAt(0)) >>> 0; return MEDITACOES[h % MEDITACOES.length]; };
 const pad = (n) => String(n).padStart(2, "0");
 function partes(d) {
   const f = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
@@ -79,7 +92,7 @@ function gerar({ estado: e, cfg, agora, log }) {
     if (akPend) l.push(`Anki: ${akPend} cartões.`);
     const f = frase(hoje, "m");
     add("manha", `manha|${hoje}`, `Bom dia! Faltam ${dp} dias para a prova`, `${l.join(" ")} ${f}`.slice(0, 230),
-      { assunto: `Seu dia de estudo: faltam ${dp} dias para a prova`, html: emailHtml(`Faltam ${dp} dias para a prova`, [...l.map(esc), `<b>${esc(f)}</b>`, st.cur ? `Ofensiva atual: ${plural(st.cur, "dia", "dias")}.` : "Comece hoje uma nova ofensiva."]) });
+      { assunto: `Seu dia de estudo: faltam ${dp} dias para a prova`, html: emailHtml(`Faltam ${dp} dias para a prova`, [...l.map(esc), `<b>${esc(f)}</b>`, `<i>“${esc(meditacao(hoje)[0])}”</i><br><small>${esc(meditacao(hoje)[1])}</small>`, st.cur ? `Ofensiva atual: ${plural(st.cur, "dia", "dias")}.` : "Comece hoje uma nova ofensiva."]) });
   }
   if (on("duro") && janela("duro") && !estudouHoje) {
     add("duro", `duro|${hoje}`, "Você ainda não estudou hoje", frase(hoje, "d") + " Abra o painel e faça pelo menos uma meta.");
