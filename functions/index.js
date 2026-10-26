@@ -20,7 +20,7 @@ async function enviarEmail(cfg, item) {
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${RESEND_API_KEY.value()}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: "Rumo ao Olimpo <onboarding@resend.dev>", to: [e.addr], subject: item.email.assunto, html: item.email.html })
+    body: JSON.stringify({ from: "Atlas <onboarding@resend.dev>", to: [e.addr], subject: item.email.assunto, html: item.email.html })
   });
   if (!r.ok) console.error("email", r.status, await r.text());
   return r.ok;
@@ -88,7 +88,7 @@ exports.teste = onDocumentWritten({ document: "usuarios/{uid}/notif/pedido", reg
     return;
   }
   const fr = FRASES[Math.floor(Math.random() * FRASES.length)];
-  const item = { tipo: "teste", titulo: "Teste do Atlas", corpo: `Está funcionando. ${fr}`, email: { assunto: "Rumo ao Olimpo · teste", html: emailHtml({ titulo: "Está funcionando", sub: "Este é um teste do seu e-mail do Rumo ao Olimpo.", destaque: { rotulo: "Recado", texto: fr }, botao: "Abrir o painel" }) } };
+  const item = { tipo: "teste", titulo: "Teste do Atlas", corpo: `Está funcionando. ${fr}`, email: { assunto: "Atlas · teste", html: emailHtml({ titulo: "Está funcionando", sub: "Este é um teste do seu e-mail do Atlas.", destaque: { rotulo: "Recado", texto: fr }, botao: "Abrir o painel" }) } };
   const n = await enviarPush(uid, cfg, item), m = await enviarEmail(cfg, item).catch((err) => { console.error(err); return false; });
   await db.doc(`usuarios/${uid}/notif/servidor`).set({ ultimoTeste: Date.now(), testePush: n, testeEmail: m }, { merge: true });
 });

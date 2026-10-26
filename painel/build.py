@@ -17,6 +17,7 @@ data = {
     "prova": src["meta"]["prova"],
     "fol": src["meta"].get("dias_sem_estudo", []),
     "ideias": src["meta"].get("ideias_discursiva", []),
+    "med": json.load(open(root.parent / "dados" / "meditacoes.json", encoding="utf-8")),
     "info": json.load(open(root.parent / "dados" / "informacoes.json", encoding="utf-8")),
     "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "i": src["meta"]["revisoes"]["itens"], "pd": src["meta"]["revisoes"].get("por_desempenho")},
     "mat": {k: {"n": v["nome"], "p": v["prova"]} for k, v in src["meta"]["materias"].items()},
@@ -40,4 +41,5 @@ head = ('<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'
         '<script src="firebase-config.js"></script>'
         '<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body>')
 (root / "index.html").write_text(head + frag + "</body></html>", encoding="utf-8")
+(root.parent / "functions" / "meditacoes.json").write_text((root.parent / "dados" / "meditacoes.json").read_text(encoding="utf-8"), encoding="utf-8")
 print("ok", len(frag) // 1024, "KB")

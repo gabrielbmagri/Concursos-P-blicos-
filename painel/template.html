@@ -2927,41 +2927,10 @@ const LVN_O=["Acólito","Discípulo do Pórtico","Hoplita","Cavaleiro de Bronze"
 const LVD_O=["Serve no altar do saber e aprende o ritual da rotina.","Estuda no Pórtico: o obstáculo é o caminho.","Marcha em formação, com disciplina e escudo erguido.","Primeira armadura. Cada meta forja uma peça.","Armadura de prata: a constância virou hábito.","Veste de ouro: domina o edital e a pegadinha.","Fúria indomável: não recua diante de nenhuma questão.","Coroado de louros: o Olimpo reconhece o esforço.","Atlas da República: carrega o Estado nos ombros."];
 const lvNames=()=>isOl()?LVN_O:LVN;
 const lvDesc=i=>(isOl()?LVD_O:LVD)[i];
-const MED=[
- ["Ao amanhecer, quando custar levantar, pense: levanto para fazer o trabalho de um ser humano.","Marco Aurélio, Meditações"],
- ["O que está no caminho se torna o caminho.","Marco Aurélio, Meditações"],
- ["Não perca tempo discutindo como deve ser um homem bom. Seja um.","Marco Aurélio, Meditações"],
- ["Sua mente terá a cor dos seus pensamentos habituais.","Marco Aurélio, Meditações"],
- ["Não aja como se tivesse dez mil anos pela frente. A morte paira sobre você: enquanto pode, seja bom.","Marco Aurélio, Meditações"],
- ["Faça agora o que tem de ser feito, com seriedade, sem queixa e com justiça.","Marco Aurélio, Meditações (adaptado)"],
- ["Não é que tenhamos pouco tempo: é que perdemos muito.","Sêneca, Sobre a brevidade da vida"],
- ["Enquanto adiamos, a vida passa.","Sêneca, Cartas a Lucílio"],
- ["Sofremos mais na imaginação do que na realidade.","Sêneca, Cartas a Lucílio"],
- ["Não são as coisas que perturbam os homens, mas a opinião que têm delas.","Epicteto, Manual"],
- ["Primeiro diga a si mesmo o que você quer ser; depois faça o que tem de fazer.","Epicteto, Discursos"],
- ["Somos o que fazemos repetidamente. A excelência não é um ato, é um hábito.","Will Durant, sobre Aristóteles"],
- ["Diante da virtude, os deuses puseram o suor.","Hesíodo, Os Trabalhos e os Dias"],
- ["Uma vida sem reflexão não vale a pena ser vivida.","Sócrates, Apologia"],
- ["A alma do preguiçoso deseja e nada alcança, mas a dos diligentes se farta.","Provérbios 13,4"],
- ["Vai ter com a formiga, preguiçoso: observa os seus caminhos e torna-te sábio.","Provérbios 6,6"],
- ["Tudo posso naquele que me fortalece.","Filipenses 4,13"],
- ["Quem semeia com lágrimas colherá com alegria.","Salmo 126,5"],
- ["Tudo tem o seu tempo, e há tempo para cada coisa debaixo do céu.","Eclesiastes 3,1"],
- ["Ora et labora: reza e trabalha.","Regra de São Bento"],
- ["O homem que move montanhas começa carregando pequenas pedras.","Provérbio, atribuído a Confúcio"],
- ["Seja a rocha contra a qual as ondas se quebram: ela fica de pé e acalma a água em volta.","Marco Aurélio, Meditações (adaptado)"],
- ["A felicidade de uma vida depende da qualidade dos seus pensamentos.","Marco Aurélio, Meditações (adaptado)"],
- ["Prepare-se de manhã para o que o dia exigir, e a tarde não te encontrará de mãos vazias.","Estoicismo, adaptado"],
- ["Nenhum vento sopra a favor de quem não sabe para onde vai.","Sêneca, Cartas a Lucílio (adaptado)"],
- ["O medo de sofrer é pior do que o próprio sofrimento.","Sêneca (adaptado)"],
- ["Conhece-te a ti mesmo.","Inscrição no templo de Apolo, em Delfos"],
- ["Nada em excesso.","Inscrição no templo de Apolo, em Delfos"],
- ["Dificuldades fortalecem a mente, como o trabalho fortalece o corpo.","Sêneca, Sobre a Providência (adaptado)"],
- ["Quem tem um porquê enfrenta quase qualquer como.","Nietzsche, sobre Viktor Frankl"]
-];
+const MED=D.med;
 const medHoje=()=>MED[parseInt(hstr(ymd(today())),36)%MED.length];
 const COLUNA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 18h14M7 18V9M11 18V9M13 18V9M17 18V9M4 9h16M6 6l6-3.500L18 6z"/></svg>';
-function medCard(){const m=medHoje();return `<section class="med" aria-label="Meditação do dia">${COLUNA}<small>Meditação do dia</small><q>${esc(m[0])}</q><small class="au">${esc(m[1])}</small></section>`}
+function medCard(){const m=medHoje();return `<section class="med" aria-label="Meditação do dia">${COLUNA}<small>Meditação do dia${m[2]?` · ${esc(m[2])}`:""}</small><q>${esc(m[0])}</q><small class="au">${esc(m[1])}</small></section>`}
 function avatarOl(lv,mood,px){
   const skin="#efc29a",dk="#2b2118",tired=mood==="cansado";
   const BG=[["#fbf3d9","#efe0ae"],["#e8eef8","#c9d6ee"],["#f4dccb","#e3b79a"],["#f2dcc2","#cf9a62"],["#e8edf4","#aeb9c9"],["#fff3c2","#f1c94e"],["#4a2229","#14090c"],["#d8ecfb","#8fc3ec"],["#14284f","#2c4d8f"]][lv];
