@@ -1,5 +1,5 @@
 <title>Atlas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -327,7 +327,7 @@ select:focus,.in:focus{outline:3px solid var(--blue);outline-offset:0}
 .soon p{max-width:52ch;margin:10px auto 0;color:var(--fg2)}
 .login{max-width:380px;margin:7vh auto 0;padding:0 8px;text-align:center;color:var(--fg)}
 .login .lg-mark{display:block;width:auto;height:clamp(170px,30vh,250px);margin:0 auto 12px}
-.login .lg-t{font:400 clamp(60px,18vw,78px)/1 "Great Vibes","Snell Roundhand","Brush Script MT",cursive;margin:0;color:var(--fg)}
+.login .lg-t{font:400 clamp(60px,18vw,78px)/1 "Pinyon Script","Snell Roundhand","Brush Script MT",cursive;margin:0;color:var(--fg)}
 .login .eyebrow{margin-top:8px;color:var(--fg3)}
 .login .sub{margin:26px 0 18px;font-size:14px;font-weight:600;color:var(--fg2)}
 .login input.in{display:block;width:100%;margin-top:10px;padding:15px 18px;border:1.5px solid var(--line);border-radius:16px;background:var(--bg);color:var(--fg);font-size:16px;box-shadow:none;text-align:left}
@@ -609,12 +609,29 @@ html[data-modo="escuro"] .jmini{background:linear-gradient(135deg,#222b25,#2b2a2
 html[data-tema="olimpo"] .btn.conc{background:linear-gradient(135deg,#a87a0c,#d4a72c);color:#1f1604;box-shadow:0 8px 20px rgba(168,122,12,.4),inset 0 1px 0 rgba(255,255,255,.35)}html[data-tema="olimpo"] .btn.conc .ck{background:rgba(31,22,4,.2)}html[data-tema="olimpo"] .btn.conc .ck svg{stroke:#1f1604}
 
 .hleft{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
-.atlas-t{font:400 clamp(50px,15vw,64px)/.95 "Great Vibes","Snell Roundhand","Brush Script MT",cursive;color:var(--fg);letter-spacing:.01em;padding-left:2px;margin-bottom:2px}
+.atlas-t{font:400 clamp(50px,15vw,64px)/.95 "Pinyon Script","Snell Roundhand","Brush Script MT",cursive;color:var(--fg);letter-spacing:.01em;padding-left:2px;margin-bottom:2px}
 .demo-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--fg3)}
 html[data-tema="olimpo"] .atlas-t{color:#14284f}html[data-modo="escuro"] .atlas-t,html[data-tema="olimpo"][data-modo="escuro"] .atlas-t{color:#ececee}
 html[data-modo="escuro"] .login .lg-mark{filter:invert(1)}html[data-modo="escuro"] .atlas-t{color:#ececee}
 @media (max-width:560px){.hero-head .hleft .wk{margin-top:2px}}
 .login h1.lg-t,html[data-tema] .login h1.lg-t,html[data-modo] .login h1.lg-t{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:var(--fg)!important;color:var(--fg)!important;text-transform:none;letter-spacing:0;font-weight:400;margin-top:4px}
+
+.atlas-t{font:400 clamp(60px,18vw,80px)/.9 "Pinyon Script","Snell Roundhand","Brush Script MT",cursive;margin:-24px 0 12px;padding-left:2px}
+.login .lg-t{font:400 clamp(64px,19vw,84px)/1 "Pinyon Script","Snell Roundhand","Brush Script MT",cursive}
+.wsum{margin-top:18px;padding:16px 16px 14px;border:1px solid var(--line);border-radius:22px;background:var(--bg)}
+.ws-row{display:flex;align-items:center;gap:16px}.ws-big{flex:none;display:flex;flex-direction:column;line-height:1}.ws-big b{font:900 52px/1 var(--display);color:var(--fg2)}.ws-big span{font-size:12px;color:var(--fg3);margin-top:4px}
+.ws-st{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ws-st>div{border-left:3px solid var(--c);padding:2px 0 2px 9px;min-width:0}.ws-st b{display:block;font:900 20px/1.1 var(--display);color:var(--c)}.ws-st span{display:block;font-size:11px;color:var(--fg2);line-height:1.25;margin-top:2px}
+.ws-bar{position:relative;height:12px;border-radius:99px;background:var(--soft2);margin-top:14px;overflow:hidden}.ws-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#16a34a,#22c55e)}.ws-fill.done{background:#15803d}.ws-exp{position:absolute;top:0;bottom:0;width:3px;margin-left:-1px;background:var(--fg);z-index:1;border-radius:2px}
+html[data-tema="olimpo"] .ws-fill{background:linear-gradient(90deg,#b8902a,#d4a72c)}
+.ws-exl{margin-top:6px;font-size:12px;color:var(--fg2)}.ws-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;flex-wrap:wrap}.ws-foot .dots{gap:5px;margin:0}.ws-foot .dots .dt{width:14px;height:14px;border-radius:4px}
+.ws-help{font-size:12px;color:var(--fg3)}.ws-help summary{cursor:pointer;font-weight:700;list-style:none}.ws-help summary::-webkit-details-marker{display:none}.ws-help p{margin:6px 0 0;max-width:34ch;line-height:1.45}
+.kpis.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 2px 12px;margin-inline:-2px;scrollbar-width:thin}.kpis.strip .kpi{flex:0 0 172px;min-height:128px;scroll-snap-align:start}
+.rvdock{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:40;width:min(560px,calc(100% - 24px));background:var(--bg);border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 40px rgba(0,0,0,.22);overflow:hidden;display:flex;flex-direction:column}
+.rvd-h{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;text-align:left}.rvd-c{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:900 16px var(--display)}.rvd-c.late{background:var(--bad)}.rvd-c.ok{background:var(--good)}
+.rvd-t{flex:1;min-width:0;display:flex;flex-direction:column}.rvd-t b{font-size:14.5px}.rvd-t span{font-size:12px;color:var(--fg2)}.rvd-ch{flex:none;width:10px;height:10px;border-right:2.5px solid var(--fg3);border-top:2.5px solid var(--fg3);transform:rotate(-45deg);margin-right:4px;transition:transform .2s}.rvdock.open .rvd-ch,.rvdock.max .rvd-ch{transform:rotate(135deg)}
+.rvd-b{border-top:1px solid var(--line);padding:10px 12px 12px;overflow-y:auto;overscroll-behavior:contain}.rvdock.open .rvd-b{max-height:52vh}.rvdock.max .rvd-b{max-height:calc(100vh - 150px)}
+.rvd-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}.rvd-tools .chip{padding:6px 12px;font-size:12.5px}
+html[data-modo="escuro"] .rvdock{box-shadow:0 14px 40px rgba(0,0,0,.6)}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -1222,17 +1239,8 @@ function homeHtml(){
   const rgS=sel<lastWk&&WK[sel].rg!==0?`<div class="grp"><div class="grp-t"><span>Revisão geral da semana</span><span>${rgItem(sel).done?"1/1":"0/1"}</span></div><ul class="list">${revRow(rgItem(sel))}</ul></div>`:"";
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
-  return `
-  <section class="hero" aria-label="Progresso da semana">
-    <div class="hero-head">
-      <div class="hleft"><div class="atlas-t" aria-label="Atlas">Atlas</div>${fb.on?"":`<div class="demo-row"><span>${demo?"Dados de exemplo ligados":"Dados de exemplo"}</span><button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div>`}
-      <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
-        <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
-        <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div></div>
-      <div class="hside"><div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>${jornadaMini()}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
-    </div>
-    <div class="hero-main">
+  const limpo=layoutAtual()==="limpo";
+  const sumOld=`    <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
         <div class="st" style="--c:${tri(expect>0?frac/expect:null,.9,.6)}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana</small></div>
@@ -1246,12 +1254,8 @@ function homeHtml(){
         ${[25,50,75].map(v=>`<i class="xp-tick" style="left:${v}%"></i>`).join("")}</div>
       <div class="xp-ms">${ms}</div>
     </div>
-    ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}
-    ${canUnlock?`<div class="unlock"><div><b>Semana ${LIB+1} concluída</b><span>Libere a semana ${LIB+2} para continuar.</span></div><button class="btn" data-act="unlock-next">Liberar a semana ${LIB+2}</button></div>`:""}
-    ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div>${goalHtml(cs.m,"mini")}</div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
-  </section>
-
-  <section class="kpis" aria-label="Indicadores">
+    ${isCur&&expect<1&&!fb.on?`<p class="xp-cap">O traço "esperado hoje" mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7, então ${expP}%. Você está em ${pctW}%${diff>0?`, ${diff} pontos à frente`:diff<0?`, ${-diff} pontos atrás`:", exatamente no ritmo"}.</p>`:""}`;
+  const kpiSec=`  <section class="kpis" aria-label="Indicadores">
     <div class="kpi blue"><div class="lab">Desempenho</div><div class="num">${pc(accT)}</div>
       <div class="sub">${nItems?`${num(A.tot.c)} acertos em ${num(nItems)} questões`:"Registre suas questões"}</div>
       <div class="viz">${sparkLine(accSeries.map(v=>v==null?null:v*100),"#fff")}</div></div>
@@ -1280,24 +1284,51 @@ function homeHtml(){
       <div class="viz">${weak?`<div class="bar2"><i style="width:${weak.r*100}%"></i></div>`:""}</div></div>
     <div class="kpi slate"><div class="lab">Tempo por meta na semana</div><div class="num" style="font-size:clamp(22px,6vw,32px)">${DW.length?fmtDur(avgDur(DW)):"–"}</div><div class="sub">${DW.length?`média de ${DW.length} ${DW.length===1?"meta concluída":"metas concluídas"} na semana ${sel+1}`:"Aparece quando você concluir uma meta que começou pelo modo estudando"}</div></div>
     <div class="kpi indigo"><div class="lab">Tempo por meta, geral</div><div class="num" style="font-size:clamp(22px,6vw,32px)">${DA.length?fmtDur(avgDur(DA)):"–"}</div><div class="sub">${DA.length?`média de ${DA.length} ${DA.length===1?"meta":"metas"}, do primeiro toque até concluir`:"Média de todas as semanas"}</div></div>
-  </section>
-
-  <section class="sec" aria-label="Panorama da semana">
+  </section>`;
+  const panSec=`  <section class="sec" aria-label="Panorama da semana">
     <div class="sec-h"><h2>Panorama da semana</h2><span class="muted" style="font-size:13px">Um quadrado por meta: cheio é concluída, metade é em andamento</span></div>
     <div class="dots">${dots}</div>
     ${movedOut?`<p class="muted" style="font-size:13px;margin:10px 0 0">${movedOut} ${movedOut===1?"meta foi adiada":"metas foram adiadas"} para outra semana.</p>`:""}
     ${w.obs?`<div class="banner">${esc(w.obs)}</div>`:""}
-  </section>
-
-  <section class="sec" aria-label="Revisões de hoje">
+  </section>`;
+  const revSec=`  <section class="sec" aria-label="Revisões de hoje">
     <div class="sec-h"><h2>Revisões de hoje</h2><button class="chip" data-act="tab" data-v="revisoes">Ver todas${open.length?` (${open.length})`:""}</button></div>
     ${dueNow?`<ul class="list" style="border-top:2px solid var(--fg)">${[...over,...tod].slice(0,5).map(revRow).join("")}</ul>${dueNow>5?`<p class="muted" style="font-size:13px;margin:8px 2px 0">e mais ${dueNow-5} na aba Revisões</p>`:""}`:`<div class="empty">${open.length?`Nenhuma revisão vencida. A próxima é em ${fmtDay(open.slice().sort((a,b)=>a.due-b.due)[0].due)}.`:"Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 7 dias depois."}</div>`}
-  </section>
-
-  <section class="sec" aria-label="Metas da semana">
+  </section>`;
+  const metSec=`  <section class="sec" aria-label="Metas da semana">
     <div class="sec-h"><h2>Metas da semana</h2><button class="chip" data-act="only" aria-pressed="${onlyPend}">Só pendentes</button></div>
     <div class="cols"><div class="stack">${sect("estudo")}</div><div class="stack">${sect("aval")}${sect("dom")}${rgS}</div></div>
+  </section>`;
+  const kpiStrip=kpiSec.replace('<section class="kpis" aria-label="Indicadores">','<section class="kpis strip" aria-label="Indicadores" style="margin-top:26px">');
+  const panNote=`${movedOut?`<p class="muted" style="font-size:13px;margin:12px 2px 0">${movedOut} ${movedOut===1?"meta foi adiada":"metas foram adiadas"} para outra semana.</p>`:""}${w.obs?`<div class="banner">${esc(w.obs)}</div>`:""}`;
+  const sumNew=`<div class="wsum">
+    <div class="ws-row"><div class="ws-big"><b>${ws.done}</b><span>de ${ws.n} metas</span></div>
+      <div class="ws-st">
+        <div style="--c:${tri(expect>0?frac/expect:null,.9,.6)}"><b>${pctW}%</b><span>concluído</span></div>
+        <div style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><b>${num(ws.q)}</b><span>${ws.pi?`de ${num(ws.pi)} questões`:"questões"}</span></div>
+        <div style="--c:${tri(accW,PD.faixas.excelente,PD.faixas.razoavel)}"><b>${pc(accW)}</b><span>desempenho</span></div></div></div>
+    <div class="ws-bar" role="progressbar" aria-valuenow="${pctW}" aria-valuemin="0" aria-valuemax="100" aria-label="Metas concluídas na semana">${isCur&&expect<1?`<i class="ws-exp" style="left:${expect*100}%"></i>`:""}<div class="ws-fill ${frac>=1?"done":""}" style="width:${Math.max(0,Math.min(100,frac*100))}%"></div></div>
+    ${isCur&&expect<1?`<div class="ws-exl">Esperado hoje: ${expP}%${diff>0?` · ${diff} pontos à frente`:diff<0?` · ${-diff} pontos atrás`:" · no ritmo"}</div>`:""}
+    <div class="ws-foot"><div class="dots">${dots}</div>${isCur&&expect<1&&!fb.on?`<details class="ws-help"><summary>Como ler</summary><p>O traço no fim da barra mostra onde você estaria se concluísse o mesmo tanto de metas a cada dia: hoje é o dia ${dayN} de 7. Cada quadrado é uma meta: cheio é concluída, metade é em andamento.</p></details>`:""}</div></div>`;
+  return `
+  <section class="hero" aria-label="Progresso da semana">
+    <div class="hero-head">
+      <div class="hleft"><div class="atlas-t" aria-label="Atlas">Atlas</div>${fb.on?"":`<div class="demo-row"><span>${demo?"Dados de exemplo ligados":"Dados de exemplo"}</span><button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div>`}
+      <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
+        <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
+        <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div></div>
+      <div class="hside"><div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>${jornadaMini()}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
+    </div>
+    ${limpo?sumNew:sumOld}
+    ${canUnlock?`<div class="unlock"><div><b>Semana ${LIB+1} concluída</b><span>Libere a semana ${LIB+2} para continuar.</span></div><button class="btn" data-act="unlock-next">Liberar a semana ${LIB+2}</button></div>`:""}
+    ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div>${goalHtml(cs.m,"mini")}</div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
+
+${limpo?"":kpiSec}
+${limpo?"":panSec}
+${limpo?"":revSec}
+${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec}
   <div style="margin-top:28px">${medCard()}</div>`;
 }
 
@@ -2868,6 +2899,16 @@ const jcWeek=(act,n)=>{const T=today();let o="";for(let i=n-1;i>=0;i--){const d=
 /* ---------- tema Olimpo: Grécia, estoicismo e a jornada do acólito ---------- */
 const temaAtual=()=>(real["cfg-semana"]||{}).tema||LS.get("painel-tema")||"olimpo";
 const isOl=()=>temaAtual()==="olimpo";
+const layoutAtual=()=>(real["cfg-semana"]||{}).layout||LS.get("painel-layout")||"limpo";
+let rvDock=LS.get("painel-rvdock")||"min";
+function rvDockHtml(over,tod,dueNow,open){
+  const L=[...over,...tod],st=rvDock;
+  return `<div class="rvdock ${st}" role="complementary" aria-label="Revisões de hoje">
+    <button class="rvd-h" data-act="rv-dock" data-v="${st==="min"?"open":"min"}" aria-expanded="${st!=="min"}"><span class="rvd-c ${over.length?"late":dueNow?"":"ok"}">${dueNow||"✓"}</span><span class="rvd-t"><b>Revisões de hoje</b><span>${dueNow?`${dueNow} ${dueNow===1?"pendente":"pendentes"}${over.length?` · ${over.length} ${over.length===1?"atrasada":"atrasadas"}`:""}`:"tudo em dia"}</span></span><i class="rvd-ch" aria-hidden="true"></i></button>
+    ${st!=="min"?`<div class="rvd-b"><div class="rvd-tools"><button class="chip" data-act="rv-dock" data-v="${st==="max"?"open":"max"}">${st==="max"?"Reduzir":"Maximizar"}</button><button class="chip" data-act="rv-dock" data-v="min">Minimizar</button><button class="chip" data-act="tab" data-v="revisoes">Ver todas${open.length?` (${open.length})`:""}</button></div>
+      ${L.length?`<ul class="list">${L.slice(0,st==="max"?40:6).map(revRow).join("")}</ul>${L.length>(st==="max"?40:6)?`<p class="muted" style="font-size:13px;margin:8px 2px 0">e mais ${L.length-(st==="max"?40:6)} na aba Revisões</p>`:""}`:`<div class="empty">Nenhuma revisão para hoje. ${open.length?`Próxima em ${fmtDay(ymd(open.filter(r=>!r.done).sort((a,b)=>a.due-b.due)[0].due))}.`:""}</div>`}</div>`:""}
+  </div>`;
+}
 const modoPref=()=>(real["cfg-semana"]||{}).modo||LS.get("painel-modo")||"claro";
 const modoAtual=()=>{const m=modoPref();return m==="auto"?(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro"):m};
 if(window.matchMedia)try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{if(modoPref()==="auto")render()})}catch(e){}
@@ -3221,7 +3262,7 @@ function render(){
   <div class="mgap"></div>
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${upd.novo?`<div class="updbar" role="status"><span>Nova versão disponível</span><button data-act="upd">Atualizar</button></div>`:""}
-  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Página inicial</span><div class="bbseg" role="group" aria-label="Layout da página inicial"><button data-act="layout" data-v="limpo" aria-pressed="${layoutAtual()==="limpo"}">Limpa</button><button data-act="layout" data-v="completo" aria-pressed="${layoutAtual()==="completo"}">Completa</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
@@ -3620,6 +3661,8 @@ document.addEventListener("click",e=>{
   if(a==="setpass"){doSetPass();return}
   if(a.slice(0,3)==="nt-"&&ntClick(a,t))return;
   if(a==="upd"){reloadApp();return}
+  if(a==="layout"){LS.set("painel-layout",t.dataset.v);if(demo)render();else cfgSave({layout:t.dataset.v});return}
+  if(a==="rv-dock"){rvDock=t.dataset.v;LS.set("painel-rvdock",rvDock);render();return}
   if(a==="modo"){LS.set("painel-modo",t.dataset.v);if(demo)render();else cfgSave({modo:t.dataset.v});return}
   if(a==="tema"){LS.set("painel-tema",t.dataset.v);if(demo)render();else cfgSave({tema:t.dataset.v});return}
   if(a==="fz"){fzStep(+t.dataset.d);return}
