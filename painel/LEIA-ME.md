@@ -62,3 +62,8 @@ Veja `dados/REORGANIZAR.md`. Em resumo: edite `dados/plano.json` (metas por sema
 - A aba Desempenho reúne tudo em uma página: Resumo, O que fazer (recomendações automáticas), Tempo, Questões, Matérias, Metas, Anki e Subtópicos.
 - Nas sessões de questões e de Anki há botões A− e A+ para o tamanho da letra.
 - Na Biblioteca, o Caderno de erros guarda o gabarito comentado de toda questão que você errou.
+
+## Jornada e lembretes
+
+- A aba Jornada tem a ofensiva (dias seguidos, com 1 escudo a cada 7 dias seguidos, máximo 2), o XP, o personagem que evolui de Curioso do Edital até Servidor Público, as missões do dia e as conquistas. As folgas do plano (`dias_sem_estudo`) não quebram a ofensiva.
+- A aba Lembretes configura notificações push e e-mail. O servidor que envia os avisos está em `functions/` e o passo a passo para ligá-lo está em `functions/LEMBRETES.md`.

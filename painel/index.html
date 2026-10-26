@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffffff"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas"><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script><script src="firebase-config.js"></script><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body><title>Painel de Metas</title>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#087a40"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Metas"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="icon" href="icon-192.png"><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging-compat.js"></script><script src="firebase-config.js"></script><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style></head><body><title>Painel de Metas</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
@@ -156,6 +156,9 @@ section .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media (min-
 .path{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x proximity}.pth{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:14px 10px;border:1px solid var(--line);border-radius:20px}.pth .pa{width:58px;height:58px;border-radius:50%;overflow:hidden;display:block}.pth b{font-size:14px}.pth small{font-size:11.5px;color:var(--fg2);line-height:1.3}.pth.lock{opacity:.5;filter:grayscale(1)}.pth.cur{border:2px solid var(--good);background:var(--good-t);box-shadow:0 6px 16px rgba(11,122,60,.2)}.pth.done{background:#f7fbf8}
 .badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media (min-width:640px){.badges{grid-template-columns:repeat(3,minmax(0,1fr))}}.bdg{position:relative;display:flex;flex-direction:column;gap:2px;padding:12px 12px 10px 48px;border:1px solid var(--line);border-radius:16px;opacity:.7}.bdg.on{opacity:1;background:linear-gradient(135deg,#fff8dc,#fff);border-color:#f0dc8a}.bdg .bi2{position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--soft2);display:grid;place-items:center}.bdg.on .bi2{background:#f2c200}.bdg .bi2 svg{width:14px;height:14px;stroke:#fff}.bdg b{font-size:13.5px}.bdg small{font-size:11.5px;color:var(--fg2)}.bdg em{font-style:normal;font-size:11px;font-weight:800;color:var(--fg3)}.bdg.on em{color:#8a6200}
 @media (max-width:420px){.jh-a{width:104px;height:104px}.jh-a svg{width:104px;height:104px}.jh-b h3{font-size:20px}}
+.ntc{display:flex;flex-direction:column;gap:3px;margin-top:10px;padding:14px 16px;border:1px solid var(--line);border-radius:18px;background:var(--soft)}.ntc>b{font-size:15px}.ntc>span{font-size:13px;color:var(--fg2);line-height:1.45}.ntc.ok{background:var(--good-t);border-color:#b8e3c6}.ntc.off{background:#fff4e0;border-color:#f1d49a}
+.ntr{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0}.ntr>div{min-width:0}.ntr b{display:block;font-size:14.5px}.ntr span{display:block;font-size:12.5px;color:var(--fg2);line-height:1.4;margin-top:2px}
+.ntl{display:flex;flex-direction:column;gap:10px}.nti{border:1px solid var(--line);border-radius:18px;padding:6px 16px 12px}.nth{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--fg2)}.nth input{width:auto;padding:6px 10px;border:1.5px solid var(--line);border-radius:10px;font:600 14px var(--font)}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -605,7 +608,10 @@ function initFirebase(){
         fb.sunsub=fb.scol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});SM=m;fb.sReady=true;maybeBackup();render()},()=>{fb.sReady=true;maybeBackup()});
         fb.qcol=ub.collection("questoes");fb.qunsub=fb.qcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});QS=m;render()},()=>{});
         fb.funsub=fb.fcol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});FILES=m;render()},()=>{});
-      }else{fb.col=null;fb.scol=fb.fcol=fb.pcol=fb.qcol=null;real={};CARDS={};REVD={};SM={};FILES={};QS={};persistLocal()}
+        fb.ncol=ub.collection("notif");if(fb.nunsub)fb.nunsub();
+        fb.nunsub=fb.ncol.onSnapshot(sn=>{const m={};sn.forEach(d=>{m[d.id]=d.data()});NT=m;if(tab==="lembretes")render()},()=>{});
+        ntListen();
+      }else{if(fb.nunsub){fb.nunsub();fb.nunsub=null}fb.ncol=null;NT={};fb.col=null;fb.scol=fb.fcol=fb.pcol=fb.qcol=null;real={};CARDS={};REVD={};SM={};FILES={};QS={};persistLocal()}
       render();
     });
     return true;
@@ -2719,6 +2725,109 @@ function jornadaHtml(){
   <div class="sec-h" style="margin-top:28px"><h3>Conquistas</h3><span class="muted" style="font-size:13px">${nOk} de ${B.length}</span></div>
   <div class="badges">${B.map(([t,d,ok,pg])=>`<div class="bdg ${ok?"on":""}"><span class="bi2">${ok?CHECK:""}</span><b>${t}</b><small>${d}</small><em>${ok?"conquistada":pg}</em></div>`).join("")}</div></section>`;
 }
+
+/* ---------- lembretes: notificações push e e-mail ---------- */
+let NT={};
+const nt={msg:"",err:"",busy:false,last:"",lastAt:0};
+const NTR=[
+ ["manha","Resumo do dia","O que estudar hoje: metas, revisões e Anki, com a contagem para a prova.","07:00"],
+ ["duro","Cutucada dura","Se até a hora marcada você ainda não estudou nada hoje. Frase sem dó.","14:00"],
+ ["revisoes","Revisões pendentes","Revisões do dia ou atrasadas ainda por fazer.","17:00"],
+ ["questoes","Questões da meta","Meta em andamento com menos de 50 questões feitas.","18:30"],
+ ["anki","Anki do dia","Cartões vencidos que ainda não foram revisados hoje.","19:00"],
+ ["ofensiva","Ofensiva em risco","Quando você está prestes a perder os dias seguidos.","20:00"],
+ ["meta_dia","Meta do dia","Se as metas de hoje não foram batidas.","21:00"],
+ ["semana","Fechamento da semana","Sábado: o que falta para fechar a semana. Domingo: resumo da semana.","18:00"],
+ ["prazos","Contagem da prova","Avisos a 100, 60, 30, 14, 7, 3 e 1 dia da prova.","08:00"],
+ ["demora","Meta demorando","Quando uma meta em estudo passa do tempo limite abaixo.",""]
+];
+const ntCfg=()=>{const c=NT.config||{};return {push:c.push!==false,email:{ativo:!!(c.email&&c.email.ativo),addr:(c.email&&c.email.addr)||(fb.user&&fb.user.email)||"",manha:!c.email||c.email.manha!==false,semana:!c.email||c.email.semana!==false,prazos:!c.email||c.email.prazos!==false},horas:Object.fromEntries(NTR.map(r=>[r[0],(c.horas&&c.horas[r[0]])||r[3]])),regras:Object.fromEntries(NTR.map(r=>[r[0],!c.regras||c.regras[r[0]]!==false])),horasMeta:c.horasMeta||3,tokens:c.tokens||{}}};
+function ntSave(patch){
+  if(!fb.on||!fb.user)return Promise.resolve();
+  return fb.ncol.doc("config").set(patch,{merge:true});
+}
+function ntSnapshot(){
+  const T=ymd(today()),J=jc(),M=missionsCalc(),cw=A.cw,w=WK[cw],ws=weekStats(cw),aks=AKS||akStats(),cs=curStudy();
+  const L=(WM[cw]||[]).filter(m=>grp(m)!=="dom");
+  const metaQ=ALL.filter(m=>goalOf(m)&&!hid(m)&&m.wi<=cw&&((P()[m.id]||{}).st||(isDone(m)&&(P()[m.id]||{}).dt&&dday(today(),pd(P()[m.id].dt))<=7))&&tot_(itemsOf(m))<goalOf(m)).slice(0,5).map(m=>({n:m.a,f:tot_(itemsOf(m)),g:goalOf(m)}));
+  return {v:1,hoje:T,prova:D.prova,folgas:FOL,
+    streak:{cur:J.st.cur,best:J.st.best,shields:J.st.shields,last:J.st.last},
+    xp:{xp:J.xp.xp,nivel:J.xp.lv+1,nome:J.xp.name},
+    sem:{n:cw+1,ini:w.i,fim:w.f,total:L.length,feitas:L.filter(isDone).length,qf:ws.q,qp:ws.pi},
+    dia:{alvo:M.alvo,feitas:M.doneT,rv:M.rv,ak:M.ak,q:M.q},
+    proximas:L.filter(m=>!isDone(m)).slice(0,4).map(m=>m.a),
+    revs:RL.filter(r=>!r.done).slice(0,40).map(r=>({n:r.rg?`Revisão geral da semana ${r.wi+1}`:r.b.a,due:ymd(r.due)})),
+    estudando:cs?{n:cs.m.a,desde:cs.st}:null,metaQ};
+}
+function ntSync(){
+  if(!fb.on||!fb.user||!fb.ncol||!fb.pReady||demo||!A)return;
+  const n=Date.now();if(n-nt.lastAt<30000)return;
+  let snap;try{snap=JSON.parse(JSON.stringify(ntSnapshot()))}catch(e){return}
+  const key=JSON.stringify(snap);
+  if(key===nt.last&&n-nt.lastAt<600000)return;
+  nt.last=key;nt.lastAt=n;
+  fb.ncol.doc("estado").set({...snap,upd:n}).catch(()=>{});
+}
+async function ntPushOn(){
+  nt.msg="";nt.err="";nt.busy=true;render();
+  try{
+    if(!fb.on||!fb.user)throw new Error("Entre na sua conta para ativar as notificações.");
+    if(!("Notification" in window)||!("serviceWorker" in navigator)||!firebase.messaging||!firebase.messaging.isSupported())throw new Error("Este navegador não aceita notificações. No iPhone, instale o painel na tela inicial (Compartilhar, Adicionar à Tela de Início) e abra por lá.");
+    const perm=await Notification.requestPermission();
+    if(perm!=="granted")throw new Error("A permissão foi negada. Libere as notificações deste site nas configurações do navegador e tente de novo.");
+    const reg=await navigator.serviceWorker.register("/firebase-messaging-sw.js");
+    await navigator.serviceWorker.ready;
+    const token=await firebase.messaging().getToken({serviceWorkerRegistration:reg});
+    if(!token)throw new Error("Não consegui registrar este aparelho.");
+    await ntSave({push:true,tokens:{[hstr(token)]:{t:token,ua:navigator.userAgent.slice(0,140),dt:T0()}}});
+    LS.set("painel-push-token",token);ntListen();
+    nt.msg="Notificações ativadas neste aparelho.";
+  }catch(e){nt.err=String(e.message||e)}
+  nt.busy=false;render();
+}
+function ntListen(){
+  try{if(nt.on||!firebase.messaging||!firebase.messaging.isSupported()||Notification.permission!=="granted")return;nt.on=true;
+    firebase.messaging().onMessage(p=>{const n=p.notification||{};navigator.serviceWorker.getRegistration("/firebase-messaging-sw.js").then(r=>{if(r)r.showNotification(n.title||"Painel de metas",{body:n.body||"",icon:"/icon-192.png"})})})}catch(e){}
+}
+function ntClick(a,t){
+  if(a==="nt-push"){ntPushOn();return true}
+  if(a==="nt-test"){nt.msg="";nt.err="";if(!fb.on||!fb.user){nt.err="Entre na sua conta.";render();return true}
+    fb.ncol.doc("pedido").set({tipo:"teste",ts:Date.now()}).then(()=>{nt.msg="Pedido enviado. Se o servidor de lembretes estiver ativo, o teste chega em alguns segundos.";render()}).catch(()=>{nt.err="Não consegui enviar o pedido.";render()});return true}
+  if(a==="nt-tog"){const c=ntCfg(),k=t.dataset.k;ntSave({regras:{[k]:!c.regras[k]}});return true}
+  if(a==="nt-etog"){const c=ntCfg(),k=t.dataset.k;if(k==="ativo")ntSave({email:{ativo:!c.email.ativo,addr:c.email.addr}});else ntSave({email:{[k]:!c.email[k]}});return true}
+  if(a==="nt-off"){const T=LS.get("painel-push-token");const c=ntCfg(),patch={};if(T)patch.tokens={[hstr(T)]:firebase.firestore.FieldValue.delete()};patch.push=false;ntSave(patch);LS.set("painel-push-token","");nt.msg="Notificações desativadas neste aparelho.";render();return true}
+  return false;
+}
+function ntChange(e){
+  const t=e.target;
+  if(t.dataset&&t.dataset.nth){const v=t.value||"";ntSave({horas:{[t.dataset.nth]:v}});return true}
+  if(t.id==="nt-email"){const v=t.value.trim();ntSave({email:{addr:v}});return true}
+  if(t.id==="nt-hm"){const v=Math.max(1,Math.min(12,parseFloat(t.value)||3));ntSave({horasMeta:v});return true}
+  return false;
+}
+function lembretesHtml(){
+  if(!fb.on)return `<section class="sec" style="margin-top:20px"><h2>Lembretes</h2><div class="empty">Os lembretes por notificação e e-mail ficam disponíveis na versão hospedada, depois que você entra na sua conta.</div></section>`;
+  const c=ntCfg(),srv=NT.servidor||{},min=srv.ultima?Math.round((Date.now()-srv.ultima)/60000):null,on=min!=null&&min<45;
+  const tok=Object.keys(c.tokens).length,mine=LS.get("painel-push-token"),perm=("Notification" in window)?Notification.permission:"unsupported";
+  const ios=/iPhone|iPad|iPod/.test(navigator.userAgent),standalone=window.matchMedia&&matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+  const sw=(act,k,v,l)=>`<button class="switch" role="switch" aria-checked="${v}" aria-label="${esc(l)}" data-act="${act}" data-k="${k}"></button>`;
+  return `<section class="sec" style="margin-top:20px"><h2>Lembretes</h2>
+  <p class="lead">Avisos no celular e no e-mail para você não perder prazo, revisão nem ofensiva.</p>
+  ${nt.msg?`<div class="msg">${esc(nt.msg)}</div>`:""}${nt.err?`<div class="msg err">${esc(nt.err)}</div>`:""}
+  <div class="ntc ${on?"ok":"off"}"><b>${on?"Servidor de lembretes ativo":"Servidor de lembretes ainda não ativado"}</b><span>${on?`Última checagem há ${min} min.`:"Os avisos só começam a chegar depois que o servidor for ligado no Firebase. Veja o passo a passo em LEMBRETES.md."}</span></div>
+  <div class="sec-h" style="margin-top:22px"><h3>Neste aparelho</h3></div>
+  <div class="ntc"><b>${perm==="granted"&&mine?"Notificações ativadas":perm==="denied"?"Notificações bloqueadas no navegador":"Notificações desligadas"}</b><span>${tok} ${tok===1?"aparelho cadastrado":"aparelhos cadastrados"} na sua conta.${ios&&!standalone?" No iPhone, as notificações só funcionam com o painel instalado na tela inicial: toque em Compartilhar e em Adicionar à Tela de Início, depois abra por lá.":""}</span>
+    <div class="bar-act" style="margin-top:10px"><button class="btn" data-act="nt-push" ${nt.busy?"disabled":""}>${perm==="granted"&&mine?"Registrar de novo":"Ativar neste aparelho"}</button>${mine?`<button class="btn alt" data-act="nt-off">Desativar aqui</button>`:""}<button class="btn alt" data-act="nt-test">Enviar teste</button></div></div>
+  <div class="sec-h" style="margin-top:22px"><h3>E-mail</h3></div>
+  <div class="ntc"><div class="ntr"><div><b>Receber por e-mail</b><span>Resumo do dia, resumo da semana e avisos de prazo.</span></div>${sw("nt-etog","ativo",c.email.ativo,"Receber por e-mail")}</div>
+    <label class="lbl" for="nt-email" style="margin-top:12px">Endereço</label><input class="in" id="nt-email" type="email" inputmode="email" value="${esc(c.email.addr)}" placeholder="voce@email.com">
+    <div class="ntr"><div><b>Resumo do dia</b></div>${sw("nt-etog","manha",c.email.manha,"E-mail do resumo do dia")}</div>
+    <div class="ntr"><div><b>Resumo da semana</b></div>${sw("nt-etog","semana",c.email.semana,"E-mail do resumo da semana")}</div>
+    <div class="ntr"><div><b>Contagem da prova</b></div>${sw("nt-etog","prazos",c.email.prazos,"E-mail da contagem da prova")}</div></div>
+  <div class="sec-h" style="margin-top:22px"><h3>Quais avisos</h3><span class="muted" style="font-size:13px">Horário de Brasília</span></div>
+  <div class="ntl">${NTR.map(([k,n,d,h])=>`<div class="nti"><div class="ntr"><div><b>${n}</b><span>${d}</span></div>${sw("nt-tog",k,c.regras[k],n)}</div>${h?`<div class="nth"><label for="nt-h-${k}">Horário</label><input id="nt-h-${k}" type="time" data-nth="${k}" value="${c.horas[k]}"></div>`:`<div class="nth"><label for="nt-hm">Limite</label><input id="nt-hm" type="number" min="1" max="12" step="0.5" value="${c.horasMeta}" style="width:70px"> <span class="muted">horas</span></div>`}</div>`).join("")}</div>
+  </section>`;
+}
 function perfTab(){
   const V=[["resumo","Resumo"],["insights","O que fazer"],["tempo","Tempo"],["questoes","Questões"],["materias","Matérias"],["metas","Metas"],["anki","Anki"],["subtopicos","Subtópicos"]];
   const nav=`<nav class="pfnav" aria-label="Seções do desempenho">${V.map(([k,l])=>`<button class="chip" data-act="pf-go" data-v="${k}">${l}</button>`).join("")}</nav>`;
@@ -2797,7 +2906,7 @@ function planHtml(){
 }
 
 /* ---------- render ---------- */
-const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"]];
+const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"],["lembretes","Lembretes"]];
 function render(){
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
@@ -2807,7 +2916,7 @@ function render(){
   LOCKON=lockOn();LIB=libEff();
   IM=importMap();A=agg();RL=reviewList();JC=null;if(tab==="ankis"||tab==="desempenho"||tab==="semana"||tab==="jornada")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
-  const body={semana:homeHtml,jornada:jornadaHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
+  const body={semana:homeHtml,lembretes:lembretesHtml,jornada:jornadaHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
   ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
@@ -2818,7 +2927,7 @@ function render(){
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
   const qc=document.querySelector(".qpal .qpd.cur");if(qc){const pp=qc.parentElement;pp.scrollLeft=qc.offsetLeft-pp.offsetLeft-pp.clientWidth/2+qc.offsetWidth/2}
-  drawCharts();bbAfter();
+  drawCharts();bbAfter();ntSync();
 }
 function bbAfter(){
   const on=document.querySelector(".bbt.on");if(on){const n=on.parentElement;n.scrollLeft=on.offsetLeft-n.clientWidth/2+on.offsetWidth/2}
@@ -3163,6 +3272,7 @@ document.addEventListener("click",e=>{
   if(a==="login"){doLogin();return}
   if(a==="reset"){doReset();return}
   if(a==="setpass"){doSetPass();return}
+  if(a.slice(0,3)==="nt-"&&ntClick(a,t))return;
   if(a==="fz"){fzStep(+t.dataset.d);return}
   if(a==="pf-go"){const e=document.getElementById("pf-"+t.dataset.v);if(e)e.scrollIntoView({behavior:"smooth",block:"start"});return}
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
@@ -3206,6 +3316,7 @@ document.addEventListener("input",e=>{
 });
 document.addEventListener("change",e=>{
   if(qbChange(e))return;
+  if(ntChange(e))return;
   if(mtChange(e))return;
   if(e.target.id==="sb-om"){sb.om=e.target.value;render();return}
   if(e.target.id==="sb-oa"){sb.oa=e.target.value;render();return}

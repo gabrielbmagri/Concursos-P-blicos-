@@ -1,0 +1,12 @@
+{
+  "name": "painel-lembretes",
+  "private": true,
+  "description": "Lembretes por notificação e e-mail do Painel de metas",
+  "engines": { "node": "20" },
+  "main": "index.js",
+  "scripts": { "test": "node test.js" },
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.0"
+  }
+}
