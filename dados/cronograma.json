@@ -2,6 +2,7 @@
  "meta": {
   "concurso": "Câmara dos Deputados 2026 — Analista Legislativo, Registro e Redação (Cargo 11, Cebraspe)",
   "prova": "2027-01-17",
+  "dias_sem_estudo": ["2026-11-02"],
   "prova_obs": "data provável (Anexo I do edital) — conferir comunicados",
   "versao": 7,
   "gerado": "2026-10-08",

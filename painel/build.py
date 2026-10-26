@@ -15,6 +15,7 @@ def meta(m):
 data = {
     "curso": src["meta"]["concurso"].split(" (")[0],
     "prova": src["meta"]["prova"],
+    "fol": src["meta"].get("dias_sem_estudo", []),
     "ideias": src["meta"].get("ideias_discursiva", []),
     "info": json.load(open(root.parent / "dados" / "informacoes.json", encoding="utf-8")),
     "rev": {"iv": src["meta"]["revisoes"]["intervalos_dias"], "i": src["meta"]["revisoes"]["itens"], "pd": src["meta"]["revisoes"].get("por_desempenho")},
