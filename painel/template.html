@@ -5,7 +5,7 @@
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
 :root{
   --bg:#ffffff; --fg:#111827; --fg2:#4b5563; --fg3:#6b7280; --line:#ece6df; --soft:#f6f2ed; --soft2:#ebe3da;
-  --blue:#087a40; --green:#0b7a3c; --purple:#1557b6; --orange:#b57f00; --teal:#0b7a6b; --indigo:#1f6fc2; --red:#b42318; --pink:#3d7a1a; --slate:#1d3b5c; --gold:#ffd21a;
+  --blue:#087a40; --green:#0b7a3c; --purple:#1557b6; --orange:#b57f00; --teal:#0b7a6b; --indigo:#1f6fc2; --red:#b42318; --pink:#3d7a1a; --slate:#1d3b5c; --gold:#ffd21a; --amber:#c58f00;
   --good:#0b7a3c; --bad:#b42318; --good-t:#dcfce7; --bad-t:#fee2e2; --warn-t:#fef3c7; --blue-t:#e6f5ec;
   --m-REG:#2a78d6; --m-POR:#eb6834; --m-LIN:#4a3aa7; --m-TI:#1baf7a; --m-CP:#e87ba4; --m-ADM:#eda100; --m-CON:#008300; --m-ASR:#e34948; --m-ING:#2f9bb5;
   --font:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -932,6 +932,7 @@ const lsLine=m=>m.ls?`<div class="ls"><b>Lei seca</b><span>${esc(m.ls)}</span></
 const npd=p=>p&&p.tl?f1((p.nc||0)-2*(p.ne||0)/p.tl):"–";
 
 /* ---------- semana ---------- */
+const tri=(v,hi,mid)=>v==null?"var(--slate)":v>=hi?"var(--good)":v>=mid?"var(--amber)":"var(--bad)";
 function weekStats(wi){
   const L=WM[wi];let done=0,part=0,pi=0,fr=0;
   L.forEach(m=>{pi+=planItems(m);const rd=rdone(m),r=rp(m);if(rd>=r)done++;else if(rd>0)part++;fr+=rd/r});
@@ -1003,9 +1004,9 @@ function homeHtml(){
     <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
-        <div class="st" style="--c:var(--green)"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana</small></div>
-        <div class="st" style="--c:var(--teal)"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>
-        <div class="st" style="--c:var(--blue)"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
+        <div class="st" style="--c:${tri(expect>0?frac/expect:null,.9,.6)}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana</small></div>
+        <div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>
+        <div class="st" style="--c:${tri(accW,PD.faixas.excelente,PD.faixas.razoavel)}"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
       </div>
     </div>
     <div class="xp" role="progressbar" aria-valuenow="${pctW}" aria-valuemin="0" aria-valuemax="100" aria-label="Metas concluídas na semana">
