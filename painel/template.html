@@ -115,6 +115,31 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 .gl-t{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--fg2);margin-top:4px}.gl-t b{color:var(--fg)}.gl .gs{font-weight:700;color:var(--amber)}.gl.ok .gs{color:var(--good)}.gl-n{font-size:12.5px;font-weight:700;color:var(--fg);margin-bottom:5px}
 .gl-f .gl-b{height:12px;margin-top:10px}.gl-f.ok{background:var(--good-t)}.gl-s{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}.gl-s div{text-align:center}.gl-s b{display:block;font:900 20px/1.1 var(--display);text-transform:none;letter-spacing:0;color:var(--fg);margin:0}.gl-s span{font-size:11px;color:var(--fg2)}.gl-n2{font-weight:500;font-size:13px;color:var(--fg2);margin:10px 0 0;line-height:1.45}
 .qpal+.gl,.ak-bar+.fzr+.gl{margin:6px 0 8px}
+
+.bbnav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;padding:12px 62px 12px 0;margin:14px 0 0;background:linear-gradient(var(--bg) 82%,transparent);scrollbar-width:none;scroll-snap-type:x proximity}.bbnav::-webkit-scrollbar{display:none}
+.bbt{flex:none;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);font-weight:700;font-size:14px;color:var(--fg2);scroll-snap-align:center;transition:background .15s,color .15s,border-color .15s}.bbt svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.bbt em{font-style:normal;font-size:12px;min-width:22px;padding:2px 7px;border-radius:99px;background:var(--soft2);color:var(--fg2);text-align:center}
+.bbt.on{background:var(--fg);border-color:var(--fg);color:#fff;box-shadow:0 6px 16px rgba(17,24,39,.22)}.bbt.on em{background:rgba(255,255,255,.22);color:#fff}
+.bbhd{margin:18px 0 14px}.bbhd h3{margin:0;font-size:24px;letter-spacing:-.01em}.bbhd p{margin:3px 0 0;font-size:14px;color:var(--fg2)}
+.bbfil{margin-top:4px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.bbbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:16px 0 8px}.bbcnt{font-size:15px;color:var(--fg2)}.bbcnt b{font:900 22px/1 var(--display);color:var(--fg)}
+.bbtools{display:flex;align-items:center;gap:8px}.bbseg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}.bbseg button{padding:7px 14px;font-weight:700;font-size:13px;color:var(--fg2)}.bbseg button[aria-pressed="true"]{background:var(--fg);color:#fff}
+.bbar{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);font-size:22px;line-height:1;display:grid;place-items:center;color:var(--fg)}
+.bbprog{height:5px;border-radius:99px;background:var(--soft2);overflow:hidden;margin-bottom:12px}.bbprog i{display:block;height:100%;background:var(--good);border-radius:99px;transition:width .2s}
+.bbcar{position:relative;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;margin:0 -2px;scrollbar-width:none;overscroll-behavior-x:contain;outline:none}.bbcar::-webkit-scrollbar{display:none}.bbcar .bbcard{flex:0 0 88%;scroll-snap-align:center}
+.bbstack{display:flex;flex-direction:column;gap:12px}
+.bbcard{display:flex;flex-direction:column;gap:12px;min-width:0;border:1px solid var(--line);border-top:6px solid var(--c);border-radius:22px;padding:16px 18px 14px;background:var(--bg);box-shadow:0 10px 28px rgba(17,24,39,.07)}
+.bbcard header{display:flex;align-items:center;gap:10px}.bbno{font:900 26px/1 var(--display);color:var(--c)}.bbno small{font:700 13px var(--font);color:var(--fg3);margin-left:1px}.bbtg{display:flex;flex-direction:column;gap:3px;min-width:0}.bbas{font-size:13px;font-weight:700;color:var(--fg);line-height:1.3}
+.bbmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.bbst{font-size:12px;color:var(--fg3)}.rb.bbbad{background:var(--bad-t);color:var(--bad)}.rb.bbgood{background:var(--good-t);color:var(--good)}
+.bbtxt{background:var(--soft);border-radius:16px;padding:14px 16px;flex:1}.bbtxt h4{margin:0 0 6px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2)}.bbtxt p{margin:0;font-size:16.5px;line-height:1.6;font-weight:500;color:var(--fg);white-space:pre-wrap}
+.bbnt{min-height:54px;font:14px/1.45 var(--font)}.bbcard footer{display:flex;flex-wrap:wrap;gap:8px}
+.bbpills{display:flex;gap:8px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}.bbpills::-webkit-scrollbar{display:none}.bbpills .chip{flex:none}.bbpills .chip.bbon{background:var(--fg);border-color:var(--fg);color:#fff}
+.bbfiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:10px}
+.bbf{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--bg);box-shadow:0 4px 14px rgba(17,24,39,.05)}.bbf-th{display:block;width:100%;aspect-ratio:16/10;background:var(--soft);overflow:hidden}.bbf-th img{width:100%;height:100%;object-fit:cover;display:block}
+.bbdoc{display:grid;place-items:center;width:100%;height:100%;font:900 22px var(--display);color:#1557b6;background:linear-gradient(135deg,#e6effb,#f4f8fe)}.bbdoc.pdf{color:#b42318;background:linear-gradient(135deg,#fde8e6,#fff4f3)}
+.bbf-b{display:flex;flex-direction:column;gap:2px;padding:10px 12px 4px;min-width:0}.bbf-b b{font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bbf-b span{font-size:12px;color:var(--fg3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bbf-a{display:flex;gap:6px;flex-wrap:wrap;padding:6px 12px 12px}.bbf-a .chip{padding:6px 12px;font-size:12.5px}
+.bbgrp{margin-top:22px}.bbgrp .grp-t{border-bottom-color:var(--c)}
+.bbgrp .bi{margin-top:10px;padding:12px 14px;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:16px;background:var(--bg);box-shadow:0 4px 14px rgba(17,24,39,.04)}.bbgrp .bt{font-weight:800;font-size:14.5px}.bbgrp .vl{padding:9px 12px;border-radius:12px;background:var(--soft);margin-top:8px;display:flex;flex-direction:column}.bbgrp .vl b{font-size:14px}.bbgrp .vl span{font-size:12px;color:var(--fg3)}.bbgrp .bn{margin-top:8px;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:14.5px;line-height:1.55;color:var(--fg)}
+section .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media (min-width:560px){section .gal{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}section .gi{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 4px 14px rgba(17,24,39,.08)}section .gi img,section .gi span{border-radius:0}section .gi small{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.62));font-size:11.5px}
 .kpi{border-radius:20px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:152px;background:var(--k);color:#fff;text-align:left}
 .kpi .lab{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .kpi .num{font-size:clamp(30px,3.8vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-top:8px}
@@ -1955,7 +1980,7 @@ function qbClick(a,t,e){
 function qbChange(e){
   const t=e.target;
   const bz=t.closest&&t.closest("[data-bzf]");
-  if(bz){const k=bz.dataset.bzf;bib[k]=bz.value;if(k==="bk")bib.ba="";render();return true}
+  if(bz){const k=bz.dataset.bzf;bib[k]=bz.value;bib.ci=0;if(k==="bk")bib.ba="";render();return true}
   const f=t.closest&&t.closest("[data-qbf]");
   if(f){const k=f.dataset.qbf;qb[k]=f.value;if(k==="mat"){qb.mid="";qb.cad="";qb.sb=""}if(k==="mid"){qb.cad="";qb.sb=""}qb.err="";qb.more=50;render();return true}
   const g=t.closest&&t.closest("[data-qbg]");
@@ -2009,7 +2034,7 @@ function infoHtml(){
 
 /* ---------- biblioteca: arquivos, vídeos, galeria, anotações e links ---------- */
 const PASTAS=["Edital","Leis","Resumos","Outros"];
-const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:"",bk:"",ba:"",bq:"",bs:""};
+const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:"",bk:"",ba:"",bq:"",bs:"",ci:0,lay:"cards"};
 async function bibUpload(files){
   const pasta=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
   bib.busy="Enviando…";bib.err="";bib.msg="";render();
@@ -2029,37 +2054,40 @@ function metaGroups(pred){
   const ord=k=>SUBJ.includes(k)?SUBJ.indexOf(k):99;
   return Object.keys(by).sort((a,b)=>ord(a)-ord(b)).map(k=>({k,items:by[k].sort((a,b)=>a.m.wi-b.m.wi||a.m.o-b.m.o)}));
 }
-const grpHtml=(g,body)=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
+const grpHtml=(g,body)=>`<div class="grp bbgrp" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
 const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}</button>${inner}</div>`;
 const bzKey=q=>q.mid||"t:"+norm(strip(q.as));
 const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto");
-function bzCard(q,mode){
-  const er=mode==='err',gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
-  return `<div class="bz">${q.df?`<div class="s">${dfTag(q.df)}</div>`:""}
-    ${er?`<p class="muted" style="font-size:13px;margin:6px 0 0">Errou ${q.er} ${q.er===1?"vez":"vezes"} · acertou ${q.ok}${q.last==="er"?" · último resultado: erro":" · último resultado: acerto"}${q.lt?" · "+fmtDay(q.lt):""}</p>`:""}
-    <p class="bg"><b>Gabarito:</b> ${gT}</p>
-    <div class="bc"><b>Gabarito comentado</b><p>${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
-    <label class="lbl" for="qn-${q.id}">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:64px;font-family:var(--font)" placeholder="Acrescente a sua anotação">${esc(q.nt||"")}</textarea>
-    <div class="bar-act"><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver de novo</button>${q.mid&&BY[q.mid]?`<button class="chip" data-act="open" data-id="${q.mid}">Abrir a meta</button>`:""}<button class="chip" data-act="qb-fav" data-id="${q.id}">${er?(q.fav?"★ Tirar dos bizus":"☆ Favoritar como bizu"):"Tirar dos bizus"}</button></div></div>`;
+function bbCard(q,mode,i,tot){
+  const er=mode==='err';
+  return `<article class="bbcard" style="--c:${SUBJ.includes(q.k)?`var(--m-${q.k})`:"var(--fg3)"}">
+    <header><span class="bbno">${i+1}<small>/${tot}</small></span><div class="bbtg">${qbTag(q.k)}<span class="bbas">${esc(bzNome(q))}</span></div></header>
+    <div class="bbmeta">${q.df?dfTag(q.df):""}${q.sb?`<span class="rb" style="background:var(--soft);color:var(--fg2)">${esc(q.sb)}</span>`:""}${er?`<span class="rb ${q.last==="er"?"bbbad":"bbgood"}">${q.last==="er"?"Ainda erro":"Já acertei depois"}</span><span class="bbst">errou ${q.er}× · acertou ${q.ok}×</span>`:""}</div>
+    <div class="bbtxt"><h4>${er?"Por que errei":"Bizu"}</h4><p>${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
+    <label class="vh" for="qn-${q.id}">Minha anotação</label><textarea class="in bbnt" id="qn-${q.id}" data-qn="${q.id}" rows="2" placeholder="Minha anotação">${esc(q.nt||"")}</textarea>
+    <footer><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver de novo</button>${q.mid&&BY[q.mid]?`<button class="chip" data-act="open" data-id="${q.mid}">Abrir a meta</button>`:""}<button class="chip" data-act="qb-fav" data-id="${q.id}">${er?(q.fav?"★ Tirar dos bizus":"☆ Virar bizu"):"Tirar dos bizus"}</button></footer></article>`;
 }
 function bizHtml(favs,mode){
-  const er=mode==='err',nm=er?['caderno de erros','erros']:['bizu','bizus'];
+  const er=mode==='err',nm=er?['erro','erros']:['bizu','bizus'];
   if(!favs.length)return er?`<div class="empty">Quando você errar uma questão do banco, o comentário dela vai sozinho para cá, separado por matéria e assunto. Ainda não há nenhum erro registrado.</div>`:`<div class="empty">Favorite uma questão no Banco de questões e o comentário dela vira um bizu aqui, separado por matéria e assunto.</div>`;
   const sq=norm(bib.bq),o=(v,c,l)=>`<option value="${esc(v)}" ${v===c?"selected":""}>${esc(l)}</option>`;
   const mats=SUBJ.filter(k=>favs.some(q=>q.k===k));
   const ass=[...new Map(favs.filter(q=>!bib.bk||q.k===bib.bk).map(q=>[bzKey(q),bzNome(q)])).entries()].sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"));
   if(bib.ba&&!ass.some(([k])=>k===bib.ba))bib.ba="";
-  const fil=favs.filter(q=>(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!er||!bib.bs||(bib.bs==="ativo"?q.last==="er":q.last!=="er"))&&(!sq||norm((q.c||"")+" "+(q.nt||"")).includes(sq)));
-  const byK={};fil.forEach(q=>{(byK[q.k]||(byK[q.k]={}))[bzKey(q)]=(byK[q.k][bzKey(q)]||[]).concat(q)});
-  const ks=SUBJ.filter(k=>byK[k]);
-  const grp=ks.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:var(--m-${k})"></i>${esc(SHORT[k])}</span><span>${Object.values(byK[k]).reduce((z,a)=>z+a.length,0)}</span></div>${Object.entries(byK[k]).sort((a,b)=>bzNome(a[1][0]).localeCompare(bzNome(b[1][0]),"pt-BR")).map(([key,arr])=>`<div class="bza"><h4>${esc(bzNome(arr[0]))}</h4>${arr.map(x=>bzCard(x,mode)).join("")}</div>`).join("")}</div>`).join("");
-  return `<div class="qfil" style="margin-top:14px"><div><label class="lbl" for="bz-k">Matéria</label><select id="bz-k" data-bzf="bk">${o("",bib.bk,"Todas as matérias")}${mats.map(k=>o(k,bib.bk,SHORT[k])).join("")}</select></div>
-    <div><label class="lbl" for="bz-a">Assunto</label><select id="bz-a" data-bzf="ba">${o("",bib.ba,bib.bk?"Todos os assuntos":"Todos os assuntos")}${ass.map(([k,n])=>o(k,bib.ba,n.length>60?n.slice(0,58)+"…":n)).join("")}</select></div>
-    ${er?`<div><label class="lbl" for="bz-s">Situação</label><select id="bz-s" data-bzf="bs">${o("",bib.bs,"Todos os erros")}${o("ativo",bib.bs,"Ainda erro (último resultado errado)")}${o("superado",bib.bs,"Já acertei depois")}</select></div>`:""}
+  const fil=favs.filter(q=>(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!er||!bib.bs||(bib.bs==="ativo"?q.last==="er":q.last!=="er"))&&(!sq||norm((q.c||"")+" "+(q.nt||"")).includes(sq)))
+    .sort((a,b)=>(SUBJ.indexOf(a.k)-SUBJ.indexOf(b.k))||bzNome(a).localeCompare(bzNome(b),"pt-BR"));
+  const tot=fil.length,lay=bib.lay==="lista"?"lista":"cards";
+  if(bib.ci>=tot)bib.ci=Math.max(0,tot-1);
+  return `<div class="qfil bbfil"><div><label class="lbl" for="bz-k">Matéria</label><select id="bz-k" data-bzf="bk">${o("",bib.bk,"Todas as matérias")}${mats.map(k=>o(k,bib.bk,SHORT[k])).join("")}</select></div>
+    <div><label class="lbl" for="bz-a">Assunto</label><select id="bz-a" data-bzf="ba">${o("",bib.ba,"Todos os assuntos")}${ass.map(([k,n])=>o(k,bib.ba,n.length>60?n.slice(0,58)+"…":n)).join("")}</select></div>
+    ${er?`<div><label class="lbl" for="bz-s">Situação</label><select id="bz-s" data-bzf="bs">${o("",bib.bs,"Todos os erros")}${o("ativo",bib.bs,"Ainda erro")}${o("superado",bib.bs,"Já acertei depois")}</select></div>`:""}
     <div><label class="lbl" for="bz-q">Buscar</label><input class="in" id="bz-q" type="search" placeholder="Palavra do comentário" value="${esc(bib.bq)}"></div></div>
-    ${er?`<div class="bar-act" style="margin-top:10px"><button class="btn" data-act="bz-redo">Refazer os erros deste filtro</button></div>`:""}
-    <p class="muted" style="font-size:13px;margin:10px 2px 0">${fil.length} ${fil.length===1?nm[0]:nm[1]}${bib.bk||bib.ba?" neste filtro":" em todas as matérias"}</p>
-    ${grp||'<div class="empty">Nenhum bizu com esses filtros.</div>'}`;
+  <div class="bbbar"><div class="bbcnt" id="bz-cnt" aria-live="polite">${tot?(lay==="cards"?`Vendo <b>${bib.ci+1}</b> de ${tot}`:`<b>${tot}</b> ${tot===1?nm[0]:nm[1]}`):"Nenhum resultado"}</div>
+    <div class="bbtools"><div class="bbseg" role="group" aria-label="Modo de exibição"><button data-act="bz-lay" data-v="cards" aria-pressed="${lay==="cards"}">Cards</button><button data-act="bz-lay" data-v="lista" aria-pressed="${lay==="lista"}">Lista</button></div>
+    ${lay==="cards"&&tot>1?`<button class="bbar" data-act="bz-nav" data-d="-1" aria-label="Anterior">‹</button><button class="bbar" data-act="bz-nav" data-d="1" aria-label="Próximo">›</button>`:""}</div></div>
+  ${lay==="cards"&&tot?`<div class="bbprog" aria-hidden="true"><i id="bz-prog" style="width:${(bib.ci+1)/tot*100}%"></i></div>`:""}
+  ${tot?`<div class="${lay==="cards"?"bbcar":"bbstack"}" id="bz-car" ${lay==="cards"?'tabindex="0" aria-label="Deslize para o lado para ver os próximos"':""}>${fil.map((q,i)=>bbCard(q,mode,i,tot)).join("")}</div>`:`<div class="empty">Nenhum ${nm[0]} com esses filtros.</div>`}
+  ${er&&tot?`<div class="bar-act"><button class="btn" data-act="bz-redo">Refazer os ${tot} ${tot===1?"erro":"erros"} deste filtro</button></div>`:""}`;
 }
 function bibHtml(){
   const fAll=Object.entries(FILES).map(([id,m])=>({id,m}));
@@ -2071,8 +2099,10 @@ function bibHtml(){
   const nV=gV.reduce((z,g)=>z+g.items.reduce((y,x)=>y+x.d.vd.length,0),0),nN=gN.reduce((z,g)=>z+g.items.length,0),nL=gL.reduce((z,g)=>z+g.items.length,0);
   const favs=qbList().filter(q=>q.fav),nB=favs.length,errs=qbList().filter(q=>q.er>0),nE=errs.length;
   const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["biz","Bizus",nB],["err","Caderno de erros",nE],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
-  const chips=`<div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${VIEWS.map(([k,l,n])=>`<button class="chip" style="${bib.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-view" data-v="${k}">${l} · ${n}</button>`).join("")}</div>`;
-  const frow=(x,lab)=>`<div class="frow">${x.m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span class="th doc">${/pdf/.test(x.m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(x.m.nome)}</b><span>${esc(lab)} · ${fmtB(x.m.tam)}${x.m.cr?" · "+fmtDay(x.m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${x.id}">Abrir</button>${bib.ask===x.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${x.id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${x.id}">Excluir</button>`}</div>`;
+  const BBIC={"arq": "<path d=\"M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>", "biz": "<path d=\"M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z\"/>", "err": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9 9l6 6M15 9l-6 6\"/>", "vid": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M10 8.5l5.5 3.5-5.5 3.5z\"/>", "gal": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><circle cx=\"9\" cy=\"10\" r=\"1.8\"/><path d=\"M21 16l-5-5-8 8\"/>", "not": "<path d=\"M5 3h10l4 4v14H5z\"/><path d=\"M9 12h6M9 16h6\"/>", "lnk": "<path d=\"M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1\"/><path d=\"M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1\"/>"},BBD={arq:["Arquivos","PDFs e imagens guardados por pasta e por meta."],biz:["Bizus","Os comentários das questões que você favoritou. Deslize para o lado."],err:["Caderno de erros","O gabarito comentado de toda questão que você errou. Deslize para o lado."],vid:["Vídeos","Links de aulas guardados dentro das metas."],gal:["Galeria","Imagens enviadas na Biblioteca e nas metas."],not:["Anotações","O que você escreveu dentro de cada meta."],lnk:["Links","Pastas de questões vinculadas às metas."]};
+  const chips=`<nav class="bbnav" aria-label="Seções da biblioteca">${VIEWS.map(([k,l,n])=>`<button class="bbt ${bib.view===k?"on":""}" data-act="bib-view" data-v="${k}" ${bib.view===k?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${BBIC[k]}</svg><span>${l}</span><em>${n}</em></button>`).join("")}</nav>`;
+  const bbHead=`<div class="bbhd"><h3>${BBD[bib.view][0]}</h3><p>${BBD[bib.view][1]}</p></div>`;
+  const frow=(x,lab)=>`<div class="bbf"><button class="bbf-th" data-act="sm-fopen" data-f="${x.id}" aria-label="Abrir ${esc(x.m.nome)}">${x.m.th?`<img alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span class="bbdoc ${/pdf/.test(x.m.tipo)?"pdf":""}">${/pdf/.test(x.m.tipo)?"PDF":"DOC"}</span>`}</button><div class="bbf-b"><b title="${esc(x.m.nome)}">${esc(x.m.nome)}</b><span>${esc(lab)}</span><span>${fmtB(x.m.tam)}${x.m.cr?" · "+fmtDay(x.m.cr):""}</span></div><div class="bbf-a"><button class="chip" data-act="sm-fopen" data-f="${x.id}">Abrir</button>${bib.ask===x.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${x.id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${x.id}">Excluir</button>`}</div></div>`;
   let body="";
   if(bib.view==="arq"){
     const cnt=p=>pastaF.filter(x=>p==="Todos"||x.p===p).length;
@@ -2083,10 +2113,10 @@ function bibHtml(){
     const mgs=Object.keys(mg).sort((a,b)=>(SUBJ.includes(a)?SUBJ.indexOf(a):99)-(SUBJ.includes(b)?SUBJ.indexOf(b):99));
     body=`<div class="sec-h" style="margin-top:14px"><h3>Pastas</h3><label class="file-btn" style="padding:10px 20px">Enviar arquivo<input type="file" id="bib-up" accept="application/pdf,image/*,.txt,.doc,.docx" multiple></label></div>
     <p class="lead">PDF ou imagem de até 10 MB cada. ${bib.pasta==="Todos"?"Arquivos enviados com Todos selecionado vão para Outros.":`Os arquivos enviados agora vão para ${lbl}.`}</p>
-    <div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px">${["Todos",...PASTAS].map(p=>`<button class="chip" style="${bib.pasta===p?"background:var(--soft2);border-color:var(--fg3)":""}" data-act="bib-pasta" data-v="${p}">${p} · ${cnt(p)}</button>`).join("")}</div>
-    ${list.length?`<div class="files" style="margin-top:12px">${list.map(x=>frow(x,x.p)).join("")}</div>`:`<div class="empty">${pastaF.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
+    <div class="bbpills">${["Todos",...PASTAS].map(p=>`<button class="chip ${bib.pasta===p?"bbon":""}" data-act="bib-pasta" data-v="${p}">${p} · ${cnt(p)}</button>`).join("")}</div>
+    ${list.length?`<div class="bbfiles">${list.map(x=>frow(x,x.p)).join("")}</div>`:`<div class="empty">${pastaF.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
     <div class="sec-h" style="margin-top:30px"><h3>Anexados às metas</h3></div>
-    ${mgs.length?mgs.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)"}"></i>${esc(kName(k))}</span><span>${mg[k].length}</span></div><div class="files">${mg[k].map(x=>frow(x,x.meta.a)).join("")}</div></div>`).join(""):`<div class="empty">Os PDFs que você enviar dentro de uma meta aparecem aqui, separados por matéria.</div>`}`;
+    ${mgs.length?mgs.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)"}"></i>${esc(kName(k))}</span><span>${mg[k].length}</span></div><div class="bbfiles">${mg[k].map(x=>frow(x,x.meta.a)).join("")}</div></div>`).join(""):`<div class="empty">Os PDFs que você enviar dentro de uma meta aparecem aqui, separados por matéria.</div>`}`;
   }else if(bib.view==="biz"){
     body=bizHtml(favs,"biz");
   }else if(bib.view==="err"){
@@ -2101,9 +2131,9 @@ function bibHtml(){
     body=gL.length?gL.map(g=>grpHtml(g,g.items.map(x=>bitem(x,`<a class="vl" href="${esc(x.d.lk)}" target="_blank" rel="noopener"><b>Pasta de questões</b><span>${esc(hostOf(x.d.lk))}</span></a>`)).join(""))).join(""):`<div class="empty">Cole o link da pasta de questões (Tec Concursos) dentro de uma meta. Os links aparecem aqui.</div>`;
   }
   return `<section class="sec" style="margin-top:20px"><h2>Biblioteca</h2>
-  <p class="lead">Tudo o que você guarda fica aqui: arquivos, vídeos, imagens, anotações e links, inclusive o que foi anexado dentro das metas.</p>
+  <p class="lead" style="margin-bottom:0">Tudo o que você guarda, inclusive o que foi anexado dentro das metas.</p>
   ${bib.msg?`<div class="msg">${esc(bib.msg)}</div>`:""}${bib.err?`<div class="msg err">${esc(bib.err)}</div>`:""}${bib.busy||sm.busy?`<div class="msg" style="background:var(--blue-t)">${esc(bib.busy||sm.busy)}</div>`:""}${sm.err&&tab==="biblioteca"?`<div class="msg err">${esc(sm.err)}</div>`:""}
-  ${chips}${body}</section>`;
+  ${chips}${bbHead}${body}</section>`;
 }
 
 /* ---------- questões (importação) ---------- */
@@ -2647,8 +2677,13 @@ function render(){
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
   const qc=document.querySelector(".qpal .qpd.cur");if(qc){const pp=qc.parentElement;pp.scrollLeft=qc.offsetLeft-pp.offsetLeft-pp.clientWidth/2+qc.offsetWidth/2}
-  drawCharts();
+  drawCharts();bbAfter();
 }
+function bbAfter(){
+  const on=document.querySelector(".bbt.on");if(on){const n=on.parentElement;n.scrollLeft=on.offsetLeft-n.clientWidth/2+on.offsetWidth/2}
+  const c=document.getElementById("bz-car");if(c&&c.classList.contains("bbcar")&&bib.ci>0&&c.children[bib.ci])c.scrollLeft=c.children[bib.ci].offsetLeft-c.children[0].offsetLeft;
+}
+document.addEventListener("scroll",e=>{const c=e.target;if(!c||c.id!=="bz-car"||!c.classList||!c.classList.contains("bbcar")||!c.children.length)return;const i=Math.max(0,Math.min(c.children.length-1,Math.round(c.scrollLeft/(c.children[0].offsetWidth+12))));if(i!==bib.ci){bib.ci=i;const b=document.querySelector("#bz-cnt b");if(b)b.textContent=i+1;const p=document.getElementById("bz-prog");if(p)p.style.width=((i+1)/c.children.length*100)+"%"}},true);
 
 /* ---------- gráficos SVG ---------- */
 const NS=(w,h,aria)=>`<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(aria)}">`;
@@ -2972,7 +3007,9 @@ document.addEventListener("click",e=>{
   if(a==="bib-delok"){const f=t.dataset.f,fm=FILES[f];fileDel(f);if(fm&&/^meta:/.test(fm.esc||"")){const mid=fm.esc.slice(5);saveMeta(mid,{ar:((real[mid]||{}).ar||[]).filter(x=>x!==f)})}bib.ask="";bib.msg="Arquivo excluído.";render();return}
   if(a.slice(0,3)==="qb-"&&qbClick(a,t,e))return;
   if(a.slice(0,3)==="mt-"&&mtClick(a,t))return;
-  if(a==="bib-view"){bib.view=t.dataset.v;bib.bk=bib.ba=bib.bq=bib.bs="";bib.msg="";bib.err="";render();return}
+  if(a==="bz-nav"){const c=document.getElementById("bz-car");if(c&&c.children.length){c.scrollBy({left:(+t.dataset.d)*(c.children[0].offsetWidth+12),behavior:"smooth"})}return}
+  if(a==="bz-lay"){bib.lay=t.dataset.v;bib.ci=0;render();return}
+  if(a==="bib-view"){bib.ci=0;bib.view=t.dataset.v;bib.bk=bib.ba=bib.bq=bib.bs="";bib.msg="";bib.err="";render();return}
   if(a.slice(0,3)==="sm-"){smClick(a,t,e);return}
   if(a==="save"){sheetSave();return}
   if(a==="clear"){const o=real[sheetId]||{},d={};["lk","nt","vd","ar"].forEach(k=>{if(o[k])d[k]=o[k]});if(empty_(d))save(sheetId,null);else save(sheetId,d);closeSheet();return}
@@ -3014,7 +3051,7 @@ document.addEventListener("click",e=>{
 });
 document.addEventListener("input",e=>{
   if(e.target.id==="qb-paste"){qb.paste=e.target.value;return}
-  if(e.target.id==="bz-q"){bib.bq=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("bz-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
+  if(e.target.id==="bz-q"){bib.bq=e.target.value;bib.ci=0;const pos=e.target.selectionStart;render();const n=document.getElementById("bz-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="qb-q"){qb.q=e.target.value;qb.more=50;const pos=e.target.selectionStart;render();const n=document.getElementById("qb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sb-q"){sb.busca=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("sb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sm-ana-paste"){sm.ana.paste=e.target.value;return}
