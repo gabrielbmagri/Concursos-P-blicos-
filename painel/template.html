@@ -1741,25 +1741,23 @@ const QBINSTR=[
 "",
 "# Matéria: Linguística",
 "# Assunto: Teoria do signo linguístico",
-"# Caderno: Signo linguístico I",
+"# Caderno: Aprendizado",
 "# Subtópico: Arbitrariedade e motivação",
 "CE | O signo linguístico une um significante e um significado. | C | Correto: é a definição saussuriana de signo. | fácil",
 "CE | Para Saussure, a relação entre significante e significado é necessariamente motivada. | E | Errado: Saussure defende a arbitrariedade do signo.",
 "ME | Assinale a alternativa que apresenta um exemplo de arbitrariedade do signo. | B | A palavra é formada por derivação ;; Palavras diferentes designam o mesmo referente em línguas distintas ;; O som imita o ruído do objeto ;; O significado depende do contexto ;; O signo é imutável na fala | Letra B: línguas diferentes usam significantes distintos para o mesmo referente. As demais não tratam de arbitrariedade. | médio",
 "",
 "Regras:",
-"1. As linhas que começam com # valem para todas as questões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno é opcional e agrupa as questões do pedido.",
+"1. As linhas que começam com # valem para todas as questões abaixo delas, até a próxima linha igual. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno agrupa as questões do pedido (veja a regra 7).",
 "2. Uma linha por questão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
 "3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário | dificuldade | subtópico. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário | dificuldade | subtópico.",
-"4. O comentário é o gabarito comentado: explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Seja direto.",
-"5. Misture os tipos, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
+"4. Cada comentário (gabarito comentado) deve ser explicativo o bastante para eu entender o porquê, mas curto: objetivo, sem ser vago. Explique por que o gabarito está certo e, nas ME, por que as demais estão erradas.",
+"5. Misture os tipos, intercalando ME e CE quando ajudar, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
 "6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
-"7. Gere no mínimo 60 questões por pedido, a não ser que eu peça outra quantidade. Entregue tudo em um arquivo .txt.",
-"7c. Ordem pedagógica: além de crescer em dificuldade, siga a ordem dos conceitos, de modo que cada conceito seja aprendido antes de ser cobrado. Ao resolver todas, eu devo dominar o que a aula ou meta pede, ter revisto os conceitos e ter visto na prática questões como as que caem na prova. Se ajudar, intercale ME e CE.",
-"7d. Cada comentário deve ser explicativo o bastante para eu entender o porquê, mas curto: objetivo, sem ser vago.",
-"7a. O último campo, a dificuldade, é fácil, médio ou difícil (opcional). Coloque as questões em ordem crescente de dificuldade, da mais fácil para a mais difícil. Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
-"7b. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha \"# Subtópico: nome\" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, \"Do Senado Federal (art. 52)\"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto.",
-"8. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
+"7. Quantidade e estrutura: gere no mínimo 80 questões por meta, a não ser que eu peça outra quantidade, em duas partes, e entregue tudo em um arquivo .txt. PARTE 1, linha \"# Caderno: Aprendizado\": 50 questões em ordem pedagógica, do mais fácil ao mais difícil, de modo que cada conceito seja aprendido antes de ser cobrado e, ao final, eu domine tudo o que a aula ou meta pede. PARTE 2, linha \"# Caderno: Revisão mista\": 30 questões mistas para revisão, em que os conceitos de todos os subtópicos se misturam, são recordados e se combinam entre si (intertextualidade), mais próximas da cobrança da prova real (enunciados mais longos, pegadinhas, exceções e comparações). Na parte 2 a ordem é embaralhada, sem agrupar por subtópico, e a dificuldade é média a difícil.",
+"8. A dificuldade é o penúltimo campo: fácil, médio ou difícil (opcional). Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
+"9. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha \"# Subtópico: nome\" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Na parte 2, como as questões se misturam, preencha o campo subtópico em cada linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, \"Do Senado Federal (art. 52)\"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto e nos baralhos de Anki.",
+"10. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
 ].join("\n");
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
@@ -2129,8 +2127,8 @@ function qbClick(a,t,e){
     closeSheet();tab="questoes";menu=false;qbStart();return true}
   if(a==="qb-meta"){
     const m=BY[t.dataset.id];if(!m)return true;
-    const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
-    qb.mat=m.k;qb.mid=m.id;qb.cad="";qb.sb="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
+    const cad=t.dataset.cad||"",mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id&&(!cad||q.cad===cad));
+    qb.mat=m.k;qb.mid=m.id;qb.cad=cad;qb.sb="";qb.tipo="";qb.df="";qb.q="";qb.n="todas";qb.st=all.some(q=>qbStat(q,mode))?mode:"todas";
     qb.rvNext=t.dataset.rv||"";if(qb.rvNext)qb.ord="aleatoria";
     closeSheet();tab="questoes";menu=false;qbStart();return true}
   if(a==="qb-quit"){qb.view="home";qb.confirm=false;render();window.scrollTo(0,0);return true}
@@ -2357,23 +2355,32 @@ const impUploadHtml=()=>impParts().up,impHistHtml=()=>impParts().hist;
 
 /* ---------- ankis ---------- */
 const AKINSTR=[
-"Quando eu pedir um baralho de estudo, responda SOMENTE com um bloco de codigo de texto simples, neste formato:",
+"Quando eu pedir um baralho de estudo para uma meta, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:",
 "",
 "# Matéria: Constitucional",
 "# Assunto: Poder Legislativo na CF e estatuto dos parlamentares",
 "# Baralho: CF - Poder Legislativo",
+"# Subtópico: Composição do Congresso Nacional",
 "P | Quantos senadores cada estado elege? | Três senadores, cada um com dois suplentes. | CF art. 46",
 "L | O Senado é composto por {{três}} senadores por estado. | | CF art. 46",
-"CE | A Câmara dos Deputados é composta por representantes eleitos pelo sistema majoritário. | E | É o sistema proporcional (CF art. 45).",
+"CE | A Câmara dos Deputados é composta por representantes eleitos pelo sistema majoritário. | E | É o sistema proporcional (CF art. 45). | Câmara dos Deputados",
 "",
 "Regras:",
-"1. As linhas que começam com # valem para todos os cartões abaixo delas. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital.",
+"1. As linhas que começam com # valem para todos os cartões abaixo delas, até a próxima linha igual. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Baralho é o nome do baralho.",
 "2. Uma linha por cartão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
-"3. Tipos: P = pergunta e resposta; L = lacuna, com a parte escondida entre {{ e }}; CE = afirmação para marcar Certo ou Errado como na prova (resposta C ou E, e a explicação no último campo).",
-"4. Último campo é a fonte ou a explicação (artigo, lei, justificativa). Pode ficar vazio.",
-"5. Cartões curtos, um conceito por cartão. Misture os três tipos, com cerca de metade em CE, no estilo Cebraspe (afirmações com pegadinhas comuns).",
-"6. Se eu enviar um texto, baseie os cartões só nele e não invente artigos de lei nem números. Se não souber, deixe o campo da fonte vazio.",
-"7. De 20 a 40 cartões por pedido, a não ser que eu peça outra quantidade."
+"3. Tipos: P = pergunta e resposta; L = lacuna, com a parte escondida entre {{ e }}; CE = afirmação para marcar Certo ou Errado como na prova (resposta C ou E, e a explicação no quarto campo). Campos: P | pergunta | resposta | fonte | subtópico ; L | texto com {{lacuna}} | (vazio) | fonte | subtópico ; CE | afirmação | C ou E | explicação | subtópico.",
+"4. O campo fonte ou explicação traz o artigo, a lei ou a justificativa em uma frase curta. Pode ficar vazio, mas nunca invente.",
+"5. Quantidade: no mínimo 80 cartões por meta, a não ser que eu peça outra quantidade. Cubra TODO o conteúdo da meta ou da aula, sem deixar nenhum tópico do assunto sem cartão.",
+"6. Classificação por subtópico: todo cartão deve pertencer a um subtópico do assunto. Use a linha \"# Subtópico: nome\" antes de cada grupo (vale até a próxima) ou preencha o último campo da linha. Use de 4 a 10 subtópicos por assunto, com o nome como aparece no edital ou no material, e sempre os mesmos nomes dos pedidos de questões do mesmo assunto. É isso que me mostra exatamente em que ponto do assunto eu esqueço. Subtópicos mais cobrados em prova ganham mais cartões.",
+"7. Ordem pedagógica: do básico ao complexo, com cada conceito antes do que depende dele (definição antes de exceção, regra antes de pegadinha). Agrupe por subtópico.",
+"8. Mistura de tipos: cerca de 45% CE no estilo Cebraspe, 30% lacuna e 25% pergunta e resposta.",
+"9. Cartões atômicos: um único fato por cartão, sem depender de outro cartão. Verso com no máximo 25 palavras. Não copie artigos inteiros: extraia a ideia que cai em prova.",
+"10. Use lacuna (L) para prazos, quóruns, números, competências e listas. Em listas, faça um cartão por item, não um cartão com a lista toda.",
+"11. Faça cartões de contraste para o que se confunde (por exemplo, quem decide x quem aprova, prazo de uma casa x prazo da outra), com a diferença clara na resposta.",
+"12. Nos CE, imite as pegadinhas da banca: troca de órgão, prazo, quórum ou competência, e palavras como sempre, nunca, apenas e exclusivamente. Equilibre as respostas C e E.",
+"13. Quando houver um jeito fácil de lembrar (mnemônico, associação), escreva na explicação, começando por \"Dica:\".",
+"14. Baseie os cartões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça o cartão sobre ele.",
+"15. Sem cartões repetidos ou quase iguais. Entregue tudo em um arquivo .txt."
 ].join("\n");
 const hstr=t=>{let h=5381;for(let i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return (h>>>0).toString(36)};
 const cardId=(k,f)=>{const n=norm(f);return "c"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
@@ -2396,7 +2403,7 @@ function revdWrite(day,obj){
 }
 
 /* leitura do baralho (texto colado ou planilha) */
-function mkCard(mat,ass,bar,tipoRaw,f,v,x,ref){
+function mkCard(mat,ass,bar,tipoRaw,f,v,x,ref,sb){
   const t0=String(tipoRaw||"").toUpperCase().replace(/[^A-Z]/g,"");
   const t=t0==="P"||t0==="PERGUNTA"?"P":t0==="L"||t0==="LACUNA"?"L":(t0==="CE"||t0==="C"||t0==="VF"||t0==="CERTOERRADO")?"CE":"";
   if(!t)return {err:`${ref}: tipo "${String(tipoRaw||"").slice(0,12)}" não reconhecido. Use P, L ou CE.`};
@@ -2405,29 +2412,29 @@ function mkCard(mat,ass,bar,tipoRaw,f,v,x,ref){
   if(t==="P"&&!v)return {err:`${ref}: falta a resposta.`};
   if(t==="L"&&!/\{\{[^}]+\}\}/.test(f))return {err:`${ref}: a lacuna precisa estar entre {{ e }}.`};
   if(t==="CE"){const a=norm(v).charAt(0);if(a==="c")v="C";else if(a==="e")v="E";else return {err:`${ref}: a resposta de Certo ou Errado deve ser C ou E.`}}
-  return {card:{mat,ass,bar,t,f,v,x}};
+  return {card:{mat,ass,bar,t,f,v,x,sb:String(sb||"").trim()}};
 }
 function parseDeckText(text){
-  const cards=[],errs=[];let mat="",ass="",bar="";
+  const cards=[],errs=[];let mat="",ass="",bar="",sb="";
   String(text).split(/\r?\n/).forEach((raw,i)=>{
     const ln=raw.trim();if(!ln||/^```/.test(ln))return;
-    const m=/^#\s*(mat[eé]ria|assunto|baralho)\s*:\s*(.*)$/i.exec(ln);
-    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else bar=m[2].trim();return}
+    const m=/^#\s*(mat[eé]ria|assunto|baralho|subt[oó]pico)\s*:\s*(.*)$/i.exec(ln);
+    if(m){const k=norm(m[1]);if(k.indexOf("mat")===0)mat=m[2].trim();else if(k==="assunto")ass=m[2].trim();else if(k.indexOf("subt")===0)sb=m[2].trim();else bar=m[2].trim();return}
     if(ln.charAt(0)==="#")return;
     const p=ln.split("|").map(z=>z.trim());
-    const r=mkCard(mat,ass,bar,p[0],p[1],p[2],p[3],"Linha "+(i+1));
+    const r=mkCard(mat,ass,bar,p[0],p[1],p[2],p[3],"Linha "+(i+1),p[4]||sb);
     if(r.err)errs.push(r.err);else cards.push(r.card);
   });
   return {cards,errs};
 }
-const AKH={mat:["materia","disciplina"],ass:["assunto","topico","tema"],bar:["baralho","deck"],t:["tipo"],f:["frente","pergunta","front"],v:["verso","resposta","back"],x:["explicacao","fonte","extra","comentario"]};
+const AKH={mat:["materia","disciplina"],ass:["assunto","topico","tema"],bar:["baralho","deck"],t:["tipo"],f:["frente","pergunta","front"],v:["verso","resposta","back"],x:["explicacao","fonte","extra","comentario"],sb:["subtopico","subtopicos"]};
 function parseDeckSheet(aoa){
   let hi=-1,cm={};
   for(let r=0;r<Math.min(aoa.length,10)&&hi<0;r++){const m={};aoa[r].forEach((h,ci)=>{const n=norm(h);for(const k in AKH){if(m[k]==null&&AKH[k].includes(n))m[k]=ci}});if(m.f!=null&&m.t!=null){hi=r;cm=m}}
   if(hi<0)return {cards:[],errs:["Não encontrei os cabeçalhos. A planilha precisa ter as colunas Tipo e Frente (e, se quiser, Matéria, Assunto, Baralho, Verso e Explicação)."]};
   const cards=[],errs=[];
   for(let r=hi+1;r<aoa.length;r++){const row=aoa[r],g=k=>cm[k]!=null?row[cm[k]]:"";if(!String(g("f")).trim()&&!String(g("t")).trim())continue;
-    const x=mkCard(String(g("mat")||"").trim(),String(g("ass")||"").trim(),String(g("bar")||"").trim(),g("t"),g("f"),g("v"),g("x"),"Linha "+(r+1));
+    const x=mkCard(String(g("mat")||"").trim(),String(g("ass")||"").trim(),String(g("bar")||"").trim(),g("t"),g("f"),g("v"),g("x"),"Linha "+(r+1),g("sb"));
     if(x.err)errs.push(x.err);else cards.push(x.card)}
   return {cards,errs};
 }
@@ -2460,7 +2467,7 @@ function akImport(){
     const g=ak.groups[c.g];if(!g||!g.k){skipped++;return}
     const id=cardId(g.k,c.f);if(CARDS[id]||seen.has(id)){dup++;return}seen.add(id);
     const nm=g.bar||g.ass||SHORT[g.k];
-    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",b:nm,t:c.t,f:c.f,v:c.v,x:c.x,cr:T0(),reps:0,ivl:0,ez:2.5,lap:0,ok:0,er:0,due:"",ult:"",last:0}]);
+    list.push([id,{k:g.k,mid:g.mid||"",as:g.ass||"",b:nm,sb:c.sb||"",t:c.t,f:c.f,v:c.v,x:c.x,cr:T0(),reps:0,ivl:0,ez:2.5,lap:0,ok:0,er:0,due:"",ult:"",last:0}]);
   });
   if(list.length)cardsWrite(list);
   ak.msg=`Importei ${list.length} ${list.length===1?"cartão":"cartões"}.${dup?` ${dup} já existiam e foram ignorados.`:""}${skipped?` ${skipped} ficaram de fora por falta de matéria.`:""}`;
@@ -2487,7 +2494,7 @@ function srsApply(c,g){
 }
 const srsPreview=(c,g)=>g===1?"hoje":ivTxt(srsApply({...c},g).ivl);
 
-function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter(c=>(!ak.mat||c.k===ak.mat)&&(!ak.mid||c.mid===ak.mid)&&(!ak.bar||c.b===ak.bar)&&(!ak.tipo||c.t===ak.tipo))}
+function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter(c=>(!ak.mat||c.k===ak.mat)&&(!ak.mid||c.mid===ak.mid)&&(!ak.bar||c.b===ak.bar)&&(!ak.tipo||c.t===ak.tipo)&&(!ak.sb||c.sb===ak.sb))}
 function akBuild(m){
   const T=T0(),p=akPool();
   if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
@@ -2535,11 +2542,12 @@ const lacF=t=>esc(t).replace(/\{\{(?:c\d+::)?([^}]*?)(?:::[^}]*)?\}\}/g,'<span c
 const lacV=t=>esc(t).replace(/\{\{(?:c\d+::)?([^}]*?)(?:::[^}]*)?\}\}/g,'<mark>$1</mark>');
 
 function akStats(){
-  const T=T0(),o={n:0,due:0,nov:0,ok:0,er:0,dueDay:Array(14).fill(0),est:{novo:0,apr:0,jov:0,mad:0},byK:{},byA:{},byB:{}};
+  const T=T0(),o={n:0,due:0,nov:0,ok:0,er:0,dueDay:Array(14).fill(0),est:{novo:0,apr:0,jov:0,mad:0},byK:{},byA:{},byB:{},byS:{}};
   Object.entries(CARDS).forEach(([id,c])=>{
     o.n++;const isNew=!c.ult;
     const kk=o.byK[c.k]||(o.byK[c.k]={n:0,ok:0,er:0,lap:0});kk.n++;kk.ok+=c.ok||0;kk.er+=c.er||0;kk.lap+=c.lap||0;
     const ak_=c.mid||("t:"+norm(c.as||c.b||""));const aa=o.byA[ak_]||(o.byA[ak_]={mid:c.mid,k:c.k,nome:c.mid&&BY[c.mid]?BY[c.mid].a:(c.as||c.b||"Sem assunto"),n:0,ok:0,er:0,lap:0});aa.n++;aa.ok+=c.ok||0;aa.er+=c.er||0;aa.lap+=c.lap||0;
+    if(c.sb){const sk=(c.mid||norm(c.as||""))+"|"+norm(c.sb),ss=o.byS[sk]||(o.byS[sk]={k:c.k,mid:c.mid,sb:c.sb,ass:c.mid&&BY[c.mid]?BY[c.mid].a:(c.as||""),n:0,ok:0,er:0,lap:0});ss.n++;ss.ok+=c.ok||0;ss.er+=c.er||0;ss.lap+=c.lap||0}
     const bb=o.byB[c.b]||(o.byB[c.b]={n:0,due:0,k:c.k});bb.n++;
     o.ok+=c.ok||0;o.er+=c.er||0;
     if(isNew){o.nov++;o.est.novo++;return}
@@ -2592,6 +2600,7 @@ function akCards(S){
       <div class="card"><div class="card-h"><div><h3>Horas líquidas de Anki</h3><p>Minutos por dia, últimos 14 dias</p></div></div><div class="chart" data-kind="tmAk"></div></div>
       <div class="card"><div class="card-h"><div><h3>Tempo de Anki por matéria</h3><p>Onde você mais gasta tempo com cartões</p></div></div>${tkRows.length?barsHtml(tkRows):'<div class="empty">Aparece depois das primeiras sessões cronometradas.</div>'}</div>
       <div class="card"><div class="card-h"><div><h3>Tempo para lembrar e para esquecer</h3><p>Média de reflexão antes de revelar a resposta</p></div></div>${(()=>{const K=A.tm.k;if(!K.okN||!K.erN||(!K.tok&&!K.ter))return '<div class="empty">Aparece com as próximas respostas.</div>';const a1=K.tok/K.okN,a2=K.ter/K.erN,m=Math.max(a1,a2,1);return barsHtml([{l:"Lembrou",c:"var(--good)",f:a1/m,v:Math.round(a1)+" s",s:"por cartão",tip:"Tempo médio nos cartões que você lembrou"},{l:"Esqueceu",c:"var(--bad)",f:a2/m,v:Math.round(a2)+" s",s:"por cartão",tip:"Tempo médio nos cartões que você errou"}])})()}</div>
+      <div class="card wide"><div class="card-h"><div><h3>Subtópicos que você mais esquece</h3><p>Dentro de cada assunto, onde os cartões mais falham (3 respostas ou mais)</p></div></div>${(()=>{const ws=Object.values(S.byS).filter(x=>x.ok+x.er>=3).map(x=>({...x,tx:x.er/(x.ok+x.er)})).sort((a,b)=>b.tx-a.tx||b.lap-a.lap).slice(0,10);return ws.length?`<ul class="list">${ws.map(a=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(a.sb)}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${esc(a.ass.length>40?a.ass.slice(0,38)+"…":a.ass)} · ${a.n} cartões · ${a.lap} esquecimentos</span></div></div><div class="res"><span class="sc ${scCls(1-a.tx)}">${Math.round(a.tx*100)}% de erro</span></div><button class="chip" data-act="ak-sub" data-k="${a.k}" data-mid="${esc(a.mid||"")}" data-sb="${esc(a.sb)}">Estudar</button></li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver cartões com subtópico e 3 respostas ou mais. Peça baralhos com subtópicos ao Claude.</div>'})()}</div>
       <div class="card wide"><div class="card-h"><div><h3>Assuntos que você mais esquece</h3><p>Taxa de erro nos cartões, com ao menos 3 respostas</p></div></div>${weak.length?`<ul class="list">${weak.map(a=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(a.nome)}</div><div class="s">${SUBJ.includes(a.k)?`<span class="tag" style="--c:var(--m-${a.k})"><i></i>${SHORT[a.k]}</span>`:""}<span>${a.lap} ${a.lap===1?"esquecimento":"esquecimentos"} · ${a.n} cartões</span></div></div><div class="res"><span class="sc ${scCls(1-a.tx)}">${Math.round(a.tx*100)}% de erro</span></div>${a.mid?`<button class="chip" data-act="ak-weak" data-mid="${a.mid}">Estudar</button>`:""}</li>`).join("")}</ul>`:'<div class="empty">Aparece quando houver assuntos com 3 respostas ou mais.</div>'}</div>
       <div class="card wide"><div class="card-h"><div><h3>Questões e cartões, lado a lado</h3><p>Onde as duas medidas concordam e onde não</p></div></div><div class="hb">${cmp.map(x=>`<div class="hb-r" style="grid-template-columns:128px minmax(0,1fr) minmax(0,1fr)"><div class="hb-l" style="--c:var(--m-${x.k})"><i></i><span>${SHORT[x.k]}</span></div><div style="font-size:13px"><span class="muted">Questões </span><b>${pc(x.q)}</b></div><div style="font-size:13px"><span class="muted">Cartões </span><b>${pc(x.r)}</b></div></div>`).join("")}</div></div>
     </div>
@@ -3432,14 +3441,17 @@ function shQuick(m,p,ro){
   const out=[];
   if(m.rg)return "";
   if(m.rv){
-    const i=akMetaInfo(m.base.id),qs=qbList().filter(q=>q.mid===m.base.id),nNov=qs.filter(q=>qbStat(q,"novas")).length;
-    out.push(qs.length?`<button class="pri" data-act="qb-meta" data-id="${m.base.id}" data-m="novas" data-rv="${m.id}"><b>Questões não resolvidas</b><span>${nNov} ${nNov===1?"nova":"novas"} · ordem aleatória</span></button>`:`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
+    const i=akMetaInfo(m.base.id),qs=qbList().filter(q=>q.mid===m.base.id);
+    const cmx=(qs.find(q=>norm(q.cad)==="revisao mista")||{}).cad||"",useM=cmx&&qs.some(q=>q.cad===cmx&&qbStat(q,"novas")),pool=useM?qs.filter(q=>q.cad===cmx):qs,nNov=pool.filter(q=>qbStat(q,"novas")).length;
+    out.push(qs.length?`<button class="pri" data-act="qb-meta" data-id="${m.base.id}" data-m="novas" data-rv="${m.id}" ${useM?`data-cad="${esc(cmx)}"`:""}><b>${useM?"Revisão mista":"Questões não resolvidas"}</b><span>${nNov} ${nNov===1?"nova":"novas"} · ordem aleatória</span></button>`:`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
     out.push(i.n?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="${i.hoje?"hoje":"tudo"}" data-rv="${m.id}"><b>Revisar no Anki</b><span>${i.hoje?i.hoje+" para hoje":i.n+" cartões"}</span></button>${i.err?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="erros" data-rv="${m.id}"><b>Só os que errei</b><span>${i.err} cartões</span></button>`:""}`:`<button data-act="ak-go"><b>Anki</b><span>esta meta ainda não tem cartões</span></button>`);
     return `<div class="qa">${out.join("")}</div>`;
   }
-  const qs=qbList().filter(q=>q.mid===m.id),nNov=qs.filter(q=>qbStat(q,"novas")).length,nErr=qs.filter(q=>q.last==="er").length,ai=akMetaInfo(m.id);
+  const qs=qbList().filter(q=>q.mid===m.id),ai=akMetaInfo(m.id);
+  const capr=(qs.find(q=>norm(q.cad)==="aprendizado")||{}).cad||"",useA=capr&&qs.some(q=>q.cad===capr&&qbStat(q,"novas")),pool=useA?qs.filter(q=>q.cad===capr):qs;
+  const nNov=pool.filter(q=>qbStat(q,"novas")).length,nErr=pool.filter(q=>q.last==="er").length;
   if(m.t==="questoes"&&m.k==="POR"){if(p.lk)out.push(`<a class="pri" href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir as 30 questões</span></a>`)}
-  else if(qs.length)out.push(`<button class="pri" data-act="qb-meta" data-id="${m.id}" data-m="${nNov?"novas":nErr?"erradas":"todas"}"><b>Questões do banco</b><span>${nNov} novas · ${nErr} para refazer</span></button>`);
+  else if(qs.length)out.push(`<button class="pri" data-act="qb-meta" data-id="${m.id}" data-m="${nNov?"novas":nErr?"erradas":"todas"}" ${useA?`data-cad="${esc(capr)}"`:""}><b>${useA?"Aprendizado no banco":"Questões do banco"}</b><span>${nNov} novas · ${nErr} para refazer</span></button>`);
   else out.push(`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
   if(m.t!=="questoes")out.push(ai.n?`<button data-act="ak-meta" data-id="${m.id}" data-m="${ai.hoje?"hoje":"tudo"}"><b>Anki</b><span>${ai.hoje?ai.hoje+" para hoje":ai.n+" cartões"}</span></button>`:`<button data-act="ak-go"><b>Anki</b><span>sem cartões ainda</span></button>`);
   if(p.lk&&!(m.t==="questoes"&&m.k==="POR"))out.push(`<a href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir questões</span></a>`);
@@ -3608,8 +3620,9 @@ document.addEventListener("click",e=>{
   if(a==="ak-go"){closeSheet();tab="ankis";menu=false;ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="ak-meta"){
     const m=BY[t.dataset.id];if(!m)return;
-    ak.mat=m.k;ak.mid=m.id;ak.bar="";ak.tipo="";ak.modo=t.dataset.m||"hoje";ak.rvNext=t.dataset.rv||"";
+    ak.mat=m.k;ak.mid=m.id;ak.bar="";ak.tipo="";ak.sb="";ak.modo=t.dataset.m||"hoje";ak.rvNext=t.dataset.rv||"";
     closeSheet();tab="ankis";menu=false;ak.view="home";akStart();return}
+  if(a==="ak-sub"){const m=BY[t.dataset.mid];ak.mat=t.dataset.k;ak.mid=m?m.id:"";ak.bar="";ak.tipo="";ak.sb=t.dataset.sb;ak.modo="tudo";ak.rvNext="";tab="ankis";menu=false;ak.view="home";akStart();ak.sb="";return}
   if(a==="ak-modo"){ak.modo=t.dataset.m;ak.err="";render();return}
   if(a==="ak-start"){akStart();return}
   if(a==="ak-quit"){ak.view="home";render();window.scrollTo(0,0);return}
