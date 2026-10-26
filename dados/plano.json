@@ -1,0 +1,12 @@
+{
+ "metas_por_semana": 10,
+ "inicio": "2026-10-26",
+ "dias_sem_estudo": [
+  "2026-11-02"
+ ],
+ "semanas_fixas": [
+  "S15"
+ ],
+ "fora_do_plano": [],
+ "ajustes_por_semana": {}
+}

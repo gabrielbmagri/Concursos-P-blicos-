@@ -231,7 +231,9 @@
       "Congresso Nacional e suas Casas: atribuições, competências e reuniões",
       "Comissões",
       "Regime jurídico-constitucional dos parlamentares"
-     ]
+     ],
+     "seq": 10,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-P1a",
@@ -258,7 +260,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 20,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-L1a",
@@ -289,7 +293,9 @@
       "Linguagem, língua e fala",
       "Significante e significado; significação",
       "Arbitrariedade e motivação; linearidade"
-     ]
+     ],
+     "seq": 30,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-A1",
@@ -316,7 +322,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "CF/88, art. 37, caput; Decreto-Lei 200/1967, arts. 4º a 6º"
+     "lei_seca": "CF/88, art. 37, caput; Decreto-Lei 200/1967, arts. 4º a 6º",
+     "seq": 40,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-G1a",
@@ -343,7 +351,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "CF/88, arts. 59 e 60 (espécies normativas e emenda à Constituição)"
+     "lei_seca": "CF/88, arts. 59 e 60 (espécies normativas e emenda à Constituição)",
+     "seq": 50,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-P1b",
@@ -370,7 +380,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 60,
+     "semana_plano": "S1"
     }
    ],
    "rg": false
@@ -408,7 +420,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 170,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-P2b",
@@ -435,7 +449,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 240,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-P2c",
@@ -462,7 +478,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 280,
+     "semana_plano": "S2"
     }
    ],
    "rg": false
@@ -500,7 +518,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 70,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-A2a",
@@ -528,7 +548,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 4.717/1965 (Ação Popular), art. 2º",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 80,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-L1b",
@@ -555,7 +577,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 90,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-T4",
@@ -590,7 +614,9 @@
       "Visualização: princípios e tipos de gráficos (histograma, linha, barra, dispersão e box plot)",
       "Ferramentas: Power BI, Tableau e Data Studio; storytelling"
      ],
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 100,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-G1b",
@@ -618,7 +644,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 61, 64 a 67 e 69",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 110,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-K1",
@@ -646,7 +674,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 1º a 4º (princípios fundamentais) e arts. 6º a 11 (direitos sociais)",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 120,
+     "semana_plano": "S1"
     },
     {
      "id": "S1-ING",
@@ -666,7 +696,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S1"
+     "semana_original": "S1",
+     "seq": 140,
+     "semana_plano": "S1"
     },
     {
      "id": "S2-G1c",
@@ -694,7 +726,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 62 e 68; art. 59, incisos IV a VII; art. 49 (decreto legislativo)",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 150,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-PB1",
@@ -721,7 +755,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 160,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-L2a",
@@ -748,7 +784,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 180,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-A2b",
@@ -781,7 +819,9 @@
       "Extinção, nulidades e revogação",
       "Parecer: responsabilidade do emissor"
      ],
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 190,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-G2",
@@ -813,7 +853,9 @@
       "Ordinário, abreviado, sumário, sumaríssimo, especial e concentrado",
       "Etapas e noções básicas do procedimento"
      ],
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 200,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-A3",
@@ -841,7 +883,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CTN, art. 78 (poder de polícia); Lei 9.784/1999, arts. 11 a 17 (competência, delegação e avocação)",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 210,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-L2b",
@@ -868,7 +912,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 220,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-PB2",
@@ -895,7 +941,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 230,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-G3a",
@@ -926,7 +974,9 @@
      "topicos": [
       "Disposições preliminares e órgãos da Câmara (arts. 1º a 24 e suas alterações), primeira metade"
      ],
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 250,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-T1a",
@@ -953,7 +1003,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 260,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-CP2",
@@ -980,7 +1032,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 270,
+     "semana_plano": "S2"
     },
     {
      "id": "S3-DOM2",
@@ -1005,7 +1059,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 470,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-P3",
@@ -1032,7 +1088,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 350,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-P4a",
@@ -1059,7 +1117,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 440,
+     "semana_plano": "S3"
     }
    ]
   },
@@ -1097,7 +1157,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 13 a 24",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 290,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-K2a",
@@ -1125,7 +1187,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, art. 5º, caput e incisos I a LXVII",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 300,
+     "semana_plano": "S2"
     },
     {
      "id": "S2-ING",
@@ -1145,7 +1209,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S2"
+     "semana_original": "S2",
+     "seq": 320,
+     "semana_plano": "S2"
     },
     {
      "id": "S3-G4a",
@@ -1173,7 +1239,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 25 a 38",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 330,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-PB1",
@@ -1200,7 +1268,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 340,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-L3",
@@ -1236,7 +1306,9 @@
       "Compreensão crítica: seleção de inferência",
       "Organização retórica: generalização, exemplificação, descrição, definição e especificação"
      ],
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 360,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-K7",
@@ -1270,7 +1342,9 @@
       "Servidores públicos militares",
       "Vale também para o item de Direito Administrativo sobre agentes públicos: disposições constitucionais aplicáveis"
      ],
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 370,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-G4b",
@@ -1298,7 +1372,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 39 a 51",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 380,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-K2b",
@@ -1326,7 +1402,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, art. 5º, incisos LXVIII a LXXVIII (remédios constitucionais e garantias processuais)",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 390,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-CP3",
@@ -1353,7 +1431,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 400,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-A4a",
@@ -1381,7 +1461,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 8.112/1990, arts. 2º a 39",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 410,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-L4",
@@ -1413,7 +1495,9 @@
       "Palavras homônimas, parônimas e cognatas",
       "Sinonímia, antonímia, hiperonímia, hiponímia e campo semântico"
      ],
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 420,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-PB2",
@@ -1440,7 +1524,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 430,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-G4c",
@@ -1468,7 +1554,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 52 a 64",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 450,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-A4b",
@@ -1496,7 +1584,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 8.112/1990, arts. 40 a 115",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 460,
+     "semana_plano": "S3"
     },
     {
      "id": "S3-ING",
@@ -1516,7 +1606,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S3"
+     "semana_original": "S3",
+     "seq": 480,
+     "semana_plano": "S3"
     },
     {
      "id": "S4-DOM2",
@@ -1541,7 +1633,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 620,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-P4b",
@@ -1568,7 +1662,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 510,
+     "semana_plano": "S4"
     }
    ]
   },
@@ -1606,7 +1702,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 65 a 79",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 490,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-PB1",
@@ -1633,7 +1731,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 500,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-PB2",
@@ -1660,7 +1760,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 520,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-L5a",
@@ -1687,7 +1789,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 530,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-A5a",
@@ -1715,7 +1819,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 8.112/1990, arts. 116 a 142",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 540,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-G5b",
@@ -1743,7 +1849,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 80 a 94",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 550,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-K5",
@@ -1771,7 +1879,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 14 a 17",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 560,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-CP4a",
@@ -1798,7 +1908,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 570,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-A5b",
@@ -1826,7 +1938,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 8.112/1990, arts. 143 a 182",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 580,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-L5b",
@@ -1853,7 +1967,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 590,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-F1a",
@@ -1880,7 +1996,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 600,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-G6a",
@@ -1908,7 +2026,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 95 a 110 (parte 1 de 7 do trecho 95–200)",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 610,
+     "semana_plano": "S4"
     },
     {
      "id": "S4-ING",
@@ -1928,7 +2048,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S4"
+     "semana_original": "S4",
+     "seq": 630,
+     "semana_plano": "S4"
     },
     {
      "id": "S5-G6b",
@@ -1955,7 +2077,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Regimento Interno da Câmara (RICD), arts. 111 a 125 (parte 2 de 7)"
+     "lei_seca": "Regimento Interno da Câmara (RICD), arts. 111 a 125 (parte 2 de 7)",
+     "seq": 640,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-PB1",
@@ -1981,7 +2105,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 650,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-L6a",
@@ -2007,7 +2133,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 670,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-DOM2",
@@ -2032,7 +2160,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 790,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-P5a",
@@ -2059,7 +2189,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 660,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-P5b",
@@ -2086,7 +2218,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 730,
+     "semana_plano": "S5"
     }
    ]
   },
@@ -2124,7 +2258,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 9.784/1999, arts. 1º a 69",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 680,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-CP4b",
@@ -2151,7 +2287,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 690,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-K6a",
@@ -2179,7 +2317,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 18, 19 e 25 a 33",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 700,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-G6c",
@@ -2207,7 +2347,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 126 a 140 (parte 3 de 7)",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 710,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-PB2",
@@ -2234,7 +2376,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 720,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-L6b",
@@ -2261,7 +2405,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 740,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-A7",
@@ -2289,7 +2435,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, art. 37, § 6º; Código Civil, art. 43",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 750,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-G6d",
@@ -2317,7 +2465,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 141 a 155 (parte 4 de 7)",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 760,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-T1b",
@@ -2344,7 +2494,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 770,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-F1b",
@@ -2378,7 +2530,9 @@
       "Transcrição em tempo real",
       "Ferramentas e APIs: Whisper (OpenAI), Google Speech-to-text, Azure Speech e AWS Transcribe"
      ],
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 780,
+     "semana_plano": "S5"
     },
     {
      "id": "S5-ING",
@@ -2398,7 +2552,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S5"
+     "semana_original": "S5",
+     "seq": 800,
+     "semana_plano": "S5"
     },
     {
      "id": "S6-G6e",
@@ -2425,7 +2581,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Regimento Interno da Câmara (RICD), arts. 156 a 170 (parte 5 de 7)"
+     "lei_seca": "Regimento Interno da Câmara (RICD), arts. 156 a 170 (parte 5 de 7)",
+     "seq": 810,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-PB1",
@@ -2451,7 +2609,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 820,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-L7a",
@@ -2477,7 +2637,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 840,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-A8",
@@ -2504,7 +2666,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Lei 8.429/1992 (com a Lei 14.230/2021), arts. 1º a 12"
+     "lei_seca": "Lei 8.429/1992 (com a Lei 14.230/2021), arts. 1º a 12",
+     "seq": 850,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-CP5a",
@@ -2530,7 +2694,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 860,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-DOM2",
@@ -2555,7 +2721,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 940,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-P6",
@@ -2582,7 +2750,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 830,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-P8",
@@ -2609,7 +2779,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 900,
+     "semana_plano": "S6"
     }
    ]
   },
@@ -2647,7 +2819,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "CF/88, arts. 20 a 24 e 34 a 36",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 870,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-G6f",
@@ -2675,7 +2849,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 171 a 185 (parte 6 de 7)",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 880,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-PB2",
@@ -2702,7 +2878,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 890,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-L7b",
@@ -2729,7 +2907,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 910,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-A9",
@@ -2757,7 +2937,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Lei 14.133/2021, arts. 1º a 5º, 28 a 32 e 72 a 75",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 920,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-G6g",
@@ -2785,7 +2967,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Interno da Câmara (RICD), arts. 186 a 200 (parte 7 de 7)",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 930,
+     "semana_plano": "S6"
     },
     {
      "id": "S6-ING",
@@ -2805,7 +2989,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S6"
+     "semana_original": "S6",
+     "seq": 950,
+     "semana_plano": "S6"
     },
     {
      "id": "S7-G9",
@@ -2836,7 +3022,9 @@
      "topicos": [
       "Deputados (arts. 226 a 251 e suas alterações)",
       "Administração e economia interna (arts. 262 a 273 e suas alterações)"
-     ]
+     ],
+     "seq": 960,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-A10",
@@ -2863,7 +3051,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Lei 14.133/2021, arts. 89 a 154; art. 117 (fiscalização); art. 6º, XX e XXIII (ETP e TR)"
+     "lei_seca": "Lei 14.133/2021, arts. 89 a 154; art. 117 (fiscalização); art. 6º, XX e XXIII (ETP e TR)",
+     "seq": 970,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-L8",
@@ -2889,7 +3079,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 980,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-PB1",
@@ -2915,7 +3107,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 990,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-CP5b",
@@ -2941,7 +3135,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1010,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-K4",
@@ -2968,7 +3164,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "CF/88, arts. 12 e 13"
+     "lei_seca": "CF/88, arts. 12 e 13",
+     "seq": 1020,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-G10a",
@@ -2995,7 +3193,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Regimento Comum (Res. 1/1970-CN), arts. 1º a 36"
+     "lei_seca": "Regimento Comum (Res. 1/1970-CN), arts. 1º a 36",
+     "seq": 1030,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-F2a",
@@ -3026,7 +3226,9 @@
       "Diferença entre transcrição automática, degravação e revisão humana",
       "Fluxo de degravação assistida por IA (human in the loop)",
       "Revisão e edição: critérios de qualidade e fidelidade"
-     ]
+     ],
+     "seq": 1040,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-L9a",
@@ -3052,7 +3254,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1050,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-DOM2",
@@ -3077,7 +3281,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1100,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-P9a",
@@ -3104,7 +3310,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 1000,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-P9b",
@@ -3131,7 +3339,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 1070,
+     "semana_plano": "S7"
     }
    ]
   },
@@ -3168,7 +3378,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S7"
+     "semana_original": "S7",
+     "seq": 1060,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-G10b",
@@ -3196,7 +3408,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "lei_seca": "Regimento Comum (Res. 1/1970-CN), arts. 37 a 71",
-     "semana_original": "S7"
+     "semana_original": "S7",
+     "seq": 1080,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-A11",
@@ -3235,7 +3449,9 @@
       "Geração de valor para a sociedade, entrega de resultados, sustentabilidade e avaliação de impacto das políticas públicas",
       "Decreto 9.203/2017 e suas alterações (política de governança da administração pública federal)"
      ],
-     "semana_original": "S7"
+     "semana_original": "S7",
+     "seq": 1090,
+     "semana_plano": "S7"
     },
     {
      "id": "S7-ING",
@@ -3255,7 +3471,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "semana_original": "S7"
+     "semana_original": "S7",
+     "seq": 1110,
+     "semana_plano": "S7"
     },
     {
      "id": "S8-G10c",
@@ -3286,7 +3504,9 @@
      "topicos": [
       "Título I do Regimento Comum",
       "Título IV, Capítulos II e III, até o art. 103"
-     ]
+     ],
+     "seq": 1120,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-A12",
@@ -3313,7 +3533,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "Lei 12.527/2011, arts. 1º a 31; Lei 13.709/2018, arts. 1º a 7º, 11, 17 a 22 e 23 a 30"
+     "lei_seca": "Lei 12.527/2011, arts. 1º a 31; Lei 13.709/2018, arts. 1º a 7º, 11, 17 a 22 e 23 a 30",
+     "seq": 1130,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-L9b",
@@ -3339,7 +3561,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1140,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-PB1",
@@ -3365,7 +3589,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1150,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-PB2",
@@ -3391,7 +3617,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1170,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-CP6",
@@ -3417,7 +3645,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1180,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-T2",
@@ -3448,7 +3678,9 @@
       "Redes de computadores: conceitos básicos, ferramentas, aplicativos e procedimentos de Internet e intranet",
       "Correio eletrônico: webmail e cliente de e-mail",
       "Aplicativos de comunicação: Microsoft Teams e Google Meet"
-     ]
+     ],
+     "seq": 1190,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-L10",
@@ -3474,7 +3706,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1200,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-F2b",
@@ -3507,7 +3741,9 @@
       "Ferramentas de CAT (Computer Assisted Transcription) e editores de transcrição",
       "Controle de qualidade: revisão em dupla, auditorias de amostras e SLA",
       "Vocabulário técnico parlamentar e adaptação do modelo de linguagem"
-     ]
+     ],
+     "seq": 1210,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-CP7",
@@ -3533,7 +3769,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1220,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-T3",
@@ -3565,7 +3803,9 @@
       "Programas de proteção: antivírus, firewall e antispyware",
       "Ameaças digitais: phishing e pharming",
       "Ética e responsabilidade digital no serviço público"
-     ]
+     ],
+     "seq": 1230,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-ING",
@@ -3584,7 +3824,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1250,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-DOM2",
@@ -3609,7 +3851,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1240,
+     "semana_plano": "S8"
     },
     {
      "id": "S8-P10",
@@ -3636,7 +3880,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 1160,
+     "semana_plano": "S8"
     }
    ]
   },
@@ -3673,7 +3919,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "LC 95/1998, arts. 1º a 11"
+     "lei_seca": "LC 95/1998, arts. 1º a 11",
+     "seq": 1260,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-F3",
@@ -3699,7 +3947,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1270,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-GREV",
@@ -3725,7 +3975,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1280,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-PB1",
@@ -3751,7 +4003,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1290,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-PREV",
@@ -3778,7 +4032,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "legado": true
+     "legado": true,
+     "seq": 1300,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-PB2",
@@ -3804,7 +4060,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1310,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-CP8",
@@ -3830,7 +4088,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1320,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-G1d",
@@ -3863,7 +4123,9 @@
       "Comissões permanentes e temporárias",
       "Pareceres",
       "Deliberação e votação"
-     ]
+     ],
+     "seq": 1330,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-L11b",
@@ -3890,7 +4152,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "LC 95/1998, arts. 12 a 19"
+     "lei_seca": "LC 95/1998, arts. 12 a 19",
+     "seq": 1340,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-G1e",
@@ -3917,7 +4181,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "lei_seca": "CF/88, art. 66 (veto); Regimento Interno da Câmara (RICD), capítulos de indicações, requerimentos e apreciação de vetos"
+     "lei_seca": "CF/88, art. 66 (veto); Regimento Interno da Câmara (RICD), capítulos de indicações, requerimentos e apreciação de vetos",
+     "seq": 1350,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-REVF1",
@@ -3943,7 +4209,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1360,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-REVF1b",
@@ -3969,7 +4237,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1370,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-DOM2",
@@ -3994,7 +4264,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1380,
+     "semana_plano": "S9"
     },
     {
      "id": "S9-ING",
@@ -4013,7 +4285,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1390,
+     "semana_plano": "S9"
     }
    ]
   },
@@ -4049,7 +4323,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1400,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-REG2",
@@ -4075,7 +4351,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1410,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-PB1",
@@ -4101,7 +4379,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1420,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-POR1",
@@ -4128,7 +4408,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": true,
-     "legado": true
+     "legado": true,
+     "seq": 1430,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-PB2",
@@ -4154,7 +4436,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1440,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-POR2",
@@ -4181,7 +4465,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": false,
-     "legado": true
+     "legado": true,
+     "seq": 1450,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-LIN1",
@@ -4207,7 +4493,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1460,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-LIN2",
@@ -4233,7 +4521,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1470,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-ADM1",
@@ -4259,7 +4549,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1480,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-ADM2",
@@ -4285,7 +4577,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1490,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-CP1",
@@ -4311,7 +4605,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1500,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-CP2",
@@ -4337,7 +4633,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1510,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-CON1",
@@ -4363,7 +4661,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1520,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-CON2",
@@ -4389,7 +4689,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1530,
+     "semana_plano": "S10"
     },
     {
      "id": "S10-DOM2",
@@ -4414,7 +4716,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1540,
+     "semana_plano": "S10"
     }
    ]
   },
@@ -4450,7 +4754,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1550,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-REG2",
@@ -4476,7 +4782,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1560,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-REG3",
@@ -4502,7 +4810,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1570,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-LIN1",
@@ -4528,7 +4838,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1580,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-LIN2",
@@ -4554,7 +4866,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1590,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-PB1",
@@ -4580,7 +4894,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1600,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-POR1",
@@ -4607,7 +4923,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": false,
-     "legado": true
+     "legado": true,
+     "seq": 1610,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-PB2",
@@ -4633,7 +4951,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1620,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-POR2",
@@ -4660,7 +4980,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": false,
-     "legado": true
+     "legado": true,
+     "seq": 1630,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-ADM1",
@@ -4686,7 +5008,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "seq": 1640,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-TI1",
@@ -4712,7 +5036,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1650,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-TI2",
@@ -4738,7 +5064,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1660,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-ASR1",
@@ -4764,7 +5092,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1670,
+     "semana_plano": "S11"
     },
     {
      "id": "S11-DOM2",
@@ -4789,7 +5119,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1680,
+     "semana_plano": "S11"
     }
    ]
   },
@@ -4825,7 +5157,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1690,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-REG2",
@@ -4851,7 +5185,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1700,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-LIN1",
@@ -4877,7 +5213,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1710,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-LIN2",
@@ -4903,7 +5241,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1720,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-PB1",
@@ -4929,7 +5269,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1730,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-POR1",
@@ -4956,7 +5298,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": true,
-     "legado": true
+     "legado": true,
+     "seq": 1740,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-PB2",
@@ -4982,7 +5326,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1750,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-CON1",
@@ -5008,7 +5354,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "seq": 1760,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-CP1",
@@ -5034,7 +5382,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "seq": 1770,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-ADM1",
@@ -5060,7 +5410,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "seq": 1780,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-TI1",
@@ -5086,7 +5438,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": true
+     "ajustavel": true,
+     "seq": 1790,
+     "semana_plano": "S12"
     },
     {
      "id": "S12-DOM2",
@@ -5111,7 +5465,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1800,
+     "semana_plano": "S12"
     }
    ]
   },
@@ -5147,7 +5503,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1810,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-REG2",
@@ -5173,7 +5531,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1820,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-LIN1",
@@ -5199,7 +5559,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1830,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-LIN2",
@@ -5225,7 +5587,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1840,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-PB1",
@@ -5251,7 +5615,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1850,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-POR1",
@@ -5278,7 +5644,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": false,
-     "legado": true
+     "legado": true,
+     "seq": 1860,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-PB2",
@@ -5304,7 +5672,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 1870,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-CP1",
@@ -5330,7 +5700,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1880,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-ADM1",
@@ -5356,7 +5728,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1890,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-CON1",
@@ -5382,7 +5756,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1900,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-TI1",
@@ -5408,7 +5784,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1910,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-ASR1",
@@ -5434,7 +5812,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1920,
+     "semana_plano": "S13"
     },
     {
      "id": "S13-DOM2",
@@ -5459,7 +5839,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 1930,
+     "semana_plano": "S13"
     }
    ]
   },
@@ -5495,7 +5877,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1940,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-REG2",
@@ -5521,7 +5905,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1950,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-REG3",
@@ -5547,7 +5933,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1960,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-LIN1",
@@ -5573,7 +5961,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1970,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-LIN2",
@@ -5599,7 +5989,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1980,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-CON1",
@@ -5625,7 +6017,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 1990,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-CON2",
@@ -5651,7 +6045,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 2000,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-PB1",
@@ -5677,7 +6073,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2010,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-POR1",
@@ -5704,7 +6102,9 @@
      "repeticoes": 1,
      "status": "pendente",
      "ajustavel": false,
-     "legado": true
+     "legado": true,
+     "seq": 2020,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-PB2",
@@ -5730,7 +6130,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2030,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-ADM1",
@@ -5756,7 +6158,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 2040,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-CP1",
@@ -5782,7 +6186,9 @@
      "resumo_ia": null,
      "repeticoes": 1,
      "status": "pendente",
-     "ajustavel": false
+     "ajustavel": false,
+     "seq": 2050,
+     "semana_plano": "S14"
     },
     {
      "id": "S14-DOM2",
@@ -5807,7 +6213,9 @@
       "Responda de novo cada uma sem olhar o comentário.",
       "Marque \"refiz e acertei\" ou \"errei de novo\". Quem errou de novo volta para a revisão geral da semana.",
       "Se tiver feito questões em outro lugar, importe a planilha na aba Questões para o caderno ficar completo."
-     ]
+     ],
+     "seq": 2060,
+     "semana_plano": "S14"
     }
    ]
   },
@@ -5836,7 +6244,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 4,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2070,
+     "semana_plano": "S15"
     },
     {
      "id": "S15-REV2",
@@ -5855,7 +6265,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2080,
+     "semana_plano": "S15"
     },
     {
      "id": "S15-VESP",
@@ -5874,7 +6286,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2090,
+     "semana_plano": "S15"
     },
     {
      "id": "S15-PROVA",
@@ -5893,7 +6307,9 @@
      "tec_url": null,
      "resumo_ia": null,
      "repeticoes": 1,
-     "status": "pendente"
+     "status": "pendente",
+     "seq": 2100,
+     "semana_plano": "S15"
     }
    ]
   }
