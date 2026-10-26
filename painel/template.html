@@ -378,6 +378,11 @@ ul.bul,ol.bul{margin:0;padding-left:20px;font-size:14px;display:flex;flex-direct
 .box.stip li{display:flex;flex-direction:column;gap:8px;padding:10px 0;border-top:1px solid var(--soft2)}.box.stip li:first-child{border-top:0}
 .box.stip .tx b{display:block;text-transform:none;letter-spacing:0;font-size:14.5px;color:var(--fg);margin:0}.box.stip .tx span{font-size:13px;color:var(--fg2)}
 .box.stip .tb{display:flex;gap:8px;flex-wrap:wrap}.chip.pri{background:var(--green);border-color:var(--green);color:#fff;text-decoration:none}
+.bza h4{margin:14px 0 6px;font-size:14px;color:var(--fg2)}
+.bz{border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:10px;background:var(--bg)}
+.bz .bq{font-weight:600;font-size:15px;line-height:1.4}.bz .bg{margin:10px 0 0;font-size:14px}
+.bz .bo{display:flex;gap:8px;font-size:13.5px;margin-top:6px;color:var(--fg2)}.bz .bo b{flex:none;width:20px}.bz .bo.ok{color:var(--good);font-weight:700}
+.bz .bc{margin-top:10px;background:var(--soft);border-radius:14px;padding:10px 14px}.bz .bc b{display:block;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--fg2);margin-bottom:3px}.bz .bc p{margin:0;font-size:14.5px;font-weight:500}
 details.how{border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-top:14px}details.how summary{cursor:pointer;font-weight:700}
 @keyframes fade{from{opacity:0}} @keyframes up{from{transform:translateY(30px);opacity:.7}}
 @media (min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
@@ -1613,7 +1618,7 @@ function qbSession(){
     <div class="box" style="margin-top:14px"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Esta questão não veio com comentário."}</p></div>
     <label class="lbl" for="qb-nt" style="margin-top:14px">Meu comentário</label>
     <textarea class="in" id="qb-nt" style="min-height:80px;font-family:var(--font)" placeholder="Anote o que errou, uma pegadinha, uma dúvida">${esc(q.nt||"")}</textarea>
-    <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button></div>`;
+    <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${id}" aria-pressed="${!!q.fav}">${q.fav?"★ Bizu (favorita)":"☆ Favoritar como bizu"}</button></div>`;
   }
   const last=qb.i+1>=tot;
   const nav=`<div class="qnav"><button class="btn alt" data-act="qb-prev" ${qb.i?"":"disabled"}>‹ Anterior</button><button class="btn ${a?"":"alt"}" data-act="qb-next">${last?"Finalizar":"Próxima ›"}</button></div>`;
@@ -1689,7 +1694,7 @@ function qbLista(){
     return `<li class="qli"><button class="qh" data-act="qb-open" data-id="${q.id}" aria-expanded="${op}"><span class="qt">${esc(q.e)}</span><span class="s">${qbTag(q.k)}<span class="rb">${q.t}</span>${q.cad?`<span>${esc(q.cad)}</span>`:""}${n?`<span class="${q.last==="ok"?"up":q.last==="er"?"dn":""}">${q.ok} certas · ${q.er} erradas</span>`:`<span>nova</span>`}${q.fav?`<span class="star">★</span>`:""}${q.nt?`<span>com comentário</span>`:""}</span></button>
       ${op?`<div class="qd">${q.t==="ME"?q.o.map((t,i)=>`<div class="qopt ${LTR[i]===q.g?"ok":""}" style="cursor:default"><span class="lt">${LTR[i]}</span><span class="tx">${esc(t)}</span></div>`).join(""):""}<p class="qg"><b>Gabarito:</b> ${gT}</p><div class="box"><b>Gabarito comentado</b><p style="font-weight:500">${q.c?esc(q.c):"Sem comentário."}</p></div>
       <label class="lbl" for="qn-${q.id}" style="margin-top:10px">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:70px;font-family:var(--font)">${esc(q.nt||"")}</textarea>
-      <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${q.id}" aria-pressed="${!!q.fav}">${q.fav?"★ Favorita":"☆ Favoritar"}</button><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver só esta</button>${qb.ask===q.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="qb-delok" data-id="${q.id}">Confirmar exclusão</button><button class="chip" data-act="qb-delno">Cancelar</button>`:`<button class="chip" data-act="qb-delask" data-id="${q.id}">Excluir</button>`}</div></div>`:""}</li>`;
+      <div class="bar-act"><button class="chip" data-act="qb-fav" data-id="${q.id}" aria-pressed="${!!q.fav}">${q.fav?"★ Bizu (favorita)":"☆ Favoritar como bizu"}</button><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver só esta</button>${qb.ask===q.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="qb-delok" data-id="${q.id}">Confirmar exclusão</button><button class="chip" data-act="qb-delno">Cancelar</button>`:`<button class="chip" data-act="qb-delask" data-id="${q.id}">Excluir</button>`}</div></div>`:""}</li>`;
   };
   return `<section class="sec" style="margin-top:20px"><div class="ak-top"><button class="chip" data-act="qb-view" data-v="home">Voltar</button><span>${items.length} ${items.length===1?"questão":"questões"}</span></div><h2 style="margin-top:12px">Todas as questões</h2>
     ${qb.msg?`<div class="msg">${esc(qb.msg)}</div>`:""}
@@ -1707,7 +1712,7 @@ function qbClick(a,t,e){
   if(a==="qb-view"){qb.view=t.dataset.v;qb.msg="";qb.err="";render();window.scrollTo(0,0);return true}
   if(a==="qb-start"){qbStart();return true}
   if(a==="qb-add"){closeSheet();tab="banco";menu=false;qb.view="home";render();const el=document.querySelector(".imp-box");if(el)el.scrollIntoView({behavior:"smooth",block:"center"});return true}
-  if(a==="qb-one"){qbStart([t.dataset.id]);return true}
+  if(a==="qb-one"){tab="banco";menu=false;qbStart([t.dataset.id]);return true}
   if(a==="qb-meta"){
     const m=BY[t.dataset.id];if(!m)return true;
     const mode=t.dataset.m||"novas",all=qbList().filter(q=>q.mid===m.id);
@@ -1740,6 +1745,8 @@ function qbClick(a,t,e){
 }
 function qbChange(e){
   const t=e.target;
+  const bz=t.closest&&t.closest("[data-bzf]");
+  if(bz){const k=bz.dataset.bzf;bib[k]=bz.value;if(k==="bk")bib.ba="";render();return true}
   const f=t.closest&&t.closest("[data-qbf]");
   if(f){const k=f.dataset.qbf;qb[k]=f.value;if(k==="mat"){qb.mid="";qb.cad=""}if(k==="mid")qb.cad="";qb.err="";qb.more=50;render();return true}
   const g=t.closest&&t.closest("[data-qbg]");
@@ -1793,7 +1800,7 @@ function infoHtml(){
 
 /* ---------- biblioteca: arquivos, vídeos, galeria, anotações e links ---------- */
 const PASTAS=["Edital","Leis","Resumos","Outros"];
-const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:""};
+const bib={view:"arq",pasta:"Todos",busy:"",err:"",msg:"",ask:"",bk:"",ba:"",bq:""};
 async function bibUpload(files){
   const pasta=PASTAS.includes(bib.pasta)?bib.pasta:"Outros";
   bib.busy="Enviando…";bib.err="";bib.msg="";render();
@@ -1815,6 +1822,33 @@ function metaGroups(pred){
 }
 const grpHtml=(g,body)=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
 const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}</button>${inner}</div>`;
+const bzKey=q=>q.mid||"t:"+norm(strip(q.as));
+const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto");
+function bzCard(q){
+  const gT=q.t==="CE"?(q.g==="C"?"Certo":"Errado"):q.g;
+  return `<div class="bz"><div class="bq">${esc(q.e)}</div>
+    ${q.t==="ME"&&Array.isArray(q.o)?q.o.map((t,i)=>`<div class="bo ${LTR[i]===q.g?"ok":""}"><b>${LTR[i]}</b><span>${esc(t)}</span></div>`).join(""):""}
+    <p class="bg"><b>Gabarito:</b> ${gT}</p>
+    ${q.c?`<div class="bc"><b>Bizu (gabarito comentado)</b><p>${esc(q.c)}</p></div>`:""}
+    <label class="lbl" for="qn-${q.id}">Meu comentário</label><textarea class="in" id="qn-${q.id}" data-qn="${q.id}" style="min-height:64px;font-family:var(--font)" placeholder="Acrescente a sua anotação">${esc(q.nt||"")}</textarea>
+    <div class="bar-act"><button class="chip" data-act="qb-one" data-id="${q.id}">Resolver de novo</button>${q.mid&&BY[q.mid]?`<button class="chip" data-act="open" data-id="${q.mid}">Abrir a meta</button>`:""}<button class="chip" data-act="qb-fav" data-id="${q.id}">Tirar dos bizus</button></div></div>`;
+}
+function bizHtml(favs){
+  if(!favs.length)return `<div class="empty">Favorite uma questão no Banco de questões e o comentário dela vira um bizu aqui, separado por matéria e assunto.</div>`;
+  const sq=norm(bib.bq),o=(v,c,l)=>`<option value="${esc(v)}" ${v===c?"selected":""}>${esc(l)}</option>`;
+  const mats=SUBJ.filter(k=>favs.some(q=>q.k===k));
+  const ass=[...new Map(favs.filter(q=>!bib.bk||q.k===bib.bk).map(q=>[bzKey(q),bzNome(q)])).entries()].sort((a,b)=>a[1].localeCompare(b[1],"pt-BR"));
+  if(bib.ba&&!ass.some(([k])=>k===bib.ba))bib.ba="";
+  const fil=favs.filter(q=>(!bib.bk||q.k===bib.bk)&&(!bib.ba||bzKey(q)===bib.ba)&&(!sq||norm(q.e+" "+(q.c||"")+" "+(q.nt||"")).includes(sq)));
+  const byK={};fil.forEach(q=>{(byK[q.k]||(byK[q.k]={}))[bzKey(q)]=(byK[q.k][bzKey(q)]||[]).concat(q)});
+  const ks=SUBJ.filter(k=>byK[k]);
+  const grp=ks.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:var(--m-${k})"></i>${esc(SHORT[k])}</span><span>${Object.values(byK[k]).reduce((z,a)=>z+a.length,0)}</span></div>${Object.entries(byK[k]).sort((a,b)=>bzNome(a[1][0]).localeCompare(bzNome(b[1][0]),"pt-BR")).map(([key,arr])=>`<div class="bza"><h4>${esc(bzNome(arr[0]))}</h4>${arr.map(bzCard).join("")}</div>`).join("")}</div>`).join("");
+  return `<div class="qfil" style="margin-top:14px"><div><label class="lbl" for="bz-k">Matéria</label><select id="bz-k" data-bzf="bk">${o("",bib.bk,"Todas as matérias")}${mats.map(k=>o(k,bib.bk,SHORT[k])).join("")}</select></div>
+    <div><label class="lbl" for="bz-a">Assunto</label><select id="bz-a" data-bzf="ba">${o("",bib.ba,bib.bk?"Todos os assuntos":"Todos os assuntos")}${ass.map(([k,n])=>o(k,bib.ba,n.length>60?n.slice(0,58)+"…":n)).join("")}</select></div>
+    <div><label class="lbl" for="bz-q">Buscar</label><input class="in" id="bz-q" type="search" placeholder="Palavra do bizu" value="${esc(bib.bq)}"></div></div>
+    <p class="muted" style="font-size:13px;margin:10px 2px 0">${fil.length} ${fil.length===1?"bizu":"bizus"}${bib.bk||bib.ba?" neste filtro":" em todas as matérias"}</p>
+    ${grp||'<div class="empty">Nenhum bizu com esses filtros.</div>'}`;
+}
 function bibHtml(){
   const fAll=Object.entries(FILES).map(([id,m])=>({id,m}));
   const pastaF=fAll.filter(x=>/^bib:/.test(x.m.esc||"")).map(x=>({...x,p:x.m.esc.slice(4)}));
@@ -1823,7 +1857,8 @@ function bibHtml(){
   const imgs=[...pastaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:x.p})),...metaF.filter(x=>isImg(x.m)).map(x=>({...x,lab:kName(x.meta.k)+" · "+x.meta.a}))].sort((a,b)=>(b.m.cr||"")<(a.m.cr||"")?-1:1);
   const gV=metaGroups(d=>d.vd&&d.vd.length),gN=metaGroups(d=>d.nt),gL=metaGroups(d=>d.lk);
   const nV=gV.reduce((z,g)=>z+g.items.reduce((y,x)=>y+x.d.vd.length,0),0),nN=gN.reduce((z,g)=>z+g.items.length,0),nL=gL.reduce((z,g)=>z+g.items.length,0);
-  const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
+  const favs=qbList().filter(q=>q.fav),nB=favs.length;
+  const VIEWS=[["arq","Arquivos",pastaF.length+metaF.filter(x=>!isImg(x.m)).length],["biz","Bizus",nB],["vid","Vídeos",nV],["gal","Galeria",imgs.length],["not","Anotações",nN],["lnk","Links",nL]];
   const chips=`<div class="chips" style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px">${VIEWS.map(([k,l,n])=>`<button class="chip" style="${bib.view===k?"background:var(--fg);color:#fff;border-color:var(--fg)":""}" data-act="bib-view" data-v="${k}">${l} · ${n}</button>`).join("")}</div>`;
   const frow=(x,lab)=>`<div class="frow">${x.m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${x.m.th}">`:`<span class="th doc">${/pdf/.test(x.m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(x.m.nome)}</b><span>${esc(lab)} · ${fmtB(x.m.tam)}${x.m.cr?" · "+fmtDay(x.m.cr):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${x.id}">Abrir</button>${bib.ask===x.id?`<button class="chip" style="background:var(--red);border-color:var(--red);color:#fff" data-act="bib-delok" data-f="${x.id}">Confirmar</button><button class="chip" data-act="bib-delno">Cancelar</button>`:`<button class="chip" data-act="bib-delask" data-f="${x.id}">Excluir</button>`}</div>`;
   let body="";
@@ -1840,6 +1875,8 @@ function bibHtml(){
     ${list.length?`<div class="files" style="margin-top:12px">${list.map(x=>frow(x,x.p)).join("")}</div>`:`<div class="empty">${pastaF.length?"Nenhum arquivo nesta pasta.":"Nenhum arquivo ainda. Envie o edital e as leis para começar."}</div>`}
     <div class="sec-h" style="margin-top:30px"><h3>Anexados às metas</h3></div>
     ${mgs.length?mgs.map(k=>`<div class="grp"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(k)?`var(--m-${k})`:"var(--fg3)"}"></i>${esc(kName(k))}</span><span>${mg[k].length}</span></div><div class="files">${mg[k].map(x=>frow(x,x.meta.a)).join("")}</div></div>`).join(""):`<div class="empty">Os PDFs que você enviar dentro de uma meta aparecem aqui, separados por matéria.</div>`}`;
+  }else if(bib.view==="biz"){
+    body=bizHtml(favs);
   }else if(bib.view==="vid"){
     body=gV.length?gV.map(g=>grpHtml(g,g.items.map(x=>bitem(x,x.d.vd.map(v=>`<a class="vl" href="${esc(v.u)}" target="_blank" rel="noopener"><b>${esc(v.t||hostOf(v.u))}</b><span>${esc(hostOf(v.u))}</span></a>`).join(""))).join(""))).join(""):`<div class="empty">Adicione links de vídeo dentro de uma meta. Eles aparecem aqui, por matéria e assunto.</div>`;
   }else if(bib.view==="gal"){
@@ -2575,6 +2612,7 @@ document.addEventListener("click",e=>{
 });
 document.addEventListener("input",e=>{
   if(e.target.id==="qb-paste"){qb.paste=e.target.value;return}
+  if(e.target.id==="bz-q"){bib.bq=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("bz-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="qb-q"){qb.q=e.target.value;qb.more=50;const pos=e.target.selectionStart;render();const n=document.getElementById("qb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sb-q"){sb.busca=e.target.value;const pos=e.target.selectionStart;render();const n=document.getElementById("sb-q");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}
   if(e.target.id==="sm-ana-paste"){sm.ana.paste=e.target.value;return}
