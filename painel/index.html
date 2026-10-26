@@ -632,6 +632,7 @@ html[data-tema="olimpo"] .ws-fill{background:linear-gradient(90deg,#b8902a,#d4a7
 .rvd-b{border-top:1px solid var(--line);padding:10px 12px 12px;overflow-y:auto;overscroll-behavior:contain}.rvdock.open .rvd-b{max-height:52vh}.rvdock.max .rvd-b{max-height:calc(100vh - 150px)}
 .rvd-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}.rvd-tools .chip{padding:6px 12px;font-size:12.5px}
 html[data-modo="escuro"] .rvdock{box-shadow:0 14px 40px rgba(0,0,0,.6)}
+.hleft .olv{display:block;height:64px;width:auto;margin:-6px 0 8px 2px;opacity:.92}html[data-modo="escuro"] .hleft .olv{filter:invert(1)}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -671,7 +672,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-26T21:57:07Z";
+const BUILD="2026-10-26T22:01:12Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1313,7 +1314,7 @@ function homeHtml(){
   return `
   <section class="hero" aria-label="Progresso da semana">
     <div class="hero-head">
-      <div class="hleft"><div class="atlas-t" aria-label="Atlas">Atlas</div>${fb.on?"":`<div class="demo-row"><span>${demo?"Dados de exemplo ligados":"Dados de exemplo"}</span><button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div>`}
+      <div class="hleft">${isOl()?`<img class="olv" src="atlas.png" alt="" aria-hidden="true">`:""}
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
         <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
         <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div></div>
@@ -1327,8 +1328,7 @@ function homeHtml(){
 
 ${limpo?"":kpiSec}
 ${limpo?"":panSec}
-${limpo?"":revSec}
-${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec}
+${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec+revSec}
   <div style="margin-top:28px">${medCard()}</div>`;
 }
 
@@ -2899,7 +2899,7 @@ const jcWeek=(act,n)=>{const T=today();let o="";for(let i=n-1;i>=0;i--){const d=
 /* ---------- tema Olimpo: Grécia, estoicismo e a jornada do acólito ---------- */
 const temaAtual=()=>(real["cfg-semana"]||{}).tema||LS.get("painel-tema")||"olimpo";
 const isOl=()=>temaAtual()==="olimpo";
-const layoutAtual=()=>(real["cfg-semana"]||{}).layout||LS.get("painel-layout")||"limpo";
+const layoutAtual=()=>"completo";
 let rvDock=LS.get("painel-rvdock")||"min";
 function rvDockHtml(over,tod,dueNow,open){
   const L=[...over,...tod],st=rvDock;
@@ -3259,10 +3259,11 @@ function render(){
   const body={semana:homeHtml,lembretes:lembretesHtml,jornada:jornadaHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
   const html=`
-  <div class="mgap"></div>
+  ${!fb.on&&tab==="semana"?`<header class="top"><div><div class="eyebrow">${esc(D.curso)}</div><h1>Painel de metas</h1></div>
+    <div class="sw">${`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>`:`<div class="mgap"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${upd.novo?`<div class="updbar" role="status"><span>Nova versão disponível</span><button data-act="upd">Atualizar</button></div>`:""}
-  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Página inicial</span><div class="bbseg" role="group" aria-label="Layout da página inicial"><button data-act="layout" data-v="limpo" aria-pressed="${layoutAtual()==="limpo"}">Limpa</button><button data-act="layout" data-v="completo" aria-pressed="${layoutAtual()==="completo"}">Completa</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
