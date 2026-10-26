@@ -1675,7 +1675,7 @@ function qbSum(){
   r.pend=qb.queue.length-r.ok-r.er-r.bl;return r;
 }
 function qbFinish(force){
-  if(qbPend()&&!force){qb.confirm=true;render();window.scrollTo(0,0);return}
+  qtTick();qtFlush();
   qb.confirm=false;qb.view="done";render();window.scrollTo(0,0);
 }
 function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
