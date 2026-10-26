@@ -303,7 +303,7 @@
      "edital": "Const 5, 6",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 44–58 (texto oficial no Planalto)",
      "tec_filtro": {
@@ -337,7 +337,7 @@
      "edital": "Port 5.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -366,7 +366,7 @@
      "edital": "Ling 1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -399,7 +399,7 @@
      "edital": "Adm 1–1.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -428,7 +428,7 @@
      "edital": "P2 Proc.Leg. 1.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 59–60",
      "tec_filtro": {
@@ -457,7 +457,7 @@
      "edital": "Port 5.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -497,7 +497,7 @@
      "edital": "Port 5.2–5.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -526,7 +526,7 @@
      "edital": "Port 5.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -555,7 +555,7 @@
      "edital": "Port 5.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -595,7 +595,7 @@
      "edital": "CP 1, 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -624,7 +624,7 @@
      "edital": "Port 5.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -653,7 +653,7 @@
      "edital": "Port 5.5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -693,7 +693,7 @@
      "edital": "Adm 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -723,7 +723,7 @@
      "edital": "Ling 1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -752,7 +752,7 @@
      "edital": "TI 5.1–5.3, 7.1, 8.1–8.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -789,7 +789,7 @@
      "edital": "P2 Proc.Leg. 1.2, 1.5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 61, 64–67 e 69",
      "tec_filtro": {
@@ -819,7 +819,7 @@
      "edital": "Const 1, 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 Preâmbulo, arts. 1º–4º e 6º–11",
      "tec_filtro": {
@@ -871,7 +871,7 @@
      "edital": "P2 Proc.Leg. 1.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 62, 63 e 68 + decretos legislativos e resoluções (art. 59, VI–VII)",
      "tec_filtro": {
@@ -930,7 +930,7 @@
      "edital": "Ling 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -959,7 +959,7 @@
      "edital": "Adm 2.1–2.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1021,7 +1021,7 @@
      "edital": "Port 5.5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1060,7 +1060,7 @@
      "edital": "P2 Proc.Leg. 1.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1094,7 +1094,7 @@
      "edital": "Adm 5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1124,7 +1124,7 @@
      "edital": "Ling 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -1182,7 +1182,7 @@
      "edital": "P1 Const/RI 7.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1215,7 +1215,7 @@
      "edital": "TI 1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1244,7 +1244,7 @@
      "edital": "CP 3, 6",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1273,7 +1273,7 @@
      "edital": "P1 Const/RI 7.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1330,7 +1330,7 @@
      "edital": "Port 5.6",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1359,7 +1359,7 @@
      "edital": "Port 5.7",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1398,7 +1398,7 @@
      "edital": "Const 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 art. 5º (incisos de direitos)",
      "tec_filtro": {
@@ -1450,7 +1450,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1509,7 +1509,7 @@
      "edital": "Ling 3.1–3.4, 3.6–3.8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -1547,7 +1547,7 @@
      "edital": "Const 4; Adm 3.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 37–41",
      "tec_filtro": {
@@ -1583,7 +1583,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1613,7 +1613,7 @@
      "edital": "Const 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 art. 5º (remédios: HC, MS, MI, HD, ação popular)",
      "tec_filtro": {
@@ -1643,7 +1643,7 @@
      "edital": "CP 4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1672,7 +1672,7 @@
      "edital": "Adm 3.2–3.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 8.112/1990 (lei seca, Planalto)",
      "tec_filtro": {
@@ -1729,7 +1729,7 @@
      "edital": "Port 5.8, 4.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1758,7 +1758,7 @@
      "edital": "Port 4, 4.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -1797,7 +1797,7 @@
      "edital": "Ling 3.5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -1860,7 +1860,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -1890,7 +1890,7 @@
      "edital": "Adm 3.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 8.112/1990",
      "tec_filtro": {
@@ -1942,7 +1942,7 @@
      "edital": "P1 Const/RI 7.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2030,7 +2030,7 @@
      "edital": "Ling 5.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -2059,7 +2059,7 @@
      "edital": "Adm 3.4, 4.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 8.112/1990 — regime disciplinar",
      "tec_filtro": {
@@ -2116,7 +2116,7 @@
      "edital": "Port 6.1–6.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2145,7 +2145,7 @@
      "edital": "Port 6.3–6.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2184,7 +2184,7 @@
      "edital": "P1 Const/RI 7.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2214,7 +2214,7 @@
      "edital": "Const 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 14–17",
      "tec_filtro": {
@@ -2244,7 +2244,7 @@
      "edital": "CP 5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2273,7 +2273,7 @@
      "edital": "Adm 4–4.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 8.112/1990 — PAD",
      "tec_filtro": {
@@ -2303,7 +2303,7 @@
      "edital": "Ling 5.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -2332,7 +2332,7 @@
      "edital": "ASR 1.1–1.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Documentação oficial das ferramentas citadas + resumo IA da meta",
      "tec_filtro": {
@@ -2361,7 +2361,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2413,7 +2413,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2499,7 +2499,7 @@
      "edital": "Port 1, 2, 3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2538,7 +2538,7 @@
      "edital": "Ling 4, 6.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -2567,7 +2567,7 @@
      "edital": "Adm 4.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 9.784/1999",
      "tec_filtro": {
@@ -2597,7 +2597,7 @@
      "edital": "CP 5",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2626,7 +2626,7 @@
      "edital": "Const 3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 18–19 e 20–33",
      "tec_filtro": {
@@ -2656,7 +2656,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2715,7 +2715,7 @@
      "edital": "Ling 6.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -2744,7 +2744,7 @@
      "edital": "Adm 6",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2774,7 +2774,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -2804,7 +2804,7 @@
      "edital": "TI 1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -2922,7 +2922,7 @@
      "edital": "ASR 1.4–1.8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Documentação oficial das ferramentas citadas + resumo IA da meta",
      "tec_filtro": {
@@ -2980,7 +2980,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -3039,7 +3039,7 @@
      "edital": "Ling 7.1, 7.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -3068,7 +3068,7 @@
      "edital": "Adm 7",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 8.429/1992 (com redação da Lei 14.230/2021)",
      "tec_filtro": {
@@ -3098,7 +3098,7 @@
      "edital": "CP 9",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -3127,7 +3127,7 @@
      "edital": "Const 3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 21–24, 30 e 34–36",
      "tec_filtro": {
@@ -3157,7 +3157,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -3671,7 +3671,7 @@
      "edital": "Ling 7.2, 8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -3700,7 +3700,7 @@
      "edital": "Adm 10.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 14.133/2021",
      "tec_filtro": {
@@ -3730,7 +3730,7 @@
      "edital": "P2 Proc.Leg. 2.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -3782,7 +3782,7 @@
      "edital": "P1 Const/RI 7.3–7.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Interno da Câmara (RICD) — texto oficial no site da Câmara",
      "tec_filtro": {
@@ -3816,7 +3816,7 @@
      "edital": "Adm 10.2–10.7",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 14.133/2021",
      "tec_filtro": {
@@ -3846,7 +3846,7 @@
      "edital": "Ling 9, 10, 5.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -3904,7 +3904,7 @@
      "edital": "CP 9",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -3933,7 +3933,7 @@
      "edital": "Const 2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "CF/88 arts. 12–13",
      "tec_filtro": {
@@ -4388,7 +4388,7 @@
      "edital": "P2 Proc.Leg. 3.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN)",
      "tec_filtro": {
@@ -4418,7 +4418,7 @@
      "edital": "ASR 2.1–2.3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Documentação oficial das ferramentas citadas + resumo IA da meta",
      "tec_filtro": {
@@ -4452,7 +4452,7 @@
      "edital": "Ling 11",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Manual de redação oficial (o edital não cita qual — usual: Manual de Redação da Presidência da República)",
      "tec_filtro": {
@@ -4510,7 +4510,7 @@
      "edital": "P2 Proc.Leg. 3.1",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Comum do Congresso Nacional",
      "tec_filtro": {
@@ -4540,7 +4540,7 @@
      "edital": "Adm 8–8.4, 9–9.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Decreto 9.203/2017 + material teórico",
      "tec_filtro": {
@@ -4603,7 +4603,7 @@
      "edital": "P1 Const/RI 8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Regimento Comum do Congresso Nacional",
      "tec_filtro": {
@@ -4637,7 +4637,7 @@
      "edital": "Adm 11, 12",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Lei 12.527/2011 (LAI) + Lei 13.709/2018 (LGPD)",
      "tec_filtro": {
@@ -4667,7 +4667,7 @@
      "edital": "Ling 11",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Manual de redação oficial (idem)",
      "tec_filtro": {
@@ -5120,7 +5120,7 @@
      "edital": "CP 10, 7",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -5149,7 +5149,7 @@
      "edital": "TI 2, 2.1, 3",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -5183,7 +5183,7 @@
      "edital": "Ling 12",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico de Linguística + resumo IA da meta",
      "tec_filtro": {
@@ -5212,7 +5212,7 @@
      "edital": "ASR 2.4–2.8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Documentação oficial das ferramentas citadas + resumo IA da meta",
      "tec_filtro": {
@@ -5248,7 +5248,7 @@
      "edital": "CP 11",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -5277,7 +5277,7 @@
      "edital": "TI 4.1–4.3, 6",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -5334,7 +5334,7 @@
      "edital": "Ling 13",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "LC 95/1998",
      "tec_filtro": {
@@ -5760,7 +5760,7 @@
      "edital": "ASR 3, 4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 20 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Documentação oficial das ferramentas citadas + resumo IA da meta",
      "tec_filtro": {
@@ -5876,7 +5876,7 @@
      "edital": "CP 8",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 25 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "Material teórico (PDF/aula) + resumo IA da meta",
      "tec_filtro": {
@@ -5905,7 +5905,7 @@
      "edital": "P2 Proc.Leg. 1.1 (etapas), 1.2",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "RICD — texto oficial no site da Câmara (comissões, pareceres, discussão e votação) + CF/88 arts. 58 e 64–66",
      "tec_filtro": {
@@ -5941,7 +5941,7 @@
      "edital": "Ling 13",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 25 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "LC 95/1998",
      "tec_filtro": {
@@ -5971,7 +5971,7 @@
      "edital": "P2 Proc.Leg. 1.4",
      "tipo": "teoria_questoes",
      "itens_alvo": 50,
-     "o_que_fazer": "Estude o assunto e resolva cerca de 30 itens C/E.",
+     "o_que_fazer": "Estude o assunto e resolva cerca de 50 itens C/E.",
      "como_concluir": "Concluída quando: teoria lida, questões feitas e certos/errados/brancos registrados (o painel calcula a nota líquida).",
      "fonte_teoria": "RICD — texto oficial no site da Câmara (proposições: indicações, requerimentos; apreciação de vetos) + CF/88 art. 66",
      "tec_filtro": {
