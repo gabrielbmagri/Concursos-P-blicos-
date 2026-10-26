@@ -54,7 +54,8 @@ def reorganizar(crono, plano, estado):
     w0 = next((i for i, s in enumerate(W) if d(s["inicio"]) <= inicio <= d(s["fim"])), None)
     if w0 is None: sys.exit("A data de início não cai em nenhuma semana do plano.")
 
-    oculta = lambda m: m.get("legado") and m["id"] not in com_registro
+    # "fora_do_plano" automático (excedente) pode voltar à fila; legado e lista manual não
+    oculta = lambda m: m.get("legado") and not m.get("fora_do_plano") and m["id"] not in com_registro
     todas = [m for s in W for m in s["metas"]]
     faltam_seq = [m["id"] for m in todas if "seq" not in m]
     if faltam_seq: sys.exit(f"Metas sem seq: {faltam_seq[:5]}")
@@ -68,6 +69,7 @@ def reorganizar(crono, plano, estado):
     novas = []
     for i, s in enumerate(W):
         mant = [m for m in s["metas"] if (m["id"] in concluidas) or oculta(m) or m["id"] in fora or s["id"] in fixas]
+        mant = [m for m in mant if not (m.get("fora_do_plano") and m["id"] not in fora and m["id"] not in concluidas and s["id"] not in fixas)]
         if s["id"] in fixas:
             novas.append(list(s["metas"])); continue
         if i < w0:
@@ -87,6 +89,14 @@ def reorganizar(crono, plano, estado):
         doms = domingos[s["id"]] if pega else []
         novas[i] = pega + [m for m in doms if m["id"] not in {x["id"] for x in pega}] + novas[i]
         resumo.append((s["id"], dias, cap, len(pega)))
+    if plano.get("cortar_excedente") and fila:
+        ids = {s["id"]: i for i, s in enumerate(W)}
+        for m in fila:
+            novas[ids[m["semana"]] if m["semana"] in ids and W[ids[m["semana"]]]["id"] not in fixas else ultima].append(m)
+        excedente = list(fila); fila = []
+    else:
+        excedente = []
+    plano["_excedente"] = [m["id"] for m in excedente]
     return W, novas, fila, resumo, w0
 
 def main():
@@ -98,6 +108,8 @@ def main():
     print("semana  dias  teto  metas")
     for sid, dias, cap, n in resumo:
         print(f"{sid:>6}  {dias:>4}  {cap:>4}  {n:>5}")
+    if plano.get("_excedente"):
+        print(f"\nFora do plano (excedente, escondidas e guardadas): {len(plano['_excedente'])} metas")
     if sobra and "--cortar-excedente" in sys.argv:
         plano["fora_do_plano"] = sorted(set(plano.get("fora_do_plano", [])) | {m["id"] for m in sobra})
         json.dump(plano, open(opcao("--plano", PLANO), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -116,7 +128,7 @@ def main():
     # "fora do plano" = escondida (mesma marca das metas antigas de Português); volta sozinha se ganhar registro
     for s_ in W:
         for m in s_["metas"]:
-            if m["id"] in fora:
+            if m["id"] in fora or m["id"] in set(plano.get("_excedente", [])):
                 m["legado"] = True; m["fora_do_plano"] = True
             elif m.get("fora_do_plano"):
                 m.pop("legado", None); m.pop("fora_do_plano", None)
