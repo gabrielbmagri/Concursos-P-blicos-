@@ -570,6 +570,40 @@ html[data-tema="olimpo"][data-modo="escuro"] .kpi{box-shadow:inset 0 0 0 1px rgb
 .updbar{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:14px;padding:10px 12px 10px 18px;border-radius:99px;background:var(--fg);color:var(--bg);font-size:14px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.35);white-space:nowrap}.updbar button{padding:8px 16px;border-radius:99px;background:var(--gold);color:#14301f;font-weight:800}
 .upd-b{margin:12px 22px 4px;padding:11px 16px;border-radius:99px;border:1.5px solid var(--line);font-weight:700;font-size:14px;color:var(--fg);width:calc(100% - 44px)}.upd-v{display:block;margin:0 22px 8px;font-size:11.5px;color:var(--fg3)}
 html,body{overscroll-behavior-y:contain}
+
+.sheet.sh2{padding:0;max-width:620px;display:flex;flex-direction:column;border-radius:26px 26px 0 0}
+.sh-grab{width:42px;height:4px;border-radius:9px;background:var(--soft2);margin:9px auto 0;flex:none}
+.sh-hd{padding:8px 20px 12px;flex:none}.sh-top{display:flex;justify-content:space-between;align-items:center}.sh-top .sh-k{margin:0}
+.sh-x{width:34px;height:34px;border-radius:50%;background:var(--soft);font-size:22px;line-height:1;display:grid;place-items:center;color:var(--fg2)}
+.sheet.sh2 .sh-t{font-size:20px;line-height:1.25;margin:3px 0 0}.sheet.sh2 .sh-m{margin:10px 0 0}
+.sh-st{display:flex;align-items:center;gap:10px;margin-top:12px;padding:9px 12px;border-radius:14px;background:var(--soft);font-size:13.5px;color:var(--fg2)}.sh-st span{flex:1;min-width:0}.sh-st .chip{flex:none}.sh-st .chip.go{background:var(--gold);border-color:var(--gold);color:#14301f;font-weight:800}
+.sh-st.ok{background:var(--good-t);color:var(--good);font-weight:700}.sh-st.go{background:var(--warn-t);color:var(--fg)}.sh-st.lock{background:var(--soft2)}.sh-st.lock svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none}
+.sh-hd .gl{margin-top:12px}
+.sh-tabs{position:sticky;top:0;z-index:4;display:flex;padding:0 10px;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;flex:none;scrollbar-width:none}.sh-tabs::-webkit-scrollbar{display:none}
+.sh-tabs button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 10px;font-weight:700;font-size:14px;color:var(--fg3);border-bottom:3px solid transparent;white-space:nowrap}.sh-tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--blue)}.sh-tabs em{font-style:normal;font-size:11px;padding:2px 7px;border-radius:99px;background:var(--soft2);color:var(--fg2)}
+.sh-pane{display:none;padding:16px 20px 20px}.sh-pane.on{display:block}
+.sh-ft{position:sticky;bottom:0;z-index:4;display:flex;gap:10px;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);margin-top:auto}.sh-ft .btn{margin-top:0}
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.qa>*{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 14px;border-radius:16px;background:var(--soft);text-align:left;text-decoration:none;color:var(--fg)}.qa b{font-size:14px}.qa span{font-size:12px;color:var(--fg2)}.qa .pri{background:var(--blue);color:#fff}.qa .pri span{color:rgba(255,255,255,.85)}
+.sh-sec{margin-top:18px}.sh-sec h4{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
+.tpl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}.tpl li{display:flex;gap:10px;font-size:14.5px;line-height:1.4;padding:9px 12px;background:var(--soft);border-radius:12px}.tpl li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--blue);margin-top:7px}
+.lei{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:14px;background:var(--warn-t);border-left:4px solid var(--amber)}.lei b{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg2)}.lei span{font-size:14px;color:var(--fg)}
+details.sh-d{border:1px solid var(--line);border-radius:14px;padding:0 14px}.sh-d summary{padding:12px 0;font-weight:700;font-size:14px;cursor:pointer;list-style:none}.sh-d summary::-webkit-details-marker{display:none}.sh-d summary::after{content:"›";float:right;font-size:18px;color:var(--fg3);transition:transform .15s}.sh-d[open] summary::after{transform:rotate(90deg)}
+.sh-fonte{font-size:12px;color:var(--fg3);margin:14px 0 0}.sh-obs{margin:0;padding:10px 12px;border-radius:12px;background:var(--soft);font-size:14px;white-space:pre-wrap;color:var(--fg2)}
+.kvs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}.kv{padding:9px 6px;border-radius:12px;background:var(--soft);font-size:11px;color:var(--fg2);text-align:center;line-height:1.25}.kv b{display:block;font:900 15px/1.2 var(--display);color:var(--fg);margin-bottom:2px}
+.mt2 .lbl{display:block;margin:14px 0 6px}.mt2>.lbl:first-child{margin-top:0}.mt2-h{margin:16px 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
+.mt2-l{display:flex;flex-direction:column;gap:6px}.mt2-r{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:14px;padding:4px 6px 4px 4px}.mt2-r a,.mt2-r .lnk{flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding:6px;text-decoration:none;color:var(--fg);text-align:left}
+.mt2-r .ic{flex:none;width:34px;height:34px;border-radius:10px;background:var(--soft);display:grid;place-items:center;color:var(--fg2)}.mt2-r .ic svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.mt2-r .th{flex:none;width:34px;height:34px;border-radius:10px;object-fit:cover}
+.mt2-r .tx{min-width:0;display:flex;flex-direction:column}.mt2-r .tx b{font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mt2-r .tx small{font-size:11.5px;color:var(--fg3)}.mt2-r .x{flex:none;width:30px;height:30px;border-radius:50%;font-size:18px;color:var(--fg3)}.mt2-r .x:hover{background:var(--bad-t);color:var(--bad)}
+.sh-pane .box.rep{margin-top:14px}
+html[data-modo="escuro"] .sh-st.go{background:#3a3016}
+
+.hside{display:flex;flex-direction:column;gap:8px;align-items:stretch;margin-left:auto;flex:none}.hero-head .hside .cd{margin-left:0}
+.jmini{display:grid;grid-template-columns:30px 1fr;grid-template-rows:auto auto;column-gap:8px;row-gap:5px;align-items:center;padding:7px 12px;border-radius:16px;background:linear-gradient(135deg,#eaf7ef,#fff8dc);border:1.5px solid #cfe8d8;box-shadow:0 6px 16px rgba(20,48,31,.16);text-align:left;animation:cdf 4s ease-in-out infinite;animation-delay:-2s}.jmini.risk{background:linear-gradient(135deg,#fff1e6,#ffe3d6);border-color:#f3b79c}
+.jmini .ava{grid-row:1/3;width:30px;height:30px;border-radius:50%;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.2)}.jmini .ava svg{display:block}.jm-t{display:flex;align-items:center;gap:3px}.jm-t b{font:900 20px/1 var(--display);color:var(--fg)}.jmini .flame svg{width:18px;height:18px}.jmini.risk .flame{animation:flm 1s ease-in-out infinite}.jmini .jc-bar{height:5px}
+@media (prefers-reduced-motion:reduce){.jmini{animation:none}}
+html[data-tema="olimpo"] .jmini{background:linear-gradient(135deg,#f6efdc,#fffaf0 55%,#e6ecf7);border-color:#d9c88f}html[data-tema="olimpo"] .jmini.risk{background:linear-gradient(135deg,#f8e6dc,#fff3ec);border-color:#e0a78d}html[data-tema="olimpo"] .jmini .ava{box-shadow:0 0 0 2px #d4a72c}
+html[data-modo="escuro"] .jmini{background:linear-gradient(135deg,#14301f,#2a2814);border-color:#2f4a38;box-shadow:none}html[data-modo="escuro"] .jmini.risk{background:linear-gradient(135deg,#3a2216,#2e1a14);border-color:#7a4630}html[data-tema="olimpo"][data-modo="escuro"] .jmini{background:linear-gradient(135deg,#1a2240,#2a2412);border-color:#4a4220}
+.sh-tabs button{padding:13px 6px;gap:4px;font-size:13.5px}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -609,7 +643,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-26T13:03:46Z";
+const BUILD="2026-10-26T13:34:19Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1180,7 +1214,7 @@ function homeHtml(){
       <div class="wk"><button class="nav" data-act="wk" data-d="-1" aria-label="Semana anterior" ${sel===0?"disabled":""}>‹</button>
         <div><div class="wk-t">Semana ${sel+1}</div><div class="wk-d">${fmtD(w.i,w.f)}${w.fer?` · feriado ${esc(w.fer)}`:""}</div></div>
         <button class="nav" data-act="wk" data-d="1" aria-label="Próxima semana" ${sel===lastWk?"disabled":""}>›</button></div>
-      <div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>
+      <div class="hside"><div class="cd" role="timer" aria-label="Dias até a prova"><div class="cd-n">${Math.max(0,days)}</div><div class="cd-t"><b>dias até a prova</b><span>${fmtDay(D.prova)}</span><i class="cd-b"><u style="width:${timeF*100}%"></u></i></div></div>${jornadaMini()}</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${weekPill}<span class="pill">${FASE[w.fase]||""}</span></div>
     </div>
     <div class="hero-main">
@@ -1202,8 +1236,6 @@ function homeHtml(){
     ${wLocked?`<div class="next lockn" style="cursor:default"><span class="lkic">${LOCK}</span><div class="grow"><div class="l">Semana bloqueada</div><div class="t">Conclua a semana ${LIB+1} para liberar esta</div><div class="muted" style="font-size:13px;margin-top:2px">Você pode ler as metas, mas só registra depois de liberar.</div></div></div>`:cs?`<button class="next study" data-act="open" data-id="${cs.id}"><div class="grow"><div class="l"><i class="ld"></i>Estudando</div><div class="t">${esc(cs.m.a)}</div><div class="muted" style="font-size:13px;margin-top:2px">${stTxt(cs.st)}. Toque no quadradinho da meta para concluir.</div>${goalHtml(cs.m,"mini")}</div></button>`:nxt?`<button class="next" data-act="open" data-id="${nxt.id}"><div class="grow"><div class="l">Próxima meta</div><div class="t">${esc(nxt.a)}</div>${nxt.ls?`<div class="muted" style="font-size:13px;margin-top:2px">Lei seca: ${esc(nxt.ls)}</div>`:""}</div></button>`:`<div class="next" style="cursor:default"><div class="grow"><div class="l">Semana</div><div class="t">Todas as metas concluídas.</div></div></div>`}
   </section>
 
-  ${jornadaCard()}
-  ${medCard()}
   <section class="kpis" aria-label="Indicadores">
     <div class="kpi blue"><div class="lab">Desempenho</div><div class="num">${pc(accT)}</div>
       <div class="sub">${nItems?`${num(A.tot.c)} acertos em ${num(nItems)} questões`:"Registre suas questões"}</div>
@@ -1250,7 +1282,8 @@ function homeHtml(){
   <section class="sec" aria-label="Metas da semana">
     <div class="sec-h"><h2>Metas da semana</h2><button class="chip" data-act="only" aria-pressed="${onlyPend}">Só pendentes</button></div>
     <div class="cols"><div class="stack">${sect("estudo")}</div><div class="stack">${sect("aval")}${sect("dom")}${rgS}</div></div>
-  </section>`;
+  </section>
+  <div style="margin-top:28px">${medCard()}</div>`;
 }
 
 /* ---------- revisões ---------- */
@@ -2882,6 +2915,10 @@ function avatarOl(lv,mood,px){
   }
   return o+`</g></svg>`;
 }
+function jornadaMini(){
+  const J=jc(),st=J.st,x=J.xp,mood=st.risk&&st.cur>=3?"cansado":"ok";
+  return `<button class="jmini ${st.risk?"risk":""}" data-act="tab" data-v="jornada" aria-label="Jornada: ${st.cur} dias seguidos, nível ${esc(x.name)}" title="${esc(x.name)} · ${num(x.xp)} XP${st.risk?" · ofensiva em risco hoje":""}"><span class="ava">${avatarSvg(x.lv,mood,30)}</span><span class="jm-t"><span class="flame">${FLAME}</span><b>${st.cur}</b></span><span class="jc-bar"><i style="width:${Math.round(x.pct*100)}%"></i></span></button>`;
+}
 function jornadaCard(){
   const J=jc(),st=J.st,x=J.xp,mood=st.risk&&st.cur>=3?"cansado":"ok";
   const msg=st.risk?`Estude hoje para não perder ${st.cur} ${st.cur===1?"dia":"dias"} de ofensiva.`:st.cur?`Ofensiva garantida hoje. Amanhã é o dia ${st.cur+1}.`:"Estude hoje para começar sua ofensiva.";
@@ -2923,7 +2960,6 @@ function jornadaHtml(){
     <div class="jh-b"><div class="jh-n">Nível ${x.lv+1} de ${LVS.length}</div><h3>${x.name}</h3><p>${lvDesc(x.lv)}</p>
       <div class="jc-bar big"><i style="width:${Math.round(x.pct*100)}%"></i></div>
       <div class="jc-s">${x.next?`${num(x.xp)} XP · faltam ${num(x.next-x.xp)} para ${x.nextName}`:`${num(x.xp)} XP · você chegou ao topo`}</div></div></div>
-  ${medCard()}
   <div class="jstats"><div class="js ${st.risk?"warn":""}"><span class="flame">${FLAME}</span><b>${st.cur}</b><small>${st.cur===1?"dia":"dias"} seguidos</small></div><div class="js"><b>${st.best}</b><small>melhor ofensiva</small></div><div class="js"><b>${st.shields}</b><small>${st.shields===1?"escudo":"escudos"} de ofensiva</small></div></div>
   <p class="muted" style="font-size:13px;margin:8px 2px 0">${st.risk?`<b style="color:var(--bad)">Sua ofensiva acaba hoje.</b> Estude qualquer coisa: uma meta, 1 questão ou 1 cartão já conta.`:st.cur?"Hoje já conta. Volte amanhã.":"Estude hoje para começar uma ofensiva."} Cada 7 dias seguidos dão 1 escudo (máximo 2), que cobre um dia sem estudo sozinho. Folgas marcadas no plano não quebram a ofensiva.</p>
   <div class="sec-h" style="margin-top:28px"><h3>Missões de hoje</h3></div><div class="mis">${miss.map(mrow).join("")}</div>
@@ -2936,7 +2972,7 @@ function jornadaHtml(){
   <p class="muted" style="font-size:13px;margin:0 2px 10px">O plano completo vale ${num(x.plan.total)} XP (30 por meta, 1 por questão prevista, 10 por revisão prevista). Você vira Servidor Público ao chegar a ${num(LVS[8][1])} XP, cerca de 90% do previsto. Os níveis anteriores acompanham as semanas do plano.</p>
   ${barsHtml(x.items.map(([l,v])=>({l,c:"var(--blue)",f:x.xp?v/x.xp:0,v:num(v),s:x.xp?Math.round(v/x.xp*100)+"%":"",tip:l+": "+v+" XP"})))}
   <div class="sec-h" style="margin-top:28px"><h3>Conquistas</h3><span class="muted" style="font-size:13px">${nOk} de ${B.length}</span></div>
-  <div class="badges">${B.map(([t,d,ok,pg])=>`<div class="bdg ${ok?"on":""}"><span class="bi2">${ok?CHECK:""}</span><b>${t}</b><small>${d}</small><em>${ok?"conquistada":pg}</em></div>`).join("")}</div></section>`;
+  <div class="badges">${B.map(([t,d,ok,pg])=>`<div class="bdg ${ok?"on":""}"><span class="bi2">${ok?CHECK:""}</span><b>${t}</b><small>${d}</small><em>${ok?"conquistada":pg}</em></div>`).join("")}</div><div style="margin-top:28px">${medCard()}</div></section>`;
 }
 
 /* ---------- lembretes: notificações push e e-mail ---------- */
@@ -3286,20 +3322,19 @@ const stTxt=ts=>{const d=ymd(new Date(ts));return d===ymd(today())?"Iniciada hoj
 const fixUrl=u=>{u=String(u||"").trim();if(!u)return "";if(!/^https?:\/\//i.test(u))u="https://"+u;try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:""}catch(e){return ""}};
 function mtBoxHtml(id){
   const p=P()[id]||{},vd=p.vd||[],ar=p.ar||[];
-  return `<div class="box mt"><b>Material desta meta</b>
+  return `<div class="mt2">
     <label class="lbl" for="mt-lk">Pasta de questões (Tec Concursos)</label>
     <div class="mrow"><input class="in" id="mt-lk" type="url" inputmode="url" placeholder="Cole o link da pasta" value="${esc(p.lk||"")}"><a class="chip" id="mt-lkopen" href="${esc(p.lk||"")}" target="_blank" rel="noopener" ${p.lk?"":"hidden"}>Abrir</a></div><div id="mt-lkerr" class="muted" style="font-size:12.5px;color:var(--bad)" hidden>Esse link não parece válido.</div>
     <label class="lbl" for="mt-nt">Observações</label>
-    <textarea class="in" id="mt-nt" style="min-height:90px" placeholder="Anotações sobre esta meta">${esc(p.nt||"")}</textarea>
-    <label class="lbl">Vídeos e aulas</label>
-    ${vd.length?vd.map((v,i)=>`<div class="vrow"><a href="${esc(v.u)}" target="_blank" rel="noopener"><b>${esc(v.t||hostOf(v.u))}</b><span>${esc(hostOf(v.u))}</span></a><button class="chip" data-act="mt-vdel" data-i="${i}">Remover</button></div>`).join(""):""}
-    <div class="mrow" style="margin-top:8px"><input class="in" id="mt-vu" type="url" inputmode="url" placeholder="Link do vídeo (YouTube, etc.)"><input class="in" id="mt-vt" type="text" placeholder="Título (opcional)"></div>
-    <div class="bar-act" style="margin-top:8px"><button class="btn alt" style="padding:9px 16px;font-size:14px" data-act="mt-vadd">Adicionar vídeo</button></div>
-    <label class="lbl" style="margin-top:12px">Arquivos e imagens</label>
-    ${ar.length?`<div class="files">${ar.map(f=>{const m=FILES[f];return `<div class="frow">${m&&m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="th doc">${m&&/pdf/.test(m.tipo)?"PDF":"DOC"}</span>`}<div class="fn"><b>${esc(m?m.nome:"arquivo")}</b><span>${m?fmtB(m.tam):""}</span></div><button class="chip" data-act="sm-fopen" data-f="${f}">Abrir</button><button class="chip" data-act="mt-fdel" data-f="${f}">Excluir</button></div>`}).join("")}</div>`:""}
+    <textarea class="in" id="mt-nt" style="min-height:72px" placeholder="Anotações sobre esta meta">${esc(p.nt||"")}</textarea>
+    <div class="mt2-h"><span>Vídeos${vd.length?` · ${vd.length}`:""}</span></div>
+    ${vd.length?`<div class="mt2-l">${vd.map((v,i)=>`<div class="mt2-r"><a href="${esc(v.u)}" target="_blank" rel="noopener"><span class="ic">${shIc.play}</span><span class="tx"><b>${esc(v.t||hostOf(v.u))}</b><small>${esc(hostOf(v.u))}</small></span></a><button class="x" data-act="mt-vdel" data-i="${i}" aria-label="Remover vídeo">×</button></div>`).join("")}</div>`:""}
+    <details class="sh-d" style="margin-top:8px"><summary>+ Adicionar vídeo</summary><div class="mrow" style="margin-bottom:8px"><input class="in" id="mt-vu" type="url" inputmode="url" placeholder="Link do vídeo"></div><input class="in" id="mt-vt" type="text" placeholder="Título (opcional)" style="margin-bottom:10px"><button class="btn alt" style="padding:9px 16px;font-size:14px;margin:0 0 12px" data-act="mt-vadd">Adicionar</button></details>
+    <div class="mt2-h"><span>Arquivos${ar.length?` · ${ar.length}`:""}</span></div>
+    ${ar.length?`<div class="mt2-l">${ar.map(f=>{const m=FILES[f];return `<div class="mt2-r"><button class="lnk" data-act="sm-fopen" data-f="${f}">${m&&m.th?`<img class="th" alt="" src="data:image/jpeg;base64,${m.th}">`:`<span class="ic">${shIc.file}</span>`}<span class="tx"><b>${esc(m?m.nome:"arquivo")}</b><small>${m?fmtB(m.tam):""}</small></span></button><button class="x" data-act="mt-fdel" data-f="${f}" aria-label="Excluir arquivo">×</button></div>`}).join("")}</div>`:""}
     ${mt.busy?`<div class="msg" style="background:var(--blue-t)">${esc(mt.busy)}</div>`:""}${mt.err?`<div class="msg err">${esc(mt.err)}</div>`:""}
     <div class="bar-act" style="margin-top:8px"><label class="file-btn" style="background:var(--soft2);color:var(--fg);padding:9px 16px;font-size:14px">Enviar PDF ou imagem<input type="file" id="mt-up" accept="application/pdf,image/*" multiple></label></div>
-    <small>Tudo isso também aparece na Biblioteca, separado por matéria e assunto.</small></div>`;
+    <small class="muted" style="display:block;margin-top:8px;font-size:12px">Tudo isso também aparece na Biblioteca.</small></div>`;
 }
 const refreshMt=()=>{const b=$("#mt-box");if(b&&sheetId)b.innerHTML=mtBoxHtml(sheetId)};
 async function mtUpload(files){
@@ -3358,47 +3393,86 @@ function studyTip(m,ro){
 
 /* ---------- ficha da meta ---------- */
 let sheetId=null,draft=null;
+let shTab="estudar",shId="";
+const shIc={play:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg>',file:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>'};
+function shQuick(m,p,ro){
+  if(ro)return "";
+  const out=[];
+  if(m.rv){
+    const i=akMetaInfo(m.base.id);
+    out.push(i.n?`<button class="pri" data-act="ak-meta" data-id="${m.base.id}" data-m="${i.hoje?"hoje":"tudo"}"><b>Revisar no Anki</b><span>${i.hoje?i.hoje+" para hoje":i.n+" cartões"}</span></button>${i.err?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="erros"><b>Só os que errei</b><span>${i.err} cartões</span></button>`:""}`:`<button data-act="ak-go"><b>Anki</b><span>esta meta ainda não tem cartões</span></button>`);
+    return out.length?`<div class="qa">${out.join("")}</div>`:"";
+  }
+  const qs=qbList().filter(q=>q.mid===m.id),nNov=qs.filter(q=>qbStat(q,"novas")).length,nErr=qs.filter(q=>q.last==="er").length,ai=akMetaInfo(m.id);
+  if(m.t==="questoes"&&m.k==="POR"){if(p.lk)out.push(`<a class="pri" href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir as 30 questões</span></a>`)}
+  else if(qs.length)out.push(`<button class="pri" data-act="qb-meta" data-id="${m.id}" data-m="${nNov?"novas":nErr?"erradas":"todas"}"><b>Questões do banco</b><span>${nNov} novas · ${nErr} para refazer</span></button>`);
+  else out.push(`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
+  if(m.t!=="questoes")out.push(ai.n?`<button data-act="ak-meta" data-id="${m.id}" data-m="${ai.hoje?"hoje":"tudo"}"><b>Anki</b><span>${ai.hoje?ai.hoje+" para hoje":ai.n+" cartões"}</span></button>`:`<button data-act="ak-go"><b>Anki</b><span>sem cartões ainda</span></button>`);
+  if(p.lk&&!(m.t==="questoes"&&m.k==="POR"))out.push(`<a href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir questões</span></a>`);
+  return `<div class="qa">${out.join("")}</div>`;
+}
 function openSheet(id){
-  const m=getM(id);if(!m)return;sheetId=id;
+  const m=getM(id);if(!m)return;
+  if(shId!==id){shTab="estudar";shId=id}
+  sheetId=id;
   const p=P()[id]||{};draft={r:p.r||0,c:p.c||0,e:p.e||0,b:p.b||0,dt:p.dt||null,nc:p.nc!=null?p.nc:null,ne:p.ne!=null?p.ne:null,tl:p.tl!=null?p.tl:null};
-  const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg;
+  const ro=demo||isLocked(m),r=rp(m),items=hasItems(m),isD=m.t==="discursiva",dyn=m.rv||m.rg,done=isDone(m),stu=!dyn&&!done&&!!p.st;
   const fld=(k,l,sub)=>`<div class="fr"><div class="fl">${l}${sub?`<small>${sub}</small>`:""}</div><div class="step"><button data-s="${k}" data-d="-1" aria-label="Menos ${l}" ${ro?"disabled":""}>−</button><input type="number" inputmode="numeric" min="0" id="f-${k}" data-f="${k}" value="${draft[k]||0}" ${ro?"disabled":""}><button data-s="${k}" data-d="1" aria-label="Mais ${l}" ${ro?"disabled":""}>+</button></div></div>`;
   const dfld=(k,l,sub,step)=>`<div class="fr"><div class="fl">${l}<small>${sub}</small></div><input class="num-in" type="number" inputmode="decimal" step="${step}" min="0" id="f-${k}" data-f="${k}" value="${draft[k]==null?"":draft[k]}" ${ro?"disabled":""}></div>`;
   const r_=dyn?RL.find(x=>x.id===id):null;
   const kick=m.rg?"Revisão geral":m.rv?(r_?`${r_.ix+1}ª revisão · ${r_.days} dias`:"Revisão"):(TIPO[m.t]||"Meta");
-  const rvInfo=r_?`<p class="sh-p">${r_.done?`Feita em ${fmtDay(r_.doc.dt)}.`:`Prevista para ${fmtDay(r_.due)}.`}${m.rv&&P()[m.base.id]?` Assunto concluído em ${fmtDay(P()[m.base.id].dt)}.`:""}</p>`:"";
-  const curW=ew(m),canMove=!dyn&&!isDone(m)&&!ro;
-  const moveBox=canMove?`<div class="f"><div class="fr"><div class="fl">Adiar meta<small>${curW!==m.wi?`Originalmente na semana ${m.wi+1}`:"Mover para outra semana"}</small></div><select id="f-mw" aria-label="Semana de destino">${WK.map((w,i)=>`<option value="${i}" ${i===curW?"selected":""}>Semana ${i+1} · ${fmtD(w.i,w.f)}</option>`).join("")}</select></div>
-    <div class="bar-act" style="margin:12px 0 4px">${curW<lastWk?`<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="move" data-w="${curW+1}">Jogar para a próxima semana</button>`:""}<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="movesel">Mover para a semana escolhida</button>${curW!==m.wi?`<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="move" data-w="${m.wi}">Voltar à semana original</button>`:""}</div></div>`:"";
-  $("#sheet").innerHTML=`<div class="ov" data-act="close"><div class="sheet" role="dialog" aria-modal="true" aria-label="Registrar meta">
-    <div class="sh-k">${esc(kick)}</div>
-    <h2 class="sh-t">${esc(m.a)}</h2>
-    <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}`}</span>${m.e&&!dyn?`<span class="pill">Edital: ${esc(m.e)}</span>`:""}</div>
-    ${rvInfo}
-    ${m.rv?`<div class="box stip"><b>Revisar com o Anki</b><ul>${akRow(m.base.id,ro,true)}</ul></div>`:""}
-    ${r_&&r_.pf?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(r_.pf))}. Prazo desta revisão: ${r_.days} dias depois da anterior.</p>`:""}
-    ${!dyn?(()=>{const pf=metaPerf(m);return pf.n?`<p class="sh-p"><b>Desempenho da meta:</b> ${esc(perfTxt(pf))}. Revisões em ${pf.dias.join(", ")} dias.</p>`:""})():""}
-    ${!dyn?goalHtml(m,"full"):""}
-    ${isLocked(m)?`<div class="box lockbox"><b>Semana bloqueada</b><p>Você pode ler tudo aqui, mas só consegue registrar depois de concluir as metas da semana ${LIB+1} e liberar esta.</p></div>`:""}
-    ${!dyn&&p.dur&&isDone(m)?`<p class="sh-p"><b>Tempo para concluir:</b> ${fmtDur(p.dur)}, do primeiro toque em estudando até a conclusão.</p>`:""}
-    ${!dyn&&p.st&&!isDone(m)?`<p class="sh-p"><b>${stTxt(p.st0||p.st)}</b> e ainda em andamento.</p>`:""}
-    ${!dyn&&!ro&&!isDone(m)?`<div class="bar-act" style="margin:12px 0 0">${(P()[id]||{}).st?`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-stop">Estudando agora. Toque para parar</button>`:`<button class="btn" style="background:#ffd21a;color:#14301f" data-act="mt-start">Começar a estudar</button>`}</div>`:""}
-    ${m.ls?`<div class="box"><b>Lei seca sugerida</b><p>${esc(m.ls)}</p><small>Confira a numeração no texto oficial atualizado.</small></div>`:""}
-    ${m.tp&&m.tp.length?`<div class="box"><b>${dyn?"O que revisar":"O que estudar"}</b><ul class="tp">${m.tp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
-    ${m.w?`<p class="sh-p">${esc(m.w)}</p>`:""}
-    ${m.g?`<ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>`:""}
-    ${m.ft?`<p class="sh-p"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
-    ${!dyn?studyTip(m,ro):""}
-    ${!dyn?(()=>{const qs=qbList().filter(q=>q.mid===m.id);return qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório das questões desta meta",ro):""})():""}
-    ${!dyn&&!ro?`<div id="mt-box">${mtBoxHtml(id)}</div>`:""}
-    <div class="f">
+  const curW=ew(m),canMove=!dyn&&!done&&!ro;
+  const pf=!dyn?metaPerf(m):null,tmx=!dyn?tmMeta(m.id):{q:0,k:0,n:0};
+  const qs=!dyn?qbList().filter(q=>q.mid===m.id):[];
+  const it=itemsOf(m),nIt=tot_(it),g=goalOf(m);
+  const lk=isLocked(m);
+  /* cabeçalho: situação e ação principal */
+  let acao="";
+  if(lk)acao=`<div class="sh-st lock">${LOCK}<span>Semana bloqueada. Você pode ler tudo, mas só registra depois de liberar a semana ${LIB+1}.</span></div>`;
+  else if(dyn){acao=r_?`<div class="sh-st ${r_.done?"ok":""}"><span>${r_.done?`Feita em ${fmtDay(r_.doc.dt)}`:`Prevista para ${fmtDay(r_.due)}`}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}</span></div>`:""}
+  else if(done)acao=`<div class="sh-st ok"><span>Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}${p.dur?` · levou ${fmtDur(p.dur)}`:""}</span></div>`;
+  else if(stu)acao=`<div class="sh-st go"><i class="ld"></i><span>${stTxt(p.st0||p.st)}</span>${ro?"":`<button class="chip" data-act="mt-stop">Parar</button>`}</div>`;
+  else if(!ro)acao=`<div class="sh-st"><span>Ainda não iniciada</span><button class="chip go" data-act="mt-start">Começar a estudar</button></div>`;
+  /* aba Estudar */
+  const generic=m.w&&/^Estude o assunto e resolva cerca de \d+ itens C\/E\.?$/.test(m.w);
+  const estudar=`${shQuick(m,p,ro)}
+    ${m.tp&&m.tp.length?`<div class="sh-sec"><h4>${dyn?"O que revisar":"O que estudar"}</h4><ul class="tpl">${m.tp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+    ${m.w&&!generic?`<p class="sh-p">${esc(m.w)}</p>`:""}
+    ${m.ls?`<div class="sh-sec"><div class="lei"><b>Lei seca</b><span>${esc(m.ls)}</span></div></div>`:""}
+    ${m.g?`<details class="sh-d" style="margin-top:16px" ${dyn?"open":""}><summary>Passo a passo</summary><ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></details>`:""}
+    ${m.ft?`<p class="sh-fonte"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
+    ${p.nt?`<div class="sh-sec"><h4>Minhas observações</h4><p class="sh-obs">${esc(p.nt)}</p></div>`:""}`;
+  /* aba Questões */
+  const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
+  const rep=qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório por subtópico",ro):"";
+  const questoes=dyn?"":`<div class="kvs" style="margin-top:0">${kv(nIt?pc(rate(it)):"–","acerto")}${kv(tmx.q+tmx.k?fmtH(tmx.q+tmx.k):"–","tempo líquido")}${kv(pf.n&&pf.nivel?NV[pf.nivel]:"–","classificação")}${kv(pf.dias.join("/")+" d","revisões")}</div>
+    ${qs.length?"":`<div class="empty" style="margin-top:14px">Nenhuma questão desta meta no banco. Peça ao Claude questões inéditas e adicione na aba Questões.</div>`}
+    ${rep}`;
+  /* aba Material */
+  const material=dyn?"":ro?`<div class="empty">Disponível quando a semana for liberada.</div>`:`<div id="mt-box">${mtBoxHtml(id)}</div>`;
+  /* aba Registro */
+  const moveBox=canMove?`<details class="sh-d" style="margin-top:16px"><summary>Adiar meta${curW!==m.wi?` · originalmente na semana ${m.wi+1}`:""}</summary><div class="fr" style="border:0"><div class="fl">Mover para<small>${curW!==m.wi?"Já foi adiada":"Escolha outra semana"}</small></div><select id="f-mw" aria-label="Semana de destino">${WK.map((w,i)=>`<option value="${i}" ${i===curW?"selected":""}>Semana ${i+1} · ${fmtD(w.i,w.f)}</option>`).join("")}</select></div>
+    <div class="bar-act" style="margin:4px 0 12px">${curW<lastWk?`<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="move" data-w="${curW+1}">Jogar para a próxima</button>`:""}<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="movesel">Mover para a escolhida</button>${curW!==m.wi?`<button class="btn alt" style="padding:10px 16px;font-size:14px" data-act="move" data-w="${m.wi}">Voltar à original</button>`:""}</div></details>`:"";
+  const registro=`<div class="f" style="margin-top:0;border-top:0">
       ${r>1?fld("r","Repetições feitas",`de ${r}`):`<div class="fr"><div class="fl">Concluída</div><button class="switch" role="switch" id="f-done" aria-checked="${draft.r>=1}" ${ro?"disabled":""}></button></div>`}
     </div>
-    ${items?`<div class="f">${fld("c","Certas",planItems(m)?`cerca de ${planItems(m)} questões previstas`:"")}${fld("e","Erradas")}${fld("b","Brancas")}</div>
+    ${items?`<div class="f" style="margin-top:6px">${fld("c","Certas",planItems(m)?`previstas: cerca de ${planItems(m)}`:"")}${fld("e","Erradas")}${fld("b","Brancas")}</div>
     <div class="live"><div><b id="lv-a">–</b><span>desempenho</span></div><div><b id="lv-l">–</b><span>nota líquida</span></div><div><b id="lv-n">0</b><span>questões</span></div></div>`:""}
     ${isD?`<div class="f">${dfld("nc","NC","nota de conteúdo","0.1")}${dfld("ne","NE","número de erros de português","1")}${dfld("tl","TL","total de linhas escritas","1")}</div><div class="live"><div><b id="lv-d">–</b><span>nota (NC − 2·NE÷TL)</span></div></div>`:""}
-    ${moveBox}
-    ${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`<button class="btn" data-act="save">Salvar</button>${P()[id]?`<button class="btn ghost" data-act="clear">Limpar registro</button>`:""}`}
+    ${moveBox}`;
+  const nMat=(p.vd||[]).length+(p.ar||[]).length+(p.lk?1:0)+(p.nt?1:0);
+  const TABS=dyn?[["estudar",m.rv?"Revisão":"Conteúdo",""],["registro","Registro",""]]:[["estudar","Estudar",""],["questoes","Questões",g?`${nIt}/${g}`:(nIt||"")],["material","Material",nMat||""],["registro","Registro",""]];
+  if(!TABS.some(t=>t[0]===shTab))shTab="estudar";
+  const pane=(k,h)=>TABS.some(t=>t[0]===k)?`<div class="sh-pane ${shTab===k?"on":""}" data-pane="${k}">${h}</div>`:"";
+  $("#sheet").innerHTML=`<div class="ov" data-act="close"><div class="sheet sh2" role="dialog" aria-modal="true" aria-label="Meta">
+    <div class="sh-grab"></div>
+    <header class="sh-hd"><div class="sh-top"><span class="sh-k">${esc(kick)}</span><button class="sh-x" data-act="sh-close" aria-label="Fechar">×</button></div>
+      <h2 class="sh-t">${esc(m.a)}</h2>
+      <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}${curW!==m.wi?" (adiada)":""}`}</span>${m.e&&!dyn?`<span class="pill">${esc(m.e)}</span>`:""}</div>
+      ${acao}${!dyn&&g?goalHtml(m,"mini"):""}</header>
+    <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
+    ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
+    <footer class="sh-ft">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`<button class="btn" data-act="save">Salvar</button>${P()[id]?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
   </div></div>`;
   liveUpd();
 }
@@ -3451,6 +3525,8 @@ document.addEventListener("click",e=>{
   if(!t)return;
   const a=t.dataset.act;
   if(a==="close"){if(e.target===t)closeSheet();return}
+  if(a==="sh-close"){closeSheet();return}
+  if(a==="sh-tab"){shTab=t.dataset.v;document.querySelectorAll(".sh-tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===shTab)));document.querySelectorAll(".sh-pane").forEach(x=>x.classList.toggle("on",x.dataset.pane===shTab));const sh=document.querySelector(".sheet");if(sh)sh.scrollTop=Math.min(sh.scrollTop,document.querySelector(".sh-hd").offsetHeight);return}
   if(a==="toggle"){e.stopPropagation();toggle(t.dataset.id);return}
   if(a==="open"){openSheet(t.dataset.id);return}
   if(a==="menu"){menu=true;render();return}
