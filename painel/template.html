@@ -2926,9 +2926,13 @@ function missionsCalc(){
   const doneT=L.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=L.filter(m=>isDone(m)&&dtOf(m)<T).length;
   const expCum=Math.ceil(L.length*dn/6),alvo=Math.max(doneT,Math.min(L.length-doneB,expCum-doneB));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
-  const aks=AKS||akStats(),Tk=T0(),nvT=(REVD[Tk]||{}).nv||0;
-  /* meta estável: 20 cartões por revisão do dia + cartões vencidos no começo do dia; só conta cartão liberado (repetir erro não aumenta a meta) */
-  const kd=Object.values(CARDS).filter(c=>c.ult===Tk&&c.due>Tk).length,kdue=20*(rvT+due)+aks.due+Math.max(0,kd-nvT)-kd;
+  const Tk=T0();
+  /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */
+  const rvMids=new Set(RL.filter(r=>!r.rg&&((!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===Tk))).map(r=>r.b.id));
+  let kd=0,kt=0;rvMids.forEach(mid=>{const cs=Object.values(CARDS).filter(c=>c.mid===mid);
+    const cN=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)<=1).length,cD=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)>1).length,d=cs.filter(c=>c.ult&&c.due<=Tk).length;
+    kd+=cN+cD;kt+=Math.max(20,cN)+d+cD});
+  const kdue=kt-kd;
   const qT=A.day[T]||0,qAlvo=qAlvoDia(cw);
   const doneL=L.filter(m=>isDone(m)&&dtOf(m)===T),pendL=L.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
   const qM=[...doneL,...pendL].reduce((z,m)=>z+planItems(m),0);
