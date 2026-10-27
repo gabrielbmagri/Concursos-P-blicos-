@@ -697,7 +697,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-27T15:35:21Z";
+const BUILD="2026-10-27T15:38:54Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1379,7 +1379,7 @@ function homeHtml(){
   </section>
 
 ${limpo?"":kpiSec}
-${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec+panSec+revSec+spSec}
+${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec+revSec+spSec}
   <div style="margin-top:28px">${medCard()}</div>`;
 }
 
