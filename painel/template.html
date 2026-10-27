@@ -1,5 +1,5 @@
 <title>Atlas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&family=Marcellus&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -187,8 +187,7 @@ section .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media (min-
 .sec{margin-top:36px}
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
 h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.015em}
-.sec-h h2{font:400 21px/1.2 "Marcellus","Cormorant Garamond",serif;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(95deg,var(--blue) 0%,var(--purple) 55%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:2px}
-html[data-modo="escuro"] .sec-h h2{background-image:linear-gradient(95deg,#9db8f0 0%,#c9a7e8 50%,#e8c766 100%)}
+.sec-h h2{display:flex;align-items:center;gap:12px;font:700 15px/1.2 var(--font);letter-spacing:.2em;text-transform:uppercase;color:var(--fg)}.sec-h h2::before{content:"";width:3px;height:18px;border-radius:2px;background:var(--gold,#c9a227)}
 h3{margin:0;font-size:15px;font-weight:700}
 .chip{padding:7px 14px;border-radius:99px;border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--fg2)}
 .chip[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:#fff}
