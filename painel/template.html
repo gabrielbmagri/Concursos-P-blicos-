@@ -2100,7 +2100,7 @@ function qbDone(){
   return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.ok} ${s.ok===1?"acerto":"acertos"} em ${n} ${n===1?"questão respondida":"questões respondidas"}</div>
     <div class="kpis" style="width:100%;margin:6px 0 0"><div class="kpi green"><div class="lab">Acerto</div><div class="num">${n?Math.round(s.ok/n*100):0}%</div><div class="sub">${s.ok} certas</div></div><div class="kpi red"><div class="lab">Erros</div><div class="num">${s.er}</div><div class="sub">${s.bl} em branco</div></div><div class="kpi blue"><div class="lab">Nota líquida</div><div class="num">${s.ok-s.er}</div><div class="sub">certos menos errados</div></div><div class="kpi teal"><div class="lab">Tempo líquido</div><div class="num">${fmtH(qt.sess)}</div><div class="sub">${n?Math.round(qt.sess/n)+" s por questão":"sem respostas"}</div></div></div>
     ${s.pend?`<p class="muted" style="font-size:13.5px;margin:6px 0 0">${s.pend} ${s.pend===1?"questão ficou sem resposta":"questões ficaram sem resposta"}. Elas não foram contadas e continuam como não resolvidas.</p>`:""}
-    <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>
+    <div class="bar-act">${s.pend?`<button class="btn" data-act="qb-back">Voltar e responder as ${s.pend}</button>`:""}${s.errs.length?`<button class="btn ${s.pend?"alt":""}" data-act="qb-redo">Refazer as ${s.errs.length} erradas</button>`:""}<button class="btn alt" data-act="qb-quit">Voltar ao banco</button></div>${(()=>{const sm=qb.rv?getM(qb.rv):null;return sm&&isCad(sm)&&!isDone(sm)?`<button class="btn conc" style="margin-top:12px;width:100%" data-act="mt-conc" data-id="${sm.id}"><span class="ck">${CHECK}</span><span class="ct"><b>Concluir o caderno de erros</b><small>+30 XP</small></span></button>`:""})()}
     <p class="muted" style="font-size:13px;margin:6px 0 0">Tudo o que você respondeu já foi somado às suas estatísticas de matéria, assunto, meta e semana.</p></div>${(()=>{const qs=qb.queue.map(id=>({id,...QS[id]})).filter(q=>q.e),mids=[...new Set(qs.map(q=>q.mid))],meta=mids.length===1&&mids[0]&&BY[mids[0]]?BY[mids[0]]:null;
       if(meta){const all=qbList().filter(q=>q.mid===meta.id);return `<div style="margin-top:14px">${goalHtml(meta,"full")}${qbReport(all,"Relatório da meta: "+meta.a)}<div class="bar-act"><button class="btn alt" data-act="open" data-id="${meta.id}">Abrir a meta</button></div></div>`}
       return `<div style="margin-top:14px">${qbReport(qs,"Relatório da sessão por subtópico")}</div>`})()}</section>`;
@@ -2577,7 +2577,7 @@ function srsApply(c,g){
 }
 const srsPreview=(c,g)=>g===1?"hoje":ivTxt(srsApply({...c},g).ivl);
 
-function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter(c=>(!ak.mat||c.k===ak.mat)&&(!ak.mid||c.mid===ak.mid)&&(!ak.bar||c.b===ak.bar)&&(!ak.tipo||c.t===ak.tipo)&&(!ak.sb||c.sb===ak.sb))}
+function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter(c=>(!ak.mat||c.k===ak.mat)&&(!ak.mid||c.mid===ak.mid)&&(!ak.bar||c.b===ak.bar)&&(!ak.tipo||c.t===ak.tipo)&&(!ak.sb||c.sb===ak.sb)&&(!ak.set||ak.set.has(c.mid)))}
 function akBuild(m){
   const T=T0(),p=akPool();
   if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
@@ -2655,7 +2655,7 @@ function akSession(){
   const id=ak.queue[ak.i],tot=ak.queue.length;
   if(id==null||!CARDS[id]){
     const s=ak.ses,p=s.n?Math.round(s.ok/s.n*100):0;
-    return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.n} ${s.n===1?"resposta":"respostas"}, ${p}% sem errar</div><p class="muted" style="margin:0">Tempo líquido: ${fmtH(qt.asess)}${s.n?` · ${Math.round(qt.asess/s.n)} s por cartão`:""}.</p><p class="muted" style="margin:0">${s.ok} acertos · ${s.er} erros. Os cartões que você errou voltam logo e entram no modo "Só os que errei".</p></div><div class="ak-btns one"><button class="gbtn g0" data-act="ak-quit">Voltar aos Ankis</button></div></section>`;
+    return `<section class="sec" style="margin-top:20px"><div class="ak-card" style="align-items:flex-start"><div class="eyebrow">Sessão concluída</div><div class="ak-q">${s.n} ${s.n===1?"resposta":"respostas"}, ${p}% sem errar</div><p class="muted" style="margin:0">Tempo líquido: ${fmtH(qt.asess)}${s.n?` · ${Math.round(qt.asess/s.n)} s por cartão`:""}.</p><p class="muted" style="margin:0">${s.ok} acertos · ${s.er} erros. Os cartões que você errou voltam logo e entram no modo "Só os que errei".</p></div><div class="ak-btns one"><button class="gbtn g0" data-act="ak-quit">Voltar aos Ankis</button></div>${(()=>{const sm=ak.rv?getM(ak.rv):null;return sm&&sm.rg&&!isDone(sm)?`<button class="btn conc" style="margin-top:12px;width:100%" data-act="mt-conc" data-id="${sm.id}"><span class="ck">${CHECK}</span><span class="ct"><b>Concluir a revisão geral</b><small>+10 XP</small></span></button>`:""})()}</section>`;
   }
   const c=CARDS[id],pct=Math.round(ak.i/tot*100),ce=c.t==="CE",answered=ak.rev;
   const front=c.t==="L"?lacF(c.f):esc(c.f);
@@ -3526,9 +3526,28 @@ function studyTip(m,ro){
 let sheetId=null,draft=null;
 let shTab="estudar",shId="";
 const shIc={play:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.500l5.500 3.500-5.500 3.500z"/></svg>',file:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>'};
+/* metas especiais: caderno de erros da semana e revisão geral abrem direto no banco e no Anki */
+const isCad=m=>!!m&&!m.rv&&!m.rg&&/caderno de erros/i.test(m.a||"")&&(m.t==="domingo"||m.t==="caderno_erros");
+const weekErrIds=m=>{const w=WK[ew(m)]||WK[m.wi];return qbList().filter(q=>q.e&&q.last==="er"&&q.lt&&q.lt>=w.i&&q.lt<=w.f&&(m.t!=="caderno_erros"||!SUBJ.includes(m.k)||q.k===m.k)).map(q=>q.id)};
+const weekCards=m=>{const set=new Set((WM[m.wi]||[]).filter(x=>grp(x)!=="dom").map(x=>x.id));return {set,n:Object.values(CARDS).filter(c=>c.mid&&set.has(c.mid)).length}};
+function launchSpecial(id){
+  const m=getM(id);if(!m||demo)return false;
+  if(m.rg){const {set,n}=weekCards(m);if(!n)return false;
+    closeSheet();ak.mat="";ak.mid="";ak.bar="";ak.tipo="";ak.sb="";ak.set=set;ak.modo="tudo";ak.rvNext=id;tab="ankis";menu=false;ak.view="home";akStart();ak.set=null;return true}
+  if(isCad(m)){const ids=weekErrIds(m);if(!ids.length)return false;
+    closeSheet();qb.rvNext=id;qb.ord="aleatoria";tab="questoes";menu=false;qbStart(ids);return true}
+  return false;
+}
+function concluirMeta(id){
+  const m=getM(id),p=real[id];if(!m||demo)return;
+  const d={...(p||{}),r:rp(m),dt:(p&&p.dt)||ymd(new Date())},t0=p&&(p.st0||p.st);
+  if(t0)d.dur=Math.max(0,Date.now()-t0);delete d.st;delete d.st0;xpWhy=(m.rv||m.rg)?"Revisão concluída":"Meta concluída";save(id,d);
+}
 function shQuick(m,p,ro){
   if(ro)return "";
   const out=[];
+  if(m.rg){const {n}=weekCards(m);return `<div class="qa"><button class="pri" data-act="sp-go" data-id="${m.id}"><b>Revisar os Ankis da semana</b><span>${n?n+" cartões de todas as matérias":"sem cartões nas metas desta semana"}</span></button></div>`}
+  if(isCad(m)){const n=weekErrIds(m).length;return `<div class="qa"><button class="pri" data-act="sp-go" data-id="${m.id}"><b>Refazer os erros da semana</b><span>${n?n+" questões, todas as matérias":"nenhum erro registrado na semana"}</span></button></div>`}
   if(m.rg)return "";
   if(m.rv){
     const i=akMetaInfo(m.base.id),qs=qbList().filter(q=>q.mid===m.base.id);
@@ -3570,7 +3589,7 @@ function openSheet(id){
   const it=itemsOf(m),nIt=tot_(it),nF=tot_(firstItems(m)),g=goalOf(m);
   const lk=isLocked(m);
   /* cabeçalho: situação e ação principal */
-  const stuAny=!done&&!!p.st,tmN=dyn?tmRv(id):(tmx.q+tmx.k),netTxt=tmN>0?` · líquido ${fmtH(tmN)}`:"";
+  const stuAny=!done&&!!p.st,tmN=(dyn||isCad(m))?tmRv(id):(tmx.q+tmx.k),netTxt=tmN>0?` · líquido ${fmtH(tmN)}`:"";
   let acao="";
   if(lk)acao=`<div class="sh-st lock">${LOCK}<span>Semana bloqueada. Você pode ler tudo, mas só registra depois de liberar a semana ${LIB+1}.</span></div>`;
   else if(done)acao=`<div class="sh-st ok"><span>${dyn&&r_&&r_.doc?`Feita em ${fmtDay(r_.doc.dt)}`:`Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}`}${p.dur?` · levou ${fmtDur(p.dur)}`:""}${netTxt}</span></div>`;
@@ -3680,7 +3699,9 @@ document.addEventListener("click",e=>{
   if(a==="sh-close"){closeSheet();return}
   if(a==="sh-tab"){shTab=t.dataset.v;document.querySelectorAll(".sh-tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===shTab)));document.querySelectorAll(".sh-pane").forEach(x=>x.classList.toggle("on",x.dataset.pane===shTab));const sh=document.querySelector(".sheet");if(sh)sh.scrollTop=Math.min(sh.scrollTop,document.querySelector(".sh-hd").offsetHeight);return}
   if(a==="toggle"){e.stopPropagation();toggle(t.dataset.id);return}
-  if(a==="open"){openSheet(t.dataset.id);return}
+  if(a==="open"){if(!launchSpecial(t.dataset.id))openSheet(t.dataset.id);return}
+  if(a==="sp-go"){if(!launchSpecial(t.dataset.id))closeSheet();return}
+  if(a==="mt-conc"){concluirMeta(t.dataset.id);qb.view="home";ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="menu"){menu=true;render();return}
   if(a==="menu-close"){if(e.target===t){menu=false;render()}return}
   if(a==="tab"){tab=t.dataset.v;menu=false;render();window.scrollTo(0,0);return}
