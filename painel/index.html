@@ -644,6 +644,15 @@ html[data-modo="escuro"] .rvdock{box-shadow:0 14px 40px rgba(0,0,0,.6)}
 .hero .stats{grid-column:1/-1;grid-row:3;margin-top:16px}
 .hero .big .bn{font-size:clamp(58px,17vw,84px)}
 @media (min-width:821px){.hero>.hside{grid-row:1/3;align-self:center}}
+
+.rvp{margin:4px 0 14px;padding:14px 16px 12px;border:1px solid var(--line);border-radius:20px;background:var(--soft)}.rvp.all{background:linear-gradient(135deg,var(--good-t),var(--warn-t));border-color:#b8e3c6}
+.rvp-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.rvp-t{font-size:14px;color:var(--fg2)}.rvp-t b{font:900 20px/1 var(--display);color:var(--fg);margin-right:4px}.rvp-xp{flex:none;font-weight:800;font-size:13px;padding:5px 11px;border-radius:99px;background:var(--gold);color:#14301f}
+.rvp-bar{position:relative;height:16px;border-radius:99px;background:var(--soft2);margin-top:11px;overflow:hidden}.rvp-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#3fae5a,#ffd21a);transition:width .6s ease-out}.rvp-bar span{position:absolute;right:8px;top:0;line-height:16px;font-size:11px;font-weight:800;color:var(--fg)}
+html[data-tema="olimpo"] .rvp-bar i{background:linear-gradient(90deg,#1d3f7a,#d4a72c)}
+.rvp-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:9px;font-size:12.5px;color:var(--fg2)}.rvp-foot .flame svg{width:14px;height:14px;vertical-align:-2px}.rvp-ok{font-weight:800;color:var(--good)}
+.xpt{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:95;display:flex;flex-direction:column;align-items:center;gap:1px;padding:10px 22px;border-radius:18px;background:var(--fg);color:var(--bg);box-shadow:0 12px 32px rgba(0,0,0,.35);pointer-events:none;animation:xpt 3.8s ease both}.xpt b{font:900 22px/1.1 var(--display);color:var(--gold)}.xpt span{font-size:12.5px;font-weight:700;opacity:.9}.xpt.big{padding:14px 28px;background:linear-gradient(135deg,#14284f,#1d3f7a);color:#fff}.xpt.big b{font-size:19px;color:#ecd488}
+@keyframes xpt{0%{opacity:0;transform:translate(-50%,-30px) scale(.9)}10%{opacity:1;transform:translate(-50%,0) scale(1.04)}16%{transform:translate(-50%,0) scale(1)}85%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-20px)}}@media (prefers-reduced-motion:reduce){.xpt{animation:none}}
+html[data-modo="escuro"] .rvp.all{background:linear-gradient(135deg,#16321f,#3a3016);border-color:#25563a}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -683,7 +692,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-27T00:58:52Z";
+const BUILD="2026-10-27T09:02:51Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1208,6 +1217,19 @@ function rowHtml(m){
     <div class="rt"><div class="t">${esc(m.a)}</div><div class="s">${tagHtml(m)}${stu?`<span class="rb stu">Estudando</span>`:""}${(()=>{const q=qbList().filter(x=>x.mid===m.id);if(!q.length)return "";const nv=q.filter(x=>qbStat(x,"novas")).length;const er=q.filter(x=>x.last==="er").length,mode=nv?"novas":er?"erradas":"todas";return `<button class="rb qbk" data-act="qb-meta" data-id="${m.id}" data-m="${mode}" aria-label="Resolver as questões desta meta no banco">${nv?nv+(nv===1?" questão nova":" questões novas")+" no banco":er?er+" para refazer no banco":q.length+" no banco"} ›</button>`})()}${done&&pr&&pr.dur?`<span>concluída em ${fmtDur(pr.dur)}</span>`:""}${bits?`<span>${bits}</span>`:""}${mv}</div>${lsLine(m)}${goalHtml(m,"mini")}</div>${res}</li>`;
 }
 const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1?"dia":"dias"}</span>`:r.late===0?`<span class="late" style="color:var(--blue)">para hoje</span>`:`em ${-r.late} ${-r.late===1?"dia":"dias"} (${fmtDay(r.due)})`;
+function rvToday(){const T=ymd(today()),done=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length,due=RL.filter(r=>!r.done&&r.late>=0).length,total=done+due;return {done,due,total,pct:total?done/total:1,xp:done*10}}
+function rvPunctual(){
+  const d=RL.filter(r=>r.done&&r.doc&&r.doc.dt).map(r=>({dt:r.doc.dt,late:Math.max(0,dday(pd(r.doc.dt),r.due))})).sort((a,b)=>a.dt<b.dt?1:a.dt>b.dt?-1:0);
+  let seq=0;for(const x of d){if(x.late===0)seq++;else break}
+  const on=d.filter(x=>x.late===0).length;return {seq,pct:d.length?on/d.length:null,tot:d.length};
+}
+function rvPanelHtml(){
+  const t=rvToday(),pu=rvPunctual(),all=t.total>0&&t.due===0;
+  const nxt=RL.filter(r=>!r.done&&r.late<0).sort((a,b)=>a.due-b.due)[0];
+  return `<div class="rvp ${all?"all":""}"><div class="rvp-top"><div class="rvp-t">${t.total?`<b>${t.done} de ${t.total}</b> revisões de hoje`:`<b>Sem revisões hoje</b>${nxt?` · próxima em ${fmtDay(ymd(nxt.due))}`:""}`}</div>${t.xp?`<span class="rvp-xp">+${t.xp} XP</span>`:""}</div>
+    <div class="rvp-bar" role="progressbar" aria-valuenow="${Math.round(t.pct*100)}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.round(t.pct*100)}%"></i>${t.total?`<span>${Math.round(t.pct*100)}%</span>`:""}</div>
+    <div class="rvp-foot">${all?`<span class="rvp-ok">Revisões de hoje concluídas</span>`:`<span>${t.due} ${t.due===1?"restante":"restantes"}</span>`}<span><span class="flame">${FLAME}</span> ${pu.seq} ${pu.seq===1?"seguida":"seguidas"} no prazo${pu.pct!=null?` · pontualidade ${Math.round(pu.pct*100)}%`:""}</span></div></div>`;
+}
 function revRow(r){
   const stu=!r.done&&!!(r.doc&&r.doc.st);
   const it=r.doc?{c:r.doc.c||0,e:r.doc.e||0,b:r.doc.b||0}:null,n=it?tot_(it):0;
@@ -1252,11 +1274,12 @@ function homeHtml(){
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   const limpo=layoutAtual()==="limpo";
+  const qHoje=A.day[ymd(T)]||0,qAlvoH=qAlvoDia(cw);
   const sumOld=`    <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
         <div class="st" style="--c:${tri(expect>0?frac/expect:null,.9,.6)}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana</small></div>
-        <div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>
+        ${isCur?`<div class="st" style="--c:${tri(qHoje/qAlvoH,1,.6)}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>de ${qAlvoH} hoje · semana ${num(ws.q)}${ws.pi?` de ${num(ws.pi)}`:""}</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
         <div class="st" style="--c:${tri(accW,PD.faixas.excelente,PD.faixas.razoavel)}"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
       </div>
     </div>
@@ -1305,6 +1328,7 @@ function homeHtml(){
   </section>`;
   const revSec=`  <section class="sec" aria-label="Revisões de hoje">
     <div class="sec-h"><h2>Revisões de hoje</h2><button class="chip" data-act="tab" data-v="revisoes">Ver todas${open.length?` (${open.length})`:""}</button></div>
+    ${rvPanelHtml()}
     ${dueNow?`<ul class="list" style="border-top:2px solid var(--fg)">${[...over,...tod].slice(0,5).map(revRow).join("")}</ul>${dueNow>5?`<p class="muted" style="font-size:13px;margin:8px 2px 0">e mais ${dueNow-5} na aba Revisões</p>`:""}`:`<div class="empty">${open.length?`Nenhuma revisão vencida. A próxima é em ${fmtDay(open.slice().sort((a,b)=>a.due-b.due)[0].due)}.`:"Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 7 dias depois."}</div>`}
   </section>`;
   const metSec=`  <section class="sec" aria-label="Metas da semana">
@@ -1358,6 +1382,7 @@ function revHtml(){
       <div class="tbl"><table><thead><tr><th>Desempenho</th><th>Acerto</th><th>1ª</th><th>2ª</th><th>3ª</th></tr></thead><tbody>
       ${["excelente","razoavel","ruim"].map(k=>`<tr><th>${NV[k]}</th><td>${k==="excelente"?`${Math.round(PD.faixas.excelente*100)}% ou mais`:k==="razoavel"?`${Math.round(PD.faixas.razoavel*100)}% a ${Math.round(PD.faixas.excelente*100)-1}%`:`menos de ${Math.round(PD.faixas.razoavel*100)}%`}</td>${PD.intervalos_dias[k].map(x=>`<td>${x} dias</td>`).join("")}</tr>`).join("")}</tbody></table></div>
       <p class="lead" style="margin-top:10px"><b>Mínimo de ${PD.minimo_questoes} questões</b> na meta para classificar. Abaixo disso, vale o prazo de Razoável. ${PD.firme_questoes>PD.minimo_questoes?`Entre ${PD.minimo_questoes} e ${PD.firme_questoes-1} a classificação é provisória, e a partir de ${PD.firme_questoes} questões é firme. `:""}Os prazos se ajustam sozinhos conforme você resolve mais questões. Nenhuma revisão é marcada para depois da prova.</p></details>
+    ${rvPanelHtml()}
     <div class="kpis" style="margin-top:16px">
       <div class="kpi red"><div class="lab">Atrasadas</div><div class="num">${over.length}</div><div class="sub">Já passaram do dia previsto</div></div>
       <div class="kpi blue"><div class="lab">Para hoje</div><div class="num">${tod.length}</div><div class="sub">Vencem hoje</div></div>
@@ -2876,6 +2901,7 @@ function xpCalc(st){
   const nx=LVS[lv+1],cu=LVS[lv][1];
   return {xp,items:it,plan:pl,lv,name:LVS[lv][0],next:nx?nx[1]:null,nextName:nx?nx[0]:null,pct:nx?(xp-cu)/(nx[1]-cu):1};
 }
+const qAlvoDia=wi=>Math.max(30,Math.min(100,Math.round((weekStats(wi).pi||300)/6/10)*10));
 function missionsCalc(){
   const T=ymd(today()),cw=A.cw,w=WK[cw],L=(WM[cw]||[]).filter(m=>grp(m)!=="dom"),dn=Math.max(1,Math.min(6,dday(today(),pd(w.i))+1));
   const dtOf=m=>(P()[m.id]||{}).dt||"";
@@ -2883,7 +2909,7 @@ function missionsCalc(){
   const expCum=Math.ceil(L.length*dn/6),alvo=Math.max(doneT,Math.min(L.length-doneB,expCum-doneB));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const aks=AKS||akStats(),kd=(REVD[T]||{}).n||0,kdue=aks.due+Math.min(aks.nov,Math.max(0,AKNOV()-((REVD[T]||{}).nv||0)));
-  const qT=A.day[T]||0,qAlvo=Math.max(30,Math.min(100,Math.round((weekStats(cw).pi||300)/6/10)*10));
+  const qT=A.day[T]||0,qAlvo=qAlvoDia(cw);
   return {T,L,doneT,alvo,doneB,rv:{d:rvT,t:rvT+due},ak:{d:kd,t:kd+kdue},q:{d:qT,t:Math.max(qAlvo,qT)}};
 }
 let JC=null;
@@ -2921,6 +2947,17 @@ const jcWeek=(act,n)=>{const T=today();let o="";for(let i=n-1;i>=0;i--){const d=
 const temaAtual=()=>(real["cfg-semana"]||{}).tema||LS.get("painel-tema")||"olimpo";
 const isOl=()=>temaAtual()==="olimpo";
 const layoutAtual=()=>"completo";
+let xpPrev=null,xpLv=null,xpWhy="";
+function toastXp(t,sub,big){
+  const el=document.createElement("div");el.className="xpt"+(big?" big":"");el.setAttribute("role","status");el.innerHTML=`<b>${esc(t)}</b><span>${esc(sub)}</span>`;document.body.appendChild(el);
+  setTimeout(()=>el.remove(),3800);
+}
+function xpCheck(){
+  try{const J=jc();
+    if(xpPrev!=null&&xpWhy){const d=J.xp.xp-xpPrev;if(J.xp.lv>xpLv)toastXp(`Nível ${J.xp.lv+1}: ${J.xp.name}`,"Você subiu de nível!",true);else if(d>=5)toastXp(`+${d} XP`,xpWhy)}
+    xpPrev=J.xp.xp;xpLv=J.xp.lv;xpWhy="";
+  }catch(e){}
+}
 let rvDock=LS.get("painel-rvdock")||"min";
 function rvDockHtml(over,tod,dueNow,open){
   const L=[...over,...tod],st=rvDock;
@@ -3246,7 +3283,7 @@ function render(){
   if(!(tab==="questoes"&&qb.view==="session")&&!(tab==="ankis"&&ak.view==="session")&&(Object.keys(qt.pend).length||Object.keys(qt.apend).length))qtFlush();
   WM=WK.map(()=>[]);ALL.forEach(m=>{if(!hid(m))WM[ew(m)].push(m)});
   LOCKON=lockOn();LIB=libEff();
-  IM=importMap();A=agg();RL=reviewList();JC=null;if(tab==="ankis"||tab==="desempenho"||tab==="semana"||tab==="jornada")AKS=akStats();
+  IM=importMap();A=agg();RL=reviewList();JC=null;xpCheck();if(tab==="ankis"||tab==="desempenho"||tab==="semana"||tab==="jornada")AKS=akStats();
   const dueNow=RL.filter(r=>!r.done&&r.late>=0).length;
   const body={semana:homeHtml,lembretes:lembretesHtml,jornada:jornadaHtml,revisoes:revHtml,simulados:simHtml,questoes:qbHtml,desempenho:perfTab,plano:planHtml,info:infoHtml,ankis:ankiHtml,biblioteca:bibHtml}[tab]();
   const label=fb.on?(sync==="erro"?"Erro ao sincronizar":""):sync==="db"?"Sincronizado entre aparelhos":sync==="erro"?"Erro ao sincronizar":"Salvo neste aparelho";
@@ -3580,6 +3617,7 @@ function closeSheet(){sheetId=null;$("#sheet").innerHTML=""}
 function empty_(d){return !(d.r||0)&&!d.c&&!d.e&&!d.b&&d.nc==null&&d.ne==null&&d.tl==null&&d.mw==null&&!hasEnr(d)}
 function sheetSave(force){
   const m=getM(sheetId);if(!m)return;
+  xpWhy=(m.rv||m.rg)?"Revisão concluída":"Meta concluída";
   const old=P()[sheetId]||{};
   const r=rp(m),done=force?r:(r===1?($("#f-done").getAttribute("aria-checked")==="true"?1:0):Math.min(r,draft.r));
   const doc={r:done};
@@ -3594,6 +3632,7 @@ function sheetSave(force){
 function toggle(id){
   if(demo)return openSheet(id);
   const m=getM(id),p=real[id];if(!m)return;
+  xpWhy=(m.rv||m.rg)?"Revisão concluída":"Meta concluída";
   if(isLocked(m))return;
   if(isDone(m)){const d={...p,r:0};delete d.dur;delete d.st0;if(empty_(d)){save(id,null)}else{save(id,d)}return}
   if(!(p&&p.st)){startStudy(id);return}
