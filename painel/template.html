@@ -1221,7 +1221,7 @@ function revRow(r){
   const steps=`<span class="steps" aria-label="${doneC} de ${RV.iv.length} revisões feitas">${RV.iv.map((_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
   return `<li class="row ${r.done?"done":stu?"stu":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
     <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":stu?"Concluir":"Começar a estudar"} revisão: ${esc(r.b.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${stu?`<span class="rb stu">Estudando</span>`:""}${akChip(r.b.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${stu?`<span class="rb stu">Estudando</span>`:""}${akChip(r.b.id,r.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
 }
 function homeHtml(){
   const w=WK[sel],ws=weekStats(sel),T=today(),cw=A.cw,L=WM[sel];
@@ -1895,7 +1895,7 @@ function qbStart(ids){
   if(!pool.length){qb.err="Nenhuma questão com esses filtros.";render();return}
   pool=qb.ord==="aleatoria"?shuf(pool):qb.ord==="dificuldade"?qbOrdered(pool).sort((a,b)=>DFR[a.df||""]-DFR[b.df||""]):qbOrdered(pool);
   const n=qb.n==="todas"?pool.length:+qb.n;
-  qb.rv=qb.rvNext||"";qb.rvNext="";qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qt.sess=0;qt.tq={};qt.act=Date.now();qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
+  qb.rv=qb.rvNext||"";qb.rvNext="";if(!qb.rv){const cs=curStudy();if(cs&&cs.m.rv&&qb.mid&&cs.m.base.id===qb.mid)qb.rv=cs.id}qb.queue=pool.slice(0,n).map(q=>q.id);qb.i=0;qt.sess=0;qt.tq={};qt.act=Date.now();qb.sans={};qb.dr={};qb.confirm=false;qb.err="";qb.view="session";render();window.scrollTo(0,0);
 }
 function qbLog(q,res){
   if(demo)return;
@@ -2560,10 +2560,17 @@ function akMetaInfo(mid){
   const due=cs.filter(c=>c.ult&&c.due<=T).length,nov=cs.filter(c=>!c.ult).length,err=cs.filter(c=>c.ult&&(c.lap>0||c.last===1)).length;
   return {n:cs.length,due,nov,err,hoje:due+Math.min(nov,nvHoje)};
 }
-function akChip(mid){
+function akRvStat(id){
+  let n=0,ok=0,dias=[];
+  for(const d in REVD){const r=REVD[d],x=(r.rc||{})[id];if(x){n+=x[0];ok+=x[1]}if((r.rs||{})[id])dias.push(d)}
+  if(!n&&dias.length){const base=id.split("~")[0];Object.values(CARDS).forEach(c=>{if(c.mid===base&&dias.includes(c.ult)){n++;if(c.last>1)ok++}})}
+  return {n,ok};
+}
+function akMetaStat(mid){let n=0,ok=0;Object.values(CARDS).forEach(c=>{if(c.mid===mid){n+=(c.ok||0)+(c.er||0);ok+=c.ok||0}});return {n,ok}}
+function akChip(mid,rv){
   const i=akMetaInfo(mid);if(!i.n)return "";
   const modo=i.hoje?"hoje":"tudo";
-  return `<button class="rb akk" data-act="ak-meta" data-id="${mid}" data-m="${modo}" aria-label="Abrir os cartões de Anki desta meta">Anki · ${i.hoje?i.hoje+(i.hoje===1?" cartão para hoje":" cartões para hoje"):i.n+(i.n===1?" cartão":" cartões")} ›</button>`;
+  return `<button class="rb akk" data-act="ak-meta" data-id="${mid}" data-m="${modo}" ${rv?`data-rv="${rv}"`:""} aria-label="Abrir os cartões de Anki desta meta">Anki · ${i.hoje?i.hoje+(i.hoje===1?" cartão para hoje":" cartões para hoje"):i.n+(i.n===1?" cartão":" cartões")} ›</button>`;
 }
 function akRow(mid,ro,vazio){
   const i=akMetaInfo(mid);
@@ -2574,7 +2581,7 @@ function akRow(mid,ro,vazio){
 function akStart(){
   const q=akBuild(ak.modo);
   if(!q.length){ak.err="Nenhum cartão encontrado com esses filtros. Troque o modo ou os filtros.";render();return}
-  ak.err="";ak.msg="";ak.rv=ak.rvNext||"";ak.rvNext="";ak.queue=q.map(c=>c.id);ak.i=0;qt.asess=0;qt.acq={};qt.act=Date.now();ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
+  ak.err="";ak.msg="";ak.rv=ak.rvNext||"";ak.rvNext="";if(!ak.rv){const cs=curStudy();if(cs&&cs.m.rv&&ak.mid&&cs.m.base.id===ak.mid)ak.rv=cs.id}ak.queue=q.map(c=>c.id);ak.i=0;qt.asess=0;qt.acq={};qt.act=Date.now();ak.rev=false;ak.pick="";ak.ses={n:0,ok:0,er:0};ak.view="session";render();window.scrollTo(0,0);
 }
 function akAnswer(g){
   const id=ak.queue[ak.i];if(!CARDS[id])return;
@@ -2583,7 +2590,10 @@ function akAnswer(g){
   srsApply(c,g);cardsWrite([[id,c]]);
   const T=T0(),r=REVD[T]?JSON.parse(JSON.stringify(REVD[T])):{n:0,ok:0,er:0,nv:0,k:{}};
   r.n++;if(g>1)r.ok++;else r.er++;if(isNew)r.nv=(r.nv||0)+1;
-  r.k=r.k||{};const kx=r.k[c.k]||[0,0];kx[0]++;if(g>1)kx[1]++;r.k[c.k]=kx;{const w=g>1?"tok":"ter";r[w]=rd1((r[w]||0)+(qt.acq[id]||0));qt.acq[id]=0;const pp=qt.apend[T];delete qt.apend[T];akTmMerge(r,pp)}revdWrite(T,r);
+  r.k=r.k||{};const kx=r.k[c.k]||[0,0];kx[0]++;if(g>1)kx[1]++;r.k[c.k]=kx;
+  if(c.mid){r.mc=r.mc||{};const x=r.mc[c.mid]||[0,0];x[0]++;if(g>1)x[1]++;r.mc[c.mid]=x}
+  if(ak.rv){r.rc=r.rc||{};const x=r.rc[ak.rv]||[0,0];x[0]++;if(g>1)x[1]++;r.rc[ak.rv]=x}
+  {const w=g>1?"tok":"ter";r[w]=rd1((r[w]||0)+(qt.acq[id]||0));qt.acq[id]=0;const pp=qt.apend[T];delete qt.apend[T];akTmMerge(r,pp)}revdWrite(T,r);
   ak.ses.n++;if(g>1)ak.ses.ok++;else ak.ses.er++;
   if(g===1)ak.queue.splice(Math.min(ak.queue.length,ak.i+4),0,id);
   ak.i++;ak.rev=false;ak.pick="";render();window.scrollTo(0,0);
@@ -3524,6 +3534,7 @@ function openSheet(id){
   const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
   const rep=qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório por subtópico",ro):"";
   const questoes=dyn?"":`<div class="kvs" style="margin-top:0">${kv(nIt?pc(rate(it)):"–","acerto")}${kv(tmx.q+tmx.k?fmtH(tmx.q+tmx.k):"–","tempo líquido")}${kv(pf.n&&pf.nivel?NV[pf.nivel]:"–","classificação")}${kv(pf.dias.join("/")+" d","revisões")}</div>
+    ${(()=>{const a=akMetaStat(m.id),i=akMetaInfo(m.id);return i.n?`<p class="sh-p" style="margin-top:12px"><b>Anki:</b> ${i.n} ${i.n===1?"cartão":"cartões"} · ${a.n} ${a.n===1?"resposta":"respostas"}${a.n?` · ${Math.round(a.ok/a.n*100)}% lembrados`:""}</p>`:""})()}
     ${qs.length?"":`<div class="empty" style="margin-top:14px">Nenhuma questão desta meta no banco. Peça ao Claude questões inéditas e adicione na aba Questões.</div>`}
     ${rep}`;
   /* aba Material */
@@ -3547,7 +3558,7 @@ function openSheet(id){
     <header class="sh-hd"><div class="sh-top"><span class="sh-k">${esc(kick)}</span><button class="sh-x" data-act="sh-close" aria-label="Fechar">×</button></div>
       <h2 class="sh-t">${esc(m.a)}</h2>
       <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}${curW!==m.wi?" (adiada)":""}`}</span>${m.e&&!dyn?`<span class="pill">${esc(m.e)}</span>`:""}</div>
-      ${acao}${g?goalHtml(m,"mini"):""}</header>
+      ${acao}${g?goalHtml(m,"mini"):""}${(()=>{const a=m.rv?akRvStat(m.id):null;return a&&a.n?`<div class="gl-t" style="margin-top:8px"><span>Anki nesta revisão: <b>${a.n}</b> ${a.n===1?"cartão":"cartões"}</span><span class="gs" style="color:var(--good)">${Math.round(a.ok/a.n*100)}% lembrados</span></div>`:""})()}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
     ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
     <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
