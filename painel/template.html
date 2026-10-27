@@ -732,6 +732,7 @@ const ew=m=>{const p=P()[m.id];return p&&p.mw!=null?p.mw:m.wi};
 const rdone=m=>{const p=P()[m.id];return p?Math.min(p.r||0,rp(m)):0};
 const isDone=m=>rdone(m)>=rp(m);
 const ownItems=m=>{const p=P()[m.id];return p?{c:p.c||0,e:p.e||0,b:p.b||0}:{c:0,e:0,b:0}};
+const firstItems=m=>{const o=ownItems(m),x=IM.byFirst[m.id];return x?{c:o.c+x.c,e:o.e+x.e,b:o.b+x.b}:o};
 const itemsOf=m=>{const o=ownItems(m),x=m.rv?IM.byRv[m.id]:IM.by[m.id];return x?{c:o.c+x.c,e:o.e+x.e,b:o.b+x.b}:o};
 
 /* ---------- armazenamento ---------- */
@@ -951,13 +952,13 @@ function genDemo(){
 
 /* ---------- importação de questões ---------- */
 function importMap(){
-  const by={},byRv={},rows=[];
+  const by={},byRv={},byFirst={},rows=[];
   for(const id in P()){
     if(id.slice(0,4)!=="imp-")continue;
-    (P()[id].rows||[]).forEach(r=>{rows.push(r);if(r.rv){const o=byRv[r.rv]||(byRv[r.rv]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}else if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}});
+    (P()[id].rows||[]).forEach(r=>{rows.push(r);if(r.rv){const o=byRv[r.rv]||(byRv[r.rv]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0}if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c||0;o.e+=r.e||0;o.b+=r.b||0;if(!r.rv){const f=byFirst[r.mid]||(byFirst[r.mid]={c:0,e:0,b:0});f.c+=r.c||0;f.e+=r.e||0;f.b+=r.b||0}}});
   }
   for(const id in SM)smRows(SM[id]).forEach(r=>{rows.push(r);if(r.mid){const o=by[r.mid]||(by[r.mid]={c:0,e:0,b:0});o.c+=r.c;o.e+=r.e;o.b+=r.b}});
-  return {by,byRv,rows};
+  return {by,byRv,byFirst,rows};
 }
 const norm=s=>String(s??"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g," ").trim();
 const STOP=new Set("de da do das dos com para por uma que the and em no na nos nas ao aos ou um sao ser como mais sobre entre".split(" "));
@@ -1195,7 +1196,7 @@ function weekStats(wi){
 const goalOf=m=>!m||m.rg?0:m.rv?(RV.i||30):m.t==="teoria_questoes"?(planItems(m)||50):0;
 function goalHtml(m,mode){
   const g=goalOf(m);if(!g)return "";
-  const it=itemsOf(m),n=tot_(it),mx=Math.max(g,n),ok=n>=g,falt=Math.max(0,g-n),r=rate(it),w=v=>(v/mx*100).toFixed(1)+"%";
+  const it=m.rv?itemsOf(m):firstItems(m),n=tot_(it),mx=Math.max(g,n),ok=n>=g,falt=Math.max(0,g-n),r=rate(it),w=v=>(v/mx*100).toFixed(1)+"%";
   const bar=`<div class="gl-b" role="img" aria-label="${n} de ${g} questões"><i style="width:${w(it.c)};background:var(--good)"></i><i style="width:${w(it.e)};background:var(--bad)"></i><i style="width:${w(it.b)};background:var(--fg3)"></i>${n>g?`<u style="left:${w(g)}"></u>`:""}</div>`;
   const stat=ok?`objetivo atingido${n>g?` (+${n-g})`:""}`:n?`faltam ${falt}`:`faltam ${g}`;
   if(mode==="full"){
@@ -1231,8 +1232,9 @@ function rvPanelHtml(){
     <div class="rvp-foot">${all?`<span class="rvp-ok">Revisões de hoje concluídas</span>`:`<span>${t.due} ${t.due===1?"restante":"restantes"}</span>`}<span><span class="flame">${FLAME}</span> ${pu.seq} ${pu.seq===1?"seguida":"seguidas"} no prazo${pu.pct!=null?` · pontualidade ${Math.round(pu.pct*100)}%`:""}</span></div></div>`;
 }
 function revRow(r){
+  const rm=getM(r.id),itR=rm?itemsOf(rm):null;
   const stu=!r.done&&!!(r.doc&&r.doc.st);
-  const it=r.doc?{c:r.doc.c||0,e:r.doc.e||0,b:r.doc.b||0}:null,n=it?tot_(it):0;
+  const it=itR&&tot_(itR)?itR:null,n=it?tot_(it):0;
   const res=n?`<div class="res"><span class="sc ${scCls(rate(it))}">${pc(rate(it))}</span><small>${it.c}/${n}</small></div>`:"";
   if(r.rg){
     return `<li class="row ${r.done?"done":stu?"stu":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
@@ -2304,14 +2306,14 @@ const hostOf=u=>{try{return new URL(u).hostname.replace(/^www\./,"")}catch(e){re
 function metaGroups(pred){
   const by={};
   for(const id in real){
-    const m=BY[id],d=real[id];if(!m||!pred(d))continue;
+    const m=BY[id]||(id.indexOf("~R")>0?getM(id):null),d=real[id];if(!m||!pred(d))continue;
     (by[m.k]||(by[m.k]=[])).push({m,d});
   }
   const ord=k=>SUBJ.includes(k)?SUBJ.indexOf(k):99;
-  return Object.keys(by).sort((a,b)=>ord(a)-ord(b)).map(k=>({k,items:by[k].sort((a,b)=>a.m.wi-b.m.wi||a.m.o-b.m.o)}));
+  return Object.keys(by).sort((a,b)=>ord(a)-ord(b)).map(k=>({k,items:by[k].sort((a,b)=>a.m.wi-b.m.wi||(a.m.o||0)-(b.m.o||0)||String(a.m.id).localeCompare(String(b.m.id)))}));
 }
 const grpHtml=(g,body)=>`<div class="grp bbgrp" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
-const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}</button>${inner}</div>`;
+const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}${x.m.rg?" · revisão geral":x.m.rv?` · ${RV.iv.indexOf(x.m.step)+1}ª revisão`:""}</button>${inner}</div>`;
 const bzKey=q=>q.mid||"t:"+norm(strip(q.as));
 const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto");
 function bbCard(q,mode,i,tot){
@@ -3040,7 +3042,7 @@ function jornadaHtml(){
     cells.push(`<i class="hm${lvl} ${FOL.includes(k)&&!st.act[k]?"fol":""}" data-tip="${fmtDay(k)}: ${st.act[k]?`${fmtH(sec)} líquidas · ${q} questões`:FOL.includes(k)?"folga":"sem estudo"}"></i>`)}
   const path=LVS.map(([n,m],i)=>`<div class="pth ${i<x.lv?"done":i===x.lv?"cur":"lock"}"><span class="pa">${avatarSvg(i,"ok",58)}</span><b>${n}</b><small>${i<=x.lv?lvDesc(i):num(m)+" XP"}</small></div>`).join("");
   const nI=tot_(A.tot),hs=tmTot();
-  const goalMetas=ALL.filter(m=>goalOf(m)&&tot_(itemsOf(m))>=goalOf(m)).length;
+  const goalMetas=ALL.filter(m=>goalOf(m)&&!m.rv&&tot_(firstItems(m))>=goalOf(m)).length;
   const perfect=WK.some((w,i)=>weekMetas(i).length>0&&weekDone(i)&&i<=A.cw);
   const nCards=Object.values(REVD).reduce((z,r)=>z+(r.n||0),0);
   const pm=Math.max(1,A.tot.metas),pq=Math.max(1,x.plan.q),pc_=v=>Math.max(1,Math.round(v));
@@ -3099,7 +3101,7 @@ function ntSave(patch){
 function ntSnapshot(){
   const T=ymd(today()),J=jc(),M=missionsCalc(),cw=A.cw,w=WK[cw],ws=weekStats(cw),aks=AKS||akStats(),cs=curStudy();
   const L=(WM[cw]||[]).filter(m=>grp(m)!=="dom");
-  const metaQ=ALL.filter(m=>goalOf(m)&&!hid(m)&&m.wi<=cw&&((P()[m.id]||{}).st||(isDone(m)&&(P()[m.id]||{}).dt&&dday(today(),pd(P()[m.id].dt))<=7))&&tot_(itemsOf(m))<goalOf(m)).slice(0,5).map(m=>({n:m.a,f:tot_(itemsOf(m)),g:goalOf(m)}));
+  const metaQ=ALL.filter(m=>goalOf(m)&&!hid(m)&&m.wi<=cw&&((P()[m.id]||{}).st||(isDone(m)&&(P()[m.id]||{}).dt&&dday(today(),pd(P()[m.id].dt))<=7))&&tot_(firstItems(m))<goalOf(m)).slice(0,5).map(m=>({n:m.a,f:tot_(firstItems(m)),g:goalOf(m)}));
   return {v:1,hoje:T,prova:D.prova,folgas:FOL,
     streak:{cur:J.st.cur,best:J.st.best,shields:J.st.shields,last:J.st.last},
     xp:{xp:J.xp.xp,nivel:J.xp.lv+1,nome:J.xp.name},
@@ -3561,7 +3563,7 @@ function openSheet(id){
   const curW=ew(m),canMove=!dyn&&!done&&!ro;
   const pf=!dyn?metaPerf(m):null,tmx=!dyn?tmMeta(m.id):{q:0,k:0,n:0};
   const qs=!dyn?qbList().filter(q=>q.mid===m.id):[];
-  const it=itemsOf(m),nIt=tot_(it),g=goalOf(m);
+  const it=itemsOf(m),nIt=tot_(it),nF=tot_(firstItems(m)),g=goalOf(m);
   const lk=isLocked(m);
   /* cabeçalho: situação e ação principal */
   const stuAny=!done&&!!p.st,tmN=dyn?tmRv(id):(tmx.q+tmx.k),netTxt=tmN>0?` · líquido ${fmtH(tmN)}`:"";
@@ -3579,7 +3581,7 @@ function openSheet(id){
     ${m.ls?`<div class="sh-sec"><div class="lei"><b>Lei seca</b><span>${esc(m.ls)}</span></div></div>`:""}
     ${m.g?`<details class="sh-d" style="margin-top:16px" ${dyn?"open":""}><summary>Passo a passo</summary><ol class="gd">${m.g.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></details>`:""}
     ${m.ft?`<p class="sh-fonte"><b>Fonte:</b> ${esc(m.ft)}</p>`:""}
-    ${p.nt?`<div class="sh-sec"><h4>Minhas observações</h4><p class="sh-obs">${esc(p.nt)}</p></div>`:""}`;
+    ${p.nt&&!dyn?`<div class="sh-sec"><h4>Minhas observações</h4><p class="sh-obs">${esc(p.nt)}</p></div>`:""}`;
   /* aba Questões */
   const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
   const rep=qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório por subtópico",ro):"";
@@ -3599,7 +3601,13 @@ function openSheet(id){
     ${isD?`<div class="f">${dfld("nc","NC","nota de conteúdo","0.1")}${dfld("ne","NE","número de erros de português","1")}${dfld("tl","TL","total de linhas escritas","1")}</div><div class="live"><div><b id="lv-d">–</b><span>nota (NC − 2·NE÷TL)</span></div></div>`:""}
     ${moveBox}`;
   const nMat=(p.vd||[]).length+(p.ar||[]).length+(p.lk?1:0)+(p.nt?1:0);
-  const TABS=dyn?[["estudar",m.rv?"Revisão":"Conteúdo",""],["registro","Registro",""]]:[["estudar","Estudar",""],["questoes","Questões",g?`${nIt}/${g}`:(nIt||"")],["material","Material",nMat||""],["registro","Registro",""]];
+  const baseId=m.rv?m.base.id:"",bnt=baseId?(P()[baseId]||{}).nt||"":"",prevN=m.rv?RV.iv.filter(st=>st!==m.step).map(st=>({st,nt:(P()[baseId+"~R"+st]||{}).nt||""})).filter(x=>x.nt):[];
+  const nNotas=(p.nt?1:0)+(bnt?1:0)+prevN.length;
+  const notas=!dyn?"":`<div class="mt2"><label class="lbl" for="mt-nt">Observações desta revisão</label><textarea class="in" id="mt-nt" style="min-height:96px" placeholder="O que você percebeu, errou ou quer lembrar nesta revisão" ${ro?"disabled":""}>${esc(p.nt||"")}</textarea><small class="muted" style="display:block;margin-top:6px;font-size:12px">Fica guardado na Biblioteca, em Anotações.</small></div>
+    ${bnt?`<div class="sh-sec"><h4>Da primeira passada</h4><p class="sh-obs">${esc(bnt)}</p><div class="bar-act" style="margin-top:8px"><button class="chip" data-act="open" data-id="${baseId}">Abrir a meta</button></div></div>`:""}
+    ${prevN.map(x=>`<div class="sh-sec"><h4>${RV.iv.indexOf(x.st)+1}ª revisão</h4><p class="sh-obs">${esc(x.nt)}</p></div>`).join("")}
+    ${m.rv&&!bnt&&!prevN.length?`<p class="sh-fonte">Ainda não há observações nesta meta nem nas outras revisões.</p>`:""}`;
+  const TABS=dyn?[["estudar",m.rv?"Revisão":"Conteúdo",""],["notas","Anotações",nNotas||""],["registro","Registro",""]]:[["estudar","Estudar",""],["questoes","Questões",g?`${nF}/${g}`:(nIt||"")],["material","Material",nMat||""],["registro","Registro",""]];
   if(!TABS.some(t=>t[0]===shTab))shTab="estudar";
   const pane=(k,h)=>TABS.some(t=>t[0]===k)?`<div class="sh-pane ${shTab===k?"on":""}" data-pane="${k}">${h}</div>`:"";
   $("#sheet").innerHTML=`<div class="ov" data-act="close"><div class="sheet sh2" role="dialog" aria-modal="true" aria-label="Meta">
@@ -3609,7 +3617,7 @@ function openSheet(id){
       <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}${curW!==m.wi?" (adiada)":""}`}</span>${m.e&&!dyn?`<span class="pill">${esc(m.e)}</span>`:""}</div>
       ${acao}${g?goalHtml(m,"mini"):""}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
-    ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
+    ${pane("estudar",estudar)}${pane("notas",notas)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
     <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
   </div></div>`;
   liveUpd();
