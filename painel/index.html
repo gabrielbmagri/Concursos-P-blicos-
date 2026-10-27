@@ -697,7 +697,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-27T22:31:18Z";
+const BUILD="2026-10-27T22:36:14Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -2591,6 +2591,7 @@ function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter
 function akBuild(m){
   const T=T0(),p=akPool();
   if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
+  if(m==="jornada"){const out=[];(ak.set||new Set()).forEach(mid=>{const cs=p.filter(c=>c.mid===mid),feitos=cs.filter(c=>c.ult===T&&c.due>T&&(c.reps||0)<=1).length;out.push(...cs.filter(c=>c.ult&&c.due<=T),...shuf(cs.filter(c=>!c.ult)).slice(0,Math.max(0,20-feitos)))});return shuf(out)}
   if(m==="erros")return p.filter(c=>c.ult&&(c.lap>0||c.last===1)).sort((a,b)=>b.lap-a.lap).slice(0,40);
   if(m==="acertos")return shuf(p.filter(c=>c.ult&&c.last>=3)).slice(0,30);
   if(m==="dificeis")return p.filter(c=>c.ult&&(c.ez<2.2||c.lap>=2)).sort((a,b)=>a.ez-b.ez).slice(0,40);
@@ -2920,6 +2921,7 @@ function xpCalc(st){
   return {xp,items:it,plan:pl,lv,name:LVS[lv][0],next:nx?nx[1]:null,nextName:nx?nx[0]:null,pct:nx?(xp-cu)/(nx[1]-cu):1};
 }
 const qAlvoDia=wi=>Math.max(30,Math.min(100,Math.round((weekStats(wi).pi||300)/6/10)*10));
+const rvMidsHoje=()=>new Set(RL.filter(r=>!r.rg&&((!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===T0()))).map(r=>r.b.id));
 function missionsCalc(){
   const T=ymd(today()),cw=A.cw,w=WK[cw],L=(WM[cw]||[]).filter(m=>grp(m)!=="dom"),dn=Math.max(1,Math.min(6,dday(today(),pd(w.i))+1));
   const dtOf=m=>(P()[m.id]||{}).dt||"";
@@ -2928,7 +2930,7 @@ function missionsCalc(){
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const Tk=T0();
   /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */
-  const rvMids=new Set(RL.filter(r=>!r.rg&&((!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===Tk))).map(r=>r.b.id));
+  const rvMids=rvMidsHoje();
   let kd=0,kt=0;rvMids.forEach(mid=>{const cs=Object.values(CARDS).filter(c=>c.mid===mid);
     const cN=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)<=1).length,cD=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)>1).length,d=cs.filter(c=>c.ult&&c.due<=Tk).length;
     kd+=cN+cD;kt+=Math.max(20,cN)+d+cD});
@@ -3055,7 +3057,7 @@ function jornadaCard(){
 function jornadaHtml(){
   const J=jc(),st=J.st,x=J.xp,M=missionsCalc(),mood=st.risk&&st.cur>=3?"cansado":"ok",T=today();
   const miss=[["Metas de hoje",M.doneT,M.alvo,"metas"],["Revisões do dia",M.rv.d,M.rv.t,"revisões"],["Anki do dia",M.ak.d,M.ak.t,"cartões"],["Questões de hoje",M.q.d,M.q.t,"questões"]];
-  const mrow=([l,d,t,u])=>{const ok=t>0&&d>=t,f=t?Math.min(1,d/t):1;return `<div class="mis-r ${ok||!t?"ok":""}"><div class="mis-i">${ok||!t?CHECK:""}</div><div class="mis-b"><div class="mis-t"><b>${l}</b><span>${t?`${d} de ${t} ${u}`:"nada pendente"}</span></div><div class="mis-bar"><i style="width:${f*100}%"></i></div></div></div>`};
+  const mrow=([l,d,t,u])=>{const ok=t>0&&d>=t,f=t?Math.min(1,d/t):1;return `<div class="mis-r ${ok||!t?"ok":""}"${l==="Anki do dia"?` data-act="ak-day" role="button" tabindex="0" style="cursor:pointer"`:""}><div class="mis-i">${ok||!t?CHECK:""}</div><div class="mis-b"><div class="mis-t"><b>${l}</b><span>${t?`${d} de ${t} ${u}`:"nada pendente"}</span></div><div class="mis-bar"><i style="width:${f*100}%"></i></div></div></div>`};
   const mon=addDays(T,-((T.getDay()+6)%7)),cells=[];
   for(let c=11;c>=0;c--)for(let r=0;r<7;r++){const d=addDays(mon,-c*7+r),k=ymd(d);if(d>T){cells.push(`<i class="hm0 fut"></i>`);continue}
     const sec=tmDay(k),q=A.day[k]||0,lvl=!st.act[k]?0:(sec>=10800||q>=100)?3:(sec>=3600||q>=40)?2:1;
@@ -3546,6 +3548,11 @@ const shIc={play:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy
 const isCad=m=>!!m&&!m.rv&&!m.rg&&/caderno de erros/i.test(m.a||"")&&(m.t==="domingo"||m.t==="caderno_erros");
 const weekErrIds=m=>{return qbList().filter(q=>q.e&&q.last==="er"&&(m.t!=="caderno_erros"||!SUBJ.includes(m.k)||q.k===m.k)).map(q=>q.id)};
 const weekCards=m=>{const set=new Set((WM[m.wi]||[]).filter(x=>grp(x)!=="dom").map(x=>x.id));return {set,n:Object.values(CARDS).filter(c=>c.mid&&set.has(c.mid)).length}};
+function launchAnkiDia(){
+  const set=rvMidsHoje();if(!set.size||demo)return false;
+  ak.mat="";ak.mid="";ak.bar="";ak.tipo="";ak.sb="";ak.set=set;ak.modo="jornada";tab="ankis";menu=false;ak.view="home";
+  const n=akBuild("jornada").length;if(!n){ak.set=null;ak.modo="hoje";return false}
+  akStart();ak.set=null;ak.modo="hoje";return true}
 function launchSpecial(id){
   const m=getM(id);if(!m||demo)return false;
   if(m.rg){const {set,n}=weekCards(m);if(!n)return false;
@@ -3716,6 +3723,7 @@ document.addEventListener("click",e=>{
   if(a==="sh-tab"){shTab=t.dataset.v;document.querySelectorAll(".sh-tabs button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.v===shTab)));document.querySelectorAll(".sh-pane").forEach(x=>x.classList.toggle("on",x.dataset.pane===shTab));const sh=document.querySelector(".sheet");if(sh)sh.scrollTop=Math.min(sh.scrollTop,document.querySelector(".sh-hd").offsetHeight);return}
   if(a==="toggle"){e.stopPropagation();toggle(t.dataset.id);return}
   if(a==="open"){if(!launchSpecial(t.dataset.id))openSheet(t.dataset.id);return}
+  if(a==="ak-day"){if(!launchAnkiDia())toastXp("Anki do dia","Nenhum cartão pendente das matérias em revisão hoje.");return}
   if(a==="sp-go"){if(!launchSpecial(t.dataset.id))closeSheet();return}
   if(a==="mt-conc"){concluirMeta(t.dataset.id);qb.view="home";ak.view="home";render();window.scrollTo(0,0);return}
   if(a==="menu"){menu=true;render();return}
