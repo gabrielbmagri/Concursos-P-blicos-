@@ -1105,7 +1105,9 @@ function metaPerf(b){
 const perfTxt=pf=>pf.nivel?`${NV[pf.nivel]} · ${pc(pf.r)} em ${pf.n} questões${pf.firme?"":" (provisório)"}`:`Sem classificação ainda · ${pf.n} de ${PD.minimo_questoes} questões (usa o prazo de Razoável)`;
 
 /* ---------- revisões ---------- */
-const rgItem=wi=>{const id=WK[wi].id+"~RG",doc=P()[id],due=pd(WK[wi].f);return {id,rg:true,wi,due,done:!!(doc&&(doc.r||0)>=1),doc,late:dday(today(),due)}};
+const rgItem=wi=>{const id=WK[wi].id+"~RG",doc=P()[id],due=pd(WK[wi].f);return {id,rg:true,wi,due,done:!!(doc&&(doc.r||0)>=1),doc,late:stuLate(doc,!!(doc&&(doc.r||0)>=1),dday(today(),due))}};
+/* revisão adiantada que está sendo estudada conta como pendente de hoje, para não sumir dos indicadores */
+const stuLate=(doc,done,late)=>!done&&doc&&doc.st&&late<0?0:late;
 function reviewList(){
   const p=P(),T=today(),cw=curWeek(),out=[];
   for(const b of ALL){
@@ -1115,7 +1117,7 @@ function reviewList(){
     for(let ix=0;ix<RV.iv.length;ix++){
       const st=RV.iv[ix],id=b.id+"~R"+st,doc=p[id],days=pf.dias[ix],due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
       if(!done&&due>=EXAM)break;
-      out.push({id,b,st,ix,days,pf,due,done,doc,late:dday(T,due)});
+      out.push({id,b,st,ix,days,pf,due,done,doc,late:stuLate(doc,done,dday(T,due))});
       if(!done)break;prev=doc.dt||ymd(due);
     }
   }
