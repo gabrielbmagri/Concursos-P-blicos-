@@ -1275,7 +1275,7 @@ function homeHtml(){
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   const limpo=layoutAtual()==="limpo";
   const qHoje=A.day[ymd(T)]||0,MC=missionsCalc(),qd=MC.qd,qAlvoH=qd.T||qAlvoDia(cw);
-  const cCor=isCur&&MC.alvo>0?(MC.doneT>=MC.alvo?"var(--good)":MC.doneT/MC.alvo>=.5?"var(--amber)":"var(--bad)"):tri(expect>0?frac/expect:null,.9,.6);
+  const cCor=isCur&&MC.alvo>0?(MC.doneT>=MC.alvo?"var(--good)":MC.doneT>=Math.max(1,Math.floor(MC.alvo/2))?"var(--amber)":"var(--bad)"):tri(expect>0?frac/expect:null,.9,.6);
   const qCor=qd.T?(qHoje>=qd.T?"var(--good)":qHoje>=Math.max(qd.M,1)?"var(--amber)":"var(--bad)"):tri(qHoje/qAlvoH,1,.6);
   const sumOld=`    <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
