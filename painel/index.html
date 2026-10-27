@@ -692,7 +692,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-27T09:02:51Z";
+const BUILD="2026-10-27T09:08:38Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1274,12 +1274,13 @@ function homeHtml(){
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
   const limpo=layoutAtual()==="limpo";
-  const qHoje=A.day[ymd(T)]||0,qAlvoH=qAlvoDia(cw);
+  const qHoje=A.day[ymd(T)]||0,qd=missionsCalc().qd,qAlvoH=qd.T||qAlvoDia(cw);
+  const qCor=qd.T?(qHoje>=qd.T?"var(--good)":qHoje>=Math.max(qd.M,1)?"var(--amber)":"var(--bad)"):tri(qHoje/qAlvoH,1,.6);
   const sumOld=`    <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
         <div class="st" style="--c:${tri(expect>0?frac/expect:null,.9,.6)}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana</small></div>
-        ${isCur?`<div class="st" style="--c:${tri(qHoje/qAlvoH,1,.6)}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>de ${qAlvoH} hoje · semana ${num(ws.q)}${ws.pi?` de ${num(ws.pi)}`:""}</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
+        ${isCur?`<div class="st" style="--c:${qCor}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>${qd.T?`de ${qd.T} hoje · ${qd.M} das metas + ${qd.R} das revisões`:`de ${qAlvoH} hoje`} · semana ${num(ws.q)}${ws.pi?` de ${num(ws.pi)}`:""}</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
         <div class="st" style="--c:${tri(accW,PD.faixas.excelente,PD.faixas.razoavel)}"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
       </div>
     </div>
@@ -2910,7 +2911,11 @@ function missionsCalc(){
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const aks=AKS||akStats(),kd=(REVD[T]||{}).n||0,kdue=aks.due+Math.min(aks.nov,Math.max(0,AKNOV()-((REVD[T]||{}).nv||0)));
   const qT=A.day[T]||0,qAlvo=qAlvoDia(cw);
-  return {T,L,doneT,alvo,doneB,rv:{d:rvT,t:rvT+due},ak:{d:kd,t:kd+kdue},q:{d:qT,t:Math.max(qAlvo,qT)}};
+  const doneL=L.filter(m=>isDone(m)&&dtOf(m)===T),pendL=L.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
+  const qM=[...doneL,...pendL].reduce((z,m)=>z+planItems(m),0);
+  const qR=RL.filter(r=>(!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===T)).reduce((z,r)=>{const mm=getM(r.id);return z+(mm?planItems(mm):0)},0);
+  const qd={M:qM,R:qR,T:qM+qR};
+  return {T,L,doneT,alvo,doneB,qd,rv:{d:rvT,t:rvT+due},ak:{d:kd,t:kd+kdue},q:{d:qT,t:Math.max(qd.T||qAlvo,qT)}};
 }
 let JC=null;
 const jc=()=>{if(JC)return JC;const st=streakCalc();return JC={st,xp:xpCalc(st)}};
