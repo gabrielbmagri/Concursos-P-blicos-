@@ -1281,7 +1281,7 @@ function homeHtml(){
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
         <div class="st" style="--c:${cCor}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana${isCur&&MC.alvo?` · hoje ${MC.doneT} de ${MC.alvo}`:""}</small></div>
-        ${isCur?`<div class="st" style="--c:${qCor}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>${qd.T?`de ${qd.T} hoje · ${qd.M} das metas + ${qd.R} das revisões`:`de ${qAlvoH} hoje`} · semana ${num(ws.q)}${ws.pi?` de ${num(ws.pi)}`:""}</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
+        ${isCur?`<div class="st" style="--c:${qCor}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>de ${qd.T||qAlvoH} previstas para hoje</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
         <div class="st" style="--c:${tri(accW,.8,.7)}"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
       </div>
     </div>
