@@ -683,7 +683,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-27T00:57:08Z";
+const BUILD="2026-10-27T00:58:52Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -3498,6 +3498,13 @@ function shQuick(m,p,ro){
   if(p.lk&&!(m.t==="questoes"&&m.k==="POR"))out.push(`<a href="${esc(p.lk)}" target="_blank" rel="noopener"><b>Pasta do Tec</b><span>abrir questões</span></a>`);
   return `<div class="qa">${out.join("")}</div>`;
 }
+function shAnki(m){
+  const bid=m.rv?m.base.id:m.id;if(m.rg)return "";
+  const i=akMetaInfo(bid);if(!i.n)return "";
+  const a=m.rv?akRvStat(m.id):akMetaStat(m.id),tk=m.rv?(A.tm.k.rv[m.id]||0):(A.tm.k.meta[m.id]||0);
+  const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
+  return `<div class="sh-sec"><h4>Anki ${m.rv?"nesta revisão":"desta meta"}</h4><div class="kvs">${kv(a.n,a.n===1?"resposta":"respostas")}${kv(a.n?Math.round(a.ok/a.n*100)+"%":"–","lembrados")}${kv(tk>0?fmtH(tk):"–","tempo líquido")}${kv(i.n,i.n===1?"cartão":"cartões")}</div><p class="sh-fonte" style="margin-top:8px">${i.hoje} para hoje · ${i.due} ${i.due===1?"vencido":"vencidos"} · ${i.nov} ${i.nov===1?"novo":"novos"}${i.err?` · ${i.err} difíceis`:""}</p></div>`;
+}
 function openSheet(id){
   const m=getM(id);if(!m)return;
   if(shId!==id){shTab="estudar";shId=id}
@@ -3523,7 +3530,7 @@ function openSheet(id){
   const concl=!ro&&!done&&stuAny;
   /* aba Estudar */
   const generic=m.w&&/^Estude o assunto e resolva cerca de \d+ itens C\/E\.?$/.test(m.w);
-  const estudar=`${shQuick(m,p,ro)}
+  const estudar=`${shQuick(m,p,ro)}${shAnki(m)}
     ${m.tp&&m.tp.length?`<div class="sh-sec"><h4>${dyn?"O que revisar":"O que estudar"}</h4><ul class="tpl">${m.tp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
     ${m.w&&!generic?`<p class="sh-p">${esc(m.w)}</p>`:""}
     ${m.ls?`<div class="sh-sec"><div class="lei"><b>Lei seca</b><span>${esc(m.ls)}</span></div></div>`:""}
@@ -3534,7 +3541,6 @@ function openSheet(id){
   const kv=(b,l)=>`<div class="kv"><b>${b}</b>${l}</div>`;
   const rep=qs.some(q=>q.ok+q.er+q.bl>0)?qbReport(qs,"Relatório por subtópico",ro):"";
   const questoes=dyn?"":`<div class="kvs" style="margin-top:0">${kv(nIt?pc(rate(it)):"–","acerto")}${kv(tmx.q+tmx.k?fmtH(tmx.q+tmx.k):"–","tempo líquido")}${kv(pf.n&&pf.nivel?NV[pf.nivel]:"–","classificação")}${kv(pf.dias.join("/")+" d","revisões")}</div>
-    ${(()=>{const a=akMetaStat(m.id),i=akMetaInfo(m.id);return i.n?`<p class="sh-p" style="margin-top:12px"><b>Anki:</b> ${i.n} ${i.n===1?"cartão":"cartões"} · ${a.n} ${a.n===1?"resposta":"respostas"}${a.n?` · ${Math.round(a.ok/a.n*100)}% lembrados`:""}</p>`:""})()}
     ${qs.length?"":`<div class="empty" style="margin-top:14px">Nenhuma questão desta meta no banco. Peça ao Claude questões inéditas e adicione na aba Questões.</div>`}
     ${rep}`;
   /* aba Material */
@@ -3558,7 +3564,7 @@ function openSheet(id){
     <header class="sh-hd"><div class="sh-top"><span class="sh-k">${esc(kick)}</span><button class="sh-x" data-act="sh-close" aria-label="Fechar">×</button></div>
       <h2 class="sh-t">${esc(m.a)}</h2>
       <div class="sh-m">${SUBJ.includes(m.k)?`<span class="pill">${tagHtml(m)}</span>`:""}<span class="pill">${m.rg?`Semana ${m.wi+1} · domingo`:`Semana ${curW+1}${curW!==m.wi?" (adiada)":""}`}</span>${m.e&&!dyn?`<span class="pill">${esc(m.e)}</span>`:""}</div>
-      ${acao}${g?goalHtml(m,"mini"):""}${(()=>{const a=m.rv?akRvStat(m.id):null;return a&&a.n?`<div class="gl-t" style="margin-top:8px"><span>Anki nesta revisão: <b>${a.n}</b> ${a.n===1?"cartão":"cartões"}</span><span class="gs" style="color:var(--good)">${Math.round(a.ok/a.n*100)}% lembrados</span></div>`:""})()}</header>
+      ${acao}${g?goalHtml(m,"mini"):""}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
     ${pane("estudar",estudar)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
     <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
