@@ -1,5 +1,5 @@
 <title>Atlas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&family=Marcellus&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -187,6 +187,8 @@ section .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media (min-
 .sec{margin-top:36px}
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap}
 h2{margin:0;font-size:22px;font-weight:700;letter-spacing:-.015em}
+.sec-h h2{font:400 21px/1.2 "Marcellus","Cormorant Garamond",serif;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(95deg,var(--blue) 0%,var(--purple) 55%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:2px}
+html[data-modo="escuro"] .sec-h h2{background-image:linear-gradient(95deg,#9db8f0 0%,#c9a7e8 50%,#e8c766 100%)}
 h3{margin:0;font-size:15px;font-weight:700}
 .chip{padding:7px 14px;border-radius:99px;border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--fg2)}
 .chip[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:#fff}
@@ -1275,7 +1277,7 @@ function homeHtml(){
   const grouped={estudo:[],aval:[],dom:[]};
   L.forEach(m=>{if(!onlyPend||!isDone(m))grouped[grp(m)].push(m)});
   const sect=k=>{const Lk=grouped[k],tot=L.filter(m=>grp(m)===k);if(!tot.length)return"";const dn=tot.filter(isDone).length;
-    return `<div class="grp"><div class="grp-t"><span>${GTIT[k]}</span><span>${dn}/${tot.length}</span></div>${Lk.length?`<ul class="list">${Lk.map(rowHtml).join("")}</ul>`:`<div class="empty">Tudo concluído aqui.</div>`}</div>`};
+    return `<div class="grp">${k==="estudo"?"":`<div class="grp-t"><span>${GTIT[k]}</span><span>${dn}/${tot.length}</span></div>`}${Lk.length?`<ul class="list">${Lk.map(rowHtml).join("")}</ul>`:`<div class="empty">Tudo concluído aqui.</div>`}</div>`};
   const rgS=sel<lastWk&&WK[sel].rg!==0?`<div class="grp"><div class="grp-t"><span>Revisão geral da semana</span><span>${rgItem(sel).done?"1/1":"0/1"}</span></div><ul class="list">${revRow(rgItem(sel))}</ul></div>`:"";
   const pctW=Math.round(frac*100), pctOut=frac<.12, expP=Math.round(expect*100), diff=pctW-expP;
   const ms=[25,50,75,100].map(v=>`<span class="ms ${frac*100>=v-.001?"on":""} ${v===100?"last":""}" style="left:${v}%">${frac*100>=v-.001?"★":v+"%"}</span>`).join("");
@@ -1331,7 +1333,7 @@ function homeHtml(){
     <div class="kpi indigo"><div class="lab">Tempo por meta, geral</div><div class="num" style="font-size:clamp(22px,6vw,32px)">${DA.length?fmtDur(avgDur(DA)):"–"}</div><div class="sub">${DA.length?`média de ${DA.length} ${DA.length===1?"meta":"metas"}, do primeiro toque até concluir`:"Média de todas as semanas"}</div></div>
   </section>`;
   const panSec=`  <section class="sec" aria-label="Panorama da semana">
-    <div class="sec-h"><h2>Panorama da semana</h2><span class="muted" style="font-size:13px">Um quadrado por meta: cheio é concluída, metade é em andamento</span></div>
+    <div class="sec-h"><h2>Panorama da semana</h2></div>
     <div class="dots">${dots}</div>
     ${movedOut?`<p class="muted" style="font-size:13px;margin:10px 0 0">${movedOut} ${movedOut===1?"meta foi adiada":"metas foram adiadas"} para outra semana.</p>`:""}
     ${w.obs?`<div class="banner">${esc(w.obs)}</div>`:""}
@@ -1378,8 +1380,7 @@ function homeHtml(){
   </section>
 
 ${limpo?"":kpiSec}
-${limpo?"":panSec}
-${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec+revSec+spSec}
+${limpo?`${panNote}${metSec}${kpiStrip}${rvDockHtml(over,tod,dueNow,open)}<div style="height:76px"></div>`:metSec+panSec+revSec+spSec}
   <div style="margin-top:28px">${medCard()}</div>`;
 }
 
