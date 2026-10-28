@@ -7,3 +7,5 @@ educacional-*.json
 *service-account*.json
 *.pem
 .env
+dados/vademecum/
+__pycache__/

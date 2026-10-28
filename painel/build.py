@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Gera painel/index.html (autônomo) e o fragmento para Artifact a partir de dados/cronograma.json."""
 import json, sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "dados"))
+from leiseca import refs
 root = pathlib.Path(__file__).resolve().parent
 src = json.load(open(root.parent / "dados" / "cronograma.json", encoding="utf-8"))
 K = dict(ordem="o", bloco="b", materia="k", assunto="a", edital="e", tipo="t",
@@ -11,6 +13,9 @@ def meta(m):
         v = m.get(a)
         if v not in (None, "", []) and not (a == "repeticoes" and v == 1):
             out[b] = v
+    if m.get("lei_seca"):
+        lr = refs(m["lei_seca"])
+        if lr: out["lr"] = lr
     return out
 data = {
     "curso": src["meta"]["concurso"].split(" (")[0],
