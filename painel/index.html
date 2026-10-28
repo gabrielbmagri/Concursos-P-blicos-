@@ -697,7 +697,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-28T02:02:25Z";
+const BUILD="2026-10-28T02:07:13Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -2928,7 +2928,7 @@ function missionsCalc(){
   const dtOf=m=>(P()[m.id]||{}).dt||"";
   /* ritmo diário a partir de 28/10: 3 metas de primeira passada por dia útil (seg a sex); antes disso vale o ritmo antigo */
   const novo=T>="2026-10-28",dow=today().getDay(),Lf=novo?L.filter(m=>m.t==="teoria_questoes"):L,doneT=Lf.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=Lf.filter(m=>isDone(m)&&dtOf(m)<T).length;
-  const alvo=!novo?Math.max(doneT,Math.min(L.length-doneB,Math.ceil(L.length*dn/6)-doneB)):(FOL.includes(T)||dow===0||dow===6)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
+  const alvo=!novo?doneT:(FOL.includes(T)||dow===0||dow===6)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const Tk=T0();
   /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */
@@ -2944,7 +2944,7 @@ function missionsCalc(){
   const doneL=Lf.filter(m=>isDone(m)&&dtOf(m)===T),pendL=Lf.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
   const qM=[...doneL,...pendL].reduce((z,m)=>z+planItems(m),0);
   const qR=RL.filter(r=>(!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===T)).reduce((z,r)=>{const mm=getM(r.id);return z+(mm?planItems(mm):0)},0);
-  const qd={M:qM,R:qR,T:qM+qR};
+  const qd=novo?{M:qM,R:qR,T:qM+qR}:{M:qT,R:0,T:qT}; /* dias anteriores a 28/10 ficam fechados: a meta é o que foi feito */
   return {T,L,doneT,alvo,doneB,qd,rv:{d:rvT,t:rvT+due},ak:{d:kd,t:kd+kdue},q:{d:qT,t:Math.max(qd.T||qAlvo,qT)}};
 }
 let JC=null;
