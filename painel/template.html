@@ -3759,7 +3759,7 @@ function openSheet(id){
   if(lk)acao=`<div class="sh-st lock">${LOCK}<span>Semana bloqueada. Você pode ler tudo, mas só registra depois de liberar a semana ${LIB+1}.</span></div>`;
   else if(done)acao=`<div class="sh-st ok"><span>${dyn&&r_&&r_.doc?`Feita em ${fmtDay(r_.doc.dt)}`:`Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}`}${p.dur?` · levou ${fmtDur(p.dur)}`:""}${netTxt}</span></div>`;
   else if(stuAny)acao=`<div class="sh-st go"><i class="ld"></i><span>${stTxt(p.st0||p.st)}${netTxt}${dyn&&r_?` · prevista ${fmtDay(r_.due)}`:""}</span>${ro?"":`<button class="chip" data-act="mt-stop">Parar</button>`}</div>`;
-  else if(!ro)acao=`<div class="sh-st"><span>${dyn&&r_?`Prevista para ${fmtDay(r_.due)}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}`:"Ainda não iniciada"}</span><button class="chip go" data-act="mt-start">Começar a estudar</button></div>`;
+  else if(!ro)acao=`<div class="sh-st"><span>${dyn&&r_?`Prevista para ${fmtDay(r_.due)}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}`:"Ainda não iniciada"}</span></div>`;
   const concl=!ro&&!done&&stuAny,ini=!ro&&!done&&!stuAny;
   /* aba Estudar */
   const generic=m.w&&/^Estude o assunto e resolva cerca de \d+ itens C\/E\.?$/.test(m.w);
