@@ -710,7 +710,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-28T11:21:09Z";
+const BUILD="2026-10-28T11:25:07Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -1985,7 +1985,7 @@ function qbSum(){
 }
 function qbFinish(force){
   qtTick();qtFlush();
-  qb.confirm=false;qb.view="done";render();window.scrollTo(0,0);
+  qb.confirm=false;qb.view="home";tab="semana";menu=false;render();window.scrollTo(0,0);
 }
 function qbPatch(id,patch){const q=QS[id];if(q)qsWrite([[id,{...q,...patch}]])}
 
@@ -3921,7 +3921,7 @@ document.addEventListener("click",e=>{
   if(a==="ak-sub"){const m=BY[t.dataset.mid];ak.mat=t.dataset.k;ak.mid=m?m.id:"";ak.bar="";ak.tipo="";ak.sb=t.dataset.sb;ak.modo="tudo";ak.rvNext="";tab="ankis";menu=false;ak.view="home";akStart();ak.sb="";return}
   if(a==="ak-modo"){ak.modo=t.dataset.m;ak.err="";render();return}
   if(a==="ak-start"){akStart();return}
-  if(a==="ak-quit"){ak.view="home";render();window.scrollTo(0,0);return}
+  if(a==="ak-quit"){ak.view="home";tab="semana";menu=false;render();window.scrollTo(0,0);return}
   if(a==="ak-show"){ak.rev=true;render();return}
   if(a==="ak-pick"){ak.pick=t.dataset.v;ak.rev=true;render();return}
   if(a==="ak-grade"){akAnswer(+t.dataset.g);return}
