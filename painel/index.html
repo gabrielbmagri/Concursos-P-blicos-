@@ -619,7 +619,7 @@ html[data-tema="olimpo"] .jmini{background:linear-gradient(135deg,#f6efdc,#fffaf
 html[data-modo="escuro"] .jmini{background:linear-gradient(135deg,#222b25,#2b2a21);border-color:#3a443d;box-shadow:none}html[data-modo="escuro"] .jmini.risk{background:linear-gradient(135deg,#3a2216,#2e1a14);border-color:#7a4630}html[data-tema="olimpo"][data-modo="escuro"] .jmini{background:linear-gradient(135deg,#2a2b30,#2d2a1f);border-color:#4a4220}
 .sh-tabs button{padding:13px 6px;gap:4px;font-size:13.5px}
 
-.sh-ft.cc{align-items:stretch}.btn.conc{flex:1.8;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 18px;background:linear-gradient(135deg,#0b7a3c,#16a34a);color:#fff;box-shadow:0 8px 20px rgba(11,122,60,.38),inset 0 1px 0 rgba(255,255,255,.25);text-align:left;animation:pulseg 2.4s ease-in-out infinite}.btn.conc .ck{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center}.btn.conc .ck svg{width:16px;height:16px;stroke:#fff}.btn.conc .ct{display:flex;flex-direction:column;line-height:1.15}.btn.conc b{font-size:17px}.btn.conc small{font-size:11.5px;opacity:.9;font-weight:600}.sh-ft .btn.sv{flex:1;font-size:15px}
+.sh-ft.cc{align-items:stretch}.btn.conc{flex:1.8;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 18px;background:linear-gradient(135deg,#0b7a3c,#16a34a);color:#fff;box-shadow:0 8px 20px rgba(11,122,60,.38),inset 0 1px 0 rgba(255,255,255,.25);text-align:left;animation:pulseg 2.4s ease-in-out infinite}.btn.conc .ck{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center}.btn.conc .ck svg{width:16px;height:16px;stroke:#fff}.btn.conc .ct{display:flex;flex-direction:column;line-height:1.15}.btn.conc b{font-size:17px}.btn.conc small{font-size:11.5px;opacity:.9;font-weight:600}.sh-ft .btn.sv{flex:1;font-size:15px}.btn.conc.ini{background:linear-gradient(135deg,#a87a0c,#d4a72c);color:#1a2233;box-shadow:0 8px 20px rgba(168,122,12,.35),inset 0 1px 0 rgba(255,255,255,.3);animation:none}.btn.conc.ini .ck{background:rgba(26,34,51,.15)}.btn.conc.ini .ck svg{stroke:none;fill:#1a2233}
 @keyframes pulseg{50%{box-shadow:0 8px 26px rgba(22,163,74,.6),inset 0 1px 0 rgba(255,255,255,.25)}}@media (prefers-reduced-motion:reduce){.btn.conc{animation:none}}
 html[data-tema="olimpo"] .btn.conc{background:linear-gradient(135deg,#a87a0c,#d4a72c);color:#1f1604;box-shadow:0 8px 20px rgba(168,122,12,.4),inset 0 1px 0 rgba(255,255,255,.35)}html[data-tema="olimpo"] .btn.conc .ck{background:rgba(31,22,4,.2)}html[data-tema="olimpo"] .btn.conc .ck svg{stroke:#1f1604}
 
@@ -710,7 +710,7 @@ const BY=Object.fromEntries(ALL.map(m=>[m.id,m]));
 const hid=m=>!!m.lg&&!P()[m.id];
 const EXAM=pd(D.prova), START=pd(WK[0].i);
 const DEMO_TODAY="2026-11-12";
-const BUILD="2026-10-28T11:37:23Z";
+const BUILD="2026-10-28T11:39:09Z";
 const rp=m=>m.rp||1;
 const planItems=m=>m.i||(m.t==="simulado"?(+((/(\d+) itens/.exec(m.a)||[])[1])||(/completo/.test(m.a)?180:60)):0);
 const hasItems=m=>!!m.i||m.t==="simulado";
@@ -3760,7 +3760,7 @@ function openSheet(id){
   else if(done)acao=`<div class="sh-st ok"><span>${dyn&&r_&&r_.doc?`Feita em ${fmtDay(r_.doc.dt)}`:`Concluída${p.dt?` em ${fmtDay(p.dt)}`:""}`}${p.dur?` · levou ${fmtDur(p.dur)}`:""}${netTxt}</span></div>`;
   else if(stuAny)acao=`<div class="sh-st go"><i class="ld"></i><span>${stTxt(p.st0||p.st)}${netTxt}${dyn&&r_?` · prevista ${fmtDay(r_.due)}`:""}</span>${ro?"":`<button class="chip" data-act="mt-stop">Parar</button>`}</div>`;
   else if(!ro)acao=`<div class="sh-st"><span>${dyn&&r_?`Prevista para ${fmtDay(r_.due)}${m.rv&&P()[m.base.id]?` · assunto concluído em ${fmtDay(P()[m.base.id].dt)}`:""}`:"Ainda não iniciada"}</span><button class="chip go" data-act="mt-start">Começar a estudar</button></div>`;
-  const concl=!ro&&!done&&stuAny;
+  const concl=!ro&&!done&&stuAny,ini=!ro&&!done&&!stuAny;
   /* aba Estudar */
   const generic=m.w&&/^Estude o assunto e resolva cerca de \d+ itens C\/E\.?$/.test(m.w);
   const estudar=`${shQuick(m,p,ro)}${shAnki(m)}
@@ -3806,7 +3806,7 @@ function openSheet(id){
       ${acao}${g?goalHtml(m,"mini"):""}</header>
     <nav class="sh-tabs" role="tablist">${TABS.map(([k,l,n])=>`<button role="tab" data-act="sh-tab" data-v="${k}" aria-selected="${shTab===k}">${l}${n!==""?`<em>${n}</em>`:""}</button>`).join("")}</nav>
     ${pane("estudar",estudar)}${pane("notas",notas)}${pane("questoes",questoes)}${pane("material",material)}${pane("registro",registro)}
-    <footer class="sh-ft ${concl?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}<button class="btn ${concl?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
+    <footer class="sh-ft ${concl||ini?"cc":""}">${ro?`<button class="btn" disabled>${demo?"Desligue os dados de exemplo para registrar":"Semana bloqueada"}</button>`:`${concl?`<button class="btn conc" data-act="mt-done"><span class="ck">${CHECK}</span><span class="ct"><b>${dyn?"Concluir revisão":"Concluir meta"}</b><small>+${dyn?10:30} XP</small></span></button>`:""}${ini?`<button class="btn conc ini" data-act="mt-start"><span class="ck"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg></span><span class="ct"><b>${dyn?"Começar a revisão":"Iniciar meta"}</b><small>cronômetro e XP</small></span></button>`:""}<button class="btn ${concl||ini?"alt sv":""}" data-act="save">Salvar</button>${P()[id]&&!concl?`<button class="btn alt" data-act="clear" style="flex:none;width:auto;padding-inline:18px">Limpar</button>`:""}`}</footer>
   </div></div>`;
   liveUpd();
 }
