@@ -16,3 +16,5 @@ O plano é refeito do zero a cada vez, a partir de três arquivos. Por isso subi
 Regras: a ordem original das metas nunca muda; o que ainda não foi feito é redistribuído nessa ordem, semana por semana, até o teto. Cadernos de erros de domingo e revisões gerais só existem em semanas que têm estudo. Se as metas não couberem até a semana 14 e `cortar_excedente` estiver desligado, o script avisa e não grava nada.
 
 Passos: atualizar `estado.json` (ver o painel), editar `plano.json`, rodar `python3 dados/reorganizar.py` para simular e `python3 dados/reorganizar.py --aplicar` para gravar, depois `python3 painel/build.py` e publicar.
+
+Ritmo por primeira passada (a partir de 28/10/2026): `contar_apenas: ["teoria_questoes"]` faz só as metas de primeira passada contarem no teto (`metas_por_semana`: 18 = 3 por dia). Blocos de questões, inglês etc. acompanham na ordem do plano, no máximo `outros_por_semana` (10) por semana, e nunca passam à frente da primeira passada.

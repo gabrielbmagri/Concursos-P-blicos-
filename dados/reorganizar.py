@@ -82,7 +82,21 @@ def reorganizar(crono, plano, estado):
         dias = dias_de_estudo(s, plano, inicio)
         base = ajustes.get(s["id"], {}).get("metas", por_semana)
         cap = 0 if dias == 0 else max(1, round(base * dias / 6))
-        pega, fila = fila[:cap], fila[cap:]
+        contar = plano.get("contar_apenas")  # ex.: ["teoria_questoes"]: só a primeira passada conta no ritmo
+        if contar:
+            cap_o = 0 if dias == 0 else max(1, round(plano.get("outros_por_semana", 10) * dias / 6))  # blocos de questões, inglês etc.
+            n = {True: 0, False: 0}; pega, resto = [], []
+            parou = False  # depois que a primeira passada enche, nada mais entra (a ordem do plano não é furada)
+            for m in fila:
+                pri = m["tipo"] in contar
+                if not parou and n[pri] < (cap if pri else cap_o):
+                    n[pri] += 1; pega.append(m)
+                else:
+                    resto.append(m)
+                    if pri: parou = True
+            fila = resto
+        else:
+            pega, fila = fila[:cap], fila[cap:]
         for m in pega:
             m.setdefault("semana_original", m["semana"])
             m["semana"] = s["id"]

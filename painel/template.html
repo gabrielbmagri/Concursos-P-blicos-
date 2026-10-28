@@ -2591,6 +2591,7 @@ function akPool(){return Object.entries(CARDS).map(([id,c])=>({id,...c})).filter
 function akBuild(m){
   const T=T0(),p=akPool();
   if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
+  if(m==="jornada"&&!ak.set){const Tn=T,cl=p.filter(c=>c.ult===Tn&&c.due>Tn).length,v=p.filter(c=>c.ult&&c.due<=Tn);return shuf([...v,...shuf(p.filter(c=>!c.ult)).slice(0,Math.max(0,30-cl-v.length))])}
   if(m==="jornada"){const out=[];(ak.set||new Set()).forEach(mid=>{const cs=p.filter(c=>c.mid===mid),feitos=cs.filter(c=>c.ult===T&&c.due>T&&(c.reps||0)<=1).length;out.push(...cs.filter(c=>c.ult&&c.due<=T),...shuf(cs.filter(c=>!c.ult)).slice(0,Math.max(0,20-feitos)))});return shuf(out)}
   if(m==="erros")return p.filter(c=>c.ult&&(c.lap>0||c.last===1)).sort((a,b)=>b.lap-a.lap).slice(0,40);
   if(m==="acertos")return shuf(p.filter(c=>c.ult&&c.last>=3)).slice(0,30);
@@ -2925,8 +2926,9 @@ const rvMidsHoje=()=>new Set(RL.filter(r=>!r.rg&&((!r.done&&r.late>=0)||(r.done&
 function missionsCalc(){
   const T=ymd(today()),cw=A.cw,w=WK[cw],L=(WM[cw]||[]).filter(m=>grp(m)!=="dom"),dn=Math.max(1,Math.min(6,dday(today(),pd(w.i))+1));
   const dtOf=m=>(P()[m.id]||{}).dt||"";
-  const doneT=L.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=L.filter(m=>isDone(m)&&dtOf(m)<T).length;
-  const expCum=Math.ceil(L.length*dn/6),alvo=Math.max(doneT,Math.min(L.length-doneB,expCum-doneB));
+  /* ritmo diário: 3 metas de primeira passada por dia (blocos de questões e inglês não entram na conta) */
+  const Lf=L.filter(m=>m.t==="teoria_questoes"),doneT=Lf.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=Lf.filter(m=>isDone(m)&&dtOf(m)<T).length;
+  const alvo=FOL.includes(T)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const Tk=T0();
   /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */
@@ -2934,9 +2936,12 @@ function missionsCalc(){
   let kd=0,kt=0;rvMids.forEach(mid=>{const cs=Object.values(CARDS).filter(c=>c.mid===mid);
     const cN=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)<=1).length,cD=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)>1).length,d=cs.filter(c=>c.ult&&c.due<=Tk).length;
     kd+=cN+cD;kt+=Math.max(20,cN)+d+cD});
+  if(!rvMids.size){ /* sem revisões previstas: pelo menos 30 cartões do dia, de qualquer matéria */
+    const all=Object.values(CARDS),cl=all.filter(c=>c.ult===Tk&&c.due>Tk).length,dv=all.filter(c=>c.ult&&c.due<=Tk).length;
+    kd=cl;kt=Math.max(30,cl+dv)}
   const kdue=kt-kd;
   const qT=A.day[T]||0,qAlvo=qAlvoDia(cw);
-  const doneL=L.filter(m=>isDone(m)&&dtOf(m)===T),pendL=L.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
+  const doneL=Lf.filter(m=>isDone(m)&&dtOf(m)===T),pendL=Lf.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
   const qM=[...doneL,...pendL].reduce((z,m)=>z+planItems(m),0);
   const qR=RL.filter(r=>(!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===T)).reduce((z,r)=>{const mm=getM(r.id);return z+(mm?planItems(mm):0)},0);
   const qd={M:qM,R:qR,T:qM+qR};
@@ -3549,8 +3554,8 @@ const isCad=m=>!!m&&!m.rv&&!m.rg&&/caderno de erros/i.test(m.a||"")&&(m.t==="dom
 const weekErrIds=m=>{return qbList().filter(q=>q.e&&q.last==="er"&&(m.t!=="caderno_erros"||!SUBJ.includes(m.k)||q.k===m.k)).map(q=>q.id)};
 const weekCards=m=>{const set=new Set((WM[m.wi]||[]).filter(x=>grp(x)!=="dom").map(x=>x.id));return {set,n:Object.values(CARDS).filter(c=>c.mid&&set.has(c.mid)).length}};
 function launchAnkiDia(){
-  const set=rvMidsHoje();if(!set.size||demo)return false;
-  ak.mat="";ak.mid="";ak.bar="";ak.tipo="";ak.sb="";ak.set=set;ak.modo="jornada";tab="ankis";menu=false;ak.view="home";
+  const set=rvMidsHoje();if(demo||!Object.keys(CARDS).length)return false;
+  ak.mat="";ak.mid="";ak.bar="";ak.tipo="";ak.sb="";ak.set=set.size?set:null;ak.modo="jornada";tab="ankis";menu=false;ak.view="home";
   const n=akBuild("jornada").length;if(!n){ak.set=null;ak.modo="hoje";return false}
   akStart();ak.set=null;ak.modo="hoje";return true}
 function launchSpecial(id){
