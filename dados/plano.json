@@ -15,5 +15,8 @@
  ],
  "outros_por_semana": 4,
  "dias_uteis": 5,
- "outros_depois_por_semana": 10
+ "outros_depois_por_semana": 10,
+ "limite_por_semana": {
+  "POR": 2
+ }
 }

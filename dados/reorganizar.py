@@ -42,6 +42,21 @@ def dias_de_estudo(semana, plano, a_partir):
             n += 1
     return n
 
+def intercalar(metas, anterior=None):
+    """Ordena as metas da semana para que a mesma matéria nunca fique em seguida (quando há alternativa)
+    e cada matéria fique espalhada de forma proporcional. A ordem de cada matéria entre si não muda."""
+    por = collections.OrderedDict()
+    for m in metas:
+        por.setdefault(m["materia"], []).append(m)
+    N = len(metas); pos = {k: 0 for k in por}; out = []; prev = anterior
+    ideal = lambda k: (pos[k] + 0.5) * N / len(por[k])
+    while len(out) < N:
+        cand = [k for k in por if pos[k] < len(por[k])]
+        ok = [k for k in cand if k != prev] or cand
+        k = min(ok, key=lambda k: (ideal(k), -(len(por[k]) - pos[k])))
+        out.append(por[k][pos[k]]); pos[k] += 1; prev = k
+    return out
+
 def reorganizar(crono, plano, estado):
     W = crono["semanas"]
     concluidas = set(estado["concluidas"])
@@ -76,6 +91,7 @@ def reorganizar(crono, plano, estado):
             novas.append([m for m in mant]); continue
         novas.append([m for m in mant if m["tipo"] != "domingo"])  # preenchido abaixo
     resumo = []
+    prev_k = None
     ultima = max(i for i, s in enumerate(W) if s["id"] not in fixas)
     for i in range(w0, ultima + 1):
         s = W[i]
@@ -90,9 +106,14 @@ def reorganizar(crono, plano, estado):
                 cap_o = 0 if dias == 0 else max(1, round(plano["outros_depois_por_semana"] * dias / DU))
             n = {True: 0, False: 0}; pega, resto = [], []
             parou = False  # depois que a primeira passada enche, nada mais entra (a ordem do plano não é furada)
+            lim = plano.get("limite_por_semana", {})  # ex.: {"POR": 2}: no máximo 2 metas visíveis da matéria na semana
+            cont = collections.Counter(m["materia"] for m in novas[i] if not m.get("legado") and m["tipo"] != "domingo")
             for m in fila:
                 pri = m["tipo"] in contar
+                if not parou and m["materia"] in lim and cont[m["materia"]] >= lim[m["materia"]]:
+                    resto.append(m); continue
                 if not parou and n[pri] < (cap if pri else cap_o):
+                    cont[m["materia"]] += 1
                     n[pri] += 1; pega.append(m)
                 else:
                     resto.append(m)
@@ -100,6 +121,8 @@ def reorganizar(crono, plano, estado):
             fila = resto
         else:
             pega, fila = fila[:cap], fila[cap:]
+        pega = intercalar(pega, prev_k)
+        if pega: prev_k = pega[-1]["materia"]
         for m in pega:
             m.setdefault("semana_original", m["semana"])
             m["semana"] = s["id"]
