@@ -8,6 +8,7 @@ Uso:
 Para atualizar uma lei basta apagar o arquivo dela em dados/vademecum/ (ou usar --refazer).
 """
 import re, html, json, sys, subprocess, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 AQUI = pathlib.Path(__file__).resolve().parent
 CACHE = AQUI / "vademecum"
@@ -115,6 +116,7 @@ def interpretar(arq, modo, so_artigos=None, inicio=None, fim=None):
     # assinatura do final do texto: corta só se for a última e estiver perto do fim
     idx = [i for i, (t, c) in enumerate(L) if re.match(r'^Bras[íi]lia,', t)]
     if idx and len(L) - idx[-1] <= 15: L = L[:idx[-1]]
+    hmerge = None
     pre, itens, cur, sec, vistos, ligado, primeiras = [], [], None, "", set(), inicio is None, {}
     for t, c in L:
         if not ligado:
@@ -122,6 +124,12 @@ def interpretar(arq, modo, so_artigos=None, inicio=None, fim=None):
             else: continue
         if RUIDO.match(t) and not itens: continue
         if re.match(r'^_{8,}$', t) and any(i[0] == "a" for i in itens): break
+        if hmerge is not None and c and not ART.match(t) and not HEAD.match(t) and len(t) < 170:
+            if t.startswith("("): itens.append(["x", t])
+            else:
+                itens[hmerge][1] += (" — " if " — " not in itens[hmerge][1] else " ") + t; itens[hmerge][3] = False
+            continue
+        hmerge = None
         m = ART.match(t)
         if m:
             num = m.group(1).replace('.', ''); suf = (m.group(2) or '').upper()
@@ -138,7 +146,9 @@ def interpretar(arq, modo, so_artigos=None, inicio=None, fim=None):
         if HEAD.match(t) and (c or len(t) < 120):
             cur = None
             if re.match(r'^ATO DAS DISPOSI', t, re.I): sec = "adct-"
-            itens.append(["h", t, nivel(t), bool(NUMONLY.match(t))]); continue
+            itens.append(["h", t, nivel(t), bool(NUMONLY.match(t))]); hmerge = len(itens) - 1; continue
+        if c and cur is not None and len(t) < 120 and not t.startswith("(") and not re.search(r'[.;:]$', t) and modo != "txt":
+            cur = None; itens.append(["h", t, 4, False]); hmerge = len(itens) - 1; continue
         if cur is not None: cur[2].append(t)
         elif not itens: pre.append(t)
         else: itens.append(["x", t])
@@ -148,17 +158,55 @@ def interpretar(arq, modo, so_artigos=None, inicio=None, fim=None):
     return pre, itens
 
 
+def trechos():
+    """Artigos que as metas realmente citam em 'lei seca': {lei: (tudo, [(ini, fim), ...])}."""
+    from leiseca import refs
+    crono = json.load(open(AQUI / "cronograma.json", encoding="utf-8"))
+    uso = {}
+    for s_ in crono["semanas"]:
+        for m in s_["metas"]:
+            if m.get("legado") and not m.get("fora_do_plano"): continue  # metas antigas de Português, já substituídas
+            for lei, a, b in refs(m.get("lei_seca")):
+                tudo, rs = uso.setdefault(lei, [False, []])
+                if a == 0: uso[lei][0] = True
+                else: rs.append((a, b))
+    return uso
+
+
+def filtrar(itens, tudo, rs):
+    if tudo: return itens
+    def cabe(k):
+        if re.match(r'^(adct-|t-)', k): return False
+        n = int(re.match(r'\d+', k).group())
+        return any(a <= n <= b for a, b in rs)
+    keep = [i[0] == "a" and cabe(i[1]) for i in itens]
+    for j, i in enumerate(itens):
+        if i[0] == "h":
+            for jj in range(j + 1, len(itens)):
+                if itens[jj][0] == "h" and itens[jj][2] <= i[2]: break
+                if keep[jj]: keep[j] = True; break
+    out = []
+    for j, i in enumerate(itens):
+        if i[0] == "x": keep[j] = bool(out) and keep[j - 1]
+        if keep[j]: out.append(i)
+    return out
+
+
 def main():
     refazer = "--refazer" in sys.argv
     leis = []
+    uso = trechos()
     for id_, sigla, nome, caminho, modo in LEIS:
         if not caminho:
             print(f"{id_}: sem fonte configurada, ficou de fora"); continue
         arq = baixar(id_, caminho, refazer)
         pre, itens = interpretar(arq, modo, SO_ARTIGOS.get(id_), INICIO.get(id_), FIM.get(id_))
         ementa = EMENTA.get(id_) or " ".join(p for p in pre if not RUIDO.match(p) and not re.match(r'^(LEI|DECRETO|RESOLU|CONSTITUI|PREÂMBULO)', p, re.I))[:600]
+        total = sum(1 for i in itens if i[0] == "a")
+        if id_ not in uso: print(f"{id_}: nenhuma meta cita esta lei, ficou de fora"); continue
+        itens = filtrar(itens, *uso[id_])
         n = sum(1 for i in itens if i[0] == "a")
-        print(f"{id_}: {n} artigos, {sum(1 for i in itens if i[0]=='h')} títulos")
+        print(f"{id_}: {n} de {total} artigos ({sum(1 for i in itens if i[0]=='h')} títulos)")
         leis.append({"id": id_, "sigla": sigla, "nome": nome, "ementa": ementa, "itens": itens})
     SAIDA.write_text(json.dumps({"leis": leis}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print("gravado", SAIDA, round(SAIDA.stat().st_size / 1024), "KB")

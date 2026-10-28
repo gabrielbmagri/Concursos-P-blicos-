@@ -23,7 +23,16 @@ def artigos(trecho):
             out.append((a, b))
     return out
 
+# trechos descritos por capítulo/título (sem número de artigo no texto da meta)
+SUBSTITUI = {
+    "CF/88, art. 66 (veto); Regimento Interno da Câmara (RICD), capítulos de indicações, requerimentos e apreciação de vetos":
+        [['cf', 66, 66], ['ricd', 113, 117], ['rcomum', 104, 106]],
+    "Regimento Comum, Título I e Título IV, caps. II e III (até o art. 103)":
+        [['rcomum', 1, 3], ['rcomum', 53, 103]],
+}
+
 def refs(texto):
+    if texto in SUBSTITUI: return [list(r) for r in SUBSTITUI[texto]]
     out, ultima = [], None
     for p in re.split(r';', texto or ''):
         lei = lei_de(p) or ultima
