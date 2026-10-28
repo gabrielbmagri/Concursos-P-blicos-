@@ -736,6 +736,7 @@ const getM=id=>{if(BY[id])return BY[id];if(id.endsWith("~RG")){const n=parseInt(
 
 /* ---------- estado ---------- */
 let menu=false, demo=false, real={}, DEMO={}, sel=0, tab="semana", onlyPend=false, openMat={};
+try{const tb=sessionStorage.getItem("painel-tab");if(["semana","jornada","revisoes","simulados","questoes","desempenho","plano","info","ankis","biblioteca","vade","lembretes"].includes(tb))tab=tb}catch(e){}
 let col=null, sync="local", demoChosen=null, A=null, RL=[], WM=[], IM={by:{},rows:[]};
 let imp={name:"",rows:[],err:"",msg:"",date:""};
 let CARDS={},REVD={},SM={},FILES={},LOCALF={};
@@ -3446,6 +3447,7 @@ function vmOpen(metaId,i){
 
 const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"],["vade","Vade Mecum"],["lembretes","Lembretes"]];
 function render(){
+  try{sessionStorage.setItem("painel-tab",tab)}catch(e){}
   {const t=temaAtual();const m=modoAtual();document.documentElement.dataset.tema=t;document.documentElement.dataset.modo=m;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',m==='escuro'?'#1b1c20':t==='olimpo'?'#14284f':'#087a40')}
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
@@ -4001,7 +4003,7 @@ if(location.search.indexOf("v=")>=0)try{history.replaceState(null,"",location.pa
 /* puxar para baixo para atualizar */
 (function(){
   let y0=null,dy=0,el=null;
-  const free=()=>window.scrollY<=0&&!menu&&!sheetId&&!(qb&&qb.view==="session"&&tab==="questoes")&&!(ak&&ak.view==="session"&&tab==="ankis");
+  const free=()=>window.scrollY<=0&&!menu&&!sheetId&&!(qb&&(qb.view==="session"||qb.view==="done")&&tab==="questoes")&&!(ak&&ak.view==="session"&&tab==="ankis");
   const mk=()=>{if(!el){el=document.createElement("div");el.id="ptr";el.innerHTML='<span></span><b>Puxe para atualizar</b>';document.body.appendChild(el)}return el};
   document.addEventListener("touchstart",e=>{y0=(e.touches.length===1&&free())?e.touches[0].clientY:null;dy=0},{passive:true});
   document.addEventListener("touchmove",e=>{if(y0==null)return;dy=e.touches[0].clientY-y0;if(dy<=0){if(el)el.style.transform="translateY(-100%)";return}
