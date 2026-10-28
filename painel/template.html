@@ -2926,9 +2926,9 @@ const rvMidsHoje=()=>new Set(RL.filter(r=>!r.rg&&((!r.done&&r.late>=0)||(r.done&
 function missionsCalc(){
   const T=ymd(today()),cw=A.cw,w=WK[cw],L=(WM[cw]||[]).filter(m=>grp(m)!=="dom"),dn=Math.max(1,Math.min(6,dday(today(),pd(w.i))+1));
   const dtOf=m=>(P()[m.id]||{}).dt||"";
-  /* ritmo diário: 3 metas de primeira passada por dia (blocos de questões e inglês não entram na conta) */
-  const Lf=L.filter(m=>m.t==="teoria_questoes"),doneT=Lf.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=Lf.filter(m=>isDone(m)&&dtOf(m)<T).length;
-  const alvo=FOL.includes(T)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
+  /* ritmo diário a partir de 28/10: 3 metas de primeira passada por dia útil (seg a sex); antes disso vale o ritmo antigo */
+  const novo=T>="2026-10-28",dow=today().getDay(),Lf=novo?L.filter(m=>m.t==="teoria_questoes"):L,doneT=Lf.filter(m=>isDone(m)&&dtOf(m)===T).length,doneB=Lf.filter(m=>isDone(m)&&dtOf(m)<T).length;
+  const alvo=!novo?Math.max(doneT,Math.min(L.length-doneB,Math.ceil(L.length*dn/6)-doneB)):(FOL.includes(T)||dow===0||dow===6)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const Tk=T0();
   /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */

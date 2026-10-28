@@ -1,5 +1,5 @@
 {
- "metas_por_semana": 18,
+ "metas_por_semana": 15,
  "inicio": "2026-10-28",
  "dias_sem_estudo": [
   "2026-11-02"
@@ -13,5 +13,7 @@
  "contar_apenas": [
   "teoria_questoes"
  ],
- "outros_por_semana": 10
+ "outros_por_semana": 4,
+ "dias_uteis": 5,
+ "outros_depois_por_semana": 10
 }

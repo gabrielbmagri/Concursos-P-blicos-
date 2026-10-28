@@ -36,7 +36,7 @@ def dias_de_estudo(semana, plano, a_partir):
     ini = d(semana["inicio"])
     folgas = {d(x) for x in plano.get("dias_sem_estudo", [])}
     n = 0
-    for k in range(6):  # seg..sáb
+    for k in range(plano.get("dias_uteis", 6)):  # seg..sáb (ou seg..sex com dias_uteis=5)
         dia = ini + datetime.timedelta(days=k)
         if dia >= a_partir and dia not in folgas:
             n += 1
@@ -81,10 +81,13 @@ def reorganizar(crono, plano, estado):
         s = W[i]
         dias = dias_de_estudo(s, plano, inicio)
         base = ajustes.get(s["id"], {}).get("metas", por_semana)
-        cap = 0 if dias == 0 else max(1, round(base * dias / 6))
+        DU = plano.get("dias_uteis", 6)
+        cap = 0 if dias == 0 else max(1, round(base * dias / DU))
         contar = plano.get("contar_apenas")  # ex.: ["teoria_questoes"]: só a primeira passada conta no ritmo
         if contar:
-            cap_o = 0 if dias == 0 else max(1, round(plano.get("outros_por_semana", 10) * dias / 6))  # blocos de questões, inglês etc.
+            cap_o = 0 if dias == 0 else max(1, round(plano.get("outros_por_semana", 10) * dias / DU))  # blocos de questões, inglês etc.
+            if not any(m["tipo"] in contar for m in fila) and "outros_depois_por_semana" in plano:  # acabou a primeira passada: semanas de questões
+                cap_o = 0 if dias == 0 else max(1, round(plano["outros_depois_por_semana"] * dias / DU))
             n = {True: 0, False: 0}; pega, resto = [], []
             parou = False  # depois que a primeira passada enche, nada mais entra (a ordem do plano não é furada)
             for m in fila:
