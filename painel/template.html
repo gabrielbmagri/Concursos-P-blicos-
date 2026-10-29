@@ -700,7 +700,7 @@ const f1=x=>x.toFixed(1).replace(".",",");
 const MAT=D.mat, SUBJ=["REG","LIN","POR","ADM","CON","CP","TI","ASR","ING"], RV=D.rev;
 const SHORT={REG:"Legislativo",LIN:"Linguística",POR:"Português",ADM:"Administrativo",CON:"Constitucional",CP:"Ciência Política",TI:"TI e Dados",ASR:"Fala e IA",ING:"Inglês"};
 const OTHERN={SIM:"Simulado",DIS:"Discursiva",DOM:"Domingo",BUF:"Reforço",RG:"Todas as matérias"};
-const TIPO={teoria_questoes:"Teoria + questões",rev_dyn:"Revisão",questoes:"Questões",simulado:"Simulado",discursiva:"Discursiva",domingo:"Caderno de erros",ingles:"Inglês",caderno_erros:"Caderno de erros",lei_seca:"Lei seca",revisao:"Revisão",planejamento:"Planejamento",checklist:"Checklist",prova:"Prova"};
+const TIPO={teoria_questoes:"Teoria + questões",rev_dyn:"Revisão",questoes:"Questões",simulado:"Simulado",discursiva:"Discursiva",domingo:"Caderno de erros",prazos:"Prazos e números",ingles:"Inglês",caderno_erros:"Caderno de erros",lei_seca:"Lei seca",revisao:"Revisão",planejamento:"Planejamento",checklist:"Checklist",prova:"Prova"};
 const GRP={simulado:"aval",discursiva:"aval",domingo:"dom"};
 const GTIT={estudo:"Estudo",aval:"Simulado e discursiva",dom:"Domingo"};
 const FASE={1:"Fase 1 · 1ª passada",2:"Fase 2 · reforço",3:"Fase 3 · reta final"};
@@ -719,14 +719,20 @@ const grp=m=>GRP[m.t]||"estudo";
 const lastWk=WK.length-1;
 
 /* revisões: 7, 15 e 30 dias por assunto + revisão geral todo domingo */
+const RV1_START="2026-10-28"; /* metas concluídas a partir desta data ganham a revisão de 24h */
+const PRIM_Q=50, AK_REV=15;       /* questões por meta de primeira passada; cartões de Anki por revisão */
 const RVTXT={
-  7:{t:"Revisão de 7 dias",w:"Escreva de memória o que lembra do assunto, resolva cerca de 30 questões novas e refaça as que errou.",
-     g:["Feche o material e escreva de memória tudo o que lembra deste assunto.","Confira com o seu resumo ou com a lei seca indicada acima e marque o que esqueceu.","Resolva cerca de 30 questões novas deste assunto.","Refaça as que errou e lance o resultado aqui."]},
-  15:{t:"Revisão de 15 dias",w:"Responda de memória os pontos mais cobrados, resolva cerca de 30 questões novas e anote o que errou de novo.",
-     g:["Sem olhar o material, liste os pontos mais cobrados deste assunto.","Releia só os trechos que você esqueceu, na lei seca ou no resumo.","Resolva cerca de 30 questões novas, misturando níveis.","Anote no caderno de erros o que errou de novo e lance o resultado aqui."]},
+  1:{t:"Revisão de 24 horas",w:"Escreva de memória o que lembra do assunto, resolva 20 questões novas e refaça as que errou.",
+     g:["Feche o material e escreva de memória tudo o que lembra deste assunto.","Confira com o seu resumo ou com a lei seca indicada acima e marque o que esqueceu.","Resolva 20 questões novas deste assunto.","Refaça as que errou e lance o resultado aqui."]},
+  7:{t:"Revisão de 7 dias",w:"Escreva de memória o que lembra do assunto, resolva 20 questões novas e refaça as que errou.",
+     g:["Feche o material e escreva de memória tudo o que lembra deste assunto.","Confira com o seu resumo ou com a lei seca indicada acima e marque o que esqueceu.","Resolva 20 questões novas deste assunto.","Refaça as que errou e lance o resultado aqui."]},
+  15:{t:"Revisão de 15 dias",w:"Responda de memória os pontos mais cobrados, resolva 20 questões novas e anote o que errou de novo.",
+     g:["Sem olhar o material, liste os pontos mais cobrados deste assunto.","Releia só os trechos que você esqueceu, na lei seca ou no resumo.","Resolva 20 questões novas, misturando níveis.","Anote no caderno de erros o que errou de novo e lance o resultado aqui."]},
   30:{t:"Revisão de 30 dias",w:"Faça primeiro as questões e depois confira onde errou. É a revisão final deste assunto.",
-     g:["Resolva cerca de 30 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de revisões."]}
+     g:["Resolva 20 questões difíceis ou mistas deste assunto, sem consultar nada.","Confira onde errou e releia só esses trechos.","Lance o resultado aqui. Com esta revisão, o assunto completa o ciclo de revisões."]}
 };
+const rvStepTxt=st=>st===1?"Revisão de 24h":`Revisão de ${st} dias`;
+const rvChain=bp=>bp&&bp.dt&&bp.dt<RV1_START?[7,15,30]:[1,7,15,30];
 const RGTXT={w:"Feche a semana: escreva de memória o esqueleto de cada assunto estudado, resolva questões só do que faltou e confira o desempenho e o caderno de erros.",
   g:["Para cada assunto da lista abaixo, escreva de memória os pontos principais, sem olhar o material.","Confira com os seus resumos e marque o que esqueceu.","Resolva de 5 a 10 questões novas só do que ficou faltando e lance o resultado aqui.","Veja no painel o desempenho e o caderno de erros da semana e ajuste a próxima semana."]};
 const revCache={};
@@ -1127,11 +1133,11 @@ function reviewList(){
   for(const b of ALL){
     if(b.t!=="teoria_questoes"||b.wi>=9||b.k==="POR")continue;
     const bp=p[b.id];if(!bp||(bp.r||0)<1||!bp.dt)continue;
-    let prev=bp.dt;const pf=metaPerf(b);
-    for(let ix=0;ix<RV.iv.length;ix++){
-      const st=RV.iv[ix],id=b.id+"~R"+st,doc=p[id],days=pf.dias[ix],due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
+    let prev=bp.dt;const pf=metaPerf(b),ch=rvChain(bp);
+    for(let ix=0;ix<ch.length;ix++){
+      const st=ch[ix],id=b.id+"~R"+st,doc=p[id],days=st,due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
       if(!done&&due>=EXAM)break;
-      out.push({id,b,st,ix,days,pf,due,done,doc,late:stuLate(doc,done,dday(T,due))});
+      out.push({id,b,st,ix,n:ch.length,days,pf,due,done,doc,late:stuLate(doc,done,dday(T,due))});
       if(!done)break;prev=doc.dt||ymd(due);
     }
   }
@@ -1263,10 +1269,10 @@ function revRow(r){
     <div class="rt"><div class="t">Revisão semanal · semana ${r.wi+1}</div><div class="s"><span class="tag ring"><i></i>Todas as matérias</span>${stu?`<span class="rb stu">Estudando</span>`:""}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r).replace("atrasada","atrasada").replace("para hoje","para hoje (domingo)")}</span>`}</div></div>${res}</li>`;
   }
   const doneC=RL.filter(x=>!x.rg&&x.b.id===r.b.id&&x.done).length;
-  const steps=`<span class="steps" aria-label="${doneC} de ${RV.iv.length} revisões feitas">${RV.iv.map((_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
+  const steps=`<span class="steps" aria-label="${doneC} de ${r.n} revisões feitas">${Array.from({length:r.n},(_,i)=>`<i class="${i<doneC?"d":""}"></i>`).join("")}</span>`;
   return `<li class="row ${r.done?"done":stu?"stu":""}" data-act="open" data-id="${r.id}" tabindex="0" role="button">
     <button class="chk" data-act="toggle" data-id="${r.id}" aria-label="${r.done?"Desmarcar":stu?"Concluir":"Começar a estudar"} revisão: ${esc(r.b.a)}">${CHECK}</button>
-    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.ix+1}ª revisão · ${r.days} dias</span><span class="rb perf-${r.pf.efetivo}">${r.pf.nivel?NV[r.pf.nivel]:"Prazo padrão"}</span>${stu?`<span class="rb stu">Estudando</span>`:""}${akChip(r.b.id,r.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
+    <div class="rt"><div class="t">${esc(r.b.a)}</div><div class="s">${tagHtml(r.b)}<span class="rb">${r.st===1?"24 horas":r.days+" dias"} · ${r.ix+1}ª de ${r.n}</span>${stu?`<span class="rb stu">Estudando</span>`:""}${akChip(r.b.id,r.id)}${r.done?`<span>feita em ${fmtDay(r.doc.dt)}</span>`:`<span>${dueTxt(r)}</span>`}${steps}</div>${lsLine(r.b)}</div>${res}</li>`;
 }
 function homeHtml(){
   const w=WK[sel],ws=weekStats(sel),T=today(),cw=A.cw,L=WM[sel];
@@ -1305,7 +1311,7 @@ function homeHtml(){
   const sumOld=`    <div class="hero-main">
       <div class="big"><span class="bn">${ws.done}</span><small>de ${ws.n} metas concluídas</small></div>
       <div class="stats">
-        <div class="st" style="--c:${cCor}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana${isCur&&MC.alvo?` · hoje ${MC.doneT} de ${MC.alvo}`:""}</small></div>
+        <div class="st" style="--c:${cCor}"><span>Concluído</span><b>${pctW}%</b><small>das metas da semana${isCur&&MC.alvo?` · ${MC.doneT} de ${MC.alvo}`:""}</small></div>
         ${isCur?`<div class="st" style="--c:${qCor}"><span>Questões de hoje</span><b>${num(qHoje)}</b><small>de ${qd.T||qAlvoH} previstas para hoje</small></div>`:`<div class="st" style="--c:${tri(ws.pi&&expect>0?ws.q/(ws.pi*expect):null,.9,.6)}"><span>Questões feitas</span><b>${num(ws.q)}</b><small>${ws.pi?`de cerca de ${num(ws.pi)} previstas`:"nesta semana"}</small></div>`}
         <div class="st" style="--c:${tri(accW,.8,.7)}"><span>Desempenho</span><b>${pc(accW)}</b><small>de acertos na semana</small></div>
       </div>
@@ -1356,7 +1362,7 @@ function homeHtml(){
   const revSec=`  <section class="sec" aria-label="Revisões de hoje">
     <div class="sec-h"><h2>Revisões de hoje</h2><button class="chip" data-act="tab" data-v="revisoes">Ver todas${open.length?` (${open.length})`:""}</button></div>
     ${rvPanelHtml()}
-    ${dueNow?`<ul class="list" style="border-top:2px solid var(--fg)">${[...over,...tod].slice(0,5).map(revRow).join("")}</ul>${dueNow>5?`<p class="muted" style="font-size:13px;margin:8px 2px 0">e mais ${dueNow-5} na aba Revisões</p>`:""}`:`<div class="empty">${open.length?`Nenhuma revisão vencida. A próxima é em ${fmtDay(open.slice().sort((a,b)=>a.due-b.due)[0].due)}.`:"Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 7 dias depois."}</div>`}
+    ${dueNow?`<ul class="list" style="border-top:2px solid var(--fg)">${[...over,...tod].slice(0,5).map(revRow).join("")}</ul>${dueNow>5?`<p class="muted" style="font-size:13px;margin:8px 2px 0">e mais ${dueNow-5} na aba Revisões</p>`:""}`:`<div class="empty">${open.length?`Nenhuma revisão vencida. A próxima é em ${fmtDay(open.slice().sort((a,b)=>a.due-b.due)[0].due)}.`:"Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 24 horas depois."}</div>`}
   </section>`;
   const cadM=L.find(isCad),rgOk=sel<lastWk&&WK[sel].rg!==0,rgI=rgOk?rgItem(sel):null;
   const nErr=qbList().filter(q=>q.e&&q.last==="er").length,nCards=rgOk?weekCards({wi:sel}).n:0;
@@ -1408,12 +1414,7 @@ function revHtml(){
   return `
   <section class="sec" style="margin-top:20px">
     <h2>Revisões</h2>
-    <p class="lead">Cada assunto que você conclui gera uma sequência de 3 revisões. O prazo de cada uma depende do seu desempenho na meta: quanto melhor, mais espaçadas; quanto pior, mais próximas. Os prazos contam a partir da revisão anterior. Todo domingo há também a revisão geral da semana.</p>
-    <details class="how"><summary>Como os prazos são calculados</summary>
-      <p class="lead" style="margin-top:10px">O desempenho é o acerto nas questões da meta: as que você marcou nela, as dos Excels importados e as do Banco de questões, mais as das próprias revisões.</p>
-      <div class="tbl"><table><thead><tr><th>Desempenho</th><th>Acerto</th><th>1ª</th><th>2ª</th><th>3ª</th></tr></thead><tbody>
-      ${["excelente","razoavel","ruim"].map(k=>`<tr><th>${NV[k]}</th><td>${k==="excelente"?`${Math.round(PD.faixas.excelente*100)}% ou mais`:k==="razoavel"?`${Math.round(PD.faixas.razoavel*100)}% a ${Math.round(PD.faixas.excelente*100)-1}%`:`menos de ${Math.round(PD.faixas.razoavel*100)}%`}</td>${PD.intervalos_dias[k].map(x=>`<td>${x} dias</td>`).join("")}</tr>`).join("")}</tbody></table></div>
-      <p class="lead" style="margin-top:10px"><b>Mínimo de ${PD.minimo_questoes} questões</b> na meta para classificar. Abaixo disso, vale o prazo de Razoável. ${PD.firme_questoes>PD.minimo_questoes?`Entre ${PD.minimo_questoes} e ${PD.firme_questoes-1} a classificação é provisória, e a partir de ${PD.firme_questoes} questões é firme. `:""}Os prazos se ajustam sozinhos conforme você resolve mais questões. Nenhuma revisão é marcada para depois da prova.</p></details>
+    <p class="lead">Cada assunto que você conclui gera uma sequência de 4 revisões: 24 horas, 7, 15 e 30 dias. Cada uma vale 20 questões e 15 cartões de Anki. A próxima só é agendada depois que você conclui a anterior e conta a partir do dia da conclusão, então um atraso nunca deixa duas revisões do mesmo assunto coladas. Todo domingo há também a revisão semanal.</p>
     ${rvPanelHtml()}
     <div class="kpis" style="margin-top:16px">
       <div class="kpi red"><div class="lab">Atrasadas</div><div class="num">${over.length}</div><div class="sub">Já passaram do dia previsto</div></div>
@@ -1421,7 +1422,7 @@ function revHtml(){
       <div class="kpi teal"><div class="lab">Próximos 7 dias</div><div class="num">${nxt7.length}</div><div class="sub">Já agendadas</div></div>
       <div class="kpi green"><div class="lab">Concluídas</div><div class="num">${done.length}</div><div class="sub">de ${RL.length} criadas até agora</div></div>
     </div>
-    ${open.length||done.length?"":`<div class="empty" style="margin-top:20px">Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 7 dias depois.</div>`}
+    ${open.length||done.length?"":`<div class="empty" style="margin-top:20px">Nenhuma revisão ainda. Conclua uma meta de estudo e a primeira revisão aparece 24 horas depois.</div>`}
     ${sec("Atrasadas",over)}${sec("Para hoje",tod)}${sec("Próximos 7 dias",nxt7)}${sec("Mais adiante",later,15)}${sec("Concluídas recentemente",done,10)}
   </section>`;
 }
@@ -1844,7 +1845,7 @@ function subHtml(){
 
 /* ---------- banco de questões ---------- */
 const QBINSTR=[
-"Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:",
+"Quando eu pedir questões inéditas para o meu banco de questões, responda SOMENTE com um arquivo .txt de texto simples. Sua resposta inteira é o arquivo: a primeira linha é \"# Matéria: ...\" e a última é a última questão. Não escreva introdução, resumo, contagem, lista de subtópicos, observações, avisos nem despedida, e não use bloco de código (```). Se puder anexar o arquivo, anexe o .txt e não escreva mais nada. O formato do arquivo é este:",
 "",
 "# Matéria: Linguística",
 "# Assunto: Teoria do signo linguístico",
@@ -1858,13 +1859,14 @@ const QBINSTR=[
 "1. As linhas que começam com # valem para todas as questões abaixo delas, até a próxima linha igual. Matéria deve ser uma destas: Constitucional, Administrativo, Português, Inglês, Legislativo, Linguística, Ciência Política, TI e Dados, Fala e IA. Assunto é o nome do assunto do edital. Caderno agrupa as questões do pedido (veja a regra 7).",
 "2. Uma linha por questão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
 "3. Tipos: CE = afirmação para julgar como Certo ou Errado, no estilo Cebraspe. Campos: CE | afirmação | C ou E | comentário | dificuldade | subtópico. ME = múltipla escolha. Campos: ME | enunciado | letra do gabarito (A a E) | alternativas separadas por ;; (sem escrever as letras, de 2 a 5 alternativas, na ordem) | comentário | dificuldade | subtópico.",
-"4. Cada comentário (gabarito comentado) deve ser explicativo o bastante para eu entender o porquê, mas curto: objetivo, sem ser vago. Explique por que o gabarito está certo e, nas ME, por que as demais estão erradas.",
-"5. Misture os tipos, intercalando ME e CE quando ajudar, com cerca de 60% em CE. Nas CE, equilibre os gabaritos entre C e E e use pegadinhas comuns da banca. Nas ME, varie a letra do gabarito.",
-"6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele.",
-"7. Quantidade e estrutura: gere no mínimo 80 questões por meta, a não ser que eu peça outra quantidade, em duas partes, e entregue tudo em um arquivo .txt. PARTE 1, linha \"# Caderno: Aprendizado\": 50 questões em ordem pedagógica, do mais fácil ao mais difícil, de modo que cada conceito seja aprendido antes de ser cobrado e, ao final, eu domine tudo o que a aula ou meta pede. PARTE 2, linha \"# Caderno: Revisão mista\": 30 questões mistas para revisão, em que os conceitos de todos os subtópicos se misturam, são recordados e se combinam entre si (intertextualidade), mais próximas da cobrança da prova real (enunciados mais longos, pegadinhas, exceções e comparações). Na parte 2 a ordem é embaralhada, sem agrupar por subtópico, e a dificuldade é média a difícil.",
+"4. Cada comentário (gabarito comentado) cita o fundamento (lei e artigo, ou a regra) e explica o porquê em até 3 frases curtas: objetivo, sem ser vago. Explique por que o gabarito está certo e, nas ME, por que as demais estão erradas. Nas CE erradas, diga exatamente o que foi trocado (órgão, prazo, quórum, competência, palavra).",
+"5. Qualidade, no estilo Cebraspe: cada item testa UMA ideia e tem um único gabarito indiscutível, sem ambiguidade. Nas CE, o texto parte da letra da lei com uma alteração sutil e verossímil (troca de órgão, prazo, quórum, competência, \"sempre\", \"nunca\", \"apenas\"), nunca de uma negação boba. Nas ME, as 5 alternativas são plausíveis, de tamanho parecido, sem \"todas as anteriores\" e sem entregar a resposta pelo tamanho ou pelo tom. Sem questões repetidas ou quase iguais. Misture os tipos, com cerca de 60% em CE, equilibre C e E e varie a letra do gabarito nas ME.",
+"6. Baseie as questões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele; os dados legais devem bater com a lei seca da meta. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça a questão sobre ele. Cada questão deve poder ser rastreada a um artigo ou trecho específico.",
+"7. Quantidade e estrutura: gere no mínimo 160 questões por meta, a não ser que eu peça outra quantidade, em um único arquivo .txt, em 3 partes. PARTE 1, linha \"# Caderno: Aprendizado\": 50 questões em ordem pedagógica, do mais fácil ao mais difícil (cerca de 30% fáceis, 40% médias e 30% difíceis), de modo que cada conceito seja aprendido antes de ser cobrado e, ao final, eu domine tudo o que a meta pede. PARTE 2, linha \"# Caderno: Revisão mista\": 30 questões mistas, em que os conceitos de todos os subtópicos se misturam e se combinam (intertextualidade), mais próximas da prova real (enunciados mais longos, pegadinhas, exceções e comparações), em ordem embaralhada, dificuldade média a difícil. PARTE 3, quatro cadernos de 20 questões inéditas cada, que não repetem as das partes anteriores: \"# Caderno: Revisão 24h\" (média), \"# Caderno: Revisão 7 dias\" (média), \"# Caderno: Revisão 15 dias\" (média a difícil) e \"# Caderno: Revisão 30 dias\" (difícil e mistas, sem pista). Cada revisão do painel usa o caderno do seu prazo.",
 "8. A dificuldade é o penúltimo campo: fácil, médio ou difícil (opcional). Se todas tiverem o mesmo nível, pode usar a linha \"# Dificuldade: médio\" no topo em vez de repetir em cada questão.",
 "9. Classifique cada questão em um subtópico do assunto, para que eu saiba onde estou bem e onde estou mal. Use a linha \"# Subtópico: nome\" antes de cada grupo de questões do mesmo subtópico (ela vale até a próxima) ou preencha o campo subtópico no fim da linha. Na parte 2, como as questões se misturam, preencha o campo subtópico em cada linha. Use o nome do subtópico como aparece no edital ou no material (por exemplo, \"Do Senado Federal (art. 52)\"), de 3 a 8 subtópicos por assunto, e sempre os mesmos nomes nos próximos pedidos do mesmo assunto e nos baralhos de Anki.",
-"10. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
+"10. Metas de Prazos e números (as que têm \"prazos\" no nome): faça somente questões sobre prazos, quóruns, quantidades, contagens, maiorias e números que a lei seca da meta traz (por exemplo: quantos dias, quantas sessões, quantos membros, a partir de quando conta, dias úteis ou corridos, quem decide e em quanto tempo). No mínimo 100 questões em \"# Caderno: Prazos e números\", com cerca de 60% CE (a alteração é sempre o número, o prazo ou o órgão), pares de contraste (o mesmo prazo em duas casas ou fases) e o artigo exato no comentário. Subtópico: o procedimento ou a fase.",
+"11. Quando eu pedir um resumo completo, responda em texto normal e organizado por tópicos, sem esse formato."
 ].join("\n");
 let QS={};
 const qbId=(k,e)=>{const n=norm(e);return "q"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
@@ -2341,7 +2343,7 @@ function metaGroups(pred){
   return Object.keys(by).sort((a,b)=>ord(a)-ord(b)).map(k=>({k,items:by[k].sort((a,b)=>a.m.wi-b.m.wi||(a.m.o||0)-(b.m.o||0)||String(a.m.id).localeCompare(String(b.m.id)))}));
 }
 const grpHtml=(g,body)=>`<div class="grp bbgrp" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"><div class="grp-t"><span style="display:flex;align-items:center;gap:8px"><i class="dot" style="--c:${SUBJ.includes(g.k)?`var(--m-${g.k})`:"var(--fg3)"}"></i>${esc(kName(g.k))}</span><span>${g.items.length}</span></div>${body}</div>`;
-const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}${x.m.rg?" · revisão geral":x.m.rv?` · ${RV.iv.indexOf(x.m.step)+1}ª revisão`:""}</button>${inner}</div>`;
+const bitem=(x,inner)=>`<div class="bi"><button class="bt" data-act="open" data-id="${x.m.id}">${esc(x.m.a)}${x.m.rg?" · revisão geral":x.m.rv?` · ${rvStepTxt(x.m.step)}`:""}</button>${inner}</div>`;
 const bzKey=q=>q.mid||"t:"+norm(strip(q.as));
 const bzNome=q=>q.mid&&BY[q.mid]?BY[q.mid].a:(strip(q.as).trim()||"Sem assunto");
 function bbCard(q,mode,i,tot){
@@ -2462,7 +2464,7 @@ const impUploadHtml=()=>impParts().up,impHistHtml=()=>impParts().hist;
 
 /* ---------- ankis ---------- */
 const AKINSTR=[
-"Quando eu pedir um baralho de estudo para uma meta, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:",
+"Quando eu pedir um baralho de estudo para uma meta, responda SOMENTE com um arquivo .txt de texto simples. Sua resposta inteira é o arquivo: a primeira linha é \"# Matéria: ...\" e a última é o último cartão. Não escreva introdução, resumo, contagem, lista de subtópicos, observações, avisos nem despedida, não explique como os cartões foram feitos e não use bloco de código (```). Se puder anexar o arquivo, anexe o .txt e não escreva mais nada. O formato do arquivo é este:",
 "",
 "# Matéria: Constitucional",
 "# Assunto: Poder Legislativo na CF e estatuto dos parlamentares",
@@ -2477,7 +2479,7 @@ const AKINSTR=[
 "2. Uma linha por cartão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.",
 "3. Tipos: P = pergunta e resposta; L = lacuna, com a parte escondida entre {{ e }}; CE = afirmação para marcar Certo ou Errado como na prova (resposta C ou E, e a explicação no quarto campo). Campos: P | pergunta | resposta | fonte | subtópico ; L | texto com {{lacuna}} | (vazio) | fonte | subtópico ; CE | afirmação | C ou E | explicação | subtópico.",
 "4. O campo fonte ou explicação traz o artigo, a lei ou a justificativa em uma frase curta. Pode ficar vazio, mas nunca invente.",
-"5. Quantidade: no mínimo 80 cartões por meta, a não ser que eu peça outra quantidade. Cubra TODO o conteúdo da meta ou da aula, sem deixar nenhum tópico do assunto sem cartão.",
+"5. Quantidade: no mínimo 80 cartões por meta, a não ser que eu peça outra quantidade (cada revisão do painel usa 15 cartões do assunto). Cubra TODO o conteúdo da meta ou da aula, sem deixar nenhum tópico do assunto sem cartão.",
 "6. Classificação por subtópico: todo cartão deve pertencer a um subtópico do assunto. Use a linha \"# Subtópico: nome\" antes de cada grupo (vale até a próxima) ou preencha o último campo da linha. Use de 4 a 10 subtópicos por assunto, com o nome como aparece no edital ou no material, e sempre os mesmos nomes dos pedidos de questões do mesmo assunto. É isso que me mostra exatamente em que ponto do assunto eu esqueço. Subtópicos mais cobrados em prova ganham mais cartões.",
 "7. Ordem pedagógica: do básico ao complexo, com cada conceito antes do que depende dele (definição antes de exceção, regra antes de pegadinha). Agrupe por subtópico.",
 "8. Mistura de tipos: cerca de 45% CE no estilo Cebraspe, 30% lacuna e 25% pergunta e resposta.",
@@ -2487,7 +2489,8 @@ const AKINSTR=[
 "12. Nos CE, imite as pegadinhas da banca: troca de órgão, prazo, quórum ou competência, e palavras como sempre, nunca, apenas e exclusivamente. Equilibre as respostas C e E.",
 "13. Quando houver um jeito fácil de lembrar (mnemônico, associação), escreva na explicação, começando por \"Dica:\".",
 "14. Baseie os cartões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça o cartão sobre ele.",
-"15. Sem cartões repetidos ou quase iguais. Entregue tudo em um arquivo .txt."
+"15. Sem cartões repetidos ou quase iguais. Entregue tudo em um arquivo .txt, só com os cartões.",
+"16. Metas de Prazos e números (as que têm \"prazos\" no nome): só cartões de prazos, quóruns, quantidades, contagens, maiorias e números que a lei seca da meta traz, no mínimo 100. Use lacuna (L) com UM número por cartão (por exemplo: o prazo é de {{dez}} dias), cartões de contraste entre casas e fases (Câmara x Senado, comissão x Plenário, dias corridos x úteis), CE com o número trocado e a fonte com o artigo exato. Subtópico: o procedimento ou a fase."
 ].join("\n");
 const hstr=t=>{let h=5381;for(let i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return (h>>>0).toString(36)};
 const cardId=(k,f)=>{const n=norm(f);return "c"+hstr(k+"|"+n)+hstr(n.split("").reverse().join(""))};
@@ -2606,7 +2609,8 @@ function akBuild(m){
   const T=T0(),p=akPool();
   if(m==="hoje"){const v=p.filter(c=>c.ult&&c.due<=T),nv=Math.max(0,AKNOV()-((REVD[T]||{}).nv||0));return [...shuf(v),...shuf(p.filter(c=>!c.ult)).slice(0,nv)]}
   if(m==="jornada"&&!ak.set){const Tn=T,cl=p.filter(c=>c.ult===Tn&&c.due>Tn).length,v=p.filter(c=>c.ult&&c.due<=Tn);return shuf([...v,...shuf(p.filter(c=>!c.ult)).slice(0,Math.max(0,30-cl-v.length))])}
-  if(m==="jornada"){const out=[];(ak.set||new Set()).forEach(mid=>{const cs=p.filter(c=>c.mid===mid),feitos=cs.filter(c=>c.ult===T&&c.due>T&&(c.reps||0)<=1).length;out.push(...cs.filter(c=>c.ult&&c.due<=T),...shuf(cs.filter(c=>!c.ult)).slice(0,Math.max(0,20-feitos)))});return shuf(out)}
+  if(m==="jornada"){const out=[];(ak.set||new Set()).forEach(mid=>{const cs=p.filter(c=>c.mid===mid),feitos=cs.filter(c=>c.ult===T).length,n=Math.max(0,AK_REV-feitos);
+    out.push(...[...shuf(cs.filter(c=>c.ult&&c.ult!==T&&c.due<=T)),...shuf(cs.filter(c=>!c.ult)),...shuf(cs.filter(c=>c.ult&&c.ult!==T&&c.due>T))].slice(0,n))});return shuf(out)}
   if(m==="erros")return p.filter(c=>c.ult&&(c.lap>0||c.last===1)).sort((a,b)=>b.lap-a.lap).slice(0,40);
   if(m==="acertos")return shuf(p.filter(c=>c.ult&&c.last>=3)).slice(0,30);
   if(m==="dificeis")return p.filter(c=>c.ult&&(c.ez<2.2||c.lap>=2)).sort((a,b)=>a.ez-b.ez).slice(0,40);
@@ -2922,7 +2926,12 @@ function streakCalc(){
   return {cur:streak,best,shields:sh,risk:!act[T]&&streak>0,last:days[days.length-1],act};
 }
 function planXp(){
-  const metas=A.tot.metas*30,q=A.wk.reduce((z,x)=>z+x.plan,0),revs=(ALL.filter(m=>m.t==="teoria_questoes"&&!hid(m)&&m.k!=="POR"&&m.wi<9).length*RV.iv.length+lastWk)*10;
+  const metas=A.tot.metas*30,q=A.wk.reduce((z,x)=>z+x.plan,0),rq=RV.i||20;let revs=0;
+  /* cada revisão que ainda cabe antes da prova vale 10 XP + as questões dela (20); metas feitas antes de 28/10 seguem a cadeia antiga */
+  ALL.forEach(m=>{if(m.t!=="teoria_questoes"||hid(m)||m.k==="POR"||m.wi>=9)return;
+    const doc=P()[m.id],ch=rvChain(doc);let prev=doc&&doc.dt?pd(doc.dt):addDays(pd(WK[ew(m)].i),3);
+    for(const st of ch){prev=addDays(prev,st);if(prev>=EXAM)break;revs+=10+rq}});
+  revs+=lastWk*10;
   return {metas,q,revs,total:metas+q+revs};
 }
 function xpCalc(st){
@@ -2945,18 +2954,16 @@ function missionsCalc(){
   const alvo=!novo?doneT:(FOL.includes(T)||dow===0||dow===6)?doneT:Math.max(doneT,Math.min(3,Lf.filter(m=>!isDone(m)).length+doneT));
   const due=RL.filter(r=>!r.done&&r.late>=0).length,rvT=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length;
   const Tk=T0();
-  /* Anki do dia: só as matérias em revisão hoje. Por matéria: 20 de base (ou o que passar disso, se fizer mais) + cartões vencidos dela; repetir erro não aumenta a meta */
+  /* Anki do dia: só as revisões. Cada revisão vale 15 cartões do assunto (ou o que passar disso, se fizer mais); "para hoje" do Anki não entra na conta */
   const rvMids=rvMidsHoje();
-  let kd=0,kt=0;rvMids.forEach(mid=>{const cs=Object.values(CARDS).filter(c=>c.mid===mid);
-    const cN=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)<=1).length,cD=cs.filter(c=>c.ult===Tk&&c.due>Tk&&(c.reps||0)>1).length,d=cs.filter(c=>c.ult&&c.due<=Tk).length;
-    kd+=cN+cD;kt+=Math.max(20,cN)+d+cD});
+  let kd=0,kt=0;rvMids.forEach(mid=>{const feitos=Object.values(CARDS).filter(c=>c.mid===mid&&c.ult===Tk).length;kd+=feitos;kt+=Math.max(AK_REV,feitos)});
   if(!rvMids.size){ /* sem revisões previstas: pelo menos 30 cartões do dia, de qualquer matéria */
     const all=Object.values(CARDS),cl=all.filter(c=>c.ult===Tk&&c.due>Tk).length,dv=all.filter(c=>c.ult&&c.due<=Tk).length;
     kd=cl;kt=Math.max(30,cl+dv)}
   const kdue=kt-kd;
   const qT=A.day[T]||0,qAlvo=qAlvoDia(cw);
   const doneL=Lf.filter(m=>isDone(m)&&dtOf(m)===T),pendL=Lf.filter(m=>!isDone(m)).slice(0,Math.max(0,alvo-doneT));
-  const qM=[...doneL,...pendL].reduce((z,m)=>z+planItems(m),0);
+  const qM=(doneL.length+pendL.length)*PRIM_Q;
   const qR=RL.filter(r=>(!r.done&&r.late>=0)||(r.done&&r.doc&&r.doc.dt===T)).reduce((z,r)=>{const mm=getM(r.id);return z+(mm?planItems(mm):0)},0);
   const qd=novo?{M:qM,R:qR,T:qM+qR}:{M:qT,R:0,T:qT}; /* dias anteriores a 28/10 ficam fechados: a meta é o que foi feito */
   return {T,L,doneT,alvo,doneB,qd,rv:{d:rvT,t:rvT+due},ak:{d:kd,t:kd+kdue},q:{d:qT,t:Math.max(qd.T||qAlvo,qT)}};
@@ -3716,8 +3723,8 @@ function shQuick(m,p,ro){
   if(m.rg)return "";
   if(m.rv){
     const i=akMetaInfo(m.base.id),qs=qbList().filter(q=>q.mid===m.base.id);
-    const cmx=(qs.find(q=>norm(q.cad)==="revisao mista")||{}).cad||"",useM=cmx&&qs.some(q=>q.cad===cmx&&qbStat(q,"novas")),pool=useM?qs.filter(q=>q.cad===cmx):qs,nNov=pool.filter(q=>qbStat(q,"novas")).length;
-    out.push(qs.length?`<button class="pri" data-act="qb-meta" data-id="${m.base.id}" data-m="novas" data-rv="${m.id}" ${useM?`data-cad="${esc(cmx)}"`:""}><b>${useM?"Revisão mista":"Questões não resolvidas"}</b><span>${nNov} ${nNov===1?"nova":"novas"} · ordem aleatória</span></button>`:`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
+    const lbl=m.step===1?"24h":m.step+" dias",cst=(qs.find(q=>norm(q.cad)===norm("Revisão "+lbl))||{}).cad||"",cmx=cst&&qs.some(q=>q.cad===cst&&qbStat(q,"novas"))?cst:((qs.find(q=>norm(q.cad)==="revisao mista")||{}).cad||""),useM=cmx&&qs.some(q=>q.cad===cmx&&qbStat(q,"novas")),pool=useM?qs.filter(q=>q.cad===cmx):qs,nNov=pool.filter(q=>qbStat(q,"novas")).length;
+    out.push(qs.length?`<button class="pri" data-act="qb-meta" data-id="${m.base.id}" data-m="novas" data-rv="${m.id}" ${useM?`data-cad="${esc(cmx)}"`:""}><b>${useM?(cmx===cst?"Revisão "+lbl:"Revisão mista"):"Questões não resolvidas"}</b><span>${nNov} ${nNov===1?"nova":"novas"} · ordem aleatória</span></button>`:`<button data-act="qb-add"><b>Adicionar questões</b><span>nenhuma no banco ainda</span></button>`);
     out.push(i.n?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="${i.hoje?"hoje":"tudo"}" data-rv="${m.id}"><b>Revisar no Anki</b><span>${i.hoje?i.hoje+" para hoje":i.n+" cartões"}</span></button>${i.err?`<button data-act="ak-meta" data-id="${m.base.id}" data-m="erros" data-rv="${m.id}"><b>Só os que errei</b><span>${i.err} cartões</span></button>`:""}`:`<button data-act="ak-go"><b>Anki</b><span>esta meta ainda não tem cartões</span></button>`);
     return `<div class="qa">${out.join("")}</div>`;
   }
@@ -3747,7 +3754,7 @@ function openSheet(id){
   const fld=(k,l,sub)=>`<div class="fr"><div class="fl">${l}${sub?`<small>${sub}</small>`:""}</div><div class="step"><button data-s="${k}" data-d="-1" aria-label="Menos ${l}" ${ro?"disabled":""}>−</button><input type="number" inputmode="numeric" min="0" id="f-${k}" data-f="${k}" value="${draft[k]||0}" ${ro?"disabled":""}><button data-s="${k}" data-d="1" aria-label="Mais ${l}" ${ro?"disabled":""}>+</button></div></div>`;
   const dfld=(k,l,sub,step)=>`<div class="fr"><div class="fl">${l}<small>${sub}</small></div><input class="num-in" type="number" inputmode="decimal" step="${step}" min="0" id="f-${k}" data-f="${k}" value="${draft[k]==null?"":draft[k]}" ${ro?"disabled":""}></div>`;
   const r_=dyn?RL.find(x=>x.id===id):null;
-  const kick=m.rg?"Revisão semanal":m.rv?(r_?`${r_.ix+1}ª revisão · ${r_.days} dias`:"Revisão"):(TIPO[m.t]||"Meta");
+  const kick=m.rg?"Revisão semanal":m.rv?(r_?`${rvStepTxt(r_.st)} · ${r_.ix+1}ª de ${r_.n}`:"Revisão"):(TIPO[m.t]||"Meta");
   const curW=ew(m),canMove=!dyn&&!done&&!ro;
   const pf=!dyn?metaPerf(m):null,tmx=!dyn?tmMeta(m.id):{q:0,k:0,n:0};
   const qs=!dyn?qbList().filter(q=>q.mid===m.id):[];
@@ -3793,7 +3800,7 @@ function openSheet(id){
   const nNotas=(p.nt?1:0)+(bnt?1:0)+prevN.length;
   const notas=!dyn?"":`<div class="mt2"><label class="lbl" for="mt-nt">Observações desta revisão</label><textarea class="in" id="mt-nt" style="min-height:96px" placeholder="O que você percebeu, errou ou quer lembrar nesta revisão" ${ro?"disabled":""}>${esc(p.nt||"")}</textarea><small class="muted" style="display:block;margin-top:6px;font-size:12px">Fica guardado na Biblioteca, em Anotações.</small></div>
     ${bnt?`<div class="sh-sec"><h4>Da primeira passada</h4><p class="sh-obs">${esc(bnt)}</p><div class="bar-act" style="margin-top:8px"><button class="chip" data-act="open" data-id="${baseId}">Abrir a meta</button></div></div>`:""}
-    ${prevN.map(x=>`<div class="sh-sec"><h4>${RV.iv.indexOf(x.st)+1}ª revisão</h4><p class="sh-obs">${esc(x.nt)}</p></div>`).join("")}
+    ${prevN.map(x=>`<div class="sh-sec"><h4>${rvStepTxt(x.st)}</h4><p class="sh-obs">${esc(x.nt)}</p></div>`).join("")}
     ${m.rv&&!bnt&&!prevN.length?`<p class="sh-fonte">Ainda não há observações nesta meta nem nas outras revisões.</p>`:""}`;
   const TABS=dyn?[["estudar",m.rv?"Revisão":"Conteúdo",""],["notas","Anotações",nNotas||""],["registro","Registro",""]]:[["estudar","Estudar",""],["questoes","Questões",g?`${nF}/${g}`:(nIt||"")],["material","Material",nMat||""],["registro","Registro",""]];
   if(!TABS.some(t=>t[0]===shTab))shTab="estudar";

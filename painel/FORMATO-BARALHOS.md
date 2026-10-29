@@ -7,7 +7,7 @@ O painel também importa planilhas (.xlsx, .csv) com as colunas **Tipo, Frente, 
 ## Instruções para colar
 
 ```
-Quando eu pedir um baralho de estudo para uma meta, responda SOMENTE com um arquivo .txt de texto simples (sem explicações fora dele), neste formato:
+Quando eu pedir um baralho de estudo para uma meta, responda SOMENTE com um arquivo .txt de texto simples. Sua resposta inteira é o arquivo: a primeira linha é "# Matéria: ..." e a última é o último cartão. Não escreva introdução, resumo, contagem, lista de subtópicos, observações, avisos nem despedida, não explique como os cartões foram feitos e não use bloco de código (```). Se puder anexar o arquivo, anexe o .txt e não escreva mais nada. O formato do arquivo é este:
 
 # Matéria: Constitucional
 # Assunto: Poder Legislativo na CF e estatuto dos parlamentares
@@ -22,7 +22,7 @@ Regras:
 2. Uma linha por cartão, com os campos separados por | (barra vertical). Nunca use | dentro do texto.
 3. Tipos: P = pergunta e resposta; L = lacuna, com a parte escondida entre {{ e }}; CE = afirmação para marcar Certo ou Errado como na prova (resposta C ou E, e a explicação no quarto campo). Campos: P | pergunta | resposta | fonte | subtópico ; L | texto com {{lacuna}} | (vazio) | fonte | subtópico ; CE | afirmação | C ou E | explicação | subtópico.
 4. O campo fonte ou explicação traz o artigo, a lei ou a justificativa em uma frase curta. Pode ficar vazio, mas nunca invente.
-5. Quantidade: no mínimo 80 cartões por meta, a não ser que eu peça outra quantidade. Cubra TODO o conteúdo da meta ou da aula, sem deixar nenhum tópico do assunto sem cartão.
+5. Quantidade: no mínimo 80 cartões por meta, a não ser que eu peça outra quantidade (cada revisão do painel usa 15 cartões do assunto). Cubra TODO o conteúdo da meta ou da aula, sem deixar nenhum tópico do assunto sem cartão.
 6. Classificação por subtópico: todo cartão deve pertencer a um subtópico do assunto. Use a linha "# Subtópico: nome" antes de cada grupo (vale até a próxima) ou preencha o último campo da linha. Use de 4 a 10 subtópicos por assunto, com o nome como aparece no edital ou no material, e sempre os mesmos nomes dos pedidos de questões do mesmo assunto. É isso que me mostra exatamente em que ponto do assunto eu esqueço. Subtópicos mais cobrados em prova ganham mais cartões.
 7. Ordem pedagógica: do básico ao complexo, com cada conceito antes do que depende dele (definição antes de exceção, regra antes de pegadinha). Agrupe por subtópico.
 8. Mistura de tipos: cerca de 45% CE no estilo Cebraspe, 30% lacuna e 25% pergunta e resposta.
@@ -32,7 +32,8 @@ Regras:
 12. Nos CE, imite as pegadinhas da banca: troca de órgão, prazo, quórum ou competência, e palavras como sempre, nunca, apenas e exclusivamente. Equilibre as respostas C e E.
 13. Quando houver um jeito fácil de lembrar (mnemônico, associação), escreva na explicação, começando por "Dica:".
 14. Baseie os cartões no conteúdo do edital e, se eu enviar um resumo ou texto, apenas nele. Não invente artigos de lei, números, autores nem citações. Se não tiver certeza de um dado, não faça o cartão sobre ele.
-15. Sem cartões repetidos ou quase iguais. Entregue tudo em um arquivo .txt.
+15. Sem cartões repetidos ou quase iguais. Entregue tudo em um arquivo .txt, só com os cartões.
+16. Metas de Prazos e números (as que têm "prazos" no nome): só cartões de prazos, quóruns, quantidades, contagens, maiorias e números que a lei seca da meta traz, no mínimo 100. Use lacuna (L) com UM número por cartão (por exemplo: o prazo é de {{dez}} dias), cartões de contraste entre casas e fases (Câmara x Senado, comissão x Plenário, dias corridos x úteis), CE com o número trocado e a fonte com o artigo exato. Subtópico: o procedimento ou a fase.
 ```
 
 ## Tipos de cartão
