@@ -1135,7 +1135,7 @@ function reviewList(){
     const bp=p[b.id];if(!bp||(bp.r||0)<1||!bp.dt)continue;
     let prev=bp.dt;const pf=metaPerf(b),ch=rvChain(bp);
     for(let ix=0;ix<ch.length;ix++){
-      const st=ch[ix],id=b.id+"~R"+st,doc=p[id],days=st,due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
+      const st=ch[ix],id=b.id+"~R"+st,doc=p[id],days=ch.length===3?pf.dias[ix]:st,due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
       if(!done&&due>=EXAM)break;
       out.push({id,b,st,ix,n:ch.length,days,pf,due,done,doc,late:stuLate(doc,done,dday(T,due))});
       if(!done)break;prev=doc.dt||ymd(due);
@@ -1248,7 +1248,9 @@ const dueTxt=r=>r.late>0?`<span class="late">atrasada há ${r.late} ${r.late===1
 function rvToday(){const T=ymd(today()),done=RL.filter(r=>r.done&&r.doc&&r.doc.dt===T).length,due=RL.filter(r=>!r.done&&r.late>=0).length,total=done+due;return {done,due,total,pct:total?done/total:1,xp:done*10}}
 function rvPunctual(){
   const d=RL.filter(r=>r.done&&r.doc&&r.doc.dt).map(r=>({dt:r.doc.dt,late:Math.max(0,dday(pd(r.doc.dt),r.due))})).sort((a,b)=>a.dt<b.dt?1:a.dt>b.dt?-1:0);
-  let seq=0;for(const x of d){if(x.late===0)seq++;else break}
+  /* constância: dias seguidos, até hoje, sem nenhuma revisão atrasada ao fim do dia (dia sem revisão não quebra a sequência) */
+  const rs=RL.filter(r=>r.due),first=d.length?d[d.length-1].dt:null;let seq=0;
+  if(first)for(let i=0;i<400;i++){const day=ymd(addDays(today(),-i));if(day<first)break;if(rs.some(r=>ymd(r.due)<day&&!(r.done&&r.doc&&r.doc.dt&&r.doc.dt<=day)))break;seq++}
   const on=d.filter(x=>x.late===0).length;return {seq,pct:d.length?on/d.length:null,tot:d.length};
 }
 function rvPanelHtml(){
@@ -1256,7 +1258,7 @@ function rvPanelHtml(){
   const nxt=RL.filter(r=>!r.done&&r.late<0).sort((a,b)=>a.due-b.due)[0];
   return `<div class="rvp ${all?"all":""}"><div class="rvp-top"><div class="rvp-t">${t.total?`<b>${t.done} de ${t.total}</b> revisões de hoje`:`<b>Sem revisões hoje</b>${nxt?` · próxima em ${fmtDay(ymd(nxt.due))}`:""}`}</div>${t.xp?`<span class="rvp-xp">+${t.xp} XP</span>`:""}</div>
     <div class="rvp-bar" role="progressbar" aria-valuenow="${Math.round(t.pct*100)}" aria-valuemin="0" aria-valuemax="100"><i style="width:${Math.round(t.pct*100)}%"></i>${t.total?`<span>${Math.round(t.pct*100)}%</span>`:""}</div>
-    <div class="rvp-foot">${all?`<span class="rvp-ok">Revisões de hoje concluídas</span>`:`<span>${t.due} ${t.due===1?"restante":"restantes"}</span>`}<span><span class="flame">${FLAME}</span> ${pu.seq} ${pu.seq===1?"seguida":"seguidas"} no prazo${pu.pct!=null?` · pontualidade ${Math.round(pu.pct*100)}%`:""}</span></div></div>`;
+    <div class="rvp-foot">${all?`<span class="rvp-ok">Revisões de hoje concluídas</span>`:`<span>${t.due} ${t.due===1?"restante":"restantes"}</span>`}<span><span class="flame">${FLAME}</span> ${pu.seq} ${pu.seq===1?"dia":"dias"} em dia${pu.pct!=null?` · pontualidade ${Math.round(pu.pct*100)}%`:""}</span></div></div>`;
 }
 function revRow(r){
   const rm=getM(r.id),itR=rm?itemsOf(rm):null;
