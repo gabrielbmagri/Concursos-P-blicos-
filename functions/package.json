@@ -2,7 +2,7 @@
   "name": "painel-lembretes",
   "private": true,
   "description": "Lembretes por notificação e e-mail do Painel de metas",
-  "engines": { "node": "20" },
+  "engines": { "node": "22" },
   "main": "index.js",
   "scripts": { "test": "node test.js" },
   "dependencies": {

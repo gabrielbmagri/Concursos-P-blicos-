@@ -15,6 +15,9 @@ r = gerar({ estado: { ...base, streak: { cur: 5, best: 5, last: "2026-11-10" } }
 assert.ok(!r.some((x) => x.tipo === "ofensiva"), "já estudou hoje");
 r = gerar({ estado: { ...base, streak: { cur: 5, best: 5, last: "2026-11-07" } }, cfg: {}, agora: ag("2026-11-10T23:10:00Z"), log: {} });
 assert.ok(!r.some((x) => x.tipo === "ofensiva"), "ofensiva já perdida (gap 3)");
+r = gerar({ estado: base, cfg: { pausaAte: "2026-11-11" }, agora: ag("2026-11-10T10:10:00Z"), log: {} });
+assert.strictEqual(r.length, 0, "pausa dos lembretes");
+assert.ok(gerar({ estado: base, cfg: { pausaAte: "2026-11-10" }, agora: ag("2026-11-10T10:10:00Z"), log: {} }).length > 0, "pausa termina no dia");
 r = gerar({ estado: base, cfg: { regras: { manha: false } }, agora: ag("2026-11-10T10:10:00Z"), log: {} });
 assert.strictEqual(r.length, 0, "regra desligada");
 r = gerar({ estado: base, cfg: {}, agora: ag("2026-11-10T17:20:00Z"), log: {} }); // 14:20

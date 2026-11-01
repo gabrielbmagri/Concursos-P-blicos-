@@ -78,6 +78,7 @@ function gerar({ estado: e, cfg, agora, log }) {
   cfg = cfg || {};
   const regras = cfg.regras || {}, horas = cfg.horas || {};
   const hoje = agora.data;
+  if (cfg.pausaAte && hoje < cfg.pausaAte) return out; // pausa dos lembretes até a data (AAAA-MM-DD)
   const on = (k) => regras[k] !== false;
   const janela = (k, extra) => { const h = minDe(extra || horas[k] || HORAS[k]); return agora.min >= h && agora.min < h + (JANELA_LONGA[k] || JANELA); };
   const feito = (key) => !!(log && log[key]);
