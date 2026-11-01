@@ -1135,7 +1135,8 @@ function reviewList(){
     const bp=p[b.id];if(!bp||(bp.r||0)<1||!bp.dt)continue;
     let prev=bp.dt;const pf=metaPerf(b),ch=rvChain(bp);
     for(let ix=0;ix<ch.length;ix++){
-      const st=ch[ix],id=b.id+"~R"+st,doc=p[id],days=ch.length===3?pf.dias[ix]:st,due=addDays(pd(prev),days),done=!!(doc&&(doc.r||0)>=1);
+      const st=ch[ix],id=b.id+"~R"+st,doc=p[id],days=ch.length===3?pf.dias[ix]:st,done=!!(doc&&(doc.r||0)>=1);
+      let due=addDays(pd(prev),days);if(!done&&D.adi&&D.adi[id])due=pd(D.adi[id]); /* reagendada (pausa nos estudos) */
       if(!done&&due>=EXAM)break;
       out.push({id,b,st,ix,n:ch.length,days,pf,due,done,doc,late:stuLate(doc,done,dday(T,due))});
       if(!done)break;prev=doc.dt||ymd(due);

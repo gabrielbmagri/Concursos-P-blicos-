@@ -21,6 +21,7 @@ data = {
     "curso": src["meta"]["concurso"].split(" (")[0],
     "prova": src["meta"]["prova"],
     "fol": src["meta"].get("dias_sem_estudo", []),
+    "adi": src["meta"].get("reagendamentos", {}),
     "ideias": src["meta"].get("ideias_discursiva", []),
     "med": json.load(open(root.parent / "dados" / "meditacoes.json", encoding="utf-8")),
     "info": json.load(open(root.parent / "dados" / "informacoes.json", encoding="utf-8")),
