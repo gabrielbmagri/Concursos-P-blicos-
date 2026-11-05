@@ -1,6 +1,6 @@
 {
  "metas_por_semana": 15,
- "inicio": "2026-11-05",
+ "inicio": "2026-11-06",
  "dias_sem_estudo": [
   "2026-11-02"
  ],
@@ -18,5 +18,8 @@
  "outros_depois_por_semana": 10,
  "limite_por_semana": {
   "POR": 2
- }
+ },
+ "sem_fechamento": [
+  "S5"
+ ]
 }

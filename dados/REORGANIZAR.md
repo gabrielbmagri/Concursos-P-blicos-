@@ -20,3 +20,5 @@ Passos: atualizar `estado.json` (ver o painel), editar `plano.json`, rodar `pyth
 Ritmo por primeira passada (a partir de 28/10/2026): `contar_apenas: ["teoria_questoes"]` faz só as metas de primeira passada contarem no teto (`metas_por_semana`: 18 = 3 por dia). Blocos de questões, inglês etc. acompanham na ordem do plano, no máximo `outros_por_semana` (10) por semana, e nunca passam à frente da primeira passada.
 
 Distribuição dentro da semana (vale em toda reorganização): as metas pendentes de cada semana são intercaladas para que a mesma matéria nunca fique em seguida e cada matéria fique espalhada de forma proporcional; a ordem das metas de uma mesma matéria entre si (a do plano) nunca muda. `limite_por_semana` (ex.: `{"POR": 2}`) limita quantas metas visíveis de uma matéria entram na semana; o que passar vai para a semana seguinte.
+
+`sem_fechamento` (ex.: `["S5"]`): semanas que ficam sem caderno de erros de domingo e sem revisão semanal, por terem só um dia de estudo (por exemplo, depois de uma pausa). A semana seguinte volta a ter os dois.

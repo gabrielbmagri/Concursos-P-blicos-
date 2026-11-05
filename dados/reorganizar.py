@@ -126,7 +126,7 @@ def reorganizar(crono, plano, estado):
         for m in pega:
             m.setdefault("semana_original", m["semana"])
             m["semana"] = s["id"]
-        doms = domingos[s["id"]] if pega else []
+        doms = domingos[s["id"]] if pega and s["id"] not in set(plano.get("sem_fechamento", [])) else []
         novas[i] = pega + [m for m in doms if m["id"] not in {x["id"] for x in pega}] + novas[i]
         resumo.append((s["id"], dias, cap, len(pega)))
     if plano.get("cortar_excedente") and fila:
@@ -175,7 +175,7 @@ def main():
     for i, s in enumerate(W):
         if s["id"] in plano.get("semanas_fixas", ["S15"]): continue
         s["metas"] = novas[i]
-        if i < w0: s["rg"] = False
+        if i < w0 or s["id"] in set(plano.get("sem_fechamento", [])): s["rg"] = False
         elif not any(m["tipo"] != "domingo" and not m.get("legado") for m in s["metas"]): s["rg"] = False
         elif s.get("rg") is False and i >= w0: s.pop("rg", None)
     crono["meta"]["replanejamento"] = {"data": plano["inicio"], "metas_por_semana": plano["metas_por_semana"],
