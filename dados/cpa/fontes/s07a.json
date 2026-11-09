@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.1.1.1.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Em um debate, um estudante afirma que o Copom fixa a meta de inflação do país. Clara, profissional CPA, corrige a informação.",
+  "enunciado": "Clara explica que a meta de inflação é fixada pelo:",
+  "certa": "Conselho Monetário Nacional (CMN).",
+  "erradas": [
+   [
+    "Comitê de Política Monetária (Copom), que também define a taxa Selic em cada reunião.",
+    "O Copom decide a Selic para cumprir a meta, mas quem fixa a meta é o CMN."
+   ],
+   [
+    "Ministério da Fazenda, por decreto presidencial publicado no início de cada ano.",
+    "A meta é definida pelo CMN, do qual o ministro participa."
+   ],
+   [
+    "Instituto Brasileiro de Geografia e Estatística (IBGE), que calcula o IPCA mensalmente.",
+    "O IBGE calcula o índice, mas não fixa a meta."
+   ]
+  ],
+  "gabarito": "O CMN (ministro da Fazenda, ministro do Planejamento e Orçamento e presidente do BC) fixa a meta de inflação e o intervalo de tolerância, além de diretrizes das políticas monetária, cambial e creditícia e normas gerais do sistema financeiro. O Copom, do BC, define a meta Selic para atingir a meta. O IBGE calcula o IPCA, índice de referência.",
+  "dica": "CMN fixa a meta de inflação. Copom fixa a Selic. IBGE mede o IPCA."
+ },
+ {
+  "pd": "1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa contratou um banco para estruturar sua abertura de capital e assessorar a compra de um concorrente. Um cliente pergunta a Edson, profissional CPA, que tipo de banco faz isso e se ele oferece conta corrente.",
+  "enunciado": "Edson explica que é um banco de investimento, que:",
+  "certa": "atua em ofertas, fusões e financiamento de longo prazo, sem captar depósitos à vista.",
+  "erradas": [
+   [
+    "capta depósitos à vista e oferece talões de cheque como atividade principal.",
+    "Depósitos à vista são típicos de bancos comerciais; bancos de investimento não os captam."
+   ],
+   [
+    "é supervisionado apenas pela SUSEP e atua com seguros de grandes riscos.",
+    "Bancos de investimento são supervisionados pelo BC e pela CVM em suas atividades."
+   ],
+   [
+    "é uma cooperativa de crédito voltada a empresas de grande porte.",
+    "Cooperativas atendem cooperados; bancos de investimento são instituições distintas."
+   ]
+  ],
+  "gabarito": "Bancos de investimento são instituições privadas especializadas em operações de participação ou financiamento de médio e longo prazo, estruturação e distribuição de ofertas de valores mobiliários (IPO, debêntures), fusões e aquisições e administração de recursos de terceiros. Não captam depósitos à vista; captam por depósitos a prazo e outros instrumentos.",
+  "dica": "Banco de investimento: ofertas, fusões e crédito de longo prazo. Sem depósito à vista."
+ },
+ {
+  "pd": "1.2.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma construtora reajusta as parcelas de imóveis na planta por um índice que mede os custos de materiais e mão de obra da construção. A compradora pergunta a Marcos, profissional CPA, que índice é esse.",
+  "enunciado": "Marcos explica que se trata do:",
+  "certa": "INCC, índice da construção civil, que também compõe os IGPs.",
+  "erradas": [
+   [
+    "IPCA, que mede somente os custos de construção de imóveis residenciais.",
+    "O IPCA mede preços ao consumidor em geral."
+   ],
+   [
+    "IPC-Fipe, que mede os custos das construtoras no país inteiro.",
+    "O IPC-Fipe mede preços ao consumidor em São Paulo."
+   ],
+   [
+    "IPA, que mede apenas o preço dos aluguéis residenciais.",
+    "O IPA mede preços ao produtor (atacado)."
+   ]
+  ],
+  "gabarito": "Índices de preços: IPCA (IBGE, consumidor, referência da meta); IGP-M e IGP-DI (FGV, médias de IPA 60%, IPC 30% e INCC 10%); IPA (preços ao produtor); IPC-Fipe (consumidor no município de São Paulo); INCC (custos da construção civil, usado em contratos de imóveis na planta). Cada índice reflete uma cesta e serve a finalidades diferentes.",
+  "dica": "INCC = construção civil. IPA = produtor. IPC-Fipe = consumidor de São Paulo."
+ },
+ {
+  "pd": "1.2.3.3",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Com a economia já aquecida e desemprego baixo, o governo amplia fortemente os gastos públicos. Um cliente pergunta a Glória, profissional CPA, o que tende a acontecer com a inflação e com a Selic.",
+  "enunciado": "Glória explica que, em geral:",
+  "certa": "a demanda maior pressiona a inflação, e o BC tende a manter ou elevar os juros.",
+  "erradas": [
+   [
+    "a inflação cai, pois o gasto público aumenta a oferta de bens de forma imediata.",
+    "Em economia aquecida, mais gasto pressiona a demanda e os preços."
+   ],
+   [
+    "o BC reduz a Selic para acompanhar o estímulo fiscal e acelerar o crescimento.",
+    "Para conter a inflação, o BC tende a juros mais altos."
+   ],
+   [
+    "as políticas fiscal e monetária não interagem, pois são conduzidas por órgãos diferentes.",
+    "As políticas interagem: o fiscal afeta a demanda e as expectativas, e o monetário reage."
+   ]
+  ],
+  "gabarito": "Política fiscal expansionista em economia próxima do pleno emprego eleva a demanda agregada e pressiona preços. Se também gera desconfiança sobre a dívida, aumenta o risco-país e as expectativas de inflação. O BC responde com juros mais altos, o que encarece o crédito e o financiamento da própria dívida. A coordenação entre as políticas reduz o custo de controlar a inflação.",
+  "dica": "Gasto público alto com economia aquecida → inflação para cima → juros para cima."
+ },
+ {
+  "pd": "1.2.4.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Após uma alta forte da Selic, um importador percebe que o dólar caiu e que seus produtos ficaram mais baratos. Ele pergunta a Sílvia, profissional CPA, se há relação.",
+  "enunciado": "Sílvia explica que, pelo canal do câmbio:",
+  "certa": "juros maiores atraem capital estrangeiro e valorizam o real, barateando importados.",
+  "erradas": [
+   [
+    "juros maiores afastam o capital estrangeiro e desvalorizam o real, encarecendo os importados.",
+    "Juros maiores tornam o país mais atrativo ao capital externo."
+   ],
+   [
+    "a Selic não tem nenhuma relação com o câmbio, que depende só das exportações.",
+    "O diferencial de juros é um dos fatores que afetam o câmbio."
+   ],
+   [
+    "o BC fixa o dólar em um valor menor sempre que eleva a Selic.",
+    "O câmbio é flutuante; não há fixação de valor."
+   ]
+  ],
+  "gabarito": "Canais de transmissão da política monetária: crédito, preços de ativos, expectativas e câmbio. No canal do câmbio, juros internos mais altos aumentam o diferencial em relação ao exterior, atraem capital e tendem a valorizar o real, o que barateia importados e ajuda a reduzir a inflação. O efeito depende também do risco-país e do cenário externo.",
+  "dica": "Selic alta → entrada de capital → real valorizado → importados mais baratos."
+ },
+ {
+  "pd": "1.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em um ano de inflação de 11%, Valter recebeu 10% de rendimento líquido em um CDB e diz que “ganhou dinheiro”. Pergunta a Elisa, profissional CPA.",
+  "enunciado": "Elisa explica que o ganho real foi de aproximadamente:",
+  "certa": "−0,9%, pois o poder de compra caiu.",
+  "erradas": [
+   [
+    "10%, pois o rendimento real é igual ao rendimento recebido.",
+    "O ganho real desconta a inflação."
+   ],
+   [
+    "21%, pois a inflação se soma ao rendimento nominal.",
+    "A inflação reduz, não aumenta, o ganho real."
+   ],
+   [
+    "1%, pois basta subtrair o rendimento da inflação.",
+    "Além de usar a fórmula de Fisher, o sinal é negativo: 1,10 ÷ 1,11 − 1."
+   ]
+  ],
+  "gabarito": "Taxa real = (1 + nominal) ÷ (1 + inflação) − 1 = 1,10 ÷ 1,11 − 1 ≈ −0,9%. Rendimento nominal abaixo da inflação significa perda de poder de compra. Indexador é a referência usada para corrigir um valor ou uma taxa (IPCA, CDI, Selic, IGP-M); títulos atrelados à inflação garantem ganho real contratado no vencimento.",
+  "dica": "Rendeu menos que a inflação = ganho real negativo."
+ },
+ {
+  "pd": "1.4.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma corretora faz centenas de compras e vendas de ações no dia. Um estagiário pergunta a Bruno, profissional CPA, por que ela não precisa pagar e receber cada negócio separadamente.",
+  "enunciado": "Bruno explica que a clearing da B3:",
+  "certa": "compensa as operações e liquida só o saldo líquido de cada participante.",
+  "erradas": [
+   [
+    "exige que cada operação seja liquidada isoladamente, em tempo real, pelo STR.",
+    "A compensação multilateral reduz o número de pagamentos e o risco."
+   ],
+   [
+    "cancela as operações de compra e venda do mesmo dia, que não precisam ser liquidadas.",
+    "As operações não são canceladas; são compensadas."
+   ],
+   [
+    "transfere a liquidação ao Banco Central, que assume o risco das corretoras.",
+    "A clearing da B3 é responsável pela liquidação e pela gestão de garantias."
+   ]
+  ],
+  "gabarito": "Câmaras de compensação e liquidação (clearing houses) apuram as obrigações dos participantes, compensam débitos e créditos (compensação multilateral), liquidam os saldos líquidos e, quando atuam como contraparte central, gerenciam garantias. Isso reduz o volume financeiro a liquidar, o risco de contraparte e o risco sistêmico.",
+  "dica": "Clearing: compensa as operações e liquida o saldo líquido, com garantias."
+ },
+ {
+  "pd": "1.4.10.1.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: John, investidor estrangeiro",
+  "etapa": "1/3",
+  "contexto": "John, residente nos EUA, quer investir em títulos públicos e ações no Brasil. Ele pergunta a Renata, profissional CPA, o que precisa ter para operar como investidor não residente.",
+  "enunciado": "Renata explica que John deve:",
+  "certa": "ter representante e custodiante no Brasil e registrar os investimentos no BC.",
+  "erradas": [
+   [
+    "mudar sua residência fiscal para o Brasil, pois estrangeiros não podem investir no país.",
+    "Não residentes podem investir, seguindo as regras próprias."
+   ],
+   [
+    "abrir conta apenas no exterior, pois os ativos brasileiros ficam custodiados nos EUA.",
+    "Os ativos ficam custodiados no Brasil."
+   ],
+   [
+    "obter autorização individual do presidente da República para cada investimento.",
+    "Não há essa exigência."
+   ]
+  ],
+  "gabarito": "Investidores não residentes podem aplicar nos mercados financeiro e de capitais brasileiros por meio de representante no país, com custodiante autorizado, conta específica e registro no BC, conforme a regulação do CMN e do BC. Têm tratamento tributário próprio em alguns produtos. A CVM 30 também os considera para fins de classificação.",
+  "dica": "Não residente: representante + custodiante no Brasil + registro no BC."
+ },
+ {
+  "pd": "1.2.5.3",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: John, investidor estrangeiro",
+  "etapa": "2/3",
+  "contexto": "John compara aplicar em dólar nos EUA a 4% ao ano ou converter para reais e aplicar a 14% ao ano no Brasil. Ele pergunta a Renata o que define se vale a pena.",
+  "enunciado": "Renata explica que o ganho de John em dólar depende:",
+  "certa": "do diferencial de juros e do câmbio: a queda do real pode anular o ganho.",
+  "erradas": [
+   [
+    "apenas da taxa brasileira de 14%, pois o câmbio não afeta investidores estrangeiros.",
+    "Ao converter de volta, a variação cambial altera o retorno em dólar."
+   ],
+   [
+    "apenas da taxa americana, pois o investidor estrangeiro recebe sempre em dólar.",
+    "Os ativos brasileiros rendem em reais."
+   ],
+   [
+    "da taxa PTAX do dia da aplicação, que fica travada até o resgate.",
+    "O câmbio varia até o resgate; não há trava automática."
+   ]
+  ],
+  "gabarito": "Para o estrangeiro, o retorno em moeda forte combina a taxa de juros local e a variação cambial. Um diferencial de juros alto atrai capital, mas, se o real se desvalorizar mais que esse diferencial, o ganho em dólar desaparece. O cupom cambial (juro em dólar no mercado brasileiro) reflete essa relação entre juros internos e expectativa de câmbio, e os derivativos permitem proteção (hedge).",
+  "dica": "Retorno do estrangeiro = juro local ± variação cambial. Diferencial alto não garante ganho em dólar."
+ },
+ {
+  "pd": "1.4.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: John, investidor estrangeiro",
+  "etapa": "3/3",
+  "contexto": "Já investindo, John pergunta a Renata quem cuida do registro e da liquidação dos títulos públicos e das ações que comprou.",
+  "enunciado": "Renata explica que:",
+  "certa": "o Selic registra e liquida os títulos públicos federais; a B3 cuida das ações.",
+  "erradas": [
+   [
+    "a B3 registra os títulos públicos, e o Selic registra as ações das companhias abertas.",
+    "As funções estão invertidas."
+   ],
+   [
+    "a CVM registra e liquida todas as operações de estrangeiros no Brasil.",
+    "A CVM regula e fiscaliza; não liquida operações."
+   ],
+   [
+    "o custodiante de John nos EUA registra e liquida todas as operações no Brasil.",
+    "Os registros ficam nas infraestruturas brasileiras (Selic e B3)."
+   ]
+  ],
+  "gabarito": "O Selic (BC) é o depositário central dos títulos públicos federais e liquida suas operações em tempo real. A B3 administra os ambientes de negociação de bolsa e balcão, atua como contraparte central e depositária central de ativos privados (ações, debêntures, cotas listadas). O custodiante local de John mantém a ligação com essas infraestruturas.",
+  "dica": "Títulos públicos → Selic. Ações e ativos privados → B3."
+ },
+ {
+  "pd": "2.1.2.2.9",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Paulo e o fundo fechado",
+  "etapa": "1/3",
+  "contexto": "Paulo assinou o compromisso de investir R$ 200 mil em uma classe fechada de um fundo, mas só depositou R$ 50 mil até agora. A gestora informa que pedirá o restante conforme encontrar oportunidades. Ele pergunta a Daniela, profissional CPA, o que isso significa.",
+  "enunciado": "Daniela explica que:",
+  "certa": "Paulo subscreveu R$ 200 mil e integraliza o restante conforme as chamadas de capital.",
+  "erradas": [
+   [
+    "Paulo integralizou R$ 200 mil e subscreveu apenas R$ 50 mil das cotas.",
+    "Subscrever é o compromisso; integralizar é o pagamento."
+   ],
+   [
+    "a gestora pode recusar os R$ 150 mil restantes sem previsão no regulamento.",
+    "As regras de chamadas de capital estão no regulamento."
+   ],
+   [
+    "Paulo pode resgatar os R$ 50 mil a qualquer momento, por ser classe fechada.",
+    "Classes fechadas não permitem resgate a pedido."
+   ]
+  ],
+  "gabarito": "Subscrição é o compromisso formal do investidor de adquirir cotas; integralização é o pagamento efetivo desse valor. Em classes fechadas (por exemplo, de participações ou imobiliárias), é comum integralizar por chamadas de capital, conforme o gestor encontra investimentos. Nas classes abertas, a aplicação é integralizada de uma vez, conforme as regras de cotização.",
+  "dica": "Subscrever = comprometer. Integralizar = pagar (de uma vez ou por chamadas de capital)."
+ },
+ {
+  "pd": "2.1.2.2.10",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Paulo e o fundo fechado",
+  "etapa": "2/3",
+  "contexto": "Dois anos depois, a classe vende parte dos ativos e devolve recursos aos cotistas sem que eles vendam as cotas. Paulo pergunta a Daniela o nome dessa operação.",
+  "enunciado": "Daniela explica que é uma:",
+  "certa": "amortização, pagamento de parte do valor das cotas sem resgatá-las.",
+  "erradas": [
+   [
+    "subscrição, pois os cotistas recebem novas cotas em troca dos recursos.",
+    "Subscrição é a entrada de recursos no fundo."
+   ],
+   [
+    "bonificação, pois a classe distribui ações gratuitas aos cotistas.",
+    "Bonificação é evento de ações de companhias."
+   ],
+   [
+    "portabilidade, pois os recursos são transferidos para outro fundo do cotista.",
+    "Portabilidade transfere recursos entre planos ou custodiantes."
+   ]
+  ],
+  "gabarito": "Amortização é o pagamento a todos os cotistas de parcela do valor de suas cotas, proporcionalmente, sem redução do número de cotas (o valor de cada cota diminui). É comum em classes fechadas, que devolvem o capital à medida que realizam os investimentos. O resgate é o pagamento do valor das cotas com seu cancelamento, típico das classes abertas.",
+  "dica": "Amortização: devolve parte do valor das cotas sem cancelá-las. Resgate: cancela as cotas."
+ },
+ {
+  "pd": "2.1.2.2.16",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Paulo e o fundo fechado",
+  "etapa": "3/3",
+  "contexto": "Paulo quer acompanhar o desempenho e a composição da classe e pergunta a Daniela que informações o fundo é obrigado a divulgar.",
+  "enunciado": "Daniela explica que o fundo deve divulgar, entre outras:",
+  "certa": "cota, patrimônio, composição da carteira e demonstrações auditadas.",
+  "erradas": [
+   [
+    "apenas o valor da cota no fim da classe, pois as demais informações são sigilosas.",
+    "A divulgação periódica é obrigatória."
+   ],
+   [
+    "somente a rentabilidade do mês, sem dados sobre a carteira ou demonstrações contábeis.",
+    "Há várias informações obrigatórias."
+   ],
+   [
+    "as estratégias futuras do gestor, ordem por ordem, antes de cada operação.",
+    "Não se exige divulgar ordens antes da execução."
+   ]
+  ],
+  "gabarito": "A CVM 175 exige divulgação de informações periódicas (valor da cota e patrimônio líquido, informes mensais, composição da carteira com a periodicidade regulamentar, demonstrações contábeis anuais auditadas) e eventuais (fatos relevantes que possam afetar a decisão dos cotistas), além de comunicação aos cotistas e documentos atualizados, como regulamento e lâmina.",
+  "dica": "Fundos divulgam cota, patrimônio, carteira, informes, demonstrações auditadas e fatos relevantes."
+ },
+ {
+  "pd": "2.1.1.1.1.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Bianca acredita que a Selic vai cair mais rápido que o mercado espera nos próximos dois anos. Ela pergunta a Rui, profissional CPA, se deve escolher Tesouro Selic ou Tesouro Prefixado de 2 anos.",
+  "enunciado": "Rui explica que, se a expectativa de Bianca se confirmar:",
+  "certa": "o prefixado tende a render mais, pois trava hoje uma taxa maior que a Selic futura.",
+  "erradas": [
+   [
+    "o Tesouro Selic tende a render mais, pois sobe junto com a queda dos juros.",
+    "O Tesouro Selic acompanha a Selic: se ela cai, o rendimento cai."
+   ],
+   [
+    "os dois rendem igual, pois ambos são títulos do Tesouro Nacional.",
+    "O indexador muda o retorno conforme o cenário."
+   ],
+   [
+    "o prefixado perde valor, pois a queda dos juros derruba o preço de títulos prefixados.",
+    "A queda dos juros valoriza os prefixados."
+   ]
+  ],
+  "gabarito": "O prefixado trava a taxa na compra: se os juros caírem mais que o esperado pelo mercado, ele rende mais que o pós-fixado e ainda se valoriza na marcação a mercado. O Tesouro Selic acompanha a taxa básica e é indicado quando se esperam juros estáveis ou em alta, ou quando se precisa de liquidez com baixa oscilação.",
+  "dica": "Aposta em juros caindo mais que o previsto → prefixado. Juros estáveis ou subindo → pós-fixado."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "No mesmo banco, Diego encontra um CDB com liquidez diária a 98% do CDI e um CDB de 2 anos, sem resgate antecipado, a 110% do CDI. Ele pergunta a Natália, profissional CPA, o porquê da diferença.",
+  "enunciado": "Natália explica que a taxa maior do CDB de 2 anos:",
+  "certa": "remunera a perda de liquidez, pois o dinheiro fica preso até o vencimento.",
+  "erradas": [
+   [
+    "indica que o CDB de 2 anos tem garantia maior do FGC.",
+    "A garantia do FGC é a mesma nos dois."
+   ],
+   [
+    "indica que o banco está em dificuldade e precisa de recursos com urgência.",
+    "A diferença é explicada pelo prazo e pela liquidez, não necessariamente por crise."
+   ],
+   [
+    "decorre da isenção de IR do CDB de prazo longo.",
+    "CDBs são tributados em qualquer prazo."
+   ]
+  ],
+  "gabarito": "Em geral, quanto maior o prazo e menor a liquidez, maior a taxa exigida pelo investidor (prêmio de liquidez e de prazo). CDBs com liquidez diária pagam menos porque o banco pode ter de devolver os recursos a qualquer momento. Na escolha, o investidor deve casar o prazo do CDB com o seu objetivo.",
+  "dica": "Mais prazo e menos liquidez = taxa maior (prêmio de liquidez)."
+ },
+ {
+  "pd": "2.1.1.1.4",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Saulo comprou uma debênture prefixada de uma empresa sólida. Um ano depois, os juros subiram e o preço caiu, embora a empresa continue saudável. Ele pergunta a Mara, profissional CPA, quais riscos tem nesse investimento.",
+  "enunciado": "Mara explica que Saulo corre:",
+  "certa": "risco de mercado (preço sensível aos juros) e de crédito (capacidade da empresa).",
+  "erradas": [
+   [
+    "apenas risco de crédito, pois debêntures não têm marcação a mercado.",
+    "Debêntures, especialmente prefixadas, oscilam com os juros."
+   ],
+   [
+    "apenas risco de mercado, pois a empresa é sólida e não pode deixar de pagar.",
+    "Mesmo empresas sólidas têm algum risco de crédito."
+   ],
+   [
+    "nenhum risco, pois debêntures têm garantia do FGC.",
+    "Debêntures não têm FGC."
+   ]
+  ],
+  "gabarito": "Debêntures têm risco de crédito (emissor), risco de mercado (preço varia com juros, e no caso prefixado ou longo a oscilação é maior), risco de liquidez (mercado secundário pode ser pouco negociado) e, em algumas, risco de pré-pagamento. Levando ao vencimento, sem calote, o investidor recebe a taxa contratada.",
+  "dica": "Debênture: crédito + mercado + liquidez. Sem FGC."
+ },
+ {
+  "pd": "2.1.3.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Jair tem R$ 100 mil em um fundo de renda fixa de longo prazo e R$ 100 mil em um Tesouro IPCA+ comprado diretamente. Em novembro, viu a quantidade de cotas do fundo cair, mas o título continuou igual. Pergunta a Clara, profissional CPA.",
+  "enunciado": "Clara explica que:",
+  "certa": "o come-cotas incide sobre fundos; no título comprado direto, o IR é cobrado só no resgate.",
+  "erradas": [
+   [
+    "o come-cotas incide sobre todos os investimentos de renda fixa, inclusive títulos públicos.",
+    "Títulos comprados diretamente não têm come-cotas."
+   ],
+   [
+    "o fundo cobrou multa pelo saldo alto, e o Tesouro é isento de qualquer imposto.",
+    "Não houve multa, e o Tesouro é tributado no resgate."
+   ],
+   [
+    "o Tesouro terá come-cotas em maio, e o fundo, em novembro.",
+    "O come-cotas é exclusivo de fundos (maio e novembro)."
+   ]
+  ],
+  "gabarito": "O come-cotas é a antecipação semestral do IR (maio e novembro) em fundos de investimento, exceto classes de ações. Títulos comprados diretamente (Tesouro, CDB, debêntures) têm IR retido só no resgate, vencimento ou pagamento de cupom, o que preserva os juros compostos sobre o imposto ainda não pago.",
+  "dica": "Come-cotas só em fundos. Título direto paga IR no resgate (ou no cupom)."
+ },
+ {
+  "pd": "2.1.1.2.2.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao procurar ações de uma empresa, Lia encontra os códigos XXXX3, XXXX4 e XXXX11. Pergunta a Felipe, profissional CPA, o que é o código terminado em 11.",
+  "enunciado": "Felipe explica que XXXX11 é, em geral:",
+  "certa": "uma unit, certificado que reúne mais de uma classe de ação, como ON e PN.",
+  "erradas": [
+   [
+    "uma ação preferencial de classe B, com dividendos fixos garantidos.",
+    "PN costuma terminar em 4, 5 ou 6."
+   ],
+   [
+    "um título de dívida da companhia, negociado em bolsa como debênture.",
+    "Debêntures não usam esse padrão de código na bolsa."
+   ],
+   [
+    "um bônus de subscrição, que dá direito a comprar ações no futuro.",
+    "Bônus de subscrição tem outros códigos."
+   ]
+  ],
+  "gabarito": "Códigos de negociação na B3: final 3 = ON; 4, 5, 6 = PN (classes); 11 = units (certificados de depósito com ações de classes diferentes da mesma empresa) e também ETFs e FIIs; 32 a 35 = BDRs. Units permitem negociar um pacote de ações e podem conciliar direitos de voto e preferências.",
+  "dica": "Final 11 = unit (pacote de ações), ETF ou FII. Final 3 = ON; 4 = PN."
+ },
+ {
+  "pd": "2.1.1.2.2.2.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma companhia com excesso de caixa aprova, em assembleia, a redução do capital social com devolução de recursos aos acionistas. Rosa pergunta a Rogério, profissional CPA, o que é isso.",
+  "enunciado": "Rogério explica que se trata de:",
+  "certa": "restituição de capital: a empresa devolve aos acionistas parte do capital social.",
+  "erradas": [
+   [
+    "distribuição de dividendos obrigatórios, calculados sobre o lucro do ano.",
+    "Dividendos vêm do lucro; aqui é devolução de capital."
+   ],
+   [
+    "juros sobre capital próprio, que remuneram o capital ao longo do tempo.",
+    "JCP é remuneração calculada sobre o patrimônio, não redução de capital."
+   ],
+   [
+    "subscrição de novas ações, que aumenta o capital social.",
+    "A subscrição aumenta o capital; a restituição o reduz."
+   ]
+  ],
+  "gabarito": "Restituição (redução) de capital é a devolução de parte do capital social aos acionistas, aprovada em assembleia, por exemplo quando a empresa tem capital acima do necessário. Diferente de dividendos e JCP, que distribuem resultados. Para fins fiscais, a restituição costuma reduzir o custo de aquisição das ações.",
+  "dica": "Restituição de capital = devolução de capital social. Dividendos e JCP = distribuição de resultados."
+ },
+ {
+  "pd": "2.1.1.2.3.1.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um investidor compara duas empresas: uma no Nível 2 e outra no Novo Mercado da B3. Ele pergunta a Luana, profissional CPA, a principal diferença entre os segmentos quanto às ações.",
+  "enunciado": "Luana explica que:",
+  "certa": "o Nível 2 admite PN (tag along de 100%); o Novo Mercado, só ON.",
+  "erradas": [
+   [
+    "o Nível 2 só admite ações ON, enquanto o Novo Mercado admite ON e PN.",
+    "É o contrário: o Novo Mercado só admite ON."
+   ],
+   [
+    "o Nível 2 dispensa o tag along, que é exclusivo do Novo Mercado.",
+    "O Nível 2 também exige tag along de 100%."
+   ],
+   [
+    "os dois segmentos são idênticos e diferem apenas no nome comercial.",
+    "Há diferenças relevantes, como a admissão de PN."
+   ]
+  ],
+  "gabarito": "Segmentos de governança da B3: Nível 1 (transparência e free float mínimo); Nível 2 (regras do Novo Mercado, mas permite ações PN, com tag along de 100% e direito de voto em matérias específicas); Novo Mercado (somente ações ON, tag along de 100%, conselho com independentes); Bovespa Mais (empresas de menor porte em preparação). Quanto mais alto o nível, maior a proteção ao minoritário.",
+  "dica": "Nível 2: aceita PN, com tag along de 100%. Novo Mercado: só ON."
+ },
+ {
+  "pd": "2.1.1.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em março, Henrique vendeu R$ 25.000 em ações em operações comuns e teve lucro de R$ 2.000. Ele acredita estar isento porque o lucro foi pequeno. Pergunta a Rita, profissional CPA.",
+  "enunciado": "Rita explica que Henrique:",
+  "certa": "deve pagar R$ 300 (15% do lucro), pois as vendas passaram de R$ 20.000.",
+  "erradas": [
+   [
+    "está isento, pois o lucro de R$ 2.000 ficou abaixo do limite de R$ 20.000.",
+    "O limite de R$ 20 mil é sobre o total de vendas, não sobre o lucro."
+   ],
+   [
+    "deve pagar R$ 750, pois o IR incide sobre o valor que excedeu R$ 20.000.",
+    "O IR incide sobre o lucro, não sobre o excedente das vendas."
+   ],
+   [
+    "deve pagar R$ 400, pois a alíquota para operações comuns é de 20%.",
+    "Operações comuns pagam 15%; 20% é day trade."
+   ]
+  ],
+  "gabarito": "A isenção para ações em operações comuns vale quando o total das vendas no mês for de até R$ 20.000, e não o lucro. Com vendas de R$ 25.000, todo o lucro do mês é tributado: 15% × 2.000 = R$ 300, descontado o “dedo-duro” (0,005% sobre as vendas), pago por DARF até o último dia útil do mês seguinte.",
+  "dica": "Isenção de R$ 20 mil é sobre o total vendido no mês, não sobre o lucro."
+ },
+ {
+  "pd": "2.1.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Seis meses depois de aplicar em um COE de 3 anos, Fátima precisa do dinheiro e pergunta a Lucas, profissional CPA, se pode resgatar e por quanto.",
+  "enunciado": "Lucas explica que, no COE:",
+  "certa": "o resgate antecipado pode não existir ou ser feito a preço de mercado, com possível perda.",
+  "erradas": [
+   [
+    "o resgate antecipado é garantido pelo valor aplicado mais a rentabilidade do período.",
+    "A proteção vale só no vencimento; antes, o valor é de mercado."
+   ],
+   [
+    "o resgate antecipado é proibido por lei em qualquer hipótese.",
+    "Pode haver recompra pelo emissor, conforme as condições."
+   ],
+   [
+    "o FGC antecipa o valor ao investidor em caso de necessidade.",
+    "O COE não tem FGC."
+   ]
+  ],
+  "gabarito": "O COE tem baixa liquidez: o emissor pode não oferecer recompra antes do vencimento ou fazê-la a preço de mercado, que pode ser inferior ao aplicado, mesmo nos de capital protegido. Por isso o prazo deve ser compatível com o horizonte do investidor. Riscos: crédito do emissor (sem FGC), mercado e liquidez.",
+  "dica": "COE: liquidez baixa; antes do vencimento, preço de mercado e possível perda."
+ },
+ {
+  "pd": "2.1.2.2.21",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Para atrair clientes, o gestor de uma classe multimercado quer divulgar que “os cotistas terão rentabilidade mínima de 110% do CDI”. Pergunta a Tânia, profissional CPA, se pode.",
+  "enunciado": "Tânia explica que:",
+  "certa": "é vedado prometer rendimento predeterminado aos cotistas.",
+  "erradas": [
+   [
+    "é permitido, desde que a promessa conste do regulamento e da lâmina.",
+    "A vedação vale mesmo com registro em documentos."
+   ],
+   [
+    "é permitido em classes multimercado, mas vedado em classes de renda fixa.",
+    "A vedação é geral."
+   ],
+   [
+    "é permitido se o gestor tiver histórico de rentabilidade superior a 110% do CDI.",
+    "Histórico passado não autoriza promessa de resultado."
+   ]
+  ],
+  "gabarito": "A regulação de fundos estabelece vedações aos prestadores de serviço, como prometer rendimento predeterminado aos cotistas, garantir resultados sem previsão legal, praticar atos de liberalidade com recursos da classe e aplicar em desacordo com a política de investimento. Também há obrigações: agir com diligência, lealdade e boa-fé, cumprir o regulamento e divulgar informações.",
+  "dica": "Gestor e administrador não podem prometer rendimento predeterminado."
+ },
+ {
+  "pd": "2.1.2.2.24",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cotista estranha que a classe de fundo pague despesas além das taxas de administração e gestão e pergunta a Wagner, profissional CPA, o que pode ser cobrado do fundo.",
+  "enunciado": "Wagner explica que podem ser encargos da classe, por exemplo:",
+  "certa": "taxa de fiscalização da CVM, auditoria, custódia e corretagens das operações.",
+  "erradas": [
+   [
+    "as despesas de publicidade do distribuidor para captar novos cotistas.",
+    "Esse gasto não é encargo permitido do fundo."
+   ],
+   [
+    "os salários dos funcionários do gestor, além da taxa de gestão.",
+    "A remuneração do gestor é a taxa de gestão."
+   ],
+   [
+    "qualquer despesa que o administrador desejar, desde que informada depois.",
+    "Os encargos são apenas os previstos na regulação e no regulamento."
+   ]
+  ],
+  "gabarito": "Encargos são despesas que podem ser debitadas diretamente da classe, previstas na CVM 175 e no regulamento, como taxas de administração, gestão e performance, taxa de fiscalização da CVM, custódia, auditoria independente, corretagens e emolumentos das operações, despesas com assembleias e registros. Despesas não previstas ficam a cargo dos prestadores de serviço.",
+  "dica": "Encargos permitidos: CVM, auditoria, custódia, corretagens e afins. O resto é do prestador."
+ },
+ {
+  "pd": "2.1.4.6",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Bernardo tem 12% das cotas de um FII negociado na B3, com milhares de cotistas, e recebeu R$ 10 mil de rendimentos no mês. Ele acha que estão isentos, como os dos demais cotistas. Pergunta a Joyce, profissional CPA.",
+  "enunciado": "Joyce explica que, por deter mais de 10% das cotas:",
+  "certa": "Bernardo perde a isenção e paga 20% de IR sobre os rendimentos.",
+  "erradas": [
+   [
+    "Bernardo continua isento, pois a regra vale para todos os cotistas do mesmo fundo.",
+    "A isenção exige, entre outros, que o cotista tenha menos de 10% das cotas."
+   ],
+   [
+    "Bernardo paga 15% sobre os rendimentos, como nas ações em operação comum.",
+    "Rendimentos de FII sem isenção pagam 20%."
+   ],
+   [
+    "o fundo perde a isenção para todos os cotistas por causa da posição dele.",
+    "A perda de isenção é do cotista que não cumpre os requisitos."
+   ]
+  ],
+  "gabarito": "A isenção dos rendimentos de FII para pessoa física exige: fundo com pelo menos 100 cotistas, cotas negociadas exclusivamente em bolsa ou balcão organizado e participação do investidor inferior a 10% das cotas (regras da Lei 14.754/2023). Quem não cumpre paga 20% sobre os rendimentos. O ganho de capital na venda das cotas é tributado em 20% para todos.",
+  "dica": "FII: cotista com 10% ou mais perde a isenção dos rendimentos (paga 20%)."
+ },
+ {
+  "pd": "2.2.1.2",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Ilda aplicou R$ 100 mil em um VGBL no regime regressivo e, 11 anos depois, resgatou todo o saldo de R$ 150 mil. Ela pergunta a Pedro, profissional CPA, quanto pagou de IR e quanto pagaria se fosse PGBL.",
+  "enunciado": "Pedro calcula que o IR foi de:",
+  "certa": "R$ 5.000 no VGBL (10% sobre o rendimento); no PGBL seria R$ 15.000 (sobre o total).",
+  "erradas": [
+   [
+    "R$ 15.000 no VGBL e R$ 5.000 no PGBL.",
+    "Os valores estão invertidos: o VGBL tributa só o rendimento."
+   ],
+   [
+    "R$ 7.500 nos dois planos, pois a alíquota após 10 anos é de 15% sobre o rendimento.",
+    "Após 10 anos no regressivo a alíquota é de 10%, e o PGBL tributa o total."
+   ],
+   [
+    "zero nos dois planos, pois o regime regressivo isenta resgates após 10 anos.",
+    "Não há isenção; o piso é de 10%."
+   ]
+  ],
+  "gabarito": "Base de cálculo: VGBL, só o rendimento (150 − 100 = 50 mil); PGBL, o valor total resgatado (150 mil), porque as contribuições foram deduzidas do IR no passado. Regressivo com mais de 10 anos: 10%. VGBL: 10% × 50.000 = R$ 5.000. PGBL: 10% × 150.000 = R$ 15.000. A diferença reflete o benefício fiscal usufruído no PGBL durante a acumulação.",
+  "dica": "VGBL: IR sobre o rendimento. PGBL: IR sobre o total (porque deduziu antes)."
+ },
+ {
+  "pd": "2.2.3.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao se aposentar, Elias quer renda para toda a vida, mas teme falecer cedo e a família não receber nada. Pergunta a Silvana, profissional CPA, se há alternativa.",
+  "enunciado": "Silvana indica a renda:",
+  "certa": "vitalícia com prazo mínimo garantido, que paga aos beneficiários até o fim desse prazo.",
+  "erradas": [
+   [
+    "vitalícia simples, que paga aos beneficiários o saldo restante em caso de morte.",
+    "Na vitalícia simples, nada é pago aos beneficiários após a morte."
+   ],
+   [
+    "temporária, que paga por toda a vida e depois por um prazo aos beneficiários.",
+    "A temporária paga por prazo definido enquanto o titular viver."
+   ],
+   [
+    "pagamento único, que garante renda mensal vitalícia e reversível.",
+    "O pagamento único quita o saldo de uma vez, sem renda mensal."
+   ]
+  ],
+  "gabarito": "Renda vitalícia com prazo mínimo garantido: paga enquanto o titular viver; se ele falecer antes do prazo mínimo escolhido, os beneficiários recebem até o fim desse prazo. Assim, combina proteção contra a longevidade (renda por toda a vida) com alguma proteção à família. Quanto mais garantias, menor o valor da renda mensal.",
+  "dica": "Vitalícia com prazo mínimo garantido: vida toda + beneficiários recebem até o prazo mínimo."
+ },
+ {
+  "pd": "2.3.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Duas irmãs com a mesma renda pedem empréstimo no mesmo banco. Uma paga tudo em dia e tem bom score; a outra teve atrasos recentes. Elas recebem taxas diferentes e perguntam a Mateus, profissional CPA, o motivo.",
+  "enunciado": "Mateus explica que a diferença se deve:",
+  "certa": "à avaliação de risco de crédito, que considera histórico, score e comprovação de renda.",
+  "erradas": [
+   [
+    "a uma regra do Banco Central que fixa a mesma taxa para clientes com a mesma renda.",
+    "Não há taxa única por renda; cada instituição precifica o risco."
+   ],
+   [
+    "à preferência pessoal do gerente, sem relação com o histórico das clientes.",
+    "A análise deve seguir critérios objetivos de crédito."
+   ],
+   [
+    "ao FGC, que cobra taxa maior de clientes com atrasos.",
+    "O FGC não participa da concessão de crédito."
+   ]
+  ],
+  "gabarito": "Princípios da concessão de crédito: avaliar capacidade de pagamento (renda comprovada, comprometimento), histórico de crédito (SCR, birôs, score), garantias e condições da operação. Quem tem menor risco tende a receber taxas menores. Instituições também usam rating interno. Manter pagamentos em dia e cadastro positivo melhora o score.",
+  "dica": "Taxa de crédito reflete o risco: score, histórico, renda e garantias."
+ },
+ {
+  "pd": "2.4.2.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Fernando tem ações nos EUA por meio de uma corretora estrangeira e recebeu US$ 2.000 de dividendos e lucro em vendas. Ele pergunta a Larissa, profissional CPA, como funciona o IR no Brasil.",
+  "enunciado": "Larissa explica que, pela Lei 14.754/2023, os rendimentos de aplicações no exterior de pessoa física:",
+  "certa": "são tributados à alíquota de 15%, apurados anualmente na declaração de ajuste.",
+  "erradas": [
+   [
+    "são isentos no Brasil, pois já foram tributados no país de origem.",
+    "A lei prevê tributação no Brasil, admitindo compensação do imposto pago no exterior nos casos previstos."
+   ],
+   [
+    "seguem a isenção de vendas até R$ 20 mil por mês das ações brasileiras.",
+    "A isenção de R$ 20 mil não se aplica a ativos no exterior."
+   ],
+   [
+    "são tributados pela tabela regressiva, com retenção mensal pela corretora estrangeira.",
+    "A apuração é anual, na declaração, pelo próprio contribuinte."
+   ]
+  ],
+  "gabarito": "Desde 2024, a Lei 14.754/2023 tributa rendimentos de aplicações financeiras, lucros e dividendos de entidades no exterior de pessoas físicas residentes no Brasil à alíquota de 15%, apurados anualmente na declaração de ajuste (com regras de compensação de perdas e de imposto pago no exterior nos casos previstos). Conta internacional e remessas também envolvem IOF-câmbio.",
+  "dica": "Investimento no exterior (pessoa física): 15% sobre rendimentos, apurados na declaração anual."
+ },
+ {
+  "pd": "2.4.1.5.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Em uma palestra, um participante pergunta a Mônica, profissional CPA, quem criou o Pix e por quê.",
+  "enunciado": "Mônica explica que o Pix foi criado pelo:",
+  "certa": "Banco Central, para tornar os pagamentos mais rápidos, baratos e acessíveis.",
+  "erradas": [
+   [
+    "consórcio dos maiores bancos privados, para substituir o dinheiro em espécie por lei.",
+    "O Pix é do BC e não extinguiu o dinheiro em espécie."
+   ],
+   [
+    "Tesouro Nacional, para pagar benefícios sociais sem passar pelos bancos.",
+    "O Pix é arranjo do Banco Central."
+   ],
+   [
+    "CVM, para facilitar a liquidação de operações na bolsa de valores.",
+    "A CVM não criou o Pix."
+   ]
+  ],
+  "gabarito": "O Pix, lançado em 2020, é o arranjo de pagamentos instantâneos do Banco Central. Objetivos: velocidade (liquidação em segundos, 24/7), custo baixo, segurança, inclusão financeira e competição entre instituições. Os participantes (bancos, fintechs, instituições de pagamento) seguem as regras do BC, e a liquidação ocorre no SPI.",
+  "dica": "Pix: arranjo do BC para pagamentos instantâneos, baratos, 24/7 e mais competição."
+ }
+]

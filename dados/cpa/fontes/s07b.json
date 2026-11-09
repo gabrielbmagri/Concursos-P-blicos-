@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.4.6.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Golpe do falso atendente",
+  "etapa": "1/4",
+  "contexto": "Dona Neusa recebe ligação de alguém que se apresenta como funcionário do banco, informa uma “compra suspeita” e pede a senha e o código recebido por SMS para “cancelar a compra”. Antes de responder, ela liga para Marcos, profissional CPA, seu gerente.",
+  "enunciado": "Marcos orienta corretamente que:",
+  "certa": "o banco nunca pede senhas ou códigos por telefone; ela deve desligar e não informar nada.",
+  "erradas": [
+   [
+    "ela pode informar a senha, desde que o atendente confirme seu CPF e endereço.",
+    "Dados pessoais podem ser obtidos por golpistas; senha nunca deve ser informada."
+   ],
+   [
+    "ela deve informar só o código do SMS, pois a senha sozinha não permite transações.",
+    "O código de verificação é justamente o que libera acessos e transações."
+   ],
+   [
+    "ela deve fazer um Pix para uma “conta de segurança” indicada pelo atendente.",
+    "Não existe conta de segurança; é um golpe comum."
+   ]
+  ],
+  "gabarito": "Confidencialidade no mundo digital: instituições não pedem senhas, códigos de autenticação nem transferências para “contas de segurança” por telefone, SMS, e-mail ou aplicativos de mensagem. Diante de contato suspeito, o cliente deve encerrar e procurar os canais oficiais. Profissionais devem orientar os clientes e proteger os dados (sigilo bancário e LGPD).",
+  "dica": "Banco não pede senha, código nem transferência por telefone. Desligue e use o canal oficial."
+ },
+ {
+  "pd": "3.4.5.4.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Golpe do falso atendente",
+  "etapa": "2/4",
+  "contexto": "Investigando tentativas de golpe parecidas, o banco descobre que os valores iam para contas abertas recentemente por jovens sem renda declarada, que recebiam de dezenas de vítimas e sacavam em seguida.",
+  "enunciado": "Essas contas são típicas de:",
+  "certa": "contas de passagem (“laranjas”), que o cadastro e o monitoramento devem identificar.",
+  "erradas": [
+   [
+    "contas-salário regulares, que dispensam monitoramento por serem de pessoas físicas.",
+    "Contas-salário só recebem salário e também estão sujeitas a monitoramento."
+   ],
+   [
+    "contas de pagamento de instituições estrangeiras, fora da regulação brasileira.",
+    "As contas foram abertas no banco, sob a regulação brasileira."
+   ],
+   [
+    "contas conjuntas de familiares, protegidas pelo sigilo e sem dever de análise.",
+    "O sigilo não impede o monitoramento nem a comunicação de suspeitas."
+   ]
+  ],
+  "gabarito": "Contas de passagem (laranjas) recebem recursos de fraudes ou crimes e os repassam rapidamente, muitas vezes em nome de terceiros sem capacidade financeira. O cadastro completo e atualizado (KYC), a análise da capacidade financeira e o monitoramento de movimentações incompatíveis são essenciais para detectá-las, bloquear quando cabível e comunicar às autoridades.",
+  "dica": "Conta laranja: recebe de muitos e saca rápido, incompatível com o cadastro. O KYC e o monitoramento detectam."
+ },
+ {
+  "pd": "3.4.6.9",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Golpe do falso atendente",
+  "etapa": "3/4",
+  "contexto": "Concluída a análise, a área de PLD confirma que as contas recebiam recursos de fraudes contra idosos.",
+  "enunciado": "A instituição deve:",
+  "certa": "comunicar ao COAF e adotar as medidas cabíveis, sem avisar os titulares.",
+  "erradas": [
+   [
+    "avisar os titulares das contas antes de comunicar, para que possam se defender.",
+    "Avisar os envolvidos (tipping-off) é vedado."
+   ],
+   [
+    "apenas encerrar as contas, pois fraudes eletrônicas não precisam ser comunicadas.",
+    "Indícios de crime e de lavagem devem ser comunicados."
+   ],
+   [
+    "comunicar somente se uma vítima registrar boletim de ocorrência.",
+    "A comunicação decorre da análise da instituição, não da iniciativa das vítimas."
+   ]
+  ],
+  "gabarito": "Instituições devem comunicar ao COAF as operações com indícios de lavagem de dinheiro ou de outros crimes, no prazo regulamentar, sem dar ciência aos envolvidos. Comunicações de boa-fé não geram responsabilidade. Além disso, podem adotar medidas como bloqueio cautelar previsto na regulação, encerramento de contas e uso do MED (no Pix) para devolver recursos às vítimas.",
+  "dica": "Fraude confirmada: comunica ao COAF, sem avisar o titular, e adota as medidas cabíveis."
+ },
+ {
+  "pd": "3.4.5.3.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Golpe do falso atendente",
+  "etapa": "4/4",
+  "contexto": "Depois do caso, a diretoria quer saber se as políticas de prevenção estão funcionando, já que as contas laranjas ficaram abertas por meses.",
+  "enunciado": "Pela abordagem baseada em risco, a instituição deve:",
+  "certa": "avaliar a efetividade dos controles, corrigir falhas e registrar o processo.",
+  "erradas": [
+   [
+    "manter as políticas como estão, pois foram aprovadas pela diretoria e não podem ser alteradas.",
+    "Políticas devem ser revisadas quando se mostram ineficazes."
+   ],
+   [
+    "transferir a responsabilidade de prevenção às vítimas, que devem conferir os destinatários.",
+    "A prevenção é dever da instituição."
+   ],
+   [
+    "suspender a abertura de contas digitais para qualquer novo cliente.",
+    "A medida deve ser proporcional ao risco, não uma proibição geral."
+   ]
+  ],
+  "gabarito": "A abordagem baseada em risco exige: avaliação interna de risco, política compatível com o porte e o perfil da instituição, procedimentos de KYC, monitoramento e comunicação, e controle de efetividade das políticas e procedimentos, com testes, indicadores, relatórios e correção de deficiências, sob governança da alta administração.",
+  "dica": "PLD não é papel na gaveta: avaliar a efetividade, corrigir falhas e documentar."
+ },
+ {
+  "pd": "3.1.3.3.5",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Raquel diz a Saulo, profissional CPA, que não sabe para onde vai o dinheiro e que gasta muito com aplicativos de entrega e assinaturas que nem usa.",
+  "enunciado": "Saulo recomenda, para controlar os gastos:",
+  "certa": "registrar as despesas por categoria, cortar as que não trazem valor e definir limites.",
+  "erradas": [
+   [
+    "pegar um empréstimo para quitar as assinaturas e continuar com os mesmos hábitos.",
+    "Empréstimo sem mudar hábitos aumenta o endividamento."
+   ],
+   [
+    "aumentar o limite do cartão, para ter mais folga no orçamento.",
+    "Mais limite tende a aumentar o descontrole."
+   ],
+   [
+    "investir em ações para compensar os gastos com rendimentos altos.",
+    "Primeiro é preciso controlar o orçamento."
+   ]
+  ],
+  "gabarito": "Controle de gastos: acompanhar todas as despesas (aplicativos, planilhas), classificar por categoria (essenciais, variáveis, supérfluas), identificar desperdícios (assinaturas sem uso, pequenos gastos frequentes), definir limites por categoria e rever o orçamento todo mês. O resultado aumenta a capacidade de poupança.",
+  "dica": "Controle de gastos: registrar, classificar, cortar desperdício e pôr limite por categoria."
+ },
+ {
+  "pd": "3.1.3.3.8",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Eliane tem carro quitado e precisa de R$ 20.000 para pagar dívidas de cartão. O banco oferece crédito pessoal a 4% ao mês ou empréstimo com garantia do veículo a 1,8% ao mês. Pergunta a Ciro, profissional CPA.",
+  "enunciado": "Ciro orienta que:",
+  "certa": "a garantia reduz os juros, mas ela pode perder o carro se não pagar.",
+  "erradas": [
+   [
+    "o crédito pessoal é melhor, pois não tem nenhum custo além dos juros.",
+    "Crédito pessoal costuma ser bem mais caro; compare o CET."
+   ],
+   [
+    "o crédito com garantia não tem risco, pois o carro já está quitado.",
+    "O carro passa a garantir a dívida e pode ser retomado."
+   ],
+   [
+    "o crédito rotativo do cartão é mais barato que as duas opções.",
+    "O rotativo está entre as linhas mais caras."
+   ]
+  ],
+  "gabarito": "Empréstimos com garantia (veículo, imóvel, aplicações) têm juros menores porque reduzem a perda do credor em caso de inadimplência. Usá-los para trocar dívidas caras (cartão, cheque especial) pode reduzir muito o custo, desde que a parcela caiba no orçamento. O risco é perder o bem dado em garantia.",
+  "dica": "Crédito com garantia: juros menores, mas o bem pode ser perdido. Use para trocar dívida cara."
+ },
+ {
+  "pd": "3.1.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Paulo tem ativos totais de R$ 400.000 e dívidas de R$ 160.000. Ele pergunta a Thaís, profissional CPA, qual é seu índice de endividamento.",
+  "enunciado": "Thaís calcula que o índice de endividamento (dívidas ÷ ativos) é de:",
+  "certa": "40%.",
+  "erradas": [
+   [
+    "60%.",
+    "60% é a proporção do patrimônio líquido sobre os ativos."
+   ],
+   [
+    "2,5 vezes.",
+    "2,5 é a razão ativos ÷ dívidas."
+   ],
+   [
+    "66,7%.",
+    "Corresponde a dívidas ÷ patrimônio líquido (160 ÷ 240)."
+   ]
+  ],
+  "gabarito": "Indicadores do balanço pessoal: endividamento = passivos ÷ ativos = 160.000 ÷ 400.000 = 40%; patrimônio líquido = 400.000 − 160.000 = R$ 240.000; liquidez = ativos líquidos ÷ dívidas de curto prazo; cobertura de despesas = ativos líquidos ÷ despesas mensais. Endividamento alto reduz a capacidade de enfrentar imprevistos.",
+  "dica": "Endividamento = dívidas ÷ ativos."
+ },
+ {
+  "pd": "3.1.5.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Marta calculou que precisa de R$ 2,4 milhões para viver só de renda, sem tocar no principal, com taxa real de 4% ao ano. O consultor sugere um plano em que ela consome o patrimônio ao longo de 25 anos de aposentadoria. Ela pergunta a Rubens, profissional CPA, o efeito.",
+  "enunciado": "Rubens explica que, no plano que consome o principal:",
+  "certa": "o patrimônio necessário é menor, mas há risco de o dinheiro acabar se ela viver mais.",
+  "erradas": [
+   [
+    "o patrimônio necessário é maior, pois consumir o principal aumenta as despesas.",
+    "Consumir o principal reduz o valor necessário."
+   ],
+   [
+    "não há diferença, pois a taxa real é a mesma nos dois planos.",
+    "A forma de uso do capital muda o valor necessário."
+   ],
+   [
+    "o risco desaparece, pois o principal sempre dura mais que a expectativa de vida.",
+    "Há risco de longevidade: viver além do previsto."
+   ]
+  ],
+  "gabarito": "Planejamento para aposentadoria: viver só de renda (perpetuidade: gasto anual ÷ taxa real) exige mais patrimônio, mas preserva o capital e protege contra longevidade e deixa herança. Consumir o principal ao longo de um prazo exige menos patrimônio, porém traz o risco de o dinheiro acabar se a pessoa viver mais que o planejado. Rendas vitalícias de previdência transferem esse risco à seguradora.",
+  "dica": "Consumir o principal: precisa de menos patrimônio, mas há risco de longevidade."
+ },
+ {
+  "pd": "3.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "No questionário, Sérgio diz que não aceita nenhuma perda, mas também que quer aplicar todo o dinheiro em ações para dobrar o capital em um ano. Bete, profissional CPA, percebe a contradição.",
+  "enunciado": "A conduta adequada de Bete é:",
+  "certa": "esclarecer as respostas com o cliente, explicando risco e retorno, antes de definir o perfil.",
+  "erradas": [
+   [
+    "classificar Sérgio como arrojado, pois o objetivo de retorno prevalece sobre a tolerância a perdas.",
+    "Diante de contradição, o perfil deve ser esclarecido."
+   ],
+   [
+    "classificar Sérgio como conservador sem conversar, para evitar problemas futuros.",
+    "O perfil deve refletir a realidade do cliente, após esclarecimento."
+   ],
+   [
+    "dispensar o questionário, pois as respostas contraditórias tornam o processo inválido.",
+    "O questionário é obrigatório; deve ser refeito ou esclarecido."
+   ]
+  ],
+  "gabarito": "O perfil de investidor deve refletir de forma consistente os objetivos, a situação financeira e a tolerância a risco do cliente. Respostas contraditórias indicam desconhecimento da relação risco–retorno ou expectativas irreais; o profissional deve esclarecer, educar e, se preciso, refazer a avaliação, documentando o processo.",
+  "dica": "Respostas contraditórias no suitability: esclarecer, educar e só então definir o perfil."
+ },
+ {
+  "pd": "3.4.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma instituição quer padronizar o suitability e pergunta a Adriana, profissional CPA, como deve ser a metodologia de classificação de clientes e produtos.",
+  "enunciado": "Adriana explica que a metodologia deve:",
+  "certa": "classificar cliente e produto por critérios objetivos e compará-los.",
+  "erradas": [
+   [
+    "classificar só os clientes, pois os produtos têm o mesmo risco para todos.",
+    "Produtos também precisam ser classificados por risco."
+   ],
+   [
+    "deixar a classificação ao critério do gerente, sem regras escritas.",
+    "A metodologia deve ser formal, documentada e aplicada de forma consistente."
+   ],
+   [
+    "considerar apenas a renda do cliente, que define sozinha o perfil.",
+    "O perfil considera objetivos, situação financeira e conhecimento."
+   ]
+  ],
+  "gabarito": "Ferramentas de suitability: questionários e metodologias que classificam o investidor (objetivos, horizonte, tolerância a risco, situação financeira, conhecimento e experiência) e os produtos (riscos de mercado, crédito, liquidez, complexidade, custos). A adequação compara as duas classificações. A metodologia deve ser formal, documentada, testada e revista periodicamente.",
+  "dica": "Suitability: classifique o cliente e o produto, por critérios formais, e compare os dois."
+ },
+ {
+  "pd": "3.4.3.3.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Para o mês, o banco lança campanha que paga bônus dobrado por venda de títulos de capitalização. Lúcio, profissional CPA, percebe que passou a oferecer o produto a todos, inclusive a quem quer investir para a aposentadoria.",
+  "enunciado": "A situação revela:",
+  "certa": "conflito de interesses criado por incentivo comercial.",
+  "erradas": [
+   [
+    "boa prática comercial, pois campanhas aumentam a eficiência do atendimento.",
+    "Incentivos que distorcem a recomendação geram conflito de interesses."
+   ],
+   [
+    "obrigação do profissional, que deve priorizar os produtos em campanha.",
+    "O dever é com a adequação ao cliente, não com a campanha."
+   ],
+   [
+    "situação irrelevante, pois títulos de capitalização são adequados a qualquer objetivo.",
+    "Capitalização não é adequada como investimento para aposentadoria."
+   ]
+  ],
+  "gabarito": "Benefícios e incentivos (bônus, metas agressivas, brindes de fornecedores) podem criar conflitos de interesses ao estimular recomendações que favorecem o profissional ou a instituição. Medidas: políticas de remuneração alinhadas ao interesse do cliente, monitoramento de vendas inadequadas, transparência e prevalência do suitability.",
+  "dica": "Bônus por produto pode distorcer a recomendação: o interesse do cliente vem antes."
+ },
+ {
+  "pd": "3.4.7.1.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Luísa, cunhada de um diretor de uma companhia aberta, ouve em um jantar de família que a empresa vai anunciar uma aquisição bilionária. No dia seguinte, antes do anúncio, compra ações da empresa.",
+  "enunciado": "A conduta de Luísa caracteriza:",
+  "certa": "insider trading secundário, por usar informação recebida de quem tinha acesso direto.",
+  "erradas": [
+   [
+    "conduta lícita, pois Luísa não trabalha na companhia e não tem dever de sigilo.",
+    "Desde 2017, qualquer pessoa que use informação relevante não divulgada comete o ilícito."
+   ],
+   [
+    "insider trading primário, pois ela é parente de um diretor da companhia.",
+    "Primário é quem tem acesso direto pelo cargo; ela recebeu a informação."
+   ],
+   [
+    "front running, pois ela se antecipou às ordens de clientes da companhia.",
+    "Front running envolve ordens de clientes de intermediários."
+   ]
+  ],
+  "gabarito": "Insider secundário é quem recebe, direta ou indiretamente, informação relevante não divulgada de um insider primário e a utiliza para negociar. A Lei 6.385/76 (art. 27-D, com redação da Lei 13.506/2017) alcança qualquer pessoa que use a informação, e o repasse também é punido. A CVM também atua na esfera administrativa.",
+  "dica": "Recebeu de quem sabia e negociou antes do anúncio = insider secundário."
+ },
+ {
+  "pd": "3.4.7.2.2.2.4",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Um banco com grande posição em contratos atrelados a uma taxa de referência envia cotações distorcidas para o cálculo dessa taxa, buscando favorecer suas posições.",
+  "enunciado": "A conduta caracteriza:",
+  "certa": "manipulação de índice de referência (benchmark), forma de manipulação de preços.",
+  "erradas": [
+   [
+    "churning, giro excessivo de carteiras de clientes para gerar corretagem.",
+    "Churning envolve contas de clientes."
+   ],
+   [
+    "money pass, transferência de recursos entre contas ligadas.",
+    "Money pass envolve negócios artificiais entre comitentes."
+   ],
+   [
+    "prática legítima, pois cada banco pode informar as cotações que quiser.",
+    "Informar cotações distorcidas para alterar o índice é ilícito."
+   ]
+  ],
+  "gabarito": "A manipulação de índices de referência (benchmarks) ocorre quando participantes atuam para alterar artificialmente o valor de índices usados em contratos e produtos (taxas de juros, câmbio, índices de ações), seja por operações, seja por informações falsas na formação do índice. É manipulação de preços pela Resolução CVM 62 e pode ser crime de manipulação de mercado.",
+  "dica": "Distorcer um índice de referência para ganhar em posições atreladas = manipulação de benchmark."
+ },
+ {
+  "pd": "3.4.1.2",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "No dia do exame CPA, Alan leva o celular escondido no bolso para consultar anotações durante a prova.",
+  "enunciado": "Pelas regras de conduta para pessoas candidatas, essa atitude:",
+  "certa": "é proibida e pode levar à anulação do exame e a outras sanções.",
+  "erradas": [
+   [
+    "é permitida, desde que o celular fique no modo silencioso.",
+    "Materiais e aparelhos externos são proibidos durante o exame."
+   ],
+   [
+    "é permitida para consulta à calculadora, pois a prova tem cálculos.",
+    "A plataforma do exame oferece calculadora própria; aparelhos externos são vedados."
+   ],
+   [
+    "só é proibida se o candidato for flagrado usando o aparelho.",
+    "Portar o material proibido já descumpre as regras."
+   ]
+  ],
+  "gabarito": "O edital e o Código de Conduta Ética da Anbima proíbem o uso de materiais, anotações, calculadoras e aparelhos externos, bem como qualquer tentativa de fraude ou de reproduzir questões. As ferramentas permitidas (rascunho digital, bloco de notas, fórmulas e calculadora) estão na própria plataforma. Violações podem levar à anulação do exame, ao cancelamento da certificação e ao impedimento de novas inscrições.",
+  "dica": "No exame: nada de celular, anotação ou calculadora própria. A plataforma já tem calculadora."
+ },
+ {
+  "pd": "3.4.6.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um auditor pergunta a Jorge, profissional CPA, por que a corretora precisa guardar por anos o registro detalhado das ordens e operações dos clientes.",
+  "enunciado": "Jorge explica que o registro de operações:",
+  "certa": "é exigência regulatória que permite rastrear operações e apoiar a PLD.",
+  "erradas": [
+   [
+    "é opcional e serve apenas para estatísticas internas de vendas.",
+    "É obrigatório pela regulação."
+   ],
+   [
+    "deve ser apagado logo após a liquidação, para proteger o sigilo dos clientes.",
+    "Os registros devem ser mantidos pelo prazo regulamentar."
+   ],
+   [
+    "só é exigido para clientes considerados suspeitos pela instituição.",
+    "O registro vale para todas as operações."
+   ]
+  ],
+  "gabarito": "As instituições devem manter registros completos das operações e das ordens dos clientes, com identificação, valores, datas e canais, pelo prazo regulamentar. Os registros permitem monitorar operações atípicas, comprovar a regularidade da execução, atender a auditorias, reclamações e requisições de autoridades (BC, CVM, COAF, Judiciário).",
+  "dica": "Registro de operações: obrigatório, guardado pelo prazo regulamentar, base para PLD e fiscalização."
+ },
+ {
+  "pd": "4.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora avalia uma empresa agrícola sob o ponto de vista climático. Um cliente pergunta a Ana, profissional CPA, quais riscos ambientais podem afetar o investimento.",
+  "enunciado": "Ana explica que há riscos físicos e de transição, como, respectivamente:",
+  "certa": "secas que reduzem a safra e regras que encarecem emissões.",
+  "erradas": [
+   [
+    "alta da Selic que encarece o crédito e queda do dólar que reduz as exportações.",
+    "São riscos macroeconômicos, não ambientais."
+   ],
+   [
+    "fraudes contábeis da diretoria e falta de conselheiros independentes.",
+    "São riscos de governança."
+   ],
+   [
+    "greves de funcionários e acidentes de trabalho nas fazendas.",
+    "São riscos sociais."
+   ]
+  ],
+  "gabarito": "Aspectos ambientais do ESG incluem emissões, uso de água e energia, resíduos, biodiversidade e mudanças climáticas. Riscos climáticos físicos decorrem de eventos extremos ou mudanças crônicas (secas, enchentes, calor); riscos de transição vêm de mudanças regulatórias, tecnológicas e de mercado rumo a uma economia de baixo carbono (taxação de carbono, novas exigências).",
+  "dica": "Risco físico = evento climático. Risco de transição = regras e mercado mudando para baixo carbono."
+ },
+ {
+  "pd": "4.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente quer que seu dinheiro gere, além de retorno financeiro, impacto social mensurável, como acesso a saneamento em comunidades carentes. Pergunta a Davi, profissional CPA, que conceito descreve essa busca.",
+  "enunciado": "Davi explica que se trata de:",
+  "certa": "investimento de impacto: retorno e impacto mensurável.",
+  "erradas": [
+   [
+    "filantropia, em que o investidor doa recursos sem expectativa de retorno.",
+    "Na filantropia não há expectativa de retorno financeiro."
+   ],
+   [
+    "integração ESG, que exclui todas as empresas sem impacto social.",
+    "Integração considera fatores ESG na análise; não exige impacto mensurável."
+   ],
+   [
+    "especulação, que busca lucro rápido com ativos de alta volatilidade.",
+    "Especulação não tem objetivo socioambiental."
+   ]
+  ],
+  "gabarito": "Investimento de impacto busca intencionalmente gerar impacto social ou ambiental positivo e mensurável, junto com retorno financeiro. Diferencia-se da filantropia (sem retorno), da exclusão (evitar setores), do best-in-class e da integração ESG (considerar riscos e oportunidades). A medição e o relato do impacto são parte essencial.",
+  "dica": "Impacto = intenção + retorno financeiro + impacto mensurável."
+ },
+ {
+  "pd": "4.4.4.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma startup emite tokens que dão direito a uma parcela dos lucros de um empreendimento imobiliário. Outra emite tokens que dão acesso a serviços na própria plataforma. Um cliente pergunta a Lívia, profissional CPA, a diferença.",
+  "enunciado": "Lívia explica que os tokens são, respectivamente:",
+  "certa": "de investimento (security token) e de utilidade (utility token).",
+  "erradas": [
+   [
+    "de utilidade e de investimento.",
+    "A ordem está invertida."
+   ],
+   [
+    "não fungíveis (NFT) e stablecoins.",
+    "NFT representa item único; stablecoin busca valor estável."
+   ],
+   [
+    "moedas digitais de banco central e criptomoedas descentralizadas.",
+    "Nenhum dos dois é emitido por banco central."
+   ]
+  ],
+  "gabarito": "Tipos de tokens: de pagamento (criptomoedas, stablecoins), de utilidade (acesso a produtos ou serviços de uma plataforma), de investimento ou security tokens (direitos de participação, lucros ou rendimentos de um empreendimento, que podem ser valores mobiliários sujeitos à CVM) e não fungíveis (NFTs, itens únicos). A classificação define a regulação aplicável.",
+  "dica": "Security token = direito econômico (pode ser valor mobiliário). Utility token = acesso a serviço."
+ },
+ {
+  "pd": "4.4.5.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma plataforma oferece “renda fixa digital”: títulos de dívida de empresas registrados em blockchain, com aplicação mínima de R$ 100. Um cliente pergunta a Renato, profissional CPA, o que muda em relação a uma debênture comum.",
+  "enunciado": "Renato explica que a principal mudança é:",
+  "certa": "o registro e a distribuição, que ficam mais baratos; o risco continua.",
+  "erradas": [
+   [
+    "a eliminação do risco de crédito, pois o blockchain garante o pagamento.",
+    "A tecnologia não garante o pagamento pelo emissor."
+   ],
+   [
+    "a garantia do FGC, que passa a valer para todos os títulos tokenizados.",
+    "Títulos de empresas não têm FGC."
+   ],
+   [
+    "a isenção de IR, válida para qualquer ativo registrado em blockchain.",
+    "A tributação depende do tipo de ativo, não da tecnologia."
+   ]
+  ],
+  "gabarito": "Renda fixa digital (tokenizada) usa blockchain para emitir, registrar e negociar títulos de dívida, com potencial de reduzir custos, permitir tíquetes menores e liquidação mais rápida. O título continua sujeito ao risco de crédito do emissor, à regulação aplicável (por exemplo, da CVM) e à tributação do tipo de ativo. Liquidez no secundário pode ser limitada.",
+  "dica": "Tokenizar muda o registro, não o risco: o crédito do emissor continua."
+ },
+ {
+  "pd": "4.7.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante pergunta a Paula, profissional CPA, o que é um “arranjo de pagamento”, termo que aparece nas normas do Banco Central sobre cartões e Pix.",
+  "enunciado": "Paula explica que arranjo de pagamento é:",
+  "certa": "o conjunto de regras de um serviço de pagamento, definido pelo instituidor.",
+  "erradas": [
+   [
+    "a maquininha usada pelo lojista para aceitar cartões.",
+    "A maquininha é equipamento do credenciador ou subcredenciador."
+   ],
+   [
+    "o contrato de empréstimo firmado entre o portador do cartão e o banco.",
+    "O arranjo é o conjunto de regras do serviço de pagamento."
+   ],
+   [
+    "a conta corrente em que o lojista recebe o valor das vendas.",
+    "A conta é onde o recurso é creditado; o arranjo são as regras."
+   ]
+  ],
+  "gabarito": "Pela Lei 12.865/2013, arranjo de pagamento é o conjunto de regras e procedimentos que disciplina a prestação de um serviço de pagamento ao público (por exemplo, cartões de uma bandeira, transferências, Pix). O instituidor do arranjo (bandeira ou o próprio BC, no Pix) define as regras; instituições de pagamento e financeiras participam como emissoras, credenciadoras e subcredenciadoras.",
+  "dica": "Arranjo = regras do serviço de pagamento. Instituidor = quem define as regras (bandeira; no Pix, o BC)."
+ }
+]
