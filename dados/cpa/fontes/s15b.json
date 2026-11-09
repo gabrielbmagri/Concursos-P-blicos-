@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.4",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: A sucessão de Seu Raul",
+  "etapa": "1/4",
+  "contexto": "Seu Raul, 75 anos, tem R$ 4 milhões em imóveis e fazendas e só R$ 60 mil em aplicações. Ele quer facilitar a vida dos três filhos quando falecer. Pergunta a Sérgio, profissional CPA, o que o balanço dele revela.",
+  "enunciado": "Sérgio aponta que o principal ponto de atenção é:",
+  "certa": "a baixa liquidez para pagar inventário e impostos.",
+  "erradas": [
+   [
+    "o excesso de liquidez, que deveria ser aplicado em mais imóveis.",
+    "Há pouca liquidez, não excesso."
+   ],
+   [
+    "o endividamento elevado, que compromete o patrimônio.",
+    "O caso não indica dívidas relevantes."
+   ],
+   [
+    "a concentração em renda fixa, que deveria ir para ações.",
+    "Quase tudo está em imóveis, não em renda fixa."
+   ]
+  ],
+  "gabarito": "A análise do balanço patrimonial avalia não só o tamanho do patrimônio, mas sua composição e liquidez. Patrimônio concentrado em imóveis pode deixar os herdeiros sem recursos para custos do inventário, ITCMD e despesas, forçando vendas apressadas. O planejamento sucessório busca prever essa liquidez.",
+  "dica": "Patrimônio ilíquido: atenção à falta de dinheiro para inventário e impostos."
+ },
+ {
+  "pd": "3.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: A sucessão de Seu Raul",
+  "etapa": "2/4",
+  "contexto": "Para resolver a falta de liquidez, Sérgio avalia instrumentos que paguem diretamente aos filhos, com rapidez, quando Seu Raul falecer.",
+  "enunciado": "Uma solução adequada é:",
+  "certa": "seguro de vida ou previdência com os filhos como beneficiários.",
+  "erradas": [
+   [
+    "título de capitalização, que garante o pagamento do inventário.",
+    "Capitalização não tem essa função."
+   ],
+   [
+    "empréstimo pessoal em nome dos filhos, contratado agora.",
+    "Endividar os filhos não resolve a sucessão."
+   ],
+   [
+    "deixar todo o patrimônio em imóveis, que se vendem rapidamente.",
+    "Imóveis são justamente o ativo ilíquido."
+   ]
+  ],
+  "gabarito": "Na gestão de riscos e no planejamento sucessório, seguros de vida e planos de previdência (VGBL/PGBL) com beneficiários indicados costumam pagar diretamente a eles, em geral sem passar pelo inventário, dando liquidez para custos e impostos. Devem ser dimensionados conforme a necessidade e analisados com as regras tributárias estaduais.",
+  "dica": "Liquidez na sucessão: seguro de vida ou previdência com beneficiários indicados."
+ },
+ {
+  "pd": "3.1.5.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: A sucessão de Seu Raul",
+  "etapa": "3/4",
+  "contexto": "Após implementar o plano, Seu Raul pergunta a Sérgio se pode “esquecer o assunto”.",
+  "enunciado": "Sérgio explica que o planejamento deve ser:",
+  "certa": "revisado sempre que família, patrimônio ou leis mudarem.",
+  "erradas": [
+   [
+    "feito uma única vez e nunca revisto.",
+    "O planejamento é contínuo."
+   ],
+   [
+    "revisto apenas se os filhos pedirem.",
+    "A revisão deve ser periódica e planejada."
+   ],
+   [
+    "refeito todos os meses, com troca completa dos produtos.",
+    "Revisão não significa trocar tudo todo mês."
+   ]
+  ],
+  "gabarito": "O processo de planejamento financeiro termina em monitoramento e revisão regular. No planejamento sucessório, mudanças familiares (casamentos, nascimentos, falecimentos), patrimoniais e legais (tributação de heranças, regras de previdência) exigem atualizar beneficiários, valores e instrumentos.",
+  "dica": "Plano sucessório: revisar quando a família, o patrimônio ou as leis mudam."
+ },
+ {
+  "pd": "3.4.2.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: A sucessão de Seu Raul",
+  "etapa": "4/4",
+  "contexto": "Seu Raul acha que a previdência vai “pagar sem imposto nenhum” aos filhos e que “ninguém pode questionar”. Sérgio percebe a confusão.",
+  "enunciado": "Pelo dever de comunicação clara, Sérgio deve:",
+  "certa": "explicar com precisão regras, tributos e limitações, sem exagerar benefícios.",
+  "erradas": [
+   [
+    "confirmar o entendimento do cliente, para não desmotivá-lo.",
+    "Confirmar informações erradas fere a transparência."
+   ],
+   [
+    "evitar o assunto tributário, por ser complexo demais.",
+    "Informações relevantes devem ser explicadas."
+   ],
+   [
+    "dizer que previdência é isenta de qualquer tributo em todos os estados.",
+    "Isso pode não ser verdade e induz a erro."
+   ]
+  ],
+  "gabarito": "Comunicação clara e transparente exige informar corretamente características, custos, tributação e limitações dos produtos, sem promessas ou exageros. Na previdência, há IR conforme o regime e o tipo de plano, e as regras de tributação sucessória variam e podem mudar. Explicar com precisão evita frustrações e riscos legais.",
+  "dica": "Transparência: explique regras e limites com precisão, sem vender ilusões."
+ },
+ {
+  "pd": "3.1.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Bruno, 26 anos, tem dívidas no cheque especial e quer começar a investir em ações porque “é jovem e pode arriscar”. Pergunta a Fernanda, profissional CPA.",
+  "enunciado": "Fernanda orienta que, apesar da idade:",
+  "certa": "primeiro quitar a dívida cara e formar reserva.",
+  "erradas": [
+   [
+    "ele deve investir em ações agora, pois jovens podem ignorar dívidas.",
+    "Dívidas caras corroem qualquer retorno."
+   ],
+   [
+    "a idade define sozinha a exposição a risco.",
+    "A situação financeira também pesa."
+   ],
+   [
+    "ele deve evitar renda variável para sempre.",
+    "Com a casa em ordem, pode ter exposição a risco conforme o perfil."
+   ]
+  ],
+  "gabarito": "A faixa etária sugere horizonte longo e maior capacidade de risco, mas a situação financeira (dívidas, reserva, renda) vem antes. Com dívidas caras e sem reserva, o adequado é quitar as dívidas, formar a reserva e só então investir com mais risco, conforme o perfil.",
+  "dica": "Jovem pode arriscar, mas só depois de quitar dívidas caras e formar reserva."
+ },
+ {
+  "pd": "3.1.3.3.5",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Cíntia quer poupar R$ 800 por mês, mas o orçamento não fecha. Ela gasta R$ 600 com aplicativos de comida, R$ 200 com assinaturas e R$ 300 com compras por impulso. Pergunta a Davi, profissional CPA.",
+  "enunciado": "Davi sugere:",
+  "certa": "cortar supérfluos e definir limites de gasto.",
+  "erradas": [
+   [
+    "cortar o plano de saúde, que é a maior despesa fixa.",
+    "Cortar proteção essencial aumenta riscos."
+   ],
+   [
+    "contratar crédito pessoal para formar a poupança.",
+    "Poupar com dinheiro emprestado não faz sentido."
+   ],
+   [
+    "desistir de poupar até receber aumento de salário.",
+    "Há espaço para ajuste nos gastos atuais."
+   ]
+  ],
+  "gabarito": "O controle de gastos começa por identificar despesas variáveis e supérfluas (assinaturas sem uso, compras por impulso, delivery frequente) e definir limites, preservando despesas essenciais e proteções (saúde, seguros). Automatizar a poupança no início do mês ajuda a cumprir a meta.",
+  "dica": "Orçamento apertado: corte supérfluos, mantenha o essencial e poupe primeiro."
+ },
+ {
+  "pd": "3.1.3.4",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Mário diz que sua reserva de emergência é um terreno de R$ 100 mil, “que sempre valoriza”. Pergunta a Lia, profissional CPA, se está bem protegido.",
+  "enunciado": "Lia explica que o terreno:",
+  "certa": "não serve como reserva, pois não tem liquidez para emergências.",
+  "erradas": [
+   [
+    "é a reserva ideal, pois imóveis não perdem valor.",
+    "Imóveis podem perder valor e demoram a ser vendidos."
+   ],
+   [
+    "serve como reserva se ele aceitar vender pela metade do preço.",
+    "Reserva que exige vender com grande perda não cumpre o papel."
+   ],
+   [
+    "dispensa reserva, pois pode ser dado em garantia de empréstimo.",
+    "Depender de crédito em emergência é caro e incerto."
+   ]
+  ],
+  "gabarito": "Reserva de emergência precisa de liquidez imediata e baixo risco de perda: Tesouro Selic, CDB com liquidez diária, fundos DI de baixo custo, poupança. Imóveis, ações e títulos longos não são adequados, porque podem exigir tempo para vender ou venda com desconto justamente quando o dinheiro é necessário.",
+  "dica": "Reserva tem de ser líquida: imóvel não serve."
+ },
+ {
+  "pd": "3.1.6.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Rui tem um PGBL e um VGBL e pergunta a Bianca, profissional CPA, como informar cada um na declaração de IR.",
+  "enunciado": "Bianca explica que, em regra:",
+  "certa": "VGBL em Bens e Direitos; PGBL em Pagamentos Efetuados.",
+  "erradas": [
+   [
+    "os dois vão em Bens e Direitos, pelo saldo atualizado.",
+    "PGBL não é informado em Bens e Direitos."
+   ],
+   [
+    "nenhum precisa ser declarado, por serem planos de longo prazo.",
+    "Ambos têm informações a declarar."
+   ],
+   [
+    "os dois vão em Rendimentos Isentos, pelo valor dos rendimentos.",
+    "Não se informam como rendimentos isentos."
+   ]
+  ],
+  "gabarito": "Na declaração de IRPF: o VGBL é informado em Bens e Direitos (pelo valor aplicado, conforme o informe), por ter natureza de seguro de vida com acumulação; as contribuições ao PGBL são informadas em Pagamentos Efetuados (e deduzidas no modelo completo, até 12%), sem lançamento em Bens e Direitos. Resgates seguem as regras do regime escolhido.",
+  "dica": "VGBL → Bens e Direitos. PGBL → contribuições em Pagamentos Efetuados."
+ },
+ {
+  "pd": "3.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Seu Valter tem três dívidas atrasadas com juros altos e recebe convite para um programa de renegociação com descontos. Pergunta a Mara, profissional CPA, como avaliar.",
+  "enunciado": "Mara orienta que ele:",
+  "certa": "compare custo total e parcela com o orçamento.",
+  "erradas": [
+   [
+    "aceite qualquer proposta, pois toda renegociação é vantajosa.",
+    "Nem toda renegociação cabe no orçamento ou reduz o custo."
+   ],
+   [
+    "recuse, pois renegociar sempre piora a situação do devedor.",
+    "Renegociar pode reduzir juros e organizar as dívidas."
+   ],
+   [
+    "contrate outra dívida cara para quitar a renegociação.",
+    "Isso perpetua o endividamento."
+   ]
+  ],
+  "gabarito": "Na gestão financeira, renegociar dívidas (inclusive em programas e mutirões) pode reduzir juros e organizar pagamentos. A avaliação deve considerar o CET, o valor total, a parcela compatível com o orçamento e a ordem de prioridade (dívidas mais caras e com garantias essenciais primeiro), evitando acordos impossíveis de cumprir.",
+  "dica": "Renegociação: compare custo total e parcela com o orçamento antes de aceitar."
+ },
+ {
+  "pd": "3.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente com bom patrimônio nunca investiu fora da poupança. No questionário de suitability, ela pergunta a Diogo, profissional CPA, por que precisa responder sobre experiência com produtos.",
+  "enunciado": "Diogo explica que o perfil considera também:",
+  "certa": "o conhecimento e a experiência com produtos.",
+  "erradas": [
+   [
+    "apenas o patrimônio, que define sozinho o perfil.",
+    "O perfil combina objetivos, situação financeira e conhecimento."
+   ],
+   [
+    "a opinião do gerente sobre os produtos mais rentáveis.",
+    "O perfil é do cliente, não do gerente."
+   ],
+   [
+    "somente a idade, para definir o prazo dos investimentos.",
+    "Idade é só um dos fatores."
+   ]
+  ],
+  "gabarito": "Pela CVM 30, o perfil do investidor considera: objetivos de investimento (prazo, finalidade, tolerância a risco), situação financeira (renda, patrimônio, necessidade de liquidez) e conhecimento (natureza e frequência de operações, formação e experiência). Patrimônio alto não significa conhecimento sobre produtos complexos.",
+  "dica": "Perfil = objetivos + situação financeira + conhecimento e experiência."
+ },
+ {
+  "pd": "3.4.1.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em seu perfil pessoal nas redes sociais, Igor, profissional CPA, publica que um título “não tem risco nenhum” e “rende garantido 20% ao ano”, para atrair clientes.",
+  "enunciado": "Pelo Código de Conduta Ética, a conduta é:",
+  "certa": "inadequada: o código vale também nas redes pessoais.",
+  "erradas": [
+   [
+    "adequada, pois o perfil é pessoal e não da instituição.",
+    "O profissional certificado deve seguir o código em qualquer canal."
+   ],
+   [
+    "adequada, desde que ele mencione que é certificado pela Anbima.",
+    "Isso agrava, pois associa a certificação a informação enganosa."
+   ],
+   [
+    "inadequada apenas se algum cliente reclamar.",
+    "A conduta é inadequada por si só."
+   ]
+  ],
+  "gabarito": "Profissionais certificados devem observar o Código de Conduta Ética da Anbima e as políticas da instituição em qualquer meio, inclusive redes sociais pessoais: nada de prometer rentabilidade, omitir riscos ou divulgar informações enganosas. Descumprimentos podem levar a sanções, inclusive à suspensão ou cancelamento da certificação.",
+  "dica": "O código vale nas redes pessoais também: nada de promessa ou informação enganosa."
+ },
+ {
+  "pd": "3.4.5.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um novo cliente quer abrir conta e investir R$ 500 mil, mas se recusa a informar renda, profissão e origem dos recursos. Pergunta-se a Rogério, profissional CPA, como proceder.",
+  "enunciado": "Rogério orienta que:",
+  "certa": "sem as informações do KYC, a instituição não deve prosseguir e deve avaliar a situação.",
+  "erradas": [
+   [
+    "a conta deve ser aberta normalmente, pois o dinheiro é do cliente.",
+    "O KYC é obrigatório."
+   ],
+   [
+    "basta registrar uma renda estimada pelo gerente.",
+    "Informações devem ser do cliente e verificáveis."
+   ],
+   [
+    "a operação deve ser aceita e o cliente avisado de que será comunicado ao COAF.",
+    "Avisar o cliente é vedado, e a análise vem primeiro."
+   ]
+  ],
+  "gabarito": "O princípio “conheça seu cliente” exige identificar e qualificar o cliente, inclusive renda, atividade e origem dos recursos, conforme o risco. A recusa injustificada em fornecer informações impede o cumprimento da regulação e é sinal de alerta: a instituição não deve iniciar ou manter a relação e deve avaliar se há indícios a comunicar, sem alertar o cliente.",
+  "dica": "Cliente se recusa a informar origem dos recursos: não prossiga e avalie a situação."
+ },
+ {
+  "pd": "3.4.6.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um ex-cliente pede ao banco que apague todos os seus dados, com base na LGPD. Parte desses dados se refere a operações dos últimos anos. Pergunta-se a Clara, profissional CPA, o que fazer.",
+  "enunciado": "Clara explica que o banco:",
+  "certa": "mantém o exigido por lei (como PLD) e elimina o resto.",
+  "erradas": [
+   [
+    "deve apagar tudo imediatamente, pois a LGPD prevalece sobre qualquer norma.",
+    "A LGPD permite a conservação para obrigação legal ou regulatória."
+   ],
+   [
+    "pode manter todos os dados para sempre, para fins de marketing.",
+    "Dados sem base legal devem ser eliminados."
+   ],
+   [
+    "deve vender os dados a outra instituição antes de apagar.",
+    "Isso violaria a LGPD."
+   ]
+  ],
+  "gabarito": "A LGPD garante ao titular o direito de eliminação de dados tratados com base no consentimento, mas permite a conservação para cumprimento de obrigação legal ou regulatória, entre outras hipóteses. Instituições financeiras devem manter registros cadastrais e de operações pelos prazos exigidos pela regulação (inclusive de PLD), eliminando o que não tiver base legal.",
+  "dica": "LGPD × PLD: dados exigidos por lei podem ser mantidos pelo prazo regulatório."
+ },
+ {
+  "pd": "3.4.7.2.2.4.3",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "O gestor de um fundo, antes de mandar comprar um grande lote de ações para a carteira, compra as mesmas ações em sua conta pessoal e as vende depois que a ordem do fundo eleva o preço.",
+  "enunciado": "A conduta configura:",
+  "certa": "front running, prática não equitativa em prejuízo dos cotistas.",
+  "erradas": [
+   [
+    "prática legítima, pois o gestor também pode investir em ações.",
+    "Usar a ordem do fundo em benefício próprio é vedado."
+   ],
+   [
+    "spoofing, pois as ordens do fundo não seriam executadas.",
+    "As ordens do fundo foram executadas."
+   ],
+   [
+    "churning, pois o gestor girou a carteira do fundo.",
+    "O ilícito é antecipar-se às ordens do fundo."
+   ]
+  ],
+  "gabarito": "Front running é antecipar-se a ordens de clientes ou de carteiras sob gestão, usando o conhecimento delas para operar em benefício próprio ou de terceiros. É prática não equitativa (Resolução CVM 62) e viola o dever fiduciário do gestor com os cotistas. Políticas de investimentos pessoais e monitoramento ajudam a prevenir.",
+  "dica": "Gestor que opera antes da ordem do fundo = front running."
+ },
+ {
+  "pd": "3.4.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma enchente atinge o prédio onde fica o centro de dados de uma corretora, e os sistemas ficam fora do ar por um dia. Clientes não conseguem operar. A diretoria pergunta a Ivo, profissional CPA, como prevenir.",
+  "enunciado": "Ivo explica que o evento é risco operacional por fator externo e exige:",
+  "certa": "plano de continuidade de negócios, com estruturas redundantes e testes periódicos.",
+  "erradas": [
+   [
+    "contratar seguro de crédito para os clientes.",
+    "Seguro de crédito não resolve a interrupção dos sistemas."
+   ],
+   [
+    "ignorar o risco, pois eventos naturais não são de responsabilidade da corretora.",
+    "A instituição deve se preparar para eventos externos."
+   ],
+   [
+    "reduzir os limites de operação de todos os clientes.",
+    "Não ataca a causa da interrupção."
+   ]
+  ],
+  "gabarito": "O risco operacional inclui eventos externos (desastres naturais, falhas de fornecedores, ataques cibernéticos). As instituições devem ter estrutura de gerenciamento desse risco e plano de continuidade de negócios (sites de contingência, backups, redundância, testes), para manter serviços críticos e proteger os clientes.",
+  "dica": "Desastre externo também é risco operacional: plano de continuidade e redundância."
+ },
+ {
+  "pd": "4.1.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um banco lança contas gratuitas e microcrédito para comunidades de baixa renda sem acesso a serviços financeiros. Um cliente pergunta a Rafael, profissional CPA, em que pilar ESG isso se encaixa.",
+  "enunciado": "Rafael explica que é uma iniciativa do pilar:",
+  "certa": "social, por promover inclusão financeira.",
+  "erradas": [
+   [
+    "ambiental, por reduzir o uso de papel.",
+    "O foco é o acesso de pessoas a serviços."
+   ],
+   [
+    "de governança, por envolver a diretoria do banco.",
+    "Toda iniciativa envolve a diretoria; o tema central é social."
+   ],
+   [
+    "financeiro, sem relação com ESG.",
+    "Inclusão financeira é tema social do ESG."
+   ]
+  ],
+  "gabarito": "Aspectos sociais do ESG incluem inclusão financeira, relação com comunidades, direitos humanos, condições de trabalho, diversidade e proteção do consumidor. Para instituições financeiras, ampliar o acesso a serviços e crédito responsável é contribuição social relevante.",
+  "dica": "Inclusão financeira = pilar social."
+ },
+ {
+  "pd": "4.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Paula, profissional CPA, que tipos de informação podem ser compartilhados no Open Finance.",
+  "enunciado": "Paula explica que, com consentimento, podem ser compartilhados:",
+  "certa": "dados cadastrais, transacionais e serviços de pagamento.",
+  "erradas": [
+   [
+    "somente o saldo da conta, sem outras informações.",
+    "O escopo é bem mais amplo."
+   ],
+   [
+    "senhas e códigos de acesso, para facilitar as operações.",
+    "Senhas nunca são compartilhadas."
+   ],
+   [
+    "dados de qualquer pessoa, sem autorização, se forem públicos.",
+    "O compartilhamento depende do consentimento do titular."
+   ]
+  ],
+  "gabarito": "O Open Finance abrange dados de produtos e serviços das instituições, dados cadastrais e transacionais dos clientes (contas, cartões, crédito, investimentos, seguros, previdência, câmbio) e serviços como iniciação de pagamentos, sempre com consentimento, finalidade e prazo definidos, por interfaces seguras, sem compartilhar senhas.",
+  "dica": "Open Finance: dados cadastrais, transacionais e serviços (ex.: iniciação de pagamento), com consentimento."
+ },
+ {
+  "pd": "4.4.5.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um seminário, um participante pergunta a Ana, profissional CPA, que vantagem o Drex poderia trazer em relação aos meios atuais.",
+  "enunciado": "Ana explica que uma proposta do Drex é:",
+  "certa": "contratos programáveis com ativos tokenizados.",
+  "erradas": [
+   [
+    "substituir o real por uma criptomoeda de preço livre.",
+    "O Drex representa o real, com o mesmo valor."
+   ],
+   [
+    "eliminar a supervisão do Banco Central sobre os bancos.",
+    "O BC continua regulando o sistema."
+   ],
+   [
+    "garantir rendimento fixo a quem mantiver saldo na plataforma.",
+    "Não há rendimento garantido."
+   ]
+  ],
+  "gabarito": "O Drex é a iniciativa do Banco Central voltada a uma infraestrutura para o real em formato digital, com foco em serviços financeiros mais eficientes, como contratos programáveis, liquidação de operações com ativos tokenizados e maior integração entre instituições, preservando privacidade e segurança. Não é criptomoeda volátil e não substitui o Pix.",
+  "dica": "Drex: real digital do BC, com contratos programáveis e ativos tokenizados."
+ },
+ {
+  "pd": "4.4.3.6",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Alex tomou empréstimo em um protocolo DeFi com criptoativos como garantia. O preço da garantia caiu 40% em um dia, e parte dela foi vendida automaticamente. Ele pergunta a Mateus, profissional CPA, por quê.",
+  "enunciado": "Mateus explica que:",
+  "certa": "o contrato vende a garantia quando ela cai demais.",
+  "erradas": [
+   [
+    "o Banco Central determinou a venda para proteger o sistema.",
+    "Não há atuação do BC em protocolos DeFi."
+   ],
+   [
+    "houve fraude, pois contratos DeFi não podem vender garantias.",
+    "A liquidação automática faz parte das regras do contrato."
+   ],
+   [
+    "o FGC vendeu a garantia para quitar o empréstimo.",
+    "Não há FGC em DeFi."
+   ]
+  ],
+  "gabarito": "Em empréstimos DeFi, o contrato inteligente exige garantia acima do valor emprestado (sobrecolateralização) e monitora a relação entre dívida e garantia. Se a garantia se desvaloriza além do limite, o contrato a liquida automaticamente para cobrir a dívida, com possíveis penalidades. A volatilidade dos criptoativos torna esse risco relevante.",
+  "dica": "DeFi: se a garantia cai demais, o contrato a vende automaticamente."
+ },
+ {
+  "pd": "4.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Uma gestora reduz posições em empresas muito expostas a regras climáticas mais rígidas, temendo que novas exigências reduzam seus lucros. Um cliente pergunta a Lívia, profissional CPA, por que ESG afeta o retorno.",
+  "enunciado": "Lívia explica que:",
+  "certa": "riscos ESG, como novas regras, afetam os lucros.",
+  "erradas": [
+   [
+    "ESG não afeta o valor das empresas, só sua reputação.",
+    "Riscos ESG podem ter efeito financeiro direto."
+   ],
+   [
+    "empresas expostas a regras climáticas têm lucro garantido pelo governo.",
+    "Não há garantia de lucro."
+   ],
+   [
+    "a gestora é obrigada por lei a vender essas empresas.",
+    "A decisão é de gestão, não obrigação legal geral."
+   ]
+  ],
+  "gabarito": "Impactos de ESG na indústria de investimentos: riscos ambientais (físicos e de transição), sociais e de governança podem afetar custos, receitas, multas, acesso a crédito e valor das empresas. Gestores incorporam esses fatores na análise de risco e retorno, ajustando posições, engajando empresas ou excluindo setores, conforme a política.",
+  "dica": "Risco ESG vira risco financeiro (regras, multas, custos)."
+ }
+]

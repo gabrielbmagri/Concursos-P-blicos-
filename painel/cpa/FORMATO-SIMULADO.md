@@ -5,6 +5,8 @@ https://painel-de-metas.web.app/cpa/ (mesmo login do painel de metas).
 
 ## Simulados que já vêm no painel
 
+O painel traz 15 simulados (750 questões), todos no mesmo padrão: 50 questões, blocos 10/20/15/5, 10 em árvore de diálogo e gabarito equilibrado entre A, B, C e D. Os simulados 14 e 15 têm mais cálculo e servem de revisão final.
+
 - Fontes em `dados/cpa/fontes/sNN*.json`. Em cada questão, a alternativa certa fica em `certa` e as três erradas em `erradas`, cada uma com o motivo do erro.
 - `python3 dados/cpa/montar.py` embaralha a posição da resposta certa (A, B, C e D aparecem quase o mesmo número de vezes), confere tudo e grava `painel/cpa/simulados/`. O script recusa:
   - questão sem campo obrigatório;
