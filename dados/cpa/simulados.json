@@ -1,3 +1,12 @@
 {
- "S01": {"titulo": "Simulado 1", "criado": "2026-11-09", "descricao": "Prova completa no formato da CPA: 50 questões, com 10 em árvore de diálogo (previdência do casal Reis, atendimento de Marta e PLD do Sr. Otávio)."}
+ "S01": {
+  "titulo": "Simulado 1",
+  "criado": "2026-11-09",
+  "descricao": "Prova completa no formato da CPA: 50 questões, com 10 em árvore de diálogo (previdência do casal Reis, atendimento de Marta e PLD do Sr. Otávio)."
+ },
+ "S02": {
+  "titulo": "Simulado 2",
+  "criado": "2026-11-09",
+  "descricao": "Árvores de diálogo: Carla e a primeira ação, Dona Célia e o crédito e Família Andrade e o planejamento."
+ }
 }

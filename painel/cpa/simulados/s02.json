@@ -1,0 +1,1078 @@
+{
+"id": "S02",
+"titulo": "Simulado 2",
+"descricao": "Árvores de diálogo: Carla e a primeira ação, Dona Célia e o crédito e Família Andrade e o planejamento.",
+"criado": "2026-11-09",
+"q": [
+{
+"pd": "1.1.2.1.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um banco de médio porte enfrenta saques acima do esperado e, mesmo sendo solvente, fica sem recursos para fechar o caixa do dia. A diretoria recorre ao Banco Central, que concede um empréstimo de curtíssimo prazo com garantia em títulos. Um cliente comenta a notícia com Débora, profissional CPA.",
+"enunciado": "Débora explica que, nesse episódio, o Banco Central atuou na função de:",
+"alt": [
+"gestor das reservas internacionais, ao vender dólares ao banco para recompor seu caixa em moeda nacional.",
+"órgão normativo máximo, ao editar uma resolução que autoriza o banco a suspender os saques temporariamente.",
+"fiscal do mercado de capitais, ao autorizar a venda de ações do banco para cobrir os saques dos clientes.",
+"emprestador de última instância, ao prover liquidez a uma instituição solvente por meio do redesconto."
+],
+"certa": "D",
+"gabarito": "Entre as funções do Banco Central estão: emissor de moeda, banco dos bancos (guarda as reservas e liquida as operações do sistema), executor da política monetária, supervisor do sistema financeiro e emprestador de última instância. Pelo redesconto, o BC empresta a instituições com problema temporário de liquidez, normalmente com garantias, para evitar que um aperto pontual vire crise sistêmica.",
+"porque": {
+"A": "A gestão das reservas envolve moeda estrangeira e política cambial; o socorro de liquidez em reais é o redesconto.",
+"B": "O órgão normativo é o CMN, e não houve suspensão de saques; houve empréstimo de liquidez.",
+"C": "Fiscalizar o mercado de capitais é papel da CVM; o caso descreve empréstimo do BC ao banco."
+},
+"dica": "Redesconto = BC como emprestador de última instância para instituições com falta de liquidez."
+},
+{
+"pd": "1.1.2.1.2",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Pelas redes sociais, um “clube de investimentos” promete retorno fixo de 5% ao mês a quem transferir recursos para a conta de seu organizador, que diz aplicar em ações e criptoativos. Seu Nelson pergunta a Kátia, profissional CPA, se pode confiar e onde verificar a regularidade da oferta.",
+"enunciado": "Kátia orienta corretamente que:",
+"alt": [
+"a oferta é regular, pois clubes de investimento são livres de registro e podem prometer retorno fixo aos participantes.",
+"ele deve consultar a SUSEP, que é o órgão responsável por fiscalizar ofertas de investimento feitas pela internet.",
+"ele deve consultar a Receita Federal, que autoriza e registra as ofertas públicas de investimento coletivo.",
+"a oferta tem sinais de fraude, e Nelson pode consultar a CVM, que regula ofertas públicas de investimento."
+],
+"certa": "D",
+"gabarito": "A CVM regula e fiscaliza o mercado de valores mobiliários: ofertas públicas, companhias abertas, fundos de investimento, intermediários e contratos de investimento coletivo. Ela mantém alertas (stop orders) contra ofertas irregulares. Promessa de retorno alto e fixo em ativos de risco e depósito na conta pessoal do organizador são indícios de fraude, como pirâmide financeira.",
+"porque": {
+"A": "Clubes de investimento seguem regras da CVM e da autorregulação, e prometer retorno fixo em renda variável é sinal clássico de pirâmide.",
+"B": "A SUSEP supervisiona seguros, capitalização e previdência aberta, não ofertas de valores mobiliários.",
+"C": "A Receita Federal cuida de tributos; registro e fiscalização de ofertas públicas cabem à CVM."
+},
+"dica": "Oferta de investimento ao público = CVM. Retorno alto e garantido em ativo de risco = sinal de alerta."
+},
+{
+"pd": "1.1.3.1.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ronaldo, produtor rural, pensa em abrir conta em uma cooperativa de crédito da sua região e pergunta a Elisa, profissional CPA, qual a diferença em relação a um banco e se os depósitos teriam garantia semelhante à do FGC.",
+"enunciado": "Elisa explica corretamente que, na cooperativa de crédito:",
+"alt": [
+"o cliente é apenas correntista, sem participação nos resultados, e os depósitos não têm nenhuma garantia.",
+"os associados são donos, mas os depósitos são garantidos pelo FGC, o mesmo fundo dos bancos comerciais.",
+"os associados são donos da instituição e podem participar das sobras, e os depósitos têm garantia do FGCoop.",
+"a supervisão é feita pela própria cooperativa central, sem participação do Banco Central no sistema."
+],
+"certa": "C",
+"gabarito": "Cooperativas de crédito são instituições financeiras formadas por associados, que são ao mesmo tempo donos (quotas-parte) e usuários. Os resultados positivos (sobras) podem ser distribuídos aos cooperados. São autorizadas e supervisionadas pelo Banco Central. Os depósitos têm garantia do FGCoop, com limites equivalentes aos do FGC. Os bancos cooperativos são bancos comerciais ou múltiplos controlados por cooperativas, que dão acesso a serviços e mercados.",
+"porque": {
+"A": "Na cooperativa, o cooperado é sócio (tem quotas-parte e participa das sobras), e há garantia do FGCoop.",
+"B": "Cooperativas contam com fundo próprio, o FGCoop; o FGC cobre as demais instituições.",
+"D": "Cooperativas de crédito são instituições financeiras autorizadas e supervisionadas pelo Banco Central."
+},
+"dica": "Cooperativa: cooperado é dono e participa das sobras; supervisão do BC; garantia do FGCoop."
+},
+{
+"pd": "1.1.3.1.3",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Aline mantém o salário em uma carteira digital de uma instituição de pagamento e lê que esse tipo de conta não é coberto pelo FGC. Preocupada, pergunta a Wagner, profissional CPA, o que protege seu saldo.",
+"enunciado": "Wagner explica corretamente que:",
+"alt": [
+"o saldo é coberto pelo FGC até R$ 250 mil, como os depósitos à vista dos bancos comerciais.",
+"o saldo integra o patrimônio da instituição de pagamento e pode ser emprestado a terceiros livremente.",
+"o saldo é garantido pelo Tesouro Nacional, que cobre perdas em caso de falência da instituição.",
+"o saldo é patrimônio separado da instituição, aplicado em títulos públicos ou mantido no Banco Central."
+],
+"certa": "D",
+"gabarito": "Instituições de pagamento (Lei 12.865/2013) oferecem contas de pagamento, carteiras digitais, emissão de cartões e credenciamento. Não são bancos: não concedem empréstimos com recursos dos clientes nem têm FGC. Em compensação, os recursos mantidos em contas de pagamento constituem patrimônio separado, que não se confunde com o da instituição, e devem ser aplicados em títulos públicos federais ou mantidos no Banco Central.",
+"porque": {
+"A": "Contas de pagamento não são depósitos bancários e não têm cobertura do FGC.",
+"B": "Instituições de pagamento não podem emprestar os recursos dos clientes; eles formam patrimônio separado.",
+"C": "Não há garantia do Tesouro; a proteção vem da segregação e da aplicação obrigatória em títulos públicos ou no BC."
+},
+"dica": "Conta de pagamento: sem FGC, mas o dinheiro é patrimônio separado, aplicado em títulos públicos ou no BC."
+},
+{
+"pd": "1.2.5.4",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Após uma forte alta do dólar em poucos dias, o Banco Central anuncia leilões de swap cambial. Um cliente importador pergunta a Saulo, profissional CPA, o que isso significa e se o BC estaria fixando o câmbio.",
+"enunciado": "Saulo explica corretamente que o swap cambial:",
+"alt": [
+"fixa a taxa de câmbio em um valor determinado pelo Banco Central, encerrando o regime de câmbio flutuante.",
+"consiste na venda de dólares das reservas internacionais diretamente aos importadores, a preço subsidiado.",
+"eleva a taxa Selic automaticamente, atraindo capital estrangeiro e valorizando o real sem intervenção cambial.",
+"oferece proteção contra a alta do dólar sem venda de moeda física e reduz a volatilidade do câmbio flutuante."
+],
+"certa": "D",
+"gabarito": "O regime brasileiro é de câmbio flutuante, com intervenções pontuais do BC para conter excesso de volatilidade (o chamado flutuante sujo). No swap cambial tradicional, o BC paga ao mercado a variação do dólar mais o cupom cambial e recebe a taxa DI, o que equivale a vender dólar no mercado futuro. Assim oferece proteção (hedge) sem usar as reservas internacionais. O swap reverso tem efeito contrário.",
+"porque": {
+"A": "O Brasil adota câmbio flutuante; o swap suaviza a volatilidade, mas não fixa a cotação.",
+"B": "Na venda de reservas há entrega de moeda física; o swap é um derivativo liquidado em reais.",
+"C": "A Selic é decidida pelo Copom; o swap é instrumento cambial e não altera a Selic."
+},
+"dica": "Swap cambial: hedge contra a alta do dólar sem entregar moeda física. Câmbio continua flutuante."
+},
+{
+"pd": "1.2.6.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Em uma aula de educação financeira, Bruno, profissional CPA, explica como se mede o tamanho da economia. Um participante pergunta quais componentes entram no cálculo do PIB pela ótica da demanda.",
+"enunciado": "Bruno responde que, pela ótica da demanda, o PIB é a soma de:",
+"alt": [
+"consumo das famílias, poupança, arrecadação de impostos e importações, somadas às exportações.",
+"salários, lucros, aluguéis e juros pagos na economia, descontados os impostos indiretos.",
+"produção da agropecuária, da indústria e dos serviços, medida pelo valor bruto de vendas.",
+"consumo das famílias, investimentos, gastos do governo e exportações menos importações."
+],
+"certa": "D",
+"gabarito": "O PIB mede o valor dos bens e serviços finais produzidos no país em um período. Pela ótica da demanda: PIB = C + I + G + (X − M), isto é, consumo das famílias, investimento (formação bruta de capital), gastos do governo e exportações líquidas. Pela ótica da oferta, soma-se o valor adicionado de agropecuária, indústria e serviços. Pela ótica da renda, somam-se salários, lucros, juros e aluguéis.",
+"porque": {
+"A": "Poupança e arrecadação não são componentes da demanda, e as importações entram subtraídas.",
+"B": "Essa é a ótica da renda (remuneração dos fatores), e não a da demanda.",
+"C": "A soma por setores é a ótica da oferta, e usa o valor adicionado, não o valor bruto das vendas."
+},
+"dica": "PIB (demanda) = C + I + G + (X − M)."
+},
+{
+"pd": "1.3.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Tânia compara um CDB que paga 1% ao mês com outro que paga 12,5% ao ano, ambos com capitalização composta e mesmo prazo. Ela acha que 1% ao mês é igual a 12% ao ano e pede ajuda a Fábio, profissional CPA.",
+"enunciado": "Fábio explica que a taxa anual equivalente a 1% ao mês é de aproximadamente:",
+"alt": [
+"12,00% ao ano, o que torna o CDB de 12,5% ao ano a melhor opção.",
+"12,68% ao ano, o que torna o CDB de 1% ao mês ligeiramente melhor que o de 12,5% ao ano.",
+"13,50% ao ano, pois a capitalização mensal acrescenta 1,5 ponto percentual por ano.",
+"11,36% ao ano, pois a taxa equivalente anual é sempre menor que a soma das taxas mensais."
+],
+"certa": "B",
+"gabarito": "Taxas equivalentes produzem o mesmo montante no mesmo prazo, em juros compostos: (1 + i_anual) = (1 + i_mensal)^12. Logo, 1,01^12 = 1,1268, ou seja, 12,68% ao ano, acima de 12,5%. Taxas proporcionais (12% = 1% × 12) só valem em juros simples. Para converter de anual para mensal: (1 + i_anual)^(1/12) − 1.",
+"porque": {
+"A": "12% é a taxa proporcional (juros simples). Em capitalização composta, 1% ao mês equivale a 1,01^12 − 1 = 12,68% ao ano.",
+"C": "A conta correta é 1,01^12 − 1 = 12,68%, e não uma soma fixa de pontos.",
+"D": "Em juros compostos a taxa anual equivalente é maior que a soma simples das mensais, por causa dos juros sobre juros."
+},
+"dica": "Equivalente (composto): (1 + i)^n. Proporcional (simples): i × n."
+},
+{
+"pd": "1.3.7",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Gilberto vai financiar um imóvel e recebeu duas simulações: uma pelo SAC e outra pela Tabela Price, com a mesma taxa e o mesmo prazo. Ele quer parcelas que caibam no orçamento hoje, mas também quer pagar menos juros no total. Pergunta a Lorena, profissional CPA, a diferença entre os sistemas.",
+"enunciado": "Lorena explica corretamente que:",
+"alt": [
+"no SAC as parcelas são fixas e a amortização cresce, enquanto na Price a amortização é constante e as parcelas caem.",
+"os dois sistemas geram o mesmo total de juros, pois a taxa e o prazo são iguais, mudando só a data das parcelas.",
+"no SAC a amortização é constante e as parcelas caem, com menos juros no total; na Price as parcelas são fixas.",
+"na Price a primeira parcela é maior que no SAC, compensada por um total de juros menor ao fim do contrato."
+],
+"certa": "C",
+"gabarito": "SAC (Sistema de Amortização Constante): a amortização é igual em todas as parcelas; como os juros incidem sobre um saldo que cai rápido, as parcelas são decrescentes, a primeira é a maior e o total de juros é menor. Tabela Price (sistema francês): parcelas iguais; no início a maior parte é juros e a amortização cresce com o tempo, o que resulta em mais juros no total. A Price facilita o orçamento inicial; o SAC reduz o custo total.",
+"porque": {
+"A": "Inverte os sistemas: SAC tem amortização constante; Price tem parcela constante.",
+"B": "Com a mesma taxa, o SAC amortiza mais rápido no início e por isso paga menos juros no total.",
+"D": "Ocorre o oposto: a primeira parcela do SAC é a maior, e a Price acumula mais juros."
+},
+"dica": "SAC: amortização constante, parcela cai, menos juros. Price: parcela fixa, mais juros no total."
+},
+{
+"pd": "1.4.1.2.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao abrir conta em uma corretora para comprar títulos do Tesouro Direto e debêntures, Sérgio pergunta a Lúcia, profissional CPA, onde esses ativos ficam registrados e quem garante que estão em seu nome.",
+"enunciado": "Lúcia explica corretamente que:",
+"alt": [
+"todos os ativos ficam registrados apenas no sistema interno da corretora, que é responsável única pela custódia.",
+"os títulos públicos ficam custodiados na B3 e as debêntures no Selic, sistema administrado pela CVM.",
+"os títulos públicos ficam no Selic, do Banco Central, e as debêntures na B3, como depositária central.",
+"os dois ativos ficam registrados na Receita Federal, que confirma a titularidade na declaração de IR."
+],
+"certa": "C",
+"gabarito": "O Selic (Sistema Especial de Liquidação e de Custódia) é administrado pelo Banco Central e opera com os títulos públicos federais: registro, custódia e liquidação. A B3 atua como depositária central e contraparte central de ativos privados (ações, debêntures, CRI, CRA, CDB etc.) e também participa da custódia do Tesouro Direto. Os registros individualizados permitem ao investidor conferir a titularidade (por exemplo, pela Área do Investidor da B3).",
+"porque": {
+"A": "A corretora é agente de custódia, mas a titularidade fica registrada em depositária central (B3) ou no Selic.",
+"B": "O Selic é do Banco Central e registra os títulos públicos federais; ativos privados ficam na B3.",
+"D": "A Receita não custodia ativos; a declaração de IR não substitui o registro em depositária."
+},
+"dica": "Selic (BC) = títulos públicos federais. B3 = depositária e contraparte central dos ativos privados."
+},
+{
+"pd": "1.4.12.1.3.3",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Mônica prepara um material para divulgar um fundo de renda fixa nas redes da instituição e quer destacar apenas a rentabilidade do último mês, que foi excepcional. Ela consulta Henrique, profissional CPA, sobre as regras de publicidade do Código Anbima de Distribuição.",
+"enunciado": "Henrique orienta corretamente que o material:",
+"alt": [
+"deve ser claro, informar o período da rentabilidade e avisar que rentabilidade passada não garante a futura.",
+"pode mostrar só o melhor mês, desde que seja verdadeiro, pois o Código veda apenas informações falsas.",
+"dispensa avisos de risco por se tratar de fundo de renda fixa, que é considerado de baixo risco pela regulação.",
+"só pode ser divulgado após aprovação prévia da CVM, que analisa cada peça publicitária antes da veiculação."
+],
+"certa": "A",
+"gabarito": "O Código Anbima de Distribuição exige que materiais publicitários e técnicos busquem a transparência, sejam claros, não enganosos e coerentes com o produto. Ao divulgar rentabilidade, deve-se informar o período, comparar com indicador adequado quando houver, e incluir avisos como “rentabilidade obtida no passado não representa garantia de resultados futuros” e “a rentabilidade divulgada não é líquida de impostos”. Também se recomenda ao investidor ler os documentos do produto antes de investir.",
+"porque": {
+"B": "Destacar só um período favorável pode induzir a erro; o Código exige informação completa e não enganosa.",
+"C": "Os avisos obrigatórios valem para qualquer produto, inclusive de renda fixa.",
+"D": "Não há aprovação prévia da CVM para cada peça; a responsabilidade é da instituição, que segue as regras do Código."
+},
+"dica": "Publicidade: clara, sem destacar só o melhor período, com o aviso de que rentabilidade passada não garante a futura."
+},
+{
+"pd": "2.1.1.1.1.4",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Juliana quer começar no Tesouro Direto e pergunta a Caio, profissional CPA, se precisa esperar o vencimento para ter o dinheiro de volta e como faz para aplicar.",
+"enunciado": "Caio explica corretamente que:",
+"alt": [
+"ela aplica direto no Banco Central e só pode resgatar no vencimento, salvo autorização especial do Tesouro.",
+"ela aplica pela instituição habilitada e, se vender antes do vencimento, recebe sempre a rentabilidade contratada.",
+"ela aplica por uma instituição habilitada e pode vender a qualquer dia útil ao próprio Tesouro, pelo preço de mercado do dia.",
+"ela precisa encontrar outro investidor interessado no mercado secundário, pois o Tesouro não recompra títulos."
+],
+"certa": "C",
+"gabarito": "O Tesouro Direto é o programa do Tesouro Nacional, em parceria com a B3, para pessoas físicas comprarem títulos públicos pela internet, por meio de instituições habilitadas (bancos e corretoras). O Tesouro garante liquidez diária: o investidor pode vender os títulos em qualquer dia útil, mas pelo preço de mercado (marcação a mercado), e não pela rentabilidade contratada. Há taxa de custódia da B3 e a instituição pode cobrar taxa própria.",
+"porque": {
+"A": "O acesso é por instituição financeira habilitada, e o Tesouro recompra os títulos diariamente.",
+"B": "Antes do vencimento vale o preço de mercado, que pode ser maior ou menor que o da taxa contratada.",
+"D": "No Tesouro Direto, o próprio Tesouro garante a recompra diária."
+},
+"dica": "Tesouro Direto: liquidez diária garantida pelo Tesouro, mas pelo preço de mercado."
+},
+{
+"pd": "2.1.1.1.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Ivone, 40 anos, quer complementar a aposentadoria com uma renda mensal a partir dos 65 anos, protegida da inflação e paga durante 20 anos. Ela também quer guardar para a faculdade do filho de 6 anos, com pagamentos mensais durante 5 anos. Pede sugestões a Roberto, profissional CPA.",
+"enunciado": "Roberto indica, respectivamente:",
+"alt": [
+"Tesouro Educa+ para a aposentadoria e Tesouro Renda+ para a faculdade do filho.",
+"Tesouro Renda+ para a aposentadoria e Tesouro Educa+ para a faculdade do filho.",
+"Tesouro Selic para os dois objetivos, pois é o único título que paga renda mensal.",
+"Tesouro Prefixado com Juros Semestrais para os dois, pois garante renda corrigida pela inflação."
+],
+"certa": "B",
+"gabarito": "Tesouro Renda+ (Aposentadoria Extra): acumula até a data de conversão e depois paga 240 parcelas mensais (20 anos), corrigidas pelo IPCA. Tesouro Educa+: paga 60 parcelas mensais (5 anos), também corrigidas pelo IPCA, pensado para custear estudos. Ambos são atrelados à inflação e, como títulos longos, oscilam de preço se vendidos antes.",
+"porque": {
+"A": "Inverte os títulos: o Renda+ paga 240 parcelas (20 anos) na aposentadoria; o Educa+ paga 60 parcelas (5 anos) para estudos.",
+"C": "O Tesouro Selic não paga renda mensal; o Renda+ e o Educa+ foram criados para isso.",
+"D": "Prefixados não são corrigidos pela inflação e pagam cupons semestrais, não renda mensal."
+},
+"dica": "Renda+ = 240 parcelas (aposentadoria). Educa+ = 60 parcelas (estudos). Ambos atrelados ao IPCA."
+},
+{
+"pd": "2.1.1.1.3.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Pedro recebeu duas ofertas: um RDB de uma financeira e um RDC de uma cooperativa de crédito. Ele quer saber se pode vender esses títulos a outro investidor antes do vencimento e se há garantia. Pergunta a Mirela, profissional CPA.",
+"enunciado": "Mirela explica corretamente que:",
+"alt": [
+"os dois podem ser negociados livremente no mercado secundário, como o CDB, e só o RDB tem garantia.",
+"RDB e RDC não podem ser transferidos a terceiros; o RDB tem garantia do FGC e o RDC, do FGCoop.",
+"os dois são isentos de IR para pessoa física, por serem emitidos por instituições de menor porte.",
+"o RDC é garantido pelo FGC e o RDB não tem garantia, pois é emitido por instituição não bancária."
+],
+"certa": "B",
+"gabarito": "O RDB (Recibo de Depósito Bancário) é um título de captação semelhante ao CDB, mas intransferível: não pode ser negociado no mercado secundário. O RDC (Recibo de Depósito Cooperativo) é seu equivalente nas cooperativas de crédito. Ambos seguem a tabela regressiva de IR e o IOF regressivo. Garantias: RDB pelo FGC; RDC pelo FGCoop.",
+"porque": {
+"A": "RDB e RDC são intransferíveis, e o RDC também tem garantia, pelo FGCoop.",
+"C": "RDB e RDC seguem a tabela regressiva de IR da renda fixa.",
+"D": "O RDB tem FGC; o RDC, emitido por cooperativa, tem FGCoop."
+},
+"dica": "RDB e RDC: intransferíveis. RDB → FGC; RDC → FGCoop."
+},
+{
+"pd": "2.1.1.1.3.4",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Seu Arnaldo quer entender por que a LCA do seu banco é isenta de imposto e para onde vai o dinheiro aplicado. Ele também pergunta se ela é igual à LCI. Patrícia, profissional CPA, o atende.",
+"enunciado": "Patrícia explica corretamente que a LCA:",
+"alt": [
+"tem lastro no agronegócio, e a LCI, no setor imobiliário; ambas são isentas para pessoa física e têm FGC.",
+"é lastreada em créditos imobiliários e isenta de IR para qualquer investidor, inclusive pessoa jurídica.",
+"é emitida por empresas do agronegócio, sem participação de banco, e por isso não tem garantia do FGC.",
+"é idêntica à LCI, mudando só o nome comercial dado por cada banco ao mesmo produto."
+],
+"certa": "A",
+"gabarito": "LCI (Letra de Crédito Imobiliário) e LCA (Letra de Crédito do Agronegócio) são títulos emitidos por instituições financeiras e lastreados, respectivamente, em créditos imobiliários e do agronegócio. Para pessoa física, os rendimentos são isentos de IR. Têm garantia do FGC (até R$ 250 mil por CPF por conglomerado). O CMN fixa prazos mínimos de carência, por isso não têm liquidez imediata.",
+"porque": {
+"B": "O lastro da LCA é o agronegócio, e a isenção vale para pessoa física, não para pessoa jurídica.",
+"C": "A LCA é emitida por instituição financeira e tem FGC; quem emite título do agronegócio sem banco é a securitizadora (CRA).",
+"D": "LCA e LCI diferem no lastro: agronegócio na LCA e créditos imobiliários na LCI."
+},
+"dica": "LCI = lastro imobiliário. LCA = lastro agro. Emitidas por bancos, isentas para pessoa física e com FGC."
+},
+{
+"pd": "2.1.1.1.5",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Felipe vê um CRI com taxa acima da LCI de seu banco e pergunta a Carolina, profissional CPA, se são produtos equivalentes, já que ambos são isentos e ligados ao setor imobiliário.",
+"enunciado": "Carolina explica corretamente que o CRI:",
+"alt": [
+"é emitido pelo próprio banco, como a LCI, e conta com a garantia do FGC até R$ 250 mil por CPF.",
+"tem taxa maior porque é garantido pelo Tesouro Nacional, o que reduz seu risco abaixo do da LCI.",
+"é tributado pela tabela regressiva de IR para pessoa física, enquanto a LCI é isenta.",
+"é emitido por securitizadora, com lastro em recebíveis imobiliários e sem garantia do FGC."
+],
+"certa": "D",
+"gabarito": "Securitização é transformar recebíveis (aluguéis, financiamentos imobiliários, créditos do agronegócio) em títulos negociáveis. O CRI é emitido por companhia securitizadora com lastro em créditos imobiliários; o CRA, com lastro em créditos do agronegócio. Para pessoa física, rendimentos isentos de IR. Não têm FGC: o risco é o dos devedores do lastro e das garantias, protegido pelo regime fiduciário (patrimônio separado da securitizadora).",
+"porque": {
+"A": "O CRI é emitido por securitizadora, não por banco, e não tem FGC.",
+"B": "Não há garantia do Tesouro; a taxa maior compensa o risco de crédito maior e a ausência de FGC.",
+"C": "O CRI também é isento de IR para pessoa física."
+},
+"dica": "CRI/CRA: securitizadora, sem FGC, isentos para pessoa física, risco do lastro."
+},
+{
+"pd": "2.1.1.1.7",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Ao comparar duas debêntures de mesmo prazo, Lívia vê que uma tem rating AAA e paga IPCA + 6% ao ano, e a outra tem rating BB e paga IPCA + 9% ao ano. Ela pergunta a Diego, profissional CPA, o que explica a diferença.",
+"enunciado": "Diego explica que:",
+"alt": [
+"a debênture AAA paga menos porque tem garantia do FGC, que é dada apenas aos melhores ratings.",
+"o rating mede a rentabilidade esperada, e BB indica que a debênture vai render mais que a AAA.",
+"a debênture BB tem maior risco de crédito, por isso precisa pagar mais para atrair investidores.",
+"as duas têm o mesmo risco, pois o rating é exigido apenas para fins de registro na CVM."
+],
+"certa": "C",
+"gabarito": "Rating é a nota dada por agências de classificação de risco à capacidade de um emissor honrar suas dívidas. Escalas típicas: AAA (risco mínimo) até D (inadimplência). De AAA a BBB− é grau de investimento; de BB+ para baixo, grau especulativo. Quanto pior o rating, maior o prêmio exigido pelos investidores. O rating é uma opinião, não uma garantia, e pode mudar.",
+"porque": {
+"A": "Debêntures não têm FGC em nenhum rating; o rating avalia o risco de crédito do emissor.",
+"B": "O rating mede a capacidade de pagamento do emissor, não a rentabilidade.",
+"D": "Os ratings indicam riscos de crédito bem diferentes: AAA é o mais alto e BB fica abaixo do grau de investimento."
+},
+"dica": "Rating pior = maior risco de crédito = taxa maior. BBB− é o último degrau do grau de investimento."
+},
+{
+"pd": "2.1.1.1.10",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um empresário que obteve financiamento do BNDES para comprar máquinas pergunta a Ricardo, profissional CPA, o que é a TLP, que aparece no contrato como taxa de referência.",
+"enunciado": "Ricardo explica que a TLP:",
+"alt": [
+"é igual à taxa Selic definida pelo Copom, aplicada a todos os financiamentos de longo prazo do país.",
+"é a taxa usada para corrigir a poupança e o FGTS, calculada a partir dos CDBs dos grandes bancos.",
+"é uma taxa fixa definida anualmente pelo CMN, sem relação com a inflação ou com o mercado.",
+"é a taxa dos financiamentos do BNDES, formada pelo IPCA mais uma taxa de juro real de mercado."
+],
+"certa": "D",
+"gabarito": "A TLP (Taxa de Longo Prazo), criada em 2017 para substituir a TJLP, remunera os financiamentos do BNDES. É formada pelo IPCA mais uma parcela de juro real baseada na NTN-B de 5 anos, aproximando o custo do crédito subsidiado das taxas de mercado. A TR, por sua vez, é usada na poupança, no FGTS e em financiamentos habitacionais.",
+"porque": {
+"A": "A TLP é própria dos contratos do BNDES e combina IPCA mais juro real; não é a Selic.",
+"B": "Esta descrição é da TR, que corrige poupança e FGTS, e não da TLP.",
+"C": "A TLP substituiu a antiga TJLP justamente para refletir taxas de mercado (IPCA mais juro real)."
+},
+"dica": "TLP = BNDES (IPCA + juro real). TR = poupança, FGTS e financiamento habitacional."
+},
+{
+"pd": "2.1.1.1.11",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Marcos aplicou R$ 20.000 em um CDB prefixado e precisou resgatar após 200 dias, com rendimento bruto de R$ 800. Pergunta a Sônia, profissional CPA, quanto receberá líquido.",
+"enunciado": "Sônia calcula que Marcos receberá, líquido de IR:",
+"alt": [
+"R$ 20.640,00, pois o IR de 20% incide sobre os R$ 800 de rendimento.",
+"R$ 20.620,00, pois o IR de 22,5% incide sobre os R$ 800 de rendimento.",
+"R$ 20.680,00, pois o IR de 15% incide sobre os R$ 800 de rendimento.",
+"R$ 16.640,00, pois o IR de 20% incide sobre o valor total resgatado."
+],
+"certa": "A",
+"gabarito": "Pela tabela regressiva, 200 dias está na faixa de 181 a 360 dias, com alíquota de 20%. IR = 20% × R$ 800 = R$ 160. Valor líquido = 20.000 + 800 − 160 = R$ 20.640. Como o prazo passa de 30 dias, não há IOF.",
+"porque": {
+"B": "22,5% vale para até 180 dias. Com 200 dias, a faixa é de 181 a 360 dias: 20%.",
+"C": "15% vale apenas acima de 720 dias.",
+"D": "O IR incide só sobre o rendimento, nunca sobre o capital aplicado."
+},
+"dica": "Tabela: até 180 dias 22,5%; até 360 dias 20%; até 720 dias 17,5%; acima, 15%. Incide sobre o rendimento."
+},
+{
+"pd": "2.1.1.2.2.1.6",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Carla, cliente de perfil arrojado, quer participar do IPO de uma empresa de varejo. Ela pergunta a Wellington, profissional CPA, para onde vai o dinheiro e qual a diferença em relação a comprar ações na bolsa no dia a dia.",
+"enunciado": "Wellington explica corretamente que, em uma oferta primária no IPO:",
+"alt": [
+"os recursos vão para o caixa da empresa; no secundário, as ações trocam de mãos entre investidores.",
+"os recursos vão para os acionistas atuais, enquanto no mercado secundário o dinheiro vai para a empresa.",
+"os recursos ficam retidos na B3 até a empresa comprovar o uso, enquanto no secundário vão para a CVM.",
+"os recursos vão para o banco coordenador, que garante o preço da ação por um ano após a listagem."
+],
+"certa": "A",
+"gabarito": "IPO (oferta pública inicial) é a primeira venda de ações ao público. Na oferta primária, a empresa emite novas ações e os recursos vão para o seu caixa (capitalização). Na oferta secundária, os acionistas atuais vendem suas ações e o dinheiro vai para eles. Depois da listagem, as negociações em bolsa são no mercado secundário. Follow-on é uma nova oferta de empresa que já é listada.",
+"porque": {
+"B": "Inverte os mercados: na oferta primária o dinheiro capta para a empresa; no secundário, troca de mãos entre investidores.",
+"C": "A B3 e a CVM não retêm os recursos da oferta; eles financiam a companhia.",
+"D": "O coordenador estrutura e distribui a oferta, mas não fica com os recursos nem garante o preço por um ano."
+},
+"dica": "Mercado primário: dinheiro para a empresa. Secundário: entre investidores. Follow-on: nova oferta de empresa já listada.",
+"caso": "Árvore de diálogo: Carla e a primeira ação",
+"etapa": "1/3"
+},
+{
+"pd": "2.1.1.2.2.2.6",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Meses depois do IPO, as ações de Carla caíram para R$ 0,80. A empresa anuncia um grupamento na proporção de 10 para 1. Carla tem 5.000 ações e teme perder dinheiro com a operação.",
+"enunciado": "Wellington explica que, após o grupamento, Carla terá:",
+"alt": [
+"50.000 ações cotadas a R$ 0,08, mantendo o mesmo valor investido.",
+"500 ações a cerca de R$ 8,00, com o mesmo valor investido e a mesma participação.",
+"500 ações cotadas a R$ 0,80, com perda de 90% do valor investido.",
+"5.000 ações cotadas a R$ 8,00, multiplicando por dez o seu patrimônio."
+],
+"certa": "B",
+"gabarito": "Grupamento (inplit) junta várias ações em uma: com 10 para 1, cada 10 ações viram 1, e o preço é multiplicado por 10. Desdobramento (split) é o contrário: multiplica a quantidade e divide o preço. Em ambos, o valor total investido e a participação do acionista ficam iguais (desconsiderando oscilações de mercado). Empresas grupam ações de preço muito baixo para melhorar a negociação e cumprir regras da bolsa.",
+"porque": {
+"A": "Essa seria a conta de um desdobramento de 1 para 10. No grupamento, a quantidade diminui.",
+"C": "O preço é ajustado na mesma proporção (×10); não há perda de valor pelo grupamento.",
+"D": "O grupamento não cria valor: reduz a quantidade e eleva o preço na mesma proporção."
+},
+"dica": "Grupamento: menos ações, preço maior. Desdobramento: mais ações, preço menor. Valor total igual.",
+"caso": "Árvore de diálogo: Carla e a primeira ação",
+"etapa": "2/3"
+},
+{
+"pd": "2.1.1.3.3",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Animada, Carla passou a fazer day trade. Em março teve prejuízo de R$ 2.000 em day trade; em abril teve lucro de R$ 1.500 em operações comuns e lucro de R$ 3.000 em day trade. Ela pergunta como compensar o prejuízo.",
+"enunciado": "Wellington explica corretamente que o prejuízo de março:",
+"alt": [
+"pode ser compensado apenas com lucros de day trade, reduzindo a base de abril para R$ 1.000, tributada em 20%.",
+"pode ser compensado com qualquer lucro em ações, zerando primeiro o lucro das operações comuns de abril.",
+"não pode ser compensado, pois prejuízos em renda variável são perdidos ao fim de cada mês.",
+"pode ser compensado com lucros de day trade, mas a base de R$ 1.000 é tributada em 15%, como nas operações comuns."
+],
+"certa": "A",
+"gabarito": "Na renda variável, prejuízos podem ser compensados com lucros futuros da mesma modalidade, sem prazo: prejuízo de day trade com lucro de day trade e prejuízo de operação comum com lucro de operação comum. No caso: 3.000 − 2.000 = R$ 1.000 de base em day trade, com IR de 20% (R$ 200), descontado o IRRF de 1% já retido. É preciso registrar os prejuízos para compensá-los.",
+"porque": {
+"B": "Prejuízos de day trade só compensam lucros de day trade.",
+"C": "Prejuízos podem ser acumulados e compensados em meses seguintes, dentro da mesma modalidade.",
+"D": "A alíquota do day trade é sempre de 20%."
+},
+"dica": "Compensação: só na mesma modalidade (day trade com day trade, operação comum com operação comum).",
+"caso": "Árvore de diálogo: Carla e a primeira ação",
+"etapa": "3/3"
+},
+{
+"pd": "2.1.1.2.3.1.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao analisar empresas, Daniel percebe que algumas estão listadas no Novo Mercado da B3 e outras no segmento básico. Ele pergunta a Rita, profissional CPA, o que o Novo Mercado exige.",
+"enunciado": "Rita explica que, entre as exigências do Novo Mercado, está:",
+"alt": [
+"ter ao menos metade do capital em ações preferenciais, que garantem dividendos mínimos aos minoritários.",
+"ter capital composto apenas por ações ordinárias e garantir tag along de 100% aos acionistas minoritários.",
+"garantir tag along de 80% apenas aos acionistas preferencialistas, como prevê a Lei das S.A.",
+"dispensar o conselho de administração, para dar mais agilidade às decisões da diretoria."
+],
+"certa": "B",
+"gabarito": "Os segmentos especiais de listagem da B3 (Bovespa Mais, Nível 1, Nível 2 e Novo Mercado) impõem regras de governança além da lei. O Novo Mercado é o mais exigente: só ações ON, tag along de 100%, conselho de administração com membros independentes, percentual mínimo de ações em circulação (free float) e maior transparência. Tag along é o direito do minoritário de vender suas ações nas mesmas condições do controlador em caso de troca de controle.",
+"porque": {
+"A": "O Novo Mercado admite apenas ações ordinárias (com direito a voto).",
+"C": "O Novo Mercado exige tag along de 100% para todas as ações; os 80% são o mínimo legal para ações ordinárias.",
+"D": "O Novo Mercado exige conselho de administração, com conselheiros independentes."
+},
+"dica": "Novo Mercado: só ON + tag along de 100% + conselheiros independentes + free float mínimo."
+},
+{
+"pd": "2.1.2.2.19.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente pergunta a Joaquim, profissional CPA, quem são os responsáveis por um fundo de investimento depois da Resolução CVM 175, pois leu que existem “prestadores de serviços essenciais”.",
+"enunciado": "Joaquim explica corretamente que os prestadores de serviços essenciais são:",
+"alt": [
+"o distribuidor e o custodiante, que respondem pela venda das cotas e pela guarda dos ativos.",
+"o administrador fiduciário e o gestor de recursos, que dividem as responsabilidades pelo fundo.",
+"o auditor independente e a CVM, que aprovam o regulamento e fiscalizam a carteira diariamente.",
+"o gestor e o cotista majoritário, que decidem juntos a política de investimento do fundo."
+],
+"certa": "B",
+"gabarito": "A Resolução CVM 175 define como prestadores de serviços essenciais o administrador fiduciário (responsável pela estrutura do fundo, controladoria, registro de cotas e relacionamento com a CVM) e o gestor de recursos (responsável pela gestão da carteira, decisões de investimento e negociação dos ativos). Eles podem contratar outros prestadores, como custodiante, distribuidor e auditor. A responsabilidade passou a ser dividida conforme as atribuições de cada um.",
+"porque": {
+"A": "Distribuidor e custodiante são prestadores contratados, mas não são os essenciais pela CVM 175.",
+"C": "O auditor é contratado, e a CVM é o regulador, não prestador de serviço do fundo.",
+"D": "Cotistas não são prestadores de serviço; decidem em assembleia sobre temas previstos."
+},
+"dica": "CVM 175: prestadores essenciais = administrador + gestor."
+},
+{
+"pd": "2.1.2.2.20",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Um fundo multimercado cobra taxa de performance de 20% sobre o que exceder 100% do CDI, com linha d’água. No primeiro semestre, a cota caiu e ficou abaixo do último valor sobre o qual houve cobrança. No segundo semestre, a cota subiu, mas não voltou a esse patamar. Um cliente pergunta a Natália, profissional CPA, se pagará performance.",
+"enunciado": "Natália explica corretamente que:",
+"alt": [
+"não haverá cobrança, pois pela linha d’água a cota precisa superar o valor da última cobrança.",
+"haverá cobrança sobre toda a alta do segundo semestre, pois a performance é calculada só no período em que houve valorização.",
+"haverá cobrança de 20% sobre o rendimento total do ano, independentemente do desempenho em relação ao CDI.",
+"a taxa de performance é substituída pela taxa de administração nos semestres em que o fundo perde para o CDI."
+],
+"certa": "A",
+"gabarito": "Taxa de performance: percentual cobrado sobre a rentabilidade que exceder um índice de referência (benchmark) compatível com a política do fundo, em períodos definidos no regulamento (em geral semestrais). Pela regra da linha d’água (high water mark), só há cobrança se o valor da cota superar o da última cobrança, o que impede pagar duas vezes pela mesma valorização. A taxa de administração é cobrada diariamente sobre o patrimônio, independentemente do resultado.",
+"porque": {
+"B": "A linha d’água impede a cobrança enquanto a cota não recuperar o valor da última cobrança.",
+"C": "A performance incide só sobre o que exceder o índice de referência, e não sobre todo o rendimento.",
+"D": "As taxas são independentes; não há substituição de uma pela outra."
+},
+"dica": "Performance: só sobre o que exceder o benchmark e acima da linha d’água (último pico com cobrança)."
+},
+{
+"pd": "2.1.4.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Luiz recebe R$ 900 por mês de rendimentos de um FII com mais de 5 mil cotistas, negociado na B3, do qual detém menos de 1% das cotas. Ele vendeu parte das cotas com lucro de R$ 2.000 e pergunta a Regina, profissional CPA, como é a tributação.",
+"enunciado": "Regina orienta corretamente que:",
+"alt": [
+"os rendimentos e o lucro na venda são isentos, pois o fundo atende às regras de isenção para pessoa física.",
+"os rendimentos mensais são isentos para ele, mas o lucro na venda paga 20%, sem isenção de R$ 20 mil.",
+"os rendimentos pagam 15% na fonte e o lucro na venda é isento, por estar abaixo de R$ 20 mil no mês.",
+"os rendimentos e o lucro seguem a tabela regressiva da renda fixa, conforme o prazo de permanência."
+],
+"certa": "B",
+"gabarito": "FIIs são fundos fechados cujas cotas são negociadas em bolsa. Rendimentos distribuídos são isentos de IR para pessoa física quando o fundo tem pelo menos 100 cotistas, as cotas são negociadas exclusivamente em bolsa ou balcão organizado e o investidor tem menos de 10% das cotas (regras atualizadas pela Lei 14.754/2023). O ganho de capital na venda das cotas é tributado em 20%, por DARF, sem a isenção de R$ 20 mil das ações.",
+"porque": {
+"A": "A isenção vale apenas para os rendimentos distribuídos; o ganho de capital na venda é tributado em 20%.",
+"C": "Os rendimentos são isentos nas condições do caso, e a isenção de R$ 20 mil vale só para ações.",
+"D": "FII tem regras próprias: rendimentos isentos (com requisitos) e ganho de capital de 20%."
+},
+"dica": "FII: rendimento isento (com requisitos), ganho na venda 20%, sem isenção de R$ 20 mil."
+},
+{
+"pd": "2.1.4.5",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Ivo quer investir em FIIs e está entre um fundo que possui galpões logísticos alugados a várias empresas e outro que investe em CRIs. Ele pede a Juliana, profissional CPA, os principais riscos de cada um.",
+"enunciado": "Juliana explica corretamente que:",
+"alt": [
+"o de tijolo está mais exposto a vacância e inquilinos, e o de papel, ao crédito dos devedores dos CRIs.",
+"o fundo de papel está mais exposto à vacância, pois os CRIs dependem da ocupação dos imóveis do próprio fundo.",
+"os dois fundos têm risco idêntico, pois ambos investem no setor imobiliário e são regulados pela CVM.",
+"o fundo de tijolo não tem risco de mercado, pois seus imóveis são avaliados pelo valor de construção."
+],
+"certa": "A",
+"gabarito": "FIIs de tijolo investem diretamente em imóveis (lajes, galpões, shoppings) e ganham com aluguéis; riscos: vacância, inadimplência, revisão de contratos e desvalorização dos imóveis. FIIs de papel investem em títulos imobiliários (CRI, LCI, cotas de outros FIIs); riscos: crédito dos devedores, taxa de juros e indexadores. Híbridos combinam os dois. Todos têm risco de liquidez e de mercado nas cotas.",
+"porque": {
+"B": "O fundo de papel não possui imóveis; seu principal risco é o crédito dos títulos da carteira.",
+"C": "Tijolo e papel têm riscos diferentes: ocupação dos imóveis contra crédito dos títulos.",
+"D": "As cotas de qualquer FII oscilam em bolsa, e os imóveis podem se desvalorizar."
+},
+"dica": "Tijolo: vacância e inquilino. Papel: crédito dos CRIs. As cotas oscilam em bolsa nos dois casos."
+},
+{
+"pd": "2.3.4.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Dona Célia, aposentada do INSS, precisa de R$ 15.000 para reformar a casa. Ela tem cartão de crédito, cheque especial e a opção de crédito consignado. Pergunta a Henrique, profissional CPA, qual opção costuma ser mais barata e se há algum limite.",
+"enunciado": "Henrique explica corretamente que:",
+"alt": [
+"o consignado costuma ter juros menores, mas as parcelas ficam limitadas à margem consignável.",
+"o cheque especial é a opção mais barata para valores maiores, pois os juros são cobrados só nos dias de uso.",
+"o consignado não tem limite de parcela, pois o desconto direto elimina o risco de inadimplência.",
+"o parcelamento no cartão de crédito tem juros menores que o consignado, por ter prazo menor."
+],
+"certa": "A",
+"gabarito": "No crédito consignado, as parcelas são descontadas diretamente da folha de pagamento ou do benefício do INSS, o que reduz o risco de inadimplência e permite juros menores e prazos maiores. Para proteger o orçamento, a lei limita as parcelas a uma margem consignável (um percentual máximo da renda). Cheque especial e rotativo do cartão estão entre as linhas mais caras do mercado.",
+"porque": {
+"B": "O cheque especial é das linhas mais caras e é indicado só para emergências de curtíssimo prazo.",
+"C": "A margem consignável limita o percentual da renda que pode ser comprometido com as parcelas.",
+"D": "Parcelamentos de fatura costumam ter juros bem maiores que o consignado."
+},
+"dica": "Consignado: juros menores pelo desconto na fonte, mas com limite de margem consignável.",
+"caso": "Árvore de diálogo: Dona Célia e o crédito",
+"etapa": "1/3"
+},
+{
+"pd": "2.3.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Dona Célia recebe duas propostas de consignado: no Banco X, taxa de 1,6% ao mês com tarifa de cadastro e seguro embutido; no Banco Y, taxa de 1,7% ao mês sem tarifas nem seguro. Ela quer escolher pela menor taxa.",
+"enunciado": "Henrique orienta que a comparação correta deve ser feita pelo:",
+"alt": [
+"valor da taxa de juros nominal, pois tarifas e seguros não fazem parte do custo do empréstimo.",
+"Custo Efetivo Total (CET), que soma juros, tarifas, seguros e tributos da operação.",
+"valor da primeira parcela, que já inclui todos os custos e é suficiente para comparar as propostas.",
+"prazo de pagamento, pois quanto maior o prazo menor será o custo total para a cliente."
+],
+"certa": "B",
+"gabarito": "O CET (Custo Efetivo Total) expressa, em taxa percentual anual e mensal, todos os encargos e despesas de uma operação de crédito: juros, tarifas, tributos (IOF), seguros e outras despesas cobradas do cliente. As instituições são obrigadas a informá-lo antes da contratação. É a medida correta para comparar propostas de crédito.",
+"porque": {
+"A": "Tarifas, seguros e IOF elevam o custo; por isso a comparação é pelo CET.",
+"C": "A primeira parcela não mostra o custo total, prazos e encargos de forma comparável.",
+"D": "Prazos maiores costumam aumentar o total pago em juros."
+},
+"dica": "Comparar crédito? Use o CET (juros + tarifas + IOF + seguros), nunca só a taxa nominal.",
+"caso": "Árvore de diálogo: Dona Célia e o crédito",
+"etapa": "2/3"
+},
+{
+"pd": "2.3.1.3",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Dona Célia contratou o consignado no Banco X. Meses depois, o Banco Z oferece assumir a dívida com juros menores. O gerente do Banco X diz que ela precisaria quitar tudo em dinheiro antes de mudar.",
+"enunciado": "Henrique explica corretamente que Dona Célia pode:",
+"alt": [
+"mudar de banco somente após quitar a dívida com recursos próprios, como informou o gerente do Banco X.",
+"transferir a dívida, mas pagando multa de 10% sobre o saldo devedor ao Banco X pela mudança.",
+"transferir a dívida apenas para outro banco do mesmo conglomerado, conforme as regras do consignado.",
+"pedir a portabilidade de crédito: o Banco Z quita o Banco X, sem tarifa e sem uso de recursos dela."
+],
+"certa": "D",
+"gabarito": "A portabilidade de crédito permite ao cliente transferir uma operação de crédito para outra instituição com condições melhores. A nova instituição quita o saldo na instituição original, e o cliente passa a dever à nova, com valor e prazo iguais ou menores. Não há cobrança de tarifa pela transferência. O banco original pode apresentar contraproposta para manter o cliente. A regulamentação é do CMN e do BC.",
+"porque": {
+"A": "A portabilidade permite transferir a dívida sem que o cliente quite com recursos próprios.",
+"B": "A portabilidade de crédito não admite cobrança de tarifa ou multa pela transferência.",
+"C": "A portabilidade pode ser feita para qualquer instituição que aceite a operação."
+},
+"dica": "Portabilidade de crédito: o novo banco quita o antigo, sem tarifa e sem precisar de dinheiro do cliente.",
+"caso": "Árvore de diálogo: Dona Célia e o crédito",
+"etapa": "3/3"
+},
+{
+"pd": "2.5.1.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Rogério, 35 anos, tem dois filhos pequenos e um financiamento imobiliário de 20 anos. Quer proteger a família caso faleça antes de quitar a dívida e criar os filhos, pagando um prêmio acessível. Pergunta a Sabrina, profissional CPA, qual seguro de vida é mais adequado.",
+"enunciado": "Sabrina indica o seguro de vida:",
+"alt": [
+"inteira, pois é o único que paga indenização em caso de morte durante o período de criação dos filhos.",
+"prestamista apenas, pois ele cobre a família inteira e não só o saldo do financiamento.",
+"temporário, com cobertura por prazo definido, pois protege o período de maior necessidade com prêmio mais baixo.",
+"resgatável de curto prazo, que devolve os prêmios pagos se não houver sinistro no primeiro ano."
+],
+"certa": "C",
+"gabarito": "Seguro de vida temporário: cobertura por prazo determinado (por exemplo, 20 anos); prêmio menor; não há resgate se não houver sinistro. É indicado para cobrir períodos de maior responsabilidade financeira. Seguro de vida inteira: cobertura vitalícia, com prêmio maior, usado em planejamento sucessório e para garantir liquidez aos herdeiros. Seguro prestamista: quita ou amortiza uma dívida em caso de morte ou invalidez, tendo o credor como beneficiário.",
+"porque": {
+"A": "O seguro temporário também indeniza em caso de morte dentro do prazo; o vida inteira tem prêmio bem mais caro.",
+"B": "O prestamista quita a dívida com o credor; não substitui a renda da família.",
+"D": "Não é a característica do seguro de vida temporário tradicional, e prazo curto não cobre os 20 anos da necessidade."
+},
+"dica": "Vida temporário: prazo definido e prêmio menor. Vida inteira: vitalício e prêmio maior. Prestamista: quita a dívida."
+},
+{
+"pd": "3.1.5.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "O casal Andrade procura Paulo, profissional CPA, dizendo: “Queremos começar a investir, mas não sabemos por onde começar”. Eles têm uma filha de 6 anos e pensam na aposentadoria.",
+"enunciado": "Pelo processo de planejamento financeiro pessoal, Paulo deve começar por:",
+"alt": [
+"definir os objetivos do casal e avaliar a situação atual: renda, despesas, dívidas e patrimônio.",
+"escolher os produtos de maior rentabilidade e acompanhar o desempenho mês a mês.",
+"implementar um plano padrão da instituição, ajustando-o apenas se houver reclamação do casal.",
+"monitorar e revisar a carteira atual antes de entender os objetivos da família."
+],
+"certa": "A",
+"gabarito": "Etapas do planejamento financeiro pessoal: (1) estabelecer os objetivos financeiros; (2) avaliar a situação financeira atual; (3) desenvolver o plano de ação; (4) implementar o plano; (5) monitorar e revisar regularmente. Sem objetivos claros (prazo, valor, prioridade) e diagnóstico da situação, não há como escolher produtos adequados.",
+"porque": {
+"B": "Escolher produtos vem depois de definir objetivos e conhecer a situação atual.",
+"C": "O plano deve ser personalizado e partir dos objetivos e da situação do cliente.",
+"D": "Monitoramento e revisão são as últimas etapas do processo."
+},
+"dica": "Objetivos → diagnóstico → plano → implementação → monitoramento.",
+"caso": "Árvore de diálogo: Família Andrade e o planejamento",
+"etapa": "1/4"
+},
+{
+"pd": "3.1.3.2",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "No diagnóstico, os Andrade informam renda líquida mensal de R$ 10.000 e despesas mensais de R$ 8.500, já incluindo uma provisão para gastos anuais como IPVA e material escolar.",
+"enunciado": "Paulo calcula que a capacidade de poupança do casal é de:",
+"alt": [
+"R$ 8.500 por mês, o equivalente a 85% da renda líquida.",
+"R$ 1.500 por mês, o equivalente a 17,6% da renda líquida.",
+"R$ 1.000 por mês, já descontada uma margem obrigatória de 5% para emergências.",
+"R$ 1.500 por mês, o equivalente a 15% da renda líquida."
+],
+"certa": "D",
+"gabarito": "Capacidade de poupança = receitas recorrentes − despesas (fixas, variáveis e provisão das sazonais). No caso: 10.000 − 8.500 = R$ 1.500 por mês, ou 1.500 ÷ 10.000 = 15% da renda. Esse valor deve ser sustentável mês a mês, sem contar rendas incertas, e é o que alimenta a reserva de emergência e os objetivos.",
+"porque": {
+"A": "R$ 8.500 são as despesas; a poupança é a sobra: 10.000 − 8.500.",
+"B": "17,6% resulta de dividir 1.500 pelas despesas (8.500), não pela renda.",
+"C": "Não existe margem obrigatória; a capacidade de poupança é renda menos despesas."
+},
+"dica": "Capacidade de poupança = renda recorrente − despesas (com provisão das sazonais). Percentual sobre a renda.",
+"caso": "Árvore de diálogo: Família Andrade e o planejamento",
+"etapa": "2/4"
+},
+{
+"pd": "3.1.5.5",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "O primeiro objetivo é custear a faculdade da filha, que começa em cerca de 12 anos. O casal quer proteção contra a inflação e não precisará do dinheiro antes disso.",
+"enunciado": "A estratégia mais adequada que Paulo pode sugerir é:",
+"alt": [
+"aplicar em poupança com aniversários mensais, pois é o investimento que mais protege contra a inflação no longo prazo.",
+"aplicar em um fundo de ações alavancado, pois o prazo longo elimina qualquer risco de perda.",
+"aportes mensais em um título atrelado ao IPCA com prazo compatível, como o Tesouro Educa+, mantido até o objetivo.",
+"deixar o dinheiro na conta corrente até a filha completar 17 anos, para ter liquidez total."
+],
+"certa": "C",
+"gabarito": "Para objetivos de longo prazo com data definida e valor que acompanha preços (mensalidades), títulos atrelados ao IPCA com vencimento próximo da data do objetivo protegem o poder de compra. O Tesouro Educa+ foi criado para isso: acumula até a data escolhida e paga 60 parcelas mensais corrigidas pela inflação. Aportes regulares aproveitam os juros compostos. A estratégia deve ser compatível com o perfil do casal.",
+"porque": {
+"A": "A poupança costuma perder ou empatar com a inflação em vários períodos; não é a melhor proteção de longo prazo.",
+"B": "Prazo longo reduz, mas não elimina, o risco; alavancagem aumenta a volatilidade e pode não ser adequada ao perfil.",
+"D": "Na conta corrente o dinheiro não rende e perde para a inflação."
+},
+"dica": "Objetivo longo e com data definida: título atrelado ao IPCA com prazo compatível (ex.: Educa+).",
+"caso": "Árvore de diálogo: Família Andrade e o planejamento",
+"etapa": "3/4"
+},
+{
+"pd": "3.1.5.6",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Para a aposentadoria, o casal quer viver da renda dos investimentos, com R$ 8.000 por mês em valores de hoje, sem consumir o principal. Paulo usa como premissa uma taxa real de 4% ao ano.",
+"enunciado": "O patrimônio aproximado, em valores de hoje, para a independência financeira é de:",
+"alt": [
+"R$ 200 mil, pois R$ 8.000 divididos por 4% resultam nesse valor.",
+"R$ 3,84 milhões, pois R$ 96.000 multiplicados por 40 anos de aposentadoria resultam nesse valor.",
+"R$ 2,4 milhões, pois R$ 96.000 por ano divididos por 4% resultam nesse valor.",
+"R$ 1,2 milhão, pois a taxa de 4% deve ser dobrada para considerar a inflação do período."
+],
+"certa": "C",
+"gabarito": "Para viver só da renda real do patrimônio (perpetuidade), divide-se a despesa anual pela taxa real: patrimônio = gasto anual ÷ taxa real = (8.000 × 12) ÷ 0,04 = R$ 2.400.000, em valores de hoje. Usar taxa real e valores presentes evita a ilusão monetária. Se o plano admitir consumir o principal ao longo do tempo, o patrimônio necessário é menor.",
+"porque": {
+"A": "É preciso usar a despesa anual (8.000 × 12 = 96.000) com a taxa anual de 4%.",
+"B": "Multiplicar pela expectativa de vida ignora os rendimentos; a premissa é viver da renda real sem consumir o principal.",
+"D": "Como os valores estão em reais de hoje, usa-se a taxa real; não se soma a inflação."
+},
+"dica": "Independência financeira (sem consumir o principal) = gasto anual ÷ taxa real.",
+"caso": "Árvore de diálogo: Família Andrade e o planejamento",
+"etapa": "4/4"
+},
+{
+"pd": "3.1.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Lucas, 24 anos, solteiro, com emprego estável e reserva de emergência formada, quer investir para a aposentadoria. Sua tia, de 68 anos e aposentada, vive dos rendimentos das aplicações. Os dois perguntam a Sandra, profissional CPA, por que ela sugere carteiras tão diferentes.",
+"enunciado": "Sandra explica que, em geral:",
+"alt": [
+"a tia deve ter mais ativos de risco, pois quanto maior o patrimônio, maior a necessidade de rentabilidade.",
+"as carteiras deveriam ser iguais, pois a adequação depende só do volume investido.",
+"Lucas deve evitar renda variável até os 40 anos, pois jovens têm menor tolerância a perdas.",
+"o horizonte longo de Lucas comporta mais risco; a tia, que vive da renda, deve priorizar estabilidade."
+],
+"certa": "D",
+"gabarito": "A relação entre idade, horizonte e risco: quem tem horizonte longo e renda estável pode suportar oscilações e buscar maior retorno com mais renda variável; quem está próximo ou na aposentadoria e depende dos rendimentos precisa de previsibilidade, liquidez e preservação. É uma orientação geral; o perfil individual (suitability) sempre prevalece.",
+"porque": {
+"A": "Ao depender da renda e ter horizonte menor, ela tem menos capacidade de suportar perdas.",
+"B": "A adequação considera objetivos, horizonte, situação financeira e tolerância a risco, não só o volume.",
+"C": "Jovens com horizonte longo e reserva formada costumam ter maior capacidade de assumir risco."
+},
+"dica": "Horizonte longo + renda estável = mais capacidade de risco. Dependência da renda = mais estabilidade."
+},
+{
+"pd": "3.1.3.3.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Mário tem R$ 6.000 no rotativo do cartão e R$ 3.000 no cheque especial. Tem margem consignável disponível e uma aplicação de R$ 4.000 em CDB de liquidez diária que rende 100% do CDI. Pede ajuda a Laura, profissional CPA.",
+"enunciado": "A orientação mais adequada de Laura é:",
+"alt": [
+"manter a aplicação intacta e pagar o mínimo do cartão, pois o CDB rende mais que os juros das dívidas.",
+"contratar um novo cartão de crédito para pagar a fatura atual, alongando o prazo sem custo.",
+"quitar primeiro o cheque especial e deixar o rotativo por último, pois os juros do cartão são limitados por lei.",
+"usar parte da aplicação para quitar as dívidas mais caras e trocar o restante por consignado."
+],
+"certa": "D",
+"gabarito": "Gestão de dívidas: (1) listar as dívidas com taxa e CET; (2) priorizar a quitação das mais caras (rotativo, cheque especial); (3) usar recursos parados que rendem menos que o custo da dívida; (4) substituir dívidas caras por crédito mais barato e com parcela compatível com o orçamento (consignado, crédito com garantia); (5) ajustar o orçamento para não voltar ao endividamento. Pode-se manter uma parcela mínima de reserva para emergências.",
+"porque": {
+"A": "Rotativo e cheque especial custam muito mais que o rendimento de um CDB; manter a dívida destrói patrimônio.",
+"B": "Pagar cartão com cartão mantém a dívida em linhas caras e pode piorar a situação.",
+"C": "O limite legal de encargos do rotativo não o torna barato; a prioridade é eliminar as dívidas mais caras."
+},
+"dica": "Dívida cara (rotativo, cheque especial) primeiro. Troque por crédito barato. Dinheiro parado rende menos que a dívida custa."
+},
+{
+"pd": "3.1.6.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao preparar a declaração de IR, Vera pergunta a Otávio, profissional CPA, como informar sua poupança, uma LCI e um CDB, e se precisa declarar os rendimentos isentos.",
+"enunciado": "Otávio orienta corretamente que:",
+"alt": [
+"saldos em Bens e Direitos; poupança e LCI em Rendimentos Isentos; CDB em Tributação Exclusiva.",
+"apenas o CDB precisa ser declarado, pois poupança e LCI são isentas e ficam fora da declaração.",
+"todos os rendimentos vão em Rendimentos Tributáveis, e o imposto devido é recalculado no ajuste anual.",
+"os saldos vão em Dívidas e Ônus, e os rendimentos são informados apenas pela instituição financeira."
+],
+"certa": "A",
+"gabarito": "Na declaração de IRPF: os saldos das aplicações em 31/12 vão na ficha Bens e Direitos. Rendimentos isentos (poupança, LCI, LCA, CRI, CRA, dividendos dentro da isenção) vão em Rendimentos Isentos e Não Tributáveis. Rendimentos com IR retido na fonte de forma definitiva (CDB, Tesouro, fundos, JCP) vão em Rendimentos Sujeitos à Tributação Exclusiva/Definitiva. O informe de rendimentos da instituição traz esses valores.",
+"porque": {
+"B": "Investimentos isentos também devem constar, tanto o saldo quanto os rendimentos.",
+"C": "Rendimentos isentos e de tributação exclusiva têm fichas próprias e não entram na base do ajuste.",
+"D": "Aplicações são bens (Bens e Direitos), e o contribuinte deve informar os rendimentos na declaração."
+},
+"dica": "Saldo → Bens e Direitos. Isento → Rendimentos Isentos. CDB/fundos/Tesouro → Tributação Exclusiva."
+},
+{
+"pd": "3.3.4",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Igor tem toda a carteira em ações de uma única empresa de energia. Após uma queda forte provocada por um problema regulatório da companhia, pergunta a Lúcia, profissional CPA, se diversificar teria ajudado, já que “todo o mercado também oscila”.",
+"enunciado": "Lúcia explica corretamente que a diversificação:",
+"alt": [
+"elimina todos os riscos da carteira, desde que ela tenha pelo menos dez ativos diferentes.",
+"reduz o risco sistemático do mercado, mas não altera o risco específico da empresa de energia.",
+"só faz sentido entre ativos do mesmo setor, para manter a coerência da estratégia.",
+"reduz o risco específico de cada empresa, mas não elimina o risco sistemático do mercado."
+],
+"certa": "D",
+"gabarito": "O risco total de um ativo divide-se em risco específico (não sistemático), ligado à empresa ou ao setor, que pode ser reduzido pela diversificação, e risco sistemático (de mercado), ligado a fatores macroeconômicos como juros, câmbio, recessão e crises, que não se elimina pela diversificação. Diversificar entre ativos com baixa correlação reduz a volatilidade da carteira para um mesmo retorno esperado.",
+"porque": {
+"A": "Nenhum número de ativos elimina o risco sistemático (de mercado).",
+"B": "Inverte os conceitos: a diversificação atua sobre o risco específico.",
+"C": "Diversificar entre setores, classes e emissores com baixa correlação é o que mais reduz o risco."
+},
+"dica": "Diversificação reduz o risco específico. O risco sistemático (de mercado) continua."
+},
+{
+"pd": "3.4.1.2",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Após fazer o exame da CPA, Bianca publica em um grupo de estudos várias questões que lembrava da prova, com as respostas, para “ajudar os colegas”.",
+"enunciado": "Pelas regras da Anbima, a conduta de Bianca:",
+"alt": [
+"é permitida, pois o exame já foi encerrado e as questões passam a ser de domínio público.",
+"é proibida, pois as questões são sigilosas e a divulgação pode levar à anulação do resultado.",
+"é permitida, desde que Bianca não cobre pelo material e cite a Anbima como fonte.",
+"é proibida apenas se Bianca tiver sido reprovada, por tentar obter vantagem em uma nova tentativa."
+],
+"certa": "B",
+"gabarito": "O edital e o Código de Conduta Ética das Certificações Anbima vedam copiar, memorizar para reproduzir, compartilhar ou divulgar questões, alternativas e gabaritos dos exames. Violações podem levar a anulação do resultado, cancelamento da certificação e impedimento de novas inscrições por um período. As regras de conduta valem tanto para pessoas candidatas quanto para profissionais certificados.",
+"porque": {
+"A": "O sigilo continua após o exame; a Anbima veda reproduzir questões por qualquer meio.",
+"C": "A gratuidade não afasta a proibição de reproduzir as questões.",
+"D": "A vedação vale para qualquer candidato, aprovado ou não."
+},
+"dica": "Questões do exame são sigilosas: divulgar = sanção (anulação, cancelamento, impedimento)."
+},
+{
+"pd": "3.4.3.1.5",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Um cliente moderado diz a Tiago, profissional CPA, que quer “dobrar o capital em um ano com segurança”. Tiago percebe que nenhum produto adequado ao perfil do cliente oferece essa combinação.",
+"enunciado": "Pela técnica de gerenciamento de expectativas, a conduta mais adequada de Tiago é:",
+"alt": [
+"oferecer o produto mais arriscado disponível, pois o cliente expressou claramente o objetivo de retorno.",
+"explicar a relação risco–retorno, mostrar cenários realistas e ajustar o objetivo com o cliente.",
+"concordar com a meta para não frustrar o cliente e revisar a expectativa apenas se houver perdas.",
+"recusar o atendimento, pois clientes com expectativas irreais não podem ser atendidos pela instituição."
+],
+"certa": "B",
+"gabarito": "Técnicas de atendimento previstas no programa: escuta ativa, personalização, solução proativa de problemas, educação continuada e gerenciamento de expectativas. Gerenciar expectativas é alinhar o que o cliente espera ao que é possível, com transparência sobre a relação risco–retorno, cenários e prazos, evitando promessas e frustrações futuras.",
+"porque": {
+"A": "Recomendar algo inadequado ao perfil para atender a uma expectativa irreal fere o dever de adequação.",
+"C": "Aceitar expectativas irreais leva a frustração e reclamações; a transparência deve vir antes.",
+"D": "O papel do profissional é orientar e alinhar expectativas, não recusar o cliente."
+},
+"dica": "Expectativa irreal? Explique risco e retorno, mostre cenários e realinhe o objetivo. Nunca prometa."
+},
+{
+"pd": "3.4.4.2",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Uma corretora foi multada pela CVM por não manter registros exigidos pela regulação. Na mesma semana, foi condenada em ação judicial movida por um cliente por cláusula contratual abusiva, e o caso ganhou repercussão negativa na imprensa.",
+"enunciado": "Os riscos que se materializaram, respectivamente, foram:",
+"alt": [
+"regulatório, legal e de imagem.",
+"operacional, de mercado e de crédito.",
+"legal, regulatório e operacional.",
+"de imagem, operacional e regulatório."
+],
+"certa": "A",
+"gabarito": "Riscos da atividade profissional: operacional (falhas de processos, pessoas e sistemas, ou eventos externos); regulatório (descumprir normas de reguladores e autorreguladores, com sanções como multa e suspensão); legal (contratos inválidos, ações judiciais, interpretação de leis); de imagem ou reputacional (perda de confiança do mercado e dos clientes). Um mesmo evento pode materializar vários riscos ao mesmo tempo.",
+"porque": {
+"B": "Risco de mercado e de crédito envolvem preços e inadimplência, o que não ocorreu.",
+"C": "A multa por descumprir norma da CVM é risco regulatório; a ação judicial é risco legal; a repercussão é risco de imagem.",
+"D": "A ordem não corresponde: a multa é regulatória, a condenação é legal e a repercussão afeta a imagem."
+},
+"dica": "Multa do regulador = regulatório. Processo judicial = legal. Notícia ruim = imagem. Falha interna = operacional."
+},
+{
+"pd": "3.4.5.4.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Um novo cliente informa que é secretário estadual de Fazenda e quer aplicar R$ 2 milhões, recursos que diz vir da venda de imóveis. Valéria, profissional CPA, faz o cadastro.",
+"enunciado": "A conduta adequada, pelas regras de PLD e “conheça seu cliente”, é:",
+"alt": [
+"tratá-lo como pessoa exposta politicamente, com diligência reforçada e checagem da origem dos recursos.",
+"dispensar análise adicional, pois agentes públicos já são fiscalizados pelos órgãos de controle.",
+"recusar o cliente, pois a regulação proíbe instituições de atender pessoas expostas politicamente.",
+"comunicar imediatamente o COAF apenas por se tratar de agente público, antes de qualquer análise."
+],
+"certa": "A",
+"gabarito": "Pessoa exposta politicamente (PEP) é quem exerce ou exerceu, nos últimos 5 anos, cargos, empregos ou funções públicas relevantes, assim como seus familiares e estreitos colaboradores. A regulação (Circular BC 3.978/2020; Resolução CVM 50) exige diligência reforçada: aprovação do relacionamento em nível superior, verificação da origem dos recursos e monitoramento contínuo. O cadastro deve ser mantido atualizado, com capacidade financeira compatível com as operações.",
+"porque": {
+"B": "Pessoas expostas politicamente exigem diligência reforçada, e não dispensa de análise.",
+"C": "Não há proibição; o atendimento exige monitoramento reforçado.",
+"D": "Ser PEP não é, por si só, indício de lavagem; exige análise reforçada, e a comunicação depende de indícios."
+},
+"dica": "PEP: não é proibido nem suspeito por si só, mas exige diligência reforçada e origem dos recursos."
+},
+{
+"pd": "3.4.6.11",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma instituição vai contratar um correspondente bancário e uma empresa de tecnologia que terá acesso a dados de clientes. A área de compliance exige análise prévia de reputação, capacidade técnica e políticas de PLD e segurança dessas empresas.",
+"enunciado": "Esse procedimento corresponde ao princípio:",
+"alt": [
+"“conheça seu cliente”, que se aplica a qualquer empresa com a qual a instituição se relacione.",
+"“conheça seu funcionário”, pois os parceiros passam a ser considerados empregados da instituição.",
+"“conheça seu parceiro”, que estende a diligência de PLD a fornecedores e prestadores.",
+"suitability, pois a instituição deve verificar se o parceiro é adequado ao perfil dos clientes."
+],
+"certa": "C",
+"gabarito": "A abordagem baseada em risco de PLD/FT inclui procedimentos de “conheça seu cliente” (KYC), “conheça seu funcionário” (KYE) e “conheça seu parceiro” (KYP), que alcança prestadores de serviços terceirizados, correspondentes e fornecedores. Avaliam-se reputação, envolvimento em ilícitos, controles de PLD e de proteção de dados, já que falhas do parceiro podem expor a instituição a riscos legais, regulatórios e de imagem.",
+"porque": {
+"A": "O KYC trata dos clientes; a diligência sobre fornecedores e parceiros é o “conheça seu parceiro”.",
+"B": "Parceiros não se tornam funcionários; a análise de colaboradores é outro procedimento.",
+"D": "Suitability é a adequação de produtos ao perfil do investidor."
+},
+"dica": "KYC = cliente. KYE = funcionário. KYP = parceiro ou fornecedor."
+},
+{
+"pd": "3.4.7.1.1",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Um grupo de investidores combina, por aplicativo de mensagens, comprar simultaneamente ações de baixa liquidez para elevar o preço e atrair outros compradores. Depois que o preço sobe, vende todas as posições com lucro.",
+"enunciado": "Essa conduta caracteriza:",
+"alt": [
+"insider trading, pois os investidores tinham informação privilegiada sobre a própria estratégia de compra.",
+"manipulação de mercado (art. 27-C da Lei 6.385/76), por alterar artificialmente a cotação.",
+"prática legítima de mercado, pois cada investidor é livre para comprar e vender quando quiser.",
+"exercício irregular de profissão, pois os investidores atuaram sem certificação da Anbima."
+],
+"certa": "B",
+"gabarito": "Art. 27-C da Lei 6.385/76 (manipulação do mercado): realizar operações simuladas ou outras manobras fraudulentas para alterar artificialmente o regular funcionamento do mercado, com o fim de obter vantagem indevida ou lucro, para si ou para outrem, ou causar dano a terceiros. Pena de reclusão de 1 a 8 anos e multa de até 3 vezes a vantagem. O esquema descrito é conhecido como pump and dump.",
+"porque": {
+"A": "Insider pressupõe informação relevante não divulgada sobre o emissor, o que não é o caso.",
+"C": "Combinar operações para inflar artificialmente o preço é ilícito, mesmo que cada ordem pareça normal.",
+"D": "O núcleo da conduta é alterar artificialmente o preço, e não a falta de certificação."
+},
+"dica": "Manipulação (27-C): inflar ou derrubar preço artificialmente. Pena de 1 a 8 anos."
+},
+{
+"pd": "3.2.4",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Juliano é autônomo, sustenta a família sozinho e tem boa reserva de emergência, mas não tem nenhum seguro. Ele pergunta a Raquel, profissional CPA, se vale a pena gastar com seguro em vez de investir mais.",
+"enunciado": "Raquel explica que, na gestão de riscos pessoais:",
+"alt": [
+"o seguro transfere perdas grandes e improváveis, como morte ou invalidez, que a reserva não cobre.",
+"a reserva de emergência substitui qualquer seguro, desde que tenha pelo menos 12 meses de despesas.",
+"o seguro é um investimento com rentabilidade garantida e deve ser escolhido pela rentabilidade.",
+"seguros só fazem sentido para quem tem financiamentos, pois a cobertura é sempre do credor."
+],
+"certa": "A",
+"gabarito": "Gestão de riscos pessoais: identificar riscos (morte, invalidez, doença, perda de bens), avaliar frequência e impacto e decidir entre reter (reserva), reduzir ou transferir (seguro). Eventos de alto impacto e baixa probabilidade, como morte ou invalidez de quem sustenta a família, são típicos para seguro, pois a perda seria grande demais para a reserva. Para autônomos, que não têm benefícios de empregador, a proteção de renda é ainda mais relevante.",
+"porque": {
+"B": "A reserva cobre imprevistos de curto prazo; não substitui a renda da família em caso de morte ou invalidez.",
+"C": "Seguro é proteção, não investimento; o prêmio paga a transferência de risco.",
+"D": "Seguros de vida e invalidez protegem a família; o prestamista é só um tipo de seguro."
+},
+"dica": "Reserva = imprevistos pequenos e frequentes. Seguro = perdas grandes e improváveis (morte, invalidez)."
+},
+{
+"pd": "4.1.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Em uma análise ESG de uma empresa, um analista lista: emissões de carbono, política de diversidade no quadro de funcionários e independência do conselho de administração. Um cliente pergunta a Rafael, profissional CPA, em qual pilar se encaixa cada item.",
+"enunciado": "Rafael classifica corretamente, na ordem citada:",
+"alt": [
+"social, ambiental e governança.",
+"ambiental, social e governança.",
+"ambiental, governança e social.",
+"governança, social e ambiental."
+],
+"certa": "B",
+"gabarito": "ESG reúne critérios ambientais (Environmental: emissões, uso de recursos, resíduos, biodiversidade), sociais (Social: relações de trabalho, diversidade, direitos humanos, comunidade, clientes) e de governança (Governance: estrutura do conselho, independência, ética, remuneração, transparência, direitos dos acionistas). Esses fatores são usados na análise de riscos e oportunidades de investimento.",
+"porque": {
+"A": "Emissões de carbono são tema ambiental; diversidade é tema social.",
+"C": "Diversidade no quadro de funcionários é pilar social; independência do conselho é governança.",
+"D": "Emissões de carbono pertencem ao pilar ambiental, e não à governança."
+},
+"dica": "E = meio ambiente. S = pessoas e sociedade. G = gestão, conselho e ética."
+},
+{
+"pd": "4.4.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente pergunta a Fernanda, profissional CPA, qual a principal diferença entre emprestar recursos por um protocolo DeFi e aplicar em um CDB de banco.",
+"enunciado": "Fernanda explica corretamente que, no DeFi:",
+"alt": [
+"as operações têm garantia do FGC, pois os protocolos são supervisionados pelo Banco Central.",
+"um banco central descentralizado aprova cada operação, o que elimina riscos de crédito e de mercado.",
+"contratos inteligentes substituem o intermediário, e o investidor corre risco de código e não tem FGC.",
+"os rendimentos são fixos e definidos pelo Copom, como nos títulos públicos pós-fixados."
+],
+"certa": "C",
+"gabarito": "Finanças descentralizadas (DeFi) oferecem serviços financeiros (empréstimos, trocas, rendimentos) por contratos inteligentes executados em blockchain, sem intermediários tradicionais. Vantagens: acesso aberto, transparência, funcionamento contínuo e programabilidade. Riscos: falhas ou ataques aos contratos, volatilidade dos criptoativos, liquidações automáticas de garantias, incerteza regulatória e ausência de FGC. No sistema tradicional (TradFi), há intermediários regulados e garantias como o FGC.",
+"porque": {
+"A": "Protocolos DeFi não têm FGC nem supervisão bancária tradicional.",
+"B": "Não existe aprovação por banco central; os riscos de mercado e de código permanecem.",
+"D": "Os rendimentos no DeFi variam conforme oferta e demanda nos protocolos; não há relação com o Copom."
+},
+"dica": "DeFi: contrato inteligente no lugar do intermediário. Mais acesso, mas risco de código e sem FGC."
+},
+{
+"pd": "4.4.5.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente quer usar criptoativos para pagamentos internacionais, mas teme a volatilidade do bitcoin. Ele ouviu falar em stablecoins e pergunta a Marcos, profissional CPA, como funcionam.",
+"enunciado": "Marcos explica que as stablecoins:",
+"alt": [
+"têm valor fixo garantido pelo Banco Central do país da moeda de referência, sem qualquer risco.",
+"são moedas digitais emitidas pelo Banco Central do Brasil, equivalentes ao Drex.",
+"buscam valor estável, atrelado a uma moeda, mas dependem do emissor e da qualidade do lastro.",
+"oscilam mais que o bitcoin, pois acompanham diversas moedas e commodities ao mesmo tempo."
+],
+"certa": "C",
+"gabarito": "Stablecoins são criptoativos que buscam estabilidade de preço, normalmente pareados a uma moeda fiduciária (como o dólar), com lastro em reservas (moeda, títulos) ou mecanismos algorítmicos. São usadas em pagamentos e como ponte entre criptoativos. Riscos: solvência e transparência do emissor, qualidade do lastro, perda da paridade e regulação. No Brasil, o Banco Central regula os prestadores de serviços de ativos virtuais.",
+"porque": {
+"A": "Stablecoins privadas não têm garantia de bancos centrais; dependem do emissor e das reservas.",
+"B": "O Drex é iniciativa do BC; stablecoins são, em geral, emitidas por empresas privadas.",
+"D": "O objetivo da stablecoin é justamente reduzir a volatilidade."
+},
+"dica": "Stablecoin = cripto pareada a uma moeda, com lastro. Estável, mas depende do emissor e das reservas."
+},
+{
+"pd": "4.7.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma fintech quer testar um modelo inovador de investimento que ainda não se encaixa totalmente nas regras atuais. Seus sócios perguntam a Cláudia, profissional CPA, se existe alguma forma de operar sob regras temporárias.",
+"enunciado": "Cláudia explica que existe o sandbox regulatório, no qual:",
+"alt": [
+"qualquer empresa pode operar sem regras por tempo indeterminado, desde que se declare fintech.",
+"as empresas ficam dispensadas de proteger os clientes, já que os produtos estão em fase de teste.",
+"empresas selecionadas testam inovações por prazo definido, com limites e supervisão do regulador.",
+"o regulador garante os investimentos dos clientes contra perdas, por meio de um fundo público específico."
+],
+"certa": "C",
+"gabarito": "Sandbox regulatório é um ambiente experimental em que o regulador (Banco Central, CVM ou SUSEP) autoriza temporariamente empresas selecionadas a testar produtos e serviços inovadores, com regras flexibilizadas, limites (de clientes, volume, prazo) e acompanhamento próximo. O objetivo é estimular a inovação e a concorrência com segurança, e ajudar o regulador a aperfeiçoar a regulação.",
+"porque": {
+"A": "O sandbox exige seleção, prazo determinado, limites e supervisão do regulador.",
+"B": "A proteção ao cliente continua sendo exigida durante os testes.",
+"D": "Não há garantia pública contra perdas nos produtos testados."
+},
+"dica": "Sandbox: teste com prazo, limites e supervisão do regulador. Não é ausência de regras."
+},
+{
+"pd": "4.7.6.4",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Lojista de pequeno porte, Mirian usa uma maquininha de uma empresa que reúne vários pequenos comerciantes e repassa as transações a uma grande credenciadora. Ela pergunta a Renato, profissional CPA, qual o papel de cada empresa no arranjo de pagamentos.",
+"enunciado": "Renato explica que a empresa da maquininha de Mirian atua como:",
+"alt": [
+"instituidora do arranjo, que define as regras da bandeira para todos os participantes.",
+"subcredenciadora (subadquirente), que liga pequenos lojistas a uma credenciadora.",
+"emissora do cartão, que concede crédito ao portador e cobra a fatura.",
+"credenciadora (adquirente), que liquida as transações diretamente com a bandeira sem intermediários."
+],
+"certa": "B",
+"gabarito": "Em um arranjo de pagamentos com cartões participam: o instituidor do arranjo (bandeira), que define as regras; o emissor, que fornece o cartão e se relaciona com o portador; o credenciador (adquirente), que habilita os estabelecimentos e processa e liquida as transações; o subcredenciador (subadquirente), que habilita lojistas usando a estrutura de um credenciador, comum entre pequenos comerciantes; e o portador e o estabelecimento.",
+"porque": {
+"A": "Instituidor do arranjo é a bandeira (ex.: as grandes marcas de cartão), não a empresa da maquininha.",
+"C": "A emissora é a instituição que fornece o cartão ao consumidor.",
+"D": "Quem tem relação direta com a bandeira é a credenciadora; a empresa de Mirian se apoia em uma credenciadora."
+},
+"dica": "Bandeira = regras. Emissor = cartão do consumidor. Adquirente = credencia o lojista. Subadquirente = intermediário de pequenos lojistas."
+}
+]
+}
