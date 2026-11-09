@@ -1,0 +1,1078 @@
+{
+"id": "S14",
+"titulo": "Simulado 14",
+"descricao": "Revisão com mais cálculo. Árvores de diálogo: Pedro compara taxas, Bruno e as ações herdadas e Glória, 58 anos.",
+"criado": "2026-11-09",
+"q": [
+{
+"pd": "1.3.2",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Pedro recebeu uma proposta de aplicação a 12% ao ano e quer saber a taxa mensal equivalente, em juros compostos, para comparar com outra que paga 1% ao mês. Pergunta a Luíza, profissional CPA.",
+"enunciado": "Luíza calcula que 12% ao ano equivalem a cerca de:",
+"alt": [
+"1,00% ao mês, igual à outra proposta.",
+"1,20% ao mês, acima da outra proposta.",
+"0,83% ao mês, bem abaixo da outra proposta.",
+"0,95% ao mês, abaixo da outra proposta."
+],
+"certa": "D",
+"gabarito": "Taxa mensal equivalente: (1 + 0,12)^(1/12) − 1 ≈ 0,949% ao mês. Logo, 1% ao mês (equivalente a 12,68% ao ano) é melhor que 12% ao ano. Para comparar propostas, converta todas para o mesmo período, usando juros compostos.",
+"porque": {
+"A": "1% é a taxa proporcional; a equivalente é 1,12^(1/12) − 1.",
+"B": "Dividir 12% por 10 não tem base.",
+"C": "Não corresponde à conversão correta."
+},
+"dica": "Anual → mensal: (1 + i_anual)^(1/12) − 1. 12% a.a. ≈ 0,95% a.m.",
+"caso": "Árvore de diálogo: Pedro compara taxas",
+"etapa": "1/3"
+},
+{
+"pd": "1.3.4.1",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Em seguida, Pedro quer saber o ganho real de um investimento que rendeu 12% no ano, com inflação de 4,5% no período.",
+"enunciado": "Luíza calcula um ganho real de cerca de:",
+"alt": [
+"7,50% no ano.",
+"7,18% no ano.",
+"16,50% no ano.",
+"2,67% no ano."
+],
+"certa": "B",
+"gabarito": "Fisher: real = (1 + nominal) ÷ (1 + inflação) − 1 = 1,12 ÷ 1,045 − 1 ≈ 7,18%. A diferença simples (7,5%) é apenas aproximação. Quanto maiores as taxas, maior o erro da subtração direta.",
+"porque": {
+"A": "É a diferença simples (12 − 4,5), que superestima o ganho.",
+"C": "Somar as taxas não tem sentido aqui.",
+"D": "Dividir 12 por 4,5 não é a conta correta."
+},
+"dica": "Real = (1 + nominal) ÷ (1 + inflação) − 1.",
+"caso": "Árvore de diálogo: Pedro compara taxas",
+"etapa": "2/3"
+},
+{
+"pd": "1.3.3.4",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Por fim, Pedro compara um CDB prefixado de 13% ao ano por 1 ano (IR de 17,5%) com uma LCI isenta de 10,5% ao ano no mesmo prazo.",
+"enunciado": "Luíza conclui que:",
+"alt": [
+"a LCI rende mais, pois a isenção sempre compensa a diferença.",
+"o CDB rende cerca de 10,7% líquido, um pouco acima da LCI.",
+"os dois rendem 13%, pois o IR é devolvido na declaração.",
+"o CDB rende 11,05% líquido, com IR de 15%."
+],
+"certa": "B",
+"gabarito": "Taxa líquida do CDB = 13% × (1 − 0,175) = 10,725% ao ano, acima dos 10,5% da LCI. Em prazos de 361 a 720 dias, o IR é de 17,5%. Para escolher, considere também liquidez (carência da LCI), emissor e limites do FGC.",
+"porque": {
+"A": "13% × 0,825 ≈ 10,7%, acima de 10,5%.",
+"C": "O IR do CDB é retido em definitivo.",
+"D": "Com 1 ano, a alíquota é de 17,5%."
+},
+"dica": "Líquida = bruta × (1 − IR). Com 1 ano, IR de 17,5%.",
+"caso": "Árvore de diálogo: Pedro compara taxas",
+"etapa": "3/3"
+},
+{
+"pd": "1.1.1.1.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um aluno pergunta a Fábio, profissional CPA, qual órgão edita as normas gerais para os fundos de pensão (entidades fechadas de previdência).",
+"enunciado": "Fábio explica que é o:",
+"alt": [
+"Conselho Nacional de Seguros Privados (CNSP).",
+"Conselho Monetário Nacional (CMN), único órgão normativo do sistema.",
+"Comitê de Política Monetária (Copom).",
+"Conselho Nacional de Previdência Complementar (CNPC)."
+],
+"certa": "D",
+"gabarito": "Os órgãos normativos do SFN são o CMN (moeda, crédito, capitais e câmbio), o CNSP (seguros, capitalização, previdência aberta) e o CNPC (previdência complementar fechada). Os supervisores correspondentes são BC e CVM, SUSEP e PREVIC.",
+"porque": {
+"A": "O CNSP normatiza seguros, capitalização e previdência aberta.",
+"B": "O CMN cuida de moeda, crédito, capitais e câmbio; a previdência fechada tem conselho próprio.",
+"C": "O Copom decide a Selic."
+},
+"dica": "Previdência fechada: CNPC normatiza; PREVIC fiscaliza."
+},
+{
+"pd": "1.1.3.1.8",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Um estudante encontra na lista de instituições autorizadas pelo BC as “companhias hipotecárias” e pergunta a Raquel, profissional CPA, o que fazem.",
+"enunciado": "Raquel explica que as companhias hipotecárias:",
+"alt": [
+"administram consórcios de imóveis, sem conceder financiamentos.",
+"financiam imóveis e não captam depósitos à vista.",
+"são cartórios responsáveis pelo registro de hipotecas.",
+"oferecem conta corrente e cartão de crédito ao público."
+],
+"certa": "B",
+"gabarito": "Companhias hipotecárias são instituições financeiras especializadas em financiamento imobiliário (construção, aquisição, refinanciamento), que captam recursos por instrumentos como letras hipotecárias e letras de crédito imobiliário e repasses, sem captar depósitos à vista. São autorizadas e supervisionadas pelo Banco Central.",
+"porque": {
+"A": "Isso é papel das administradoras de consórcio.",
+"C": "Registro de imóveis é feito em cartório, não por instituição financeira.",
+"D": "Não captam depósitos à vista."
+},
+"dica": "Companhia hipotecária: financia imóveis, sem depósito à vista."
+},
+{
+"pd": "1.2.5.4",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Com o real se valorizando muito rápido, o BC anuncia leilões de swap cambial reverso. Um exportador pergunta a Hélio, profissional CPA, o efeito esperado.",
+"enunciado": "Hélio explica que o swap reverso:",
+"alt": [
+"equivale a o BC comprar dólar no mercado futuro, contendo a queda do dólar.",
+"equivale a o BC vender dólar à vista das reservas, acelerando a queda do dólar.",
+"fixa a cotação do dólar até o fim do ano.",
+"reduz automaticamente a taxa Selic em 1 ponto."
+],
+"certa": "A",
+"gabarito": "No swap cambial tradicional, o BC oferece proteção contra a alta do dólar (equivale a vender dólar no futuro). No swap reverso, a posição é inversa: equivale a comprar dólar no mercado futuro, usado quando se quer conter a valorização excessiva do real. Ambos são liquidados em reais e não usam reservas diretamente.",
+"porque": {
+"B": "O reverso tem efeito oposto ao do swap tradicional.",
+"C": "O câmbio continua flutuante.",
+"D": "Swap cambial não altera a Selic."
+},
+"dica": "Swap tradicional segura a alta do dólar; swap reverso segura a queda."
+},
+{
+"pd": "1.4.12.1.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Em um treinamento, o instrutor pergunta a Lia, profissional CPA, quais princípios gerais de conduta o código Anbima de distribuição exige das instituições.",
+"enunciado": "Lia responde que, entre eles, estão:",
+"alt": [
+"maximizar a receita da instituição, ainda que contra o interesse do cliente.",
+"omitir conflitos de interesses para não confundir o cliente.",
+"boa-fé, transparência, diligência e evitar práticas que prejudiquem o investidor.",
+"recomendar sempre os produtos da própria instituição."
+],
+"certa": "C",
+"gabarito": "Os princípios gerais de conduta do código Anbima incluem agir com boa-fé, transparência, diligência e lealdade com os investidores, cumprir as obrigações com rigor, evitar práticas que prejudiquem a relação fiduciária ou a concorrência leal, identificar e gerenciar conflitos de interesses e zelar pela qualidade das informações prestadas.",
+"porque": {
+"A": "O código prioriza a relação ética com o investidor.",
+"B": "O código exige identificar e gerenciar conflitos.",
+"D": "A recomendação deve ser adequada ao cliente."
+},
+"dica": "Código Anbima: boa-fé, transparência, diligência, lealdade e gestão de conflitos."
+},
+{
+"pd": "1.4.12.1.3.7",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Um cliente estranha que o valor de seu CDB prefixado no extrato oscile, embora a taxa contratada seja fixa. Pergunta a Breno, profissional CPA, como o banco apura esse valor.",
+"enunciado": "Breno explica que o código Anbima de distribuição prevê:",
+"alt": [
+"que o extrato mostre sempre o valor da curva contratada, nunca o de mercado.",
+"apuração de valores de referência com metodologia de mercado.",
+"que o banco escolha livremente o valor exibido, sem metodologia.",
+"que só fundos tenham valores apurados, nunca títulos."
+],
+"certa": "B",
+"gabarito": "O código Anbima de distribuição exige que as instituições adotem metodologia para apurar e divulgar valores de referência dos produtos distribuídos (por exemplo, renda fixa), refletindo condições de mercado, para dar ao investidor informação mais fiel sobre o valor de seus ativos em caso de venda antecipada. A taxa contratada continua valendo para quem leva ao vencimento.",
+"porque": {
+"A": "O código trata justamente da apuração de valores de referência.",
+"C": "Exige-se metodologia definida e transparente.",
+"D": "Os valores de referência abrangem produtos distribuídos."
+},
+"dica": "Valor de referência no extrato reflete o mercado; a taxa contratada vale no vencimento."
+},
+{
+"pd": "1.4.2.1",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Em uma crise financeira global, há falta de liquidez entre os bancos. O BC reduz temporariamente as alíquotas do compulsório. Um cliente pergunta a Diogo, profissional CPA, o objetivo.",
+"enunciado": "Diogo explica que a medida busca:",
+"alt": [
+"dar liquidez aos bancos e proteger o sistema.",
+"aumentar a inflação para reduzir o valor real das dívidas.",
+"obrigar os bancos a recolher mais recursos ao BC.",
+"substituir a garantia do FGC aos depositantes."
+],
+"certa": "A",
+"gabarito": "O depósito compulsório é instrumento de política monetária e também de estabilidade financeira. Em crises de liquidez, o BC pode liberar compulsórios e abrir linhas de liquidez (com garantias), evitando que a falta de recursos de curto prazo provoque quebras em cadeia. Em períodos de expansão excessiva do crédito, pode elevá-los.",
+"porque": {
+"B": "O objetivo é dar liquidez e estabilidade.",
+"C": "Reduzir o compulsório faz o contrário.",
+"D": "O FGC continua com seu papel."
+},
+"dica": "Crise de liquidez: BC libera compulsório para dar fôlego ao sistema."
+},
+{
+"pd": "1.2.2.4",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Um empresário quer financiar a construção de uma fábrica, com retorno em 15 anos, sem empréstimo bancário. Pergunta a Mônica, profissional CPA, em que mercado buscaria recursos.",
+"enunciado": "Mônica explica que seria o:",
+"alt": [
+"mercado monetário, que financia projetos de longo prazo.",
+"mercado cambial, que financia investimentos em reais.",
+"mercado de crédito ao consumidor, que financia indústrias.",
+"mercado de capitais (ações ou debêntures longas)."
+],
+"certa": "D",
+"gabarito": "O mercado de capitais financia investimentos de médio e longo prazo das empresas, por meio da emissão de valores mobiliários (ações, debêntures, notas comerciais, CRI, CRA), com a intermediação de bancos de investimento e corretoras e a negociação em bolsa e balcão. Complementa o crédito bancário e reduz o custo de capital.",
+"porque": {
+"A": "O monetário é de curtíssimo prazo.",
+"B": "O cambial trata de moeda estrangeira.",
+"C": "Esse mercado atende pessoas físicas no consumo."
+},
+"dica": "Projeto de longo prazo sem banco = mercado de capitais (ações, debêntures)."
+},
+{
+"pd": "2.1.1.2.2.2.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Bruno herdou ações ordinárias de uma grande empresa e recebeu convocação para a AGO, que vai eleger o conselho de administração e aprovar as contas. Ele pergunta a Ana, profissional CPA, se pode participar.",
+"enunciado": "Ana explica que Bruno:",
+"alt": [
+"não pode votar, pois herdeiros só votam após 5 anos com as ações.",
+"só pode votar se tiver mais de 50% das ações da empresa.",
+"pode participar e votar, pois ações ordinárias dão direito a voto.",
+"pode votar apenas por meio da corretora, que decide por ele."
+],
+"certa": "C",
+"gabarito": "Ações ordinárias conferem direito de voto nas assembleias (cada ação, um voto, em regra). Na AGO, os acionistas aprovam contas, destinam o lucro e elegem administradores. Companhias abertas oferecem boletim de voto a distância, facilitando a participação de minoritários. Ações preferenciais, em regra, não votam.",
+"porque": {
+"A": "Não existe essa carência.",
+"B": "Todo acionista ordinarista vota, na proporção das ações.",
+"D": "O voto é do acionista, que pode votar a distância ou por procurador."
+},
+"dica": "Ação ON = voto em assembleia (inclusive a distância).",
+"caso": "Árvore de diálogo: Bruno e as ações herdadas",
+"etapa": "1/3"
+},
+{
+"pd": "2.1.1.2.2.2.3",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "A empresa vai pagar a Bruno dividendos de R$ 20 mil em um único mês. Ele leu que dividendos passaram a ser tributados em 2026 e pergunta a Ana se haverá retenção.",
+"enunciado": "Ana explica que, pelas regras de 2026:",
+"alt": [
+"há retenção de 10% sobre qualquer valor de dividendos.",
+"não há retenção: fica abaixo de R$ 50 mil no mês.",
+"há retenção de 17,5%, como no JCP.",
+"há retenção de 15%, como no ganho de capital em ações."
+],
+"certa": "B",
+"gabarito": "Com a Lei 15.270/2025, desde 2026 há retenção de IR de 10% sobre lucros e dividendos pagos por uma mesma empresa a uma mesma pessoa física acima de R$ 50 mil em um mês; abaixo disso, a regra de isenção na fonte continua. Há ainda a tributação mínima para altas rendas anuais, apurada na declaração. O JCP tem retenção própria (17,5% desde 2026).",
+"porque": {
+"A": "A retenção vale acima de R$ 50 mil por mês da mesma empresa.",
+"C": "17,5% é a alíquota do JCP.",
+"D": "Dividendos não seguem essa alíquota."
+},
+"dica": "Dividendos 2026: retenção de 10% só acima de R$ 50 mil por mês da mesma empresa.",
+"caso": "Árvore de diálogo: Bruno e as ações herdadas",
+"etapa": "2/3"
+},
+{
+"pd": "2.1.1.3.2",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Bruno decide vender parte das ações herdadas e pergunta a Ana qual custo de aquisição usar para calcular o ganho.",
+"enunciado": "Ana explica que, em regra, o custo das ações herdadas é:",
+"alt": [
+"o valor pelo qual foram transmitidas no inventário.",
+"zero, pois as ações foram recebidas sem pagamento.",
+"o preço de mercado no dia da venda.",
+"o preço pago pelo falecido na compra, corrigido pela inflação."
+],
+"certa": "A",
+"gabarito": "Para o herdeiro, o custo de aquisição de bens recebidos por herança é, em regra, o valor pelo qual foram transmitidos (o valor informado no inventário e na declaração). Se a transmissão for feita por valor superior ao custo do falecido, a diferença pode gerar ganho de capital no espólio. Na venda, o herdeiro apura o ganho pela diferença entre o preço de venda e esse custo.",
+"porque": {
+"B": "O custo é o valor de transmissão, não zero.",
+"C": "Usar o preço de venda zeraria o ganho.",
+"D": "Não há correção pela inflação; usa-se o valor da transmissão."
+},
+"dica": "Ações herdadas: custo = valor de transmissão no inventário.",
+"caso": "Árvore de diálogo: Bruno e as ações herdadas",
+"etapa": "3/3"
+},
+{
+"pd": "2.1.1.1.3.1",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Um cliente conservador compara um CDB de 120% do CDI de um banco pequeno com o Tesouro Selic. Ele tem R$ 100 mil e pergunta a Sandro, profissional CPA, se o CDB é “melhor sem risco”.",
+"enunciado": "Sandro explica que:",
+"alt": [
+"os dois têm exatamente o mesmo risco, pois ambos são renda fixa.",
+"o CDB tem risco menor que o Tesouro, pois conta com o FGC.",
+"o CDB paga mais por ter mais risco; o FGC mitiga até o limite.",
+"o Tesouro Selic paga menos porque tem carência de 2 anos."
+],
+"certa": "C",
+"gabarito": "Taxas acima do mercado remuneram risco: bancos menores pagam mais para captar. Até R$ 250 mil, o FGC reduz o risco de perda, mas em caso de intervenção pode haver demora para receber e o investidor recebe só até o limite. O Tesouro Selic tem risco soberano e liquidez diária. A escolha considera perfil, valor e diversificação.",
+"porque": {
+"A": "Os emissores e as garantias são diferentes.",
+"B": "O título público tem risco soberano, o menor da economia.",
+"D": "O Tesouro Selic tem liquidez diária."
+},
+"dica": "Taxa maior = risco maior. FGC mitiga até o limite, mas não iguala ao risco soberano."
+},
+{
+"pd": "2.1.1.1.4.2",
+"dif": "Difícil",
+"nivel": "Análise",
+"contexto": "Uma empresa emite duas debêntures de mesmo prazo e risco: uma simples, a 12% ao ano, e uma conversível em ações, a 9% ao ano. Um cliente pergunta a Rita, profissional CPA, por que a conversível paga menos.",
+"enunciado": "Rita explica que a conversível paga menos porque:",
+"alt": [
+"traz a opção de virar ação, que tem valor.",
+"tem garantia do FGC, por poder virar ações.",
+"é isenta de IR para qualquer investidor.",
+"tem prazo indeterminado, ao contrário da simples."
+],
+"certa": "A",
+"gabarito": "A debênture conversível combina um título de dívida com o direito (opção) de converter em ações da emissora em condições predefinidas. Como essa opção tem valor (o investidor ganha se as ações se valorizarem), a empresa consegue pagar juros menores. Para o investidor, há potencial de ganho extra, com os riscos de crédito e de mercado.",
+"porque": {
+"B": "Debêntures não têm FGC.",
+"C": "A conversibilidade não traz isenção.",
+"D": "O caso informa o mesmo prazo."
+},
+"dica": "Conversível paga menos juros porque traz a opção de virar ação."
+},
+{
+"pd": "2.1.1.1.5",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Carla compara um CRI e uma debênture incentivada, ambos isentos para ela. Pergunta a Davi, profissional CPA, qual a principal diferença de estrutura.",
+"enunciado": "Davi explica que:",
+"alt": [
+"o CRI tem FGC e a debênture não.",
+"CRI é securitização imobiliária; debênture é dívida da empresa.",
+"a debênture é emitida pelo Tesouro e o CRI por bancos.",
+"os dois são idênticos e diferem só no nome."
+],
+"certa": "B",
+"gabarito": "CRI: título emitido por securitizadora, lastreado em recebíveis imobiliários, com regime fiduciário; o risco é dos devedores do lastro e das garantias. Debênture incentivada: título de dívida emitido diretamente por sociedade anônima para financiar infraestrutura; o risco é da própria empresa. Ambos são isentos de IR para pessoa física e não têm FGC.",
+"porque": {
+"A": "Nenhum dos dois tem FGC.",
+"C": "Debêntures são de empresas; CRI, de securitizadoras.",
+"D": "Emissor, lastro e estrutura são diferentes."
+},
+"dica": "CRI = securitização de recebíveis imobiliários. Debênture = dívida direta da empresa."
+},
+{
+"pd": "2.1.3.2.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Mário manteve cotas de uma classe de renda fixa de longo prazo por 3 anos, pagando come-cotas de 15% a cada semestre. Ao resgatar, pergunta a Paula, profissional CPA, se haverá IR adicional.",
+"enunciado": "Paula explica que, em regra:",
+"alt": [
+"haverá complemento até 22,5%, a alíquota máxima da tabela.",
+"não: acima de 720 dias a alíquota final já é 15%.",
+"haverá devolução de todo o come-cotas pago.",
+"haverá IR de 20% sobre todo o valor resgatado."
+],
+"certa": "B",
+"gabarito": "Em classes de longo prazo, o come-cotas antecipa 15% sobre o rendimento semestral. No resgate, aplica-se a alíquota pelo prazo total; acima de 720 dias, 15%, igual à antecipada, de modo que, em regra, só há IR sobre o rendimento ainda não tributado desde o último come-cotas. Em prazos menores, cobra-se a diferença (22,5%, 20% ou 17,5%).",
+"porque": {
+"A": "A alíquota final depende do prazo; acima de 720 dias, 15%.",
+"C": "O come-cotas é antecipação do imposto devido.",
+"D": "O IR incide só sobre o rendimento."
+},
+"dica": "Fundo de longo prazo, mais de 720 dias: come-cotas de 15% = alíquota final."
+},
+{
+"pd": "2.1.1.3.1",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Igor tem cotas de um ETF de renda fixa que acompanha títulos públicos longos. Ele pergunta a Sueli, profissional CPA, se a tributação é igual à de ETF de ações.",
+"enunciado": "Sueli explica que, em ETFs de renda fixa:",
+"alt": [
+"o IR é sempre 15%, pago por DARF, como no ETF de ações.",
+"o IR vai de 15% a 25%, pelo prazo médio, na fonte.",
+"o ganho é isento até R$ 20 mil de vendas por mês.",
+"não há IR, pois títulos públicos são isentos."
+],
+"certa": "B",
+"gabarito": "ETFs de renda fixa têm tributação na fonte conforme o prazo médio da carteira: 25% (até 180 dias), 20% (181 a 720 dias) e 15% (acima de 720 dias), sem come-cotas. ETFs de ações: 15% sobre o ganho, apurado e pago pelo investidor por DARF, sem a isenção de R$ 20 mil.",
+"porque": {
+"A": "A regra é diferente para ETFs de renda fixa.",
+"C": "Essa isenção é exclusiva de ações.",
+"D": "Títulos públicos são tributados."
+},
+"dica": "ETF de renda fixa: IR na fonte de 15% a 25%, pelo prazo médio da carteira."
+},
+{
+"pd": "2.1.2.2.19",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cotista pergunta a Lauro, profissional CPA, quem guarda os ativos do fundo e confirma que eles existem.",
+"enunciado": "Lauro explica que essa função é do:",
+"alt": [
+"gestor, que guarda os ativos em sua própria conta.",
+"distribuidor, que mantém os ativos junto aos clientes.",
+"auditor, que compra e vende os ativos.",
+"custodiante, que guarda os ativos."
+],
+"certa": "D",
+"gabarito": "O custodiante (contratado pelo administrador) guarda os ativos da carteira, registra-os em nome do fundo, liquida as operações e controla eventos (juros, dividendos). A separação entre quem decide (gestor), quem controla (administrador) e quem guarda (custodiante) reforça a segurança dos cotistas. O auditor verifica as demonstrações contábeis.",
+"porque": {
+"A": "Os ativos ficam com o custodiante, em nome do fundo.",
+"B": "O distribuidor vende cotas; não guarda ativos.",
+"C": "O auditor examina as demonstrações contábeis."
+},
+"dica": "Custodiante guarda os ativos do fundo; gestor decide; administrador controla."
+},
+{
+"pd": "2.2.2",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Ao contratar um PGBL, Diana não sabe se escolhe o regime progressivo ou o regressivo. O corretor diz que ela precisa decidir na hora e que a escolha é irreversível. Ela pergunta a Rui, profissional CPA.",
+"enunciado": "Rui explica que, pela Lei 14.803/2024:",
+"alt": [
+"a escolha deve ser feita obrigatoriamente na contratação.",
+"o regime é escolhido pela seguradora, conforme a renda dela.",
+"ela pode escolher o regime até o primeiro resgate ou o pedido de benefício.",
+"o regime pode ser trocado a qualquer momento, quantas vezes ela quiser."
+],
+"certa": "C",
+"gabarito": "A Lei 14.803/2024 permite ao participante de planos de previdência escolher o regime de tributação (progressivo ou regressivo) até o momento da obtenção do benefício ou do primeiro resgate, o que facilita decidir com mais informações sobre prazo e renda. A opção pelo regressivo é irretratável.",
+"porque": {
+"A": "A lei permite adiar a escolha.",
+"B": "A escolha é do participante.",
+"D": "Feita a opção pelo regressivo, ela é irretratável."
+},
+"dica": "Regime de IR da previdência: pode escolher até o 1º resgate ou benefício (Lei 14.803)."
+},
+{
+"pd": "2.3.3.1",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Ao contratar um empréstimo pessoal, Leandro vê no contrato IOF com “alíquota diária” e uma “alíquota adicional”. Pergunta a Mara, profissional CPA, como funciona.",
+"enunciado": "Mara explica que, nas operações de crédito para pessoa física:",
+"alt": [
+"o IOF é cobrado só no último dia do contrato.",
+"o IOF tem parcela diária (com teto de prazo) e adicional fixo.",
+"o IOF é isento para pessoas físicas.",
+"o IOF incide sobre a renda do tomador, e não sobre o valor emprestado."
+],
+"certa": "B",
+"gabarito": "O IOF sobre operações de crédito para pessoa física combina uma alíquota diária, aplicada sobre o valor e limitada a um prazo máximo (365 dias), e uma alíquota adicional fixa sobre o valor da operação. O imposto entra no CET. Por isso o custo efetivo é maior que a taxa de juros nominal.",
+"porque": {
+"A": "O IOF é calculado na contratação.",
+"C": "Há IOF sobre o crédito.",
+"D": "Incide sobre o valor da operação."
+},
+"dica": "IOF no crédito: parcela diária (com teto de prazo) + adicional fixo; entra no CET."
+},
+{
+"pd": "2.4.1.5.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente tenta fazer um Pix de R$ 3.000 às 22h e não consegue. Ele pergunta a Davi, profissional CPA, o motivo.",
+"enunciado": "Davi explica que, por regra de segurança do Pix:",
+"alt": [
+"o Pix não funciona após as 20h, só em horário comercial.",
+"Pix acima de R$ 1.000 é proibido em qualquer horário.",
+"há limite noturno menor, que pode ser ajustado.",
+"o banco bloqueou a conta por suspeita de lavagem."
+],
+"certa": "C",
+"gabarito": "Como medida de segurança, o Banco Central estabeleceu limites para o Pix de pessoas físicas no período noturno (padrão de R$ 1.000 entre 20h e 6h, ajustável), além de regras para aumento de limites com prazo de carência e cadastro de contas frequentes. O objetivo é reduzir golpes e sequestros relâmpago.",
+"porque": {
+"A": "O Pix funciona 24/7.",
+"B": "Os limites são configuráveis, e o diurno é maior.",
+"D": "O caso descreve limite noturno, não bloqueio."
+},
+"dica": "Pix noturno tem limite menor (pessoa física), ajustável com prazo de segurança."
+},
+{
+"pd": "2.1.1.2.3.1.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma empresa quer entrar em um segmento de governança da B3 sem as exigências do Novo Mercado, mas com mais transparência que o segmento básico. Pergunta a Lauro, profissional CPA.",
+"enunciado": "Lauro indica o Nível 1, que exige, entre outros:",
+"alt": [
+"só ações ordinárias e tag along de 100%.",
+"mais transparência e free float mínimo.",
+"dispensa de qualquer divulgação adicional de informações.",
+"que a empresa seja de pequeno porte e faça oferta menor."
+],
+"certa": "B",
+"gabarito": "Segmentos de listagem da B3: Nível 1 (práticas de transparência e dispersão acionária, com free float mínimo); Nível 2 (regras próximas às do Novo Mercado, mas admite PN, com tag along de 100%); Novo Mercado (só ON, tag along de 100%, conselho com independentes, mais transparência); Bovespa Mais (acesso gradual).",
+"porque": {
+"A": "Essas são exigências do Novo Mercado.",
+"C": "O Nível 1 exige mais transparência.",
+"D": "Esse é o Bovespa Mais."
+},
+"dica": "Nível 1: transparência e free float mínimo. Novo Mercado: o mais exigente."
+},
+{
+"pd": "2.1.1.3.3",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Ana teve prejuízo de R$ 2.000 na venda de cotas de FII e lucro de R$ 3.000 em operações comuns com ações, no mesmo mês, com vendas de ações de R$ 50 mil. Pergunta a Hugo, profissional CPA, se pode compensar.",
+"enunciado": "Hugo explica que:",
+"alt": [
+"o prejuízo com FII só compensa lucro com FII; o lucro das ações paga 15%.",
+"o prejuízo com FII compensa o lucro das ações, e ela paga 15% sobre R$ 1.000.",
+"os dois resultados se anulam e não há imposto.",
+"o lucro das ações é isento, pois o prejuízo do FII reduz as vendas."
+],
+"certa": "A",
+"gabarito": "Na renda variável, prejuízos só compensam lucros da mesma natureza: day trade com day trade; operações comuns com ações com operações comuns; FII com FII. Aqui, o lucro das ações (R$ 3.000) paga 15% = R$ 450, e o prejuízo do FII fica registrado para compensar ganhos futuros com FII.",
+"porque": {
+"B": "A compensação não ocorre entre FII e ações.",
+"C": "A compensação cruzada não é permitida.",
+"D": "A isenção depende das vendas de ações (aqui, R$ 50 mil)."
+},
+"dica": "Prejuízo de FII só compensa lucro de FII."
+},
+{
+"pd": "2.1.1.1.11",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Celso aplicou R$ 100 mil em um CDB e resgatou após 500 dias, com rendimento de R$ 15 mil. Pergunta a Joana, profissional CPA, o valor líquido.",
+"enunciado": "Joana calcula que ele recebeu:",
+"alt": [
+"R$ 112.750,00, após IR de 15% sobre o rendimento.",
+"R$ 112.000,00, após IR de 20% sobre o rendimento.",
+"R$ 94.875,00, após IR de 17,5% sobre o total.",
+"R$ 112.375,00, após IR de 17,5% sobre o rendimento."
+],
+"certa": "D",
+"gabarito": "500 dias estão na faixa de 361 a 720 dias: IR de 17,5%. IR = 17,5% × 15.000 = R$ 2.625. Valor líquido = 100.000 + 15.000 − 2.625 = R$ 112.375.",
+"porque": {
+"A": "Com 500 dias, a alíquota é de 17,5%.",
+"B": "20% vale de 181 a 360 dias.",
+"C": "O IR incide só sobre o rendimento."
+},
+"dica": "361 a 720 dias: 17,5% sobre o rendimento."
+},
+{
+"pd": "2.1.1.1.12",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Ivana resgatou um CDB no 20º dia, com rendimento bruto de R$ 90. A alíquota de IOF no 20º dia é de 33%. Ela pergunta a Rogério, profissional CPA, quanto paga de IOF e de IR.",
+"enunciado": "Rogério calcula, aproximadamente:",
+"alt": [
+"IOF de R$ 29,70 e IR de R$ 13,57 (22,5% sobre R$ 60,30).",
+"IOF de R$ 29,70 e IR de R$ 20,25 (22,5% sobre os R$ 90).",
+"IOF de R$ 0,34 e IR de R$ 20,25.",
+"sem IOF, pois a cobrança acaba após 15 dias, e IR de R$ 20,25."
+],
+"certa": "A",
+"gabarito": "IOF = 33% × 90 = R$ 29,70. Rendimento após IOF = R$ 60,30. IR (até 180 dias, 22,5%) = 22,5% × 60,30 ≈ R$ 13,57. Rendimento líquido ≈ R$ 46,73. Resgates antes de 30 dias perdem boa parte do rendimento para o IOF.",
+"porque": {
+"B": "O IR incide sobre o rendimento já descontado o IOF.",
+"C": "A alíquota do IOF é de 33% sobre o rendimento, não 0,38%.",
+"D": "O IOF só zera no 30º dia."
+},
+"dica": "Primeiro o IOF sobre o rendimento; o IR incide sobre o que sobra."
+},
+{
+"pd": "2.2.2.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Jair fez um único aporte em um VGBL no regime regressivo há 7 anos e resgata todo o saldo, com rendimento de R$ 40 mil. Pergunta a Luana, profissional CPA, o IR.",
+"enunciado": "Luana calcula que o IR será de:",
+"alt": [
+"R$ 10.000 (25% sobre o rendimento).",
+"R$ 6.000 (15% sobre o rendimento).",
+"R$ 4.000 (10% sobre o rendimento).",
+"R$ 8.000 (20% sobre o rendimento)."
+],
+"certa": "D",
+"gabarito": "Regime regressivo: 35% (até 2 anos), 30% (2 a 4), 25% (4 a 6), 20% (6 a 8), 15% (8 a 10), 10% (acima de 10). Com 7 anos, 20%. No VGBL, sobre o rendimento: 20% × 40.000 = R$ 8.000.",
+"porque": {
+"A": "25% vale de 4 a 6 anos.",
+"B": "15% vale de 8 a 10 anos.",
+"C": "10% só acima de 10 anos."
+},
+"dica": "Regressivo: 6 a 8 anos = 20%."
+},
+{
+"pd": "2.1.2.2.20.1",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Uma classe multimercado rendeu 15% no semestre, enquanto o CDI rendeu 10%. A taxa de performance é de 20% sobre o que exceder o CDI, e a cota está acima da linha d’água. Um cotista pergunta a Gabriel, profissional CPA, quanto será cobrado.",
+"enunciado": "Gabriel calcula que a performance será de cerca de:",
+"alt": [
+"1% do patrimônio (20% sobre o excedente de 5 pontos).",
+"3% do patrimônio (20% sobre os 15% de rendimento).",
+"5% do patrimônio, todo o excedente sobre o CDI.",
+"2% do patrimônio (20% sobre os 10% do CDI)."
+],
+"certa": "A",
+"gabarito": "Taxa de performance = percentual × (rentabilidade − índice de referência), respeitada a linha d’água: 20% × (15% − 10%) = 1% do patrimônio (aproximação simplificada). O cálculo efetivo considera o período e a forma do regulamento. A cobrança só ocorre se a cota superar o índice e o último valor que gerou cobrança.",
+"porque": {
+"B": "A performance incide só sobre o que excede o CDI.",
+"C": "A taxa é de 20% do excedente, não 100%.",
+"D": "O CDI é a referência, não a base de cobrança."
+},
+"dica": "Performance = taxa × (retorno − benchmark), acima da linha d’água."
+},
+{
+"pd": "2.3.8",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Depois de 2 anos pagando um consórcio, Marcos desiste e pede o dinheiro de volta imediatamente. A administradora informa outro procedimento. Ele pergunta a Sílvia, profissional CPA.",
+"enunciado": "Sílvia explica que, pela Lei 11.795/2008, o consorciado excluído:",
+"alt": [
+"recebe tudo de imediato, com juros pela Selic do período.",
+"perde todos os valores pagos, como multa pela desistência.",
+"só recebe se encontrar outra pessoa para assumir a cota.",
+"recebe quando sorteado entre excluídos ou no fim do grupo."
+],
+"certa": "D",
+"gabarito": "Pela Lei 11.795/2008, o consorciado que desiste ou é excluído tem direito à restituição dos valores pagos ao fundo comum, com eventuais deduções previstas no contrato (como multa), quando for contemplado em sorteio entre os excluídos ou até o encerramento do grupo. Também pode transferir a cota a terceiros, conforme as regras.",
+"porque": {
+"A": "A devolução segue a contemplação entre excluídos ou o encerramento.",
+"B": "Os valores do fundo comum são devolvidos, com deduções previstas.",
+"C": "A transferência é possível, mas não é a única forma."
+},
+"dica": "Desistente de consórcio: recebe quando sorteado entre os excluídos ou no fim do grupo."
+},
+{
+"pd": "2.1.2.2.23",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um gestor aloca nas carteiras dos fundos que gere títulos de empresa da qual é sócio, sem informar os cotistas. Um cliente pergunta a Teresa, profissional CPA, se isso é aceitável.",
+"enunciado": "Teresa explica que, pelas normas de conduta dos fundos:",
+"alt": [
+"o gestor pode investir em qualquer ativo, desde que tenha bom retorno.",
+"o gestor só tem dever de lealdade com o administrador, não com os cotistas.",
+"o gestor deve agir com lealdade e evitar ou informar conflitos de interesses.",
+"normas de conduta valem apenas para distribuidores, não para gestores."
+],
+"certa": "C",
+"gabarito": "A CVM 175 impõe aos prestadores de serviços dos fundos normas de conduta: exercer suas atividades com boa-fé, diligência e lealdade aos cotistas, evitar práticas que possam ferir a relação fiduciária e identificar, administrar e divulgar conflitos de interesses. Operações com partes ligadas exigem cuidados e, em certos casos, aprovação dos cotistas.",
+"porque": {
+"A": "Conflitos de interesses devem ser evitados ou tratados com transparência.",
+"B": "O dever fiduciário é com os cotistas.",
+"D": "Valem para todos os prestadores de serviço."
+},
+"dica": "Gestor tem dever fiduciário: lealdade aos cotistas e transparência sobre conflitos."
+},
+{
+"pd": "3.4.3.1.1",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Glória, 58 anos, procura Daniela, profissional CPA, dizendo apenas que “quer investir melhor”. Daniela tem uma lista de produtos em campanha no mês.",
+"enunciado": "A atitude inicial mais adequada de Daniela é:",
+"alt": [
+"fazer perguntas abertas e ouvir com atenção os objetivos e preocupações de Glória.",
+"apresentar logo os produtos em campanha, para aproveitar o interesse da cliente.",
+"perguntar só o valor disponível e preencher o resto do cadastro sozinha.",
+"recomendar o produto de maior rentabilidade do último ano."
+],
+"certa": "A",
+"gabarito": "A escuta ativa (perguntas abertas, atenção plena, confirmação do entendimento) permite identificar objetivos, horizonte, necessidades de liquidez, preocupações e conhecimento do cliente. É a base para o suitability e para recomendações adequadas, e evita que metas comerciais se sobreponham ao interesse do cliente.",
+"porque": {
+"B": "Sem entender a cliente, a oferta pode ser inadequada.",
+"C": "O cadastro e o perfil precisam das informações da cliente.",
+"D": "Rentabilidade passada não define adequação."
+},
+"dica": "Comece ouvindo: perguntas abertas e atenção aos objetivos do cliente.",
+"caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+"etapa": "1/4"
+},
+{
+"pd": "3.1.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Glória conta que pretende se aposentar em 4 anos, tem patrimônio razoável e quer garantir que ele não encolha até lá.",
+"enunciado": "Daniela identifica que Glória está, no ciclo de vida, entrando na fase de:",
+"alt": [
+"acumulação de capital.",
+"preservação de capital.",
+"distribuição de renda.",
+"crescimento patrimonial com mais risco."
+],
+"certa": "B",
+"gabarito": "Ciclo de vida do investidor: acumulação (início da carreira), crescimento patrimonial (renda maior, horizonte longo), preservação (proximidade da aposentadoria, foco em proteger o patrimônio e reduzir risco) e distribuição (uso do patrimônio para renda e sucessão). A fase orienta, mas não substitui, a análise de perfil.",
+"porque": {
+"A": "Ela já tem patrimônio e horizonte curto.",
+"C": "Ela ainda não começou a viver da renda.",
+"D": "O objetivo declarado é proteger o patrimônio."
+},
+"dica": "Perto da aposentadoria e querendo proteger o patrimônio: preservação.",
+"caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+"etapa": "2/4"
+},
+{
+"pd": "3.4.2.4",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "O perfil de Glória resulta conservador. Mesmo assim, ela pede para aplicar 40% em um fundo de ações porque uma amiga ganhou muito.",
+"enunciado": "Daniela deve:",
+"alt": [
+"explicar os riscos e, se ela insistir, alertar e colher declaração.",
+"aplicar sem comentários, pois a decisão é da cliente.",
+"reclassificar Glória como arrojada para enquadrar a operação.",
+"recusar e encerrar o atendimento, pois a regra proíbe a operação."
+],
+"certa": "A",
+"gabarito": "Pela CVM 30, se o cliente quiser investir em produto inadequado ao perfil, a instituição deve alertá-lo previamente, com os motivos, e obter declaração expressa de ciência. O profissional também deve esclarecer os riscos, considerando o horizonte curto e o objetivo de preservação.",
+"porque": {
+"B": "É obrigatório alertar sobre o desenquadramento.",
+"C": "Ajustar o perfil para vender é irregular.",
+"D": "A operação é possível com alerta e declaração."
+},
+"dica": "Cliente insiste em produto fora do perfil: explicar, alertar e colher declaração.",
+"caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+"etapa": "3/4"
+},
+{
+"pd": "3.4.3.1.5",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Glória diz que espera “ganhar como a amiga, uns 40% ao ano, sem riscos”.",
+"enunciado": "A conduta adequada de Daniela é:",
+"alt": [
+"prometer que, com sua ajuda, Glória terá o mesmo resultado da amiga.",
+"evitar o assunto para não desmotivar a cliente.",
+"alinhar expectativas: retorno alto vem com risco.",
+"dizer que 40% sem risco é possível em fundos de renda fixa."
+],
+"certa": "C",
+"gabarito": "Gerenciar expectativas é parte do atendimento ético: explicar a relação risco–retorno, mostrar cenários realistas para o perfil e o prazo do cliente e corrigir percepções baseadas em casos isolados. Promessas de retorno e omissão de riscos violam o Código de Ética e expõem a instituição a riscos legais e de imagem.",
+"porque": {
+"A": "Prometer rentabilidade é vedado.",
+"B": "Omitir gera frustração e risco de reclamação.",
+"D": "Isso é falso e enganoso."
+},
+"dica": "Expectativa irreal: alinhe com risco e retorno realistas; nunca prometa.",
+"caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+"etapa": "4/4"
+},
+{
+"pd": "3.1.3.3.6",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Igor vai financiar um carro de R$ 70 mil. Pode dar R$ 10 mil de entrada em 60 meses ou R$ 30 mil em 36 meses, à mesma taxa. Pergunta a Lúcia, profissional CPA.",
+"enunciado": "Lúcia explica que, em geral, mais entrada e menor prazo:",
+"alt": [
+"aumentam o total de juros, pois a parcela fica maior.",
+"não alteram o custo total, pois a taxa é a mesma.",
+"reduzem os juros totais, sem sacrificar a reserva.",
+"devem ser evitados sempre, pois o ideal é financiar 100% no maior prazo."
+],
+"certa": "C",
+"gabarito": "No financiamento de veículos (e de imóveis), entrada maior reduz o valor financiado, e prazo menor reduz o tempo de incidência dos juros; os dois diminuem o total pago. A decisão deve preservar a reserva de emergência e manter a parcela compatível com o orçamento. Compare o CET das propostas.",
+"porque": {
+"A": "Menor saldo financiado e menor prazo reduzem os juros totais.",
+"B": "O valor financiado e o prazo mudam o total de juros.",
+"D": "Isso maximiza o custo dos juros."
+},
+"dica": "Mais entrada e menos prazo = menos juros no total (sem sacrificar a reserva)."
+},
+{
+"pd": "3.1.6.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Hélio aluga um apartamento para outra pessoa física e recebe R$ 3.000 por mês. Ele pergunta a Bianca, profissional CPA, como paga o IR desse rendimento.",
+"enunciado": "Bianca explica que o aluguel recebido de pessoa física:",
+"alt": [
+"é isento, por ser renda de imóvel residencial.",
+"tem tributação exclusiva na fonte, retida pelo inquilino.",
+"é tributável, pago no carnê-leão e ajustado na declaração.",
+"só é declarado se passar de R$ 10 mil por mês."
+],
+"certa": "C",
+"gabarito": "Aluguéis são rendimentos tributáveis. Quando pagos por pessoa física, o locador recolhe mensalmente o IR pelo carnê-leão (tabela progressiva mensal); quando pagos por pessoa jurídica, há retenção na fonte. Na declaração anual, os valores entram como rendimentos tributáveis, com o imposto já pago compensado.",
+"porque": {
+"A": "Aluguel é tributável.",
+"B": "Pessoa física inquilina não retém IR.",
+"D": "Deve ser declarado, e o carnê-leão segue a tabela mensal."
+},
+"dica": "Aluguel recebido de pessoa física: carnê-leão mensal + ajuste anual."
+},
+{
+"pd": "3.2.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Seu Amaro, 55 anos, perfil moderado, quer pagar a festa de casamento da filha daqui a 3 anos, com valor já orçado. Pergunta a Saulo, profissional CPA, onde aplicar.",
+"enunciado": "Saulo recomenda, de forma adequada:",
+"alt": [
+"ações de empresas de crescimento, pois o perfil moderado aceita algum risco.",
+"previdência privada, por causa do benefício fiscal.",
+"renda fixa com vencimento próximo da data do casamento, de bons emissores.",
+"um fundo multimercado alavancado, para garantir o valor."
+],
+"certa": "C",
+"gabarito": "Tipo de investimento, tolerância a risco e horizonte devem estar alinhados: para objetivo de médio prazo com data e valor definidos, títulos de renda fixa com vencimento casado com a data (prefixados ou atrelados à inflação, de bons emissores) dão previsibilidade, evitando vender ativos voláteis em momento ruim.",
+"porque": {
+"A": "Objetivo com data e valor definidos pede previsibilidade.",
+"B": "Previdência é para o longo prazo.",
+"D": "Alavancagem aumenta o risco; não garante valor."
+},
+"dica": "Objetivo com data marcada: renda fixa com vencimento casado com a data."
+},
+{
+"pd": "3.3.4",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente tem toda a carteira em ativos brasileiros e pergunta a Elisa, profissional CPA, se faz sentido investir uma parte no exterior.",
+"enunciado": "Elisa explica que a diversificação internacional:",
+"alt": [
+"elimina todos os riscos da carteira, inclusive o cambial.",
+"só é permitida para investidores profissionais.",
+"sempre rende mais que investir no Brasil.",
+"reduz o risco concentrado no Brasil, com outras moedas."
+],
+"certa": "D",
+"gabarito": "Diversificar internacionalmente reduz a dependência de um único país (economia, política, moeda), aproveitando ativos com baixa correlação com o Brasil. Pode ser feito por BDRs, ETFs, fundos com ativos no exterior ou contas internacionais. Traz riscos próprios (câmbio, jurídico, tributário) e deve ser adequado ao perfil.",
+"porque": {
+"A": "Introduz risco cambial e não elimina os demais.",
+"B": "Há várias formas acessíveis (BDRs, ETFs, fundos).",
+"C": "Não há garantia de rendimento maior."
+},
+"dica": "Investir lá fora reduz o risco-Brasil, mas traz risco cambial."
+},
+{
+"pd": "3.4.1.1",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Um cliente oferece a Rodrigo, profissional CPA, uma “comissão por fora” se ele conseguir uma taxa de CDB especial que, pela política do banco, ele não teria direito.",
+"enunciado": "Pelo Código de Conduta Ética, Rodrigo deve:",
+"alt": [
+"aceitar, pois a comissão vem do cliente e não prejudica ninguém.",
+"recusar e seguir a política, com integridade.",
+"aceitar só se a taxa especial for pequena.",
+"aceitar e dividir a comissão com a equipe."
+],
+"certa": "B",
+"gabarito": "O Código de Conduta Ética das Certificações Anbima exige integridade, ética, transparência e lealdade. Receber vantagens indevidas para conceder condições fora das regras configura conduta antiética e pode ser ilícito, além de violar as políticas da instituição. A conduta correta é recusar e, conforme a política, comunicar.",
+"porque": {
+"A": "Vantagem indevida fere a integridade e a lealdade à instituição.",
+"C": "O valor não muda a natureza da conduta.",
+"D": "Continua sendo vantagem indevida."
+},
+"dica": "Vantagem por fora para burlar regras: recuse."
+},
+{
+"pd": "3.4.2.6",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "O perfil de Luís foi feito há 30 meses e nunca atualizado. Ele quer aplicar hoje em um fundo multimercado. O sistema indica perfil vencido.",
+"enunciado": "Pela CVM 30, a instituição deve:",
+"alt": [
+"usar o perfil antigo normalmente, pois ele continua válido.",
+"alertar sobre o perfil vencido e colher declaração.",
+"bloquear qualquer aplicação até que ele refaça o perfil.",
+"preencher um novo perfil pelo cliente, sem perguntar nada."
+],
+"certa": "B",
+"gabarito": "Pela CVM 30, as informações do perfil devem ser atualizadas em intervalos de até 24 meses. Quando o cliente está sem perfil ou com perfil desatualizado e quer investir, a instituição deve alertá-lo e obter declaração expressa de ciência, além de buscar a atualização. O ideal é atualizar o perfil antes da recomendação.",
+"porque": {
+"A": "Perfil com mais de 24 meses está desatualizado.",
+"C": "A norma admite operar com alerta e declaração.",
+"D": "O perfil precisa de informações do próprio cliente."
+},
+"dica": "Perfil vencido (mais de 24 meses): alertar, colher declaração e atualizar."
+},
+{
+"pd": "3.4.4.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um banco usou um contrato de crédito com cláusula ambígua sobre a cobrança de encargos. Vários clientes entraram na Justiça e o banco foi condenado a devolver valores.",
+"enunciado": "O risco materializado foi principalmente o:",
+"alt": [
+"de mercado (variação dos juros).",
+"de liquidez (falta de caixa).",
+"sistêmico (contágio no sistema).",
+"legal (contratos e Justiça)."
+],
+"certa": "D",
+"gabarito": "Risco legal é a possibilidade de perdas decorrentes de contratos mal redigidos, inválidos ou abusivos, de ações judiciais e de mudanças na interpretação das normas. É gerenciado com revisão jurídica de contratos, clareza com o cliente e conformidade com a legislação, como o Código de Defesa do Consumidor.",
+"porque": {
+"A": "Não houve perda por variação de preços.",
+"B": "Não houve falta de liquidez.",
+"C": "O problema é contratual e restrito ao banco."
+},
+"dica": "Contrato mal feito e condenação judicial = risco legal."
+},
+{
+"pd": "3.4.6.8",
+"dif": "Difícil",
+"nivel": "Análise",
+"contexto": "Um cliente pessoa jurídica, sem atividade operacional clara, passa a receber e enviar grandes valores para empresas em jurisdições de tributação favorecida, sem justificativa econômica.",
+"enunciado": "Essa movimentação deve ser tratada como:",
+"alt": [
+"operação normal, pois remessas ao exterior são livres.",
+"assunto exclusivo da Receita Federal, sem relação com PLD.",
+"indício de suspeita, a analisar e comunicar ao COAF.",
+"motivo para avisar o cliente de que será investigado."
+],
+"certa": "C",
+"gabarito": "Caracterizam indícios de operações suspeitas, entre outros: operações com jurisdições de risco ou de tributação favorecida sem fundamento econômico, empresas sem atividade aparente movimentando grandes valores, estruturas que dificultam identificar o beneficiário final e incompatibilidade com o porte do cliente. A instituição analisa, registra e, se for o caso, comunica ao COAF, sem avisar o cliente.",
+"porque": {
+"A": "Remessas são permitidas, mas o contexto é atípico.",
+"B": "Há dever de análise e comunicação pela instituição.",
+"D": "É vedado alertar o cliente."
+},
+"dica": "Empresa sem atividade + remessas para paraísos fiscais sem justificativa = indício de suspeita."
+},
+{
+"pd": "3.4.7.1.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma companhia divulgou fato relevante sobre uma aquisição às 8h, antes da abertura do pregão. Um funcionário que conhecia a operação pergunta a Ivo, profissional CPA, se já pode comprar ações à tarde.",
+"enunciado": "Ivo explica que, em regra:",
+"alt": [
+"ele nunca poderá negociar ações da empresa em que trabalha.",
+"pode negociar antes da divulgação, desde que compre pouco.",
+"só pode negociar após 5 anos da divulgação.",
+"divulgada amplamente, a informação deixa de ser privilegiada."
+],
+"certa": "D",
+"gabarito": "O ilícito de insider trading consiste em negociar com informação relevante ainda não divulgada ao mercado. Divulgado o fato relevante de forma ampla, a informação torna-se pública. Ainda assim, companhias têm políticas de negociação (com períodos de vedação) que funcionários e administradores devem cumprir.",
+"porque": {
+"A": "A vedação está ligada à informação não divulgada e às políticas da empresa.",
+"B": "Antes da divulgação, a negociação é vedada.",
+"C": "Não existe esse prazo legal."
+},
+"dica": "Divulgado amplamente, deixa de ser informação privilegiada; mas siga a política de negociação."
+},
+{
+"pd": "3.4.5.2",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Uma pequena gestora não identificou nenhuma operação suspeita durante o ano. O diretor acha que, assim, não precisa enviar nada aos órgãos de controle. Pergunta a Clara, profissional CPA.",
+"enunciado": "Clara explica que, pelas regras de PLD aplicáveis às entidades supervisionadas pela CVM:",
+"alt": [
+"é preciso enviar anualmente a declaração de não ocorrência de comunicações.",
+"nada precisa ser enviado quando não há suspeitas no ano.",
+"é preciso comunicar ao COAF todas as operações do ano, suspeitas ou não.",
+"basta guardar os registros, sem qualquer comunicação."
+],
+"certa": "A",
+"gabarito": "Além de comunicar operações suspeitas, a regulação de PLD (como a Resolução CVM 50) exige que as entidades que não tenham feito comunicações no ano declarem essa situação (declaração de não ocorrência) dentro do prazo regulamentar. Isso demonstra que o monitoramento existe e foi realizado.",
+"porque": {
+"B": "A regulação prevê a declaração de não ocorrência.",
+"C": "Comunica-se o que é suspeito ou exigido, e a não ocorrência.",
+"D": "Há também o dever da declaração anual."
+},
+"dica": "Sem suspeitas no ano? Envie a declaração de não ocorrência."
+},
+{
+"pd": "3.1.3.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Juliana tem R$ 5.000 no cartão de crédito há um ano, pagando sempre o mínimo, e a dívida só aumenta. Pergunta a Tiago, profissional CPA, por que isso acontece.",
+"enunciado": "Tiago explica que:",
+"alt": [
+"o pagamento mínimo quita os juros e reduz o principal todo mês.",
+"a dívida aumenta só por causa da inflação, sem relação com juros.",
+"dívidas de cartão não têm juros após 12 meses.",
+"os juros compostos fazem a dívida crescer sobre juros já acumulados."
+],
+"certa": "D",
+"gabarito": "Os juros compostos trabalham a favor de quem investe e contra quem deve: juros sobre juros fazem dívidas caras crescerem rapidamente (efeito bola de neve). Educação financeira inclui evitar o rotativo, pagar a fatura integral e trocar dívidas caras por mais baratas.",
+"porque": {
+"A": "O mínimo muitas vezes não cobre os encargos e a dívida cresce.",
+"B": "O principal fator são os juros do rotativo e do parcelamento.",
+"C": "Os juros continuam incidindo."
+},
+"dica": "Juros compostos: aliados do investidor, inimigos do devedor."
+},
+{
+"pd": "4.4.3.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um contrato inteligente de seguro agrícola paga automaticamente se a chuva ficar abaixo de certo nível. Um cliente pergunta a Rui, profissional CPA, como o contrato “sabe” quanto choveu.",
+"enunciado": "Rui explica que o contrato recebe esse dado por meio de:",
+"alt": [
+"um cartório, que registra a chuva diariamente.",
+"o Banco Central, que informa os dados de todos os contratos.",
+"um oráculo, fonte que leva dados externos para o blockchain.",
+"o próprio segurado, que digita a quantidade de chuva."
+],
+"certa": "C",
+"gabarito": "Componentes de um contrato inteligente: o código com as regras, as condições de execução, as partes (endereços), os ativos envolvidos e, quando precisa de informações do mundo real (preços, clima, resultados), os oráculos, serviços que levam dados externos ao blockchain. A qualidade e a segurança do oráculo são riscos relevantes.",
+"porque": {
+"A": "Cartórios não fornecem dados meteorológicos aos contratos.",
+"B": "O BC não é fonte desses dados.",
+"D": "Isso tornaria o contrato fácil de manipular."
+},
+"dica": "Oráculo: a ponte entre dados do mundo real e o contrato inteligente."
+},
+{
+"pd": "4.5.3.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma cliente quer compartilhar todos os seus dados de investimentos pelo open investment, mas pergunta a Sérgio, profissional CPA, se há desvantagens.",
+"enunciado": "Sérgio explica que, entre as desvantagens ou riscos, está:",
+"alt": [
+"a exposição a vazamentos e a assédio comercial, se o consentimento for mal gerenciado.",
+"a perda automática da garantia do FGC sobre os investimentos.",
+"a obrigação de transferir os investimentos para a instituição que recebe os dados.",
+"o aumento automático das taxas dos produtos."
+],
+"certa": "A",
+"gabarito": "Open investment: vantagens como visão consolidada, recomendações mais completas, concorrência e portabilidade facilitada; desvantagens e riscos como segurança dos dados, uso para assédio comercial e necessidade de entender e gerenciar consentimentos (o que, com quem e por quanto tempo). O cliente pode revogar o consentimento.",
+"porque": {
+"B": "Compartilhar dados não altera garantias.",
+"C": "Não há transferência obrigatória.",
+"D": "Não há aumento automático de taxas."
+},
+"dica": "Open investment: mais informação e concorrência; cuidado com segurança e assédio comercial."
+},
+{
+"pd": "4.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um investidor tem cotas de uma classe de fundo IS e pergunta a Luana, profissional CPA, como acompanhar se o objetivo sustentável está sendo cumprido.",
+"enunciado": "Luana explica que a classe IS deve:",
+"alt": [
+"garantir rentabilidade superior à de fundos tradicionais.",
+"manter sigilo sobre os critérios para proteger a estratégia.",
+"ser fiscalizada pela SUSEP, por envolver temas ambientais.",
+"divulgar relatórios periódicos sobre o objetivo."
+],
+"certa": "D",
+"gabarito": "Pelas regras da Anbima para fundos de investimento sustentável (IS), além do objetivo sustentável na política e do sufixo IS no nome, a classe deve ter metodologia definida e divulgar periodicamente relatórios com o cumprimento do objetivo e indicadores, para que o investidor acompanhe e para evitar greenwashing.",
+"porque": {
+"A": "Não há garantia de rentabilidade.",
+"B": "As regras exigem transparência.",
+"C": "Fundos são supervisionados pela CVM."
+},
+"dica": "Fundo IS: objetivo sustentável + relatórios periódicos de resultado."
+},
+{
+"pd": "4.6.1.3",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Um cliente teve o crédito negado por um sistema automático de score e quer entender o motivo. Pergunta a Hugo, profissional CPA, se tem algum direito.",
+"enunciado": "Hugo explica que, pela LGPD, o titular:",
+"alt": [
+"pode pedir revisão e saber os critérios usados.",
+"não tem nenhum direito, pois decisões de crédito são sigilosas.",
+"pode exigir que o crédito seja concedido em qualquer caso.",
+"só pode reclamar se a decisão for tomada por uma pessoa."
+],
+"certa": "A",
+"gabarito": "Modelos preditivos (como os de score de crédito) devem ser usados com cuidado quanto a vieses, discriminação e explicabilidade. A LGPD (art. 20) garante ao titular o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses e de obter informações claras sobre os critérios, respeitados os segredos comercial e industrial.",
+"porque": {
+"B": "A LGPD garante direito de revisão e de informação.",
+"C": "A revisão não obriga a conceder crédito.",
+"D": "O direito trata justamente das decisões automatizadas."
+},
+"dica": "Decisão automatizada (ex.: score): o titular pode pedir revisão e critérios (LGPD, art. 20)."
+},
+{
+"pd": "4.2.4",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Uma empresa emite um título cuja taxa de juros aumenta se ela não atingir uma meta de redução de emissões até determinada data. Um cliente pergunta a Natália, profissional CPA, como se chama esse título.",
+"enunciado": "Natália explica que é um título:",
+"alt": [
+"vinculado a metas de sustentabilidade (sustainability-linked).",
+"verde (green bond), cujos recursos vão para um projeto específico.",
+"de capitalização, com sorteios ligados à meta ambiental.",
+"público, garantido pelo Tesouro por envolver meta ambiental."
+],
+"certa": "A",
+"gabarito": "Títulos vinculados à sustentabilidade (sustainability-linked bonds) têm características financeiras (por exemplo, a taxa) atreladas ao cumprimento de metas ESG da emissora, sem exigir destinação específica dos recursos. Diferem dos títulos verdes, sociais ou sustentáveis, cujos recursos financiam projetos elegíveis. O risco de crédito continua sendo do emissor.",
+"porque": {
+"B": "No green bond, o foco é o uso dos recursos, não metas da empresa.",
+"C": "Capitalização é outro produto.",
+"D": "É título privado, sem garantia do Tesouro."
+},
+"dica": "Sustainability-linked: taxa ligada a metas ESG. Green bond: recursos para projeto verde."
+}
+]
+}

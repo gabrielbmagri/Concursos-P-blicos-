@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.3.2",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro compara taxas",
+  "etapa": "1/3",
+  "contexto": "Pedro recebeu uma proposta de aplicação a 12% ao ano e quer saber a taxa mensal equivalente, em juros compostos, para comparar com outra que paga 1% ao mês. Pergunta a Luíza, profissional CPA.",
+  "enunciado": "Luíza calcula que 12% ao ano equivalem a cerca de:",
+  "certa": "0,95% ao mês, abaixo da outra proposta.",
+  "erradas": [
+   [
+    "1,00% ao mês, igual à outra proposta.",
+    "1% é a taxa proporcional; a equivalente é 1,12^(1/12) − 1."
+   ],
+   [
+    "1,20% ao mês, acima da outra proposta.",
+    "Dividir 12% por 10 não tem base."
+   ],
+   [
+    "0,83% ao mês, bem abaixo da outra proposta.",
+    "Não corresponde à conversão correta."
+   ]
+  ],
+  "gabarito": "Taxa mensal equivalente: (1 + 0,12)^(1/12) − 1 ≈ 0,949% ao mês. Logo, 1% ao mês (equivalente a 12,68% ao ano) é melhor que 12% ao ano. Para comparar propostas, converta todas para o mesmo período, usando juros compostos.",
+  "dica": "Anual → mensal: (1 + i_anual)^(1/12) − 1. 12% a.a. ≈ 0,95% a.m."
+ },
+ {
+  "pd": "1.3.4.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro compara taxas",
+  "etapa": "2/3",
+  "contexto": "Em seguida, Pedro quer saber o ganho real de um investimento que rendeu 12% no ano, com inflação de 4,5% no período.",
+  "enunciado": "Luíza calcula um ganho real de cerca de:",
+  "certa": "7,18% no ano.",
+  "erradas": [
+   [
+    "7,50% no ano.",
+    "É a diferença simples (12 − 4,5), que superestima o ganho."
+   ],
+   [
+    "16,50% no ano.",
+    "Somar as taxas não tem sentido aqui."
+   ],
+   [
+    "2,67% no ano.",
+    "Dividir 12 por 4,5 não é a conta correta."
+   ]
+  ],
+  "gabarito": "Fisher: real = (1 + nominal) ÷ (1 + inflação) − 1 = 1,12 ÷ 1,045 − 1 ≈ 7,18%. A diferença simples (7,5%) é apenas aproximação. Quanto maiores as taxas, maior o erro da subtração direta.",
+  "dica": "Real = (1 + nominal) ÷ (1 + inflação) − 1."
+ },
+ {
+  "pd": "1.3.3.4",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro compara taxas",
+  "etapa": "3/3",
+  "contexto": "Por fim, Pedro compara um CDB prefixado de 13% ao ano por 1 ano (IR de 17,5%) com uma LCI isenta de 10,5% ao ano no mesmo prazo.",
+  "enunciado": "Luíza conclui que:",
+  "certa": "o CDB rende cerca de 10,7% líquido, um pouco acima da LCI.",
+  "erradas": [
+   [
+    "a LCI rende mais, pois a isenção sempre compensa a diferença.",
+    "13% × 0,825 ≈ 10,7%, acima de 10,5%."
+   ],
+   [
+    "os dois rendem 13%, pois o IR é devolvido na declaração.",
+    "O IR do CDB é retido em definitivo."
+   ],
+   [
+    "o CDB rende 11,05% líquido, com IR de 15%.",
+    "Com 1 ano, a alíquota é de 17,5%."
+   ]
+  ],
+  "gabarito": "Taxa líquida do CDB = 13% × (1 − 0,175) = 10,725% ao ano, acima dos 10,5% da LCI. Em prazos de 361 a 720 dias, o IR é de 17,5%. Para escolher, considere também liquidez (carência da LCI), emissor e limites do FGC.",
+  "dica": "Líquida = bruta × (1 − IR). Com 1 ano, IR de 17,5%."
+ },
+ {
+  "pd": "1.1.1.1.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um aluno pergunta a Fábio, profissional CPA, qual órgão edita as normas gerais para os fundos de pensão (entidades fechadas de previdência).",
+  "enunciado": "Fábio explica que é o:",
+  "certa": "Conselho Nacional de Previdência Complementar (CNPC).",
+  "erradas": [
+   [
+    "Conselho Nacional de Seguros Privados (CNSP).",
+    "O CNSP normatiza seguros, capitalização e previdência aberta."
+   ],
+   [
+    "Conselho Monetário Nacional (CMN), único órgão normativo do sistema.",
+    "O CMN cuida de moeda, crédito, capitais e câmbio; a previdência fechada tem conselho próprio."
+   ],
+   [
+    "Comitê de Política Monetária (Copom).",
+    "O Copom decide a Selic."
+   ]
+  ],
+  "gabarito": "Os órgãos normativos do SFN são o CMN (moeda, crédito, capitais e câmbio), o CNSP (seguros, capitalização, previdência aberta) e o CNPC (previdência complementar fechada). Os supervisores correspondentes são BC e CVM, SUSEP e PREVIC.",
+  "dica": "Previdência fechada: CNPC normatiza; PREVIC fiscaliza."
+ },
+ {
+  "pd": "1.1.3.1.8",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante encontra na lista de instituições autorizadas pelo BC as “companhias hipotecárias” e pergunta a Raquel, profissional CPA, o que fazem.",
+  "enunciado": "Raquel explica que as companhias hipotecárias:",
+  "certa": "financiam imóveis e não captam depósitos à vista.",
+  "erradas": [
+   [
+    "administram consórcios de imóveis, sem conceder financiamentos.",
+    "Isso é papel das administradoras de consórcio."
+   ],
+   [
+    "são cartórios responsáveis pelo registro de hipotecas.",
+    "Registro de imóveis é feito em cartório, não por instituição financeira."
+   ],
+   [
+    "oferecem conta corrente e cartão de crédito ao público.",
+    "Não captam depósitos à vista."
+   ]
+  ],
+  "gabarito": "Companhias hipotecárias são instituições financeiras especializadas em financiamento imobiliário (construção, aquisição, refinanciamento), que captam recursos por instrumentos como letras hipotecárias e letras de crédito imobiliário e repasses, sem captar depósitos à vista. São autorizadas e supervisionadas pelo Banco Central.",
+  "dica": "Companhia hipotecária: financia imóveis, sem depósito à vista."
+ },
+ {
+  "pd": "1.2.5.4",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Com o real se valorizando muito rápido, o BC anuncia leilões de swap cambial reverso. Um exportador pergunta a Hélio, profissional CPA, o efeito esperado.",
+  "enunciado": "Hélio explica que o swap reverso:",
+  "certa": "equivale a o BC comprar dólar no mercado futuro, contendo a queda do dólar.",
+  "erradas": [
+   [
+    "equivale a o BC vender dólar à vista das reservas, acelerando a queda do dólar.",
+    "O reverso tem efeito oposto ao do swap tradicional."
+   ],
+   [
+    "fixa a cotação do dólar até o fim do ano.",
+    "O câmbio continua flutuante."
+   ],
+   [
+    "reduz automaticamente a taxa Selic em 1 ponto.",
+    "Swap cambial não altera a Selic."
+   ]
+  ],
+  "gabarito": "No swap cambial tradicional, o BC oferece proteção contra a alta do dólar (equivale a vender dólar no futuro). No swap reverso, a posição é inversa: equivale a comprar dólar no mercado futuro, usado quando se quer conter a valorização excessiva do real. Ambos são liquidados em reais e não usam reservas diretamente.",
+  "dica": "Swap tradicional segura a alta do dólar; swap reverso segura a queda."
+ },
+ {
+  "pd": "1.4.12.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento, o instrutor pergunta a Lia, profissional CPA, quais princípios gerais de conduta o código Anbima de distribuição exige das instituições.",
+  "enunciado": "Lia responde que, entre eles, estão:",
+  "certa": "boa-fé, transparência, diligência e evitar práticas que prejudiquem o investidor.",
+  "erradas": [
+   [
+    "maximizar a receita da instituição, ainda que contra o interesse do cliente.",
+    "O código prioriza a relação ética com o investidor."
+   ],
+   [
+    "omitir conflitos de interesses para não confundir o cliente.",
+    "O código exige identificar e gerenciar conflitos."
+   ],
+   [
+    "recomendar sempre os produtos da própria instituição.",
+    "A recomendação deve ser adequada ao cliente."
+   ]
+  ],
+  "gabarito": "Os princípios gerais de conduta do código Anbima incluem agir com boa-fé, transparência, diligência e lealdade com os investidores, cumprir as obrigações com rigor, evitar práticas que prejudiquem a relação fiduciária ou a concorrência leal, identificar e gerenciar conflitos de interesses e zelar pela qualidade das informações prestadas.",
+  "dica": "Código Anbima: boa-fé, transparência, diligência, lealdade e gestão de conflitos."
+ },
+ {
+  "pd": "1.4.12.1.3.7",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente estranha que o valor de seu CDB prefixado no extrato oscile, embora a taxa contratada seja fixa. Pergunta a Breno, profissional CPA, como o banco apura esse valor.",
+  "enunciado": "Breno explica que o código Anbima de distribuição prevê:",
+  "certa": "apuração de valores de referência com metodologia de mercado.",
+  "erradas": [
+   [
+    "que o extrato mostre sempre o valor da curva contratada, nunca o de mercado.",
+    "O código trata justamente da apuração de valores de referência."
+   ],
+   [
+    "que o banco escolha livremente o valor exibido, sem metodologia.",
+    "Exige-se metodologia definida e transparente."
+   ],
+   [
+    "que só fundos tenham valores apurados, nunca títulos.",
+    "Os valores de referência abrangem produtos distribuídos."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição exige que as instituições adotem metodologia para apurar e divulgar valores de referência dos produtos distribuídos (por exemplo, renda fixa), refletindo condições de mercado, para dar ao investidor informação mais fiel sobre o valor de seus ativos em caso de venda antecipada. A taxa contratada continua valendo para quem leva ao vencimento.",
+  "dica": "Valor de referência no extrato reflete o mercado; a taxa contratada vale no vencimento."
+ },
+ {
+  "pd": "1.4.2.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Em uma crise financeira global, há falta de liquidez entre os bancos. O BC reduz temporariamente as alíquotas do compulsório. Um cliente pergunta a Diogo, profissional CPA, o objetivo.",
+  "enunciado": "Diogo explica que a medida busca:",
+  "certa": "dar liquidez aos bancos e proteger o sistema.",
+  "erradas": [
+   [
+    "aumentar a inflação para reduzir o valor real das dívidas.",
+    "O objetivo é dar liquidez e estabilidade."
+   ],
+   [
+    "obrigar os bancos a recolher mais recursos ao BC.",
+    "Reduzir o compulsório faz o contrário."
+   ],
+   [
+    "substituir a garantia do FGC aos depositantes.",
+    "O FGC continua com seu papel."
+   ]
+  ],
+  "gabarito": "O depósito compulsório é instrumento de política monetária e também de estabilidade financeira. Em crises de liquidez, o BC pode liberar compulsórios e abrir linhas de liquidez (com garantias), evitando que a falta de recursos de curto prazo provoque quebras em cadeia. Em períodos de expansão excessiva do crédito, pode elevá-los.",
+  "dica": "Crise de liquidez: BC libera compulsório para dar fôlego ao sistema."
+ },
+ {
+  "pd": "1.2.2.4",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um empresário quer financiar a construção de uma fábrica, com retorno em 15 anos, sem empréstimo bancário. Pergunta a Mônica, profissional CPA, em que mercado buscaria recursos.",
+  "enunciado": "Mônica explica que seria o:",
+  "certa": "mercado de capitais (ações ou debêntures longas).",
+  "erradas": [
+   [
+    "mercado monetário, que financia projetos de longo prazo.",
+    "O monetário é de curtíssimo prazo."
+   ],
+   [
+    "mercado cambial, que financia investimentos em reais.",
+    "O cambial trata de moeda estrangeira."
+   ],
+   [
+    "mercado de crédito ao consumidor, que financia indústrias.",
+    "Esse mercado atende pessoas físicas no consumo."
+   ]
+  ],
+  "gabarito": "O mercado de capitais financia investimentos de médio e longo prazo das empresas, por meio da emissão de valores mobiliários (ações, debêntures, notas comerciais, CRI, CRA), com a intermediação de bancos de investimento e corretoras e a negociação em bolsa e balcão. Complementa o crédito bancário e reduz o custo de capital.",
+  "dica": "Projeto de longo prazo sem banco = mercado de capitais (ações, debêntures)."
+ },
+ {
+  "pd": "2.1.1.2.2.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Bruno e as ações herdadas",
+  "etapa": "1/3",
+  "contexto": "Bruno herdou ações ordinárias de uma grande empresa e recebeu convocação para a AGO, que vai eleger o conselho de administração e aprovar as contas. Ele pergunta a Ana, profissional CPA, se pode participar.",
+  "enunciado": "Ana explica que Bruno:",
+  "certa": "pode participar e votar, pois ações ordinárias dão direito a voto.",
+  "erradas": [
+   [
+    "não pode votar, pois herdeiros só votam após 5 anos com as ações.",
+    "Não existe essa carência."
+   ],
+   [
+    "só pode votar se tiver mais de 50% das ações da empresa.",
+    "Todo acionista ordinarista vota, na proporção das ações."
+   ],
+   [
+    "pode votar apenas por meio da corretora, que decide por ele.",
+    "O voto é do acionista, que pode votar a distância ou por procurador."
+   ]
+  ],
+  "gabarito": "Ações ordinárias conferem direito de voto nas assembleias (cada ação, um voto, em regra). Na AGO, os acionistas aprovam contas, destinam o lucro e elegem administradores. Companhias abertas oferecem boletim de voto a distância, facilitando a participação de minoritários. Ações preferenciais, em regra, não votam.",
+  "dica": "Ação ON = voto em assembleia (inclusive a distância)."
+ },
+ {
+  "pd": "2.1.1.2.2.2.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Bruno e as ações herdadas",
+  "etapa": "2/3",
+  "contexto": "A empresa vai pagar a Bruno dividendos de R$ 20 mil em um único mês. Ele leu que dividendos passaram a ser tributados em 2026 e pergunta a Ana se haverá retenção.",
+  "enunciado": "Ana explica que, pelas regras de 2026:",
+  "certa": "não há retenção: fica abaixo de R$ 50 mil no mês.",
+  "erradas": [
+   [
+    "há retenção de 10% sobre qualquer valor de dividendos.",
+    "A retenção vale acima de R$ 50 mil por mês da mesma empresa."
+   ],
+   [
+    "há retenção de 17,5%, como no JCP.",
+    "17,5% é a alíquota do JCP."
+   ],
+   [
+    "há retenção de 15%, como no ganho de capital em ações.",
+    "Dividendos não seguem essa alíquota."
+   ]
+  ],
+  "gabarito": "Com a Lei 15.270/2025, desde 2026 há retenção de IR de 10% sobre lucros e dividendos pagos por uma mesma empresa a uma mesma pessoa física acima de R$ 50 mil em um mês; abaixo disso, a regra de isenção na fonte continua. Há ainda a tributação mínima para altas rendas anuais, apurada na declaração. O JCP tem retenção própria (17,5% desde 2026).",
+  "dica": "Dividendos 2026: retenção de 10% só acima de R$ 50 mil por mês da mesma empresa."
+ },
+ {
+  "pd": "2.1.1.3.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Bruno e as ações herdadas",
+  "etapa": "3/3",
+  "contexto": "Bruno decide vender parte das ações herdadas e pergunta a Ana qual custo de aquisição usar para calcular o ganho.",
+  "enunciado": "Ana explica que, em regra, o custo das ações herdadas é:",
+  "certa": "o valor pelo qual foram transmitidas no inventário.",
+  "erradas": [
+   [
+    "zero, pois as ações foram recebidas sem pagamento.",
+    "O custo é o valor de transmissão, não zero."
+   ],
+   [
+    "o preço de mercado no dia da venda.",
+    "Usar o preço de venda zeraria o ganho."
+   ],
+   [
+    "o preço pago pelo falecido na compra, corrigido pela inflação.",
+    "Não há correção pela inflação; usa-se o valor da transmissão."
+   ]
+  ],
+  "gabarito": "Para o herdeiro, o custo de aquisição de bens recebidos por herança é, em regra, o valor pelo qual foram transmitidos (o valor informado no inventário e na declaração). Se a transmissão for feita por valor superior ao custo do falecido, a diferença pode gerar ganho de capital no espólio. Na venda, o herdeiro apura o ganho pela diferença entre o preço de venda e esse custo.",
+  "dica": "Ações herdadas: custo = valor de transmissão no inventário."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um cliente conservador compara um CDB de 120% do CDI de um banco pequeno com o Tesouro Selic. Ele tem R$ 100 mil e pergunta a Sandro, profissional CPA, se o CDB é “melhor sem risco”.",
+  "enunciado": "Sandro explica que:",
+  "certa": "o CDB paga mais por ter mais risco; o FGC mitiga até o limite.",
+  "erradas": [
+   [
+    "os dois têm exatamente o mesmo risco, pois ambos são renda fixa.",
+    "Os emissores e as garantias são diferentes."
+   ],
+   [
+    "o CDB tem risco menor que o Tesouro, pois conta com o FGC.",
+    "O título público tem risco soberano, o menor da economia."
+   ],
+   [
+    "o Tesouro Selic paga menos porque tem carência de 2 anos.",
+    "O Tesouro Selic tem liquidez diária."
+   ]
+  ],
+  "gabarito": "Taxas acima do mercado remuneram risco: bancos menores pagam mais para captar. Até R$ 250 mil, o FGC reduz o risco de perda, mas em caso de intervenção pode haver demora para receber e o investidor recebe só até o limite. O Tesouro Selic tem risco soberano e liquidez diária. A escolha considera perfil, valor e diversificação.",
+  "dica": "Taxa maior = risco maior. FGC mitiga até o limite, mas não iguala ao risco soberano."
+ },
+ {
+  "pd": "2.1.1.1.4.2",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Uma empresa emite duas debêntures de mesmo prazo e risco: uma simples, a 12% ao ano, e uma conversível em ações, a 9% ao ano. Um cliente pergunta a Rita, profissional CPA, por que a conversível paga menos.",
+  "enunciado": "Rita explica que a conversível paga menos porque:",
+  "certa": "traz a opção de virar ação, que tem valor.",
+  "erradas": [
+   [
+    "tem garantia do FGC, por poder virar ações.",
+    "Debêntures não têm FGC."
+   ],
+   [
+    "é isenta de IR para qualquer investidor.",
+    "A conversibilidade não traz isenção."
+   ],
+   [
+    "tem prazo indeterminado, ao contrário da simples.",
+    "O caso informa o mesmo prazo."
+   ]
+  ],
+  "gabarito": "A debênture conversível combina um título de dívida com o direito (opção) de converter em ações da emissora em condições predefinidas. Como essa opção tem valor (o investidor ganha se as ações se valorizarem), a empresa consegue pagar juros menores. Para o investidor, há potencial de ganho extra, com os riscos de crédito e de mercado.",
+  "dica": "Conversível paga menos juros porque traz a opção de virar ação."
+ },
+ {
+  "pd": "2.1.1.1.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Carla compara um CRI e uma debênture incentivada, ambos isentos para ela. Pergunta a Davi, profissional CPA, qual a principal diferença de estrutura.",
+  "enunciado": "Davi explica que:",
+  "certa": "CRI é securitização imobiliária; debênture é dívida da empresa.",
+  "erradas": [
+   [
+    "o CRI tem FGC e a debênture não.",
+    "Nenhum dos dois tem FGC."
+   ],
+   [
+    "a debênture é emitida pelo Tesouro e o CRI por bancos.",
+    "Debêntures são de empresas; CRI, de securitizadoras."
+   ],
+   [
+    "os dois são idênticos e diferem só no nome.",
+    "Emissor, lastro e estrutura são diferentes."
+   ]
+  ],
+  "gabarito": "CRI: título emitido por securitizadora, lastreado em recebíveis imobiliários, com regime fiduciário; o risco é dos devedores do lastro e das garantias. Debênture incentivada: título de dívida emitido diretamente por sociedade anônima para financiar infraestrutura; o risco é da própria empresa. Ambos são isentos de IR para pessoa física e não têm FGC.",
+  "dica": "CRI = securitização de recebíveis imobiliários. Debênture = dívida direta da empresa."
+ },
+ {
+  "pd": "2.1.3.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Mário manteve cotas de uma classe de renda fixa de longo prazo por 3 anos, pagando come-cotas de 15% a cada semestre. Ao resgatar, pergunta a Paula, profissional CPA, se haverá IR adicional.",
+  "enunciado": "Paula explica que, em regra:",
+  "certa": "não: acima de 720 dias a alíquota final já é 15%.",
+  "erradas": [
+   [
+    "haverá complemento até 22,5%, a alíquota máxima da tabela.",
+    "A alíquota final depende do prazo; acima de 720 dias, 15%."
+   ],
+   [
+    "haverá devolução de todo o come-cotas pago.",
+    "O come-cotas é antecipação do imposto devido."
+   ],
+   [
+    "haverá IR de 20% sobre todo o valor resgatado.",
+    "O IR incide só sobre o rendimento."
+   ]
+  ],
+  "gabarito": "Em classes de longo prazo, o come-cotas antecipa 15% sobre o rendimento semestral. No resgate, aplica-se a alíquota pelo prazo total; acima de 720 dias, 15%, igual à antecipada, de modo que, em regra, só há IR sobre o rendimento ainda não tributado desde o último come-cotas. Em prazos menores, cobra-se a diferença (22,5%, 20% ou 17,5%).",
+  "dica": "Fundo de longo prazo, mais de 720 dias: come-cotas de 15% = alíquota final."
+ },
+ {
+  "pd": "2.1.1.3.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Igor tem cotas de um ETF de renda fixa que acompanha títulos públicos longos. Ele pergunta a Sueli, profissional CPA, se a tributação é igual à de ETF de ações.",
+  "enunciado": "Sueli explica que, em ETFs de renda fixa:",
+  "certa": "o IR vai de 15% a 25%, pelo prazo médio, na fonte.",
+  "erradas": [
+   [
+    "o IR é sempre 15%, pago por DARF, como no ETF de ações.",
+    "A regra é diferente para ETFs de renda fixa."
+   ],
+   [
+    "o ganho é isento até R$ 20 mil de vendas por mês.",
+    "Essa isenção é exclusiva de ações."
+   ],
+   [
+    "não há IR, pois títulos públicos são isentos.",
+    "Títulos públicos são tributados."
+   ]
+  ],
+  "gabarito": "ETFs de renda fixa têm tributação na fonte conforme o prazo médio da carteira: 25% (até 180 dias), 20% (181 a 720 dias) e 15% (acima de 720 dias), sem come-cotas. ETFs de ações: 15% sobre o ganho, apurado e pago pelo investidor por DARF, sem a isenção de R$ 20 mil.",
+  "dica": "ETF de renda fixa: IR na fonte de 15% a 25%, pelo prazo médio da carteira."
+ },
+ {
+  "pd": "2.1.2.2.19",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cotista pergunta a Lauro, profissional CPA, quem guarda os ativos do fundo e confirma que eles existem.",
+  "enunciado": "Lauro explica que essa função é do:",
+  "certa": "custodiante, que guarda os ativos.",
+  "erradas": [
+   [
+    "gestor, que guarda os ativos em sua própria conta.",
+    "Os ativos ficam com o custodiante, em nome do fundo."
+   ],
+   [
+    "distribuidor, que mantém os ativos junto aos clientes.",
+    "O distribuidor vende cotas; não guarda ativos."
+   ],
+   [
+    "auditor, que compra e vende os ativos.",
+    "O auditor examina as demonstrações contábeis."
+   ]
+  ],
+  "gabarito": "O custodiante (contratado pelo administrador) guarda os ativos da carteira, registra-os em nome do fundo, liquida as operações e controla eventos (juros, dividendos). A separação entre quem decide (gestor), quem controla (administrador) e quem guarda (custodiante) reforça a segurança dos cotistas. O auditor verifica as demonstrações contábeis.",
+  "dica": "Custodiante guarda os ativos do fundo; gestor decide; administrador controla."
+ },
+ {
+  "pd": "2.2.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Ao contratar um PGBL, Diana não sabe se escolhe o regime progressivo ou o regressivo. O corretor diz que ela precisa decidir na hora e que a escolha é irreversível. Ela pergunta a Rui, profissional CPA.",
+  "enunciado": "Rui explica que, pela Lei 14.803/2024:",
+  "certa": "ela pode escolher o regime até o primeiro resgate ou o pedido de benefício.",
+  "erradas": [
+   [
+    "a escolha deve ser feita obrigatoriamente na contratação.",
+    "A lei permite adiar a escolha."
+   ],
+   [
+    "o regime é escolhido pela seguradora, conforme a renda dela.",
+    "A escolha é do participante."
+   ],
+   [
+    "o regime pode ser trocado a qualquer momento, quantas vezes ela quiser.",
+    "Feita a opção pelo regressivo, ela é irretratável."
+   ]
+  ],
+  "gabarito": "A Lei 14.803/2024 permite ao participante de planos de previdência escolher o regime de tributação (progressivo ou regressivo) até o momento da obtenção do benefício ou do primeiro resgate, o que facilita decidir com mais informações sobre prazo e renda. A opção pelo regressivo é irretratável.",
+  "dica": "Regime de IR da previdência: pode escolher até o 1º resgate ou benefício (Lei 14.803)."
+ },
+ {
+  "pd": "2.3.3.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Ao contratar um empréstimo pessoal, Leandro vê no contrato IOF com “alíquota diária” e uma “alíquota adicional”. Pergunta a Mara, profissional CPA, como funciona.",
+  "enunciado": "Mara explica que, nas operações de crédito para pessoa física:",
+  "certa": "o IOF tem parcela diária (com teto de prazo) e adicional fixo.",
+  "erradas": [
+   [
+    "o IOF é cobrado só no último dia do contrato.",
+    "O IOF é calculado na contratação."
+   ],
+   [
+    "o IOF é isento para pessoas físicas.",
+    "Há IOF sobre o crédito."
+   ],
+   [
+    "o IOF incide sobre a renda do tomador, e não sobre o valor emprestado.",
+    "Incide sobre o valor da operação."
+   ]
+  ],
+  "gabarito": "O IOF sobre operações de crédito para pessoa física combina uma alíquota diária, aplicada sobre o valor e limitada a um prazo máximo (365 dias), e uma alíquota adicional fixa sobre o valor da operação. O imposto entra no CET. Por isso o custo efetivo é maior que a taxa de juros nominal.",
+  "dica": "IOF no crédito: parcela diária (com teto de prazo) + adicional fixo; entra no CET."
+ },
+ {
+  "pd": "2.4.1.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente tenta fazer um Pix de R$ 3.000 às 22h e não consegue. Ele pergunta a Davi, profissional CPA, o motivo.",
+  "enunciado": "Davi explica que, por regra de segurança do Pix:",
+  "certa": "há limite noturno menor, que pode ser ajustado.",
+  "erradas": [
+   [
+    "o Pix não funciona após as 20h, só em horário comercial.",
+    "O Pix funciona 24/7."
+   ],
+   [
+    "Pix acima de R$ 1.000 é proibido em qualquer horário.",
+    "Os limites são configuráveis, e o diurno é maior."
+   ],
+   [
+    "o banco bloqueou a conta por suspeita de lavagem.",
+    "O caso descreve limite noturno, não bloqueio."
+   ]
+  ],
+  "gabarito": "Como medida de segurança, o Banco Central estabeleceu limites para o Pix de pessoas físicas no período noturno (padrão de R$ 1.000 entre 20h e 6h, ajustável), além de regras para aumento de limites com prazo de carência e cadastro de contas frequentes. O objetivo é reduzir golpes e sequestros relâmpago.",
+  "dica": "Pix noturno tem limite menor (pessoa física), ajustável com prazo de segurança."
+ },
+ {
+  "pd": "2.1.1.2.3.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa quer entrar em um segmento de governança da B3 sem as exigências do Novo Mercado, mas com mais transparência que o segmento básico. Pergunta a Lauro, profissional CPA.",
+  "enunciado": "Lauro indica o Nível 1, que exige, entre outros:",
+  "certa": "mais transparência e free float mínimo.",
+  "erradas": [
+   [
+    "só ações ordinárias e tag along de 100%.",
+    "Essas são exigências do Novo Mercado."
+   ],
+   [
+    "dispensa de qualquer divulgação adicional de informações.",
+    "O Nível 1 exige mais transparência."
+   ],
+   [
+    "que a empresa seja de pequeno porte e faça oferta menor.",
+    "Esse é o Bovespa Mais."
+   ]
+  ],
+  "gabarito": "Segmentos de listagem da B3: Nível 1 (práticas de transparência e dispersão acionária, com free float mínimo); Nível 2 (regras próximas às do Novo Mercado, mas admite PN, com tag along de 100%); Novo Mercado (só ON, tag along de 100%, conselho com independentes, mais transparência); Bovespa Mais (acesso gradual).",
+  "dica": "Nível 1: transparência e free float mínimo. Novo Mercado: o mais exigente."
+ },
+ {
+  "pd": "2.1.1.3.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Ana teve prejuízo de R$ 2.000 na venda de cotas de FII e lucro de R$ 3.000 em operações comuns com ações, no mesmo mês, com vendas de ações de R$ 50 mil. Pergunta a Hugo, profissional CPA, se pode compensar.",
+  "enunciado": "Hugo explica que:",
+  "certa": "o prejuízo com FII só compensa lucro com FII; o lucro das ações paga 15%.",
+  "erradas": [
+   [
+    "o prejuízo com FII compensa o lucro das ações, e ela paga 15% sobre R$ 1.000.",
+    "A compensação não ocorre entre FII e ações."
+   ],
+   [
+    "os dois resultados se anulam e não há imposto.",
+    "A compensação cruzada não é permitida."
+   ],
+   [
+    "o lucro das ações é isento, pois o prejuízo do FII reduz as vendas.",
+    "A isenção depende das vendas de ações (aqui, R$ 50 mil)."
+   ]
+  ],
+  "gabarito": "Na renda variável, prejuízos só compensam lucros da mesma natureza: day trade com day trade; operações comuns com ações com operações comuns; FII com FII. Aqui, o lucro das ações (R$ 3.000) paga 15% = R$ 450, e o prejuízo do FII fica registrado para compensar ganhos futuros com FII.",
+  "dica": "Prejuízo de FII só compensa lucro de FII."
+ },
+ {
+  "pd": "2.1.1.1.11",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Celso aplicou R$ 100 mil em um CDB e resgatou após 500 dias, com rendimento de R$ 15 mil. Pergunta a Joana, profissional CPA, o valor líquido.",
+  "enunciado": "Joana calcula que ele recebeu:",
+  "certa": "R$ 112.375,00, após IR de 17,5% sobre o rendimento.",
+  "erradas": [
+   [
+    "R$ 112.750,00, após IR de 15% sobre o rendimento.",
+    "Com 500 dias, a alíquota é de 17,5%."
+   ],
+   [
+    "R$ 112.000,00, após IR de 20% sobre o rendimento.",
+    "20% vale de 181 a 360 dias."
+   ],
+   [
+    "R$ 94.875,00, após IR de 17,5% sobre o total.",
+    "O IR incide só sobre o rendimento."
+   ]
+  ],
+  "gabarito": "500 dias estão na faixa de 361 a 720 dias: IR de 17,5%. IR = 17,5% × 15.000 = R$ 2.625. Valor líquido = 100.000 + 15.000 − 2.625 = R$ 112.375.",
+  "dica": "361 a 720 dias: 17,5% sobre o rendimento."
+ },
+ {
+  "pd": "2.1.1.1.12",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Ivana resgatou um CDB no 20º dia, com rendimento bruto de R$ 90. A alíquota de IOF no 20º dia é de 33%. Ela pergunta a Rogério, profissional CPA, quanto paga de IOF e de IR.",
+  "enunciado": "Rogério calcula, aproximadamente:",
+  "certa": "IOF de R$ 29,70 e IR de R$ 13,57 (22,5% sobre R$ 60,30).",
+  "erradas": [
+   [
+    "IOF de R$ 29,70 e IR de R$ 20,25 (22,5% sobre os R$ 90).",
+    "O IR incide sobre o rendimento já descontado o IOF."
+   ],
+   [
+    "IOF de R$ 0,34 e IR de R$ 20,25.",
+    "A alíquota do IOF é de 33% sobre o rendimento, não 0,38%."
+   ],
+   [
+    "sem IOF, pois a cobrança acaba após 15 dias, e IR de R$ 20,25.",
+    "O IOF só zera no 30º dia."
+   ]
+  ],
+  "gabarito": "IOF = 33% × 90 = R$ 29,70. Rendimento após IOF = R$ 60,30. IR (até 180 dias, 22,5%) = 22,5% × 60,30 ≈ R$ 13,57. Rendimento líquido ≈ R$ 46,73. Resgates antes de 30 dias perdem boa parte do rendimento para o IOF.",
+  "dica": "Primeiro o IOF sobre o rendimento; o IR incide sobre o que sobra."
+ },
+ {
+  "pd": "2.2.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Jair fez um único aporte em um VGBL no regime regressivo há 7 anos e resgata todo o saldo, com rendimento de R$ 40 mil. Pergunta a Luana, profissional CPA, o IR.",
+  "enunciado": "Luana calcula que o IR será de:",
+  "certa": "R$ 8.000 (20% sobre o rendimento).",
+  "erradas": [
+   [
+    "R$ 10.000 (25% sobre o rendimento).",
+    "25% vale de 4 a 6 anos."
+   ],
+   [
+    "R$ 6.000 (15% sobre o rendimento).",
+    "15% vale de 8 a 10 anos."
+   ],
+   [
+    "R$ 4.000 (10% sobre o rendimento).",
+    "10% só acima de 10 anos."
+   ]
+  ],
+  "gabarito": "Regime regressivo: 35% (até 2 anos), 30% (2 a 4), 25% (4 a 6), 20% (6 a 8), 15% (8 a 10), 10% (acima de 10). Com 7 anos, 20%. No VGBL, sobre o rendimento: 20% × 40.000 = R$ 8.000.",
+  "dica": "Regressivo: 6 a 8 anos = 20%."
+ },
+ {
+  "pd": "2.1.2.2.20.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Uma classe multimercado rendeu 15% no semestre, enquanto o CDI rendeu 10%. A taxa de performance é de 20% sobre o que exceder o CDI, e a cota está acima da linha d’água. Um cotista pergunta a Gabriel, profissional CPA, quanto será cobrado.",
+  "enunciado": "Gabriel calcula que a performance será de cerca de:",
+  "certa": "1% do patrimônio (20% sobre o excedente de 5 pontos).",
+  "erradas": [
+   [
+    "3% do patrimônio (20% sobre os 15% de rendimento).",
+    "A performance incide só sobre o que excede o CDI."
+   ],
+   [
+    "5% do patrimônio, todo o excedente sobre o CDI.",
+    "A taxa é de 20% do excedente, não 100%."
+   ],
+   [
+    "2% do patrimônio (20% sobre os 10% do CDI).",
+    "O CDI é a referência, não a base de cobrança."
+   ]
+  ],
+  "gabarito": "Taxa de performance = percentual × (rentabilidade − índice de referência), respeitada a linha d’água: 20% × (15% − 10%) = 1% do patrimônio (aproximação simplificada). O cálculo efetivo considera o período e a forma do regulamento. A cobrança só ocorre se a cota superar o índice e o último valor que gerou cobrança.",
+  "dica": "Performance = taxa × (retorno − benchmark), acima da linha d’água."
+ },
+ {
+  "pd": "2.3.8",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Depois de 2 anos pagando um consórcio, Marcos desiste e pede o dinheiro de volta imediatamente. A administradora informa outro procedimento. Ele pergunta a Sílvia, profissional CPA.",
+  "enunciado": "Sílvia explica que, pela Lei 11.795/2008, o consorciado excluído:",
+  "certa": "recebe quando sorteado entre excluídos ou no fim do grupo.",
+  "erradas": [
+   [
+    "recebe tudo de imediato, com juros pela Selic do período.",
+    "A devolução segue a contemplação entre excluídos ou o encerramento."
+   ],
+   [
+    "perde todos os valores pagos, como multa pela desistência.",
+    "Os valores do fundo comum são devolvidos, com deduções previstas."
+   ],
+   [
+    "só recebe se encontrar outra pessoa para assumir a cota.",
+    "A transferência é possível, mas não é a única forma."
+   ]
+  ],
+  "gabarito": "Pela Lei 11.795/2008, o consorciado que desiste ou é excluído tem direito à restituição dos valores pagos ao fundo comum, com eventuais deduções previstas no contrato (como multa), quando for contemplado em sorteio entre os excluídos ou até o encerramento do grupo. Também pode transferir a cota a terceiros, conforme as regras.",
+  "dica": "Desistente de consórcio: recebe quando sorteado entre os excluídos ou no fim do grupo."
+ },
+ {
+  "pd": "2.1.2.2.23",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor aloca nas carteiras dos fundos que gere títulos de empresa da qual é sócio, sem informar os cotistas. Um cliente pergunta a Teresa, profissional CPA, se isso é aceitável.",
+  "enunciado": "Teresa explica que, pelas normas de conduta dos fundos:",
+  "certa": "o gestor deve agir com lealdade e evitar ou informar conflitos de interesses.",
+  "erradas": [
+   [
+    "o gestor pode investir em qualquer ativo, desde que tenha bom retorno.",
+    "Conflitos de interesses devem ser evitados ou tratados com transparência."
+   ],
+   [
+    "o gestor só tem dever de lealdade com o administrador, não com os cotistas.",
+    "O dever fiduciário é com os cotistas."
+   ],
+   [
+    "normas de conduta valem apenas para distribuidores, não para gestores.",
+    "Valem para todos os prestadores de serviço."
+   ]
+  ],
+  "gabarito": "A CVM 175 impõe aos prestadores de serviços dos fundos normas de conduta: exercer suas atividades com boa-fé, diligência e lealdade aos cotistas, evitar práticas que possam ferir a relação fiduciária e identificar, administrar e divulgar conflitos de interesses. Operações com partes ligadas exigem cuidados e, em certos casos, aprovação dos cotistas.",
+  "dica": "Gestor tem dever fiduciário: lealdade aos cotistas e transparência sobre conflitos."
+ }
+]

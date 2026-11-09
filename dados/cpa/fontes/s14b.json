@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.4.3.1.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+  "etapa": "1/4",
+  "contexto": "Glória, 58 anos, procura Daniela, profissional CPA, dizendo apenas que “quer investir melhor”. Daniela tem uma lista de produtos em campanha no mês.",
+  "enunciado": "A atitude inicial mais adequada de Daniela é:",
+  "certa": "fazer perguntas abertas e ouvir com atenção os objetivos e preocupações de Glória.",
+  "erradas": [
+   [
+    "apresentar logo os produtos em campanha, para aproveitar o interesse da cliente.",
+    "Sem entender a cliente, a oferta pode ser inadequada."
+   ],
+   [
+    "perguntar só o valor disponível e preencher o resto do cadastro sozinha.",
+    "O cadastro e o perfil precisam das informações da cliente."
+   ],
+   [
+    "recomendar o produto de maior rentabilidade do último ano.",
+    "Rentabilidade passada não define adequação."
+   ]
+  ],
+  "gabarito": "A escuta ativa (perguntas abertas, atenção plena, confirmação do entendimento) permite identificar objetivos, horizonte, necessidades de liquidez, preocupações e conhecimento do cliente. É a base para o suitability e para recomendações adequadas, e evita que metas comerciais se sobreponham ao interesse do cliente.",
+  "dica": "Comece ouvindo: perguntas abertas e atenção aos objetivos do cliente."
+ },
+ {
+  "pd": "3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+  "etapa": "2/4",
+  "contexto": "Glória conta que pretende se aposentar em 4 anos, tem patrimônio razoável e quer garantir que ele não encolha até lá.",
+  "enunciado": "Daniela identifica que Glória está, no ciclo de vida, entrando na fase de:",
+  "certa": "preservação de capital.",
+  "erradas": [
+   [
+    "acumulação de capital.",
+    "Ela já tem patrimônio e horizonte curto."
+   ],
+   [
+    "distribuição de renda.",
+    "Ela ainda não começou a viver da renda."
+   ],
+   [
+    "crescimento patrimonial com mais risco.",
+    "O objetivo declarado é proteger o patrimônio."
+   ]
+  ],
+  "gabarito": "Ciclo de vida do investidor: acumulação (início da carreira), crescimento patrimonial (renda maior, horizonte longo), preservação (proximidade da aposentadoria, foco em proteger o patrimônio e reduzir risco) e distribuição (uso do patrimônio para renda e sucessão). A fase orienta, mas não substitui, a análise de perfil.",
+  "dica": "Perto da aposentadoria e querendo proteger o patrimônio: preservação."
+ },
+ {
+  "pd": "3.4.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+  "etapa": "3/4",
+  "contexto": "O perfil de Glória resulta conservador. Mesmo assim, ela pede para aplicar 40% em um fundo de ações porque uma amiga ganhou muito.",
+  "enunciado": "Daniela deve:",
+  "certa": "explicar os riscos e, se ela insistir, alertar e colher declaração.",
+  "erradas": [
+   [
+    "aplicar sem comentários, pois a decisão é da cliente.",
+    "É obrigatório alertar sobre o desenquadramento."
+   ],
+   [
+    "reclassificar Glória como arrojada para enquadrar a operação.",
+    "Ajustar o perfil para vender é irregular."
+   ],
+   [
+    "recusar e encerrar o atendimento, pois a regra proíbe a operação.",
+    "A operação é possível com alerta e declaração."
+   ]
+  ],
+  "gabarito": "Pela CVM 30, se o cliente quiser investir em produto inadequado ao perfil, a instituição deve alertá-lo previamente, com os motivos, e obter declaração expressa de ciência. O profissional também deve esclarecer os riscos, considerando o horizonte curto e o objetivo de preservação.",
+  "dica": "Cliente insiste em produto fora do perfil: explicar, alertar e colher declaração."
+ },
+ {
+  "pd": "3.4.3.1.5",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Glória, 58 anos, e a assessora Daniela",
+  "etapa": "4/4",
+  "contexto": "Glória diz que espera “ganhar como a amiga, uns 40% ao ano, sem riscos”.",
+  "enunciado": "A conduta adequada de Daniela é:",
+  "certa": "alinhar expectativas: retorno alto vem com risco.",
+  "erradas": [
+   [
+    "prometer que, com sua ajuda, Glória terá o mesmo resultado da amiga.",
+    "Prometer rentabilidade é vedado."
+   ],
+   [
+    "evitar o assunto para não desmotivar a cliente.",
+    "Omitir gera frustração e risco de reclamação."
+   ],
+   [
+    "dizer que 40% sem risco é possível em fundos de renda fixa.",
+    "Isso é falso e enganoso."
+   ]
+  ],
+  "gabarito": "Gerenciar expectativas é parte do atendimento ético: explicar a relação risco–retorno, mostrar cenários realistas para o perfil e o prazo do cliente e corrigir percepções baseadas em casos isolados. Promessas de retorno e omissão de riscos violam o Código de Ética e expõem a instituição a riscos legais e de imagem.",
+  "dica": "Expectativa irreal: alinhe com risco e retorno realistas; nunca prometa."
+ },
+ {
+  "pd": "3.1.3.3.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Igor vai financiar um carro de R$ 70 mil. Pode dar R$ 10 mil de entrada em 60 meses ou R$ 30 mil em 36 meses, à mesma taxa. Pergunta a Lúcia, profissional CPA.",
+  "enunciado": "Lúcia explica que, em geral, mais entrada e menor prazo:",
+  "certa": "reduzem os juros totais, sem sacrificar a reserva.",
+  "erradas": [
+   [
+    "aumentam o total de juros, pois a parcela fica maior.",
+    "Menor saldo financiado e menor prazo reduzem os juros totais."
+   ],
+   [
+    "não alteram o custo total, pois a taxa é a mesma.",
+    "O valor financiado e o prazo mudam o total de juros."
+   ],
+   [
+    "devem ser evitados sempre, pois o ideal é financiar 100% no maior prazo.",
+    "Isso maximiza o custo dos juros."
+   ]
+  ],
+  "gabarito": "No financiamento de veículos (e de imóveis), entrada maior reduz o valor financiado, e prazo menor reduz o tempo de incidência dos juros; os dois diminuem o total pago. A decisão deve preservar a reserva de emergência e manter a parcela compatível com o orçamento. Compare o CET das propostas.",
+  "dica": "Mais entrada e menos prazo = menos juros no total (sem sacrificar a reserva)."
+ },
+ {
+  "pd": "3.1.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Hélio aluga um apartamento para outra pessoa física e recebe R$ 3.000 por mês. Ele pergunta a Bianca, profissional CPA, como paga o IR desse rendimento.",
+  "enunciado": "Bianca explica que o aluguel recebido de pessoa física:",
+  "certa": "é tributável, pago no carnê-leão e ajustado na declaração.",
+  "erradas": [
+   [
+    "é isento, por ser renda de imóvel residencial.",
+    "Aluguel é tributável."
+   ],
+   [
+    "tem tributação exclusiva na fonte, retida pelo inquilino.",
+    "Pessoa física inquilina não retém IR."
+   ],
+   [
+    "só é declarado se passar de R$ 10 mil por mês.",
+    "Deve ser declarado, e o carnê-leão segue a tabela mensal."
+   ]
+  ],
+  "gabarito": "Aluguéis são rendimentos tributáveis. Quando pagos por pessoa física, o locador recolhe mensalmente o IR pelo carnê-leão (tabela progressiva mensal); quando pagos por pessoa jurídica, há retenção na fonte. Na declaração anual, os valores entram como rendimentos tributáveis, com o imposto já pago compensado.",
+  "dica": "Aluguel recebido de pessoa física: carnê-leão mensal + ajuste anual."
+ },
+ {
+  "pd": "3.2.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Seu Amaro, 55 anos, perfil moderado, quer pagar a festa de casamento da filha daqui a 3 anos, com valor já orçado. Pergunta a Saulo, profissional CPA, onde aplicar.",
+  "enunciado": "Saulo recomenda, de forma adequada:",
+  "certa": "renda fixa com vencimento próximo da data do casamento, de bons emissores.",
+  "erradas": [
+   [
+    "ações de empresas de crescimento, pois o perfil moderado aceita algum risco.",
+    "Objetivo com data e valor definidos pede previsibilidade."
+   ],
+   [
+    "previdência privada, por causa do benefício fiscal.",
+    "Previdência é para o longo prazo."
+   ],
+   [
+    "um fundo multimercado alavancado, para garantir o valor.",
+    "Alavancagem aumenta o risco; não garante valor."
+   ]
+  ],
+  "gabarito": "Tipo de investimento, tolerância a risco e horizonte devem estar alinhados: para objetivo de médio prazo com data e valor definidos, títulos de renda fixa com vencimento casado com a data (prefixados ou atrelados à inflação, de bons emissores) dão previsibilidade, evitando vender ativos voláteis em momento ruim.",
+  "dica": "Objetivo com data marcada: renda fixa com vencimento casado com a data."
+ },
+ {
+  "pd": "3.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente tem toda a carteira em ativos brasileiros e pergunta a Elisa, profissional CPA, se faz sentido investir uma parte no exterior.",
+  "enunciado": "Elisa explica que a diversificação internacional:",
+  "certa": "reduz o risco concentrado no Brasil, com outras moedas.",
+  "erradas": [
+   [
+    "elimina todos os riscos da carteira, inclusive o cambial.",
+    "Introduz risco cambial e não elimina os demais."
+   ],
+   [
+    "só é permitida para investidores profissionais.",
+    "Há várias formas acessíveis (BDRs, ETFs, fundos)."
+   ],
+   [
+    "sempre rende mais que investir no Brasil.",
+    "Não há garantia de rendimento maior."
+   ]
+  ],
+  "gabarito": "Diversificar internacionalmente reduz a dependência de um único país (economia, política, moeda), aproveitando ativos com baixa correlação com o Brasil. Pode ser feito por BDRs, ETFs, fundos com ativos no exterior ou contas internacionais. Traz riscos próprios (câmbio, jurídico, tributário) e deve ser adequado ao perfil.",
+  "dica": "Investir lá fora reduz o risco-Brasil, mas traz risco cambial."
+ },
+ {
+  "pd": "3.4.1.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Um cliente oferece a Rodrigo, profissional CPA, uma “comissão por fora” se ele conseguir uma taxa de CDB especial que, pela política do banco, ele não teria direito.",
+  "enunciado": "Pelo Código de Conduta Ética, Rodrigo deve:",
+  "certa": "recusar e seguir a política, com integridade.",
+  "erradas": [
+   [
+    "aceitar, pois a comissão vem do cliente e não prejudica ninguém.",
+    "Vantagem indevida fere a integridade e a lealdade à instituição."
+   ],
+   [
+    "aceitar só se a taxa especial for pequena.",
+    "O valor não muda a natureza da conduta."
+   ],
+   [
+    "aceitar e dividir a comissão com a equipe.",
+    "Continua sendo vantagem indevida."
+   ]
+  ],
+  "gabarito": "O Código de Conduta Ética das Certificações Anbima exige integridade, ética, transparência e lealdade. Receber vantagens indevidas para conceder condições fora das regras configura conduta antiética e pode ser ilícito, além de violar as políticas da instituição. A conduta correta é recusar e, conforme a política, comunicar.",
+  "dica": "Vantagem por fora para burlar regras: recuse."
+ },
+ {
+  "pd": "3.4.2.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "O perfil de Luís foi feito há 30 meses e nunca atualizado. Ele quer aplicar hoje em um fundo multimercado. O sistema indica perfil vencido.",
+  "enunciado": "Pela CVM 30, a instituição deve:",
+  "certa": "alertar sobre o perfil vencido e colher declaração.",
+  "erradas": [
+   [
+    "usar o perfil antigo normalmente, pois ele continua válido.",
+    "Perfil com mais de 24 meses está desatualizado."
+   ],
+   [
+    "bloquear qualquer aplicação até que ele refaça o perfil.",
+    "A norma admite operar com alerta e declaração."
+   ],
+   [
+    "preencher um novo perfil pelo cliente, sem perguntar nada.",
+    "O perfil precisa de informações do próprio cliente."
+   ]
+  ],
+  "gabarito": "Pela CVM 30, as informações do perfil devem ser atualizadas em intervalos de até 24 meses. Quando o cliente está sem perfil ou com perfil desatualizado e quer investir, a instituição deve alertá-lo e obter declaração expressa de ciência, além de buscar a atualização. O ideal é atualizar o perfil antes da recomendação.",
+  "dica": "Perfil vencido (mais de 24 meses): alertar, colher declaração e atualizar."
+ },
+ {
+  "pd": "3.4.4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco usou um contrato de crédito com cláusula ambígua sobre a cobrança de encargos. Vários clientes entraram na Justiça e o banco foi condenado a devolver valores.",
+  "enunciado": "O risco materializado foi principalmente o:",
+  "certa": "legal (contratos e Justiça).",
+  "erradas": [
+   [
+    "de mercado (variação dos juros).",
+    "Não houve perda por variação de preços."
+   ],
+   [
+    "de liquidez (falta de caixa).",
+    "Não houve falta de liquidez."
+   ],
+   [
+    "sistêmico (contágio no sistema).",
+    "O problema é contratual e restrito ao banco."
+   ]
+  ],
+  "gabarito": "Risco legal é a possibilidade de perdas decorrentes de contratos mal redigidos, inválidos ou abusivos, de ações judiciais e de mudanças na interpretação das normas. É gerenciado com revisão jurídica de contratos, clareza com o cliente e conformidade com a legislação, como o Código de Defesa do Consumidor.",
+  "dica": "Contrato mal feito e condenação judicial = risco legal."
+ },
+ {
+  "pd": "3.4.6.8",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Um cliente pessoa jurídica, sem atividade operacional clara, passa a receber e enviar grandes valores para empresas em jurisdições de tributação favorecida, sem justificativa econômica.",
+  "enunciado": "Essa movimentação deve ser tratada como:",
+  "certa": "indício de suspeita, a analisar e comunicar ao COAF.",
+  "erradas": [
+   [
+    "operação normal, pois remessas ao exterior são livres.",
+    "Remessas são permitidas, mas o contexto é atípico."
+   ],
+   [
+    "assunto exclusivo da Receita Federal, sem relação com PLD.",
+    "Há dever de análise e comunicação pela instituição."
+   ],
+   [
+    "motivo para avisar o cliente de que será investigado.",
+    "É vedado alertar o cliente."
+   ]
+  ],
+  "gabarito": "Caracterizam indícios de operações suspeitas, entre outros: operações com jurisdições de risco ou de tributação favorecida sem fundamento econômico, empresas sem atividade aparente movimentando grandes valores, estruturas que dificultam identificar o beneficiário final e incompatibilidade com o porte do cliente. A instituição analisa, registra e, se for o caso, comunica ao COAF, sem avisar o cliente.",
+  "dica": "Empresa sem atividade + remessas para paraísos fiscais sem justificativa = indício de suspeita."
+ },
+ {
+  "pd": "3.4.7.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma companhia divulgou fato relevante sobre uma aquisição às 8h, antes da abertura do pregão. Um funcionário que conhecia a operação pergunta a Ivo, profissional CPA, se já pode comprar ações à tarde.",
+  "enunciado": "Ivo explica que, em regra:",
+  "certa": "divulgada amplamente, a informação deixa de ser privilegiada.",
+  "erradas": [
+   [
+    "ele nunca poderá negociar ações da empresa em que trabalha.",
+    "A vedação está ligada à informação não divulgada e às políticas da empresa."
+   ],
+   [
+    "pode negociar antes da divulgação, desde que compre pouco.",
+    "Antes da divulgação, a negociação é vedada."
+   ],
+   [
+    "só pode negociar após 5 anos da divulgação.",
+    "Não existe esse prazo legal."
+   ]
+  ],
+  "gabarito": "O ilícito de insider trading consiste em negociar com informação relevante ainda não divulgada ao mercado. Divulgado o fato relevante de forma ampla, a informação torna-se pública. Ainda assim, companhias têm políticas de negociação (com períodos de vedação) que funcionários e administradores devem cumprir.",
+  "dica": "Divulgado amplamente, deixa de ser informação privilegiada; mas siga a política de negociação."
+ },
+ {
+  "pd": "3.4.5.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma pequena gestora não identificou nenhuma operação suspeita durante o ano. O diretor acha que, assim, não precisa enviar nada aos órgãos de controle. Pergunta a Clara, profissional CPA.",
+  "enunciado": "Clara explica que, pelas regras de PLD aplicáveis às entidades supervisionadas pela CVM:",
+  "certa": "é preciso enviar anualmente a declaração de não ocorrência de comunicações.",
+  "erradas": [
+   [
+    "nada precisa ser enviado quando não há suspeitas no ano.",
+    "A regulação prevê a declaração de não ocorrência."
+   ],
+   [
+    "é preciso comunicar ao COAF todas as operações do ano, suspeitas ou não.",
+    "Comunica-se o que é suspeito ou exigido, e a não ocorrência."
+   ],
+   [
+    "basta guardar os registros, sem qualquer comunicação.",
+    "Há também o dever da declaração anual."
+   ]
+  ],
+  "gabarito": "Além de comunicar operações suspeitas, a regulação de PLD (como a Resolução CVM 50) exige que as entidades que não tenham feito comunicações no ano declarem essa situação (declaração de não ocorrência) dentro do prazo regulamentar. Isso demonstra que o monitoramento existe e foi realizado.",
+  "dica": "Sem suspeitas no ano? Envie a declaração de não ocorrência."
+ },
+ {
+  "pd": "3.1.3.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Juliana tem R$ 5.000 no cartão de crédito há um ano, pagando sempre o mínimo, e a dívida só aumenta. Pergunta a Tiago, profissional CPA, por que isso acontece.",
+  "enunciado": "Tiago explica que:",
+  "certa": "os juros compostos fazem a dívida crescer sobre juros já acumulados.",
+  "erradas": [
+   [
+    "o pagamento mínimo quita os juros e reduz o principal todo mês.",
+    "O mínimo muitas vezes não cobre os encargos e a dívida cresce."
+   ],
+   [
+    "a dívida aumenta só por causa da inflação, sem relação com juros.",
+    "O principal fator são os juros do rotativo e do parcelamento."
+   ],
+   [
+    "dívidas de cartão não têm juros após 12 meses.",
+    "Os juros continuam incidindo."
+   ]
+  ],
+  "gabarito": "Os juros compostos trabalham a favor de quem investe e contra quem deve: juros sobre juros fazem dívidas caras crescerem rapidamente (efeito bola de neve). Educação financeira inclui evitar o rotativo, pagar a fatura integral e trocar dívidas caras por mais baratas.",
+  "dica": "Juros compostos: aliados do investidor, inimigos do devedor."
+ },
+ {
+  "pd": "4.4.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um contrato inteligente de seguro agrícola paga automaticamente se a chuva ficar abaixo de certo nível. Um cliente pergunta a Rui, profissional CPA, como o contrato “sabe” quanto choveu.",
+  "enunciado": "Rui explica que o contrato recebe esse dado por meio de:",
+  "certa": "um oráculo, fonte que leva dados externos para o blockchain.",
+  "erradas": [
+   [
+    "um cartório, que registra a chuva diariamente.",
+    "Cartórios não fornecem dados meteorológicos aos contratos."
+   ],
+   [
+    "o Banco Central, que informa os dados de todos os contratos.",
+    "O BC não é fonte desses dados."
+   ],
+   [
+    "o próprio segurado, que digita a quantidade de chuva.",
+    "Isso tornaria o contrato fácil de manipular."
+   ]
+  ],
+  "gabarito": "Componentes de um contrato inteligente: o código com as regras, as condições de execução, as partes (endereços), os ativos envolvidos e, quando precisa de informações do mundo real (preços, clima, resultados), os oráculos, serviços que levam dados externos ao blockchain. A qualidade e a segurança do oráculo são riscos relevantes.",
+  "dica": "Oráculo: a ponte entre dados do mundo real e o contrato inteligente."
+ },
+ {
+  "pd": "4.5.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente quer compartilhar todos os seus dados de investimentos pelo open investment, mas pergunta a Sérgio, profissional CPA, se há desvantagens.",
+  "enunciado": "Sérgio explica que, entre as desvantagens ou riscos, está:",
+  "certa": "a exposição a vazamentos e a assédio comercial, se o consentimento for mal gerenciado.",
+  "erradas": [
+   [
+    "a perda automática da garantia do FGC sobre os investimentos.",
+    "Compartilhar dados não altera garantias."
+   ],
+   [
+    "a obrigação de transferir os investimentos para a instituição que recebe os dados.",
+    "Não há transferência obrigatória."
+   ],
+   [
+    "o aumento automático das taxas dos produtos.",
+    "Não há aumento automático de taxas."
+   ]
+  ],
+  "gabarito": "Open investment: vantagens como visão consolidada, recomendações mais completas, concorrência e portabilidade facilitada; desvantagens e riscos como segurança dos dados, uso para assédio comercial e necessidade de entender e gerenciar consentimentos (o que, com quem e por quanto tempo). O cliente pode revogar o consentimento.",
+  "dica": "Open investment: mais informação e concorrência; cuidado com segurança e assédio comercial."
+ },
+ {
+  "pd": "4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um investidor tem cotas de uma classe de fundo IS e pergunta a Luana, profissional CPA, como acompanhar se o objetivo sustentável está sendo cumprido.",
+  "enunciado": "Luana explica que a classe IS deve:",
+  "certa": "divulgar relatórios periódicos sobre o objetivo.",
+  "erradas": [
+   [
+    "garantir rentabilidade superior à de fundos tradicionais.",
+    "Não há garantia de rentabilidade."
+   ],
+   [
+    "manter sigilo sobre os critérios para proteger a estratégia.",
+    "As regras exigem transparência."
+   ],
+   [
+    "ser fiscalizada pela SUSEP, por envolver temas ambientais.",
+    "Fundos são supervisionados pela CVM."
+   ]
+  ],
+  "gabarito": "Pelas regras da Anbima para fundos de investimento sustentável (IS), além do objetivo sustentável na política e do sufixo IS no nome, a classe deve ter metodologia definida e divulgar periodicamente relatórios com o cumprimento do objetivo e indicadores, para que o investidor acompanhe e para evitar greenwashing.",
+  "dica": "Fundo IS: objetivo sustentável + relatórios periódicos de resultado."
+ },
+ {
+  "pd": "4.6.1.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente teve o crédito negado por um sistema automático de score e quer entender o motivo. Pergunta a Hugo, profissional CPA, se tem algum direito.",
+  "enunciado": "Hugo explica que, pela LGPD, o titular:",
+  "certa": "pode pedir revisão e saber os critérios usados.",
+  "erradas": [
+   [
+    "não tem nenhum direito, pois decisões de crédito são sigilosas.",
+    "A LGPD garante direito de revisão e de informação."
+   ],
+   [
+    "pode exigir que o crédito seja concedido em qualquer caso.",
+    "A revisão não obriga a conceder crédito."
+   ],
+   [
+    "só pode reclamar se a decisão for tomada por uma pessoa.",
+    "O direito trata justamente das decisões automatizadas."
+   ]
+  ],
+  "gabarito": "Modelos preditivos (como os de score de crédito) devem ser usados com cuidado quanto a vieses, discriminação e explicabilidade. A LGPD (art. 20) garante ao titular o direito de solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses e de obter informações claras sobre os critérios, respeitados os segredos comercial e industrial.",
+  "dica": "Decisão automatizada (ex.: score): o titular pode pedir revisão e critérios (LGPD, art. 20)."
+ },
+ {
+  "pd": "4.2.4",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa emite um título cuja taxa de juros aumenta se ela não atingir uma meta de redução de emissões até determinada data. Um cliente pergunta a Natália, profissional CPA, como se chama esse título.",
+  "enunciado": "Natália explica que é um título:",
+  "certa": "vinculado a metas de sustentabilidade (sustainability-linked).",
+  "erradas": [
+   [
+    "verde (green bond), cujos recursos vão para um projeto específico.",
+    "No green bond, o foco é o uso dos recursos, não metas da empresa."
+   ],
+   [
+    "de capitalização, com sorteios ligados à meta ambiental.",
+    "Capitalização é outro produto."
+   ],
+   [
+    "público, garantido pelo Tesouro por envolver meta ambiental.",
+    "É título privado, sem garantia do Tesouro."
+   ]
+  ],
+  "gabarito": "Títulos vinculados à sustentabilidade (sustainability-linked bonds) têm características financeiras (por exemplo, a taxa) atreladas ao cumprimento de metas ESG da emissora, sem exigir destinação específica dos recursos. Diferem dos títulos verdes, sociais ou sustentáveis, cujos recursos financiam projetos elegíveis. O risco de crédito continua sendo do emissor.",
+  "dica": "Sustainability-linked: taxa ligada a metas ESG. Green bond: recursos para projeto verde."
+ }
+]
