@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.2.4",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Seu Ari, 72 anos",
+  "etapa": "1/4",
+  "contexto": "Seu Ari, 72 anos, viúvo, aposentado, tem R$ 900 mil em aplicações e dois filhos adultos. Diz a Simone, profissional CPA, que quer complementar a renda mensal e organizar o que vai deixar para os filhos.",
+  "enunciado": "Simone identifica que Seu Ari está na fase do ciclo de vida de:",
+  "certa": "distribuição, voltada a gerar renda e a planejar a transferência do patrimônio.",
+  "erradas": [
+   [
+    "acumulação, pois ainda tem recursos aplicados e pode continuar aportando valores relevantes.",
+    "Acumulação é a fase de formação do patrimônio, típica do início da carreira."
+   ],
+   [
+    "crescimento patrimonial, pois o objetivo principal é aumentar o patrimônio com mais risco.",
+    "O objetivo dele é renda e sucessão, não crescimento com mais risco."
+   ],
+   [
+    "preservação, pois a única preocupação do cliente é não perder dinheiro com aplicações.",
+    "A preservação antecede a aposentadoria; aqui o foco já é usar a renda e planejar a sucessão."
+   ]
+  ],
+  "gabarito": "Na fase de distribuição, o investidor usa o patrimônio acumulado para gerar renda e se preocupa com a transferência aos herdeiros (planejamento sucessório). As prioridades são previsibilidade de renda, liquidez para despesas e saúde, baixa exposição a perdas e instrumentos sucessórios (como previdência com beneficiários indicados).",
+  "dica": "Distribuição: viver da renda e planejar a sucessão."
+ },
+ {
+  "pd": "3.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Seu Ari, 72 anos",
+  "etapa": "2/4",
+  "contexto": "O perfil de Seu Ari é conservador. Ele precisa de R$ 4.000 por mês de complemento e quer manter um valor disponível para despesas de saúde inesperadas.",
+  "enunciado": "Uma carteira adequada que Simone pode propor combina:",
+  "certa": "parte em liquidez diária e baixo risco para emergências e parte em renda fixa sólida para a renda.",
+  "erradas": [
+   [
+    "a maior parte em ações de crescimento, pois a renda virá da valorização dos papéis no longo prazo.",
+    "Ações de crescimento são voláteis e não combinam com perfil conservador que depende de renda."
+   ],
+   [
+    "todo o patrimônio em CDBs de cinco anos sem liquidez, para garantir a maior taxa possível.",
+    "Sem liquidez, ele não teria recursos para despesas de saúde inesperadas."
+   ],
+   [
+    "um fundo multimercado alavancado, pois o gestor profissional elimina os riscos da carteira.",
+    "Alavancagem aumenta o risco; gestão profissional não elimina perdas."
+   ]
+  ],
+  "gabarito": "A adequação de produtos considera objetivo, prazo, liquidez e tolerância a risco. Para um conservador que precisa de renda e liquidez: uma parte em ativos de liquidez diária e baixa volatilidade (Tesouro Selic, CDB com liquidez diária, fundos DI), uma parte em renda fixa com vencimentos escalonados ou pagamento de juros periódicos, de emissores sólidos, e exposição mínima a renda variável. A carteira deve ser revista periodicamente.",
+  "dica": "Conservador que vive de renda: liquidez para emergências + renda fixa sólida para gerar a renda."
+ },
+ {
+  "pd": "3.4.2.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Seu Ari, 72 anos",
+  "etapa": "3/4",
+  "contexto": "Seu Ari tem dificuldade com termos técnicos e pergunta várias vezes o que significa “marcação a mercado” de um título que Simone sugeriu.",
+  "enunciado": "Pelo dever de comunicação clara e transparente, Simone deve:",
+  "certa": "explicar em linguagem simples, com exemplo, que o título pode valer menos se vendido antes.",
+  "erradas": [
+   [
+    "entregar o regulamento completo e considerar a obrigação cumprida, pois o documento é oficial.",
+    "Entregar documentos é necessário, mas não basta: a informação deve ser compreensível ao cliente."
+   ],
+   [
+    "omitir a explicação para não assustar o cliente, já que o título é de baixo risco.",
+    "Omitir riscos fere a transparência e o dever de informar."
+   ],
+   [
+    "pedir que o filho assine os documentos no lugar do pai, para agilizar o atendimento.",
+    "Quem decide é o cliente; terceiros só atuam com procuração formal."
+   ]
+  ],
+  "gabarito": "O Código Anbima de Distribuição e o Código de Ética exigem comunicação clara, objetiva e adequada ao nível de conhecimento do cliente, com informações sobre riscos, custos e características, sem omissões relevantes. Técnicas: linguagem simples, exemplos numéricos, confirmação de entendimento. Clientes idosos ou com pouco conhecimento financeiro merecem atenção redobrada.",
+  "dica": "Transparência = o cliente precisa entender. Linguagem simples, exemplos e nada de omitir riscos."
+ },
+ {
+  "pd": "3.4.6.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Seu Ari, 72 anos",
+  "etapa": "4/4",
+  "contexto": "Dias depois, o filho de Seu Ari liga para Simone pedindo o saldo e as aplicações do pai, “para ajudar a organizar a herança”. Ele não tem procuração.",
+  "enunciado": "A conduta correta de Simone é:",
+  "certa": "não fornecer as informações, protegidas pelo sigilo bancário, e orientar que o pai autorize formalmente.",
+  "erradas": [
+   [
+    "fornecer as informações, pois filhos são herdeiros necessários e têm direito de acesso aos dados dos pais.",
+    "Ser herdeiro não dá acesso aos dados do pai em vida; é preciso autorização ou procuração."
+   ],
+   [
+    "fornecer só o saldo total, sem detalhar as aplicações, pois o valor agregado não é protegido por sigilo.",
+    "Saldo e aplicações são protegidos pelo sigilo bancário."
+   ],
+   [
+    "fornecer as informações se o filho confirmar o CPF do pai por telefone.",
+    "Saber o CPF não comprova autorização; isso pode facilitar fraudes."
+   ]
+  ],
+  "gabarito": "A Lei Complementar 105/2001 protege o sigilo das operações financeiras, e a LGPD exige base legal para tratar e compartilhar dados pessoais. Informações de um cliente só podem ser passadas a terceiros com consentimento expresso do titular, procuração válida ou nas hipóteses legais (ordem judicial, autoridades). No mundo digital, confirmar identidade e autorização protege o cliente contra golpes de engenharia social.",
+  "dica": "Dados do cliente para terceiros: só com autorização formal ou procuração (sigilo + LGPD)."
+ },
+ {
+  "pd": "3.1.3.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ana precisa de R$ 80.000 para abrir um negócio e recebe duas ofertas: empréstimo pessoal sem garantia a 3,5% ao mês e empréstimo com garantia de imóvel (home equity) a 1,4% ao mês. Pergunta a Mateus, profissional CPA, por que a diferença é tão grande.",
+  "enunciado": "Mateus explica corretamente que:",
+  "certa": "a garantia do imóvel reduz o risco do banco e permite juros menores, mas Ana pode perder o imóvel se não pagar.",
+  "erradas": [
+   [
+    "o crédito com garantia é mais barato porque é subsidiado pelo governo para incentivar o empreendedorismo.",
+    "A taxa menor decorre da garantia, não de subsídio."
+   ],
+   [
+    "as duas linhas têm o mesmo risco para Ana, pois em ambas a dívida é cobrada da mesma forma.",
+    "Com garantia, o imóvel pode ser executado em caso de inadimplência."
+   ],
+   [
+    "o empréstimo pessoal é mais barato no custo total, pois não tem custos de avaliação do imóvel.",
+    "Mesmo com custos de avaliação e registro, a diferença de juros costuma tornar o crédito com garantia mais barato."
+   ]
+  ],
+  "gabarito": "Garantias reduzem a perda esperada do credor e, por isso, o custo do crédito. Tipos comuns: alienação fiduciária (o bem fica em nome do credor até a quitação, como em veículos e imóveis), hipoteca, penhor, aval e fiança. No home equity, o imóvel garante a dívida: juros menores e prazos longos, mas risco de perder o bem. A escolha deve considerar o CET e a capacidade de pagamento.",
+  "dica": "Mais garantia = menos risco para o banco = juros menores. Mas o bem pode ser tomado se não pagar."
+ },
+ {
+  "pd": "3.1.4.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "No balanço patrimonial de Carlos aparecem: apartamento onde mora, carro, R$ 50 mil em CDB, um terreno comprado para valorização e cotas de FII que geram aluguel.",
+  "enunciado": "Entre esses itens, são ativos de uso:",
+  "certa": "o apartamento onde mora e o carro.",
+  "erradas": [
+   [
+    "o CDB e as cotas de FII.",
+    "São ativos de investimento (não uso): geram renda ou valorização."
+   ],
+   [
+    "o terreno e as cotas de FII.",
+    "O terreno foi comprado para valorização; é investimento, não uso."
+   ],
+   [
+    "todos os itens, pois pertencem a Carlos e compõem seu patrimônio.",
+    "Todos compõem o patrimônio, mas só os bens usados no dia a dia são ativos de uso."
+   ]
+  ],
+  "gabarito": "Ativos de uso servem ao consumo e ao bem-estar (moradia própria, carro, móveis) e, em geral, não geram renda e podem se depreciar. Ativos de não uso (investimento) geram renda ou valorização: aplicações financeiras, imóveis para aluguel ou valorização, participações. No planejamento, só os ativos de investimento, especialmente os líquidos, financiam objetivos e emergências.",
+  "dica": "Uso = casa e carro do dia a dia. Investimento (não uso) = geram renda ou valorização."
+ },
+ {
+  "pd": "3.1.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Dalva recebe salário, aluga um imóvel para terceiros, tem rendimentos de CDB e dividendos de ações abaixo do limite de retenção. Ela pergunta a Gustavo, profissional CPA, como cada rendimento é classificado no IR.",
+  "enunciado": "Gustavo classifica corretamente:",
+  "certa": "salário e aluguel são tributáveis; CDB tem tributação exclusiva; dividendos são isentos.",
+  "erradas": [
+   [
+    "todos são tributáveis na declaração anual, somando-se para o cálculo do imposto devido.",
+    "CDB tem tributação exclusiva na fonte, e os dividendos (abaixo do limite) são isentos."
+   ],
+   [
+    "salário é tributável; aluguel e CDB têm tributação exclusiva; dividendos são tributáveis.",
+    "Aluguel recebido de pessoa física ou jurídica entra como rendimento tributável na declaração."
+   ],
+   [
+    "salário tem tributação exclusiva; aluguel é isento; CDB e dividendos são tributáveis.",
+    "Salário entra na tabela progressiva anual; aluguel é tributável."
+   ]
+  ],
+  "gabarito": "Rendimentos tributáveis (somam-se e passam pela tabela progressiva anual): salários, aluguéis, pró-labore, atividade autônoma. Rendimentos de tributação exclusiva ou definitiva (imposto retido na fonte e encerrado): aplicações de renda fixa, fundos, JCP, 13º salário. Rendimentos isentos: poupança, LCI, LCA, CRI, CRA, dividendos (dentro da regra de isenção), lucros com ações em operações comuns com vendas de até R$ 20 mil no mês.",
+  "dica": "Tributável: salário e aluguel. Exclusivo: renda fixa, fundos e JCP. Isento: poupança, LCI/LCA e dividendos."
+ },
+ {
+  "pd": "3.2.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Dois clientes de Kleber, profissional CPA, têm perfil moderado. Joice quer trocar de carro em 8 meses; Saulo quer complementar a aposentadoria daqui a 25 anos.",
+  "enunciado": "Kleber orienta que:",
+  "certa": "Joice deve priorizar renda fixa estável e de prazo compatível; Saulo pode ter mais ativos de risco.",
+  "erradas": [
+   [
+    "os dois devem ter a mesma carteira, pois o perfil moderado define sozinho a alocação adequada.",
+    "O horizonte de cada objetivo também define a alocação."
+   ],
+   [
+    "Joice deve investir em ações, pois prazos curtos permitem aproveitar a volatilidade a seu favor.",
+    "Prazo curto não dá tempo de recuperar quedas; ações não são adequadas para objetivo de 8 meses."
+   ],
+   [
+    "Saulo deve ficar apenas em poupança, pois prazos longos aumentam o risco de qualquer investimento.",
+    "Prazos longos permitem suportar oscilações e buscar retornos reais maiores."
+   ]
+  ],
+  "gabarito": "A escolha de investimentos considera a tolerância a risco e o horizonte de cada objetivo. Objetivos de curto prazo pedem previsibilidade e liquidez (renda fixa pós-fixada, vencimento compatível). Objetivos de longo prazo permitem mais exposição a ativos voláteis (ações, multimercados, títulos longos atrelados à inflação), pois há tempo para recuperar perdas. Um mesmo cliente pode ter carteiras diferentes para objetivos diferentes.",
+  "dica": "Objetivo curto = previsibilidade. Objetivo longo = pode tolerar mais oscilação. Perfil e horizonte andam juntos."
+ },
+ {
+  "pd": "3.2.2.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Vânia teve uma despesa inesperada de R$ 5.000 com o conserto do carro. Ela tem R$ 12.000 de reserva de emergência em um CDB de liquidez diária e pensa em parcelar no cartão para “não mexer na reserva”. Pergunta a Lauro, profissional CPA.",
+  "enunciado": "Lauro orienta que o mais adequado é:",
+  "certa": "usar a reserva, criada para isso, e recompô-la depois com aportes planejados.",
+  "erradas": [
+   [
+    "parcelar no cartão com juros, pois a reserva de emergência nunca deve ser utilizada.",
+    "A reserva existe para emergências; usar crédito caro anula sua função."
+   ],
+   [
+    "pegar um empréstimo pessoal e manter a reserva intacta, já que os juros são dedutíveis do IR.",
+    "Juros de empréstimo pessoal não são dedutíveis do IR da pessoa física."
+   ],
+   [
+    "vender parte da previdência privada, que tem liquidez imediata e não sofre tributação.",
+    "Resgates de previdência são tributados e podem ter carência; a reserva é a fonte adequada."
+   ]
+  ],
+  "gabarito": "Para emergências, a sequência recomendada é: (1) usar a reserva de emergência, que existe para isso; (2) se insuficiente, buscar o crédito de menor custo e prazo compatível (comparando o CET); (3) evitar rotativo, cheque especial e resgates com custos tributários. Depois, recompor a reserva com aportes planejados no orçamento.",
+  "dica": "Emergência? Use a reserva e recomponha depois. Crédito caro é o último recurso."
+ },
+ {
+  "pd": "3.3.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Após responder o questionário de suitability, Rafael foi classificado como arrojado. Ele pergunta a Bianca, profissional CPA, o que isso significa em comparação aos perfis conservador e moderado.",
+  "enunciado": "Bianca explica corretamente que o investidor arrojado:",
+  "certa": "aceita mais oscilação e perdas no curto prazo em busca de retornos maiores no longo prazo.",
+  "erradas": [
+   [
+    "busca segurança e liquidez acima de tudo, aceitando rentabilidade menor.",
+    "Essa é a descrição do perfil conservador."
+   ],
+   [
+    "só pode investir em renda variável, sendo vedado aplicar em renda fixa.",
+    "O perfil indica a tolerância, não proíbe classes de ativos; arrojados também têm renda fixa."
+   ],
+   [
+    "tem garantia de rentabilidade superior, por assumir mais riscos que os demais perfis.",
+    "Mais risco não garante retorno maior; apenas aumenta o potencial e a incerteza."
+   ]
+  ],
+  "gabarito": "Perfis usuais: conservador (prioriza segurança e liquidez, baixa tolerância a perdas); moderado (aceita algum risco em parte da carteira para buscar retorno maior); arrojado ou agressivo (aceita volatilidade e perdas temporárias relevantes buscando retornos maiores no longo prazo). O perfil resulta de objetivos, situação financeira e conhecimento, e orienta a adequação dos produtos.",
+  "dica": "Conservador = segurança. Moderado = equilíbrio. Arrojado = aceita oscilação por mais retorno potencial."
+ },
+ {
+  "pd": "3.4.2.8",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em um banco, a área que estrutura ofertas de ações de uma empresa tem informações confidenciais sobre ela, enquanto a área de distribuição atende investidores que compram essas ações. O compliance exige barreiras físicas e de sistemas entre as equipes.",
+  "enunciado": "Essa medida de gestão de conflitos de interesses é conhecida como:",
+  "certa": "segregação de funções, ou chinese wall, que impede o fluxo de informações entre áreas conflitantes.",
+  "erradas": [
+   [
+    "churning, que separa as carteiras dos clientes para evitar giro excessivo de operações.",
+    "Churning é o giro excessivo da carteira do cliente, uma prática ilícita."
+   ],
+   [
+    "suitability, que verifica se os funcionários são adequados para cada área do banco.",
+    "Suitability é a adequação de produtos ao perfil do cliente."
+   ],
+   [
+    "tag along, que estende aos funcionários as condições oferecidas aos acionistas controladores.",
+    "Tag along é direito de acionistas minoritários em caso de troca de controle."
+   ]
+  ],
+  "gabarito": "A segregação de atividades (chinese wall) separa física e logicamente áreas com interesses potencialmente conflitantes (por exemplo, banco de investimento, gestão de recursos e distribuição), controlando o acesso a informações privilegiadas. É uma das medidas de gestão de conflitos previstas no programa, ao lado de políticas claras, treinamento, divulgação, monitoramento, comitês de ética e compliance e proibição de atividades específicas.",
+  "dica": "Chinese wall = barreira de informação entre áreas com conflito de interesses."
+ },
+ {
+  "pd": "3.4.3.1.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Durante um atendimento, uma cliente conta a Eduardo, profissional CPA, que perdeu o emprego, tem um filho pequeno e está com medo de perder a reserva. Eduardo começa imediatamente a falar sobre o fundo do mês que a instituição quer vender.",
+  "enunciado": "Pela técnica de escuta ativa, Eduardo deveria:",
+  "certa": "ouvir com atenção, confirmar o que entendeu e identificar as necessidades antes de propor algo.",
+  "erradas": [
+   [
+    "apresentar logo os produtos em campanha, pois a cliente já demonstrou interesse em investir.",
+    "Ela demonstrou preocupação e necessidade de segurança, não interesse em produto específico."
+   ],
+   [
+    "encerrar o atendimento, pois clientes desempregados não podem fazer aplicações.",
+    "Não há essa proibição; o papel é orientar conforme a situação."
+   ],
+   [
+    "anotar apenas o valor disponível e deixar a escolha do produto para o sistema da instituição.",
+    "Ferramentas apoiam, mas a escuta e o entendimento da situação são indispensáveis."
+   ]
+  ],
+  "gabarito": "Escuta ativa é dar atenção plena ao cliente, fazer perguntas abertas, confirmar o entendimento (parafrasear) e considerar também emoções e preocupações. Permite identificar necessidades reais (aqui, liquidez e segurança) antes de qualquer recomendação. Faz parte das técnicas de atendimento, com personalização, solução proativa de problemas, educação continuada e gerenciamento de expectativas.",
+  "dica": "Escuta ativa: ouvir, perguntar, confirmar o entendimento e só depois propor."
+ },
+ {
+  "pd": "3.4.5.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Em um treinamento de PLD, o instrutor descreve: um grupo deposita dinheiro em espécie de atividade ilícita em várias contas; depois faz transferências sucessivas entre empresas de fachada e paraísos fiscais; por fim, compra imóveis e participações em negócios legais.",
+  "enunciado": "As fases descritas da lavagem de dinheiro são, na ordem:",
+  "certa": "colocação, ocultação e integração.",
+  "erradas": [
+   [
+    "ocultação, colocação e integração.",
+    "A primeira fase, de inserir o dinheiro no sistema financeiro, é a colocação."
+   ],
+   [
+    "integração, ocultação e colocação.",
+    "A integração é a última fase: o recurso volta à economia com aparência legal."
+   ],
+   [
+    "colocação, integração e ocultação.",
+    "Depois da colocação vem a ocultação (dificultar o rastreamento), e só então a integração."
+   ]
+  ],
+  "gabarito": "Etapas clássicas da lavagem de dinheiro: (1) colocação: inserir os recursos ilícitos no sistema econômico (depósitos fracionados, compra de bens); (2) ocultação ou estratificação: dificultar o rastreamento com movimentações sucessivas, contas de terceiros, empresas de fachada, operações no exterior; (3) integração: reincorporar os recursos à economia formal com aparência lícita (imóveis, empresas, investimentos). A Lei 9.613/1998 tipifica o crime e impõe deveres de prevenção a diversos setores.",
+  "dica": "Lavagem: colocação → ocultação → integração."
+ },
+ {
+  "pd": "3.4.6.10",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Uma corretora identifica que um de seus clientes foi incluído em lista de sanções do Conselho de Segurança das Nações Unidas por financiamento ao terrorismo.",
+  "enunciado": "Pela Lei 13.810/2019, a corretora deve:",
+  "certa": "tornar indisponíveis de imediato os ativos do cliente, sem aviso prévio, e comunicar as autoridades.",
+  "erradas": [
+   [
+    "notificar o cliente e aguardar 30 dias para que ele apresente defesa antes de qualquer bloqueio.",
+    "O cumprimento das sanções do CSNU é imediato e sem aviso prévio ao sancionado."
+   ],
+   [
+    "aguardar uma ordem judicial brasileira específica antes de bloquear qualquer ativo do cliente.",
+    "A lei determina o cumprimento imediato das resoluções do CSNU."
+   ],
+   [
+    "encerrar a conta e transferir os recursos para outra instituição indicada pelo cliente.",
+    "Transferir recursos frustraria a sanção; os ativos devem ficar indisponíveis."
+   ]
+  ],
+  "gabarito": "A Lei 13.810/2019 trata do cumprimento das sanções impostas por resoluções do Conselho de Segurança das Nações Unidas, como a indisponibilidade de ativos de pessoas e entidades ligadas a terrorismo e à proliferação de armas de destruição em massa. As instituições devem cumpri-las de imediato e sem aviso prévio, comunicando o fato aos órgãos competentes (como o BC ou a CVM, o Ministério da Justiça e o COAF).",
+  "dica": "Sanção do CSNU: indisponibilidade imediata, sem avisar o cliente, e comunicação às autoridades."
+ },
+ {
+  "pd": "3.4.7.1.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Júlio não tem registro na CVM, mas cobra mensalidade para gerir o dinheiro de amigos e conhecidos: decide sozinho as compras e vendas de ações nas contas deles, com as senhas que recebe.",
+  "enunciado": "Essa conduta pode caracterizar:",
+  "certa": "exercício irregular de atividade (art. 27-E da Lei 6.385/76), por gerir carteira sem registro.",
+  "erradas": [
+   [
+    "prática legal, pois os clientes autorizaram expressamente que Júlio usasse suas senhas.",
+    "A autorização dos clientes não dispensa o registro exigido pela CVM para administrar carteiras."
+   ],
+   [
+    "insider trading, pois Júlio tem acesso privilegiado às contas dos clientes.",
+    "Insider envolve informação relevante não divulgada sobre o emissor, não acesso às contas."
+   ],
+   [
+    "front running, pois Júlio opera antes de comunicar as decisões aos clientes.",
+    "Front running é antecipar-se a ordens de clientes em benefício próprio."
+   ]
+  ],
+  "gabarito": "Art. 27-E da Lei 6.385/76: exercer, ainda que a título gratuito, no mercado de valores mobiliários, atividade de administrador de carteira, agente autônomo, auditor, consultor, analista ou outro cargo, profissão ou função, sem estar autorizado ou registrado na autoridade administrativa competente, quando exigido. Pena de detenção de 6 meses a 2 anos e multa. Usar senhas de clientes ainda expõe a riscos de segurança e fraude.",
+  "dica": "Art. 27-E: exercer atividade regulada (gestor, consultor, analista) sem registro na CVM é crime."
+ },
+ {
+  "pd": "4.2.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor explica a Rita, profissional CPA, que seu fundo exclui empresas de armas e tabaco e, entre as empresas restantes, escolhe as de melhor pontuação ESG de cada setor.",
+  "enunciado": "As estratégias descritas são, respectivamente:",
+  "certa": "exclusão e best-in-class.",
+  "erradas": [
+   [
+    "investimento de impacto e integração.",
+    "Impacto busca resultado socioambiental mensurável; integração considera ESG na análise de todos os ativos."
+   ],
+   [
+    "best-in-class e exclusão.",
+    "A ordem está invertida: primeiro exclui setores, depois seleciona as melhores."
+   ],
+   [
+    "engajamento e exclusão.",
+    "Engajamento é dialogar com as empresas investidas para melhorar práticas."
+   ]
+  ],
+  "gabarito": "Estratégias de investimento ESG: exclusão ou filtro negativo (retirar setores ou empresas por critérios éticos); filtro positivo ou best-in-class (escolher as melhores práticas de cada setor); integração ESG (incorporar fatores ESG à análise financeira de todos os ativos); engajamento e voto (dialogar e votar para melhorar práticas); investimento temático e de impacto (buscar retorno com impacto socioambiental mensurável).",
+  "dica": "Exclusão = tira setores. Best-in-class = escolhe os melhores de cada setor. Integração = ESG na análise. Impacto = resultado mensurável."
+ },
+ {
+  "pd": "4.2.6.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora anuncia que se tornou signatária dos Princípios para o Investimento Responsável (PRI). Um cliente pergunta a Sandro, profissional CPA, o que isso significa.",
+  "enunciado": "Sandro explica que o PRI é:",
+  "certa": "uma iniciativa apoiada pela ONU, com princípios voluntários para incluir ESG nos investimentos.",
+  "erradas": [
+   [
+    "uma lei brasileira que obriga todos os gestores a investir somente em empresas sustentáveis.",
+    "O PRI não é lei brasileira; é adesão voluntária a princípios internacionais."
+   ],
+   [
+    "um selo da CVM que garante a rentabilidade dos fundos sustentáveis.",
+    "O PRI não é selo da CVM e não garante rentabilidade."
+   ],
+   [
+    "um índice da B3 que reúne as empresas com melhores práticas de governança.",
+    "Índices de sustentabilidade da B3 são outra coisa; o PRI é um conjunto de princípios."
+   ]
+  ],
+  "gabarito": "Os Princípios para o Investimento Responsável (PRI), lançados em 2006 com apoio da ONU, são seis princípios voluntários: incorporar ESG à análise e às decisões de investimento, ser acionista ativo, pedir divulgação ESG às investidas, promover os princípios no setor, colaborar para sua implementação e reportar o progresso. No Brasil, também há a autorregulação da Anbima e as regras da CVM 175 sobre fundos que usam termos ESG.",
+  "dica": "PRI = princípios voluntários apoiados pela ONU para integrar ESG aos investimentos."
+ },
+ {
+  "pd": "4.4.3.10.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê sobre uma organização que administra um fundo de criptoativos em que as decisões são tomadas por votação dos detentores de tokens e executadas automaticamente por contratos inteligentes. Pergunta a Márcia, profissional CPA, o que é isso.",
+  "enunciado": "Márcia explica que se trata de uma:",
+  "certa": "DAO (organização autônoma descentralizada), governada por regras em código e votação dos tokens.",
+  "erradas": [
+   [
+    "DEX (exchange descentralizada), que negocia ações de empresas sem intermediação de corretoras.",
+    "DEX é plataforma de troca de criptoativos; a estrutura de governança por votação é a DAO."
+   ],
+   [
+    "sociedade anônima tradicional, registrada na CVM, com conselho de administração eleito.",
+    "A DAO não tem a estrutura societária tradicional; é governada por código e tokens."
+   ],
+   [
+    "CBDC, moeda digital emitida por banco central e administrada por votação popular.",
+    "CBDC é moeda de banco central, sem governança por tokens."
+   ]
+  ],
+  "gabarito": "DAO (Decentralized Autonomous Organization) é uma organização cujas regras estão em contratos inteligentes e cujas decisões são tomadas por votação de detentores de tokens de governança, com execução automática. Vantagens: transparência e participação. Riscos: falhas de código, concentração de tokens, incerteza jurídica e regulatória.",
+  "dica": "DAO = organização governada por código e voto dos detentores de tokens."
+ },
+ {
+  "pd": "4.5.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Rosana tem investimentos em três instituições e quer ver tudo consolidado em um único aplicativo, além de receber sugestões que considerem a carteira toda. Pergunta a Davi, profissional CPA, se isso é possível.",
+  "enunciado": "Davi explica que o open investment permite:",
+  "certa": "compartilhar dados de investimentos entre instituições, com consentimento, para consolidar e comparar.",
+  "erradas": [
+   [
+    "transferir automaticamente os investimentos para a instituição com maior rentabilidade, sem pedido do cliente.",
+    "O compartilhamento de dados depende de consentimento e não move os investimentos sozinho."
+   ],
+   [
+    "dispensar a análise de suitability, já que os dados de todas as instituições ficam disponíveis.",
+    "A adequação continua obrigatória; os dados apenas a tornam mais completa."
+   ],
+   [
+    "garantir a rentabilidade dos investimentos compartilhados por meio do FGC.",
+    "O open investment trata de dados; não altera garantias dos produtos."
+   ]
+  ],
+  "gabarito": "Open investment é a extensão do Open Finance para produtos de investimento: com consentimento do cliente, instituições compartilham dados de aplicações (renda fixa, fundos, valores mobiliários), o que permite visão consolidada, recomendações mais completas e maior concorrência. Desvantagens e riscos: segurança dos dados e uso indevido. A portabilidade de valores mobiliários entre custodiantes também foi facilitada pela CVM.",
+  "dica": "Open investment: dados de investimentos compartilhados com consentimento para visão consolidada."
+ },
+ {
+  "pd": "4.6.1.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um banco usa modelos de inteligência artificial que analisam milhões de transações para identificar compras com cartão fora do padrão do cliente e bloqueá-las preventivamente. Um cliente pergunta a Leandro, profissional CPA, como isso funciona.",
+  "enunciado": "Leandro explica que se trata de:",
+  "certa": "modelos preditivos, que aprendem com dados históricos e estimam a chance de fraude.",
+  "erradas": [
+   [
+    "regras fixas escritas manualmente que bloqueiam todas as compras acima de um valor definido.",
+    "Modelos de IA aprendem com dados e avaliam vários fatores, não apenas um valor fixo."
+   ],
+   [
+    "IA generativa que cria novas transações para testar o cartão do cliente sem sua autorização.",
+    "O uso descrito é preditivo (classificar risco), não geração de conteúdo."
+   ],
+   [
+    "análise humana de cada compra feita pelos funcionários da agência em tempo real.",
+    "O volume de transações exige modelos automáticos; humanos revisam casos específicos."
+   ]
+  ],
+  "gabarito": "Modelos preditivos usam aprendizado de máquina para estimar probabilidades a partir de dados históricos: risco de fraude, de inadimplência (score de crédito), de cancelamento. A IA generativa cria conteúdo novo (texto, imagem) e é usada em assistentes e chatbots. Em ambos os casos, há cuidados com vieses, explicabilidade, privacidade (LGPD) e supervisão humana.",
+  "dica": "IA preditiva = estima probabilidades (fraude, crédito). IA generativa = cria conteúdo (textos, respostas)."
+ }
+]

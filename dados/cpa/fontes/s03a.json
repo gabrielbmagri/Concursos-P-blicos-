@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.1.1.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma nova regra muda os limites de comercialização de títulos de capitalização. A notícia informa que a diretriz foi aprovada por um conselho e que uma superintendência vai editar as normas operacionais e fiscalizar as empresas. Um cliente pergunta a Joana, profissional CPA, quem é quem.",
+  "enunciado": "Joana explica corretamente que:",
+  "certa": "o CNSP fixa as diretrizes de seguros e capitalização, e a SUSEP executa e fiscaliza.",
+  "erradas": [
+   [
+    "a SUSEP fixa as diretrizes do setor de seguros, e o CNSP fiscaliza as seguradoras e sociedades de capitalização.",
+    "Inverte os papéis: o CNSP é o órgão normativo; a SUSEP é a supervisora."
+   ],
+   [
+    "o CMN fixa as diretrizes de capitalização, e o Banco Central fiscaliza as sociedades de capitalização.",
+    "Seguros, capitalização e previdência aberta têm subsistema próprio: CNSP e SUSEP."
+   ],
+   [
+    "o CNPC fixa as diretrizes de capitalização, e a PREVIC fiscaliza as empresas do setor.",
+    "CNPC e PREVIC cuidam da previdência fechada (fundos de pensão)."
+   ]
+  ],
+  "gabarito": "O SFN tem três subsistemas normativos: moeda, crédito, capitais e câmbio (CMN; supervisores BC e CVM); seguros privados, capitalização e previdência aberta (CNSP; supervisora SUSEP); previdência fechada (CNPC; supervisora PREVIC). Os conselhos editam diretrizes; os supervisores regulamentam a operação e fiscalizam.",
+  "dica": "CNSP normatiza, SUSEP fiscaliza: seguros, capitalização e previdência aberta."
+ },
+ {
+  "pd": "1.1.3.1.7",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Luana comprou uma geladeira em 18 parcelas pelo crediário de uma loja de eletrodomésticos. No contrato, aparece como credora uma financeira ligada ao grupo varejista. Ela pergunta a Sérgio, profissional CPA, que tipo de instituição é essa.",
+  "enunciado": "Sérgio explica que a financeira é uma:",
+  "certa": "sociedade de crédito, financiamento e investimento, que financia bens de consumo pelo CDC.",
+  "erradas": [
+   [
+    "cooperativa de crédito, pois só cooperativas podem financiar clientes de redes varejistas.",
+    "Cooperativas atendem seus associados; o crediário típico de varejo é feito por financeiras (SCFI)."
+   ],
+   [
+    "instituição de pagamento, que pode conceder empréstimos usando o saldo das contas de seus clientes.",
+    "Instituições de pagamento não concedem crédito com recursos dos clientes."
+   ],
+   [
+    "administradora de consórcio, que antecipa o bem ao cliente antes do sorteio ou do lance.",
+    "No consórcio o bem só é entregue na contemplação, por sorteio ou lance."
+   ]
+  ],
+  "gabarito": "As sociedades de crédito, financiamento e investimento (SCFI), conhecidas como financeiras, concedem crédito ao consumidor, especialmente o CDC para bens duráveis e o crédito pessoal. Captam recursos principalmente por letras de câmbio e RDB, com garantia do FGC. Não mantêm contas correntes e são supervisionadas pelo Banco Central.",
+  "dica": "Financeira (SCFI) = CDC e crédito pessoal; capta com letra de câmbio e RDB."
+ },
+ {
+  "pd": "1.1.3.1.5",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Fábio quer comprar ações e fundos imobiliários pela primeira vez. Ele pergunta a Larissa, profissional CPA, por que precisa abrir conta em uma corretora se as negociações acontecem na B3.",
+  "enunciado": "Larissa explica que a corretora:",
+  "certa": "é a intermediária autorizada que envia as ordens do investidor à B3 e cuida da custódia dos seus ativos.",
+  "erradas": [
+   [
+    "é a dona dos ativos negociados, que revende ao investidor as ações que comprou previamente na bolsa.",
+    "A corretora intermedeia; os ativos ficam registrados em nome do investidor na depositária."
+   ],
+   [
+    "é uma exigência apenas para investidores estrangeiros, pois os brasileiros acessam a B3 diretamente pelo CPF.",
+    "Pessoas físicas não acessam a bolsa diretamente; precisam de um intermediário autorizado."
+   ],
+   [
+    "garante a rentabilidade das ações compradas, assumindo as perdas se o preço cair após a compra.",
+    "A corretora não garante rentabilidade nem assume as perdas do cliente."
+   ]
+  ],
+  "gabarito": "Corretoras e distribuidoras de títulos e valores mobiliários são intermediárias autorizadas pelo BC e supervisionadas também pela CVM. Executam ordens dos clientes em bolsa e balcão, distribuem ofertas e produtos, e atuam como agentes de custódia. Os ativos ficam registrados em nome do investidor na B3. Cobram corretagem e taxas, que variam por instituição.",
+  "dica": "Corretora: leva a ordem à B3 e faz a custódia. Os ativos ficam em nome do investidor."
+ },
+ {
+  "pd": "1.1.4.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê que a Anbima “regula” os fundos de investimento e pergunta a Eduardo, profissional CPA, se ela é um órgão do governo como a CVM.",
+  "enunciado": "Eduardo explica corretamente que a Anbima:",
+  "certa": "é uma entidade privada de autorregulação, cujos códigos valem para associadas e aderentes, além de certificar profissionais.",
+  "erradas": [
+   [
+    "é uma autarquia federal vinculada ao Ministério da Fazenda, com poder de multar qualquer instituição financeira.",
+    "Autarquia vinculada à Fazenda com poder sancionador é a CVM; a Anbima é entidade privada."
+   ],
+   [
+    "é um departamento do Banco Central responsável por registrar fundos e aprovar seus regulamentos.",
+    "O registro de fundos é feito na CVM; a Anbima não faz parte do BC."
+   ],
+   [
+    "é a bolsa de valores brasileira, responsável pela negociação e liquidação de títulos de renda fixa.",
+    "A bolsa é a B3; a Anbima representa as instituições e faz autorregulação."
+   ]
+  ],
+  "gabarito": "A Anbima (Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais) representa instituições financeiras e atua em autorregulação: edita códigos de melhores práticas (distribuição, fundos, ofertas), supervisiona e pune quem aderiu a eles, certifica profissionais (CPA, C-Pro, CFG etc.) e publica dados e índices de mercado. É privada; seus códigos não substituem a regulação da CVM e do BC, mas a complementam.",
+  "dica": "Anbima = privada, autorregulação para associadas e aderentes, certificações e informação de mercado."
+ },
+ {
+  "pd": "1.2.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma aula sobre economia, Marcela, profissional CPA, apresenta o fluxo circular da renda. Um aluno pergunta qual o papel do sistema financeiro quando as famílias decidem poupar parte da renda em vez de consumir tudo.",
+  "enunciado": "Marcela responde que, nesse caso, o sistema financeiro:",
+  "certa": "canaliza a poupança das famílias para empresas e governo que precisam financiar investimentos e gastos.",
+  "erradas": [
+   [
+    "retira a poupança de circulação, reduzindo o dinheiro disponível para as empresas investirem.",
+    "O papel do sistema é justamente intermediar: transferir recursos de quem poupa para quem precisa."
+   ],
+   [
+    "devolve a poupança às famílias na forma de salários, sem passar pelas empresas ou pelo governo.",
+    "Salários são pagos pelas empresas; o sistema financeiro intermedeia poupança e investimento."
+   ],
+   [
+    "converte a poupança em impostos, que são repassados ao governo para equilibrar as contas públicas.",
+    "Poupança não vira imposto; o governo pode captar poupança vendendo títulos, mas de forma voluntária."
+   ]
+  ],
+  "gabarito": "No fluxo circular, as famílias oferecem trabalho e capital às empresas e recebem renda (salários, lucros, juros, aluguéis); com essa renda consomem bens e serviços produzidos pelas empresas. O governo arrecada tributos e realiza gastos. A parte da renda não consumida (poupança) é canalizada pelo sistema financeiro para agentes deficitários, que investem ou financiam gastos. Por isso o sistema financeiro é o elo entre poupança e investimento.",
+  "dica": "Sistema financeiro: leva recursos dos agentes superavitários (quem poupa) aos deficitários (quem investe)."
+ },
+ {
+  "pd": "1.2.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma notícia informa que o governo teve superávit primário no ano, mas déficit nominal. Um cliente acha a informação contraditória e pede a Rodrigo, profissional CPA, que explique.",
+  "enunciado": "Rodrigo explica corretamente que:",
+  "certa": "o primário exclui os juros da dívida; com eles, o resultado pode virar déficit nominal.",
+  "erradas": [
+   [
+    "o resultado primário inclui os juros da dívida, e o nominal considera apenas as despesas com pessoal.",
+    "É o oposto: o primário exclui os juros; o nominal os inclui."
+   ],
+   [
+    "superávit primário e déficit nominal não podem ocorrer no mesmo ano, por isso a notícia está errada.",
+    "Podem: basta que os juros superem a sobra primária."
+   ],
+   [
+    "o resultado nominal desconta a inflação, e o primário mostra os valores sem esse desconto.",
+    "Nominal não significa “corrigido pela inflação” aqui; significa incluir os juros."
+   ]
+  ],
+  "gabarito": "Resultado primário = receitas − despesas do governo, sem contar os juros da dívida. Mostra o esforço fiscal do governo. Resultado nominal = primário − juros nominais da dívida. É possível ter superávit primário e déficit nominal quando os juros pagos superam a sobra primária. Déficits recorrentes elevam a dívida pública, o risco-país e pressionam os juros.",
+  "dica": "Primário: sem juros. Nominal: com juros. Superávit primário pode conviver com déficit nominal."
+ },
+ {
+  "pd": "1.3.3.2.3",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa avalia investir R$ 10.000 hoje em um projeto que retornará R$ 12.100 daqui a 2 anos, em um único pagamento. O custo de oportunidade é de 10% ao ano. Eduarda, profissional CPA, ajuda a analisar.",
+  "enunciado": "Eduarda conclui corretamente que o VPL do projeto é:",
+  "certa": "zero: R$ 12.100 descontados a 10% ao ano valem R$ 10.000, e a TIR é de 10%.",
+  "erradas": [
+   [
+    "R$ 2.100, pois é a diferença entre o valor recebido e o investido, sem desconto.",
+    "O VPL desconta o fluxo futuro pela taxa; diferença simples ignora o valor do dinheiro no tempo."
+   ],
+   [
+    "R$ 1.000, pois a taxa de 10% é aplicada sobre o valor investido apenas uma vez.",
+    "São dois anos: 12.100 ÷ 1,10² = 10.000, e o VPL é 10.000 − 10.000 = 0."
+   ],
+   [
+    "negativo, pois todo projeto com prazo superior a um ano destrói valor ao ser descontado.",
+    "O sinal do VPL depende da taxa e dos fluxos; aqui ele é exatamente zero."
+   ]
+  ],
+  "gabarito": "VPL = soma dos fluxos futuros trazidos a valor presente − investimento inicial. VP = 12.100 ÷ (1,10)² = 12.100 ÷ 1,21 = R$ 10.000. VPL = 10.000 − 10.000 = 0. VPL zero significa que o projeto rende exatamente a taxa de desconto: a TIR (taxa que zera o VPL) é 10% ao ano. VPL positivo indica que o projeto supera o custo de oportunidade.",
+  "dica": "VPL = VP dos fluxos − investimento. VPL zero ⇔ TIR = taxa de desconto."
+ },
+ {
+  "pd": "1.2.4.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Notícia do Copom",
+  "etapa": "1/3",
+  "contexto": "Numa reunião com clientes, surge a notícia de que a inflação em 12 meses ficou acima do teto da meta por seis meses seguidos e o Banco Central publicou uma carta aberta. Os clientes pedem a Márcio, profissional CPA, que explique o regime de metas.",
+  "enunciado": "Márcio explica corretamente que, no regime atual:",
+  "certa": "o CMN fixa uma meta contínua com intervalo de tolerância, e seis meses seguidos fora dele exigem carta do BC.",
+  "erradas": [
+   [
+    "o Copom fixa a meta de inflação a cada reunião, e a carta é enviada apenas se a inflação ficar negativa.",
+    "A meta é fixada pelo CMN; a carta é exigida quando a inflação fica fora do intervalo por seis meses seguidos."
+   ],
+   [
+    "a meta vale só para o ano-calendário, e o descumprimento é verificado uma única vez, em dezembro.",
+    "Desde 2025 a meta é contínua, avaliada mês a mês pela inflação acumulada em 12 meses."
+   ],
+   [
+    "a meta é definida pelo IGP-M, e o Banco Central não precisa justificar o descumprimento.",
+    "O índice de referência é o IPCA, e o descumprimento exige justificativa formal."
+   ]
+  ],
+  "gabarito": "No regime de metas para a inflação, o CMN define a meta e o intervalo de tolerância (em 2026, 3% com tolerância de 1,5 ponto para cima ou para baixo), medidos pelo IPCA. Desde 2025 a meta é contínua: é considerada descumprida quando a inflação acumulada em 12 meses fica fora do intervalo por seis meses consecutivos. O BC então divulga carta aberta com as causas, as medidas e o prazo esperado para o retorno. Expectativas ancoradas facilitam o controle da inflação.",
+  "dica": "Meta contínua (CMN, IPCA): seis meses seguidos fora do intervalo = carta aberta do BC."
+ },
+ {
+  "pd": "1.2.4.4",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Notícia do Copom",
+  "etapa": "2/3",
+  "contexto": "Para trazer a inflação de volta à meta, o Copom eleva a Selic em 1 ponto percentual. Um cliente pergunta a Márcio o que tende a acontecer com o crédito, a atividade e os títulos prefixados que ele já possui.",
+  "enunciado": "Márcio explica que, em geral, a alta da Selic tende a:",
+  "certa": "encarecer o crédito, desacelerar a atividade e derrubar o preço dos prefixados já emitidos.",
+  "erradas": [
+   [
+    "baratear o crédito, estimular o consumo e valorizar os títulos prefixados já existentes.",
+    "Juros maiores encarecem o crédito e desvalorizam os prefixados já emitidos."
+   ],
+   [
+    "manter o crédito estável e elevar o preço dos prefixados, que passam a render mais que o CDI.",
+    "Os prefixados antigos rendem a taxa contratada, menor que a nova taxa de mercado, por isso perdem valor."
+   ],
+   [
+    "afetar só a poupança, sem efeito sobre o crédito, a atividade ou os preços dos ativos.",
+    "A Selic influencia toda a estrutura de juros, o crédito, o câmbio e os preços dos ativos."
+   ]
+  ],
+  "gabarito": "Canais de transmissão da política monetária: juros e crédito (crédito mais caro, menos consumo e investimento), preços de ativos (juros maiores reduzem o valor presente de títulos e ações), câmbio (juros maiores atraem capital e tendem a valorizar o real) e expectativas (credibilidade ancora a inflação futura). Resultado: demanda menor e inflação em queda, com defasagem de alguns trimestres. Em títulos prefixados, a alta dos juros derruba o preço de mercado dos papéis existentes.",
+  "dica": "Selic sobe: crédito mais caro, atividade mais fraca, real mais forte, prefixado antigo cai."
+ },
+ {
+  "pd": "1.3.4.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Notícia do Copom",
+  "etapa": "3/3",
+  "contexto": "Com a Selic mais alta, o cliente vai aplicar por 2 anos e está entre um CDB prefixado de 13% ao ano e um CDB de 100% do CDI. O mercado projeta Selic média de 14% ao ano no período.",
+  "enunciado": "Márcio explica que:",
+  "certa": "o pós-fixado tende a ganhar se a Selic ficar acima de 13%; o prefixado, se os juros caírem mais.",
+  "erradas": [
+   [
+    "o prefixado sempre rende mais, pois a taxa é garantida e não depende do comportamento da Selic.",
+    "A taxa garantida protege contra queda dos juros, mas rende menos se o CDI ficar acima de 13%."
+   ],
+   [
+    "os dois rendem exatamente o mesmo, pois a taxa prefixada é sempre igual à Selic média projetada.",
+    "Aqui o prefixado (13%) está abaixo da Selic projetada (14%); os retornos podem diferir."
+   ],
+   [
+    "o pós-fixado só é indicado quando o investidor espera queda forte da Selic nos próximos anos.",
+    "Pós-fixado é preferível quando se esperam juros iguais ou maiores; prefixado, quando se espera queda."
+   ]
+  ],
+  "gabarito": "Prefixado: a rentabilidade é conhecida na aplicação; ganha do pós se os juros efetivos ficarem abaixo da taxa contratada. Pós-fixado: acompanha um indexador (CDI, Selic); protege em cenários de juros em alta. A taxa prefixada embute a expectativa de juros do mercado mais um prêmio. A escolha depende da expectativa para os juros, do prazo e da tolerância à marcação a mercado (se houver venda antecipada).",
+  "dica": "Espera queda de juros maior que o mercado? Prefixado. Juros iguais ou em alta? Pós-fixado."
+ },
+ {
+  "pd": "2.1.1.1.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Seu Lauro tem um Tesouro IPCA+ com Juros Semestrais (NTN-B) comprado há 3 anos. Ele percebeu desconto de IR a cada pagamento de cupom e pergunta a Bete, profissional CPA, como é calculado.",
+  "enunciado": "Bete explica corretamente que:",
+  "certa": "cada cupom é tributado ao ser pago, pela tabela regressiva contada desde a compra; hoje, 15%.",
+  "erradas": [
+   [
+    "os cupons são isentos, e o IR é cobrado de uma só vez no vencimento, sobre todo o rendimento acumulado.",
+    "Nos títulos com juros semestrais, o IR incide a cada pagamento de cupom."
+   ],
+   [
+    "cada cupom sofre IR de 22,5%, pois o prazo é contado a partir do pagamento do cupom anterior.",
+    "O prazo é contado desde a data da compra; após 720 dias, a alíquota é de 15%."
+   ],
+   [
+    "os cupons são tributados pela tabela progressiva mensal, como se fossem salário do investidor.",
+    "Títulos públicos seguem a tabela regressiva de renda fixa, com retenção na fonte."
+   ]
+  ],
+  "gabarito": "Títulos com cupons (NTN-B, NTN-F, Tesouro IPCA+ e Prefixado com Juros Semestrais) pagam juros a cada seis meses. Em cada pagamento há retenção de IR pela tabela regressiva, contando o prazo desde a compra: após 720 dias, 15%. Os cupons reduzem o efeito dos juros compostos, a menos que sejam reinvestidos. Títulos sem cupom (Principal) concentram o IR no resgate ou no vencimento.",
+  "dica": "Cupom semestral: IR a cada pagamento, pela tabela regressiva contada desde a compra."
+ },
+ {
+  "pd": "2.1.1.1.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao analisar uma oferta, Patrícia vê duas debêntures: uma pode ser trocada por ações da própria emissora; a outra, por ações de uma empresa controlada pela emissora. Ela pergunta a Vítor, profissional CPA, a diferença.",
+  "enunciado": "Vítor explica que são, respectivamente:",
+  "certa": "debênture conversível e debênture permutável.",
+  "erradas": [
+   [
+    "debênture permutável e debênture conversível.",
+    "Inverte os conceitos: conversível é em ações da própria emissora; permutável, de outra companhia."
+   ],
+   [
+    "debênture incentivada e debênture de infraestrutura.",
+    "Esses nomes se referem ao tratamento tributário, não à troca por ações."
+   ],
+   [
+    "debênture simples e debênture subordinada.",
+    "Debênture simples não pode ser trocada por ações; subordinada diz respeito à ordem de pagamento."
+   ]
+  ],
+  "gabarito": "Debêntures simples não podem ser trocadas por ações. Debêntures conversíveis podem ser transformadas em ações da própria emissora, nas condições da escritura. Debêntures permutáveis podem ser trocadas por ações de outra companhia (em geral do mesmo grupo). Quanto à garantia, podem ser com garantia real, flutuante, quirografárias (sem preferência) ou subordinadas (recebem por último).",
+  "dica": "Conversível = ações da própria emissora. Permutável = ações de outra empresa."
+ },
+ {
+  "pd": "2.1.1.1.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente que tem CRA de uma securitizadora lê que ela entrou em dificuldades financeiras. Preocupado, pergunta a Natália, profissional CPA, se perderá os recebíveis do agronegócio que lastreiam seu título.",
+  "enunciado": "Natália explica que, pelo regime fiduciário:",
+  "certa": "os recebíveis do lastro formam patrimônio separado, que não responde pelas dívidas da securitizadora.",
+  "erradas": [
+   [
+    "os recebíveis passam a integrar o patrimônio da securitizadora e podem pagar seus credores comuns.",
+    "O regime fiduciário existe justamente para separar o lastro do patrimônio da securitizadora."
+   ],
+   [
+    "o FGC assume o pagamento do CRA até R$ 250 mil, por ser título lastreado no agronegócio.",
+    "CRA não tem FGC."
+   ],
+   [
+    "o Banco Central garante o pagamento, pois os CRAs são registrados no Selic.",
+    "CRAs são registrados em depositária privada (B3), e não há garantia do BC."
+   ]
+  ],
+  "gabarito": "No regime fiduciário, os créditos que lastreiam CRI e CRA são separados do patrimônio da securitizadora (patrimônio separado), destinados exclusivamente ao pagamento dos investidores daquela emissão, com um agente fiduciário que representa os titulares. Assim, a quebra da securitizadora não atinge diretamente o lastro. O risco principal continua sendo o crédito dos devedores originais (produtores, cooperativas, tradings).",
+  "dica": "Regime fiduciário: lastro em patrimônio separado. O risco principal é o devedor do recebível."
+ },
+ {
+  "pd": "2.1.1.1.8.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Nádia depositou R$ 1.000 na poupança no dia 30 de janeiro e pergunta a Carlos, profissional CPA, quando receberá o primeiro rendimento.",
+  "enunciado": "Carlos informa corretamente que o primeiro rendimento será creditado:",
+  "certa": "no dia 1º de março, pois depósitos nos dias 29, 30 e 31 têm aniversário no dia 1º.",
+  "erradas": [
+   [
+    "no dia 28 de fevereiro, pois o aniversário passa para o último dia do mês quando a data não existe.",
+    "A regra é outra: depósitos dos dias 29, 30 e 31 fazem aniversário no dia 1º do mês seguinte."
+   ],
+   [
+    "diariamente, a partir do dia seguinte ao depósito, de forma proporcional aos dias corridos.",
+    "A poupança rende mensalmente, só na data de aniversário."
+   ],
+   [
+    "no dia 30 de março, pois o primeiro ciclo da poupança sempre dura dois meses.",
+    "O ciclo é mensal; a data é ajustada para o dia 1º."
+   ]
+  ],
+  "gabarito": "A poupança remunera mensalmente, na data de aniversário, que é o dia do depósito. Para depósitos feitos nos dias 29, 30 e 31, o aniversário passa a ser o dia 1º do mês seguinte, porque esses dias não existem em todos os meses. Sacar antes do aniversário faz perder o rendimento do ciclo daquele valor.",
+  "dica": "Depósito em 29, 30 ou 31 → aniversário no dia 1º."
+ },
+ {
+  "pd": "2.1.1.1.12",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Hélio aplicou em um CDB de liquidez diária e resgatou no 15º dia, com rendimento bruto de R$ 100. Ele pergunta a Sueli, profissional CPA, quanto pagará de IOF e de IR.",
+  "enunciado": "Sueli informa corretamente que ele pagará:",
+  "certa": "R$ 50,00 de IOF (50% no 15º dia) e R$ 11,25 de IR (22,5% sobre o rendimento após IOF).",
+  "erradas": [
+   [
+    "R$ 50,00 de IOF e R$ 22,50 de IR, pois o IR incide sobre o rendimento bruto antes do IOF.",
+    "O IR incide sobre o rendimento já descontado o IOF: 22,5% × 50 = R$ 11,25."
+   ],
+   [
+    "nenhum IOF, pois a alíquota zera após 10 dias, e R$ 22,50 de IR sobre o rendimento.",
+    "O IOF só zera no 30º dia; no 15º dia a alíquota é de 50%."
+   ],
+   [
+    "R$ 0,38 de IOF, alíquota fixa das operações financeiras, e R$ 22,50 de IR.",
+    "A alíquota de 0,38% vale para crédito e câmbio; em aplicações, o IOF é regressivo sobre o rendimento."
+   ]
+  ],
+  "gabarito": "O IOF sobre aplicações vale para resgates antes de 30 dias, com alíquota regressiva sobre o rendimento: 96% no 1º dia, caindo até 0% no 30º. No 15º dia, 50%: IOF = 50% × 100 = R$ 50. O IR incide sobre o rendimento já líquido de IOF: 22,5% (até 180 dias) × 50 = R$ 11,25. Rendimento líquido: R$ 38,75.",
+  "dica": "Antes de 30 dias: primeiro o IOF sobre o rendimento, depois o IR sobre o que sobrou."
+ },
+ {
+  "pd": "2.1.1.2.2.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Thiago quer investir em grandes empresas americanas sem abrir conta no exterior. Pela corretora, encontra BDRs dessas empresas e pergunta a Priscila, profissional CPA, como funcionam.",
+  "enunciado": "Priscila explica corretamente que os BDRs:",
+  "certa": "são certificados negociados na B3 que representam ações de empresas estrangeiras e trazem risco cambial.",
+  "erradas": [
+   [
+    "são ações de empresas brasileiras negociadas na bolsa americana, sem exposição ao dólar.",
+    "Isso descreve ADRs (recibos de empresas brasileiras nos EUA); BDRs são o caminho inverso."
+   ],
+   [
+    "são títulos de renda fixa emitidos pelo Tesouro americano e distribuídos por bancos brasileiros.",
+    "BDRs representam ações (ou outros valores mobiliários) estrangeiros, não títulos do Tesouro americano."
+   ],
+   [
+    "têm a mesma isenção de IR para vendas de até R$ 20 mil por mês aplicada às ações brasileiras.",
+    "A isenção de R$ 20 mil vale só para ações; ganhos com BDR são tributados em 15% em qualquer volume."
+   ]
+  ],
+  "gabarito": "BDRs (Brazilian Depositary Receipts) são certificados emitidos no Brasil, negociados na B3, que representam valores mobiliários de emissores estrangeiros (ações, ETFs). O investidor fica exposto à empresa e à variação cambial. Na tributação, o ganho de capital paga 15% (20% em day trade), sem a isenção de R$ 20 mil, e os dividendos seguem regras próprias de rendimentos do exterior.",
+  "dica": "BDR: ação estrangeira negociada na B3, com risco cambial e sem isenção de R$ 20 mil."
+ },
+ {
+  "pd": "2.1.1.2.2.2.8",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "A companhia em que Rosa investe anuncia aumento de capital com emissão de novas ações. Ela recebe um aviso de que tem direito de subscrição, mas não quer investir mais. Pergunta a Marcos, profissional CPA, o que fazer.",
+  "enunciado": "Marcos explica corretamente que Rosa pode:",
+  "certa": "vender o direito de subscrição na bolsa, durante o prazo, em vez de deixá-lo vencer.",
+  "erradas": [
+   [
+    "ignorar o aviso sem efeito algum, pois sua participação na empresa continuará exatamente igual.",
+    "Se não subscrever, ela será diluída; vender o direito é uma forma de compensar."
+   ],
+   [
+    "exigir que a empresa recompre suas ações atuais pelo preço da nova emissão, por ter direito de recesso.",
+    "O direito de recesso cabe em situações específicas previstas em lei, não em aumento de capital comum."
+   ],
+   [
+    "receber automaticamente as novas ações sem pagar nada, pois a subscrição é uma bonificação.",
+    "Na subscrição, o acionista paga pelas novas ações; na bonificação, recebe sem custo."
+   ]
+  ],
+  "gabarito": "Na subscrição, a empresa emite novas ações para captar recursos, e os acionistas têm direito de preferência na proporção de sua participação, para evitar diluição. Quem não quer subscrever pode vender esse direito no mercado durante o prazo. Diferente da bonificação, em que a empresa distribui novas ações gratuitamente, capitalizando reservas, sem entrada de dinheiro.",
+  "dica": "Subscrição: paga pelas novas ações (ou vende o direito). Bonificação: ações grátis por capitalização de reservas."
+ },
+ {
+  "pd": "2.1.1.2.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma reunião, um cliente pergunta a Gabriela, profissional CPA, o que o Ibovespa representa e como ele difere do IBrX-100.",
+  "enunciado": "Gabriela explica corretamente que:",
+  "certa": "o Ibovespa é a carteira teórica dos ativos mais negociados da B3; o IBrX-100 reúne as 100 ações mais negociadas.",
+  "erradas": [
+   [
+    "o Ibovespa reúne exatamente as 50 maiores empresas do país pelo lucro, e o IBrX-100 as 100 maiores pelo patrimônio.",
+    "Os índices usam critérios de negociação (liquidez), não lucro ou patrimônio."
+   ],
+   [
+    "os dois índices têm a mesma composição e só diferem pela forma de divulgação ao mercado.",
+    "As carteiras e os critérios são diferentes."
+   ],
+   [
+    "o Ibovespa mede apenas empresas estatais, e o IBrX-100 apenas empresas privadas.",
+    "Não há separação entre estatais e privadas nesses índices."
+   ]
+  ],
+  "gabarito": "O Ibovespa é o principal indicador da B3: uma carteira teórica com os ativos mais negociados, que representam a maior parte do volume, revisada a cada quatro meses. O IBrX-100 reúne as 100 ações mais negociadas e o IBrX-50, as 50 mais negociadas. Os índices servem de referência (benchmark) para fundos de ações e ETFs.",
+  "dica": "Ibovespa = mais negociados (carteira revisada a cada 4 meses). IBrX-100 e IBrX-50 = 100 e 50 mais negociados."
+ },
+ {
+  "pd": "2.1.1.4.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Rui avalia um COE de capital em risco ligado a um índice de ações: se o índice subir, ganha o dobro da alta; se cair, perde na mesma proporção, até o valor aplicado. Ele investiria R$ 30.000 e pergunta a Laís, profissional CPA, qual a perda máxima.",
+  "enunciado": "Laís explica que, nesse COE, a perda máxima é de:",
+  "certa": "até R$ 30.000, o valor investido, pois o COE não gera perdas acima do capital aplicado.",
+  "erradas": [
+   [
+    "até R$ 60.000, pois a alavancagem de duas vezes vale tanto para ganhos quanto para perdas.",
+    "No COE, a perda é limitada ao valor investido."
+   ],
+   [
+    "zero, pois todo COE tem capital protegido pelo emissor no vencimento.",
+    "Só o COE de capital protegido garante o valor nominal; este é de capital em risco."
+   ],
+   [
+    "até R$ 7.500, pois a CVM limita as perdas de COE a 25% do valor aplicado.",
+    "Não há limite regulatório de 25%; o limite é o próprio capital investido."
+   ]
+  ],
+  "gabarito": "O COE pode ser de capital protegido (devolve ao menos o valor nominal no vencimento) ou de capital em risco (pode perder parte ou todo o capital). Em nenhuma modalidade a perda passa do valor investido: não há chamada de margem nem aporte adicional. O investidor também corre o risco de crédito do emissor, sem FGC, e o de liquidez.",
+  "dica": "COE de capital em risco: pode perder tudo, mas nunca mais que o investido."
+ },
+ {
+  "pd": "2.1.2.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Uma classe de fundo tem patrimônio líquido de R$ 10.000.000 dividido em 2.000.000 de cotas. Bruno quer aplicar R$ 5.000 e pergunta a Ana, profissional CPA, quantas cotas receberá se a cota não mudar.",
+  "enunciado": "Ana calcula que Bruno receberá:",
+  "certa": "1.000 cotas, pois a cota vale R$ 5,00 (PL dividido pelo número de cotas).",
+  "erradas": [
+   [
+    "500 cotas, pois a cota vale R$ 10,00, já que o patrimônio é de R$ 10 milhões.",
+    "Valor da cota = 10.000.000 ÷ 2.000.000 = R$ 5,00."
+   ],
+   [
+    "2.000 cotas, pois a cota vale R$ 2,50 e cada real aplicado compra duas cotas.",
+    "A conta correta dá R$ 5,00 por cota."
+   ],
+   [
+    "5.000 cotas, pois a cota de qualquer fundo vale R$ 1,00 na data da aplicação.",
+    "A cota só vale R$ 1,00 no início do fundo, em geral; depois varia com o patrimônio."
+   ]
+  ],
+  "gabarito": "Fundos são condomínios em que os recursos são divididos em cotas. Valor da cota = patrimônio líquido ÷ número de cotas = 10.000.000 ÷ 2.000.000 = R$ 5,00. Aplicando R$ 5.000, Bruno recebe 1.000 cotas. A rentabilidade do cotista vem da variação do valor da cota, que já é líquida das taxas do fundo.",
+  "dica": "Cota = PL ÷ número de cotas. Rentabilidade = variação da cota."
+ },
+ {
+  "pd": "2.1.2.2.25.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma classe de fundo alavancada, cujo regulamento limita a responsabilidade dos cotistas ao valor subscrito, teve perdas que deixaram o patrimônio líquido negativo. Um cotista pergunta a Lúcio, profissional CPA, se terá de colocar mais dinheiro.",
+  "enunciado": "Lúcio explica corretamente que:",
+  "certa": "o cotista não precisa aportar além do subscrito, e a classe pode ter a insolvência declarada.",
+  "erradas": [
+   [
+    "todo cotista deve cobrir o patrimônio negativo, proporcionalmente às suas cotas, em qualquer fundo.",
+    "Com responsabilidade limitada prevista no regulamento, o cotista não responde além do subscrito."
+   ],
+   [
+    "o gestor é obrigado a cobrir integralmente as perdas com recursos próprios.",
+    "Gestor e administrador respondem por suas falhas, mas não garantem o resultado do fundo."
+   ],
+   [
+    "o FGC cobre o patrimônio negativo até R$ 250 mil por cotista.",
+    "Fundos de investimento não têm FGC."
+   ]
+  ],
+  "gabarito": "A CVM 175 permite limitar a responsabilidade do cotista ao valor por ele subscrito. Se o regulamento não limitar, o cotista pode ter de cobrir patrimônio negativo (e assina termo de ciência dessa responsabilidade ilimitada). Com PL negativo e responsabilidade limitada, o administrador deve adotar medidas como suspender resgates, convocar assembleia e, se for o caso, pedir a declaração de insolvência da classe.",
+  "dica": "Responsabilidade limitada: o cotista perde no máximo o que subscreveu; PL negativo pode levar à insolvência da classe."
+ },
+ {
+  "pd": "2.1.2.3.5.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê no regulamento de uma classe de renda fixa que ela está sujeita a limites de concentração por emissor, mas que 100% da carteira está em títulos públicos federais. Ele pergunta a Sabrina, profissional CPA, se isso é permitido.",
+  "enunciado": "Sabrina explica que é permitido porque:",
+  "certa": "os títulos públicos federais não têm limite de concentração por emissor nos FIFs.",
+  "erradas": [
+   [
+    "a CVM suspendeu os limites de concentração para todas as classes de renda fixa.",
+    "Os limites existem; a dispensa vale para emissores específicos, como a União."
+   ],
+   [
+    "o limite por emissor vale só para fundos de ações, e não para classes de renda fixa.",
+    "Os limites por emissor valem para as classes de FIF em geral."
+   ],
+   [
+    "o gestor pode ignorar os limites quando os cotistas aprovam em assembleia.",
+    "A dispensa decorre da regra para títulos da União, não de assembleia."
+   ]
+  ],
+  "gabarito": "Pelo Anexo I da CVM 175, as classes de FIF devem respeitar limites de concentração por emissor (instituições financeiras, companhias abertas, fundos, outras pessoas jurídicas) e por modalidade de ativo, para diversificar o risco de crédito. Títulos públicos federais e operações compromissadas lastreadas neles não têm limite por emissor, pois o risco é o soberano.",
+  "dica": "Título público federal: sem limite de concentração por emissor no fundo."
+ },
+ {
+  "pd": "2.1.2.2.14",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Fernanda e o primeiro fundo",
+  "etapa": "1/3",
+  "contexto": "Fernanda, investidora do varejo, quer aplicar pela primeira vez em uma classe de fundo de renda fixa. Antes de decidir, pergunta a Rogério, profissional CPA, que documentos deve consultar.",
+  "enunciado": "Rogério orienta que ela leia, antes de investir:",
+  "certa": "o regulamento e a lâmina, que resume objetivo, riscos, taxas e rentabilidade passada.",
+  "erradas": [
+   [
+    "apenas o extrato mensal de outros cotistas, que mostra a rentabilidade real obtida no fundo.",
+    "Extratos de terceiros são sigilosos e não substituem os documentos oficiais."
+   ],
+   [
+    "somente a ata da última assembleia, que contém todas as regras de funcionamento do fundo.",
+    "A ata registra deliberações; as regras estão no regulamento."
+   ],
+   [
+    "o contrato social do gestor, pois é ele quem define as taxas e os riscos do fundo.",
+    "As características do fundo estão no regulamento e na lâmina."
+   ]
+  ],
+  "gabarito": "Documentos de fundos: regulamento (regras de funcionamento: política de investimento, taxas, resgates, assembleias, prestadores); anexo da classe e apêndice da subclasse (CVM 175); lâmina de informações essenciais (resumo padronizado para o varejo, com objetivo, riscos, custos e desempenho); termo de adesão e ciência de risco, assinado no ingresso. A divulgação de cota, PL e rentabilidade é periódica.",
+  "dica": "Antes de investir em fundo: regulamento + lâmina. Ao entrar: termo de adesão e ciência de risco."
+ },
+ {
+  "pd": "2.1.2.2.10",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Fernanda e o primeiro fundo",
+  "etapa": "2/3",
+  "contexto": "Fernanda escolheu a classe. No regulamento, o resgate tem conversão em D+30 e pagamento em D+1 da conversão. Ela pergunta a Rogério quando terá o dinheiro se pedir o resgate hoje.",
+  "enunciado": "Rogério explica corretamente que:",
+  "certa": "a cota do resgate será a do 30º dia após o pedido, e o dinheiro cai um dia útil depois.",
+  "erradas": [
+   [
+    "o dinheiro cai no dia seguinte ao pedido, pela cota de hoje, pois D+30 é só um prazo de carência.",
+    "A conversão define qual cota será usada: a de D+30, e não a do dia do pedido."
+   ],
+   [
+    "a cota usada será a do dia do pedido, e o pagamento ocorre só após 30 dias.",
+    "Quem é fixada em D+30 é a cota de conversão; o pagamento vem depois dela."
+   ],
+   [
+    "o fundo pode escolher qualquer data entre hoje e D+30 para converter e pagar o resgate.",
+    "Os prazos de conversão e pagamento são fixados no regulamento."
+   ]
+  ],
+  "gabarito": "Cotização (conversão) é a data em que o pedido de aplicação ou resgate vira número de cotas e valor; liquidação (pagamento) é quando o dinheiro é efetivamente entregue. Com conversão em D+30 e pagamento em D+1 da conversão, o resgate usa a cota do 30º dia e é pago um dia útil depois. Até a conversão, o valor continua sujeito à variação da cota. Prazos longos permitem ao gestor investir em ativos menos líquidos.",
+  "dica": "Conversão = qual cota vale. Liquidação = quando o dinheiro cai."
+ },
+ {
+  "pd": "2.1.3.2.2",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Fernanda e o primeiro fundo",
+  "etapa": "3/3",
+  "contexto": "Fernanda percebe que a classe escolhida é classificada, para fins tributários, como de curto prazo, pois a carteira tem prazo médio de até 365 dias. Ela pergunta a Rogério o que muda no imposto em relação a uma classe de longo prazo.",
+  "enunciado": "Rogério explica corretamente que, na classe de curto prazo:",
+  "certa": "o come-cotas é de 20%, e no resgate o IR é de 22,5% até 180 dias e de 20% depois.",
+  "erradas": [
+   [
+    "o come-cotas é de 15%, e no resgate vale a tabela regressiva completa até 15%.",
+    "Essas são as regras do longo prazo; no curto prazo a alíquota mínima é de 20%."
+   ],
+   [
+    "não há come-cotas, e o IR é de 15% sobre o ganho no resgate, como nas classes de ações.",
+    "Classes de curto prazo têm come-cotas; a regra de 15% sem come-cotas é das classes de ações."
+   ],
+   [
+    "o IR é isento após 360 dias, pois o prazo médio da carteira é menor que um ano.",
+    "Não há isenção; o curto prazo tributa no mínimo 20%."
+   ]
+  ],
+  "gabarito": "Fundos (classes) de curto prazo: carteira com prazo médio de até 365 dias. Come-cotas de 20% em maio e novembro; no resgate, 22,5% até 180 dias e 20% acima de 180 dias. Longo prazo: prazo médio acima de 365 dias; come-cotas de 15%; tabela regressiva de 22,5% a 15%. Classes de ações: 15% no resgate, sem come-cotas. O IOF regressivo vale para resgates antes de 30 dias (exceto em ações).",
+  "dica": "Curto prazo: come-cotas 20%; IR 22,5% ou 20%. Longo prazo: come-cotas 15%; IR de 22,5% a 15%."
+ },
+ {
+  "pd": "2.2.3.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Aos 45 anos, Sílvio contribui mensalmente para um PGBL e pretende começar a receber renda aos 60. Ele pergunta a Gisele, profissional CPA, como se chamam essas duas fases do plano.",
+  "enunciado": "Gisele explica que as fases são:",
+  "certa": "diferimento, quando ele contribui e acumula, e concessão do benefício, quando recebe.",
+  "erradas": [
+   [
+    "carência, quando ele contribui, e portabilidade, quando passa a receber a renda.",
+    "Carência e portabilidade são regras do plano, não fases."
+   ],
+   [
+    "diferimento, quando recebe a renda, e capitalização, quando faz as contribuições.",
+    "A ordem está invertida: o diferimento é a fase de contribuição e acumulação."
+   ],
+   [
+    "subscrição, quando contrata o plano, e amortização, quando resgata todo o saldo.",
+    "Esses termos não descrevem as fases da previdência complementar."
+   ]
+  ],
+  "gabarito": "Planos de previdência complementar aberta têm duas fases: diferimento (acumulação), em que o participante contribui e os recursos são investidos em fundos específicos (FIEs), podendo haver resgates e portabilidade; e concessão de benefício, em que a reserva é transformada em renda (vitalícia, temporária, por prazo certo) ou paga de uma só vez.",
+  "dica": "Previdência: diferimento (contribui e acumula) → benefício (recebe renda ou pagamento único)."
+ },
+ {
+  "pd": "2.2.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Mirela compara dois VGBLs: um com taxa de administração de 0,8% ao ano e taxa de carregamento de 3% sobre cada aporte; outro com taxa de administração de 1% ao ano e sem carregamento. Ela pergunta a Daniel, profissional CPA, o que é cada taxa.",
+  "enunciado": "Daniel explica corretamente que:",
+  "certa": "a taxa de administração incide sobre o patrimônio todo ano; a de carregamento, sobre aportes ou resgates.",
+  "erradas": [
+   [
+    "as duas taxas incidem sobre o patrimônio acumulado, mudando só a periodicidade da cobrança.",
+    "O carregamento incide sobre as contribuições (entrada) ou sobre os resgates (saída), não sobre o patrimônio."
+   ],
+   [
+    "a taxa de carregamento remunera o gestor do fundo, e a de administração cobre só a tributação do plano.",
+    "A administração remunera a gestão; tributos não são taxas do plano."
+   ],
+   [
+    "a taxa de carregamento é obrigatória por lei em todos os planos e não pode ser negociada.",
+    "Muitos planos não cobram carregamento; é uma condição comercial."
+   ]
+  ],
+  "gabarito": "Custos da previdência: taxa de administração (percentual anual sobre o patrimônio do fundo, cobrada diariamente na cota, remunera a gestão); taxa de carregamento (percentual sobre as contribuições, na entrada, ou sobre resgates e portabilidade, na saída, conforme o plano, para despesas de comercialização). Muitos planos zeraram o carregamento. Comparar o custo total no horizonte do investimento é essencial.",
+  "dica": "Administração = anual sobre o patrimônio. Carregamento = sobre aportes (entrada) ou resgates (saída)."
+ },
+ {
+  "pd": "2.2.3.4.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Ao se aposentar, Henrique quer uma renda mensal para toda a vida e deseja que, se ele morrer, a esposa continue recebendo o benefício. Pergunta a Lia, profissional CPA, qual modalidade escolher.",
+  "enunciado": "Lia indica a renda mensal:",
+  "certa": "vitalícia reversível ao beneficiário indicado, que continua a pagar à esposa após a morte dele.",
+  "erradas": [
+   [
+    "vitalícia simples, que paga a renda até a morte e depois transfere o saldo aos herdeiros.",
+    "Na vitalícia simples, o pagamento cessa com a morte, sem reversão nem saldo aos herdeiros."
+   ],
+   [
+    "temporária, que paga a renda por toda a vida dos dois cônjuges sem redução do valor.",
+    "A renda temporária é paga por prazo determinado, enquanto o participante estiver vivo."
+   ],
+   [
+    "por prazo certo, que garante renda vitalícia ao titular e à esposa.",
+    "Prazo certo paga por período fixo, não por toda a vida."
+   ]
+  ],
+  "gabarito": "Modalidades de renda: vitalícia (paga enquanto o titular viver); vitalícia com prazo mínimo garantido (se o titular morrer antes do prazo, os beneficiários recebem até o fim desse prazo); vitalícia reversível ao beneficiário indicado (após a morte, um percentual continua a ser pago ao beneficiário, por toda a vida dele); reversível ao cônjuge com continuidade aos menores; temporária (por prazo determinado, enquanto o titular viver); por prazo certo (período fixo, com continuidade aos beneficiários); pagamento único. Quanto mais garantias, menor a renda mensal.",
+  "dica": "Reversível = continua para o beneficiário após a morte do titular. Mais garantia = renda menor."
+ },
+ {
+  "pd": "2.4.1.6.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Jonas tem conta corrente em um banco e reclama a Taís, profissional CPA, de cobranças de tarifa por saques e extratos. Ele quer saber quais serviços são gratuitos para pessoa física.",
+  "enunciado": "Taís explica que, entre os serviços essenciais gratuitos da conta corrente de pessoa física, está:",
+  "certa": "a realização de até quatro saques por mês, em guichê ou terminal de autoatendimento.",
+  "erradas": [
+   [
+    "a realização de saques ilimitados por mês, em qualquer canal, inclusive em outros bancos.",
+    "A gratuidade alcança até quatro saques por mês, nas condições da norma."
+   ],
+   [
+    "o fornecimento de talão de cheques ilimitado, independentemente do cadastro do cliente.",
+    "Há limite de folhas de cheque gratuitas por mês e requisitos para o fornecimento."
+   ],
+   [
+    "a emissão gratuita de cartão de crédito sem anuidade em todas as contas.",
+    "O cartão de débito é serviço essencial; o cartão de crédito tem regras e tarifas próprias."
+   ]
+  ],
+  "gabarito": "Pela Resolução CMN 3.919/2010, a conta corrente de pessoa física tem serviços essenciais gratuitos: fornecimento de cartão de débito; até 4 saques por mês; até 2 transferências por mês entre contas da mesma instituição; até 2 extratos por mês; consultas pela internet; até 10 folhas de cheque por mês (para quem cumpre os requisitos); compensação de cheques; extrato anual de tarifas. Também é possível contratar pacotes padronizados de serviços.",
+  "dica": "Serviços essenciais grátis: cartão de débito, 4 saques, 2 transferências internas, 2 extratos por mês."
+ },
+ {
+  "pd": "2.1.1.2.2.2.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa anuncia dividendos para quem tiver ações ao fim do pregão de 10 de março (data com). As ações passam a ser negociadas “ex-dividendos” a partir de 11 de março. Cláudio comprou suas ações em 11 de março e pergunta a Vera, profissional CPA, se receberá os dividendos.",
+  "enunciado": "Vera explica corretamente que Cláudio:",
+  "certa": "não receberá, pois comprou já na data ex; o direito ficou com quem tinha as ações no fim da data com.",
+  "erradas": [
+   [
+    "receberá, pois o pagamento é feito a quem tiver as ações na data em que o dividendo é efetivamente pago.",
+    "O direito é definido pela posição no fim da data com, não pela data de pagamento."
+   ],
+   [
+    "receberá metade do valor, dividido proporcionalmente com o vendedor das ações.",
+    "Não há rateio entre comprador e vendedor; o direito é de quem tinha a ação na data com."
+   ],
+   [
+    "receberá, desde que mantenha as ações por no mínimo um ano após o anúncio da empresa.",
+    "Não existe prazo mínimo de permanência para ter direito a dividendos."
+   ]
+  ],
+  "gabarito": "Dividendos são parte do lucro distribuída aos acionistas. Pela Lei das S.A., se o estatuto for omisso, o dividendo mínimo obrigatório é de 25% do lucro líquido ajustado. Datas: data com (último dia em que quem compra ainda tem direito ao provento); data ex (a partir dela a ação é negociada sem o direito, e o preço costuma ser ajustado pelo valor do provento); data de pagamento.",
+  "dica": "Data com = último dia para ter direito. Na data ex, a ação já vem sem o provento."
+ }
+]
