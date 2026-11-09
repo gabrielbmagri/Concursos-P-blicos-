@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.1.1.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma aula sobre o sistema financeiro, um aluno pergunta a Rogério, profissional CPA, quem integra hoje o Conselho Monetário Nacional.",
+  "enunciado": "Rogério responde que o CMN é composto pelo:",
+  "certa": "ministro da Fazenda, ministro do Planejamento e presidente do Banco Central.",
+  "erradas": [
+   [
+    "presidente da República, presidente do Banco Central e presidente da CVM.",
+    "O presidente da República e o da CVM não integram o CMN."
+   ],
+   [
+    "presidente do Banco Central e diretores do BC, que formam o colegiado do conselho.",
+    "Esse é o Copom, formado pela diretoria do BC."
+   ],
+   [
+    "representantes dos maiores bancos, da Anbima e da Febraban.",
+    "Entidades privadas não integram o CMN."
+   ]
+  ],
+  "gabarito": "O CMN é composto pelo ministro da Fazenda (presidente do conselho), pelo ministro do Planejamento e Orçamento e pelo presidente do Banco Central. Reúne-se mensalmente e edita resoluções sobre política monetária, creditícia e cambial, meta de inflação e regras do sistema financeiro. O Copom é formado pela diretoria do BC.",
+  "dica": "CMN: Fazenda + Planejamento + presidente do BC."
+ },
+ {
+  "pd": "1.1.2.1.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente reclama de uma administradora de consórcios que atrasou a entrega da carta de crédito. Ela pergunta a Joel, profissional CPA, qual órgão supervisiona essas empresas.",
+  "enunciado": "Joel explica que as administradoras de consórcio são supervisionadas pelo:",
+  "certa": "Banco Central.",
+  "erradas": [
+   [
+    "SUSEP, por se tratar de produto semelhante a seguro.",
+    "A SUSEP supervisiona seguros, capitalização e previdência aberta."
+   ],
+   [
+    "CVM, por envolver captação de recursos de muitas pessoas.",
+    "Consórcio não é valor mobiliário; a supervisão é do BC."
+   ],
+   [
+    "Procon, que autoriza o funcionamento das administradoras.",
+    "O Procon atua na defesa do consumidor, mas não autoriza nem supervisiona."
+   ]
+  ],
+  "gabarito": "Administradoras de consórcio são autorizadas, reguladas e fiscalizadas pelo Banco Central (Lei 11.795/2008), assim como instituições financeiras e de pagamento. A CVM cuida do mercado de valores mobiliários, e a SUSEP de seguros, capitalização e previdência aberta.",
+  "dica": "Consórcio = Banco Central."
+ },
+ {
+  "pd": "1.1.2.1.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "A associação dos engenheiros de um estado criou um plano de previdência exclusivo para seus associados, sem empresa patrocinadora. Um associado pergunta a Lúcia, profissional CPA, quem supervisiona o plano.",
+  "enunciado": "Lúcia explica que se trata de entidade fechada com instituidor, supervisionada pela:",
+  "certa": "PREVIC.",
+  "erradas": [
+   [
+    "SUSEP, pois não há empresa patrocinadora.",
+    "Planos de instituidores também são previdência fechada, sob a PREVIC."
+   ],
+   [
+    "CVM, por aplicar recursos no mercado de capitais.",
+    "A aplicação de recursos não muda o supervisor."
+   ],
+   [
+    "Banco Central, por ser plano oferecido por associação.",
+    "O BC não supervisiona previdência complementar."
+   ]
+  ],
+  "gabarito": "Entidades fechadas de previdência complementar atendem empregados de patrocinadoras (empresas) ou associados de instituidores (associações profissionais, sindicatos, cooperativas). São sem fins lucrativos, normatizadas pelo CNPC e supervisionadas pela PREVIC. Previdência aberta (PGBL, VGBL), oferecida a qualquer pessoa, fica com o CNSP e a SUSEP.",
+  "dica": "Fundo de pensão com patrocinador ou instituidor = PREVIC."
+ },
+ {
+  "pd": "1.1.3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um empresário que não é associado de uma cooperativa de crédito quer aplicar recursos nela por causa das boas taxas. Pergunta a Sônia, profissional CPA, se é possível.",
+  "enunciado": "Sônia explica que, em regra, a cooperativa:",
+  "certa": "capta e empresta para associados; ele precisaria associar-se para aplicar.",
+  "erradas": [
+   [
+    "capta de qualquer pessoa, como um banco comercial, sem necessidade de associação.",
+    "A atuação é voltada aos associados."
+   ],
+   [
+    "só capta de outras cooperativas, sendo proibido receber recursos de pessoas físicas.",
+    "Pessoas físicas associadas podem aplicar."
+   ],
+   [
+    "capta apenas pela bolsa de valores, emitindo ações a investidores.",
+    "Cooperativas não emitem ações em bolsa."
+   ]
+  ],
+  "gabarito": "As cooperativas de crédito prestam serviços financeiros principalmente a seus associados, que são donos (quotas-partes) e usuários. Para aplicar, em regra, é preciso associar-se, conforme o estatuto (que define quem pode ser associado). Os depósitos têm garantia do FGCoop, e a supervisão é do Banco Central.",
+  "dica": "Cooperativa: para aplicar, em regra, é preciso ser associado."
+ },
+ {
+  "pd": "1.1.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um assessor de investimento oferece a Cíntia produtos de uma corretora. Ela pergunta a Breno, profissional CPA, se o assessor pode atender de forma independente e receber dinheiro diretamente.",
+  "enunciado": "Breno explica que o assessor de investimento:",
+  "certa": "atua vinculado a um intermediário, e não pode receber recursos dos clientes.",
+  "erradas": [
+   [
+    "atua de forma independente e pode receber recursos dos clientes na própria conta.",
+    "Receber recursos dos clientes é vedado."
+   ],
+   [
+    "é supervisionado pela SUSEP e não precisa de registro.",
+    "Assessores são regulados pela CVM e atuam vinculados a intermediários."
+   ],
+   [
+    "pode garantir rentabilidade, desde que use produtos da corretora parceira.",
+    "Garantir rentabilidade é vedado."
+   ]
+  ],
+  "gabarito": "Assessores de investimento (antigos agentes autônomos) atuam na prospecção e no atendimento de clientes em nome de um intermediário (corretora ou distribuidora), sob as regras da CVM. Não podem receber recursos de clientes, administrar carteiras nem prometer rentabilidade. A Ancord representa e certifica os assessores.",
+  "dica": "Assessor: vinculado a intermediário; não recebe dinheiro do cliente nem promete retorno."
+ },
+ {
+  "pd": "1.2.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um curso, Henrique, profissional CPA, apresenta as funções da política fiscal. Um aluno pergunta qual função está presente quando o governo usa impostos progressivos e programas sociais.",
+  "enunciado": "Henrique explica que se trata da função:",
+  "certa": "distributiva, que busca reduzir desigualdades de renda.",
+  "erradas": [
+   [
+    "alocativa, que define a taxa de juros da economia.",
+    "Juros são da política monetária; a função alocativa trata de bens públicos."
+   ],
+   [
+    "estabilizadora, que fixa o câmbio e a inflação por decreto.",
+    "A estabilização usa gastos e tributos para suavizar ciclos, sem fixar preços."
+   ],
+   [
+    "monetária, que controla a quantidade de moeda.",
+    "Controle de moeda é política monetária."
+   ]
+  ],
+  "gabarito": "Funções da política fiscal: alocativa (fornecer bens e serviços públicos que o mercado não oferece adequadamente), distributiva (reduzir desigualdades, com tributos progressivos e transferências) e estabilizadora (suavizar ciclos econômicos, buscando emprego e estabilidade). Seus instrumentos são gastos, tributos e dívida pública.",
+  "dica": "Fiscal: alocativa (bens públicos), distributiva (desigualdade), estabilizadora (ciclos)."
+ },
+ {
+  "pd": "1.2.4.5",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Na ata, o Copom indica que deve manter os juros altos “por período prolongado”. Antes da próxima reunião, as taxas dos títulos longos caem. Um cliente pergunta a Gisele, profissional CPA, por que o mercado reagiu antes da decisão.",
+  "enunciado": "Gisele explica que:",
+  "certa": "a comunicação do Copom molda as expectativas do mercado.",
+  "erradas": [
+   [
+    "as taxas só podem mudar após a decisão efetiva do Copom.",
+    "O mercado antecipa as decisões com base na comunicação."
+   ],
+   [
+    "a ata obriga os bancos a reduzir as taxas dos títulos longos.",
+    "A ata não obriga ninguém; ela informa e orienta."
+   ],
+   [
+    "a queda se deve ao fim do regime de metas anunciado na ata.",
+    "O regime de metas continua; a ata explica a política."
+   ]
+  ],
+  "gabarito": "O Copom divulga comunicado e ata, além do Relatório de Política Monetária. A comunicação (incluindo sinalizações sobre os próximos passos) ajuda a ancorar as expectativas de inflação. Como os preços dos ativos refletem expectativas, o mercado reage à comunicação antes das decisões. Credibilidade torna a política monetária mais eficaz.",
+  "dica": "Comunicação do Copom mexe nas expectativas, e o mercado reage antes da decisão."
+ },
+ {
+  "pd": "1.2.6.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma notícia informa que o PIB nominal cresceu 9% no ano, mas o PIB real cresceu 2%. Um cliente pergunta a Diana, profissional CPA, qual número mostra o crescimento da produção.",
+  "enunciado": "Diana explica que o crescimento da produção é medido pelo:",
+  "certa": "PIB real, que desconta a variação de preços.",
+  "erradas": [
+   [
+    "PIB nominal, que já considera a inflação do período.",
+    "O PIB nominal mistura aumento de quantidades e de preços."
+   ],
+   [
+    "PIB nominal menos o PIB real, que mostra a produção líquida.",
+    "A diferença reflete basicamente a variação de preços."
+   ],
+   [
+    "PIB per capita nominal, único indicador oficial de crescimento.",
+    "O crescimento da produção é medido pelo PIB real."
+   ]
+  ],
+  "gabarito": "PIB nominal: valor da produção a preços correntes (inclui efeitos de quantidades e preços). PIB real: valor a preços constantes, que mostra a variação das quantidades produzidas. A diferença aproximada entre os dois é o deflator (variação de preços). O PIB per capita divide o PIB pela população.",
+  "dica": "Crescimento econômico = PIB real (sem efeito dos preços)."
+ },
+ {
+  "pd": "1.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um empréstimo cobra 2% ao mês com capitalização composta. O cliente pergunta a Lauro, profissional CPA, qual a taxa anual equivalente.",
+  "enunciado": "Lauro calcula que a taxa anual equivalente é de aproximadamente:",
+  "certa": "26,8% ao ano.",
+  "erradas": [
+   [
+    "24,0% ao ano.",
+    "24% é a taxa proporcional (2% × 12), válida para juros simples."
+   ],
+   [
+    "22,0% ao ano.",
+    "Não corresponde a nenhuma conversão correta."
+   ],
+   [
+    "30,0% ao ano.",
+    "Supera a equivalente correta, que é 1,02^12 − 1."
+   ]
+  ],
+  "gabarito": "Taxa equivalente composta: (1 + 0,02)^12 − 1 = 1,2682 − 1 = 26,8% ao ano. A taxa proporcional (24%) subestima o custo quando há capitalização composta. Na comparação de créditos, use o CET anual, que já considera capitalização e todos os encargos.",
+  "dica": "2% ao mês composto ≈ 26,8% ao ano (e não 24%)."
+ },
+ {
+  "pd": "1.3.4.3",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Uma taxa de 1% ao mês será aplicada por 15 dias (meio mês). Um aluno pergunta a Paulo, profissional CPA, qual regime gera mais juros nesse período.",
+  "enunciado": "Paulo explica que, para prazo menor que um período de capitalização:",
+  "certa": "os juros simples geram montante maior que os compostos.",
+  "erradas": [
+   [
+    "os juros compostos sempre geram montante maior, em qualquer prazo.",
+    "Isso só vale para prazos maiores que um período."
+   ],
+   [
+    "os dois regimes geram o mesmo montante em qualquer prazo.",
+    "Só coincidem em exatamente um período."
+   ],
+   [
+    "os juros compostos não podem ser aplicados a prazos fracionários.",
+    "Podem: usa-se expoente fracionário."
+   ]
+  ],
+  "gabarito": "Comparação dos regimes: em exatamente 1 período, juros simples e compostos dão o mesmo montante; para prazos maiores que 1 período, os compostos dão mais; para prazos menores que 1 período (n < 1), os simples dão mais. Exemplo: 1% ao mês por meio mês: simples 0,5%; composto 1,01^0,5 − 1 ≈ 0,499%.",
+  "dica": "n < 1: simples rende mais. n = 1: iguais. n > 1: composto rende mais."
+ },
+ {
+  "pd": "2.1.1.1.1.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Vítor manteve um Tesouro IPCA+ (sem cupons) por 6 anos até o vencimento. Ele pergunta a Cássia, profissional CPA, quando e como pagou o imposto de renda.",
+  "enunciado": "Cássia explica que o IR:",
+  "certa": "foi retido de uma vez no vencimento, a 15% sobre todo o rendimento.",
+  "erradas": [
+   [
+    "foi cobrado todo ano pelo come-cotas, em maio e novembro.",
+    "Títulos comprados diretamente não têm come-cotas."
+   ],
+   [
+    "foi isento, pois títulos atrelados à inflação não pagam imposto.",
+    "O rendimento é tributado, inclusive a parte da inflação."
+   ],
+   [
+    "foi de 22,5%, pois a parcela da inflação é tributada pela alíquota máxima.",
+    "A alíquota depende do prazo total: acima de 720 dias, 15%."
+   ]
+  ],
+  "gabarito": "Em títulos sem cupom (como o Tesouro IPCA+ e o Tesouro Prefixado), o IR é retido no vencimento ou na venda, sobre todo o rendimento (inclusive a correção pela inflação), pela tabela regressiva contada desde a compra. Após 720 dias, 15%. Concentrar o IR no fim favorece os juros compostos.",
+  "dica": "Título sem cupom: IR só no fim, sobre todo o rendimento (inflação incluída)."
+ },
+ {
+  "pd": "2.1.1.1.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Carla vai investir R$ 50 mil em Tesouro IPCA+ e pergunta a Fausto, profissional CPA, que custos terá além do imposto.",
+  "enunciado": "Fausto explica que, no Tesouro Direto:",
+  "certa": "há taxa de custódia da B3 e, conforme a instituição, uma taxa própria.",
+  "erradas": [
+   [
+    "não há custo algum, pois o programa é gratuito por ser do governo.",
+    "Há taxa de custódia da B3 nas condições do programa."
+   ],
+   [
+    "há taxa de performance sobre o que exceder o CDI.",
+    "Títulos públicos não têm taxa de performance."
+   ],
+   [
+    "há come-cotas semestral e taxa de saída obrigatória.",
+    "Esses custos não existem em títulos comprados diretamente."
+   ]
+  ],
+  "gabarito": "Custos no Tesouro Direto: taxa de custódia cobrada pela B3 (percentual anual sobre o valor dos títulos, com isenções em situações específicas previstas no programa), eventual taxa de agente da instituição (muitas zeram) e tributos (IR e, em resgates antes de 30 dias, IOF). Não há come-cotas nem taxa de administração ou performance.",
+  "dica": "Tesouro Direto: custódia da B3 + possível taxa da corretora + IR (e IOF antes de 30 dias)."
+ },
+ {
+  "pd": "2.1.1.1.3.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Sônia e a venda do imóvel",
+  "etapa": "1/3",
+  "contexto": "Sônia vendeu um imóvel e tem R$ 600 mil para investir por 4 anos. Seu gerente cita a Letra de Crédito do Desenvolvimento (LCD). Ela pergunta a Wagner, profissional CPA, o que é.",
+  "enunciado": "Wagner explica que a LCD é um título:",
+  "certa": "de bancos de desenvolvimento, para financiar a produção, isento para pessoa física.",
+  "erradas": [
+   [
+    "emitido pelo Tesouro Nacional para financiar o desenvolvimento regional, com come-cotas.",
+    "A LCD é emitida por bancos de desenvolvimento, e títulos diretos não têm come-cotas."
+   ],
+   [
+    "de securitizadoras, lastreado em recebíveis imobiliários, como o CRI.",
+    "Isso descreve o CRI."
+   ],
+   [
+    "de cooperativas, garantido pelo FGCoop e tributado pela tabela regressiva.",
+    "Não é título de cooperativa, e é isento para pessoa física."
+   ]
+  ],
+  "gabarito": "A LCD (Letra de Crédito do Desenvolvimento), criada pela Lei 14.937/2024, é emitida por bancos de desenvolvimento (como o BNDES e bancos estaduais de desenvolvimento) para captar recursos destinados a projetos de infraestrutura, indústria e inovação. Para pessoa física, os rendimentos são isentos de IR, como LCI e LCA. O investidor deve avaliar o risco do emissor, o prazo e a liquidez.",
+  "dica": "LCD: banco de desenvolvimento, financia atividade produtiva, isenta para pessoa física."
+ },
+ {
+  "pd": "2.1.1.1.4.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Sônia e a venda do imóvel",
+  "etapa": "2/3",
+  "contexto": "Sônia compara uma debênture incentivada que paga 12% ao ano, isenta para ela, com um CDB de 4 anos que paga 14% ao ano, com IR de 15%. Pergunta a Wagner qual tem maior taxa líquida.",
+  "enunciado": "Wagner calcula que:",
+  "certa": "a debênture rende 12% líquidos, acima dos cerca de 11,9% do CDB após IR.",
+  "erradas": [
+   [
+    "o CDB é melhor, pois 14% é maior que 12% em qualquer cenário.",
+    "A comparação correta é líquida: 14% × 0,85 = 11,9%."
+   ],
+   [
+    "os dois rendem 12% líquidos, pois a isenção compensa exatamente a diferença.",
+    "Há pequena vantagem da debênture (12% contra 11,9%)."
+   ],
+   [
+    "o CDB rende 16,1% líquidos, pois o IR é somado à taxa.",
+    "O IR reduz, não aumenta, a rentabilidade."
+   ]
+  ],
+  "gabarito": "Comparando de forma simplificada as taxas anuais: CDB com IR de 15%: 14% × (1 − 0,15) = 11,9% ao ano líquido; debênture incentivada isenta: 12%. A vantagem líquida é pequena; por isso também se comparam riscos: o CDB tem FGC (até o limite) e risco do banco; a debênture tem risco de crédito da empresa, sem FGC, e menor liquidez.",
+  "dica": "Compare líquido com líquido: taxa × (1 − IR) contra taxa isenta. E pese os riscos."
+ },
+ {
+  "pd": "2.1.3.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Sônia e a venda do imóvel",
+  "etapa": "3/3",
+  "contexto": "Sônia também aplicou em uma classe de renda fixa de longo prazo, que rendeu R$ 1.000 entre junho e novembro. Pergunta a Wagner quanto o come-cotas de novembro retirou.",
+  "enunciado": "Wagner calcula que o come-cotas foi de:",
+  "certa": "R$ 150, equivalente a 15% do rendimento do período.",
+  "erradas": [
+   [
+    "R$ 225, pois o come-cotas usa a alíquota de 22,5%.",
+    "No longo prazo, o come-cotas é de 15%."
+   ],
+   [
+    "R$ 200, pois o come-cotas é sempre de 20%.",
+    "20% é o come-cotas do curto prazo."
+   ],
+   [
+    "zero, pois o come-cotas só incide em maio.",
+    "O come-cotas ocorre em maio e em novembro."
+   ]
+  ],
+  "gabarito": "Come-cotas: em maio e novembro, o fundo antecipa o IR sobre o rendimento do período, reduzindo a quantidade de cotas. Classe de longo prazo: 15% × 1.000 = R$ 150. No resgate, se a alíquota pela tabela for maior (prazo menor), cobra-se a diferença. Classes de curto prazo antecipam 20%; classes de ações não têm come-cotas.",
+  "dica": "Come-cotas longo prazo = 15% do rendimento do semestre."
+ },
+ {
+  "pd": "2.1.1.1.8.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Dona Lurdes tem na poupança depósitos de 2010 e de 2024. Ela percebe que os rendimentos de cada parte são diferentes e pergunta a Rui, profissional CPA.",
+  "enunciado": "Rui explica que:",
+  "certa": "depósitos até 3/5/2012 rendem sempre 0,5% ao mês + TR; os novos seguem a regra da Selic.",
+  "erradas": [
+   [
+    "todos os depósitos seguem a regra atual, pois a mudança de 2012 valeu para o saldo inteiro.",
+    "Depósitos anteriores à mudança mantiveram a regra antiga."
+   ],
+   [
+    "os depósitos antigos são tributados pelo IR, e os novos são isentos.",
+    "Toda a poupança é isenta para pessoa física."
+   ],
+   [
+    "os depósitos novos rendem sempre mais que os antigos, em qualquer cenário.",
+    "Com Selic até 8,5%, os novos rendem menos que os antigos."
+   ]
+  ],
+  "gabarito": "Desde 4 de maio de 2012, os novos depósitos de poupança seguem a regra: Selic acima de 8,5% ao ano → 0,5% ao mês + TR; Selic até 8,5% → 70% da Selic + TR. Depósitos feitos até 3 de maio de 2012 continuam rendendo 0,5% ao mês + TR em qualquer cenário. Todos são isentos de IR para pessoa física e têm FGC.",
+  "dica": "Poupança antiga (até 3/5/2012): sempre 0,5% a.m. + TR. Nova: depende da Selic."
+ },
+ {
+  "pd": "2.1.1.2.2.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao investir numa empresa, Henrique recebeu, além das ações, títulos que dão direito de comprar novas ações a um preço definido em um prazo. Pergunta a Lia, profissional CPA, o que são.",
+  "enunciado": "Lia explica que são:",
+  "certa": "bônus de subscrição: direito de comprar novas ações nas condições fixadas.",
+  "erradas": [
+   [
+    "debêntures conversíveis, que pagam juros e podem virar ações da empresa.",
+    "Debêntures são dívida com juros; o bônus é só o direito de subscrever."
+   ],
+   [
+    "units, que reúnem ações ordinárias e preferenciais em um só ativo.",
+    "Units são certificados com várias ações."
+   ],
+   [
+    "dividendos em ações, distribuídos pela capitalização de reservas.",
+    "Isso é bonificação."
+   ]
+  ],
+  "gabarito": "Bônus de subscrição são valores mobiliários emitidos por sociedades anônimas que conferem ao titular o direito de subscrever ações em aumento de capital, ao preço e no prazo definidos. Podem ser negociados. Diferem do direito de preferência (dado aos acionistas em cada emissão) e da debênture conversível (título de dívida com cláusula de conversão).",
+  "dica": "Bônus de subscrição = direito de comprar novas ações a preço e prazo definidos."
+ },
+ {
+  "pd": "2.1.1.2.2.1.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Bárbara fez reserva em um IPO e recebeu menos ações do que pediu. O preço final ficou no meio da faixa indicativa. Ela pergunta a Fábio, profissional CPA, como funciona.",
+  "enunciado": "Fábio explica que, no IPO:",
+  "certa": "o preço sai do bookbuilding, e com demanda acima da oferta há rateio.",
+  "erradas": [
+   [
+    "o preço é fixado pela CVM e todos recebem exatamente o que reservaram.",
+    "A CVM não fixa preço; com excesso de demanda há rateio."
+   ],
+   [
+    "o preço é sempre o teto da faixa, e o rateio só ocorre para investidores estrangeiros.",
+    "O preço depende da demanda; o rateio segue regras da oferta."
+   ],
+   [
+    "o investidor paga o preço que ofereceu na reserva, sem preço único.",
+    "Em geral há preço único para todos."
+   ]
+  ],
+  "gabarito": "No processo de bookbuilding, os coordenadores coletam intenções de compra de investidores institucionais e definem o preço por ação dentro (ou fora) da faixa indicativa. Investidores de varejo fazem reservas; se a demanda supera a oferta, há rateio. Pode haver lote suplementar para estabilização. A oferta é registrada na CVM, com prospecto.",
+  "dica": "IPO: preço pelo bookbuilding; demanda maior que a oferta = rateio."
+ },
+ {
+  "pd": "2.1.1.2.2.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente percebe que o Ibovespa não cai na data ex-dividendos de grandes empresas, embora as ações caiam. Pergunta a Mirela, profissional CPA, por quê.",
+  "enunciado": "Mirela explica que o Ibovespa é:",
+  "certa": "um índice de retorno total, que considera o reinvestimento dos proventos.",
+  "erradas": [
+   [
+    "um índice de preço que exclui as empresas na data ex-dividendos.",
+    "Ninguém é excluído; o índice incorpora os proventos."
+   ],
+   [
+    "corrigido pela inflação, o que compensa a queda das ações.",
+    "O índice não é corrigido pela inflação."
+   ],
+   [
+    "calculado só uma vez por mês, por isso não reflete quedas diárias.",
+    "O Ibovespa é calculado em tempo real durante o pregão."
+   ]
+  ],
+  "gabarito": "O Ibovespa é um índice de retorno total: além da variação de preço, considera o reinvestimento de proventos (dividendos, JCP), ajustando a carteira teórica. Assim, a queda de preço na data ex não reduz artificialmente o índice. É calculado em tempo real e revisado a cada quatro meses.",
+  "dica": "Ibovespa = retorno total (preço + proventos reinvestidos)."
+ },
+ {
+  "pd": "2.1.1.2.3.1.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um analista comenta que uma empresa tem free float de apenas 10%. Um cliente pergunta a Sérgio, profissional CPA, o que isso significa.",
+  "enunciado": "Sérgio explica que free float é:",
+  "certa": "a parcela das ações que circula no mercado, fora do controle.",
+  "erradas": [
+   [
+    "o lucro distribuído aos acionistas minoritários como dividendo extra.",
+    "Free float não é lucro distribuído."
+   ],
+   [
+    "o direito de vender ações nas mesmas condições do controlador.",
+    "Isso é tag along."
+   ],
+   [
+    "a obrigação de os minoritários venderem ações junto com o controlador.",
+    "Isso é drag along."
+   ]
+  ],
+  "gabarito": "Free float é o percentual de ações em livre circulação, negociado no mercado (exclui ações do controlador, administradores, tesouraria e partes ligadas). Free float baixo tende a reduzir a liquidez das ações. Segmentos de governança da B3 exigem percentuais mínimos. Tag along e drag along tratam de direitos na troca de controle.",
+  "dica": "Free float = ações em circulação no mercado. Baixo free float = menos liquidez."
+ },
+ {
+  "pd": "2.1.1.1.12",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Marcos aplicou em um CDB de liquidez diária e resgatou após 45 dias. Ele pergunta a Jaqueline, profissional CPA, se pagará IOF e qual a alíquota de IR.",
+  "enunciado": "A orientação correta é que:",
+  "certa": "não há IOF após 30 dias, e o IR é de 22,5% sobre o rendimento.",
+  "erradas": [
+   [
+    "há IOF de 50% sobre o rendimento, pois o prazo é menor que 60 dias.",
+    "O IOF zera no 30º dia."
+   ],
+   [
+    "não há IR, pois a isenção vale para resgates entre 31 e 60 dias.",
+    "Não existe essa isenção."
+   ],
+   [
+    "há IOF de 0,38% sobre o valor total e IR de 15%.",
+    "Não há IOF após 30 dias, e o IR até 180 dias é de 22,5%."
+   ]
+  ],
+  "gabarito": "IOF sobre aplicações: só para resgates antes de 30 dias, com alíquota regressiva sobre o rendimento. Após 30 dias, não há IOF. IR pela tabela regressiva: 45 dias está na faixa de até 180 dias (22,5%).",
+  "dica": "Passou de 30 dias, não há IOF. Até 180 dias, IR de 22,5%.",
+  "caso": "Árvore de diálogo: Marcos e os impostos",
+  "etapa": "1/3"
+ },
+ {
+  "pd": "2.1.1.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Depois, Marcos teve lucro de R$ 5 mil em day trade em março. Ele pergunta a Jaqueline quando e como deve pagar o imposto.",
+  "enunciado": "Jaqueline explica que Marcos deve:",
+  "certa": "apurar o IR de 20% e pagar por DARF até o último dia útil de abril.",
+  "erradas": [
+   [
+    "aguardar a declaração anual, quando o imposto é calculado automaticamente.",
+    "Em renda variável, o IR é mensal, pago por DARF."
+   ],
+   [
+    "pagar até o dia 10 de março, antes do fim do mês da operação.",
+    "O prazo é o último dia útil do mês seguinte."
+   ],
+   [
+    "não pagar nada, pois a corretora já retém todo o imposto devido.",
+    "A corretora retém só 1% (dedo-duro); o restante é pago por DARF."
+   ]
+  ],
+  "gabarito": "Em renda variável (ações, FII, ETF, BDR), o investidor apura mensalmente o ganho líquido, compensa prejuízos da mesma modalidade, desconta o IR retido na fonte (dedo-duro) e paga por DARF até o último dia útil do mês seguinte. Day trade: 20%; operações comuns: 15% (com isenção para vendas de ações até R$ 20 mil no mês).",
+  "dica": "Renda variável: DARF até o último dia útil do mês seguinte.",
+  "caso": "Árvore de diálogo: Marcos e os impostos",
+  "etapa": "2/3"
+ },
+ {
+  "pd": "2.1.1.4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Por fim, Marcos recebeu R$ 3.000 de rendimento em um COE de 2 anos, no vencimento, e pergunta a Jaqueline como foi tributado.",
+  "enunciado": "Jaqueline explica que o COE:",
+  "certa": "segue a tabela regressiva da renda fixa, com IR na fonte; aqui, 17,5%.",
+  "erradas": [
+   [
+    "é isento de IR, por ser emitido por banco com capital protegido.",
+    "O COE é tributado."
+   ],
+   [
+    "paga 15% por DARF, como as ações, em qualquer prazo.",
+    "O COE segue a tabela regressiva, com retenção na fonte."
+   ],
+   [
+    "tem come-cotas semestral de 15%, como os fundos de longo prazo.",
+    "COE não tem come-cotas."
+   ]
+  ],
+  "gabarito": "O rendimento do COE é tributado pela tabela regressiva da renda fixa, com retenção na fonte no vencimento ou na liquidação antecipada. Com prazo exato de 2 anos (até 720 dias), a alíquota é de 17,5%; acima de 720 dias, 15%. Não há come-cotas. Para pessoa física, não há isenção.",
+  "dica": "COE: tabela regressiva, IR retido na fonte, sem come-cotas.",
+  "caso": "Árvore de diálogo: Marcos e os impostos",
+  "etapa": "3/3"
+ },
+ {
+  "pd": "2.1.2.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora pensa em começar a captar recursos de clientes para um novo fundo antes de qualquer formalidade. Pergunta a Gilberto, profissional CPA, o que é necessário.",
+  "enunciado": "Gilberto explica que, pela CVM 175, o fundo:",
+  "certa": "é constituído pelo administrador e precisa de registro na CVM para funcionar.",
+  "erradas": [
+   [
+    "pode funcionar sem registro, desde que a gestora seja filiada à Anbima.",
+    "A filiação à Anbima não substitui o registro na CVM."
+   ],
+   [
+    "é constituído pelos cotistas em cartório, sem participação do administrador.",
+    "A constituição é por deliberação dos prestadores essenciais."
+   ],
+   [
+    "precisa de autorização do Banco Central, e não da CVM.",
+    "Fundos de investimento são registrados na CVM."
+   ]
+  ],
+  "gabarito": "O fundo é uma comunhão de recursos constituída sob a forma de condomínio de natureza especial. Pela CVM 175, é constituído por deliberação conjunta dos prestadores de serviços essenciais (administrador e gestor), que aprovam o regulamento, e seu funcionamento depende de prévio registro na CVM. Ofertas de cotas seguem as regras de distribuição.",
+  "dica": "Fundo: constituído pelos prestadores essenciais e registrado na CVM antes de funcionar."
+ },
+ {
+  "pd": "2.1.2.2.10",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma classe aberta de renda fixa tem carência de 90 dias para resgate. Mônica aplicou há 40 dias e quer resgatar. Pergunta a Davi, profissional CPA.",
+  "enunciado": "Davi explica que:",
+  "certa": "na carência não há resgate, salvo nas condições do regulamento.",
+  "erradas": [
+   [
+    "a carência é apenas recomendação, e o resgate pode ser feito normalmente.",
+    "A carência prevista no regulamento é obrigatória."
+   ],
+   [
+    "o resgate é permitido, mas a cotização passa a ser em D+0.",
+    "A carência não muda a cotização; impede o resgate no período."
+   ],
+   [
+    "a carência só vale para investidores qualificados.",
+    "Vale para todos os cotistas da classe."
+   ]
+  ],
+  "gabarito": "Algumas classes abertas preveem prazo de carência, período após a aplicação em que o resgate não é permitido ou só é feito com perda de rendimento, conforme o regulamento. Isso permite ao gestor investir em ativos menos líquidos. Antes de aplicar, verifique carência, prazos de cotização e liquidação.",
+  "dica": "Carência: tempo sem resgate após a aplicação, conforme o regulamento."
+ },
+ {
+  "pd": "2.1.2.2.20.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma classe de renda fixa conservadora cobra taxa de performance sobre o que exceder 70% do CDI. Um cliente pergunta a Tânia, profissional CPA, se isso é razoável.",
+  "enunciado": "Tânia explica que o índice de referência da performance:",
+  "certa": "deve ser compatível com a política, e um patamar baixo cobra por resultado medíocre.",
+  "erradas": [
+   [
+    "pode ser qualquer índice, pois a escolha é livre e não precisa ter relação com a política.",
+    "O índice deve ser compatível com a política da classe."
+   ],
+   [
+    "deve ser sempre o Ibovespa, para qualquer tipo de fundo.",
+    "Ibovespa é referência para ações, não para renda fixa."
+   ],
+   [
+    "dispensa divulgação, pois faz parte da estratégia confidencial do gestor.",
+    "As taxas e o índice de referência devem estar no regulamento e na lâmina."
+   ]
+  ],
+  "gabarito": "A taxa de performance deve usar um índice de referência compatível com a política de investimento (por exemplo, CDI para multimercados e renda fixa ativa, Ibovespa para ações), ser cobrada em períodos definidos e respeitar a linha d’água. Referências fáceis de bater (como 70% do CDI em renda fixa) fazem o cotista pagar por desempenho que não agrega valor.",
+  "dica": "Performance justa: índice compatível com a estratégia, linha d’água e transparência."
+ },
+ {
+  "pd": "2.1.4.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê no relatório de um FII “taxa de administração de 1% ao ano sobre o valor de mercado” e “taxa de performance de 20% sobre o que exceder o IFIX”. Pergunta a Hélio, profissional CPA, como isso afeta o retorno.",
+  "enunciado": "Hélio explica que:",
+  "certa": "as taxas saem do resultado do fundo e reduzem os rendimentos distribuídos.",
+  "erradas": [
+   [
+    "as taxas são pagas pela B3, sem impacto nos rendimentos dos cotistas.",
+    "As taxas são despesas do fundo."
+   ],
+   [
+    "a taxa de performance é proibida em FIIs pela regulação.",
+    "FIIs podem ter taxa de performance, conforme o regulamento."
+   ],
+   [
+    "as taxas só são cobradas na liquidação do fundo, não durante sua vida.",
+    "São cobradas periodicamente."
+   ]
+  ],
+  "gabarito": "FIIs cobram taxa de administração (às vezes com parcela de gestão e escrituração), podendo ter taxa de performance, conforme o regulamento. Essas despesas reduzem o lucro distribuível e, portanto, os rendimentos. Ao comparar FIIs, considere taxas, qualidade dos ativos, vacância, contratos e preço das cotas.",
+  "dica": "Taxas do FII saem do resultado e reduzem os rendimentos distribuídos."
+ },
+ {
+  "pd": "2.2.3.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Mauro tem um VGBL e um fundo multimercado comum. Em novembro, a quantidade de cotas do multimercado caiu, mas a do VGBL não. Pergunta a Elisa, profissional CPA, o motivo.",
+  "enunciado": "Elisa explica que os fundos de previdência:",
+  "certa": "não têm come-cotas; o IR só incide no resgate ou no recebimento da renda.",
+  "erradas": [
+   [
+    "têm come-cotas em maio e novembro, como os demais fundos.",
+    "Fundos de previdência (FIEs) não sofrem come-cotas."
+   ],
+   [
+    "são isentos de IR em qualquer situação, por terem finalidade previdenciária.",
+    "Há IR no resgate ou no benefício."
+   ],
+   [
+    "pagam IR mensal pela tabela progressiva sobre o rendimento.",
+    "O IR incide no resgate ou na renda, não mensalmente sobre o rendimento."
+   ]
+  ],
+  "gabarito": "Os recursos de PGBL e VGBL são aplicados em fundos de investimento especialmente constituídos (FIEs), sem come-cotas. O IR incide apenas no resgate ou no recebimento do benefício, conforme o regime escolhido (progressivo ou regressivo). Isso favorece os juros compostos no longo prazo. Também não há IR na portabilidade entre planos.",
+  "dica": "Previdência: sem come-cotas; IR só no resgate ou na renda."
+ },
+ {
+  "pd": "2.3.2.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Clara fez uma compra parcelada em 5 vezes “sem juros” no cartão e paga sempre a fatura integral. Pergunta a Rafael, profissional CPA, se paga juros ao cartão.",
+  "enunciado": "Rafael explica que:",
+  "certa": "com a fatura integral não há juros; o parcelado só ocupa o limite.",
+  "erradas": [
+   [
+    "toda compra parcelada tem juros embutidos cobrados pelo banco na fatura.",
+    "No parcelado sem juros, o banco não cobra juros do portador."
+   ],
+   [
+    "os juros incidem sobre o limite total do cartão, mesmo sem uso.",
+    "Juros só incidem sobre saldos não pagos."
+   ],
+   [
+    "ela paga juros do rotativo a cada parcela, por se tratar de financiamento.",
+    "O rotativo só ocorre quando a fatura não é paga integralmente."
+   ]
+  ],
+  "gabarito": "No cartão de crédito, quem paga o valor total da fatura até o vencimento não paga juros. Compras parceladas sem juros pelo lojista comprometem o limite pelas parcelas futuras. Juros e encargos surgem quando se paga menos que o total (rotativo), no parcelamento da fatura ou em saques. O lojista pode embutir custos no preço, por isso vale comparar com o preço à vista.",
+  "dica": "Fatura integral = sem juros. Parcelado sem juros ocupa o limite pelas parcelas futuras."
+ },
+ {
+  "pd": "2.4.1.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Lúcia, profissional CPA, se os bancos podem emprestar todo o dinheiro deixado nas contas correntes.",
+  "enunciado": "Lúcia explica que os bancos:",
+  "certa": "recolhem parte dos depósitos ao BC (compulsório), o que limita o crédito.",
+  "erradas": [
+   [
+    "podem emprestar 100% dos depósitos, pois o FGC cobre eventuais saques.",
+    "O compulsório retém parte dos depósitos; o FGC é outra coisa."
+   ],
+   [
+    "não podem emprestar nada dos depósitos à vista, que ficam parados no caixa.",
+    "Os bancos podem emprestar parte, respeitados o compulsório e a liquidez."
+   ],
+   [
+    "devem repassar todos os depósitos ao Tesouro Nacional.",
+    "Não há repasse integral ao Tesouro."
+   ]
+  ],
+  "gabarito": "O depósito compulsório obriga os bancos a manter no Banco Central uma parcela dos depósitos (à vista, a prazo, poupança), conforme alíquotas fixadas pelo BC. Serve à política monetária (controla a liquidez e o multiplicador do crédito) e à estabilidade financeira. Além disso, os bancos precisam de reservas e regras de liquidez (Basileia).",
+  "dica": "Compulsório: parte dos depósitos fica no BC; limita o crédito e controla a liquidez."
+ }
+]

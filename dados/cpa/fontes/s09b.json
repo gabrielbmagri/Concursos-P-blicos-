@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.5.3",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro e Ana, recém-casados",
+  "etapa": "1/4",
+  "contexto": "Pedro e Ana acabaram de se casar e procuram Eliana, profissional CPA. Querem trocar de carro, viajar e comprar um apartamento, mas não sabem por onde começar.",
+  "enunciado": "Eliana orienta o casal a:",
+  "certa": "definir metas comuns com valor, prazo e prioridade, para orientar a poupança.",
+  "erradas": [
+   [
+    "perseguir todos os objetivos ao mesmo tempo, com o mesmo valor para cada um.",
+    "Sem prioridade, os recursos se dispersam e nenhuma meta avança."
+   ],
+   [
+    "escolher um produto de alto retorno que resolva todos os objetivos juntos.",
+    "Objetivos com prazos diferentes pedem estratégias diferentes."
+   ],
+   [
+    "adiar o planejamento até terem filhos, quando os objetivos ficarão claros.",
+    "Quanto antes o planejamento, maior o efeito do tempo."
+   ]
+  ],
+  "gabarito": "No planejamento do casal, o primeiro passo é alinhar objetivos e transformá-los em metas específicas: valor, prazo e prioridade (por exemplo, carro em 1 ano, viagem em 2, entrada do apartamento em 5). Com isso se calcula o aporte mensal de cada meta e se escolhem produtos compatíveis com o prazo e o perfil de cada um.",
+  "dica": "Casal: metas comuns, com valor, prazo e prioridade."
+ },
+ {
+  "pd": "3.1.3.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro e Ana, recém-casados",
+  "etapa": "2/4",
+  "contexto": "O casal gasta R$ 7.000 por mês. Pedro é CLT e Ana é autônoma. Eles ainda não têm reserva e perguntam a Eliana quanto separar.",
+  "enunciado": "Eliana sugere uma reserva de emergência:",
+  "certa": "de 6 meses ou mais de despesas (cerca de R$ 42 mil).",
+  "erradas": [
+   [
+    "de 1 mês de despesas, pois Pedro tem FGTS e seguro-desemprego.",
+    "A renda da casa depende também de Ana, que é autônoma."
+   ],
+   [
+    "equivalente a 6 meses da renda bruta do casal, aplicada em ações.",
+    "A reserva se mede pelas despesas e fica em ativos líquidos."
+   ],
+   [
+    "de R$ 7 mil, aplicados em LCI com carência de 12 meses.",
+    "Valor insuficiente e produto sem liquidez."
+   ]
+  ],
+  "gabarito": "A reserva de emergência considera as despesas mensais e a estabilidade da renda da família. Com um dos cônjuges autônomo, recomenda-se reserva maior (6 meses ou mais). Deve ficar em ativos de alta liquidez e baixo risco (Tesouro Selic, CDB com liquidez diária, fundos DI de baixo custo), separada dos investimentos de longo prazo.",
+  "dica": "Renda instável na casa → reserva maior (6+ meses de despesas), sempre líquida."
+ },
+ {
+  "pd": "3.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Pedro e Ana, recém-casados",
+  "etapa": "3/4",
+  "contexto": "Ao financiar o apartamento, o casal terá parcelas de 20 anos. Ana pergunta a Eliana se precisam de algum seguro além do exigido no financiamento.",
+  "enunciado": "Eliana orienta que avaliem, sobretudo:",
+  "certa": "seguro de vida e de invalidez para proteger a renda do outro cônjuge.",
+  "erradas": [
+   [
+    "título de capitalização, que garante as parcelas em caso de desemprego.",
+    "Capitalização não é seguro e não garante parcelas."
+   ],
+   [
+    "nenhum seguro, pois o financiamento já quita toda a dívida em qualquer situação.",
+    "O seguro do financiamento cobre a dívida, não a renda da família."
+   ],
+   [
+    "seguro residencial com cobertura de roubo, que substitui o seguro de vida.",
+    "Seguro residencial não protege a renda do casal."
+   ]
+  ],
+  "gabarito": "Financiamentos habitacionais incluem seguros obrigatórios (morte e invalidez permanente, que quitam ou amortizam a dívida, e danos físicos ao imóvel). Eles não protegem a renda da família para as demais despesas. Seguros de vida e de invalidez cobrindo a renda de cada cônjuge completam a gestão de riscos do casal.",
+  "dica": "Seguro do financiamento cobre a dívida; seguro de vida e invalidez protege a renda da família."
+ },
+ {
+  "pd": "3.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Pedro e Ana, recém-casados",
+  "etapa": "4/4",
+  "contexto": "Pedro é arrojado e Ana, conservadora. Pedro pede a Eliana que use o perfil dele para todos os investimentos do casal, inclusive os que estão no nome de Ana.",
+  "enunciado": "Eliana explica que:",
+  "certa": "o perfil é individual: o dinheiro de Ana segue o perfil dela.",
+  "erradas": [
+   [
+    "o perfil do cônjuge com maior renda vale para os dois.",
+    "Não existe perfil do casal definido pela renda."
+   ],
+   [
+    "o casal deve sempre ter o perfil moderado, média dos dois perfis.",
+    "O perfil não é uma média; cada investidor tem o seu."
+   ],
+   [
+    "Ana deve ser reclassificada como arrojada para unificar a carteira.",
+    "Reclassificar sem refletir a realidade é irregular."
+   ]
+  ],
+  "gabarito": "A análise de perfil (suitability) é feita para cada investidor titular dos recursos, considerando seus objetivos, sua situação financeira, sua tolerância a risco e seu conhecimento. Em contas conjuntas ou em planejamento familiar, as regras da instituição definem o tratamento, mas a adequação nunca pode ignorar o perfil real de cada titular.",
+  "dica": "Perfil de investidor é individual, mesmo dentro do casal."
+ },
+ {
+  "pd": "3.1.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Celso, 50 anos, pretende se aposentar aos 60 e tem 70% da carteira em ações. Ele pergunta a Vera, profissional CPA, se deve mudar algo à medida que a aposentadoria se aproxima.",
+  "enunciado": "Vera orienta que, em geral:",
+  "certa": "ele reduza aos poucos a exposição a ativos voláteis conforme o prazo encurta.",
+  "erradas": [
+   [
+    "ele aumente a exposição a ações, para compensar o pouco tempo até a aposentadoria.",
+    "Menos tempo significa menos capacidade de recuperar perdas."
+   ],
+   [
+    "ele venda todas as ações hoje, pois após os 50 anos não se deve ter renda variável.",
+    "A transição deve ser gradual e conforme o perfil."
+   ],
+   [
+    "ele mantenha a carteira igual, pois a idade não influencia a alocação.",
+    "O horizonte de investimento influencia a alocação."
+   ]
+  ],
+  "gabarito": "A relação entre faixa etária, horizonte e risco sugere reduzir gradualmente a exposição a ativos voláteis à medida que se aproxima o momento de usar os recursos, para evitar que uma queda forte às vésperas da aposentadoria comprometa o plano. A transição deve ser planejada e respeitar o perfil e os objetivos do cliente.",
+  "dica": "Perto de usar o dinheiro, reduza o risco aos poucos."
+ },
+ {
+  "pd": "3.1.3.3.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Ivone, servidora pública, precisa de R$ 10 mil e tem três opções: crédito pessoal sem garantia, consignado em folha e cheque especial. Pergunta a Lúcio, profissional CPA, qual costuma ser a ordem de custo, da mais barata para a mais cara.",
+  "enunciado": "Lúcio responde que, em geral, a ordem é:",
+  "certa": "consignado, crédito pessoal e cheque especial.",
+  "erradas": [
+   [
+    "cheque especial, consignado e crédito pessoal.",
+    "O cheque especial está entre as linhas mais caras."
+   ],
+   [
+    "crédito pessoal, cheque especial e consignado.",
+    "O consignado costuma ser o mais barato dos três."
+   ],
+   [
+    "as três têm o mesmo custo, pois a taxa é fixada pelo Banco Central.",
+    "Cada linha tem custos diferentes; o BC só limita o cheque especial."
+   ]
+  ],
+  "gabarito": "Em geral, quanto maior a garantia e menor o risco, menor o custo: consignado (desconto em folha) costuma ter juros mais baixos; crédito pessoal sem garantia, intermediário; cheque especial e rotativo do cartão, os mais caros. CDC com bem como garantia também tende a ser mais barato que o crédito pessoal. Compare sempre pelo CET.",
+  "dica": "Do mais barato ao mais caro (em geral): consignado → crédito pessoal → cheque especial/rotativo."
+ },
+ {
+  "pd": "3.1.3.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao financiar um carro, Mário vê que o veículo fica alienado ao banco; em outro empréstimo, o pai assina como avalista. Pergunta a Sueli, profissional CPA, a diferença entre as garantias.",
+  "enunciado": "Sueli explica que:",
+  "certa": "a alienação fiduciária é garantia real sobre o bem; o aval é garantia pessoal do avalista.",
+  "erradas": [
+   [
+    "o aval é garantia real sobre o imóvel do avalista, e a alienação é garantia pessoal.",
+    "As definições estão invertidas."
+   ],
+   [
+    "as duas garantias são iguais e só mudam de nome conforme o banco.",
+    "Uma recai sobre bem; a outra sobre uma pessoa."
+   ],
+   [
+    "a alienação transfere o carro definitivamente ao banco, mesmo após a quitação.",
+    "Após a quitação, a propriedade plena volta ao devedor."
+   ]
+  ],
+  "gabarito": "Garantias reais recaem sobre bens (alienação fiduciária, hipoteca, penhor); garantias pessoais (fidejussórias) envolvem o compromisso de outra pessoa de pagar a dívida (aval, em títulos de crédito; fiança, em contratos). Garantias reduzem o risco do credor e o custo do crédito, mas expõem o devedor (e o garantidor) a perdas em caso de inadimplência.",
+  "dica": "Garantia real = bem (alienação, hipoteca). Garantia pessoal = pessoa (aval, fiança)."
+ },
+ {
+  "pd": "3.1.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Taís tem R$ 18 mil em aplicações de liquidez diária e dívidas de curto prazo (cartão e parcelas dos próximos 12 meses) de R$ 12 mil. Pergunta a Rogério, profissional CPA, seu índice de liquidez.",
+  "enunciado": "Rogério calcula que o índice de liquidez é de:",
+  "certa": "1,5 (ativos líquidos ÷ dívidas de curto prazo).",
+  "erradas": [
+   [
+    "0,67, pois as dívidas representam 67% dos ativos líquidos.",
+    "0,67 é o inverso (dívidas ÷ ativos líquidos)."
+   ],
+   [
+    "6, pois os ativos líquidos superam as dívidas em R$ 6 mil.",
+    "A diferença em reais não é o índice."
+   ],
+   [
+    "30, pois soma ativos e dívidas em milhares de reais.",
+    "Somar não faz sentido para o índice."
+   ]
+  ],
+  "gabarito": "Índice de liquidez pessoal = ativos líquidos ÷ dívidas de curto prazo = 18.000 ÷ 12.000 = 1,5. Acima de 1 indica capacidade de quitar as obrigações de curto prazo com recursos líquidos. Outros indicadores: cobertura de despesas (ativos líquidos ÷ despesas mensais) e endividamento (dívidas ÷ ativos totais).",
+  "dica": "Liquidez = ativos líquidos ÷ dívidas de curto prazo. Acima de 1 é confortável."
+ },
+ {
+  "pd": "3.4.3.1.4",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Com as mudanças na tributação de 2026, Gisela, profissional CPA, percebe que algumas informações que passava aos clientes ficaram desatualizadas.",
+  "enunciado": "Pela técnica de educação continuada, Gisela deve:",
+  "certa": "atualizar-se sobre normas e produtos para orientar os clientes corretamente.",
+  "erradas": [
+   [
+    "manter as informações antigas, pois a certificação já comprova seu conhecimento.",
+    "A certificação não dispensa a atualização constante."
+   ],
+   [
+    "esperar os clientes perguntarem para então pesquisar as mudanças.",
+    "A atualização deve ser proativa."
+   ],
+   [
+    "orientar os clientes a buscar informações apenas na internet.",
+    "O profissional tem dever de orientar com conhecimento técnico atualizado."
+   ]
+  ],
+  "gabarito": "Educação continuada é o compromisso do profissional de manter seus conhecimentos atualizados sobre produtos, regulação, tributação e mercado, por cursos, leituras e treinamentos. As certificações Anbima exigem atualização periódica. Informação desatualizada pode levar a orientações erradas e prejuízos ao cliente.",
+  "dica": "Educação continuada: normas e produtos mudam; o profissional precisa acompanhar."
+ },
+ {
+  "pd": "3.4.4.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "A auditoria interna descobre que um funcionário desviava pequenos valores de contas de clientes idosos por meio de transferências que ele mesmo autorizava.",
+  "enunciado": "Esse evento é classificado como risco:",
+  "certa": "operacional, na categoria de fraude interna.",
+  "erradas": [
+   [
+    "de mercado, pois os valores desviados variaram com a bolsa.",
+    "Não houve exposição a preços de mercado."
+   ],
+   [
+    "de crédito, pois os clientes deixaram de pagar seus empréstimos.",
+    "Não houve inadimplência de clientes."
+   ],
+   [
+    "sistêmico, pois o desvio ameaça todo o sistema financeiro.",
+    "É um evento interno, sem contágio sistêmico."
+   ]
+  ],
+  "gabarito": "Risco operacional inclui fraudes internas (atos de funcionários para obter vantagem), fraudes externas, falhas em sistemas, processos e pessoas, demandas trabalhistas, danos a ativos e problemas na execução de operações. Controles como segregação de funções, dupla aprovação, monitoramento e auditoria reduzem esse risco.",
+  "dica": "Fraude de funcionário = risco operacional (fraude interna). Segregação de funções ajuda a prevenir."
+ },
+ {
+  "pd": "3.4.5.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um cliente cadastrado há 8 anos como estudante, sem renda, passou a movimentar R$ 300 mil por mês. O cadastro nunca foi atualizado. Mirna, profissional CPA, percebe a situação.",
+  "enunciado": "A conduta adequada é:",
+  "certa": "atualizar o cadastro, verificar a capacidade financeira e analisar a movimentação.",
+  "erradas": [
+   [
+    "ignorar, pois o cliente é antigo e nunca teve problemas.",
+    "Cadastro desatualizado impede avaliar a compatibilidade das operações."
+   ],
+   [
+    "encerrar a conta imediatamente, sem conversar com o cliente.",
+    "Primeiro atualiza-se o cadastro e analisa-se a movimentação."
+   ],
+   [
+    "pedir ao cliente que reduza a movimentação para ficar compatível com o cadastro.",
+    "O correto é atualizar o cadastro e analisar, não pedir mudança de comportamento."
+   ]
+  ],
+  "gabarito": "O cadastro deve ser mantido atualizado, com dados de renda, patrimônio e atividade. Cadastro desatualizado impede avaliar se as operações são compatíveis com a capacidade financeira do cliente e expõe a instituição a riscos de PLD, legais e de imagem. Se a análise apontar indícios, a operação deve ser comunicada ao COAF.",
+  "dica": "Movimentação mudou muito? Atualize o cadastro, verifique a capacidade financeira e analise."
+ },
+ {
+  "pd": "3.4.6.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Um cliente recebe e-mail com o logotipo do banco pedindo que clique em um link para “atualizar o cadastro e evitar bloqueio da conta”. Ele encaminha a Sabrina, profissional CPA.",
+  "enunciado": "Sabrina orienta que se trata de provável:",
+  "certa": "phishing: não clicar e procurar os canais oficiais do banco.",
+  "erradas": [
+   [
+    "comunicação oficial, que deve ser respondida em até 24 horas.",
+    "Bancos não pedem atualização por links de e-mail sob ameaça de bloqueio."
+   ],
+   [
+    "aviso do Banco Central, que obriga a atualização pelo link.",
+    "O BC não envia esse tipo de mensagem a clientes."
+   ],
+   [
+    "oferta legítima de produto, que pode ser aceita sem riscos.",
+    "O pedido de dados por link é típico de golpe."
+   ]
+  ],
+  "gabarito": "Phishing é a tentativa de obter dados pessoais e senhas por mensagens falsas (e-mail, SMS, aplicativos) que imitam instituições conhecidas, em geral com urgência ou ameaça. Orientações: não clicar em links suspeitos, não informar senhas e códigos, verificar pelos canais oficiais e manter dispositivos atualizados. Proteger dados no mundo digital é parte da confidencialidade exigida.",
+  "dica": "Link pedindo dados com urgência = phishing. Use só os canais oficiais."
+ },
+ {
+  "pd": "3.4.6.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um juiz determina ao banco o envio dos extratos de um cliente investigado. O cliente, que soube do pedido, liga para Davi, profissional CPA, dizendo que isso viola seu sigilo.",
+  "enunciado": "Davi explica que:",
+  "certa": "o fornecimento por ordem judicial é exceção legal ao sigilo bancário.",
+  "erradas": [
+   [
+    "o banco deve recusar o pedido, pois o sigilo bancário é absoluto.",
+    "O sigilo tem exceções previstas em lei."
+   ],
+   [
+    "o banco só pode enviar os dados com autorização expressa do cliente.",
+    "A ordem judicial dispensa a autorização do cliente."
+   ],
+   [
+    "o banco deve avisar o cliente e aguardar sua defesa antes de responder ao juiz.",
+    "O banco deve cumprir a ordem nos termos determinados."
+   ]
+  ],
+  "gabarito": "A Lei Complementar 105/2001 protege o sigilo das operações, mas prevê exceções: ordem judicial, comissões parlamentares de inquérito, comunicação de ilícitos às autoridades, troca de informações cadastrais entre instituições, fornecimento à Receita nos termos da lei e revelação com consentimento expresso do cliente. O cumprimento dessas hipóteses não viola o sigilo.",
+  "dica": "Ordem judicial é exceção ao sigilo bancário (LC 105)."
+ },
+ {
+  "pd": "3.4.7.2.2.3.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um intermediário convence clientes a comprar um ativo usando relatórios falsos sobre a empresa, para vendê-lo a eles da carteira própria a preço inflado.",
+  "enunciado": "Pela Resolução CVM 62, essa conduta é:",
+  "certa": "operação fraudulenta: uso de ardil para induzir terceiros a erro.",
+  "erradas": [
+   [
+    "prática não equitativa, pois o intermediário tinha informação privilegiada.",
+    "O núcleo é enganar com informação falsa, não usar informação privilegiada."
+   ],
+   [
+    "criação de condições artificiais de demanda, como o money pass.",
+    "Money pass envolve transferência entre contas ligadas."
+   ],
+   [
+    "prática legítima, pois cada cliente decidiu comprar por conta própria.",
+    "Induzir a erro com informação falsa é ilícito."
+   ]
+  ],
+  "gabarito": "Operação fraudulenta (Resolução CVM 62) é aquela em que se usa ardil ou artifício destinado a induzir ou manter terceiros em erro, para obter vantagem ilícita. Exemplos: divulgar informações falsas para vender ativos, churning. As demais categorias são criação de condições artificiais, manipulação de preços e práticas não equitativas.",
+  "dica": "Enganar o cliente com ardil para ganhar = operação fraudulenta."
+ },
+ {
+  "pd": "3.4.2.8",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um banco remunera melhor a venda dos fundos da própria gestora do grupo do que a de fundos de terceiros com desempenho e custos melhores. Teresa, profissional CPA, atende um cliente que pediu a melhor opção.",
+  "enunciado": "Pelo código de distribuição e pela gestão de conflitos, Teresa deve:",
+  "certa": "recomendar o que for mais adequado ao cliente e dar transparência ao conflito.",
+  "erradas": [
+   [
+    "recomendar sempre os fundos da casa, pois é o interesse legítimo do banco.",
+    "O interesse do cliente prevalece na recomendação."
+   ],
+   [
+    "omitir a existência dos fundos de terceiros, para evitar comparação.",
+    "Omitir alternativas adequadas fere a transparência."
+   ],
+   [
+    "recusar-se a recomendar qualquer fundo, por causa do conflito.",
+    "O conflito deve ser gerido, não usado para negar atendimento."
+   ]
+  ],
+  "gabarito": "A distribuição de produtos de investimento deve priorizar o interesse do cliente, com adequação ao perfil e transparência sobre conflitos (por exemplo, remuneração diferenciada por produtos da casa). O código Anbima exige transparência na remuneração dos distribuidores, e as políticas de remuneração devem evitar estímulos a recomendações inadequadas.",
+  "dica": "Produto da casa x de terceiros: recomende o mais adequado ao cliente e seja transparente."
+ },
+ {
+  "pd": "4.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor afirma que, nos últimos anos, grandes investidores institucionais passaram a exigir análise ESG para alocar recursos. Um cliente pergunta a Marcos, profissional CPA, que impactos isso traz para a indústria de investimentos.",
+  "enunciado": "Marcos explica que um dos impactos é:",
+  "certa": "maior demanda por dados, metodologias e produtos ESG, além de mais regulação.",
+  "erradas": [
+   [
+    "a proibição de investir em qualquer empresa que tenha emissões de carbono.",
+    "Não há proibição geral; há critérios e estratégias variados."
+   ],
+   [
+    "a garantia de rentabilidade superior para fundos ESG.",
+    "Não há garantia de rentabilidade."
+   ],
+   [
+    "o fim da análise financeira tradicional, substituída apenas por critérios ESG.",
+    "ESG complementa a análise financeira."
+   ]
+  ],
+  "gabarito": "Impactos do ESG na indústria de investimentos: integração de fatores ESG na análise e na gestão de risco, criação de produtos (fundos IS, títulos verdes, índices), maior demanda por dados e relatórios, novas exigências regulatórias e de autorregulação (CVM 175, Anbima), engajamento com empresas investidas e combate ao greenwashing.",
+  "dica": "ESG muda a indústria: mais dados, produtos, regulação e engajamento, sem garantir retorno."
+ },
+ {
+  "pd": "4.4.3.8.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma seguradora oferece a agricultores um seguro que paga automaticamente quando a estação meteorológica registra chuva abaixo de certo nível, sem vistoria. Um cliente pergunta a Cláudia, profissional CPA, como funciona.",
+  "enunciado": "Cláudia explica que se trata de apólice automatizada, que:",
+  "certa": "usa contrato inteligente com dados externos para pagar quando o evento ocorre.",
+  "erradas": [
+   [
+    "depende de perícia presencial para cada sinistro, como no seguro tradicional.",
+    "A proposta é justamente dispensar a vistoria."
+   ],
+   [
+    "paga o agricultor só se a colheita for vendida abaixo do custo.",
+    "O gatilho é o dado climático, não o preço de venda."
+   ],
+   [
+    "é garantida pelo FGC, por envolver o agronegócio.",
+    "Seguros não têm FGC."
+   ]
+  ],
+  "gabarito": "Seguros paramétricos com contratos inteligentes usam parâmetros objetivos (chuva, temperatura, atraso de voo) informados por fontes de dados externas (oráculos). Quando a condição ocorre, o pagamento é automático, com menos custos e disputas. Riscos: qualidade dos dados, diferença entre o parâmetro e o prejuízo real (risco de base) e regulação.",
+  "dica": "Seguro paramétrico: paga automaticamente quando o parâmetro (ex.: chuva) é atingido."
+ },
+ {
+  "pd": "4.4.3.9.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma plataforma propõe registrar a compra e venda de imóveis em blockchain, com transferência automática da propriedade quando o pagamento for confirmado. Um cliente pergunta a Raquel, profissional CPA, quais benefícios e cuidados existem.",
+  "enunciado": "Raquel explica que:",
+  "certa": "a automação reduz prazos e custos, mas depende de reconhecimento legal e registro oficial.",
+  "erradas": [
+   [
+    "o registro em blockchain substitui automaticamente o cartório de imóveis no Brasil.",
+    "A validade jurídica depende da legislação e do registro oficial."
+   ],
+   [
+    "a tecnologia elimina qualquer necessidade de verificar a documentação do imóvel.",
+    "A análise documental continua necessária."
+   ],
+   [
+    "a transação é garantida pelo FGC até R$ 250 mil.",
+    "Não há FGC em transações imobiliárias."
+   ]
+  ],
+  "gabarito": "Contratos inteligentes aplicados ao setor imobiliário podem automatizar etapas (pagamento, transferência, distribuição de aluguéis), reduzir prazos, custos e intermediários e aumentar a rastreabilidade. Porém, a validade jurídica da propriedade depende do registro oficial e da regulação; também há riscos de código, de dados e de fraude documental.",
+  "dica": "Imóvel em blockchain: mais rapidez e menos custo, mas a validade jurídica depende do registro oficial."
+ },
+ {
+  "pd": "4.5.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Jonas quer levar suas ações e cotas de fundos listados de uma corretora para outra que oferece melhor atendimento. Pergunta a Paula, profissional CPA, se a transferência é simples.",
+  "enunciado": "Paula explica que as regras da CVM sobre portabilidade de valores mobiliários:",
+  "certa": "facilitam a troca de custodiante sem venda, com prazos padronizados.",
+  "erradas": [
+   [
+    "proíbem a transferência, exigindo a venda e a recompra dos ativos.",
+    "A portabilidade existe justamente para evitar venda e recompra."
+   ],
+   [
+    "permitem a transferência apenas uma vez por ano, com autorização da Anbima.",
+    "Não há limite anual nem autorização da Anbima."
+   ],
+   [
+    "exigem que o cliente pague IR sobre o ganho acumulado na transferência.",
+    "Transferir sem vender não gera ganho tributável."
+   ]
+  ],
+  "gabarito": "As normas da CVM sobre portabilidade de valores mobiliários (integradas à agenda do open investment) facilitam a transferência de ativos entre intermediários e custodiantes, com procedimentos padronizados e prazos, sem necessidade de venda, mantendo o custo de aquisição. O objetivo é aumentar a concorrência e a liberdade de escolha do investidor.",
+  "dica": "Portabilidade de valores mobiliários: troca de custodiante sem vender e sem IR."
+ },
+ {
+  "pd": "4.7.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma pequena empresa capta R$ 2 milhões diretamente de centenas de investidores por uma plataforma de investimento participativo (crowdfunding) autorizada pela CVM. Um cliente pergunta a Fábio, profissional CPA, o que isso representa.",
+  "enunciado": "Fábio explica que é um exemplo de:",
+  "certa": "desintermediação financeira por plataformas digitais, sob regras da CVM.",
+  "erradas": [
+   [
+    "intermediação bancária tradicional, com recursos do balanço do banco.",
+    "Não há empréstimo bancário; os investidores financiam diretamente."
+   ],
+   [
+    "oferta proibida, pois apenas grandes empresas podem captar com o público.",
+    "Há regras específicas da CVM para crowdfunding de pequenas empresas."
+   ],
+   [
+    "operação com garantia do FGC, por ser feita em plataforma regulada.",
+    "Não há FGC nesse tipo de investimento."
+   ]
+  ],
+  "gabarito": "Fintechs e plataformas digitais ampliam a desintermediação financeira: empresas captam diretamente de investidores (crowdfunding de investimento, sob regras da CVM), e pessoas emprestam entre si (SEP). Benefícios: acesso a capital e novas opções de investimento. Riscos: alto risco das empresas, baixa liquidez, ausência de FGC e necessidade de informação clara ao investidor.",
+  "dica": "Crowdfunding regulado pela CVM = desintermediação: empresa capta direto dos investidores."
+ }
+]
