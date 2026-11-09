@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.3.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Tomás, recém-formado",
+  "etapa": "1/4",
+  "contexto": "Tomás, 23 anos, designer freelancer, recebe em média R$ 6.000 por mês, com meses melhores e piores. Ele diz a Nina, profissional CPA, que “o dinheiro some” e nunca sobra nada.",
+  "enunciado": "O primeiro passo de educação financeira que Nina recomenda é:",
+  "certa": "anotar receitas e despesas, fazer um orçamento e poupar logo que a renda entra.",
+  "erradas": [
+   [
+    "contratar um empréstimo para investir em ações e aumentar a renda mensal.",
+    "Tomar crédito para investir sem orçamento aumenta o risco e o endividamento."
+   ],
+   [
+    "esperar os meses de maior renda para começar a poupar o que sobrar.",
+    "Poupar só o que sobra raramente funciona; a poupança deve ser planejada."
+   ],
+   [
+    "aplicar todo o dinheiro em previdência, que impede gastos por impulso.",
+    "Antes de produtos, é preciso conhecer o orçamento e formar reserva."
+   ]
+  ],
+  "gabarito": "Educação financeira básica: conhecer receitas e despesas (fixas, variáveis e sazonais), montar um orçamento, definir a capacidade de poupança e “pagar-se primeiro” (separar a poupança assim que a renda entra), evitar dívidas caras e formar reserva de emergência antes de investir com mais risco. Com renda variável, o orçamento deve se basear numa renda conservadora.",
+  "dica": "Orçamento primeiro: anotar receitas e despesas e separar a poupança logo que o dinheiro entra."
+ },
+ {
+  "pd": "3.1.3.3.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Tomás, recém-formado",
+  "etapa": "2/4",
+  "contexto": "Tomás tem dois cartões de crédito e costuma parcelar compras pequenas “porque cabem no mês”. Na última fatura, só conseguiu pagar o mínimo.",
+  "enunciado": "A orientação mais adequada de Nina é:",
+  "certa": "pagar a fatura integral, controlar as parcelas futuras e ter menos cartões.",
+  "erradas": [
+   [
+    "continuar pagando o mínimo, pois o cartão tem juros limitados por lei e não gera dívida alta.",
+    "O limite legal não torna o rotativo barato; ele é das linhas mais caras."
+   ],
+   [
+    "abrir um terceiro cartão para distribuir os gastos e ganhar mais prazo de pagamento.",
+    "Mais cartões tendem a aumentar o descontrole e o endividamento."
+   ],
+   [
+    "usar o cheque especial para pagar a fatura, pois os juros são sempre menores que os do cartão.",
+    "O cheque especial também é caro; a solução é reorganizar o orçamento ou trocar por crédito barato."
+   ]
+  ],
+  "gabarito": "Gestão do cartão de crédito: pagar sempre o valor integral da fatura; acompanhar as parcelas futuras (que comprometem a renda dos meses seguintes); manter poucos cartões; usar limite compatível com o orçamento. Se não puder pagar, trocar o saldo por crédito mais barato (parcelamento com CET menor ou empréstimo pessoal) em vez de ficar no rotativo.",
+  "dica": "Cartão: fatura integral, controle das parcelas futuras, poucos cartões, nunca o rotativo."
+ },
+ {
+  "pd": "3.1.3.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Tomás, recém-formado",
+  "etapa": "3/4",
+  "contexto": "Com o orçamento em ordem, Tomás gasta R$ 3.500 por mês. Por ser autônomo, sem salário fixo nem FGTS, ele pergunta a Nina quanto deve ter de reserva de emergência.",
+  "enunciado": "Nina recomenda uma reserva próxima de:",
+  "certa": "6 a 12 meses de despesas (R$ 21 mil a R$ 42 mil), pela instabilidade da renda.",
+  "erradas": [
+   [
+    "1 mês de despesas, pois autônomos podem aumentar a carga de trabalho em emergências.",
+    "Com renda instável, um mês é insuficiente."
+   ],
+   [
+    "12 meses de renda bruta média (R$ 72 mil), pois a reserva deve ser medida pela renda.",
+    "A reserva se mede pelas despesas, não pela renda."
+   ],
+   [
+    "nenhuma reserva, pois ele pode usar o cartão de crédito em caso de emergência.",
+    "Depender de crédito em emergências é caro e arriscado."
+   ]
+  ],
+  "gabarito": "A reserva de emergência é dimensionada pelas despesas mensais e pela estabilidade da renda: em geral, de 3 a 6 meses para empregados com renda estável e de 6 a 12 meses para autônomos, empresários e quem tem renda variável ou dependentes. Deve ficar em ativos de alta liquidez e baixo risco (Tesouro Selic, CDB com liquidez diária, fundos DI de baixo custo).",
+  "dica": "Autônomo: reserva de 6 a 12 meses de despesas, em ativos líquidos e seguros."
+ },
+ {
+  "pd": "3.1.5.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Tomás, recém-formado",
+  "etapa": "4/4",
+  "contexto": "Com a reserva formada, Tomás quer começar a investir para o longo prazo, mas acha que R$ 500 por mês “não fazem diferença” e prefere esperar ganhar mais.",
+  "enunciado": "Nina explica que começar cedo é importante porque:",
+  "certa": "pelos juros compostos, o tempo multiplica o efeito dos aportes, e adiar exige aportes bem maiores.",
+  "erradas": [
+   [
+    "investimentos de valor pequeno são isentos de IR, o que compensa a rentabilidade menor.",
+    "Não existe isenção por valor pequeno; o argumento é o efeito do tempo."
+   ],
+   [
+    "quanto mais cedo começar, maior a garantia de rentabilidade fixa no longo prazo.",
+    "Começar cedo não garante rentabilidade; aumenta o efeito dos juros compostos."
+   ],
+   [
+    "valores pequenos devem ser investidos só em ações, pois a renda fixa exige aportes altos.",
+    "Há opções de renda fixa com valores baixos, como o Tesouro Direto."
+   ]
+  ],
+  "gabarito": "No planejamento de investimentos, o tempo é um dos fatores mais poderosos por causa dos juros compostos: os rendimentos passam a render. Aportes regulares desde cedo podem gerar patrimônio maior que aportes mais altos iniciados tarde. A estratégia deve combinar objetivo, prazo, perfil e disciplina (aportes automáticos), com revisão periódica.",
+  "dica": "Juros compostos: quem começa cedo precisa aportar menos para chegar ao mesmo valor."
+ },
+ {
+  "pd": "3.1.3.3.10",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Dona Graça vende salgados na feira, tem renda baixa e informal e quer comprar um freezer para ampliar a produção. Ela pergunta a Paulo, profissional CPA, que tipo de crédito existe para ela.",
+  "enunciado": "Paulo indica o:",
+  "certa": "microcrédito produtivo orientado, para pequenos empreendedores.",
+  "erradas": [
+   [
+    "crédito imobiliário, que financia equipamentos de uso comercial com prazo de 30 anos.",
+    "Crédito imobiliário financia imóveis."
+   ],
+   [
+    "debênture incentivada, que ela pode emitir para captar recursos de investidores.",
+    "Debêntures são emitidas por sociedades anônimas, não por microempreendedoras."
+   ],
+   [
+    "consignado, que é descontado do faturamento mensal da sua atividade na feira.",
+    "O consignado depende de folha de pagamento ou benefício previdenciário."
+   ]
+  ],
+  "gabarito": "O microcrédito produtivo orientado atende microempreendedores formais e informais de baixa renda, com valores pequenos, garantias simplificadas (por exemplo, aval solidário) e orientação de agentes de crédito sobre o negócio. É oferecido por bancos, cooperativas e organizações especializadas, inclusive com recursos direcionados. O crédito rural, por sua vez, atende produtores com regras e fontes próprias.",
+  "dica": "Microcrédito: pequeno empreendedor, valor baixo, garantias simples e orientação."
+ },
+ {
+  "pd": "3.1.4.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Marta tem um apartamento de R$ 500 mil, um carro de R$ 70 mil e R$ 80 mil em aplicações. Deve R$ 200 mil do financiamento do apartamento e R$ 30 mil no financiamento do carro. Pede a Ivo, profissional CPA, o patrimônio líquido dela.",
+  "enunciado": "Ivo calcula que o patrimônio líquido de Marta é de:",
+  "certa": "R$ 420.000.",
+  "erradas": [
+   [
+    "R$ 650.000.",
+    "Esse é o total de ativos; o patrimônio líquido desconta as dívidas."
+   ],
+   [
+    "R$ 230.000.",
+    "Esse é o total das dívidas."
+   ],
+   [
+    "R$ 50.000.",
+    "Considera só aplicações menos o financiamento do carro, ignorando os outros itens."
+   ]
+  ],
+  "gabarito": "Patrimônio líquido pessoal = ativos totais − passivos totais. Ativos: 500.000 + 70.000 + 80.000 = 650.000. Passivos: 200.000 + 30.000 = 230.000. PL = 420.000. Outros indicadores: endividamento (230.000 ÷ 650.000 ≈ 35%) e liquidez (ativos líquidos de R$ 80 mil em relação às despesas mensais).",
+  "dica": "Patrimônio líquido pessoal = tudo o que tem − tudo o que deve."
+ },
+ {
+  "pd": "3.2.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Dois clientes de Laura, profissional CPA, querem crédito. Júlio quer financiar um curso de especialização que deve elevar sua renda; Sara quer um empréstimo para trocar o celular, que funciona bem, por um modelo novo.",
+  "enunciado": "Laura explica que, na gestão de crédito:",
+  "certa": "a dívida de Júlio pode gerar renda; a de Sara é consumo e pede cautela.",
+  "erradas": [
+   [
+    "as duas dívidas são equivalentes, pois o que importa é apenas a taxa de juros.",
+    "O uso do crédito e a capacidade de pagamento também importam."
+   ],
+   [
+    "a dívida de Sara é melhor, pois o celular é um bem e pode ser vendido depois.",
+    "Bens de consumo se desvalorizam rápido e não geram renda."
+   ],
+   [
+    "nenhum crédito deve ser tomado, pois toda dívida reduz o patrimônio da pessoa.",
+    "Crédito bem usado pode gerar valor, como em educação ou capital produtivo."
+   ]
+  ],
+  "gabarito": "Na utilização de crédito, avaliam-se: finalidade (investimento que gera renda ou valor versus consumo imediato), custo (CET), prazo, parcela compatível com o orçamento e impacto na reserva. Dívidas que financiam ativos produtivos ou capacitação podem se pagar; dívidas para consumo supérfluo, em especial em linhas caras, são as que mais levam ao superendividamento.",
+  "dica": "Crédito para gerar renda (curso, negócio) pode valer a pena; para consumo supérfluo, cautela."
+ },
+ {
+  "pd": "3.4.2.5",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Rui, de perfil arrojado, diz a Daniel, profissional CPA, que precisará de R$ 100 mil em 6 meses para dar entrada em um imóvel e quer aplicar em ações para “render mais”.",
+  "enunciado": "Pelo dever de adequação ao objetivo, Daniel deve orientar que:",
+  "certa": "mesmo arrojado, o objetivo de curto prazo pede ativos de baixa volatilidade e prazo compatível.",
+  "erradas": [
+   [
+    "por ser arrojado, Rui deve aplicar em ações, pois o perfil define sozinho a adequação.",
+    "A adequação considera também o objetivo e o prazo do recurso."
+   ],
+   [
+    "a recomendação depende apenas da rentabilidade passada de cada produto.",
+    "Rentabilidade passada não define adequação."
+   ],
+   [
+    "Rui deve aplicar em previdência, que tem liquidez imediata e isenção de IR.",
+    "Previdência é de longo prazo e tributada."
+   ]
+  ],
+  "gabarito": "Adequação (suitability) não é só perfil de risco: os produtos devem ser compatíveis com o objetivo do cliente, o horizonte do recurso e a necessidade de liquidez. Um arrojado pode ter recursos com objetivos diferentes; para metas de curto prazo com valor definido, recomenda-se baixa volatilidade e vencimento ou liquidez compatível.",
+  "dica": "Adequação = perfil + objetivo + prazo. Dinheiro com data marcada não vai para ativo volátil."
+ },
+ {
+  "pd": "3.4.1.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "O banco lançou um COE novo e o gerente pede a Ícaro, profissional CPA, que comece a oferecê-lo hoje. Ícaro ainda não entendeu como o produto funciona.",
+  "enunciado": "Entre os deveres profissionais, Ícaro deve:",
+  "certa": "conhecer o produto, seus riscos e custos antes de oferecê-lo, e estudar o material.",
+  "erradas": [
+   [
+    "oferecer o produto imediatamente, pois a responsabilidade pelo produto é só da área de produtos.",
+    "O profissional tem dever de diligência e de conhecimento técnico."
+   ],
+   [
+    "oferecer o produto apenas a clientes que não façam perguntas sobre o funcionamento.",
+    "Escolher clientes que não perguntam é conduta antiética."
+   ],
+   [
+    "recusar-se a trabalhar com qualquer produto novo, por segurança.",
+    "O dever é se capacitar, não recusar inovações."
+   ]
+  ],
+  "gabarito": "Entre os deveres dos profissionais certificados estão: diligência, conhecimento técnico atualizado (educação continuada), transparência, lealdade aos clientes, cumprimento das normas e sigilo. Só se deve recomendar o que se conhece: características, riscos, custos, tributação e público-alvo do produto.",
+  "dica": "Só ofereça o que você entende: conhecimento técnico é dever profissional."
+ },
+ {
+  "pd": "3.4.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento, um novo colaborador pergunta a Selma, profissional CPA, para que serve o Código Anbima de Distribuição de Produtos de Investimento.",
+  "enunciado": "Selma explica que o código busca:",
+  "certa": "elevar os padrões de distribuição, com transparência, adequação e proteção do investidor.",
+  "erradas": [
+   [
+    "fixar as taxas máximas que as instituições podem cobrar por cada produto.",
+    "O código não tabela taxas."
+   ],
+   [
+    "substituir a regulação da CVM, que deixou de valer para as instituições associadas.",
+    "A autorregulação complementa a regulação."
+   ],
+   [
+    "garantir a rentabilidade mínima dos produtos distribuídos pelas instituições aderentes.",
+    "O código não garante rentabilidade."
+   ]
+  ],
+  "gabarito": "O Código Anbima de Distribuição estabelece princípios e regras para a distribuição de produtos de investimento: conheça seu cliente, suitability, publicidade, transparência na remuneração, conduta de profissionais, distribuição no private e no exterior, entre outros. Vale para associadas e aderentes, complementa a regulação da CVM e prevê supervisão e sanções da Anbima.",
+  "dica": "Código de Distribuição: padrões elevados de venda, transparência e proteção ao investidor."
+ },
+ {
+  "pd": "3.4.2.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma classe de fundo de renda fixa, antes considerada de baixo risco, passou a comprar muito crédito privado e teve a classificação de risco elevada pela instituição. Vários clientes conservadores continuam com cotas.",
+  "enunciado": "A conduta adequada, pelo monitoramento contínuo de suitability, é:",
+  "certa": "avisar os clientes afetados e reavaliar a adequação das posições.",
+  "erradas": [
+   [
+    "não fazer nada, pois a adequação foi verificada no momento da aplicação.",
+    "O monitoramento é contínuo; mudanças nos produtos exigem reavaliação."
+   ],
+   [
+    "resgatar automaticamente as cotas dos clientes conservadores, sem consultá-los.",
+    "A decisão é do cliente; a instituição deve informá-lo e orientá-lo."
+   ],
+   [
+    "reclassificar os clientes como moderados para manter as posições enquadradas.",
+    "Alterar o perfil para encaixar o produto é irregular."
+   ]
+  ],
+  "gabarito": "O suitability não termina na venda: a instituição deve monitorar mudanças no perfil do cliente e no risco dos produtos. Se um produto passa a ter risco incompatível com clientes que o detêm, eles devem ser informados e orientados. Alterar o perfil para encaixar o produto ou omitir a mudança fere o código e a CVM 30.",
+  "dica": "Produto mudou de risco? Avise os clientes afetados e reavalie a adequação."
+ },
+ {
+  "pd": "3.4.3.1.3",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Ao analisar a carteira de um cliente, Joana, profissional CPA, percebe que um CDB dele vencerá na próxima semana e que o dinheiro ficará parado na conta corrente sem rendimento.",
+  "enunciado": "Pela técnica de solução proativa de problemas, Joana deve:",
+  "certa": "avisar o cliente antes do vencimento e discutir alternativas para o valor.",
+  "erradas": [
+   [
+    "aguardar o cliente perceber e procurar a agência, para não parecer insistente.",
+    "A solução proativa antecipa necessidades do cliente."
+   ],
+   [
+    "reaplicar automaticamente o valor no produto de maior taxa, sem consultar o cliente.",
+    "Aplicar sem autorização é irregular."
+   ],
+   [
+    "transferir o dinheiro para a poupança do cliente, que é sempre a melhor opção.",
+    "A decisão deve considerar perfil e objetivos, e cabe ao cliente."
+   ]
+  ],
+  "gabarito": "Solução proativa de problemas é antecipar necessidades e riscos do cliente (vencimentos, mudanças de cenário, dívidas caras, perfil desatualizado) e propor alternativas antes que gerem prejuízo. Deve respeitar o perfil e a decisão do cliente, sem operar sem autorização.",
+  "dica": "Proatividade: antecipe o problema e proponha soluções; a decisão é sempre do cliente."
+ },
+ {
+  "pd": "3.4.3.3.3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco remunera seus gerentes com bônus maior pela venda de produtos de gestoras parceiras. A área de compliance exige que essa informação conste de forma clara nos documentos entregues aos clientes.",
+  "enunciado": "Essa medida de gestão de conflitos de interesses é a:",
+  "certa": "divulgação obrigatória: informar ao cliente o interesse que influencia a oferta.",
+  "erradas": [
+   [
+    "segregação de funções, que separa as áreas do banco que têm interesses conflitantes.",
+    "A segregação separa áreas; aqui a medida é informar o cliente."
+   ],
+   [
+    "proibição de atividades, que impede os gerentes de vender produtos de terceiros.",
+    "A medida descrita não proíbe; informa."
+   ],
+   [
+    "auditoria externa, que verifica as demonstrações financeiras do banco.",
+    "Auditoria externa trata das contas, não da transparência ao cliente."
+   ]
+  ],
+  "gabarito": "Entre as medidas de gestão de conflitos de interesses: políticas e procedimentos claros, treinamento, divulgação obrigatória (informar ao cliente conflitos e remunerações relevantes), segregação de funções, revisão e monitoramento contínuos, comitês de ética e compliance, proibição de atividades específicas e relatórios de transparência. Quando não é possível eliminar o conflito, ele deve ser gerido e divulgado.",
+  "dica": "Conflito que não dá para eliminar: gerir e divulgar ao cliente."
+ },
+ {
+  "pd": "3.4.6.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente pede ao banco uma cópia de todos os dados pessoais que a instituição mantém sobre ela e a correção do endereço, que está errado. O atendente diz que isso não é possível.",
+  "enunciado": "Pela LGPD, a cliente:",
+  "certa": "tem direito de acessar seus dados e pedir a correção dos incompletos, inexatos ou desatualizados.",
+  "erradas": [
+   [
+    "não tem esse direito, pois os dados pertencem à instituição que os coletou.",
+    "A LGPD garante ao titular direitos sobre seus dados."
+   ],
+   [
+    "só pode acessar os dados mediante ordem judicial, por causa do sigilo bancário.",
+    "O sigilo protege os dados do cliente contra terceiros, não contra o próprio titular."
+   ],
+   [
+    "pode acessar os dados, mas a correção só é feita a cada 24 meses, na atualização cadastral.",
+    "A correção deve ser atendida quando solicitada."
+   ]
+  ],
+  "gabarito": "A LGPD (Lei 13.709/2018) se aplica ao tratamento de dados pessoais por pessoas físicas ou jurídicas, em meio físico ou digital. Garante ao titular direitos como confirmação e acesso aos dados, correção, anonimização, portabilidade, informação sobre compartilhamento e revogação do consentimento (quando essa for a base legal). A ANPD fiscaliza o cumprimento.",
+  "dica": "LGPD: o titular pode acessar, corrigir e saber com quem seus dados foram compartilhados."
+ },
+ {
+  "pd": "3.4.7.1.4",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "O diretor de compliance de uma corretora percebe que um operador vem manipulando preços com ordens combinadas, tem o dever de impedir isso, mas decide não agir para não prejudicar o faturamento.",
+  "enunciado": "A conduta do diretor pode configurar:",
+  "certa": "omissão imprópria: quem devia agir para evitar o resultado e se omitiu responde.",
+  "erradas": [
+   [
+    "conduta lícita, pois apenas quem executa as ordens pode responder por manipulação.",
+    "Quem tem dever de evitar o resultado e se omite também pode responder."
+   ],
+   [
+    "insider trading secundário, por ter recebido informação privilegiada do operador.",
+    "Não se trata de uso de informação relevante não divulgada."
+   ],
+   [
+    "infração apenas trabalhista, sem consequências no mercado de capitais.",
+    "A omissão de quem tem dever de agir pode ter consequências penais e administrativas."
+   ]
+  ],
+  "gabarito": "Omissão imprópria (art. 13, § 2º, do Código Penal): a omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado, por ter obrigação legal de cuidado, proteção ou vigilância, por ter assumido a responsabilidade de impedir o resultado ou por ter criado o risco. Diretores e responsáveis por controles internos podem responder por crimes contra o mercado de capitais quando se omitem.",
+  "dica": "Omissão imprópria: quem tinha o dever de agir e não agiu responde pelo resultado."
+ },
+ {
+  "pd": "4.1.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Ao analisar uma empresa de vestuário, um gestor ESG identifica denúncias de trabalho análogo à escravidão em fornecedores. Um cliente pergunta a Regina, profissional CPA, em qual pilar o tema se encaixa.",
+  "enunciado": "Regina explica que se trata de um aspecto:",
+  "certa": "social, por envolver direitos humanos e condições de trabalho.",
+  "erradas": [
+   [
+    "ambiental, por envolver a produção de roupas e o uso de recursos naturais.",
+    "O tema central são pessoas e condições de trabalho."
+   ],
+   [
+    "de governança, por envolver a composição do conselho de administração.",
+    "Embora a governança deva tratar o risco, o tema em si é social."
+   ],
+   [
+    "financeiro, sem relação com os critérios ESG.",
+    "Condições de trabalho são critério social do ESG."
+   ]
+  ],
+  "gabarito": "O pilar social (S) do ESG inclui direitos humanos, condições de trabalho (inclusive na cadeia de fornecedores), saúde e segurança, diversidade e inclusão, relação com comunidades e proteção do consumidor. Falhas sociais geram riscos jurídicos, de reputação e financeiros às empresas e aos investidores.",
+  "dica": "Social = pessoas: trabalho, direitos humanos, diversidade, comunidade e consumidor."
+ },
+ {
+  "pd": "4.2.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa de energia emite títulos de dívida cujos recursos serão usados exclusivamente na construção de parques eólicos, com relatório de verificação independente. Um cliente pergunta a Hugo, profissional CPA, o que são.",
+  "enunciado": "Hugo explica que se trata de:",
+  "certa": "títulos verdes (green bonds), cujos recursos vão para projetos com benefício ambiental.",
+  "erradas": [
+   [
+    "títulos de capitalização, com sorteios para investidores preocupados com o meio ambiente.",
+    "Capitalização é outro produto, sem relação com o uso dos recursos."
+   ],
+   [
+    "ações preferenciais de empresas sustentáveis, com dividendos garantidos.",
+    "Green bonds são títulos de dívida, não ações."
+   ],
+   [
+    "títulos públicos do Tesouro Nacional, isentos de risco por serem ambientais.",
+    "Títulos verdes podem ser privados ou públicos; o rótulo não elimina riscos."
+   ]
+  ],
+  "gabarito": "Produtos ESG incluem títulos verdes, sociais e sustentáveis (green, social, sustainability bonds), cujos recursos são destinados a projetos com benefícios socioambientais, em geral com verificação externa; títulos vinculados a metas de sustentabilidade (sustainability-linked); fundos IS; e índices ESG. O rótulo não elimina o risco de crédito do emissor.",
+  "dica": "Green bond = título de dívida com recursos destinados a projetos ambientais. Risco de crédito continua."
+ },
+ {
+  "pd": "4.4.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente que estuda contratos inteligentes pergunta a Paula, profissional CPA, o que permite que esses contratos sejam executados automaticamente.",
+  "enunciado": "Paula explica que contratos inteligentes:",
+  "certa": "são programas em blockchain que se executam quando as condições ocorrem.",
+  "erradas": [
+   [
+    "são contratos em papel digitalizados e assinados por um cartório eletrônico.",
+    "Contratos digitalizados não se executam sozinhos."
+   ],
+   [
+    "dependem de um juiz para validar cada execução, como contratos tradicionais.",
+    "A execução é automática, conforme o código."
+   ],
+   [
+    "são aplicativos de bancos que aprovam crédito por análise humana.",
+    "Contratos inteligentes executam regras codificadas sem intermediação humana."
+   ]
+  ],
+  "gabarito": "Contratos inteligentes (smart contracts) são programas registrados em blockchain que executam automaticamente cláusulas quando condições predefinidas são atendidas (autoexecutáveis). Plataformas como o Ethereum permitem criá-los. Aplicações: empréstimos DeFi, exchanges descentralizadas, seguros paramétricos, tokenização de imóveis e governança (DAOs). Riscos: erros de código, ataques e dados externos incorretos (oráculos).",
+  "dica": "Contrato inteligente: código em blockchain que se executa sozinho quando as condições ocorrem."
+ },
+ {
+  "pd": "4.4.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente comprou um NFT de uma obra de arte digital e acredita que agora detém todos os direitos autorais sobre a obra. Pergunta a Caio, profissional CPA.",
+  "enunciado": "Caio explica que um NFT:",
+  "certa": "é um token único de propriedade digital; direito autoral depende do contrato.",
+  "erradas": [
+   [
+    "é uma criptomoeda intercambiável, em que cada unidade vale exatamente o mesmo que as outras.",
+    "Fungível é o oposto: o NFT é não fungível (único)."
+   ],
+   [
+    "transfere automaticamente todos os direitos autorais da obra ao comprador.",
+    "Os direitos autorais não são transferidos automaticamente pelo token."
+   ],
+   [
+    "tem valor garantido pela plataforma onde foi comprado.",
+    "O valor de um NFT depende do mercado e pode cair muito."
+   ]
+  ],
+  "gabarito": "NFT (token não fungível) é um token único registrado em blockchain, usado para representar a propriedade ou a autenticidade de itens digitais (arte, colecionáveis, ingressos) ou físicos. Diferente das criptomoedas fungíveis, cada NFT é distinto. Comprar um NFT não significa adquirir direitos autorais, salvo previsão expressa. Riscos: alta volatilidade, baixa liquidez e fraudes.",
+  "dica": "NFT = token único de propriedade. Não transfere direito autoral automaticamente."
+ },
+ {
+  "pd": "4.7.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma fintech oferece um aplicativo que reúne as contas que o cliente tem em vários bancos e sugere onde economizar. Um cliente pergunta a Amanda, profissional CPA, como a fintech obtém esses dados com segurança.",
+  "enunciado": "Amanda explica que a fintech usa o Open Finance, que:",
+  "certa": "dá acesso aos dados de outros bancos com consentimento, por canal padronizado.",
+  "erradas": [
+   [
+    "permite à fintech comprar dados de clientes diretamente dos grandes bancos.",
+    "Os dados não são vendidos; o compartilhamento depende do consentimento do titular."
+   ],
+   [
+    "obriga o cliente a entregar suas senhas bancárias à fintech para leitura de extratos.",
+    "No Open Finance não se compartilham senhas; usam-se interfaces seguras."
+   ],
+   [
+    "é exclusivo dos bancos tradicionais, sem participação das fintechs.",
+    "Fintechs autorizadas participam e são grandes beneficiárias."
+   ]
+  ],
+  "gabarito": "A relação das fintechs com o Open Finance é estreita: o compartilhamento padronizado de dados, com consentimento, reduz a vantagem informacional dos grandes bancos, permite ofertas personalizadas (crédito, investimentos, gestão financeira) e amplia a concorrência. Tudo ocorre por interfaces seguras (APIs), sem compartilhamento de senhas.",
+  "dica": "Fintech + Open Finance: dados de outros bancos com consentimento, por canal seguro e sem senha."
+ }
+]

@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.1.2.1.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um grupo de empresários quer criar uma nova financeira para conceder crédito ao consumidor. Eles perguntam a Leila, profissional CPA, qual órgão precisa autorizar o funcionamento da instituição.",
+  "enunciado": "Leila explica que a autorização deve ser concedida pelo:",
+  "certa": "Banco Central, que autoriza e supervisiona as instituições financeiras.",
+  "erradas": [
+   [
+    "Conselho Monetário Nacional, que analisa cada pedido individual de abertura de instituição.",
+    "O CMN fixa as diretrizes; a autorização de cada instituição é dada pelo BC."
+   ],
+   [
+    "Comissão de Valores Mobiliários, que registra as instituições que concedem crédito.",
+    "A CVM cuida do mercado de valores mobiliários, não de autorizar financeiras."
+   ],
+   [
+    "Ministério da Fazenda, por meio da Receita Federal, que concede o registro de funcionamento.",
+    "A Receita cuida de tributos; a autorização é competência do BC."
+   ]
+  ],
+  "gabarito": "Compete ao Banco Central, entre outras funções, autorizar o funcionamento, a transferência de controle e a reorganização societária das instituições financeiras, além de fiscalizá-las e aplicar penalidades. O CMN define as regras gerais (por exemplo, capital mínimo). O BC também emite moeda, executa as políticas monetária e cambial, administra as reservas e o compulsório e regula o sistema de pagamentos.",
+  "dica": "Quem autoriza e fiscaliza instituição financeira é o Banco Central."
+ },
+ {
+  "pd": "1.1.3.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante pergunta a Gerson, profissional CPA, o que diferencia a Caixa Econômica Federal de um banco comercial privado, já que os dois oferecem conta corrente e cartões.",
+  "enunciado": "Gerson explica que a Caixa:",
+  "certa": "é banco público que também opera programas do governo, como FGTS e habitação.",
+  "erradas": [
+   [
+    "é uma cooperativa de crédito federal, em que os correntistas são donos das quotas-partes.",
+    "A Caixa é empresa pública federal, não cooperativa."
+   ],
+   [
+    "não pode oferecer conta corrente nem crédito, atuando apenas com loterias e FGTS.",
+    "A Caixa oferece todos os serviços bancários, além de operar programas do governo."
+   ],
+   [
+    "é supervisionada pela CVM, e não pelo Banco Central, por ser empresa estatal.",
+    "Como instituição financeira, a Caixa é supervisionada pelo BC."
+   ]
+  ],
+  "gabarito": "Bancos comerciais captam depósitos à vista e concedem crédito de curto e médio prazo; bancos múltiplos reúnem carteiras (comercial, investimento, crédito imobiliário etc.). As caixas econômicas são instituições públicas com atuação de banco comercial e foco em programas sociais: a Caixa Econômica Federal opera o FGTS, é o principal agente do crédito habitacional, administra as loterias e paga benefícios sociais. É supervisionada pelo Banco Central.",
+  "dica": "Caixa: banco público com função social (FGTS, habitação, loterias, benefícios)."
+ },
+ {
+  "pd": "1.1.3.1.13",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma seguradora assumiu o seguro de uma grande usina e, para não ficar exposta sozinha a uma perda bilionária, transfere parte do risco a outra empresa. Um cliente pergunta a Irene, profissional CPA, como isso funciona.",
+  "enunciado": "Irene explica que a seguradora contratou:",
+  "certa": "resseguro, em que uma resseguradora assume parte do risco da seguradora.",
+  "erradas": [
+   [
+    "cosseguro bancário, em que o FGC garante as indenizações acima do limite da apólice.",
+    "O FGC não garante seguros; a transferência de risco entre seguradora e resseguradora é o resseguro."
+   ],
+   [
+    "capitalização, em que o segurado recebe sorteios para compensar a perda.",
+    "Capitalização é outro produto, com sorteios e resgate."
+   ],
+   [
+    "previdência aberta, que cobre os riscos patrimoniais das empresas.",
+    "Previdência aberta trata de acumulação e renda para pessoas."
+   ]
+  ],
+  "gabarito": "Resseguro é o seguro da seguradora: a resseguradora assume parte dos riscos aceitos pela seguradora, o que permite pulverizar grandes riscos e proteger a solvência. Retrocessão é a transferência de risco entre resseguradoras. No cosseguro, várias seguradoras dividem diretamente o mesmo risco. Seguradoras e resseguradoras são supervisionadas pela SUSEP; corretores de seguros intermediam a contratação.",
+  "dica": "Resseguro = seguro da seguradora. Cosseguro = várias seguradoras dividem o mesmo risco."
+ },
+ {
+  "pd": "1.1.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um evento de carreira, um estudante pergunta a Tales, profissional CPA, quais entidades representam analistas de investimento, planejadores financeiros e intermediários do mercado.",
+  "enunciado": "Tales associa corretamente:",
+  "certa": "Apimec aos analistas, Planejar aos planejadores financeiros e Ancord aos intermediários.",
+  "erradas": [
+   [
+    "Ancord aos analistas, Apimec aos planejadores e Planejar às distribuidoras.",
+    "As associações estão trocadas."
+   ],
+   [
+    "Planejar aos analistas, Ancord aos planejadores e Apimec às corretoras.",
+    "As associações estão trocadas."
+   ],
+   [
+    "as três a fundos de pensão, como representantes das entidades fechadas de previdência.",
+    "As três atuam no mercado de capitais e de planejamento, não em fundos de pensão."
+   ]
+  ],
+  "gabarito": "Apimec: associação dos analistas e profissionais de investimento, que certifica analistas (CNPI). Planejar: associação de planejadores financeiros, que concede a certificação CFP. Ancord: associação das corretoras, distribuidoras e assessores de investimento, que certifica assessores. A Anbima representa as instituições dos mercados financeiro e de capitais e faz autorregulação.",
+  "dica": "Apimec = analistas. Planejar = planejadores (CFP). Ancord = corretoras e assessores."
+ },
+ {
+  "pd": "1.2.4.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente vê na agenda econômica “reunião do Copom” e “ata do Copom” e pergunta a Elisa, profissional CPA, quem integra o comitê e o que ele decide.",
+  "enunciado": "Elisa explica que o Copom:",
+  "certa": "é formado pela diretoria do BC, define a meta Selic em oito reuniões por ano e publica atas.",
+  "erradas": [
+   [
+    "é formado pelos ministros da área econômica e define a meta de inflação a cada reunião.",
+    "Quem define a meta de inflação é o CMN; o Copom é da diretoria do BC."
+   ],
+   [
+    "reúne representantes dos bancos privados, que votam a taxa de juros dos empréstimos.",
+    "O Copom é órgão do BC; não há votação de bancos privados."
+   ],
+   [
+    "decide sobre a taxa de câmbio oficial e as compras de reservas internacionais.",
+    "O câmbio é flutuante; o Copom decide a meta Selic."
+   ]
+  ],
+  "gabarito": "O Comitê de Política Monetária (Copom) é formado pelo presidente e pelos diretores do Banco Central. Reúne-se 8 vezes por ano (a cada cerca de 45 dias), define a meta da taxa Selic e o viés, divulga comunicado ao fim da reunião e ata em seguida, além do Relatório de Política Monetária trimestral. Suas decisões buscam cumprir a meta de inflação fixada pelo CMN.",
+  "dica": "Copom: diretoria do BC, 8 reuniões por ano, decide a meta Selic e publica atas."
+ },
+ {
+  "pd": "1.2.5.5",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Exportadora Sol e o câmbio",
+  "etapa": "1/3",
+  "contexto": "A Exportadora Sol vende calçados aos EUA. Em um ano, o dólar ficou estável em reais, mas a inflação brasileira foi bem maior que a americana. O diretor diz a Marina, profissional CPA, que os custos subiram e a empresa perdeu competitividade.",
+  "enunciado": "Marina explica que o fenômeno é uma:",
+  "certa": "valorização da taxa de câmbio real, que reduz a competitividade das exportações.",
+  "erradas": [
+   [
+    "desvalorização do câmbio nominal, que favorece as exportações brasileiras.",
+    "O câmbio nominal ficou estável; o efeito veio da diferença de inflação."
+   ],
+   [
+    "valorização da PTAX, que é fixada pelo Banco Central a cada trimestre.",
+    "A PTAX é calculada diariamente com base em operações do mercado."
+   ],
+   [
+    "alta do câmbio turismo, que afeta apenas as viagens internacionais.",
+    "O câmbio turismo não explica a perda de competitividade das exportações."
+   ]
+  ],
+  "gabarito": "Taxa de câmbio nominal: preço da moeda estrangeira em reais. Taxa de câmbio real: ajusta a nominal pela diferença de inflação entre os países e mede o poder de compra relativo e a competitividade. Se o câmbio nominal fica estável e a inflação interna supera a externa, há valorização real do real: os produtos brasileiros ficam relativamente mais caros, prejudicando exportações e favorecendo importações.",
+  "dica": "Câmbio real = nominal ajustado pela inflação dos dois países. Inflação interna maior com dólar parado = real valorizado."
+ },
+ {
+  "pd": "1.2.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Exportadora Sol e o câmbio",
+  "etapa": "2/3",
+  "contexto": "Preocupado com crises externas, o diretor pergunta a Marina se o Brasil tem “colchão” para momentos de fuga de dólares e quem o administra.",
+  "enunciado": "Marina explica que as reservas internacionais:",
+  "certa": "são ativos em moeda estrangeira geridos pelo BC, que dão proteção contra choques externos.",
+  "erradas": [
+   [
+    "são dólares depositados pelas empresas exportadoras, que o governo pode confiscar em crises.",
+    "As reservas pertencem ao país e são administradas pelo BC; não são depósitos das empresas."
+   ],
+   [
+    "servem para fixar o dólar em um valor oficial definido anualmente pelo CMN.",
+    "O regime é flutuante; as reservas suavizam a volatilidade, não fixam o preço."
+   ],
+   [
+    "são administradas pela CVM e usadas para comprar ações de empresas exportadoras.",
+    "A administração é do Banco Central, em ativos seguros e líquidos."
+   ]
+  ],
+  "gabarito": "Reservas internacionais são ativos em moeda estrangeira (títulos de outros governos, depósitos, ouro) administrados pelo BC. Funcionam como seguro contra choques externos, garantem a capacidade de pagamentos externos e permitem intervenções no mercado de câmbio em momentos de estresse, reduzindo a percepção de risco do país. Cupom cambial é a taxa de juros em dólar no mercado brasileiro.",
+  "dica": "Reservas = colchão em moeda forte administrado pelo BC contra choques externos."
+ },
+ {
+  "pd": "1.2.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Exportadora Sol e o câmbio",
+  "etapa": "3/3",
+  "contexto": "O diretor pergunta a Marina se o governo pode simplesmente fixar o dólar em um patamar que favoreça as exportações.",
+  "enunciado": "Marina explica que, no regime adotado no Brasil:",
+  "certa": "o câmbio é flutuante, e o BC intervém só para conter a volatilidade.",
+  "erradas": [
+   [
+    "o câmbio é fixo, definido por decreto presidencial e revisto uma vez por ano.",
+    "O Brasil adota câmbio flutuante desde 1999."
+   ],
+   [
+    "o câmbio é controlado pela B3, que define a taxa de fechamento de cada dia.",
+    "A B3 negocia derivativos de câmbio, mas não fixa a cotação."
+   ],
+   [
+    "o câmbio segue bandas fixas definidas pelo Copom a cada reunião.",
+    "O Copom decide a Selic; não há bandas cambiais."
+   ]
+  ],
+  "gabarito": "Política cambial é o conjunto de medidas sobre o regime de câmbio e as transações com o exterior. No regime de câmbio flutuante (adotado no Brasil desde 1999), a taxa resulta da oferta e da demanda de moeda estrangeira; o BC intervém de forma pontual (leilões à vista, linhas, swaps) para reduzir volatilidade excessiva, sem meta de taxa. Outros regimes são o fixo e o de bandas.",
+  "dica": "Brasil: câmbio flutuante; o BC só suaviza a volatilidade."
+ },
+ {
+  "pd": "1.3.3.5.2",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Uma empresa avalia dois projetos. O projeto A tem TIR de 14% ao ano e o B, de 9% ao ano. O custo de capital da empresa é de 11% ao ano. O diretor pergunta a Roberto, profissional CPA, como interpretar.",
+  "enunciado": "Roberto conclui que:",
+  "certa": "A cria valor (TIR acima do custo de capital) e B destrói valor.",
+  "erradas": [
+   [
+    "os dois projetos devem ser aceitos, pois ambos têm TIR positiva.",
+    "TIR positiva não basta; ela deve superar o custo de capital."
+   ],
+   [
+    "o projeto B deve ser escolhido, pois uma TIR menor indica menor risco.",
+    "A TIR não mede risco; abaixo do custo de capital, o projeto tem VPL negativo."
+   ],
+   [
+    "nenhum deve ser aceito, pois a TIR só é válida quando supera a Selic.",
+    "A comparação relevante é com o custo de capital (taxa mínima de atratividade)."
+   ]
+  ],
+  "gabarito": "A TIR (Taxa Interna de Retorno) é a taxa que zera o VPL dos fluxos do projeto. Regra de decisão: se a TIR for maior que o custo de capital ou a taxa mínima de atratividade, o VPL é positivo e o projeto cria valor. Se for menor, o VPL é negativo. O custo de oportunidade é o retorno da melhor alternativa abandonada; a taxa livre de risco serve de referência mínima (títulos públicos).",
+  "dica": "TIR maior que o custo de capital = VPL positivo = cria valor."
+ },
+ {
+  "pd": "1.3.3.6.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma carteira tem 60% em renda fixa, com retorno esperado de 10% ao ano, e 40% em ações, com retorno esperado de 15% ao ano. O cliente pergunta a Luana, profissional CPA, qual o retorno esperado da carteira.",
+  "enunciado": "Luana calcula que o retorno esperado da carteira é de:",
+  "certa": "12,0% ao ano.",
+  "erradas": [
+   [
+    "12,5% ao ano.",
+    "12,5% é a média simples (10 + 15) ÷ 2, que ignora os pesos."
+   ],
+   [
+    "25,0% ao ano.",
+    "Somar os retornos não faz sentido; é preciso ponderar."
+   ],
+   [
+    "13,0% ao ano.",
+    "Corresponderia a pesos de 40% em renda fixa e 60% em ações."
+   ]
+  ],
+  "gabarito": "O retorno esperado de uma carteira é a média dos retornos esperados de cada ativo, ponderada pelo peso de cada um: 0,60 × 10% + 0,40 × 15% = 6% + 6% = 12% ao ano. O risco da carteira, porém, não é a média ponderada dos riscos: depende também das correlações entre os ativos, por isso a diversificação reduz o risco.",
+  "dica": "Retorno esperado da carteira = soma de (peso × retorno de cada ativo)."
+ },
+ {
+  "pd": "2.1.1.1.1.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Rosa comprou um Tesouro IPCA+ 2045 a IPCA + 7% ao ano. Um ano depois, as taxas desse título caíram para IPCA + 5,5% ao ano. Ela pergunta a Juarez, profissional CPA, o que aconteceu com o valor do seu título.",
+  "enunciado": "Juarez explica que:",
+  "certa": "o preço subiu com a queda da taxa, e vendendo agora ela teria rentabilidade acima da contratada.",
+  "erradas": [
+   [
+    "o preço caiu, pois títulos atrelados à inflação perdem valor quando os juros reais caem.",
+    "Preço e taxa andam em sentidos opostos: taxa menor, preço maior."
+   ],
+   [
+    "o preço não mudou, pois títulos do Tesouro só são reavaliados no vencimento.",
+    "Títulos são marcados a mercado diariamente."
+   ],
+   [
+    "o preço subiu, mas o ganho só pode ser realizado após o vencimento do título.",
+    "O ganho pode ser realizado vendendo ao Tesouro, pelo preço do dia."
+   ]
+  ],
+  "gabarito": "Na marcação a mercado, o preço de um título reflete as taxas atuais. Se a taxa de mercado cai abaixo da contratada, o preço sobe, e vender antes do vencimento gera rentabilidade maior que a contratada. Se a taxa sobe, o preço cai. Títulos longos (duration alta) oscilam mais. Mantendo até o vencimento, o investidor recebe a taxa contratada.",
+  "dica": "Taxa de mercado caiu → preço subiu → vender antes rende mais que o contratado."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Fausto tem R$ 600 mil e recebeu oferta de CDB a 125% do CDI de um banco pequeno. Ele pretende aplicar todo o valor nesse CDB, pois “tem FGC”. Pergunta a Paula, profissional CPA.",
+  "enunciado": "Paula explica que:",
+  "certa": "a taxa alta reflete mais risco do emissor, e o FGC só cobre R$ 250 mil por conglomerado.",
+  "erradas": [
+   [
+    "o FGC cobre todo o valor, pois o limite de R$ 250 mil vale apenas para a poupança.",
+    "O limite de R$ 250 mil vale para o conjunto de produtos cobertos no conglomerado."
+   ],
+   [
+    "a taxa alta indica que o banco é mais seguro, pois só bancos sólidos podem pagar mais.",
+    "Taxas mais altas costumam compensar risco maior."
+   ],
+   [
+    "o CDB não tem garantia do FGC quando a taxa passa de 120% do CDI.",
+    "Não existe esse limite de taxa para a cobertura."
+   ]
+  ],
+  "gabarito": "O CDB é título de captação do banco; o investidor corre o risco de crédito do emissor. Taxas bem acima do mercado sinalizam emissor com maior risco ou necessidade de captar. O FGC garante até R$ 250 mil por CPF por conglomerado (teto de R$ 1 milhão a cada 4 anos). Valores acima do limite ficam sem garantia. Diversificar entre emissores ajuda a manter os valores dentro da cobertura.",
+  "dica": "Taxa alta = mais risco do emissor. FGC: até R$ 250 mil por conglomerado; o excesso fica descoberto."
+ },
+ {
+  "pd": "2.1.1.1.7",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Uma agência rebaixou o rating de uma empresa de A para BB+ por causa do aumento do endividamento. Wanda tem debêntures prefixadas dessa empresa e pergunta a Jair, profissional CPA, o que tende a acontecer com o preço delas.",
+  "enunciado": "Jair explica que, em geral:",
+  "certa": "o mercado passa a exigir taxa maior, e o preço das debêntures tende a cair.",
+  "erradas": [
+   [
+    "o preço tende a subir, pois o rebaixamento faz a empresa pagar juros maiores aos atuais investidores.",
+    "A taxa contratada não muda; o mercado exige mais e o preço cai."
+   ],
+   [
+    "o preço não muda, pois o rating só afeta novas emissões, não títulos já emitidos.",
+    "O rating influencia o preço dos títulos existentes no secundário."
+   ],
+   [
+    "o FGC passa a garantir as debêntures rebaixadas para proteger os investidores.",
+    "Debêntures não têm FGC."
+   ]
+  ],
+  "gabarito": "Rebaixamento de rating indica maior risco de crédito. Os investidores passam a exigir um prêmio maior (spread de crédito), elevando a taxa de mercado do título e reduzindo seu preço. De BB+ para baixo, o título deixa o grau de investimento, e alguns investidores institucionais podem ser obrigados a vender. O rating é opinião independente, não garantia.",
+  "dica": "Rating rebaixado → spread maior → preço do título cai."
+ },
+ {
+  "pd": "2.1.1.1.8.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Com a Selic em 15% ao ano, Dona Clara mantém R$ 50 mil na poupança por achar que é melhor que o CDB, “porque não paga imposto”. Ela pergunta a Sérgio, profissional CPA, se faz sentido para um prazo de 1 ano.",
+  "enunciado": "Sérgio explica corretamente que, nesse cenário:",
+  "certa": "um CDB de 100% do CDI tende a render mais, mesmo pagando IR, pois a poupança está limitada a 0,5% ao mês + TR.",
+  "erradas": [
+   [
+    "a poupança sempre rende mais que qualquer CDB, pois a isenção de IR compensa qualquer diferença de taxa.",
+    "Com Selic alta, a poupança fica bem abaixo de um CDB de 100% do CDI, mesmo após o IR."
+   ],
+   [
+    "os dois rendem exatamente o mesmo, pois a poupança acompanha 70% da Selic com a taxa acima de 8,5%.",
+    "Com Selic acima de 8,5%, a regra é 0,5% ao mês + TR, não 70% da Selic."
+   ],
+   [
+    "a poupança rende mais, pois o CDB perde rendimento com o IOF cobrado durante todo o ano.",
+    "O IOF só incide em resgates antes de 30 dias."
+   ]
+  ],
+  "gabarito": "Com Selic acima de 8,5% ao ano, a poupança rende 0,5% ao mês + TR (cerca de 6,17% ao ano mais a TR). Um CDB de 100% do CDI, com CDI perto de 15%, rende cerca de 12,4% líquido em um ano (IR de 17,5%). A poupança tem vantagens (isenção, liquidez no aniversário, FGC, simplicidade), mas costuma perder em cenários de juros altos.",
+  "dica": "Selic alta: poupança travada em 0,5% a.m. + TR; CDB 100% CDI rende mais mesmo com IR."
+ },
+ {
+  "pd": "2.1.1.2.2.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em 2026, uma empresa declarou R$ 1.000 de juros sobre capital próprio (JCP) brutos para Marcos. Ele pergunta a Ingrid, profissional CPA, quanto receberá líquido.",
+  "enunciado": "Ingrid calcula que Marcos receberá:",
+  "certa": "R$ 825,00, após IR retido na fonte de 17,5%.",
+  "erradas": [
+   [
+    "R$ 1.000,00, pois o JCP é isento como os dividendos.",
+    "O JCP é tributado na fonte."
+   ],
+   [
+    "R$ 850,00, pois a alíquota do JCP é de 15% em 2026.",
+    "A alíquota passou para 17,5% em 2026."
+   ],
+   [
+    "R$ 775,00, pois a alíquota do JCP segue a maior faixa da tabela regressiva.",
+    "O JCP tem alíquota própria, não a tabela regressiva."
+   ]
+  ],
+  "gabarito": "O JCP é remuneração do capital do acionista, dedutível para a empresa e tributado na fonte para o acionista. Desde 2026, a alíquota é de 17,5% (antes, 15%): 1.000 × 17,5% = 175; líquido de R$ 825. Os dividendos são, em regra, isentos para pessoa física, com retenção de 10% sobre o que a mesma empresa pagar acima de R$ 50 mil por mês.",
+  "dica": "JCP 2026: 17,5% na fonte. R$ 1.000 brutos → R$ 825 líquidos."
+ },
+ {
+  "pd": "2.1.1.2.2.2.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Mauro tem 1.000 ações cotadas a R$ 22,00. A empresa aprova bonificação de 10%, capitalizando reservas de lucro. Ele pergunta a Diana, profissional CPA, o que muda.",
+  "enunciado": "Diana explica que, após a bonificação, Mauro terá aproximadamente:",
+  "certa": "1.100 ações a cerca de R$ 20,00, com o mesmo valor total.",
+  "erradas": [
+   [
+    "1.000 ações a R$ 24,20, com valorização de 10%.",
+    "Na bonificação, a quantidade aumenta; o preço é ajustado para baixo."
+   ],
+   [
+    "1.100 ações a R$ 22,00, com ganho de 10% no patrimônio.",
+    "O preço é ajustado pela nova quantidade, sem criar valor."
+   ],
+   [
+    "900 ações a R$ 24,44, pois a bonificação reduz a quantidade de ações.",
+    "Bonificação aumenta a quantidade; quem reduz é o grupamento."
+   ]
+  ],
+  "gabarito": "Bonificação é a distribuição gratuita de novas ações aos acionistas, proporcional à participação, quando a empresa incorpora reservas ao capital social. Não há entrada de recursos nem criação de valor: o preço é ajustado. 1.000 ações × R$ 22 = R$ 22.000; após 10%: 1.100 ações a R$ 22.000 ÷ 1.100 = R$ 20,00. Para o IR, as ações bonificadas têm custo atribuído conforme o valor capitalizado pela empresa.",
+  "dica": "Bonificação: mais ações, preço ajustado, valor total igual."
+ },
+ {
+  "pd": "2.1.1.2.3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao estudar governança corporativa, um cliente pergunta a Rebeca, profissional CPA, qual a diferença entre o conselho de administração e a diretoria de uma companhia.",
+  "enunciado": "Rebeca explica que:",
+  "certa": "o conselho define a estratégia e fiscaliza a diretoria, que executa a gestão do dia a dia.",
+  "erradas": [
+   [
+    "a diretoria elege o conselho de administração e define a estratégia da companhia.",
+    "É o conselho que elege e fiscaliza os diretores."
+   ],
+   [
+    "o conselho de administração substitui a assembleia de acionistas nas companhias abertas.",
+    "A assembleia continua sendo o órgão máximo; o conselho é eleito por ela."
+   ],
+   [
+    "o conselho de administração é responsável apenas pela auditoria das contas da empresa.",
+    "A fiscalização contábil é papel do conselho fiscal e da auditoria; o conselho de administração orienta a estratégia."
+   ]
+  ],
+  "gabarito": "Estrutura de governança de uma S.A.: assembleia geral de acionistas (órgão máximo); conselho de administração (eleito pela assembleia, define a orientação estratégica, elege e fiscaliza a diretoria; obrigatório em companhias abertas); diretoria (executa a gestão); conselho fiscal (fiscaliza as contas e os atos dos administradores). Conselheiros independentes reforçam a proteção dos minoritários.",
+  "dica": "Assembleia → elege o conselho → conselho elege e fiscaliza a diretoria. Conselho fiscal fiscaliza as contas."
+ },
+ {
+  "pd": "2.1.2.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um fundo de crédito privado tem resgate em D+60 e carteira de debêntures de empresas médias. Uma cliente que pode precisar do dinheiro a qualquer momento pergunta a Fernando, profissional CPA, se o fundo é adequado.",
+  "enunciado": "Fernando explica que o fundo:",
+  "certa": "traz risco de crédito e resgate demorado, incompatíveis com a necessidade dela.",
+  "erradas": [
+   [
+    "é adequado, pois fundos de renda fixa têm sempre liquidez diária e risco baixo.",
+    "Prazos de resgate e riscos variam conforme a classe; este tem D+60 e crédito privado."
+   ],
+   [
+    "é adequado, pois a diversificação entre debêntures elimina o risco de crédito.",
+    "A diversificação reduz, mas não elimina, o risco de crédito."
+   ],
+   [
+    "é inadequado apenas porque fundos de crédito privado são proibidos para pessoas físicas.",
+    "Não há proibição; o problema é a incompatibilidade com a necessidade de liquidez."
+   ]
+  ],
+  "gabarito": "Ao avaliar um fundo, consideram-se: política de investimento, público-alvo, composição da carteira, riscos (mercado, crédito, liquidez, concentração), prazos de cotização e liquidação, taxas e tributação. Fundos de crédito privado podem ter maior retorno, mas trazem risco de crédito e, muitas vezes, prazos de resgate longos. Para quem precisa de liquidez imediata, são inadequados.",
+  "dica": "Fundo de crédito privado: risco de crédito + resgate demorado. Não serve para quem precisa de liquidez."
+ },
+ {
+  "pd": "2.1.2.2.11",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um influenciador financeiro passa a vender cotas de fundos diretamente a seguidores, recebendo o dinheiro na própria conta e repassando depois ao administrador. Um cliente pergunta a Celina, profissional CPA, se isso é permitido.",
+  "enunciado": "Celina explica que:",
+  "certa": "não é permitido: distribuir cotas cabe a instituições autorizadas.",
+  "erradas": [
+   [
+    "é permitido, pois qualquer pessoa pode distribuir cotas se tiver muitos seguidores.",
+    "A distribuição de valores mobiliários exige instituição autorizada."
+   ],
+   [
+    "é permitido, desde que o influenciador informe a rentabilidade passada do fundo.",
+    "Informar rentabilidade não regulariza a distribuição."
+   ],
+   [
+    "é permitido, pois as cotas de fundos não são valores mobiliários.",
+    "Cotas de fundos são valores mobiliários."
+   ]
+  ],
+  "gabarito": "A distribuição de cotas de fundos deve ser feita por instituições integrantes do sistema de distribuição de valores mobiliários (bancos, corretoras, distribuidoras), que têm deveres de cadastro, suitability, PLD e transparência. Influenciadores podem produzir conteúdo, mas não podem captar recursos nem intermediar aplicações sem autorização. Receber recursos de terceiros em conta pessoal é forte indício de irregularidade.",
+  "dica": "Distribuir cotas = instituição autorizada. Dinheiro na conta pessoal do vendedor é sinal de fraude."
+ },
+ {
+  "pd": "2.1.2.3.6.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente compara um fundo de renda fixa e um fundo multimercado do mesmo banco e pergunta a Breno, profissional CPA, o que caracteriza o multimercado.",
+  "enunciado": "Breno explica que a classe multimercado:",
+  "certa": "combina vários fatores de risco, sem concentração obrigatória, e pode usar derivativos.",
+  "erradas": [
+   [
+    "deve manter ao menos 80% em títulos públicos e não pode usar derivativos.",
+    "Esses limites não definem o multimercado, que tem maior flexibilidade."
+   ],
+   [
+    "investe apenas em ações de várias empresas e setores, por isso o nome multimercado.",
+    "Fundos com predominância em ações são classificados como de ações."
+   ],
+   [
+    "tem garantia de rentabilidade mínima igual ao CDI, por diversificar os mercados.",
+    "Não há garantia de rentabilidade em fundos multimercado."
+   ]
+  ],
+  "gabarito": "A classe multimercado tem política que envolve vários fatores de risco (juros, inflação, câmbio, ações, commodities), sem compromisso de concentração em nenhum. Pode usar derivativos para proteção ou alavancagem, conforme o regulamento. Costuma ter como referência o CDI e cobrar taxa de performance. A tributação depende do prazo médio da carteira (longo ou curto prazo).",
+  "dica": "Multimercado: vários fatores de risco, sem concentração obrigatória, pode usar derivativos."
+ },
+ {
+  "pd": "2.1.2.3.7",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente recebe a lâmina de um fundo que informa ser uma “classe de investimento em cotas” e pergunta a Laura, profissional CPA, o que isso significa.",
+  "enunciado": "Laura explica que essa classe:",
+  "certa": "aplica a maior parte do patrimônio (no mínimo 95%) em cotas de outros fundos.",
+  "erradas": [
+   [
+    "aplica diretamente em ações e títulos, e as cotas são vendidas somente a outros fundos.",
+    "Isso descreveria um fundo “master”; a classe em cotas investe em outros fundos."
+   ],
+   [
+    "é isenta de taxa de administração, pois os fundos investidos já cobram taxas.",
+    "Pode haver taxas na própria classe e nas classes investidas."
+   ],
+   [
+    "é garantida pelos fundos em que investe, que respondem por eventuais perdas.",
+    "Não há garantia; o investidor corre os riscos das classes investidas."
+   ]
+  ],
+  "gabarito": "Classes de investimento em cotas (os antigos FICs) aplicam, em regra, no mínimo 95% do patrimônio em cotas de outras classes de fundos. Permitem acesso a gestores e estratégias diversas e são comuns em estruturas master-feeder. O investidor deve observar a soma das taxas (da classe e das classes investidas) e os riscos das carteiras investidas.",
+  "dica": "Classe em cotas: pelo menos 95% em cotas de outros fundos. Atenção às taxas somadas."
+ },
+ {
+  "pd": "2.1.4.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Gilberto tem cotas de um FII pouco negociado e precisa vender todas rapidamente. Percebe que só há compradores com preço bem abaixo da última cotação. Pergunta a Liana, profissional CPA, por quê.",
+  "enunciado": "Liana explica que ele enfrenta principalmente o risco de:",
+  "certa": "liquidez, pois o volume de negócios é baixo e vender rápido pode exigir desconto no preço.",
+  "erradas": [
+   [
+    "crédito, pois o administrador do FII deixou de pagar os rendimentos aos cotistas.",
+    "Nada indica falta de pagamento; o problema é a falta de compradores."
+   ],
+   [
+    "vacância, pois o preço da cota depende só da ocupação dos imóveis no dia da venda.",
+    "A vacância afeta o valor, mas a dificuldade de vender rápido é risco de liquidez."
+   ],
+   [
+    "câmbio, pois as cotas de FII são cotadas em dólar na B3.",
+    "Cotas de FII são negociadas em reais."
+   ]
+  ],
+  "gabarito": "FIIs são fundos fechados: não há resgate, e a saída se dá pela venda das cotas na bolsa. Cotas com pouca negociação expõem o investidor ao risco de liquidez: dificuldade de vender a quantidade desejada sem aceitar preços menores. Outros riscos: vacância e inadimplência (tijolo), crédito (papel), juros e concentração de ativos.",
+  "dica": "FII pouco negociado = risco de liquidez: para vender rápido, pode ser preciso aceitar desconto."
+ },
+ {
+  "pd": "2.2.3.4.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao se aposentar, Nair quer receber o saldo do VGBL em 10 anos e garantir que, se morrer antes, os filhos recebam as parcelas restantes. Pergunta a Otto, profissional CPA, qual modalidade escolher.",
+  "enunciado": "Otto indica a renda:",
+  "certa": "por prazo certo, paga por prazo fixo, que segue aos beneficiários se ela falecer antes.",
+  "erradas": [
+   [
+    "temporária, que também garante as parcelas restantes aos filhos se ela falecer.",
+    "A renda temporária cessa com a morte do titular."
+   ],
+   [
+    "vitalícia, que paga por 10 anos e depois devolve o saldo aos filhos.",
+    "A renda vitalícia é paga enquanto o titular viver, sem prazo fixo."
+   ],
+   [
+    "mensal reversível ao cônjuge, que paga aos filhos somente após os 18 anos.",
+    "Essa modalidade não corresponde ao desejo descrito."
+   ]
+  ],
+  "gabarito": "Renda por prazo certo: pagamento mensal por um prazo definido; se o titular falecer antes, os beneficiários recebem até o fim do prazo. Renda temporária: paga por prazo definido, mas apenas enquanto o titular estiver vivo. Renda vitalícia: enquanto o titular viver. Há ainda versões com prazo mínimo garantido e reversíveis.",
+  "dica": "Prazo certo = prazo fixo, continua para os beneficiários. Temporária = prazo fixo, mas acaba com a morte."
+ },
+ {
+  "pd": "2.3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa precisa de um caminhão e recebe três propostas: empréstimo sem destinação, financiamento do veículo e arrendamento mercantil (leasing). O dono pergunta a Beatriz, profissional CPA, a diferença.",
+  "enunciado": "Beatriz explica corretamente que:",
+  "certa": "no leasing o bem é do arrendador até a opção de compra; no financiamento é garantia.",
+  "erradas": [
+   [
+    "no empréstimo o bem financiado fica alienado ao banco, e no financiamento o dinheiro tem uso livre.",
+    "Inverte as definições: o empréstimo tem uso livre; o financiamento tem destinação."
+   ],
+   [
+    "no leasing a empresa é dona do bem desde o início e paga apenas aluguel ao banco.",
+    "No leasing a propriedade é do arrendador até o exercício da opção de compra."
+   ],
+   [
+    "as três modalidades são idênticas e diferem apenas no nome comercial dado pelo banco.",
+    "As modalidades têm naturezas jurídicas e garantias distintas."
+   ]
+  ],
+  "gabarito": "Empréstimo: recursos sem destinação específica (por exemplo, crédito pessoal ou capital de giro). Financiamento: recursos para adquirir um bem ou serviço específico, que normalmente serve de garantia (alienação fiduciária). Arrendamento mercantil (leasing): a instituição (arrendadora) compra o bem e o cede ao cliente (arrendatário) mediante contraprestações, com opção de compra ao final pelo valor residual garantido (VRG).",
+  "dica": "Empréstimo = uso livre. Financiamento = bem específico como garantia. Leasing = bem do arrendador, opção de compra no fim."
+ },
+ {
+  "pd": "2.3.7",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Uma loja de roupas vende a prazo e precisa pagar fornecedores antes de receber dos clientes. A dona pergunta a Fábio, profissional CPA, que tipo de crédito atende a essa necessidade.",
+  "enunciado": "Fábio indica o:",
+  "certa": "capital de giro, que financia necessidades operacionais de curto prazo da empresa.",
+  "erradas": [
+   [
+    "crédito imobiliário, que financia a compra de imóveis residenciais.",
+    "Crédito imobiliário é para imóveis, não para o caixa operacional."
+   ],
+   [
+    "consórcio, que antecipa o recebimento das vendas a prazo da loja.",
+    "Consórcio é autofinanciamento em grupo, com contemplação por sorteio ou lance."
+   ],
+   [
+    "crédito consignado, descontado da folha de pagamento dos funcionários da loja.",
+    "Consignado é crédito à pessoa física com desconto em folha ou benefício."
+   ]
+  ],
+  "gabarito": "Capital de giro é a linha que financia o ciclo operacional da empresa (estoques, fornecedores, salários) enquanto ela aguarda o recebimento das vendas. Pode ter garantias como recebíveis, aval ou aplicações. Alternativas: antecipação de recebíveis (desconto de duplicatas, cartões). Deve ser comparado pelo CET e dimensionado para não comprometer o caixa.",
+  "dica": "Capital de giro = financiar o dia a dia da empresa enquanto as vendas não entram no caixa."
+ },
+ {
+  "pd": "2.4.1.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Paulo esqueceu de pagar um boleto que venceu ontem e acha que só pode pagá-lo no banco emissor. Pergunta a Luíza, profissional CPA.",
+  "enunciado": "Luíza explica que:",
+  "certa": "boletos vencidos podem ser pagos em qualquer banco, com juros e multa calculados automaticamente.",
+  "erradas": [
+   [
+    "boletos vencidos só podem ser pagos no banco emissor, com valores calculados pelo atendente.",
+    "Desde a nova plataforma de cobrança, boletos vencidos podem ser pagos em qualquer banco."
+   ],
+   [
+    "boletos vencidos são cancelados automaticamente e precisam ser reemitidos pelo cedente.",
+    "O boleto vencido continua válido até a data-limite definida pelo emissor."
+   ],
+   [
+    "boletos vencidos só podem ser pagos via Pix, sem cobrança de multa.",
+    "O pagamento pode ser feito por vários canais, e multa e juros seguem o boleto."
+   ]
+  ],
+  "gabarito": "Com a Nova Plataforma de Cobrança, os boletos são registrados em base centralizada, o que permite pagar boletos vencidos em qualquer instituição, com cálculo automático de juros e multa, até a data-limite definida pelo emissor. Também existe o DDA (Débito Direto Autorizado), que mostra ao pagador os boletos emitidos em seu CPF.",
+  "dica": "Boleto vencido: paga em qualquer banco, com multa e juros calculados automaticamente."
+ },
+ {
+  "pd": "2.5.1.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Seu Jorge, 65 anos, tem patrimônio relevante em imóveis e teme que os filhos não tenham dinheiro para pagar os custos do inventário e o imposto sobre herança. Pergunta a Valéria, profissional CPA, se algum seguro ajuda.",
+  "enunciado": "Valéria indica o seguro de vida:",
+  "certa": "inteira, que paga indenização aos beneficiários e dá liquidez à sucessão.",
+  "erradas": [
+   [
+    "temporário de 1 ano, que tem prêmio menor e cobre a sucessão a qualquer tempo.",
+    "O temporário cobre só o prazo contratado; a sucessão pode ocorrer depois."
+   ],
+   [
+    "prestamista, que paga diretamente ao inventariante os custos do processo de inventário.",
+    "O prestamista quita dívidas com o credor, não custos de inventário."
+   ],
+   [
+    "residencial, que indeniza os herdeiros pelo valor dos imóveis do segurado.",
+    "O seguro residencial cobre danos ao imóvel, não a sucessão."
+   ]
+  ],
+  "gabarito": "O seguro de vida inteira tem cobertura vitalícia, com prêmio maior, e é usado no planejamento sucessório: a indenização é paga diretamente aos beneficiários indicados, em geral com rapidez e sem passar pelo inventário, o que dá liquidez para custos de inventário e impostos (ITCMD). O seguro de vida temporário cobre só o prazo contratado. O tradicional pode combinar características com acumulação.",
+  "dica": "Vida inteira: cobertura vitalícia, liquidez para a sucessão, paga direto aos beneficiários."
+ },
+ {
+  "pd": "2.3.5.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Rodrigo e o carro novo",
+  "etapa": "1/3",
+  "contexto": "Rodrigo vai comprar um carro de R$ 80 mil, com R$ 20 mil de entrada, e recebe a proposta de CDC na concessionária. Ele pergunta a Mirna, profissional CPA, o que acontece com o carro durante o financiamento.",
+  "enunciado": "Mirna explica que, no CDC com alienação fiduciária:",
+  "certa": "Rodrigo usa o carro, mas a propriedade fica com o financiador até a quitação.",
+  "erradas": [
+   [
+    "o carro fica guardado na concessionária até o pagamento da última parcela.",
+    "Na alienação fiduciária o cliente usa o bem; a garantia é a propriedade fiduciária."
+   ],
+   [
+    "o carro é de Rodrigo desde o início, e o banco não pode retomá-lo em caso de atraso.",
+    "Em caso de inadimplência, o credor pode retomar o bem conforme a lei."
+   ],
+   [
+    "o banco pode vender o carro a qualquer momento, mesmo com as parcelas em dia.",
+    "Com o contrato em dia, o credor não pode dispor do bem."
+   ]
+  ],
+  "gabarito": "O Crédito Direto ao Consumidor (CDC) financia bens e serviços, em geral com o próprio bem como garantia por alienação fiduciária: o devedor tem a posse e usa o bem, mas a propriedade fica com o credor até a quitação. A garantia reduz o risco e permite juros menores e prazos maiores que o crédito pessoal. Em inadimplência, o credor pode buscar o bem.",
+  "dica": "CDC com alienação fiduciária: o cliente usa, o banco é dono até a quitação."
+ },
+ {
+  "pd": "2.3.1.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Rodrigo e o carro novo",
+  "etapa": "2/3",
+  "contexto": "Ao analisar o pedido, o banco consulta o histórico de dívidas de Rodrigo em todas as instituições financeiras e comprova sua renda. Ele pergunta a Mirna como o banco sabe das dívidas em outros bancos.",
+  "enunciado": "Mirna explica que o banco consultou, com autorização de Rodrigo:",
+  "certa": "o SCR, do Banco Central, que reúne as dívidas de cada cliente.",
+  "erradas": [
+   [
+    "o Selic, que registra as operações de crédito das pessoas físicas.",
+    "O Selic registra títulos públicos federais; as operações de crédito ficam no SCR."
+   ],
+   [
+    "a Receita Federal, que informa o saldo devedor de cada cliente aos bancos.",
+    "A Receita não informa dívidas bancárias às instituições."
+   ],
+   [
+    "o FGC, que mantém o cadastro das dívidas dos clientes de todos os bancos.",
+    "O FGC garante depósitos; não mantém cadastro de dívidas."
+   ]
+  ],
+  "gabarito": "O SCR (Sistema de Informações de Créditos), administrado pelo Banco Central, reúne informações sobre operações de crédito de clientes no sistema financeiro. Com autorização do cliente, as instituições consultam o SCR para avaliar risco. O cliente pode consultar seus dados no Registrato. Além do SCR, os bancos usam score de birôs de crédito, comprovação de renda e rating interno para conceder crédito.",
+  "dica": "SCR = cadastro de dívidas no sistema financeiro (BC). O cliente consulta pelo Registrato."
+ },
+ {
+  "pd": "2.5.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Rodrigo e o carro novo",
+  "etapa": "3/3",
+  "contexto": "Com o carro, Rodrigo contrata seguro. Na renovação, um ano depois e sem sinistros, o prêmio cai. Ele pergunta a Mirna o motivo.",
+  "enunciado": "Mirna explica que a redução se deve:",
+  "certa": "à classe de bônus, desconto progressivo na renovação para quem não teve sinistros.",
+  "erradas": [
+   [
+    "à franquia, que é devolvida ao segurado quando não há sinistros no ano.",
+    "A franquia não é devolvida; é a participação do segurado em sinistros."
+   ],
+   [
+    "à portabilidade, que transfere o seguro para a seguradora mais barata automaticamente.",
+    "Não há portabilidade automática de seguro de automóvel."
+   ],
+   [
+    "à carência, que reduz o prêmio após o primeiro ano de contrato.",
+    "Carência é prazo sem cobertura; não reduz o prêmio."
+   ]
+  ],
+  "gabarito": "No seguro de automóvel, o bônus é o desconto concedido na renovação ao segurado que não teve sinistros indenizados, crescendo a cada ano sem sinistro (classes de bônus). O preço também depende do perfil do condutor, região, uso, modelo e franquia escolhida. Sinistros reduzem a classe de bônus.",
+  "dica": "Sem sinistro, o bônus aumenta e o seguro fica mais barato na renovação."
+ }
+]
