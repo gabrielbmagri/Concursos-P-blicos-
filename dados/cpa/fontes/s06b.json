@@ -1,0 +1,538 @@
+[
+ {
+  "pd": "2.1.4.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um FII tem valor patrimonial de R$ 100 por cota, mas suas cotas são negociadas na B3 a R$ 85. Um cliente pergunta a Vânia, profissional CPA, como isso é possível e se o fundo está “barato”.",
+  "enunciado": "Vânia explica que:",
+  "certa": "o preço em bolsa reflete oferta, demanda e expectativas e pode ficar abaixo do valor patrimonial.",
+  "erradas": [
+   [
+    "o preço em bolsa é sempre igual ao valor patrimonial, e a diferença indica erro de cálculo.",
+    "A cotação de mercado pode divergir do valor patrimonial."
+   ],
+   [
+    "o administrador é obrigado a recomprar as cotas pelo valor patrimonial a qualquer momento.",
+    "FIIs são fechados; não há recompra obrigatória pelo valor patrimonial."
+   ],
+   [
+    "a diferença garante ao comprador um ganho de 15% quando o fundo for liquidado.",
+    "Não há garantia: o desconto pode refletir riscos, e o valor dos imóveis pode mudar."
+   ]
+  ],
+  "gabarito": "Cotas de FII são negociadas em bolsa, e o preço depende de oferta, demanda, juros, percepção de risco (vacância, crédito, qualidade dos imóveis) e liquidez. O valor patrimonial resulta das avaliações dos ativos. A relação preço/valor patrimonial (P/VP) abaixo de 1 indica desconto, mas não necessariamente oportunidade: o mercado pode estar precificando riscos.",
+  "dica": "FII: cotação em bolsa pode ser diferente do valor patrimonial (P/VP). Desconto não é garantia de ganho."
+ },
+ {
+  "pd": "2.1.1.4.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente quer entender como um banco consegue oferecer um COE que devolve 100% do capital e ainda paga parte da alta da bolsa. Pergunta a Flávio, profissional CPA, sobre a estrutura do produto.",
+  "enunciado": "Flávio explica que, de forma simplificada, o COE de capital protegido:",
+  "certa": "usa renda fixa para proteger o capital e opções para buscar o ganho.",
+  "erradas": [
+   [
+    "investe todo o capital em ações e conta com o FGC para devolver eventuais perdas.",
+    "O COE não tem FGC; a proteção vem da estrutura com renda fixa."
+   ],
+   [
+    "aplica o capital em poupança, e o ganho extra vem de sorteios mensais.",
+    "Sorteios são de títulos de capitalização."
+   ],
+   [
+    "é um fundo de investimento multimercado, regulado como as classes de FIF.",
+    "O COE é um certificado emitido por banco, não um fundo."
+   ]
+  ],
+  "gabarito": "De forma simplificada, o COE de capital protegido usa a maior parte do valor para garantir, com renda fixa do emissor, o retorno do capital no vencimento, e a parte restante compra derivativos (opções) que geram o ganho ligado ao ativo de referência. O investidor fica exposto ao risco de crédito do emissor (sem FGC), ao de liquidez e ao de mercado da parte variável.",
+  "dica": "COE protegido = renda fixa (protege o capital) + opções (busca o ganho). Risco do banco emissor."
+ },
+ {
+  "pd": "3.4.4.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Reclamação da Sra. Lúcia",
+  "etapa": "1/4",
+  "contexto": "A Sra. Lúcia procura a agência porque o resgate que pediu na segunda-feira não foi feito: uma falha no sistema de agendamentos impediu o processamento, e ela perdeu o prazo de um pagamento importante. Mário, profissional CPA, investiga.",
+  "enunciado": "O evento descrito é um exemplo de risco:",
+  "certa": "operacional, por perda decorrente de falha de sistema ou processo interno.",
+  "erradas": [
+   [
+    "de mercado, por perda causada pela oscilação de preços dos ativos.",
+    "Não houve variação de preços; houve falha interna."
+   ],
+   [
+    "de crédito, por inadimplência do emissor dos títulos da cliente.",
+    "Não houve inadimplência de emissor."
+   ],
+   [
+    "de liquidez de mercado, por falta de compradores para o ativo da cliente.",
+    "O ativo tinha liquidez; o resgate falhou por problema de sistema."
+   ]
+  ],
+  "gabarito": "Risco operacional é a possibilidade de perdas decorrentes de falhas, deficiências ou inadequação de processos internos, pessoas e sistemas, ou de eventos externos (fraudes, desastres). Inclui o risco legal associado. As instituições devem ter estrutura de gerenciamento desse risco, com controles, planos de contingência e registro de perdas.",
+  "dica": "Risco operacional: falha de pessoas, processos, sistemas ou eventos externos."
+ },
+ {
+  "pd": "3.4.3.2",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Reclamação da Sra. Lúcia",
+  "etapa": "2/4",
+  "contexto": "Mário confirma que o erro foi da instituição. A Sra. Lúcia está muito irritada e pede uma explicação.",
+  "enunciado": "A conduta ética e responsável de Mário é:",
+  "certa": "reconhecer o erro, explicar com transparência e encaminhar a solução.",
+  "erradas": [
+   [
+    "atribuir a falha à cliente, alegando que ela deveria ter conferido o resgate.",
+    "Transferir a culpa ao cliente fere a ética e a transparência."
+   ],
+   [
+    "prometer, por conta própria, uma compensação financeira sem consultar a instituição.",
+    "Promessas sem respaldo podem gerar novos problemas; a solução deve seguir os canais formais."
+   ],
+   [
+    "orientar a cliente a esquecer o assunto, pois falhas de sistema não geram direito de reparação.",
+    "A instituição responde por falhas na prestação de serviços."
+   ]
+  ],
+  "gabarito": "Ética e responsabilidade no atendimento envolvem honestidade, transparência e foco no interesse do cliente: reconhecer falhas da instituição, explicar com clareza, registrar a ocorrência e encaminhar a solução pelos canais adequados (atendimento, SAC, ouvidoria). Isso reduz os riscos legal e de imagem e preserva a confiança.",
+  "dica": "Erro da instituição: reconhecer, explicar com transparência e encaminhar a solução formal."
+ },
+ {
+  "pd": "3.4.2.4",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Reclamação da Sra. Lúcia",
+  "etapa": "3/4",
+  "contexto": "Ao revisar o histórico, Mário descobre que, meses antes, um colega vendeu à Sra. Lúcia, de perfil conservador, um COE de capital em risco, sem alerta de desenquadramento nem declaração da cliente.",
+  "enunciado": "Essa venda:",
+  "certa": "descumpriu o suitability: produto inadequado, sem alerta nem declaração.",
+  "erradas": [
+   [
+    "foi regular, pois a cliente assinou o contrato do COE e aceitou as condições.",
+    "Assinar o contrato não supre o alerta e a declaração de ciência exigidos."
+   ],
+   [
+    "foi regular, pois o COE é emitido por banco e, por isso, é adequado a qualquer perfil.",
+    "O COE de capital em risco pode ser inadequado a conservadores."
+   ],
+   [
+    "só seria irregular se o COE tivesse gerado prejuízo à cliente.",
+    "A irregularidade está no processo de venda, independentemente do resultado."
+   ]
+  ],
+  "gabarito": "Pela CVM 30 e pelo código Anbima, é vedado recomendar produtos inadequados ao perfil. Se o cliente quiser investir por iniciativa própria em produto inadequado, a instituição deve alertá-lo antes da operação e obter declaração expressa de ciência do desenquadramento. Vender sem esse processo é infração, mesmo sem prejuízo, e expõe a instituição a sanções e ressarcimentos.",
+  "dica": "Produto fora do perfil sem alerta e declaração = venda irregular, com ou sem prejuízo."
+ },
+ {
+  "pd": "3.4.4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Reclamação da Sra. Lúcia",
+  "etapa": "4/4",
+  "contexto": "A Sra. Lúcia decide entrar com ação judicial pedindo indenização pela venda inadequada e pela falha no resgate. A diretoria quer classificar esse risco.",
+  "enunciado": "A possibilidade de perdas com a ação judicial é classificada como risco:",
+  "certa": "legal, ligado a processos, contratos e obrigações perante clientes.",
+  "erradas": [
+   [
+    "de mercado, pois a indenização depende da variação dos índices da bolsa.",
+    "Indenização judicial não é risco de mercado."
+   ],
+   [
+    "de crédito, pois a cliente pode deixar de pagar suas dívidas com o banco.",
+    "Não se trata de inadimplência da cliente."
+   ],
+   [
+    "sistêmico, pois uma ação judicial pode quebrar todo o sistema financeiro.",
+    "Risco sistêmico é o contágio entre instituições."
+   ]
+  ],
+  "gabarito": "Risco legal é a possibilidade de perdas por processos judiciais ou administrativos, contratos inadequados, descumprimento de obrigações e mudanças na interpretação de leis. Costuma andar junto com os riscos regulatório (sanções de reguladores), de imagem (reputação) e operacional (falhas que geram as ações).",
+  "dica": "Processo judicial e problema em contrato = risco legal."
+ },
+ {
+  "pd": "3.1.2.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Lucas, 25 anos, acabou de ser efetivado no primeiro emprego, mora com os pais e não tem patrimônio. Ele pergunta a Bruna, profissional CPA, em que fase do ciclo de vida financeiro está.",
+  "enunciado": "Bruna explica que Lucas está na fase de:",
+  "certa": "acumulação, focada em criar o hábito de poupar, formar reserva e começar a investir.",
+  "erradas": [
+   [
+    "preservação de capital, pois deve evitar qualquer risco até ter patrimônio relevante.",
+    "Preservação vem perto da aposentadoria, quando já há patrimônio."
+   ],
+   [
+    "distribuição, pois deve usar a renda atual para ajudar a família.",
+    "Distribuição é a fase de usar o patrimônio acumulado e planejar a sucessão."
+   ],
+   [
+    "crescimento patrimonial, pois já tem patrimônio relevante para diversificar.",
+    "Ele ainda está começando a formar patrimônio."
+   ]
+  ],
+  "gabarito": "Na acumulação (início da carreira), o foco é organizar o orçamento, formar a reserva de emergência e começar a investir com regularidade. O longo horizonte permite assumir mais risco em parte dos recursos. Depois vêm o crescimento patrimonial, a preservação e a distribuição.",
+  "dica": "Acumulação: início da carreira, reserva e hábito de investir."
+ },
+ {
+  "pd": "3.1.5.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Dois clientes de 40 anos procuram Carla, profissional CPA. Júlia é solteira, sem dívidas e com renda alta; Marcos tem três filhos, financiamento imobiliário e é o único provedor da casa.",
+  "enunciado": "Carla explica que, no planejamento, a definição do momento de vida e financeiro mostra que:",
+  "certa": "Marcos tem mais compromissos e deve priorizar proteção e liquidez.",
+  "erradas": [
+   [
+    "os dois devem ter o mesmo planejamento, pois a idade define o momento de vida.",
+    "A idade não basta: família, dívidas e renda mudam o momento financeiro."
+   ],
+   [
+    "Marcos deve assumir mais risco que Júlia para compensar as despesas maiores.",
+    "Mais compromissos tendem a reduzir a capacidade de assumir risco."
+   ],
+   [
+    "Júlia não precisa de planejamento, pois não tem dependentes nem dívidas.",
+    "Todos se beneficiam de planejamento, com prioridades diferentes."
+   ]
+  ],
+  "gabarito": "O momento de vida e financeiro considera idade, estado civil, dependentes, renda e estabilidade, dívidas, patrimônio e objetivos. Pessoas da mesma idade podem estar em momentos muito diferentes. Quem tem dependentes e dívidas precisa priorizar reserva, seguros e liquidez; quem tem mais folga pode buscar crescimento com mais risco.",
+  "dica": "Momento financeiro ≠ idade: considere dependentes, dívidas, renda e objetivos."
+ },
+ {
+  "pd": "3.1.6.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Rogério, que contribui para o INSS e declara no modelo completo, teve renda bruta tributável de R$ 100.000 no ano e contribuiu R$ 15.000 para um PGBL. Pergunta a Mirela, profissional CPA, quanto pode deduzir.",
+  "enunciado": "Mirela explica que ele pode deduzir:",
+  "certa": "R$ 12.000, limite de 12% da renda bruta tributável.",
+  "erradas": [
+   [
+    "R$ 15.000, todo o valor contribuído no ano.",
+    "A dedução é limitada a 12% da renda bruta tributável."
+   ],
+   [
+    "R$ 10.000, limite fixo para qualquer contribuinte.",
+    "O limite é proporcional à renda (12%), não um valor fixo."
+   ],
+   [
+    "nada, pois a contribuição passou do limite e perdeu o benefício.",
+    "Ele deduz até o limite; só o excedente fica sem dedução."
+   ]
+  ],
+  "gabarito": "No modelo completo, contribuições a PGBL (e outros planos dedutíveis) podem ser deduzidas até 12% da renda bruta tributável anual, desde que o contribuinte também contribua para o regime oficial (INSS ou regime próprio). Aqui: 12% × 100.000 = R$ 12.000. O excedente (R$ 3.000) não é deduzido, mas também será tributado no resgate. Para valores acima do limite, o VGBL costuma ser mais indicado.",
+  "dica": "PGBL: deduz até 12% da renda bruta tributável. O que passa disso pode ir para VGBL."
+ },
+ {
+  "pd": "3.3.4",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Ana tem uma carteira com ações de três bancos. Ela acredita que está diversificada e pergunta a Leonardo, profissional CPA, se a diversificação é eficiente.",
+  "enunciado": "Leonardo explica que a diversificação de Ana é pouco eficiente porque:",
+  "certa": "são do mesmo setor e se movem juntos (correlação alta).",
+  "erradas": [
+   [
+    "três ativos já são suficientes para eliminar o risco específico de qualquer carteira.",
+    "O número de ativos importa menos que a correlação entre eles."
+   ],
+   [
+    "ações de bancos não oscilam, pois os bancos são regulados pelo Banco Central.",
+    "Ações de bancos oscilam como quaisquer ações."
+   ],
+   [
+    "a diversificação só é eficiente com ativos que tenham a mesma rentabilidade esperada.",
+    "A eficiência depende da correlação, não de retornos iguais."
+   ]
+  ],
+  "gabarito": "A diversificação reduz o risco quando os ativos têm baixa correlação, isto é, não se movem sempre na mesma direção. Ativos do mesmo setor costumam reagir aos mesmos fatores e têm correlação alta. Diversificar entre setores, classes de ativos (renda fixa, ações, imóveis), indexadores e geografias reduz mais o risco total.",
+  "dica": "Diversificar bem = ativos com baixa correlação (setores e classes diferentes)."
+ },
+ {
+  "pd": "3.4.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento, o instrutor pergunta a Bruno, profissional CPA, quais valores orientam o Código de Conduta Ética das Certificações Anbima.",
+  "enunciado": "Bruno responde corretamente que, entre os princípios do código, estão:",
+  "certa": "integridade, transparência, diligência e lealdade aos clientes.",
+  "erradas": [
+   [
+    "lucratividade máxima, sigilo das metas comerciais e prioridade aos produtos da casa.",
+    "Esses não são princípios éticos; podem até gerar conflitos com o cliente."
+   ],
+   [
+    "rentabilidade garantida, agilidade nas vendas e confidencialidade das taxas.",
+    "Prometer rentabilidade e esconder taxas contraria o código."
+   ],
+   [
+    "neutralidade política, igualdade salarial e estabilidade no emprego.",
+    "Esses temas não são os princípios éticos do código."
+   ]
+  ],
+  "gabarito": "O Código de Conduta Ética das Certificações Anbima reúne princípios que orientam candidatos e profissionais, como integridade, transparência, diligência, lealdade, responsabilidade, ética, conhecimento técnico, respeito e independência. Na prática: colocar o interesse do cliente em primeiro lugar, informar com clareza, evitar conflitos de interesses e cumprir as normas.",
+  "dica": "Ética Anbima: integridade, transparência, diligência e lealdade ao cliente."
+ },
+ {
+  "pd": "3.4.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma instituição deixou de monitorar e comunicar operações atípicas por dois anos. O regulador abriu processo administrativo com base na Lei 9.613/1998. Um colaborador pergunta a Suzana, profissional CPA, que sanções podem ser aplicadas.",
+  "enunciado": "Suzana explica que, na esfera administrativa, a lei prevê:",
+  "certa": "advertência, multa, inabilitação de administradores e cassação.",
+  "erradas": [
+   [
+    "apenas advertência verbal, pois a falha de comunicação não é considerada grave.",
+    "A lei prevê sanções graduais, inclusive multa e cassação."
+   ],
+   [
+    "prisão automática de todos os funcionários da instituição.",
+    "Sanções administrativas não incluem prisão; crimes são apurados em outra esfera."
+   ],
+   [
+    "nenhuma sanção, se a instituição não tiver participado da lavagem.",
+    "A falha nos deveres de prevenção é punível por si só."
+   ]
+  ],
+  "gabarito": "A Lei 9.613/1998 obriga as pessoas sujeitas (instituições financeiras e outros setores) a identificar clientes, manter registros, monitorar e comunicar operações suspeitas. O descumprimento sujeita a instituição e seus administradores a sanções administrativas: advertência, multa, inabilitação temporária para cargos de administração e cassação ou suspensão da autorização. A responsabilidade penal pelo crime de lavagem é apurada separadamente.",
+  "dica": "Falha de PLD: advertência, multa, inabilitação de administradores e cassação, mesmo sem participar da lavagem."
+ },
+ {
+  "pd": "3.4.5.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um novo colaborador acha que o cadastro detalhado dos clientes é “burocracia que atrapalha as vendas”. Pergunta a Henrique, profissional CPA, por que tantas informações.",
+  "enunciado": "Henrique explica que o princípio “conheça seu cliente”:",
+  "certa": "protege a instituição e o profissional e revela operações incompatíveis.",
+  "erradas": [
+   [
+    "serve apenas para fins de marketing, oferecendo mais produtos aos clientes.",
+    "O KYC é exigência de PLD e de adequação, não ferramenta de marketing."
+   ],
+   [
+    "é opcional para clientes de baixa renda, que estão dispensados da regulação.",
+    "Todo cliente deve ser identificado e qualificado, com abordagem baseada em risco."
+   ],
+   [
+    "transfere toda a responsabilidade por lavagem de dinheiro ao cliente.",
+    "Ele não transfere responsabilidade; demonstra a diligência da instituição."
+   ]
+  ],
+  "gabarito": "O “conheça seu cliente” (KYC) exige identificar e qualificar o cliente (renda, patrimônio, atividade, origem dos recursos), mantê-lo atualizado e monitorar a compatibilidade das operações. Protege a instituição e o profissional, que comprovam diligência, e permite detectar lavagem, fraudes e financiamento do terrorismo. Cadastro desatualizado é falha de controle.",
+  "dica": "KYC protege a instituição e o profissional: mostra diligência e revela operações incompatíveis."
+ },
+ {
+  "pd": "3.4.6.8",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um cliente cadastrado como estudante, com renda de R$ 2.000, passa a receber transferências de dezenas de pessoas diferentes, que são sacadas no mesmo dia. Ele se recusa a explicar a origem.",
+  "enunciado": "Essa situação caracteriza:",
+  "certa": "indícios de suspeita: renda incompatível, saques imediatos e recusa.",
+  "erradas": [
+   [
+    "movimentação normal, pois estudantes costumam receber ajuda de muitos parentes.",
+    "A combinação de fatores foge do padrão e deve ser analisada."
+   ],
+   [
+    "operação suspeita apenas se o valor total passar de R$ 1 milhão no mês.",
+    "Não há valor mínimo para caracterizar suspeita; importa a atipicidade."
+   ],
+   [
+    "infração de trânsito financeiro, comunicada apenas à Receita Federal.",
+    "Indícios de lavagem são analisados e comunicados ao COAF."
+   ]
+  ],
+  "gabarito": "Caracterizam indícios de operação suspeita, entre outros: movimentação incompatível com renda, patrimônio ou atividade; uso da conta como passagem (recebe e transfere ou saca rapidamente); fracionamento; recusa ou dificuldade de informar a origem dos recursos; operações sem fundamento econômico. Após análise, a instituição comunica ao COAF, sem avisar o cliente.",
+  "dica": "Incompatível com a renda + conta de passagem + recusa de explicar = indício de operação suspeita."
+ },
+ {
+  "pd": "3.4.7.1.2.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "O diretor financeiro de uma companhia aberta sabe que o lucro do trimestre será muito abaixo do esperado. Antes da divulgação, vende todas as suas ações da empresa.",
+  "enunciado": "A conduta caracteriza:",
+  "certa": "insider trading primário, pois quem negocia tem acesso direto à informação pelo cargo.",
+  "erradas": [
+   [
+    "insider trading secundário, pois o diretor recebeu a informação de terceiros.",
+    "O diretor teve acesso direto, pelo cargo: é insider primário."
+   ],
+   [
+    "front running, pois ele vendeu antes das ordens dos clientes da empresa.",
+    "Front running envolve ordens de clientes de intermediários."
+   ],
+   [
+    "conduta lícita, pois o diretor pode vender suas ações a qualquer momento.",
+    "Negociar com informação relevante não divulgada é proibido."
+   ]
+  ],
+  "gabarito": "Insider primário: pessoas com acesso direto à informação relevante em razão do cargo ou da função (administradores, controladores, conselheiros, funcionários). Insider secundário: quem recebe a informação de um insider primário. Ambos cometem o ilícito ao negociar antes da divulgação. Administradores ainda têm períodos de vedação (por exemplo, antes da divulgação de resultados).",
+  "dica": "Insider primário = acesso direto pelo cargo. Secundário = recebeu de quem tinha acesso."
+ },
+ {
+  "pd": "3.4.7.2.2.1.2",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Dois investidores ligados combinam operações em que um compra de outro um ativo ilíquido a preços sem justificativa econômica, transferindo recursos de uma conta para a outra de forma disfarçada.",
+  "enunciado": "Pela Resolução CVM 62, a prática é conhecida como:",
+  "certa": "money pass: negócios artificiais para transferir recursos.",
+  "erradas": [
+   [
+    "spoofing, inserção de ofertas sem intenção de execução para mover o preço.",
+    "Aqui os negócios são executados para transferir recursos."
+   ],
+   [
+    "churning, giro excessivo da carteira de um cliente para gerar corretagem.",
+    "Não se trata de giro em benefício de intermediário."
+   ],
+   [
+    "tag along, venda de ações nas mesmas condições do controlador.",
+    "Tag along é direito de minoritários, não ilícito."
+   ]
+  ],
+  "gabarito": "Money pass é a realização de operações em que comitentes ligados transferem recursos entre si por meio de negócios com preços fora do padrão de mercado, sem justificativa econômica. É criação de condições artificiais de demanda, oferta ou preço (Resolução CVM 62) e pode servir para lavagem de dinheiro ou fraude tributária.",
+  "dica": "Money pass: negócios artificiais para passar dinheiro de uma conta para outra."
+ },
+ {
+  "pd": "3.4.3.1.2",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Dois clientes perguntam a Gisele, profissional CPA, sobre o mesmo fundo: um engenheiro aposentado, que conhece bem o mercado, e uma jovem que nunca investiu.",
+  "enunciado": "Pela técnica de personalização do atendimento, Gisele deve:",
+  "certa": "adaptar linguagem, profundidade e exemplos ao conhecimento e aos objetivos de cada um.",
+  "erradas": [
+   [
+    "dar exatamente a mesma explicação aos dois, para garantir tratamento igual.",
+    "Tratamento equitativo não significa explicação idêntica; a comunicação deve ser compreensível a cada um."
+   ],
+   [
+    "explicar apenas ao engenheiro, pois a jovem não teria interesse no tema.",
+    "Todos os clientes devem ser bem informados."
+   ],
+   [
+    "usar só termos técnicos, para demonstrar conhecimento e transmitir confiança.",
+    "Termos técnicos sem explicação prejudicam o entendimento."
+   ]
+  ],
+  "gabarito": "Personalizar o atendimento é adaptar a comunicação e as soluções ao perfil, ao conhecimento, aos objetivos e às necessidades de cada cliente, mantendo a mesma qualidade e transparência para todos. Junto com a escuta ativa, a solução proativa, a educação continuada e o gerenciamento de expectativas, fortalece a relação e a adequação das recomendações.",
+  "dica": "Personalizar: mesma qualidade para todos, linguagem e exemplos ajustados a cada cliente."
+ },
+ {
+  "pd": "4.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente conservador acha que considerar ESG nos investimentos é “só marketing” e não tem relação com retorno financeiro. Pergunta a Paulo, profissional CPA.",
+  "enunciado": "Paulo explica que a relação entre ESG e finanças está em que:",
+  "certa": "fatores ESG geram riscos e oportunidades que afetam os resultados.",
+  "erradas": [
+   [
+    "empresas com boas práticas ESG têm rentabilidade garantida pela regulação.",
+    "Não há garantia de rentabilidade."
+   ],
+   [
+    "ESG não tem relação com risco, apenas com preferências éticas dos investidores.",
+    "Fatores ESG podem ter impacto financeiro relevante."
+   ],
+   [
+    "investimentos ESG são isentos de IR, o que compensa eventual retorno menor.",
+    "Não há isenção fiscal geral para investimentos ESG."
+   ]
+  ],
+  "gabarito": "ESG e finanças: fatores ambientais (multas, transição climática), sociais (litígios trabalhistas, relação com consumidores) e de governança (fraudes, conflitos) podem afetar fluxos de caixa, custo de capital, reputação e valor das empresas. Por isso são incorporados à análise de risco e retorno. Isso não garante desempenho superior, mas melhora a avaliação dos riscos.",
+  "dica": "ESG = riscos e oportunidades com impacto financeiro. Não é garantia de retorno."
+ },
+ {
+  "pd": "4.2.6.2.1.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor quer lançar uma classe de fundo com o termo “ESG” no nome, mas sem descrever como os critérios serão aplicados. Ele pergunta a Mirela, profissional CPA, se há regra a cumprir.",
+  "enunciado": "Mirela explica que, pela CVM 175 (art. 49), a classe que se diga sustentável ou ESG deve:",
+  "certa": "descrever no regulamento a metodologia, os critérios e os indicadores.",
+  "erradas": [
+   [
+    "obter certificado da Anbima antes de usar qualquer termo relacionado a ESG.",
+    "A exigência da CVM é de transparência no regulamento."
+   ],
+   [
+    "investir apenas em títulos verdes emitidos pelo Tesouro Nacional.",
+    "Não há essa restrição de carteira."
+   ],
+   [
+    "dispensar a divulgação de critérios, pois ESG é estratégia confidencial do gestor.",
+    "A regra exige transparência sobre a metodologia."
+   ]
+  ],
+  "gabarito": "A CVM 175 exige que classes que usam termos de sustentabilidade (ESG, ASG, sustentável, verde) ou que buscam benefícios socioambientais descrevam no regulamento a metodologia, os critérios, os indicadores e, quando houver, a certificação ou o parecer de terceiros, além de informar periodicamente os resultados. A autorregulação da Anbima traz regras adicionais, como a identificação dos fundos IS.",
+  "dica": "Fundo que se diz ESG: metodologia, critérios e indicadores no regulamento (CVM 175, art. 49)."
+ },
+ {
+  "pd": "4.4.3.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente quer tomar emprestado stablecoins em um protocolo DeFi e descobre que precisa depositar em garantia criptoativos de valor bem maior que o empréstimo. Pergunta a Rafael, profissional CPA, por quê.",
+  "enunciado": "Rafael explica que essa exigência é:",
+  "certa": "sobrecolateralização, que compensa a volatilidade da garantia.",
+  "erradas": [
+   [
+    "uma taxa de administração cobrada pelo Banco Central sobre empréstimos em DeFi.",
+    "O BC não cobra taxas em protocolos DeFi."
+   ],
+   [
+    "um depósito compulsório, que o protocolo repassa ao governo.",
+    "Compulsório é instrumento do BC sobre bancos."
+   ],
+   [
+    "uma garantia do FGC, que exige depósito para cobrir o empréstimo.",
+    "Não há FGC em DeFi."
+   ]
+  ],
+  "gabarito": "Em empréstimos DeFi, contratos inteligentes executam as regras: como não há análise de crédito tradicional e as garantias são voláteis, exige-se depósito de garantia superior ao valor emprestado (sobrecolateralização). Se o valor da garantia cair abaixo de certo nível, o contrato a liquida automaticamente. Riscos: volatilidade, liquidação, falhas de código e dados externos (oráculos).",
+  "dica": "Empréstimo DeFi: garantia maior que a dívida e liquidação automática se a garantia cair."
+ },
+ {
+  "pd": "4.5.1.1.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Taís, recém-formada, tem pouco histórico de crédito e recebeu limites baixos. Uma fintech propõe analisar seu histórico de conta e pagamentos em outros bancos para oferecer condições melhores. Ela pergunta a Diogo, profissional CPA.",
+  "enunciado": "Diogo explica que, no Open Finance:",
+  "certa": "dados consentidos podem melhorar o score de bom pagador sem histórico.",
+  "erradas": [
+   [
+    "o compartilhamento sempre reduz o score, pois expõe todas as dívidas do cliente.",
+    "Dados de bom comportamento podem melhorar a avaliação."
+   ],
+   [
+    "a fintech pode acessar os dados sem consentimento, pois a lei dispensa autorização.",
+    "O compartilhamento depende de consentimento."
+   ],
+   [
+    "o score passa a ser definido pelo Banco Central para todos os clientes.",
+    "Cada instituição tem seus modelos de crédito."
+   ]
+  ],
+  "gabarito": "Credit score é a pontuação que estima a probabilidade de um cliente pagar em dia. Com o Open Finance, o cliente pode compartilhar, com consentimento, dados de outras instituições (renda, movimentação, pagamentos), o que ajuda quem tem pouco histórico ou é bom pagador a obter melhores condições. Vantagens: concorrência e crédito mais adequado; cuidados: segurança e escolha consciente do que compartilhar.",
+  "dica": "Open Finance pode melhorar o score de bom pagador com pouco histórico, sempre com consentimento."
+ },
+ {
+  "pd": "4.6.3.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "O banco de Rita lançou um assistente virtual no aplicativo que responde dúvidas, mostra o saldo e agenda pagamentos por comando de voz. Rita pergunta a Jonas, profissional CPA, quais cuidados a instituição deve ter.",
+  "enunciado": "Jonas explica que o uso de assistentes virtuais exige:",
+  "certa": "segurança, LGPD, aviso de que é robô e opção de atendimento humano.",
+  "erradas": [
+   [
+    "dispensa de autenticação, para tornar o atendimento mais rápido.",
+    "Operações exigem autenticação segura."
+   ],
+   [
+    "proibição de qualquer atendimento humano, para reduzir custos.",
+    "O cliente deve poder falar com uma pessoa quando necessário."
+   ],
+   [
+    "uso irrestrito dos dados dos clientes para qualquer finalidade comercial.",
+    "O uso de dados deve seguir a LGPD."
+   ]
+  ],
+  "gabarito": "Chatbots e assistentes virtuais ampliam o acesso, o horário e a agilidade do atendimento. Cuidados: segurança e autenticação, proteção de dados (LGPD), transparência (o cliente deve saber que fala com uma máquina), qualidade e supervisão das respostas, acessibilidade e encaminhamento a atendimento humano em casos complexos ou de reclamação.",
+  "dica": "Assistente virtual: segurança, LGPD, transparência e opção de atendimento humano."
+ }
+]
