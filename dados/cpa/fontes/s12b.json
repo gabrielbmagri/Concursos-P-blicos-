@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.4.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: A corretora de Ana e a LGPD",
+  "etapa": "1/4",
+  "contexto": "Ana dirige uma pequena corretora e quer compartilhar com uma consultoria estatísticas sobre o perfil dos clientes, sem que nenhum deles possa ser identificado. Pergunta a Breno, profissional CPA, se isso é dado pessoal.",
+  "enunciado": "Breno explica que dados que não permitem identificar o titular, por meios razoáveis, são:",
+  "certa": "dados anonimizados, que em regra ficam fora da LGPD.",
+  "erradas": [
+   [
+    "dados sensíveis, que exigem consentimento específico.",
+    "Dados sensíveis identificam e revelam aspectos como saúde e religião."
+   ],
+   [
+    "dados pessoais comuns, sujeitos a todas as regras da LGPD.",
+    "Se a anonimização for efetiva, não são dados pessoais."
+   ],
+   [
+    "dados sigilosos, cujo compartilhamento é sempre crime.",
+    "Dados anonimizados podem ser usados, respeitados os limites legais."
+   ]
+  ],
+  "gabarito": "Na LGPD, dado pessoal é a informação relacionada a pessoa natural identificada ou identificável; dado sensível é o dado pessoal sobre origem racial, religião, saúde, biometria etc. Dado anonimizado é aquele que, considerados os meios técnicos razoáveis, não permite identificar o titular; em regra, não é considerado dado pessoal, salvo se a anonimização puder ser revertida.",
+  "dica": "Anonimizado de verdade (não identifica ninguém) = em regra, fora da LGPD."
+ },
+ {
+  "pd": "3.4.6.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: A corretora de Ana e a LGPD",
+  "etapa": "2/4",
+  "contexto": "A corretora também quer usar e-mails e telefones dos clientes para enviar ofertas de produtos de parceiros, sem relação com os serviços contratados.",
+  "enunciado": "Breno orienta que, para essa finalidade, a corretora:",
+  "certa": "precisa de base legal adequada, como o consentimento, e de informar a finalidade.",
+  "erradas": [
+   [
+    "pode usar livremente, pois os clientes já forneceram os dados na abertura da conta.",
+    "Nova finalidade exige base legal e transparência."
+   ],
+   [
+    "pode vender os dados aos parceiros, desde que cobre um valor justo.",
+    "Vender dados sem base legal viola a LGPD."
+   ],
+   [
+    "está proibida de qualquer comunicação de marketing, em qualquer hipótese.",
+    "Marketing é possível com base legal e respeitando os direitos do titular."
+   ]
+  ],
+  "gabarito": "O tratamento de dados pessoais exige base legal (consentimento, obrigação legal, execução de contrato, legítimo interesse etc.) e respeito aos princípios da LGPD: finalidade, adequação, necessidade, transparência. Usar dados para finalidade diferente da informada exige nova base legal. Quando a base é o consentimento, ele deve ser livre, informado e revogável.",
+  "dica": "Nova finalidade para os dados = nova base legal e transparência ao titular."
+ },
+ {
+  "pd": "3.4.6.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: A corretora de Ana e a LGPD",
+  "etapa": "3/4",
+  "contexto": "Meses depois, um ataque hacker expõe nomes, CPFs e saldos de clientes da corretora. Ana quer “resolver internamente” sem avisar ninguém.",
+  "enunciado": "Breno orienta que a corretora deve:",
+  "certa": "conter o incidente e comunicar a ANPD e os titulares afetados.",
+  "erradas": [
+   [
+    "manter o caso em sigilo para proteger a imagem da corretora.",
+    "Incidentes relevantes devem ser comunicados."
+   ],
+   [
+    "apenas trocar as senhas internas e encerrar o assunto.",
+    "Medidas internas não dispensam a comunicação."
+   ],
+   [
+    "comunicar somente à imprensa, que se encarrega de avisar os clientes.",
+    "A comunicação é à ANPD e aos titulares."
+   ]
+  ],
+  "gabarito": "Pela LGPD, o controlador deve adotar medidas de segurança e, em caso de incidente que possa acarretar risco ou dano relevante aos titulares, comunicar à ANPD e aos titulares, informando os dados afetados, os riscos e as medidas adotadas. Esconder o incidente agrava sanções e riscos legais e de imagem. Em instituições financeiras, também há regras de segurança cibernética do BC e da CVM.",
+  "dica": "Vazamento relevante: conter, comunicar a ANPD e os titulares."
+ },
+ {
+  "pd": "3.4.6.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: A corretora de Ana e a LGPD",
+  "etapa": "4/4",
+  "contexto": "Para prevenir fraudes, a corretora quer trocar com outras instituições financeiras informações cadastrais sobre clientes suspeitos de golpe. Ana teme violar o sigilo bancário.",
+  "enunciado": "Breno explica que, pela LC 105/2001:",
+  "certa": "a troca para fins cadastrais é exceção legal ao sigilo.",
+  "erradas": [
+   [
+    "qualquer troca de informações entre instituições é crime, sem exceção.",
+    "A lei prevê exceções, como a troca para fins cadastrais."
+   ],
+   [
+    "a troca só é permitida com autorização judicial para cada cliente.",
+    "Há hipóteses legais que dispensam ordem judicial."
+   ],
+   [
+    "basta publicar a lista de suspeitos na internet, sem trocar com instituições.",
+    "Publicar dados de clientes viola o sigilo e a LGPD."
+   ]
+  ],
+  "gabarito": "A LC 105/2001 prevê que não constitui violação do sigilo a troca de informações entre instituições financeiras para fins cadastrais (inclusive por sistemas de proteção ao crédito), observadas as normas do CMN e do BC, assim como a comunicação de ilícitos às autoridades e o fornecimento com consentimento do cliente. O compartilhamento deve respeitar a LGPD (finalidade, necessidade, segurança).",
+  "dica": "Troca de dados cadastrais entre instituições (nos termos das normas) não quebra o sigilo."
+ },
+ {
+  "pd": "3.1.3.3.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Seu Jair, aposentado, tem vários consignados, cartão e cheque especial, e as parcelas consomem quase toda a renda. Não consegue mais pagar contas básicas. Pergunta a Tânia, profissional CPA, se há alguma saída legal.",
+  "enunciado": "Tânia explica que a Lei do Superendividamento permite:",
+  "certa": "repactuar as dívidas preservando o mínimo existencial.",
+  "erradas": [
+   [
+    "cancelar automaticamente todas as dívidas de aposentados.",
+    "A lei prevê repactuação, não cancelamento automático."
+   ],
+   [
+    "contratar novos empréstimos sem limite para quitar os antigos.",
+    "Mais dívida agravaria o problema."
+   ],
+   [
+    "suspender os pagamentos por 10 anos sem juros.",
+    "Não existe essa suspensão automática."
+   ]
+  ],
+  "gabarito": "A Lei 14.181/2021 (Superendividamento) alterou o Código de Defesa do Consumidor para prevenir e tratar o superendividamento: exige informação clara na oferta de crédito, veda práticas abusivas (como assédio a idosos) e permite a repactuação das dívidas em audiência conciliatória, com plano de pagamento que preserve o mínimo existencial do consumidor.",
+  "dica": "Superendividamento (Lei 14.181): repactuar as dívidas preservando o mínimo existencial."
+ },
+ {
+  "pd": "3.1.5.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Clara fez um planejamento financeiro há três anos e nunca mais o revisou. Desde então, teve um filho e mudou de emprego. Ela pergunta a Diogo, profissional CPA, se o plano continua valendo.",
+  "enunciado": "Diogo explica que, no processo de planejamento:",
+  "certa": "o plano deve ser monitorado e revisado, sobretudo após mudanças relevantes.",
+  "erradas": [
+   [
+    "o plano feito uma vez vale para sempre, sem revisões.",
+    "O monitoramento e a revisão fazem parte do processo."
+   ],
+   [
+    "o plano só deve ser revisado se a bolsa cair mais de 30%.",
+    "Revisões dependem também de mudanças na vida do cliente."
+   ],
+   [
+    "o plano deve ser descartado e nunca refeito após mudanças pessoais.",
+    "O plano deve ser ajustado, não abandonado."
+   ]
+  ],
+  "gabarito": "O planejamento financeiro é contínuo: definir objetivos, avaliar a situação, montar o plano, implementá-lo e monitorar e revisar regularmente. Mudanças de vida (filhos, emprego, renda, casamento, herança) e de mercado exigem revisão de metas, reserva, seguros, alocação e perfil.",
+  "dica": "Plano financeiro não é estático: revise sempre que a vida mudar."
+ },
+ {
+  "pd": "3.1.3.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Lucas quer ensinar o filho de 10 anos a lidar com dinheiro e pergunta a Sandra, profissional CPA, uma estratégia simples.",
+  "enunciado": "Sandra sugere:",
+  "certa": "dar mesada fixa e planejar com o filho gastos e poupança.",
+  "erradas": [
+   [
+    "dar dinheiro sempre que o filho pedir, para evitar frustrações.",
+    "Sem limites, não há aprendizado de planejamento."
+   ],
+   [
+    "proibir qualquer contato da criança com dinheiro até os 18 anos.",
+    "Educação financeira começa com prática, desde cedo."
+   ],
+   [
+    "abrir um cartão de crédito em nome da criança para uso livre.",
+    "Crédito sem controle não ensina planejamento."
+   ]
+  ],
+  "gabarito": "Educação financeira básica envolve aprender a planejar, priorizar, poupar e adiar gratificações. Para crianças, a mesada com regras claras, metas de poupança e conversas sobre escolhas ensinam orçamento e disciplina. Na vida adulta, os mesmos princípios valem: orçamento, reserva, consumo consciente e crédito responsável.",
+  "dica": "Educação financeira na prática: mesada, metas e planejamento desde cedo."
+ },
+ {
+  "pd": "3.1.3.4.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Para a reserva de emergência, Paula compara um fundo DI com taxa de administração de 1,5% ao ano e o Tesouro Selic. Pergunta a Hugo, profissional CPA.",
+  "enunciado": "Hugo orienta que, para a reserva:",
+  "certa": "o Tesouro Selic tende a ser melhor: líquido e sem taxa alta.",
+  "erradas": [
+   [
+    "o fundo DI com taxa de 1,5% é melhor, por ter gestão profissional.",
+    "Em renda fixa simples, taxa alta corrói o rendimento."
+   ],
+   [
+    "os dois são inadequados, pois a reserva deve ficar em ações.",
+    "Ações não são adequadas para reserva."
+   ],
+   [
+    "os dois rendem igual, pois ambos acompanham a Selic.",
+    "A taxa de administração reduz o rendimento do fundo."
+   ]
+  ],
+  "gabarito": "A reserva de emergência deve ficar em ativos de alta liquidez e baixo risco, com rendimento próximo do CDI/Selic: Tesouro Selic, CDB com liquidez diária de emissor sólido (dentro do FGC) ou fundos DI de taxa baixa. Taxas de administração altas em fundos simples corroem o retorno; o come-cotas também pesa.",
+  "dica": "Reserva: liquidez diária, baixo risco e custo baixo (Tesouro Selic, CDB liquidez diária, DI barato)."
+ },
+ {
+  "pd": "3.1.6.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Jéssica, solteira e sem dependentes, tem poucas despesas dedutíveis e não contribui para PGBL. Pergunta a Breno, profissional CPA, qual modelo de declaração tende a ser melhor.",
+  "enunciado": "Breno explica que, nesse caso:",
+  "certa": "o simplificado tende a ser melhor, pelo desconto padrão.",
+  "erradas": [
+   [
+    "o completo é sempre melhor, independentemente das despesas dedutíveis.",
+    "Sem deduções relevantes, o desconto padrão tende a ser maior."
+   ],
+   [
+    "os dois modelos geram sempre o mesmo imposto.",
+    "Os resultados variam conforme as deduções."
+   ],
+   [
+    "ela é obrigada a usar o completo por ser solteira.",
+    "Não há essa obrigação."
+   ]
+  ],
+  "gabarito": "O modelo simplificado aplica um desconto padrão de 20% sobre os rendimentos tributáveis, limitado a um teto anual, substituindo as deduções legais. O completo permite deduzir despesas comprovadas (saúde, educação com limite, dependentes, previdência oficial e PGBL até 12%). Quem tem poucas deduções costuma se beneficiar do simplificado; o programa da Receita indica a opção mais vantajosa.",
+  "dica": "Poucas deduções → simplificado. Muitas deduções (saúde, dependentes, PGBL) → completo."
+ },
+ {
+  "pd": "3.2.2.1",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Roberto precisa de R$ 30 mil por 3 meses para uma emergência. Tem R$ 100 mil em um CDB que vence em 6 meses, sem liquidez, e o banco oferece empréstimo com esse CDB como garantia, a juros baixos. Pergunta a Rafaela, profissional CPA.",
+  "enunciado": "Rafaela explica que o crédito com garantia da aplicação:",
+  "certa": "pode sair barato: compare o CET com o custo de resgatar antes.",
+  "erradas": [
+   [
+    "é sempre pior que qualquer outra opção, pois envolve juros.",
+    "Pode ser mais barato que vender com deságio ou usar crédito caro."
+   ],
+   [
+    "é proibido, pois aplicações não podem servir de garantia.",
+    "Aplicações podem garantir empréstimos."
+   ],
+   [
+    "dispensa qualquer análise de custo, pois o banco já tem a garantia.",
+    "Sempre se compara o CET com as alternativas."
+   ]
+  ],
+  "gabarito": "Para financiar emergências, as estratégias são: usar a reserva; se não houver, buscar a alternativa de menor custo total. Empréstimos com garantia de aplicações (CDB, fundos, previdência) costumam ter juros baixos e podem sair mais baratos que vender o ativo antes do vencimento com perdas ou que usar cheque especial e rotativo. Compare o CET e o custo do resgate antecipado.",
+  "dica": "Emergência sem reserva: compare o empréstimo com garantia da aplicação com o custo de resgatar antes."
+ },
+ {
+  "pd": "3.4.3.3.3.1.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma gestora envia a Vítor, profissional CPA de um distribuidor, uma garrafa de vinho caro e um convite para viagem de fim de semana, “em agradecimento às indicações”. A política do banco limita presentes a valor simbólico.",
+  "enunciado": "A conduta adequada de Vítor é:",
+  "certa": "recusar o excesso e comunicar o compliance.",
+  "erradas": [
+   [
+    "aceitar tudo, pois os presentes não foram pedidos.",
+    "Benefícios acima do limite geram conflito, pedidos ou não."
+   ],
+   [
+    "aceitar e recomendar mais os fundos da gestora, em retribuição.",
+    "Isso caracteriza conflito de interesses."
+   ],
+   [
+    "aceitar e esconder, para não constranger a gestora.",
+    "Ocultar viola a política e a transparência."
+   ]
+  ],
+  "gabarito": "A proibição de atividades específicas (como aceitar presentes, viagens e benefícios relevantes de parceiros, fornecedores ou gestores) é medida de gestão de conflitos de interesses. As políticas costumam permitir apenas brindes de valor simbólico e exigem comunicar ao compliance. O objetivo é evitar que benefícios pessoais influenciem recomendações aos clientes.",
+  "dica": "Presente acima do valor simbólico: recuse e comunique o compliance."
+ },
+ {
+  "pd": "3.4.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um gerente aceitou abrir contas para uma organização criminosa sem as verificações exigidas, em troca de dinheiro. Um colega pergunta a Fábio, profissional CPA, se só o banco pode ser punido.",
+  "enunciado": "Fábio explica que:",
+  "certa": "o gerente também responde, até criminalmente.",
+  "erradas": [
+   [
+    "só o banco responde, pois o gerente seguia ordens superiores.",
+    "Pessoas físicas também respondem pelos atos praticados."
+   ],
+   [
+    "ninguém responde, se o dinheiro tiver sido devolvido depois.",
+    "A devolução não apaga a conduta."
+   ],
+   [
+    "só a organização criminosa responde, por ser a autora do crime.",
+    "Quem colabora com a lavagem também responde."
+   ]
+  ],
+  "gabarito": "Na prevenção à lavagem de dinheiro, há responsabilidade administrativa das pessoas obrigadas e de seus administradores (advertência, multa, inabilitação, cassação) e responsabilidade penal de quem participa da lavagem ou a facilita dolosamente (Lei 9.613/1998). Funcionários que deixam de cumprir procedimentos para favorecer criminosos podem responder pessoalmente.",
+  "dica": "PLD: instituição responde administrativamente; o profissional pode responder até criminalmente."
+ },
+ {
+  "pd": "3.4.5.4.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa recém-criada, com sócios estrangeiros por meio de várias empresas em camadas, quer abrir conta e movimentar valores altos. O cadastro não indica quem são as pessoas físicas que a controlam.",
+  "enunciado": "Pelas regras de KYC, a instituição deve:",
+  "certa": "identificar o beneficiário final da empresa.",
+  "erradas": [
+   [
+    "aceitar a conta, pois empresas estrangeiras dispensam identificação.",
+    "A identificação vale também para estruturas estrangeiras."
+   ],
+   [
+    "identificar só o contador da empresa, responsável pelos documentos.",
+    "O que importa é quem controla ou se beneficia."
+   ],
+   [
+    "recusar automaticamente qualquer empresa com sócios estrangeiros.",
+    "A recusa não é automática; exige-se diligência."
+   ]
+  ],
+  "gabarito": "Nas regras de PLD, o “conheça seu cliente” para pessoas jurídicas inclui identificar o beneficiário final: a pessoa natural que, em última instância, controla ou se beneficia da empresa, direta ou indiretamente, inclusive por cadeias societárias. Estruturas complexas, empresas de fachada e jurisdições de risco exigem diligência reforçada. Sem identificar o beneficiário final, a relação não deve prosseguir.",
+  "dica": "Empresa como cliente: descubra o beneficiário final (a pessoa física por trás)."
+ },
+ {
+  "pd": "3.4.7.2.2.1.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Duas contas ligadas ao mesmo grupo compram e vendem entre si, repetidamente, ações de baixa liquidez, sem mudança real de dono, para que o ativo pareça muito negociado e atraia investidores.",
+  "enunciado": "Pela Resolução CVM 62, a prática configura:",
+  "certa": "criação de condições artificiais de demanda, oferta ou preço.",
+  "erradas": [
+   [
+    "prática legítima de formação de mercado.",
+    "O formador de mercado tem contrato e regras; aqui o volume é simulado."
+   ],
+   [
+    "front running, pois as contas se antecipam a ordens de clientes.",
+    "Não há ordens de clientes envolvidas."
+   ],
+   [
+    "insider trading, pois o grupo conhece a própria estratégia.",
+    "Não há informação relevante não divulgada sobre o emissor."
+   ]
+  ],
+  "gabarito": "Criação de condições artificiais de demanda, oferta ou preço (Resolução CVM 62) ocorre quando operações ou ofertas alteram o fluxo de ordens de forma artificial, como negócios simulados entre partes ligadas para gerar volume falso (wash trades) ou transferências de recursos (money pass). Prejudica a formação de preços e engana outros investidores.",
+  "dica": "Volume falso entre contas ligadas = condição artificial de mercado."
+ },
+ {
+  "pd": "3.2.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Mirian, 35 anos, moderada, quer investir para a aposentadoria daqui a 30 anos e já tem reserva de emergência. Ela pergunta a Saulo, profissional CPA, se deve ficar 100% em CDB de liquidez diária.",
+  "enunciado": "Saulo orienta que, para esse horizonte e perfil:",
+  "certa": "cabe carteira diversificada, com crescimento e proteção da inflação.",
+  "erradas": [
+   [
+    "o ideal é 100% em liquidez diária, pois o objetivo é distante.",
+    "Para 30 anos, liquidez diária abre mão de retorno real."
+   ],
+   [
+    "o ideal é 100% em ações de uma única empresa, pelo prazo longo.",
+    "Concentração aumenta o risco desnecessariamente."
+   ],
+   [
+    "o horizonte não importa, só o perfil moderado.",
+    "O horizonte é decisivo na alocação."
+   ]
+  ],
+  "gabarito": "Tipos de investimento devem combinar tolerância a risco e horizonte. Para objetivos longos e perfil moderado, uma carteira diversificada (renda fixa atrelada à inflação, parcela em ações ou fundos de ações, multimercados, eventualmente previdência) tende a gerar mais retorno real que ficar 100% em liquidez diária, mantendo a reserva separada.",
+  "dica": "Horizonte longo: diversificar, com proteção da inflação e parcela em crescimento."
+ },
+ {
+  "pd": "4.2.6.2.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora quer lançar fundo sustentável e pergunta a Lia, profissional CPA, que papel a Anbima tem nessa agenda.",
+  "enunciado": "Lia explica que a Anbima:",
+  "certa": "tem regras para fundos IS e que integram ESG, com transparência.",
+  "erradas": [
+   [
+    "concede selo que garante a rentabilidade dos fundos sustentáveis.",
+    "Não há garantia de rentabilidade."
+   ],
+   [
+    "proíbe qualquer fundo de usar termos ligados a sustentabilidade.",
+    "Permite, com regras."
+   ],
+   [
+    "registra os fundos no lugar da CVM.",
+    "O registro é na CVM."
+   ]
+  ],
+  "gabarito": "A autorregulação da Anbima estabelece regras para identificar fundos de investimento sustentável (IS), com objetivo sustentável e sufixo IS no nome, e fundos que integram questões ESG, além de exigências de transparência, metodologia e relatórios, para combater o greenwashing. Complementa a regulação da CVM (como o art. 49 da CVM 175).",
+  "dica": "Anbima: regras para fundos IS e que integram ESG, com transparência contra greenwashing."
+ },
+ {
+  "pd": "4.5.4.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Raul, profissional CPA, quais vantagens e desvantagens o open insurance pode trazer para ele.",
+  "enunciado": "Raul explica que, entre vantagens e desvantagens, estão:",
+  "certa": "ofertas personalizadas e concorrência, com riscos aos dados.",
+  "erradas": [
+   [
+    "prêmios fixos para todos os clientes, sem qualquer risco de dados.",
+    "O objetivo não é padronizar preços, e há riscos de dados."
+   ],
+   [
+    "fim da SUSEP, substituída pelas seguradoras na supervisão.",
+    "A SUSEP continua supervisionando."
+   ],
+   [
+    "obrigação de compartilhar dados sem consentimento.",
+    "O compartilhamento depende de consentimento."
+   ]
+  ],
+  "gabarito": "Open insurance: vantagens como comparação de ofertas, produtos personalizados, maior concorrência e facilidade de portabilidade de informações; desvantagens e riscos como segurança cibernética, uso indevido de dados e necessidade de educação do consumidor para consentir de forma consciente. É regulado pela SUSEP e depende do consentimento.",
+  "dica": "Open insurance: mais concorrência e personalização; atenção a segurança e consentimento."
+ },
+ {
+  "pd": "4.6.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um banco quer que o chatbot responda tudo, inclusive reclamações complexas e pedidos de cancelamento, sem opção de falar com uma pessoa. Pergunta a Carla, profissional CPA, se é boa prática.",
+  "enunciado": "Carla orienta que:",
+  "certa": "o chatbot deve ter limites claros e encaminhar a atendimento humano quando necessário.",
+  "erradas": [
+   [
+    "o chatbot deve substituir totalmente o atendimento humano, para reduzir custos.",
+    "Casos complexos e reclamações pedem atendimento humano."
+   ],
+   [
+    "o chatbot pode esconder que é um robô, para parecer mais natural.",
+    "A transparência com o cliente é recomendada."
+   ],
+   [
+    "o chatbot pode coletar senhas para agilizar o atendimento.",
+    "Senhas nunca devem ser solicitadas."
+   ]
+  ],
+  "gabarito": "Chatbots ajudam no atendimento (disponibilidade 24/7, respostas rápidas a dúvidas simples), mas exigem governança: limites de atuação, transparência de que se trata de máquina, segurança e proteção de dados, supervisão das respostas e encaminhamento a humanos em reclamações, cancelamentos e situações complexas.",
+  "dica": "Chatbot: útil para o simples; casos complexos vão para um humano."
+ },
+ {
+  "pd": "4.4.3.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cooperativa agrícola usa contratos inteligentes para liberar automaticamente o pagamento ao produtor quando a entrega da safra é registrada no armazém. Um cliente pergunta a Diego, profissional CPA, qual a vantagem.",
+  "enunciado": "Diego explica que a principal vantagem é:",
+  "certa": "pagar automaticamente, com menos intermediários e rastreio.",
+  "erradas": [
+   [
+    "eliminar todos os riscos da operação agrícola, inclusive climáticos.",
+    "A tecnologia automatiza, mas não elimina riscos do negócio."
+   ],
+   [
+    "garantir preços maiores ao produtor, definidos pelo contrato.",
+    "O preço é negociado; o contrato só executa as regras."
+   ],
+   [
+    "dispensar qualquer registro, pois o código substitui os documentos.",
+    "O próprio registro em blockchain é parte da solução."
+   ]
+  ],
+  "gabarito": "Aplicações práticas de contratos inteligentes incluem cadeias de suprimentos, pagamentos condicionados, empréstimos DeFi, seguros paramétricos, imobiliário e governança. Vantagens: execução automática, menos intermediários, rastreabilidade e redução de disputas. Riscos: erros de código, dados externos incorretos (oráculos) e enquadramento jurídico.",
+  "dica": "Contrato inteligente na prática: pagamento automático quando a condição é registrada."
+ },
+ {
+  "pd": "4.2.6.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um fundo chamado “Verde Sustentável” divulga ser ESG, mas tem grande parte da carteira em empresas com graves passivos ambientais e não informa sua metodologia. Um cliente pergunta a Ana, profissional CPA.",
+  "enunciado": "Ana explica que há indícios de:",
+  "certa": "greenwashing: aparência sustentável sem prática nem transparência que a sustentem.",
+  "erradas": [
+   [
+    "investimento de impacto legítimo, pois o nome do fundo é verde.",
+    "O nome não comprova a prática."
+   ],
+   [
+    "boa governança, pois o fundo é transparente sobre sua estratégia.",
+    "Ele não divulga a metodologia."
+   ],
+   [
+    "integração ESG plena, pois empresas poluentes são as que mais precisam de recursos.",
+    "Sem metodologia e transparência, não há como comprovar integração."
+   ]
+  ],
+  "gabarito": "Greenwashing é a prática de apresentar produtos ou empresas como sustentáveis sem que isso corresponda à realidade, por nomes, marketing ou alegações sem metodologia, dados ou monitoramento. É um dos principais desafios dos investimentos ESG; regras da CVM, da Anbima e padrões de divulgação buscam combatê-lo.",
+  "dica": "Greenwashing = discurso verde sem prática e sem transparência."
+ }
+]
