@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Dona Teresa e a herança",
+  "etapa": "1/4",
+  "contexto": "Dona Teresa, 68 anos, viúva há pouco, herdou um apartamento alugado, um terreno e R$ 400 mil em aplicações. Ela procura Fernando, profissional CPA, sem saber o que tem e quanto gasta.",
+  "enunciado": "O primeiro passo adequado de Fernando é:",
+  "certa": "montar o balanço e o fluxo de caixa dela.",
+  "erradas": [
+   [
+    "vender o terreno e aplicar tudo em renda variável, para aumentar a renda.",
+    "Recomendar sem diagnóstico e sem perfil é inadequado."
+   ],
+   [
+    "aplicar os R$ 400 mil em um único produto de maior taxa disponível.",
+    "Concentrar sem análise ignora liquidez, perfil e objetivos."
+   ],
+   [
+    "aguardar o fim do inventário para começar qualquer conversa.",
+    "O diagnóstico pode e deve começar já."
+   ]
+  ],
+  "gabarito": "O planejamento começa pelo diagnóstico: balanço patrimonial (ativos líquidos, de uso e de investimento; passivos; patrimônio líquido) e fluxo de caixa (receitas, como aluguel e pensão, e despesas). Com isso se avaliam liquidez, cobertura de despesas e capacidade de gerar renda, antes de definir objetivos e produtos.",
+  "dica": "Antes de recomendar: balanço patrimonial e fluxo de caixa do cliente."
+ },
+ {
+  "pd": "3.4.5.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Dona Teresa e a herança",
+  "etapa": "2/4",
+  "contexto": "Dona Teresa vai aplicar no banco R$ 400 mil recebidos da herança. A política de KYC exige comprovar a origem dos recursos para valores desse porte.",
+  "enunciado": "Fernando deve:",
+  "certa": "solicitar documentos que comprovem a origem (como a partilha) e atualizar o cadastro.",
+  "erradas": [
+   [
+    "dispensar a comprovação, pois heranças são isentas de qualquer controle.",
+    "Origem dos recursos deve ser verificada conforme a política."
+   ],
+   [
+    "recusar o depósito, pois recursos de herança não podem ser aplicados no banco.",
+    "Não há essa proibição."
+   ],
+   [
+    "registrar a origem como “salário”, para simplificar o cadastro.",
+    "Registrar informação falsa compromete o KYC."
+   ]
+  ],
+  "gabarito": "O princípio “conheça seu cliente” inclui identificar a origem dos recursos, especialmente em valores relevantes ou incompatíveis com o perfil cadastrado. Documentos como formal de partilha, escritura de inventário ou declaração de IR comprovam heranças. O cadastro deve ser atualizado para refletir patrimônio e renda, permitindo monitorar a compatibilidade das operações.",
+  "dica": "Valor relevante: comprove a origem dos recursos e atualize o cadastro."
+ },
+ {
+  "pd": "3.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Dona Teresa e a herança",
+  "etapa": "3/4",
+  "contexto": "O perfil de Dona Teresa é conservador. Ela precisa complementar a renda em R$ 3.000 por mês, além do aluguel, e quer manter dinheiro disponível para saúde.",
+  "enunciado": "Fernando propõe, de forma adequada:",
+  "certa": "liquidez diária para emergências e renda fixa sólida e escalonada.",
+  "erradas": [
+   [
+    "concentrar em ações pagadoras de dividendos, que garantem renda mensal fixa.",
+    "Dividendos variam e ações oscilam; não combinam com o perfil e a necessidade."
+   ],
+   [
+    "aplicar tudo em um COE de capital em risco de 5 anos.",
+    "Produto complexo, sem liquidez e arriscado para o perfil."
+   ],
+   [
+    "deixar tudo na conta corrente, para ter liquidez total.",
+    "Na conta corrente o dinheiro não rende."
+   ]
+  ],
+  "gabarito": "Para investidor conservador que precisa de renda e liquidez: parcela em ativos de liquidez diária e baixo risco (reserva para saúde e imprevistos) e parcela em renda fixa de emissores sólidos, com vencimentos escalonados (por exemplo, títulos públicos e CDBs dentro do FGC), possivelmente com pagamentos periódicos. Revisão periódica da carteira e do perfil.",
+  "dica": "Conservador que vive de renda: liquidez + renda fixa sólida e escalonada."
+ },
+ {
+  "pd": "3.4.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Dona Teresa e a herança",
+  "etapa": "4/4",
+  "contexto": "O filho de Dona Teresa acompanha a reunião e insiste que a mãe aplique metade em criptoativos, “porque rende mais”. Ela parece insegura e diz que fará o que o filho quiser.",
+  "enunciado": "A conduta ética de Fernando é:",
+  "certa": "orientar a titular dos recursos e respeitar a decisão dela.",
+  "erradas": [
+   [
+    "seguir a orientação do filho, que demonstra conhecer mais o mercado.",
+    "A adequação considera a cliente, não o filho."
+   ],
+   [
+    "recusar-se a falar com a cliente na presença do filho.",
+    "Basta conduzir o atendimento com foco na cliente."
+   ],
+   [
+    "aplicar em criptoativos sem alerta, pois a cliente concordou verbalmente.",
+    "Produto inadequado exige alerta e declaração formal."
+   ]
+  ],
+  "gabarito": "Ética e responsabilidade no atendimento exigem atuar no interesse do cliente, especialmente de idosos, que podem sofrer pressões de terceiros. O profissional deve esclarecer riscos com linguagem simples, verificar a adequação ao perfil da titular e, se ela insistir em produto inadequado, alertar e obter declaração formal. Indícios de abuso podem ser levados ao compliance.",
+  "dica": "O cliente é o titular dos recursos: oriente-o, mesmo sob pressão de familiares."
+ },
+ {
+  "pd": "3.1.3.3.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Rui quer um carro de R$ 60 mil em até 2 anos. Ele pode financiar hoje, com CET de 2% ao mês, entrar em um consórcio com taxa de administração total de 15%, ou juntar o dinheiro aplicando. Pergunta a Sílvia, profissional CPA.",
+  "enunciado": "Sílvia explica que, se Rui não tem urgência:",
+  "certa": "poupar ou o consórcio tendem a custar menos que financiar.",
+  "erradas": [
+   [
+    "o financiamento é sempre a opção mais barata, por entregar o carro na hora.",
+    "Antecipar o bem com juros costuma custar mais."
+   ],
+   [
+    "o consórcio entrega o carro imediatamente e sem custos.",
+    "No consórcio, o bem só vem com a contemplação, e há taxas."
+   ],
+   [
+    "as três opções têm exatamente o mesmo custo total.",
+    "Os custos são bem diferentes."
+   ]
+  ],
+  "gabarito": "Avaliar a melhor dívida em função da necessidade: se há urgência, o financiamento antecipa o bem, mas com juros (compare o CET). Sem urgência, poupar e comprar à vista evita juros e pode render; o consórcio não tem juros, mas tem taxa de administração e incerteza sobre a data da contemplação. A escolha depende de urgência, disciplina e custo total.",
+  "dica": "Sem urgência: poupar ou consórcio tendem a sair mais barato que financiar."
+ },
+ {
+  "pd": "3.2.1",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Bruna diz não se importar com oscilações e quer investir tudo em ações. Mas ela tem renda instável, nenhuma reserva e vai precisar do dinheiro em 1 ano. Pergunta a Tiago, profissional CPA.",
+  "enunciado": "Tiago explica que, embora a tolerância a risco dela seja alta:",
+  "certa": "sua capacidade de assumir risco é baixa, pelo prazo curto e pela falta de reserva.",
+  "erradas": [
+   [
+    "a tolerância declarada é o único fator, e ela deve investir tudo em ações.",
+    "A capacidade financeira e o horizonte também contam."
+   ],
+   [
+    "ela deve ser classificada como arrojada e investir com alavancagem.",
+    "Alavancagem aumentaria ainda mais o risco."
+   ],
+   [
+    "prazo e reserva não influenciam a escolha dos investimentos.",
+    "São determinantes para a capacidade de assumir risco."
+   ]
+  ],
+  "gabarito": "Tolerância a risco é a disposição psicológica de aceitar oscilações; capacidade de risco é a condição financeira de suportar perdas sem comprometer objetivos (horizonte, liquidez, renda, reserva). A adequação considera as duas. Prazo curto, renda instável e ausência de reserva reduzem a capacidade, mesmo com tolerância alta.",
+  "dica": "Tolerância (querer arriscar) ≠ capacidade (poder arriscar). Vale a menor das duas."
+ },
+ {
+  "pd": "3.2.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Sérgio ganha R$ 8.000 líquidos e já paga R$ 2.200 em parcelas. Quer contratar um empréstimo com parcela de R$ 1.200. Pergunta a Mara, profissional CPA, se é prudente.",
+  "enunciado": "Mara orienta que, com a nova parcela:",
+  "certa": "o comprometimento chegaria a 42,5% da renda, nível alto e arriscado.",
+  "erradas": [
+   [
+    "o comprometimento seria de 15%, considerando só a nova parcela.",
+    "É preciso somar todas as parcelas: 3.400 ÷ 8.000."
+   ],
+   [
+    "o comprometimento seria de 27,5%, abaixo de qualquer referência de risco.",
+    "Esse é o comprometimento atual, sem a nova parcela."
+   ],
+   [
+    "o comprometimento não importa, desde que as taxas sejam baixas.",
+    "Mesmo com taxas baixas, parcelas demais comprometem o orçamento."
+   ]
+  ],
+  "gabarito": "Comprometimento de renda = soma das parcelas de dívidas ÷ renda líquida = (2.200 + 1.200) ÷ 8.000 = 42,5%. Referências usuais sugerem manter o comprometimento total bem abaixo disso (em torno de 30%). Antes de contratar, avalie o orçamento, a reserva de emergência, o CET e a possibilidade de quitar dívidas caras primeiro.",
+  "dica": "Comprometimento = todas as parcelas ÷ renda líquida. Acima de 30% é sinal de alerta."
+ },
+ {
+  "pd": "3.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente tem toda a carteira em CDBs de um único banco médio, pós-fixados no CDI. Ele pergunta a Lauro, profissional CPA, se está bem diversificado, já que “tudo é renda fixa segura”.",
+  "enunciado": "Lauro explica que a carteira:",
+  "certa": "está concentrada: vale diversificar emissores, indexadores e classes.",
+  "erradas": [
+   [
+    "está diversificada, pois renda fixa não tem risco.",
+    "Renda fixa tem riscos de crédito, mercado e liquidez."
+   ],
+   [
+    "está diversificada, pois CDBs de prazos diferentes eliminam o risco de crédito.",
+    "Prazos diferentes do mesmo emissor não diversificam o risco de crédito."
+   ],
+   [
+    "só precisa ser diversificada se o valor passar de R$ 10 milhões.",
+    "A diversificação vale para qualquer valor."
+   ]
+  ],
+  "gabarito": "Diversificar é distribuir o patrimônio entre emissores (reduz o risco de crédito concentrado, inclusive acima do limite do FGC), indexadores (CDI, IPCA, prefixado), classes de ativos (renda fixa, ações, imóveis) e, quando adequado, geografias. A diversificação deve respeitar o perfil e os objetivos.",
+  "dica": "Diversifique emissores, indexadores e classes, não só prazos."
+ },
+ {
+  "pd": "3.4.1.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Em um churrasco, um amigo pergunta a Joana, profissional CPA, quanto um vizinho em comum, cliente do banco dela, tem aplicado.",
+  "enunciado": "Joana deve:",
+  "certa": "recusar-se a informar: o sigilo é dever profissional.",
+  "erradas": [
+   [
+    "informar apenas o valor aproximado, sem detalhar os produtos.",
+    "Qualquer informação do cliente é sigilosa."
+   ],
+   [
+    "informar, pois a conversa ocorreu fora do horário de trabalho.",
+    "O sigilo vale dentro e fora do trabalho."
+   ],
+   [
+    "informar, desde que o amigo prometa não contar a ninguém.",
+    "A promessa não afasta a violação do sigilo."
+   ]
+  ],
+  "gabarito": "Entre os deveres do profissional certificado estão sigilo, lealdade e diligência. Informações de clientes (saldos, operações, dados pessoais) são protegidas pelo sigilo bancário (LC 105/2001) e pela LGPD, e só podem ser reveladas nas hipóteses legais. O dever vale em qualquer ambiente.",
+  "dica": "Dados de cliente: sigilo sempre, dentro e fora do trabalho."
+ },
+ {
+  "pd": "3.4.4.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Em uma supervisão, o regulador descobre que uma corretora permitia que funcionários sem certificação exigida distribuíssem produtos de investimento, e aplica multa.",
+  "enunciado": "O risco que se materializou para a corretora foi principalmente o:",
+  "certa": "regulatório, por descumprir normas e sofrer sanção do regulador.",
+  "erradas": [
+   [
+    "de mercado, pois os produtos distribuídos tiveram desvalorização.",
+    "Não houve perda por variação de preços."
+   ],
+   [
+    "de crédito, pois clientes deixaram de pagar empréstimos.",
+    "Não houve inadimplência."
+   ],
+   [
+    "de liquidez, pois a corretora não tinha caixa para operar.",
+    "A sanção decorreu de descumprimento de normas."
+   ]
+  ],
+  "gabarito": "Risco regulatório é a possibilidade de sanções (multas, advertências, suspensões) por descumprir normas de reguladores (BC, CVM, SUSEP) ou de autorreguladores (Anbima, BSM). Exemplos: profissionais sem certificação, falhas de suitability, PLD deficiente, publicidade irregular. Costuma vir acompanhado de risco de imagem e legal.",
+  "dica": "Descumpriu norma e foi punido pelo regulador = risco regulatório."
+ },
+ {
+  "pd": "3.4.5.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento, um participante afirma que só há lavagem de dinheiro quando os recursos vêm de tráfico de drogas ou corrupção. Ivo, profissional CPA, corrige.",
+  "enunciado": "Ivo explica que, desde a Lei 12.683/2012, a lavagem pode ter como antecedente:",
+  "certa": "qualquer infração penal, sem uma lista fechada de crimes.",
+  "erradas": [
+   [
+    "apenas crimes contra a administração pública, como a corrupção.",
+    "A lei não restringe mais o rol de crimes antecedentes."
+   ],
+   [
+    "apenas crimes cometidos no exterior.",
+    "Crimes cometidos no Brasil também são antecedentes."
+   ],
+   [
+    "apenas crimes com pena acima de 10 anos.",
+    "Não há esse limite de pena."
+   ]
+  ],
+  "gabarito": "A Lei 9.613/1998, alterada pela Lei 12.683/2012, eliminou a lista fechada de crimes antecedentes: a ocultação ou dissimulação de bens, direitos ou valores provenientes, direta ou indiretamente, de qualquer infração penal configura lavagem de dinheiro. Isso ampliou o alcance da lei e reforçou os deveres de prevenção dos setores obrigados.",
+  "dica": "Lavagem: o crime antecedente pode ser qualquer infração penal (desde 2012)."
+ },
+ {
+  "pd": "3.4.6.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma agência ainda guarda fichas cadastrais em papel. Um funcionário acha que a LGPD só vale para dados digitais. Pergunta a Clara, profissional CPA.",
+  "enunciado": "Clara explica que a LGPD:",
+  "certa": "vale para dados pessoais em qualquer meio, físico ou digital.",
+  "erradas": [
+   [
+    "vale só para dados armazenados em nuvem.",
+    "A lei abrange qualquer meio."
+   ],
+   [
+    "vale só para empresas de tecnologia, e não para bancos.",
+    "Aplica-se a qualquer pessoa física ou jurídica que trate dados pessoais, com as exceções legais."
+   ],
+   [
+    "vale só para dados sensíveis, como saúde e biometria.",
+    "Aplica-se a todos os dados pessoais, com regras extras para os sensíveis."
+   ]
+  ],
+  "gabarito": "A LGPD aplica-se a qualquer operação de tratamento de dados pessoais realizada por pessoa natural ou jurídica, de direito público ou privado, em meio físico ou digital, com algumas exceções (como fins exclusivamente pessoais, jornalísticos e de segurança pública). Fichas em papel também exigem cuidados de acesso, guarda e descarte.",
+  "dica": "LGPD vale para papel e digital."
+ },
+ {
+  "pd": "3.1.5.5",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Paulo quer acumular R$ 120 mil para a faculdade da filha em 10 anos. Ele pergunta a Renata, profissional CPA, como calcular quanto aportar por mês.",
+  "enunciado": "Renata explica que o cálculo deve considerar:",
+  "certa": "o valor futuro, o prazo, a taxa e a inflação das mensalidades.",
+  "erradas": [
+   [
+    "só dividir R$ 120 mil por 120 meses, ignorando rendimentos e inflação.",
+    "Assim se ignoram juros e inflação, distorcendo o valor."
+   ],
+   [
+    "apenas a rentabilidade passada do produto escolhido.",
+    "Rentabilidade passada não garante a futura nem define o aporte."
+   ],
+   [
+    "só a renda atual de Paulo, aplicando um percentual fixo de 50%.",
+    "O aporte depende da meta, não de percentual arbitrário."
+   ]
+  ],
+  "gabarito": "Para planejar um fundo educacional, define-se o valor futuro necessário (em geral corrigido pela inflação esperada das mensalidades), o prazo e uma taxa de retorno compatível com o perfil. Com isso, calcula-se o aporte periódico (valor de uma série de pagamentos). Trabalhar com valores e taxas reais simplifica o cálculo e evita a ilusão monetária. O plano deve ser revisto periodicamente.",
+  "dica": "Fundo educacional: valor futuro + prazo + taxa + inflação → aporte mensal."
+ },
+ {
+  "pd": "3.4.7.1.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um conselheiro de uma companhia aberta quer comprar ações da empresa nos dias anteriores à divulgação do resultado trimestral, que ele já conhece. Pergunta a Hugo, profissional CPA, se pode.",
+  "enunciado": "Hugo explica que:",
+  "certa": "não pode: tem informação não divulgada e há período de vedação.",
+  "erradas": [
+   [
+    "pode, desde que compre um volume pequeno de ações.",
+    "O volume não afasta a vedação."
+   ],
+   [
+    "pode, pois conselheiros só ficam impedidos de vender ações, não de comprar.",
+    "A vedação vale para compra e venda."
+   ],
+   [
+    "pode, se comunicar a compra à CVM no dia seguinte.",
+    "Comunicar depois não legitima negociar com informação privilegiada."
+   ]
+  ],
+  "gabarito": "Pessoas com acesso a informação relevante ainda não divulgada não podem negociar valores mobiliários da companhia. A regulação da CVM prevê também período de vedação para administradores e outras pessoas antes da divulgação das demonstrações financeiras. Negociar nesse contexto pode configurar insider trading (crime e ilícito administrativo).",
+  "dica": "Administrador com resultado em mãos não negocia: período de vedação e insider."
+ },
+ {
+  "pd": "3.1.3.3.10",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Seu Valdir, pequeno produtor de leite, precisa comprar ração e um resfriador. Pergunta a Mônica, profissional CPA, se existe crédito com condições específicas para ele.",
+  "enunciado": "Mônica explica que ele pode buscar:",
+  "certa": "crédito rural, com recursos e programas próprios.",
+  "erradas": [
+   [
+    "somente cheque especial, pois produtores não têm linhas próprias.",
+    "Há linhas de crédito rural com condições específicas."
+   ],
+   [
+    "crédito imobiliário do SFH, que financia equipamentos agrícolas.",
+    "O SFH financia habitação."
+   ],
+   [
+    "um título de capitalização, que adianta recursos ao produtor.",
+    "Capitalização não é crédito."
+   ]
+  ],
+  "gabarito": "O crédito rural financia custeio, investimento, comercialização e industrialização da produção agropecuária, com recursos direcionados (como parte dos depósitos e da poupança rural) e programas para pequenos produtores e agricultura familiar, com juros e prazos diferenciados. Segue as regras do Manual de Crédito Rural do Banco Central.",
+  "dica": "Produtor rural: crédito rural com recursos direcionados e condições próprias."
+ },
+ {
+  "pd": "4.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa passou a vincular parte da remuneração dos executivos a metas de redução de acidentes e de emissões, aprovadas pelo conselho com membros independentes. Um cliente pergunta a Lúcia, profissional CPA, que pilar ESG isso reforça.",
+  "enunciado": "Lúcia explica que essa prática é típica do pilar de:",
+  "certa": "governança, por alinhar incentivos e supervisão do conselho.",
+  "erradas": [
+   [
+    "ambiental, pois toda decisão sobre metas é ambiental.",
+    "A forma de incentivar e supervisionar a gestão é governança."
+   ],
+   [
+    "social, pois os executivos são funcionários da empresa.",
+    "O tema central é estrutura de incentivos e supervisão."
+   ],
+   [
+    "nenhum pilar, pois remuneração não tem relação com ESG.",
+    "Remuneração e conselho são temas centrais de governança."
+   ]
+  ],
+  "gabarito": "O pilar de governança (G) trata de como a empresa é dirigida e controlada: composição e independência do conselho, direitos dos acionistas, ética, transparência, controles internos e política de remuneração. Vincular remuneração a metas ESG e ter supervisão independente fortalece a execução das metas ambientais e sociais.",
+  "dica": "Conselho, incentivos, ética e transparência = governança."
+ },
+ {
+  "pd": "4.2.6.2.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um investidor quer comparar como companhias abertas tratam temas ESG e pergunta a Rogério, profissional CPA, se a CVM exige alguma divulgação.",
+  "enunciado": "Rogério explica que a CVM:",
+  "certa": "exige no formulário de referência informações ESG, no modelo “pratique ou explique”.",
+  "erradas": [
+   [
+    "proíbe as companhias de divulgar informações ESG, por não serem auditadas.",
+    "A CVM incentiva e exige divulgação estruturada."
+   ],
+   [
+    "delega toda a regulação ESG ao Banco Central.",
+    "A CVM regula a divulgação das companhias abertas."
+   ],
+   [
+    "exige que todas as companhias tenham rating ESG máximo para continuar listadas.",
+    "Não há exigência de rating ESG máximo."
+   ]
+  ],
+  "gabarito": "A CVM atua na agenda ESG exigindo divulgação de informações sociais, ambientais e climáticas por companhias abertas no formulário de referência, em regra no modelo “pratique ou explique”, além de regras para fundos (CVM 175, art. 49) e iniciativas de relatórios de sustentabilidade. A Anbima complementa com autorregulação, e o PRI reúne compromissos voluntários de investidores.",
+  "dica": "CVM: companhias divulgam ESG no formulário de referência (pratique ou explique)."
+ },
+ {
+  "pd": "4.4.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Diego, profissional CPA, quais vantagens costumam ser citadas para as finanças descentralizadas (DeFi).",
+  "enunciado": "Diego cita, entre as vantagens:",
+  "certa": "acesso aberto e funcionamento contínuo, com regras transparentes em código.",
+  "erradas": [
+   [
+    "garantia do FGC e supervisão do Banco Central em todas as operações.",
+    "DeFi não tem FGC nem supervisão bancária tradicional."
+   ],
+   [
+    "ausência de qualquer risco, por eliminar intermediários.",
+    "Há riscos de código, mercado e liquidez."
+   ],
+   [
+    "rentabilidade fixa garantida pelos protocolos.",
+    "Rentabilidades variam e não são garantidas."
+   ]
+  ],
+  "gabarito": "Vantagens citadas para DeFi: acesso aberto (qualquer pessoa com internet e carteira digital), funcionamento 24/7, transparência das regras e transações em blockchain, composabilidade e redução de intermediários. Desvantagens e riscos: volatilidade, falhas e ataques a contratos, perda de chaves, incerteza regulatória e ausência de garantias como o FGC.",
+  "dica": "DeFi: aberto, 24/7 e transparente, mas com riscos e sem FGC."
+ },
+ {
+  "pd": "4.6.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Renata, profissional CPA, qual a diferença entre a IA “tradicional” usada no score de crédito e a IA generativa dos assistentes de texto.",
+  "enunciado": "Renata explica que:",
+  "certa": "a preditiva estima resultados; a generativa cria conteúdo.",
+  "erradas": [
+   [
+    "as duas são idênticas, mudando só o nome comercial.",
+    "Têm objetivos e técnicas diferentes."
+   ],
+   [
+    "a IA generativa só funciona sem dados, enquanto a preditiva usa dados.",
+    "As duas são treinadas com grandes volumes de dados."
+   ],
+   [
+    "a IA preditiva cria textos, e a generativa calcula scores de crédito.",
+    "As funções estão invertidas."
+   ]
+  ],
+  "gabarito": "IA preditiva (ou analítica) usa dados históricos para classificar ou estimar resultados: risco de crédito, fraude, propensão de compra. IA generativa produz conteúdo novo (textos, imagens, códigos) a partir de padrões aprendidos, útil em atendimento, resumos e produtividade. Ambas exigem governança, qualidade de dados, controle de vieses e supervisão humana.",
+  "dica": "Preditiva = estima (risco, fraude). Generativa = cria (texto, imagem)."
+ },
+ {
+  "pd": "4.7.6.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Em uma aula sobre meios de pagamento, um aluno pergunta a Sandra, profissional CPA, a diferença entre cartão de débito, de crédito e pré-pago.",
+  "enunciado": "Sandra explica que:",
+  "certa": "débito usa o saldo; crédito, um limite com fatura; pré-pago, saldo carregado.",
+  "erradas": [
+   [
+    "os três usam limite de crédito concedido pelo banco.",
+    "Só o cartão de crédito usa limite de crédito."
+   ],
+   [
+    "o pré-pago gera fatura mensal com juros, e o de crédito usa saldo carregado antes.",
+    "As definições estão trocadas."
+   ],
+   [
+    "o cartão de débito permite parcelar com juros do rotativo.",
+    "Rotativo é do cartão de crédito."
+   ]
+  ],
+  "gabarito": "Meios de pagamento eletrônicos: cartão de débito (debita o saldo da conta na hora), cartão de crédito (usa um limite concedido, pago depois na fatura, com juros se não pago integralmente), cartão pré-pago (usa saldo previamente carregado), além de transferências, boletos e Pix. Os arranjos de pagamento definem as regras de cada modalidade.",
+  "dica": "Débito = saldo da conta. Crédito = limite e fatura. Pré-pago = saldo carregado antes."
+ }
+]

@@ -42,6 +42,11 @@
  "S09": {
   "titulo": "Simulado 9",
   "criado": "2026-11-09",
-  "descricao": "Árvores de diálogo: Sônia e a venda do imóvel e Pedro e Ana, recém-casados."
+  "descricao": "Árvores de diálogo: Sônia e a venda do imóvel, Marcos e os impostos e Pedro e Ana, recém-casados."
+ },
+ "S10": {
+  "titulo": "Simulado 10",
+  "criado": "2026-11-09",
+  "descricao": "Árvores de diálogo: Caio e a inflação, Henrique e a aposentadoria e Dona Teresa e a herança."
  }
 }

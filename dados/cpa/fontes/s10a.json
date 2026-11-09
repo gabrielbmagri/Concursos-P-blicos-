@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.2.4.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Caio e a inflação",
+  "etapa": "1/3",
+  "contexto": "Caio lê no Boletim Focus que os analistas elevaram as projeções de inflação para os próximos dois anos, acima da meta. Ele pergunta a Bianca, profissional CPA, por que o BC se preocupa tanto com expectativas.",
+  "enunciado": "Bianca explica que expectativas de inflação desancoradas:",
+  "certa": "tendem a se realizar e exigem juros mais altos.",
+  "erradas": [
+   [
+    "não têm efeito real, pois só a inflação passada influencia os preços.",
+    "Expectativas influenciam reajustes de preços, salários e contratos."
+   ],
+   [
+    "levam o BC a reduzir os juros, para estimular a economia.",
+    "Expectativas acima da meta pedem política mais restritiva."
+   ],
+   [
+    "são controladas diretamente pelo CMN, que fixa os preços dos bens.",
+    "O CMN não fixa preços; o BC atua sobre as expectativas com juros e comunicação."
+   ]
+  ],
+  "gabarito": "No regime de metas, as expectativas de inflação (medidas, por exemplo, pelo Boletim Focus) são centrais: empresas e trabalhadores reajustam preços e salários com base no que esperam, o que pode realimentar a inflação. Expectativas desancoradas exigem política monetária mais apertada. Credibilidade e comunicação do BC ajudam a ancorá-las.",
+  "dica": "Expectativa de inflação alta tende a virar inflação: o BC reage com juros."
+ },
+ {
+  "pd": "1.3.4.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Caio e a inflação",
+  "etapa": "2/3",
+  "contexto": "Caio compra um título que paga IPCA + 6% ao ano. Se o IPCA do ano for de 4%, ele quer saber qual será a rentabilidade nominal bruta.",
+  "enunciado": "Bianca calcula, pela fórmula de Fisher, cerca de:",
+  "certa": "10,24% ao ano.",
+  "erradas": [
+   [
+    "10,00% ao ano.",
+    "A soma simples ignora o efeito multiplicativo: 1,04 × 1,06 − 1."
+   ],
+   [
+    "2,00% ao ano.",
+    "Seria a diferença entre as taxas, sem sentido aqui."
+   ],
+   [
+    "24,00% ao ano.",
+    "Multiplicar as taxas (4 × 6) não é a conta correta."
+   ]
+  ],
+  "gabarito": "Pela fórmula de Fisher: (1 + nominal) = (1 + inflação) × (1 + real) = 1,04 × 1,06 = 1,1024, ou seja, 10,24% ao ano nominal. Em títulos atrelados ao IPCA, o investidor garante o ganho real contratado (6%) se levar ao vencimento, qualquer que seja a inflação.",
+  "dica": "Nominal = (1 + inflação) × (1 + real) − 1."
+ },
+ {
+  "pd": "1.3.3.5.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Caio e a inflação",
+  "etapa": "3/3",
+  "contexto": "Caio pergunta a Bianca por que os analistas usam a taxa dos títulos públicos como referência para avaliar se outros investimentos “valem a pena”.",
+  "enunciado": "Bianca explica que esses títulos representam:",
+  "certa": "a taxa livre de risco da economia, base para medir o prêmio de outros ativos.",
+  "erradas": [
+   [
+    "o maior retorno possível, que nenhum outro investimento consegue superar.",
+    "Outros ativos podem render mais, com mais risco."
+   ],
+   [
+    "a taxa de inflação oficial, calculada pelo Tesouro Nacional.",
+    "A inflação oficial é o IPCA, do IBGE."
+   ],
+   [
+    "o custo de oportunidade apenas para investidores estrangeiros.",
+    "A referência vale para todos os investidores."
+   ]
+  ],
+  "gabarito": "A taxa livre de risco é o retorno de um ativo com risco de crédito mínimo, em geral o título público do país em moeda local (risco soberano). Serve de referência para o custo de oportunidade e para o prêmio de risco exigido de outros investimentos (crédito privado, ações). Investimentos com mais risco precisam oferecer retorno esperado acima dela.",
+  "dica": "Título público = referência livre de risco. Outros ativos precisam pagar um prêmio acima dela."
+ },
+ {
+  "pd": "1.1.3.1.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente diz a Mateus, profissional CPA, que fintechs “não são reguladas” e por isso oferecem taxas melhores. Mateus corrige.",
+  "enunciado": "Mateus explica que as fintechs:",
+  "certa": "são reguladas conforme a atividade, por BC, CVM ou SUSEP.",
+  "erradas": [
+   [
+    "estão fora da regulação, pois atuam apenas pela internet.",
+    "O canal digital não afasta a regulação da atividade."
+   ],
+   [
+    "são reguladas apenas pela Anbima, que autoriza seu funcionamento.",
+    "A Anbima não autoriza funcionamento de instituições."
+   ],
+   [
+    "só podem oferecer contas de pagamento, sendo proibidas de conceder crédito.",
+    "Fintechs de crédito (SCD, SEP) podem conceder crédito com autorização."
+   ]
+  ],
+  "gabarito": "Fintechs são empresas que usam tecnologia para oferecer serviços financeiros. Conforme a atividade, precisam de autorização e são supervisionadas: instituições de pagamento, SCD e SEP (Banco Central); plataformas de investimento e crowdfunding (CVM); insurtechs (SUSEP). Taxas competitivas costumam vir de custos menores e uso de dados, não de ausência de regulação.",
+  "dica": "Fintech também é regulada: BC, CVM ou SUSEP, conforme o que faz."
+ },
+ {
+  "pd": "1.1.3.1.9",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um governo estadual criou uma agência de fomento para financiar pequenas empresas locais. Um cliente pergunta a Jair, profissional CPA, se pode abrir conta e aplicar recursos nessa agência.",
+  "enunciado": "Jair explica que as agências de fomento:",
+  "certa": "financiam projetos regionais, mas não captam do público.",
+  "erradas": [
+   [
+    "funcionam como bancos comerciais, com conta corrente e CDB para o público.",
+    "Agências de fomento não captam do público."
+   ],
+   [
+    "são entidades privadas sem supervisão, ligadas apenas ao governo estadual.",
+    "São instituições financeiras sob supervisão do BC."
+   ],
+   [
+    "só financiam grandes empresas multinacionais com recursos do FGC.",
+    "O FGC não financia empresas."
+   ]
+  ],
+  "gabarito": "Agências de fomento são instituições financeiras controladas por estados, que financiam projetos de desenvolvimento regional (por exemplo, pequenas empresas e infraestrutura), com recursos próprios, de fundos públicos ou de repasses (como os do BNDES). Não podem captar recursos do público nem ter contas de depósito. São supervisionadas pelo Banco Central.",
+  "dica": "Agência de fomento: financia o desenvolvimento regional; não capta do público."
+ },
+ {
+  "pd": "1.2.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente percebe que o banco paga 100% do CDI no CDB e cobra mais de 3% ao mês no crédito pessoal. Pergunta a Elaine, profissional CPA, o que explica a diferença.",
+  "enunciado": "Elaine explica que a diferença é o:",
+  "certa": "spread bancário (risco, custos, impostos e margem).",
+  "erradas": [
+   [
+    "compulsório, que o banco devolve ao cliente na forma de juros.",
+    "O compulsório é recolhimento ao BC, não juros devolvidos."
+   ],
+   [
+    "FGC, que cobra do tomador o custo da garantia dos depósitos.",
+    "A contribuição ao FGC é custo do banco, mas não explica o spread."
+   ],
+   [
+    "IOF, que representa a maior parte da taxa do crédito pessoal.",
+    "O IOF existe, mas é pequeno perto do spread."
+   ]
+  ],
+  "gabarito": "No mercado de crédito, os bancos captam recursos (depósitos, CDB) e emprestam. O spread bancário é a diferença entre a taxa cobrada nos empréstimos e o custo de captação. Ele remunera o risco de inadimplência, despesas administrativas, tributos, compulsórios e o lucro. Linhas com mais risco e menos garantias têm spreads maiores.",
+  "dica": "Spread bancário = taxa do empréstimo − custo de captação (risco, custos, impostos e lucro)."
+ },
+ {
+  "pd": "1.2.6.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "O IBGE divulga queda forte da taxa de desemprego, com salários subindo acima da produtividade. Um cliente pergunta a Rui, profissional CPA, que efeito isso pode ter sobre a política monetária.",
+  "enunciado": "Rui explica que, nesse cenário:",
+  "certa": "emprego aquecido pressiona a inflação e pode elevar os juros.",
+  "erradas": [
+   [
+    "o desemprego baixo reduz automaticamente a inflação de serviços.",
+    "Mercado aquecido tende a pressionar preços, especialmente de serviços."
+   ],
+   [
+    "o BC deve cortar juros sempre que o desemprego cair.",
+    "Desemprego baixo com salários em alta pode pedir juros maiores."
+   ],
+   [
+    "a taxa de desemprego não tem relação com a economia nem com os juros.",
+    "O mercado de trabalho é variável central para a inflação."
+   ]
+  ],
+  "gabarito": "A taxa de desemprego (medida pelo IBGE na PNAD Contínua) indica a folga do mercado de trabalho. Desemprego muito baixo, com salários acima da produtividade, aumenta a renda e os custos das empresas, pressionando a inflação, sobretudo de serviços. O BC acompanha esse indicador ao decidir os juros. Desemprego alto reduz consumo e pressões inflacionárias.",
+  "dica": "Mercado de trabalho apertado → pressão inflacionária → juros tendem a subir."
+ },
+ {
+  "pd": "1.3.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Duas debêntures de 5 anos pagam a mesma taxa. Uma devolve o principal só no vencimento; a outra amortiza 20% do principal por ano. Um cliente pergunta a Fernanda, profissional CPA, qual delas devolve o dinheiro mais rápido.",
+  "enunciado": "Fernanda explica que a debênture com amortizações anuais:",
+  "certa": "devolve o capital ao longo do tempo e tem prazo médio (duration) menor.",
+  "erradas": [
+   [
+    "devolve o capital mais tarde, pois os juros são calculados sobre o principal total.",
+    "Com amortização, os juros incidem sobre o saldo menor e o capital volta antes."
+   ],
+   [
+    "tem duration igual à da outra, pois o vencimento final é o mesmo.",
+    "O fluxo antecipado reduz a duration."
+   ],
+   [
+    "não paga juros, apenas devolve o principal em parcelas.",
+    "Paga juros sobre o saldo devedor, além das amortizações."
+   ]
+  ],
+  "gabarito": "Em ativos de crédito privado, o principal pode ser pago no vencimento (bullet) ou em amortizações periódicas. Com amortizações, o investidor recebe o capital antes, os juros incidem sobre o saldo remanescente e o prazo médio (duration) fica menor, reduzindo a sensibilidade a juros e a exposição ao risco de crédito ao longo do tempo.",
+  "dica": "Amortização periódica: capital volta antes, duration menor."
+ },
+ {
+  "pd": "1.4.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa fez um contrato de derivativo cambial diretamente com um banco, sem registro em câmara com contraparte central. O banco quebrou antes do vencimento. O diretor pergunta a Lauro, profissional CPA, que risco se materializou.",
+  "enunciado": "Lauro explica que foi o:",
+  "certa": "risco de contraparte: a outra parte não cumpriu o contrato.",
+  "erradas": [
+   [
+    "risco de mercado: o dólar oscilou mais que o esperado.",
+    "A perda veio da falta de pagamento, não da oscilação de preço."
+   ],
+   [
+    "risco operacional: a empresa errou ao registrar o contrato.",
+    "Não houve erro de processo da empresa."
+   ],
+   [
+    "risco de liquidez: a empresa não encontrou comprador para o contrato.",
+    "O problema foi o inadimplemento da contraparte."
+   ]
+  ],
+  "gabarito": "Risco de contraparte é a possibilidade de a outra parte de um contrato (derivativo, empréstimo de ativos, operação compromissada) não cumprir suas obrigações. Em operações com contraparte central (como na B3), a câmara assume e garante a liquidação, com margens. Em contratos bilaterais sem garantias, o risco fica com as partes.",
+  "dica": "Risco de contraparte: a outra parte não paga. Contraparte central reduz esse risco."
+ },
+ {
+  "pd": "1.4.11",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma palestra, um empreendedor pergunta a Sílvia, profissional CPA, o que mudou com a Lei de Liberdade Econômica (Lei 13.874/2019).",
+  "enunciado": "Sílvia explica que a lei:",
+  "certa": "garante a livre iniciativa, presume a boa-fé e torna subsidiária a intervenção do Estado.",
+  "erradas": [
+   [
+    "proíbe o Estado de regular qualquer atividade econômica, inclusive a financeira.",
+    "A lei não elimina a regulação; reduz exigências desnecessárias."
+   ],
+   [
+    "cria tabelamento de preços para proteger o consumidor.",
+    "A lei vai no sentido oposto: liberdade de preços."
+   ],
+   [
+    "extingue a CVM e o Banco Central, substituídos pela autorregulação.",
+    "Os reguladores continuam existindo."
+   ]
+  ],
+  "gabarito": "A Lei 13.874/2019 (Declaração de Direitos de Liberdade Econômica) estabelece princípios como a liberdade no exercício de atividades econômicas, a presunção de boa-fé do particular, a intervenção subsidiária e excepcional do Estado e o reconhecimento da vulnerabilidade do particular perante o Estado. Reduz exigências burocráticas (alvarás para atividades de baixo risco), sem eliminar a regulação prudencial do sistema financeiro.",
+  "dica": "Liberdade Econômica: livre iniciativa, boa-fé presumida, Estado intervém de forma subsidiária."
+ },
+ {
+  "pd": "2.2.3.4.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Henrique e a aposentadoria",
+  "etapa": "1/3",
+  "contexto": "Henrique, 62 anos, vai se aposentar e tem esposa e dois filhos menores. Quer renda vitalícia que, se ele falecer, continue para a esposa e, na falta dela, para os filhos até a maioridade. Pergunta a Ana, profissional CPA.",
+  "enunciado": "Ana indica a renda:",
+  "certa": "vitalícia reversível ao cônjuge com continuidade aos menores.",
+  "erradas": [
+   [
+    "temporária, que paga aos filhos até a maioridade e depois ao cônjuge.",
+    "A temporária paga por prazo definido ao titular vivo."
+   ],
+   [
+    "por prazo certo, que paga à esposa por toda a vida dela.",
+    "Prazo certo paga por período fixo, não vitalício."
+   ],
+   [
+    "vitalícia simples, que já inclui a continuidade a todos os dependentes.",
+    "A vitalícia simples cessa com a morte do titular."
+   ]
+  ],
+  "gabarito": "A renda vitalícia reversível ao cônjuge com continuidade aos menores paga ao titular enquanto viver; após sua morte, reverte ao cônjuge (por toda a vida dele) e, na falta deste, aos filhos menores até a maioridade. As garantias adicionais reduzem o valor da renda mensal em relação à vitalícia simples.",
+  "dica": "Reversível ao cônjuge com continuidade aos menores: protege cônjuge e filhos menores."
+ },
+ {
+  "pd": "2.2.3.4.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Henrique e a aposentadoria",
+  "etapa": "2/3",
+  "contexto": "Henrique pensa também em receber parte do VGBL de uma só vez, como pagamento único, para quitar o imóvel. Pergunta a Ana como isso funciona.",
+  "enunciado": "Ana explica que no pagamento único:",
+  "certa": "o saldo vem de uma vez, com IR conforme plano e regime, sem renda futura.",
+  "erradas": [
+   [
+    "o saldo é pago de uma vez sem qualquer tributação, por ser fase de benefício.",
+    "Há tributação conforme o plano e o regime."
+   ],
+   [
+    "a seguradora continua pagando renda vitalícia sobre o valor recebido.",
+    "Após o pagamento único, não há renda sobre essa parcela."
+   ],
+   [
+    "o valor só pode ser usado para quitar dívidas com a própria seguradora.",
+    "O uso do dinheiro é livre."
+   ]
+  ],
+  "gabarito": "Na fase de benefício, uma das opções é o pagamento único (ou resgate do saldo), que entrega a reserva de uma vez. A tributação segue o tipo de plano (VGBL sobre rendimentos, PGBL sobre o total) e o regime (progressivo ou regressivo). Trocar renda por pagamento único dá liquidez, mas transfere ao participante o risco de o dinheiro acabar.",
+  "dica": "Pagamento único: liquidez imediata e IR conforme plano e regime, mas sem renda futura."
+ },
+ {
+  "pd": "2.2.3.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Henrique e a aposentadoria",
+  "etapa": "3/3",
+  "contexto": "Antes de começar a receber, Henrique quer mudar parte do VGBL para outro VGBL da mesma seguradora, com taxa menor. Pergunta a Ana se é possível e se há imposto.",
+  "enunciado": "Ana explica que ele pode fazer:",
+  "certa": "portabilidade interna, sem IR, respeitando a carência.",
+  "erradas": [
+   [
+    "somente portabilidade externa, pois a interna é proibida pela SUSEP.",
+    "A portabilidade pode ser interna ou externa."
+   ],
+   [
+    "a portabilidade interna, mas com IR de 15% antecipado sobre o rendimento.",
+    "Não há IR na portabilidade."
+   ],
+   [
+    "a portabilidade para um PGBL, para aproveitar o benefício fiscal.",
+    "A portabilidade deve ser entre planos da mesma modalidade."
+   ]
+  ],
+  "gabarito": "Portabilidade é a transferência de recursos entre planos, durante a fase de acumulação. Pode ser interna (entre planos da mesma entidade) ou externa (para outra entidade), sempre entre planos da mesma modalidade (PGBL↔PGBL, VGBL↔VGBL), sem IR e sem passar pelo participante, respeitando a carência do plano de origem. No regressivo, o tempo dos aportes é mantido.",
+  "dica": "Portabilidade interna ou externa: mesma modalidade, sem IR, respeitando carência."
+ },
+ {
+  "pd": "2.1.1.1.1.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Um cliente tem uma NTN-B (Tesouro IPCA+ com Juros Semestrais), cujo cupom é de 6% ao ano. Ele pergunta a Mônica, profissional CPA, qual o percentual pago a cada semestre sobre o valor nominal atualizado.",
+  "enunciado": "Mônica explica que o cupom semestral é de aproximadamente:",
+  "certa": "2,96% ao semestre.",
+  "erradas": [
+   [
+    "3,00% ao semestre.",
+    "3% seria a divisão simples (6% ÷ 2); a taxa equivalente é 1,06^0,5 − 1."
+   ],
+   [
+    "6,00% ao semestre.",
+    "Pagaria 12% ao ano, o dobro do cupom."
+   ],
+   [
+    "1,50% ao semestre.",
+    "Corresponderia a um cupom de cerca de 3% ao ano."
+   ]
+  ],
+  "gabarito": "A NTN-B paga cupom de 6% ao ano, em base semestral equivalente: 1,06^(1/2) − 1 ≈ 2,9563% sobre o valor nominal atualizado pelo IPCA (VNA). Os cupons são tributados pela tabela regressiva a cada pagamento. A NTN-F paga 10% ao ano (cerca de 4,88% ao semestre) sobre R$ 1.000.",
+  "dica": "NTN-B: cupom de 6% ao ano ≈ 2,96% ao semestre, sobre o valor atualizado pelo IPCA."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco oferece a Juliana um CDB que paga IPCA + 6,5% ao ano, com vencimento em 4 anos. Ela pergunta a Saulo, profissional CPA, que tipo de CDB é esse.",
+  "enunciado": "Saulo explica que é um CDB:",
+  "certa": "híbrido: uma parte prefixada (6,5%) e outra pós-fixada (IPCA).",
+  "erradas": [
+   [
+    "prefixado, pois a taxa de 6,5% é conhecida desde a aplicação.",
+    "O IPCA só é conhecido depois; a rentabilidade total não é prefixada."
+   ],
+   [
+    "pós-fixado ao CDI, pois todo CDB acompanha a taxa DI.",
+    "Este CDB é atrelado ao IPCA, não ao CDI."
+   ],
+   [
+    "isento de IR, por proteger o investidor da inflação.",
+    "CDB é tributado em qualquer modalidade."
+   ]
+  ],
+  "gabarito": "CDBs podem ser prefixados (taxa definida), pós-fixados (percentual do CDI ou da Selic) ou híbridos (inflação mais taxa prefixada, como IPCA + 6,5%). O híbrido garante ganho real se levado ao vencimento, mas pode oscilar de preço se vendido antes. Todos têm FGC até o limite e IR pela tabela regressiva.",
+  "dica": "IPCA + taxa = híbrido: protege da inflação e garante ganho real no vencimento."
+ },
+ {
+  "pd": "2.1.1.1.7",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente diz a Wagner, profissional CPA, que só compra debêntures AAA porque “o rating garante que não haverá calote”.",
+  "enunciado": "Wagner explica que o rating:",
+  "certa": "é uma opinião sobre o risco de crédito, que pode mudar e não garante o pagamento.",
+  "erradas": [
+   [
+    "é garantia de pagamento dada pela agência, que cobre o investidor em caso de calote.",
+    "Agências não garantem pagamentos."
+   ],
+   [
+    "é definido pelo Banco Central e vale até o vencimento do título.",
+    "O rating é dado por agências privadas e pode ser revisto."
+   ],
+   [
+    "mede a rentabilidade esperada, e AAA indica o maior retorno.",
+    "AAA indica menor risco e, em geral, menor retorno."
+   ]
+  ],
+  "gabarito": "Rating é a opinião de agências especializadas sobre a capacidade e a disposição de um emissor (ou de uma emissão) de honrar suas obrigações. É útil para comparar riscos, mas não é garantia: pode ser rebaixado, e emissores bem avaliados podem entrar em dificuldade. O investidor deve diversificar e analisar o emissor, as garantias e as condições da emissão.",
+  "dica": "Rating é opinião, não garantia. Pode mudar."
+ },
+ {
+  "pd": "2.1.1.1.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um CRI tem como lastro financiamentos de casas a pessoas físicas. Com a queda dos juros, muitos mutuários quitam os contratos antes do prazo. Um cotista pergunta a Laura, profissional CPA, o efeito para ele.",
+  "enunciado": "Laura explica que o investidor enfrenta:",
+  "certa": "risco de pré-pagamento: recebe antes e reaplica a taxas menores.",
+  "erradas": [
+   [
+    "risco de mercado: o preço do CRI sobe porque os mutuários quitaram.",
+    "O efeito principal é a antecipação do fluxo e a reaplicação a taxas menores."
+   ],
+   [
+    "risco cambial: os pagamentos antecipados são feitos em dólar.",
+    "Os pagamentos são em reais."
+   ],
+   [
+    "nenhum risco, pois receber antes é sempre vantajoso.",
+    "Receber antes quando os juros caíram reduz o retorno total."
+   ]
+  ],
+  "gabarito": "Em CRIs lastreados em financiamentos imobiliários, os devedores podem pagar antecipadamente, especialmente quando os juros caem. O investidor recebe o capital antes do previsto e precisa reaplicar a taxas menores (risco de pré-pagamento ou de reinvestimento). Outros riscos: crédito dos devedores, liquidez e juros. Diferença entre CRI e CRA: o lastro (imobiliário ou agronegócio).",
+  "dica": "CRI com lastro em financiamento: pré-pagamento antecipa o fluxo e força reaplicação a taxa menor."
+ },
+ {
+  "pd": "2.1.1.1.11",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Rafaela aplicou R$ 30 mil no Tesouro Selic e vendeu após 2 anos e 2 meses, com rendimento bruto de R$ 8.000. Pergunta a Hélio, profissional CPA, quanto pagou de IR.",
+  "enunciado": "Hélio calcula que o IR foi de:",
+  "certa": "R$ 1.200,00 (15% sobre o rendimento).",
+  "erradas": [
+   [
+    "R$ 1.400,00 (17,5% sobre o rendimento).",
+    "Com mais de 720 dias, a alíquota é de 15%."
+   ],
+   [
+    "R$ 1.800,00 (22,5% sobre o rendimento).",
+    "22,5% vale para até 180 dias."
+   ],
+   [
+    "R$ 5.700,00 (15% sobre o valor total resgatado).",
+    "O IR incide só sobre o rendimento."
+   ]
+  ],
+  "gabarito": "Títulos públicos seguem a tabela regressiva. 2 anos e 2 meses passam de 720 dias: alíquota de 15%. IR = 15% × 8.000 = R$ 1.200, retido na fonte. Valor líquido: 30.000 + 8.000 − 1.200 = R$ 36.800.",
+  "dica": "Mais de 720 dias: 15% sobre o rendimento."
+ },
+ {
+  "pd": "2.1.1.2.2.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Dois amigos vão abrir um negócio e discutem entre criar uma sociedade limitada ou uma sociedade anônima. Perguntam a Fábio, profissional CPA, a diferença básica.",
+  "enunciado": "Fábio explica que:",
+  "certa": "limitada tem quotas; S/A tem ações, negociáveis se for aberta.",
+  "erradas": [
+   [
+    "na limitada o capital se divide em ações negociáveis em bolsa, e na S/A em quotas.",
+    "As definições estão invertidas."
+   ],
+   [
+    "os dois tipos podem negociar ações livremente na B3, sem registro.",
+    "Só companhias abertas registradas negociam ações em bolsa."
+   ],
+   [
+    "na S/A a responsabilidade dos sócios é sempre ilimitada.",
+    "Na S/A, o acionista responde até o preço de emissão de suas ações."
+   ]
+  ],
+  "gabarito": "Sociedade limitada: capital dividido em quotas; responsabilidade dos sócios limitada ao valor das quotas (respondem solidariamente pela integralização do capital); transferência de quotas mais restrita. Sociedade anônima: capital dividido em ações; responsabilidade limitada ao preço de emissão; pode ser fechada ou aberta (registrada na CVM, com acesso ao mercado de capitais).",
+  "dica": "Limitada = quotas. S/A = ações (bolsa só se for aberta e listada)."
+ },
+ {
+  "pd": "2.1.1.2.2.2.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Lúcio tem 300 ações cotadas a R$ 60. A empresa aprova desdobramento na proporção de 1 para 3. Ele pergunta a Bete, profissional CPA, como fica sua posição.",
+  "enunciado": "Bete explica que, após o desdobramento, Lúcio terá:",
+  "certa": "900 ações a cerca de R$ 20 (mesmo valor total).",
+  "erradas": [
+   [
+    "100 ações a R$ 180, pois o desdobramento junta as ações.",
+    "Isso seria um grupamento."
+   ],
+   [
+    "900 ações a R$ 60, triplicando o patrimônio.",
+    "O preço é ajustado na mesma proporção."
+   ],
+   [
+    "300 ações a R$ 20, com perda de dois terços do valor.",
+    "A quantidade aumenta; não há perda."
+   ]
+  ],
+  "gabarito": "Desdobramento (split) divide cada ação em várias: com 1 para 3, cada ação vira 3, e o preço é dividido por 3. 300 × 3 = 900 ações; 60 ÷ 3 = R$ 20; valor total igual (R$ 18.000). Costuma ser feito para aumentar a liquidez de ações com preço alto. No grupamento, ocorre o inverso.",
+  "dica": "Desdobramento: mais ações, preço menor, mesmo valor total."
+ },
+ {
+  "pd": "2.1.1.2.3.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa de médio porte quer acessar o mercado de capitais aos poucos, com ofertas menores e regras de governança elevadas. Pergunta a Lia, profissional CPA, qual segmento da B3 foi pensado para isso.",
+  "enunciado": "Lia indica o:",
+  "certa": "Bovespa Mais, de acesso gradual ao mercado.",
+  "erradas": [
+   [
+    "Nível 1, que proíbe a emissão de ações ordinárias.",
+    "O Nível 1 não proíbe ON; foca em transparência."
+   ],
+   [
+    "Novo Mercado, que exige que a empresa seja de pequeno porte.",
+    "O Novo Mercado não exige porte pequeno."
+   ],
+   [
+    "mercado de balcão não organizado, sem regras de governança.",
+    "Esse ambiente não oferece as regras de governança buscadas."
+   ]
+  ],
+  "gabarito": "O Bovespa Mais (e o Bovespa Mais Nível 2) é o segmento de acesso da B3, para empresas que desejam entrar no mercado de forma gradual, com ofertas menores ou listagem sem oferta inicial, mantendo regras de governança semelhantes às do Novo Mercado. Os demais segmentos são Nível 1, Nível 2 e Novo Mercado.",
+  "dica": "Bovespa Mais = segmento de acesso gradual, com boa governança."
+ },
+ {
+  "pd": "2.1.1.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ivo vendeu R$ 15 mil em ações em operações comuns em um mês, com lucro de R$ 1.500, isento. Ele pergunta a Selma, profissional CPA, se precisa informar isso na declaração anual.",
+  "enunciado": "Selma explica que:",
+  "certa": "o lucro isento deve ser informado na declaração, em rendimentos isentos.",
+  "erradas": [
+   [
+    "lucros isentos não precisam ser informados em nenhuma hipótese.",
+    "Lucros isentos com ações devem ser declarados."
+   ],
+   [
+    "o lucro deve ser informado como rendimento tributável na tabela progressiva.",
+    "É rendimento isento, com ficha própria."
+   ],
+   [
+    "o lucro deve ser pago por DARF, mesmo sendo isento.",
+    "Não há imposto a pagar quando isento."
+   ]
+  ],
+  "gabarito": "Lucros com ações em operações comuns, em meses com vendas de até R$ 20 mil, são isentos de IR, mas devem ser informados na declaração anual, na ficha de rendimentos isentos e não tributáveis. A posição em ações vai para Bens e Direitos pelo custo de aquisição. Operações tributáveis são declaradas no demonstrativo de renda variável.",
+  "dica": "Isento também se declara: lucro com ações até R$ 20 mil em vendas vai para rendimentos isentos."
+ },
+ {
+  "pd": "2.1.2.2.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Sérgio quer transferir suas cotas de uma classe aberta de renda fixa para o nome do filho, como presente, sem resgatar. Pergunta a Jaqueline, profissional CPA.",
+  "enunciado": "Jaqueline explica que, em regra, cotas de classes abertas:",
+  "certa": "não podem ser cedidas, salvo exceções legais como sucessão e decisão judicial.",
+  "erradas": [
+   [
+    "podem ser vendidas livremente na B3, como ações.",
+    "Cotas de classe aberta não são negociadas em bolsa."
+   ],
+   [
+    "podem ser transferidas a qualquer pessoa, bastando comunicar o gestor.",
+    "A transferência é restrita a hipóteses específicas."
+   ],
+   [
+    "são transferidas automaticamente aos filhos após 5 anos de aplicação.",
+    "Não existe essa regra."
+   ]
+  ],
+  "gabarito": "Cotas de classes abertas são escriturais e nominativas e, em regra, não podem ser objeto de cessão ou transferência, salvo em hipóteses previstas na regulação (decisão judicial, execução de garantia, sucessão universal, entre outras). A saída do investidor é feita por resgate. Cotas de classes fechadas podem ser negociadas no mercado secundário.",
+  "dica": "Classe aberta: sai pelo resgate; cessão de cotas só em exceções legais."
+ },
+ {
+  "pd": "2.1.2.2.19.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cotista pergunta a Diego, profissional CPA, quem decide comprar e vender os ativos da carteira e quem calcula o valor diário da cota.",
+  "enunciado": "Diego explica que:",
+  "certa": "o gestor negocia os ativos; o administrador calcula a cota.",
+  "erradas": [
+   [
+    "o administrador decide os investimentos, e o gestor calcula a cota.",
+    "As funções estão invertidas."
+   ],
+   [
+    "o custodiante decide os investimentos e o distribuidor calcula a cota.",
+    "Essas funções não cabem a eles."
+   ],
+   [
+    "os cotistas decidem cada compra e venda em assembleia diária.",
+    "A gestão da carteira é do gestor."
+   ]
+  ],
+  "gabarito": "Pela CVM 175, o gestor é responsável pela gestão profissional da carteira (decisões de investimento, negociação dos ativos, gestão de riscos e liquidez da carteira). O administrador fiduciário cuida da estrutura do fundo: controladoria, cálculo da cota, escrituração, registro, divulgação de informações e relacionamento com a CVM. Custodiante e distribuidor são prestadores contratados.",
+  "dica": "Gestor = carteira. Administrador = estrutura, cota e informações."
+ },
+ {
+  "pd": "2.4.1.4",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um banco passou a exigir biometria facial para liberar transferências acima de certo valor no aplicativo. Uma cliente idosa reclama a Fernando, profissional CPA, da “burocracia”.",
+  "enunciado": "Fernando explica que a medida:",
+  "certa": "é controle de segurança contra fraudes.",
+  "erradas": [
+   [
+    "é exigência da B3 para todas as operações com Pix.",
+    "A autenticação é controle do banco, não exigência da B3."
+   ],
+   [
+    "serve apenas para vender mais produtos à cliente.",
+    "O objetivo é segurança."
+   ],
+   [
+    "é proibida pela LGPD, que veda o uso de biometria.",
+    "A LGPD permite, com regras próprias para dados sensíveis."
+   ]
+  ],
+  "gabarito": "Serviços bancários digitais (aplicativos, internet banking, Pix) usam controles como autenticação em múltiplos fatores, biometria, limites de valor por horário e por dispositivo, e monitoramento de comportamento para prevenir fraudes. Biometria é dado sensível na LGPD e exige cuidados no tratamento.",
+  "dica": "Biometria e limites no app: segurança contra fraudes (com cuidados da LGPD)."
+ },
+ {
+  "pd": "2.1.1.1.8.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma aula, um aluno pergunta a Valéria, profissional CPA, por que a poupança é importante para o mercado imobiliário brasileiro.",
+  "enunciado": "Valéria explica que:",
+  "certa": "boa parte dos recursos da poupança é direcionada a financiamentos habitacionais.",
+  "erradas": [
+   [
+    "a poupança investe diretamente em imóveis, e o poupador recebe parte dos aluguéis.",
+    "O poupador recebe a remuneração da poupança, não aluguéis."
+   ],
+   [
+    "a poupança é usada só para financiar o governo federal.",
+    "O direcionamento é sobretudo para habitação."
+   ],
+   [
+    "a poupança não tem relação com o crédito imobiliário.",
+    "É uma das principais fontes desse crédito."
+   ]
+  ],
+  "gabarito": "Os bancos devem direcionar parcela dos depósitos de poupança ao crédito imobiliário, principalmente no Sistema Financeiro da Habitação (SFH), conforme regras do CMN. Por isso a poupança é uma das principais fontes de financiamento habitacional, ao lado do FGTS. Para o poupador, oferece isenção de IR, FGC e liquidez com rendimento no aniversário.",
+  "dica": "Poupança financia a habitação (SFH), junto com o FGTS."
+ },
+ {
+  "pd": "2.1.4.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente quer investir em FII e pergunta a Rita, profissional CPA, como compra e como sai do investimento.",
+  "enunciado": "Rita explica que as cotas de FII:",
+  "certa": "são compradas e vendidas na bolsa, por corretora, já que o fundo é fechado.",
+  "erradas": [
+   [
+    "são resgatadas diretamente com o administrador, com cotização em D+1.",
+    "FIIs são fechados; não há resgate a pedido."
+   ],
+   [
+    "só podem ser compradas no IPO e mantidas até a liquidação do fundo.",
+    "As cotas podem ser negociadas no secundário."
+   ],
+   [
+    "são negociadas apenas em cartório, como imóveis.",
+    "A negociação é em bolsa, por meio de corretora."
+   ]
+  ],
+  "gabarito": "FIIs são constituídos como classes fechadas: as cotas são adquiridas nas ofertas (primárias) ou na bolsa (secundário), por meio de corretora, e a saída ocorre pela venda das cotas a outro investidor, ao preço de mercado. Isso traz riscos de liquidez e de oscilação de preço, além dos riscos dos imóveis e títulos.",
+  "dica": "FII: entra e sai pela bolsa (corretora). Não há resgate."
+ },
+ {
+  "pd": "2.2.2.1",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Dona Iara, 66 anos, terá renda baixa na aposentadoria, dentro da faixa de isenção do IR, e pretende receber renda mensal do PGBL nos próximos anos. Pergunta a Mateus, profissional CPA, qual regime tende a ser melhor.",
+  "enunciado": "Mateus explica que, para ela, tende a ser melhor o regime:",
+  "certa": "progressivo, pois com renda baixa o IR tende a ser baixo.",
+  "erradas": [
+   [
+    "regressivo, pois sempre cobra menos imposto que o progressivo.",
+    "Para rendas baixas, o progressivo pode resultar em imposto menor."
+   ],
+   [
+    "regressivo, pois é o único que permite receber renda mensal.",
+    "Os dois regimes permitem renda mensal."
+   ],
+   [
+    "progressivo, pois isenta de IR qualquer resgate de previdência.",
+    "A isenção depende da renda total na tabela progressiva."
+   ]
+  ],
+  "gabarito": "No regime progressivo, a renda mensal de previdência é tributada pela tabela progressiva mensal; para quem tem renda total baixa, o imposto pode ser zero ou pequeno. No regressivo, a alíquota depende do prazo (até 10% após 10 anos), independentemente da renda. A escolha considera horizonte, renda futura e forma de recebimento, e pode ser feita até o primeiro resgate ou benefício.",
+  "dica": "Renda baixa na aposentadoria: o progressivo pode sair mais barato."
+ },
+ {
+  "pd": "2.3.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao financiar um apartamento, Caio lê no contrato que o imóvel fica em “alienação fiduciária” ao banco. Pergunta a Lídia, profissional CPA, o que significa.",
+  "enunciado": "Lídia explica que:",
+  "certa": "Caio usa o imóvel, mas a propriedade fica com o banco até a quitação.",
+  "erradas": [
+   [
+    "o imóvel pertence a Caio desde a assinatura, e o banco só tem direito a juros.",
+    "Na alienação fiduciária, a propriedade fica com o credor até a quitação."
+   ],
+   [
+    "Caio só pode morar no imóvel após quitar todo o financiamento.",
+    "O devedor tem a posse e pode usar o imóvel."
+   ],
+   [
+    "o banco pode vender o imóvel a qualquer momento, mesmo com as parcelas em dia.",
+    "Com o contrato em dia, o credor não pode dispor do bem."
+   ]
+  ],
+  "gabarito": "Na alienação fiduciária de imóvel (Lei 9.514/1997), o devedor transfere ao credor a propriedade resolúvel do imóvel como garantia, mantendo a posse direta. Quitada a dívida, a propriedade volta ao devedor. Em caso de inadimplência, o credor pode consolidar a propriedade e levar o imóvel a leilão, com procedimento mais rápido que a hipoteca, o que reduz o custo do crédito.",
+  "dica": "Alienação fiduciária: mora no imóvel, mas o banco é dono até a quitação."
+ },
+ {
+  "pd": "2.5.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "O carro de Neide foi roubado e não foi recuperado. A seguradora informa que pagará indenização integral com base em uma tabela de referência de preços de veículos. Neide pergunta a Igor, profissional CPA, se haverá franquia.",
+  "enunciado": "Igor explica que, em geral, em perda total ou roubo:",
+  "certa": "não há franquia, e a indenização segue o valor de referência da apólice.",
+  "erradas": [
+   [
+    "a franquia é cobrada em dobro, por se tratar de perda total.",
+    "Em geral, a franquia não se aplica à perda total."
+   ],
+   [
+    "a indenização é sempre o valor pago pelo carro novo, sem considerar a tabela.",
+    "A apólice define o critério, em geral valor de referência de mercado."
+   ],
+   [
+    "não há indenização, pois roubo não é coberto por seguro de automóvel.",
+    "Roubo e furto costumam estar entre as coberturas básicas."
+   ]
+  ],
+  "gabarito": "No seguro de automóvel, a franquia costuma valer para sinistros parciais. Em perda total (danos acima de certo percentual do valor do veículo) ou roubo e furto sem recuperação, a indenização é integral, conforme o critério da apólice: valor de mercado referenciado (tabela de referência multiplicada por um fator) ou valor determinado.",
+  "dica": "Perda total ou roubo: sem franquia, indenização pelo critério da apólice (valor de referência)."
+ }
+]

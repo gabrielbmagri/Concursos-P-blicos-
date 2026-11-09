@@ -65,6 +65,11 @@ for num, arqs in sorted(grupos.items()):
                   "k": "".join(x["certa"] for x in out), "pd": [x["pd"] for x in out]})
     longa = sum(1 for x in out if len(x["alt"][L.index(x["certa"])]) > 1.12 * max(len(a) for j, a in enumerate(x["alt"]) if L[j] != x["certa"]))
     print(sid, len(out), "questões | blocos", blocos, "| gabarito", letras, "| certa bem mais longa:", longa)
+    arv = sum(1 for x in out if x.get("caso"))
+    if len(out) == 50 and arv != 10:
+        erros.append(f"{sid}: {arv} questões em árvore de diálogo (o padrão é 10)")
+    if len(out) == 50 and blocos != [10, 20, 15, 5]:
+        erros.append(f"{sid}: distribuição por bloco {blocos} (o padrão é [10, 20, 15, 5])")
     if longa > 10:
         erros.append(f"{sid}: a certa é bem mais longa que as outras em {longa} questões (máx. 10)")
     for i, x in enumerate(out, 1):
