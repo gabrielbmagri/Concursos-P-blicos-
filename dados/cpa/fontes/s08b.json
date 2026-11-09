@@ -1,0 +1,496 @@
+[
+ {
+  "pd": "3.4.3.3.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Rafael e a carteira do pai",
+  "etapa": "1/4",
+  "contexto": "Rafael, profissional CPA de um banco, descobre que o pai, aposentado, acaba de abrir conta na mesma agência e foi incluído na carteira de clientes que ele atende.",
+  "enunciado": "A primeira atitude adequada de Rafael é:",
+  "certa": "informar o vínculo ao gestor e ao compliance, seguindo a política de conflitos.",
+  "erradas": [
+   [
+    "atender o pai normalmente sem registrar nada, já que o parentesco não afeta o atendimento.",
+    "Vínculos familiares devem ser declarados para a gestão de conflitos."
+   ],
+   [
+    "transferir os recursos do pai para a própria conta, para administrá-los melhor.",
+    "Misturar recursos de clientes com os próprios é vedado."
+   ],
+   [
+    "recusar o pai como cliente, pois a lei proíbe parentes na mesma agência.",
+    "Não há proibição; exige-se transparência."
+   ]
+  ],
+  "gabarito": "Relações pessoais e familiares com clientes são fonte de conflito de interesses. A conduta adequada é declarar o vínculo e seguir a política interna, que pode prever outro responsável pelo atendimento ou controles adicionais, garantindo tratamento equitativo e decisões no interesse do cliente.",
+  "dica": "Parente na carteira: declare o vínculo e siga a política de conflitos."
+ },
+ {
+  "pd": "3.4.3.3.3.1.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Rafael e a carteira do pai",
+  "etapa": "2/4",
+  "contexto": "O pai entrega a Rafael a senha do aplicativo e pede: “Faça as aplicações por mim, você entende disso”. A política do banco proíbe que funcionários usem credenciais de clientes.",
+  "enunciado": "Rafael deve:",
+  "certa": "recusar a senha e orientar o pai a operar pessoalmente ou por procuração formal.",
+  "erradas": [
+   [
+    "aceitar a senha, pois o pedido partiu do próprio cliente e o parentesco garante a confiança.",
+    "A política proíbe usar credenciais de clientes, mesmo parentes."
+   ],
+   [
+    "aceitar a senha, mas só fazer operações de baixo risco, para proteger o pai.",
+    "O risco do produto não altera a proibição."
+   ],
+   [
+    "anotar a senha no sistema do banco, para que outros colegas também possam ajudar.",
+    "Compartilhar senhas expõe o cliente a fraudes e viola o sigilo."
+   ]
+  ],
+  "gabarito": "Entre as medidas de gestão de conflitos de interesses está a proibição de atividades específicas, como operar contas de clientes com suas credenciais, receber procurações fora das regras internas ou usar recursos de clientes. Isso protege o cliente, o profissional e a instituição contra fraudes, erros e conflitos. Representação deve ser formal (procuração), conforme a política.",
+  "dica": "Nunca opere com a senha do cliente, nem de parente. Representação só por procuração formal."
+ },
+ {
+  "pd": "3.4.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Rafael e a carteira do pai",
+  "etapa": "3/4",
+  "contexto": "Com procuração formal, a irmã de Rafael passa a representar o pai. Ela quer aplicar 80% do patrimônio dele em um fundo de ações, mas o perfil do pai é conservador e ele depende da renda.",
+  "enunciado": "A orientação adequada é:",
+  "certa": "avaliar a adequação ao perfil do pai e alertar sobre o desenquadramento.",
+  "erradas": [
+   [
+    "usar o perfil da irmã, que é arrojada, pois ela é quem decide pelo pai.",
+    "A adequação é avaliada para o titular dos recursos."
+   ],
+   [
+    "aplicar sem análise, pois a procuração dispensa o suitability.",
+    "A procuração não dispensa a verificação de adequação."
+   ],
+   [
+    "recusar qualquer aplicação feita por procurador, pois só o titular pode investir.",
+    "Procuradores podem operar nos limites da procuração."
+   ]
+  ],
+  "gabarito": "O suitability considera o perfil do titular dos recursos, ainda que as ordens sejam dadas por procurador. Se a operação não for adequada, a instituição deve alertar e obter declaração de ciência do desenquadramento, nos termos da CVM 30. Clientes idosos e dependentes da renda merecem atenção especial a riscos e liquidez.",
+  "dica": "Procurador decide, mas o perfil analisado é o do titular dos recursos."
+ },
+ {
+  "pd": "3.4.3.3.3.1.5",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Rafael e a carteira do pai",
+  "etapa": "4/4",
+  "contexto": "Rafael fica em dúvida se pode sugerir à irmã um produto da gestora em que a esposa dele trabalha. Ele não encontra a resposta clara na política interna.",
+  "enunciado": "A conduta adequada de Rafael é:",
+  "certa": "consultar o compliance ou o comitê de ética antes de qualquer recomendação.",
+  "erradas": [
+   [
+    "recomendar o produto, pois a esposa não recebe comissão direta pela venda.",
+    "Vínculos indiretos também podem gerar conflito; na dúvida, consulte."
+   ],
+   [
+    "recomendar o produto sem contar à irmã, para não influenciar a decisão.",
+    "Omitir o vínculo fere a transparência."
+   ],
+   [
+    "decidir sozinho, pois o compliance só atua após reclamação de clientes.",
+    "O compliance também orienta de forma preventiva."
+   ]
+  ],
+  "gabarito": "Comitês de ética e áreas de compliance orientam os profissionais em situações duvidosas, analisam conflitos de interesses e propõem medidas (divulgação, restrições, segregação). Consultar antes de agir protege o cliente, o profissional e a instituição. As políticas devem ser claras, conhecidas e revisadas continuamente.",
+  "dica": "Na dúvida sobre conflito de interesses, consulte o compliance antes de agir."
+ },
+ {
+  "pd": "3.1.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Glória é vendedora comissionada: ganha entre R$ 4.000 e R$ 9.000 por mês. Suas despesas são de R$ 4.500. Ela pergunta a Rui, profissional CPA, como definir quanto poupar.",
+  "enunciado": "Rui orienta que Glória:",
+  "certa": "planeje pela renda mínima recorrente e poupe os excedentes dos meses melhores.",
+  "erradas": [
+   [
+    "planeje pela renda máxima, para não limitar os gastos nos meses bons.",
+    "Planejar pela renda máxima gera déficits nos meses fracos."
+   ],
+   [
+    "poupe sempre 50% da renda do mês, mesmo nos meses abaixo das despesas.",
+    "Nos meses fracos, isso a obrigaria a se endividar."
+   ],
+   [
+    "deixe de poupar até a renda se estabilizar, pois não é possível planejar.",
+    "Renda variável exige mais planejamento, não menos."
+   ]
+  ],
+  "gabarito": "Com renda variável, o orçamento deve se apoiar numa renda recorrente conservadora (próxima da mínima), cobrindo despesas fixas e uma poupança base. Nos meses melhores, o excedente reforça a reserva de emergência (maior que a de quem tem renda fixa) e os objetivos. Isso evita recorrer a crédito nos meses fracos.",
+  "dica": "Renda variável: orce pela renda mínima e poupe os excedentes dos meses bons."
+ },
+ {
+  "pd": "3.1.3.3.9",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Fábio quer cursar graduação e pensa em pagar a mensalidade com o cheque especial até conseguir emprego. A faculdade aceita financiamento estudantil. Pergunta a Joyce, profissional CPA.",
+  "enunciado": "Joyce orienta que:",
+  "certa": "o financiamento estudantil é o adequado; cheque especial é para emergência.",
+  "erradas": [
+   [
+    "o cheque especial é melhor, pois os juros só começam após a formatura.",
+    "Os juros do cheque especial correm desde o primeiro dia de uso."
+   ],
+   [
+    "os dois têm as mesmas condições, pois são créditos para pessoa física.",
+    "Prazos, juros e carência são muito diferentes."
+   ],
+   [
+    "o melhor é usar o rotativo do cartão, que tem juros limitados por lei.",
+    "O rotativo também é muito caro."
+   ]
+  ],
+  "gabarito": "Financiamentos estudantis (públicos, como o FIES, ou privados) têm prazos longos, carência e juros menores, adequados a um investimento em educação. O cheque especial é limite emergencial, com juros altos (teto de 8% ao mês), incompatível com despesas recorrentes de longo prazo. Escolher a modalidade adequada é parte da gestão de dívidas.",
+  "dica": "Estudo = financiamento estudantil. Cheque especial = só emergência de dias."
+ },
+ {
+  "pd": "3.1.3.3.11",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Cecília quer reformar o banheiro e a cozinha, com custo de R$ 25 mil. Ela tem casa própria quitada e pergunta a Diego, profissional CPA, quais linhas de crédito pode considerar.",
+  "enunciado": "Diego indica que ela pode avaliar:",
+  "certa": "crédito para reforma ou material de construção e crédito com garantia do imóvel, comparando o CET.",
+  "erradas": [
+   [
+    "apenas o rotativo do cartão, que é a única linha aceita por lojas de material de construção.",
+    "Há linhas específicas, mais baratas que o rotativo."
+   ],
+   [
+    "um consórcio de veículos, que pode ser usado para qualquer reforma.",
+    "O consórcio deve seguir a categoria contratada."
+   ],
+   [
+    "um financiamento imobiliário do SFH para comprar outro imóvel.",
+    "O objetivo é reformar, não comprar imóvel."
+   ]
+  ],
+  "gabarito": "Para reforma e construção há linhas como crédito pessoal específico, CDC de material de construção, cartões de crédito de lojas parceiras e crédito com garantia de imóvel (home equity), que costuma ter juros menores e prazos longos. A escolha deve considerar o CET, o prazo, a parcela no orçamento e o risco da garantia.",
+  "dica": "Reforma: linhas específicas ou com garantia do imóvel; compare sempre o CET."
+ },
+ {
+  "pd": "3.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Jonas tem R$ 10 mil disponíveis, dívida no cartão com juros de 12% ao mês, nenhuma reserva de emergência e vontade de investir em ações. Pergunta a Raquel, profissional CPA, a ordem certa.",
+  "enunciado": "Raquel orienta, em geral, a seguinte prioridade:",
+  "certa": "quitar a dívida cara, formar a reserva de emergência e depois investir.",
+  "erradas": [
+   [
+    "investir em ações, pois o retorno esperado supera os juros do cartão.",
+    "Nenhum investimento seguro rende 12% ao mês."
+   ],
+   [
+    "formar a reserva primeiro e manter a dívida do cartão, que pode ser paga depois.",
+    "Manter dívida a 12% ao mês enquanto aplica a menos destrói patrimônio."
+   ],
+   [
+    "dividir igualmente entre dívida, reserva e ações, para diversificar.",
+    "Pagar a dívida cara tem prioridade."
+   ]
+  ],
+  "gabarito": "Gestão financeira pessoal, em geral: (1) quitar dívidas caras (rotativo, cheque especial), cujo custo supera qualquer retorno seguro; (2) formar a reserva de emergência em ativos líquidos; (3) proteger-se com seguros quando necessário; (4) investir para objetivos de médio e longo prazo, conforme o perfil. Pode-se manter uma pequena reserva mínima enquanto se paga a dívida.",
+  "dica": "Ordem: dívida cara → reserva → proteção → investimentos."
+ },
+ {
+  "pd": "3.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Marcelo quer investir em ações para o longo prazo, mas tem medo de comprar “no topo”. Pergunta a Lúcia, profissional CPA, se deve esperar o momento certo.",
+  "enunciado": "Lúcia explica que uma estratégia comum de gestão de investimentos é:",
+  "certa": "aportes regulares, que diluem o preço médio ao longo do tempo.",
+  "erradas": [
+   [
+    "concentrar tudo de uma vez, no dia em que a bolsa cair mais de 5%.",
+    "Tentar acertar o momento é difícil e arriscado."
+   ],
+   [
+    "esperar a bolsa atingir o menor nível histórico antes de começar.",
+    "Isso pode nunca acontecer, e o investidor perde tempo."
+   ],
+   [
+    "investir só quando os analistas garantirem alta nos próximos meses.",
+    "Ninguém garante o comportamento futuro da bolsa."
+   ]
+  ],
+  "gabarito": "Na gestão de investimentos, aportes periódicos (dollar cost averaging) compram mais cotas quando os preços estão baixos e menos quando estão altos, diluindo o preço médio e reduzindo o risco de concentrar a entrada num mau momento. Combina-se com alocação adequada ao perfil, diversificação e rebalanceamento.",
+  "dica": "Aportes regulares: diluem o preço médio e reduzem o risco de entrar no topo."
+ },
+ {
+  "pd": "3.3.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um cliente conservador, com pouco conhecimento de mercado, pede “algo diferente” e Valter, profissional CPA, pensa em oferecer um COE de capital em risco atrelado a ações internacionais.",
+  "enunciado": "Pela adequação de produtos, Valter deve considerar que:",
+  "certa": "o produto é complexo e arriscado demais para esse cliente.",
+  "erradas": [
+   [
+    "o COE é adequado a qualquer perfil, pois é emitido por banco.",
+    "Ser emitido por banco não torna o produto adequado a todos."
+   ],
+   [
+    "basta o cliente pedir algo diferente para que qualquer produto seja adequado.",
+    "A adequação considera perfil, objetivos e conhecimento, não só o pedido."
+   ],
+   [
+    "a complexidade do produto é irrelevante quando o valor aplicado é pequeno.",
+    "Complexidade e risco importam em qualquer valor."
+   ]
+  ],
+  "gabarito": "A adequação considera o perfil do cliente (objetivos, situação financeira e conhecimento ou experiência) e as características do produto (riscos, complexidade, liquidez, custos). Produtos complexos, como COE de capital em risco e derivativos, exigem que o cliente compreenda seus riscos. Para conservadores com pouco conhecimento, tendem a ser inadequados.",
+  "dica": "Produto complexo e arriscado + cliente conservador e leigo = inadequado."
+ },
+ {
+  "pd": "3.4.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante pergunta a Hugo, profissional CPA, se apenas bancos têm deveres de prevenção à lavagem de dinheiro.",
+  "enunciado": "Hugo explica que a Lei 9.613/1998 também obriga, entre outros:",
+  "certa": "seguradoras, imobiliárias e comerciantes de joias e bens de luxo.",
+  "erradas": [
+   [
+    "apenas bancos comerciais e o Banco Central.",
+    "A lista de pessoas obrigadas é muito mais ampla."
+   ],
+   [
+    "somente órgãos públicos, como a Receita Federal e a Polícia Federal.",
+    "As obrigações recaem sobre setores privados expostos ao risco."
+   ],
+   [
+    "apenas pessoas físicas que movimentem mais de R$ 1 milhão por ano.",
+    "Os deveres recaem sobre pessoas jurídicas e físicas de setores definidos na lei."
+   ]
+  ],
+  "gabarito": "A Lei 9.613/1998 (art. 9º) impõe deveres de identificação, registro e comunicação a diversos setores: instituições financeiras, bolsas, seguradoras, previdência e capitalização, administradoras de cartões e consórcios, imobiliárias, comércio de joias, metais preciosos, obras de arte e bens de luxo, entre outros. Cada setor tem regulador ou o COAF como supervisor.",
+  "dica": "PLD não é só para bancos: seguradoras, imobiliárias, joalherias e outros setores também."
+ },
+ {
+  "pd": "3.4.5.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma pequena corretora copiou integralmente a política de PLD de um grande banco, que tem produtos, canais e clientes muito diferentes. O auditor aponta falha. A diretora pergunta a Ivan, profissional CPA, o motivo.",
+  "enunciado": "Ivan explica que a política de PLD deve:",
+  "certa": "refletir os riscos, o porte e o perfil da própria instituição.",
+  "erradas": [
+   [
+    "ser idêntica em todas as instituições, conforme modelo único do Banco Central.",
+    "A regulação exige política proporcional aos riscos de cada instituição."
+   ],
+   [
+    "ser escrita apenas após a primeira comunicação ao COAF.",
+    "A política deve existir antes, orientando a prevenção."
+   ],
+   [
+    "tratar só de clientes pessoas físicas, pois empresas não lavam dinheiro.",
+    "Pessoas jurídicas também são usadas em esquemas de lavagem."
+   ]
+  ],
+  "gabarito": "Pela abordagem baseada em risco, a instituição deve ter política de PLD/FT compatível com seu porte, natureza dos negócios e perfil de risco de clientes, produtos, serviços, canais e regiões, aprovada pela alta administração, com procedimentos, treinamento, monitoramento e avaliação de efetividade.",
+  "dica": "Política de PLD sob medida: porte e riscos da própria instituição."
+ },
+ {
+  "pd": "3.4.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco contrata uma empresa para enviar extratos e boletos aos clientes. O banco define as finalidades e o tratamento dos dados; a empresa apenas executa as instruções. Um colega pergunta a Lívia, profissional CPA, quem é quem na LGPD.",
+  "enunciado": "Lívia explica que, na LGPD:",
+  "certa": "o banco é o controlador e a empresa contratada é a operadora.",
+  "erradas": [
+   [
+    "a empresa contratada é a controladora, pois é quem manipula os dados.",
+    "Quem decide finalidades e meios é o controlador."
+   ],
+   [
+    "o titular dos dados é o controlador, pois é dono das informações.",
+    "O titular é a pessoa a quem os dados se referem."
+   ],
+   [
+    "a ANPD é a controladora de todos os dados tratados no país.",
+    "A ANPD fiscaliza; não é controladora."
+   ]
+  ],
+  "gabarito": "Agentes de tratamento na LGPD: controlador (decide sobre o tratamento dos dados, suas finalidades e meios); operador (trata dados em nome do controlador, seguindo suas instruções); encarregado (canal de comunicação entre controlador, titulares e ANPD). O titular é a pessoa natural a quem os dados se referem. Ambos os agentes respondem por incidentes, cada qual na sua responsabilidade.",
+  "dica": "Controlador decide; operador executa; encarregado é o canal com titulares e ANPD."
+ },
+ {
+  "pd": "3.4.7.1.2.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Rodrigo, analista de um banco que assessora uma companhia, conta a um amigo, por mensagem, que a empresa vai anunciar uma fusão na semana seguinte. Rodrigo não negocia ações, mas o amigo compra.",
+  "enunciado": "A conduta de Rodrigo:",
+  "certa": "é ilícita: repassar informação privilegiada a quem pode negociar é punido.",
+  "erradas": [
+   [
+    "é lícita, pois só quem compra ou vende ações comete insider trading.",
+    "O repasse da informação também é punido."
+   ],
+   [
+    "só seria ilícita se Rodrigo recebesse parte do lucro do amigo.",
+    "O ilícito não depende de Rodrigo lucrar."
+   ],
+   [
+    "é lícita, pois a mensagem foi enviada por aplicativo privado.",
+    "O meio da comunicação não muda a conduta."
+   ]
+  ],
+  "gabarito": "A Lei 6.385/76 (art. 27-D, § 1º) pune também quem repassa informação relevante ainda não divulgada, obtida em razão de cargo ou relação de confiança, a quem possa negociar. Quem negocia com base nela (o amigo) também comete o ilícito (insider secundário). Profissionais com acesso a informações privilegiadas devem mantê-las em sigilo.",
+  "dica": "Repassar informação privilegiada já é ilícito, mesmo sem negociar."
+ },
+ {
+  "pd": "3.4.7.2.2.4.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento sobre a Resolução CVM 62, um participante pergunta a Gabriel, profissional CPA, o que caracteriza uma “prática não equitativa”.",
+  "enunciado": "Gabriel explica que é a prática que:",
+  "certa": "dá a alguém vantagem indevida sobre os demais, como insider e front running.",
+  "erradas": [
+   [
+    "cria ofertas falsas para atrair outros investidores, como o spoofing.",
+    "Spoofing é manipulação de preços."
+   ],
+   [
+    "gira excessivamente a carteira do cliente para gerar corretagem.",
+    "Isso é churning, operação fraudulenta."
+   ],
+   [
+    "transfere recursos entre contas ligadas por negócios artificiais.",
+    "Isso é money pass, criação de condições artificiais."
+   ]
+  ],
+  "gabarito": "Pela Resolução CVM 62: criação de condições artificiais (ex.: money pass); manipulação de preços (spoofing, layering, benchmark); operações fraudulentas (ex.: churning, uso de ardil para enganar terceiros); práticas não equitativas (ex.: insider trading e front running), que colocam alguém em situação de desequilíbrio indevido em relação aos demais participantes.",
+  "dica": "Prática não equitativa = vantagem indevida sobre os demais (insider, front running)."
+ },
+ {
+  "pd": "4.7.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Fintech InvestFácil",
+  "etapa": "1/3",
+  "contexto": "Dois amigos querem criar a InvestFácil, fintech para conceder empréstimos com capital próprio por aplicativo. Pedem orientação a Carla, profissional CPA.",
+  "enunciado": "Carla explica que, para conceder crédito, a fintech precisa:",
+  "certa": "de autorização do Banco Central como instituição financeira, por exemplo como SCD.",
+  "erradas": [
+   [
+    "apenas de registro na Junta Comercial, pois fintechs estão fora da regulação.",
+    "Conceder crédito como atividade é privativo de instituição autorizada."
+   ],
+   [
+    "de autorização da CVM, que regula todas as empresas de tecnologia financeira.",
+    "Crédito é atividade regulada pelo CMN e pelo BC."
+   ],
+   [
+    "de filiação à Anbima, que substitui a autorização do Banco Central.",
+    "A filiação não substitui a autorização."
+   ]
+  ],
+  "gabarito": "Fintechs são reguladas conforme a atividade: crédito (SCD, SEP, sob CMN e BC), pagamentos (instituições de pagamento, BC), investimentos e plataformas de crowdfunding (CVM), seguros (SUSEP). A regulação busca equilibrar inovação, concorrência e proteção do cliente. Há também sandboxes regulatórios para testes.",
+  "dica": "Fintech de crédito precisa de autorização do BC (ex.: SCD ou SEP)."
+ },
+ {
+  "pd": "4.4.4.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Fintech InvestFácil",
+  "etapa": "2/3",
+  "contexto": "A InvestFácil também quer oferecer tokens que representam frações de recebíveis de pequenas empresas. Os sócios perguntam a Carla quais riscos precisam informar aos clientes.",
+  "enunciado": "Carla indica, entre os riscos da tokenização:",
+  "certa": "risco do ativo, segurança cibernética, incerteza regulatória e liquidez limitada.",
+  "erradas": [
+   [
+    "nenhum risco, pois o registro em blockchain garante o pagamento dos recebíveis.",
+    "O blockchain registra, mas não garante o pagamento."
+   ],
+   [
+    "apenas o risco de câmbio, já que tokens são cotados em dólar.",
+    "Tokens podem ser denominados em reais; os riscos vão muito além."
+   ],
+   [
+    "apenas o risco de inflação, pois os recebíveis são corrigidos pela TR.",
+    "Não é essa a natureza do risco principal."
+   ]
+  ],
+  "gabarito": "Riscos e desafios da tokenização: risco de crédito ou de mercado do ativo representado, segurança (ataques, perda de chaves, falhas em contratos inteligentes), regulação (enquadramento como valor mobiliário, regras da CVM e do BC), tecnologia, custódia e liquidez (mercado secundário restrito). A tokenização muda a forma, não o risco econômico.",
+  "dica": "Tokenização: o risco do ativo continua, mais riscos de tecnologia, regulação e liquidez."
+ },
+ {
+  "pd": "4.5.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Fintech InvestFácil",
+  "etapa": "3/3",
+  "contexto": "Com o Open Finance, a InvestFácil consegue avaliar melhor o risco de clientes que antes só os grandes bancos conheciam. Os sócios perguntam a Carla qual a principal consequência para o mercado.",
+  "enunciado": "Carla explica que a principal consequência esperada é:",
+  "certa": "mais concorrência e ofertas personalizadas, com potencial de reduzir custos.",
+  "erradas": [
+   [
+    "concentração do crédito nos grandes bancos, que passam a ter acesso exclusivo aos dados.",
+    "O objetivo é reduzir a assimetria de informação e ampliar a concorrência."
+   ],
+   [
+    "eliminação do risco de crédito, pois todos os dados ficam disponíveis.",
+    "Mais informação melhora a avaliação, mas não elimina o risco."
+   ],
+   [
+    "fim do consentimento, pois os dados passam a ser públicos.",
+    "O consentimento continua sendo a base do compartilhamento."
+   ]
+  ],
+  "gabarito": "Consequências do Open Finance no mercado brasileiro: redução da assimetria de informação, maior concorrência (especialmente de fintechs), produtos e preços mais adequados a cada cliente, facilidade de portabilidade e comparação. Desafios: segurança cibernética, educação do consumidor e governança dos dados.",
+  "dica": "Open Finance: menos assimetria de informação, mais concorrência e personalização."
+ },
+ {
+  "pd": "4.6.1.2",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Uma gestora usa IA generativa para resumir relatórios de empresas e gerar rascunhos de cartas aos cotistas, revisados pela equipe. Um cliente pergunta a Natália, profissional CPA, se isso é seguro.",
+  "enunciado": "Natália explica que esse uso é adequado desde que:",
+  "certa": "haja revisão humana, checagem de fatos e proteção de dados sigilosos.",
+  "erradas": [
+   [
+    "o texto gerado seja publicado sem revisão, para ganhar agilidade.",
+    "Textos gerados podem conter erros e precisam de revisão."
+   ],
+   [
+    "os dados sigilosos dos cotistas sejam inseridos livremente em qualquer ferramenta pública.",
+    "Dados sigilosos exigem proteção e ferramentas adequadas."
+   ],
+   [
+    "a IA substitua as decisões de investimento do gestor.",
+    "A responsabilidade pelas decisões continua sendo do gestor."
+   ]
+  ],
+  "gabarito": "A IA generativa tem aplicações como resumir documentos, redigir textos, apoiar análises e atendimento. Os cuidados incluem revisão humana (risco de erros e alucinações), proteção de dados e sigilo (LGPD, sigilo bancário), transparência, governança e responsabilidade dos profissionais e da instituição pelas informações divulgadas.",
+  "dica": "IA generativa: ótima para rascunhos e resumos, com revisão humana e cuidado com dados."
+ },
+ {
+  "pd": "4.4.3.7",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente que negocia criptoativos pergunta a Fábio, profissional CPA, a diferença entre uma exchange centralizada e uma exchange descentralizada (DEX).",
+  "enunciado": "Fábio explica que, na DEX:",
+  "certa": "as trocas ocorrem por contratos inteligentes, e o usuário mantém a custódia dos ativos.",
+  "erradas": [
+   [
+    "uma empresa guarda os ativos dos clientes e executa as ordens em seus servidores.",
+    "Isso descreve a exchange centralizada."
+   ],
+   [
+    "as operações são garantidas pelo FGC e supervisionadas pelo Banco Central.",
+    "DEXs não têm FGC nem supervisão bancária tradicional."
+   ],
+   [
+    "só é possível negociar ações de empresas listadas na B3.",
+    "DEXs negociam criptoativos e tokens."
+   ]
+  ],
+  "gabarito": "Exchanges centralizadas mantêm a custódia dos ativos dos clientes e casam ordens em seus sistemas (há risco de contraparte, de custódia e de ataques ao servidor). DEXs usam contratos inteligentes para trocas diretas entre usuários, que mantêm o controle das carteiras. Vantagens: autocustódia e transparência. Riscos: falhas de código, perda de chaves, baixa liquidez em alguns pares e menor proteção ao usuário.",
+  "dica": "DEX: autocustódia e contrato inteligente. Exchange centralizada: a empresa guarda os ativos."
+ }
+]

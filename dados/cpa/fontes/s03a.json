@@ -728,7 +728,7 @@
     "Não existe prazo mínimo de permanência para ter direito a dividendos."
    ]
   ],
-  "gabarito": "Dividendos são parte do lucro distribuída aos acionistas. Pela Lei das S.A., se o estatuto for omisso, o dividendo mínimo obrigatório é de 25% do lucro líquido ajustado. Datas: data com (último dia em que quem compra ainda tem direito ao provento); data ex (a partir dela a ação é negociada sem o direito, e o preço costuma ser ajustado pelo valor do provento); data de pagamento.",
+  "gabarito": "Dividendos são parte do lucro distribuída aos acionistas. Pela Lei das S.A. (art. 202), o dividendo obrigatório é o fixado no estatuto; se ele for omisso, é de metade do lucro líquido ajustado (estatutos que passam a prever a regra não podem fixar menos de 25%). Datas: data com (último dia em que quem compra ainda tem direito ao provento); data ex (a partir dela a ação é negociada sem o direito, e o preço costuma ser ajustado pelo valor do provento); data de pagamento.",
   "dica": "Data com = último dia para ter direito. Na data ex, a ação já vem sem o provento."
  }
 ]

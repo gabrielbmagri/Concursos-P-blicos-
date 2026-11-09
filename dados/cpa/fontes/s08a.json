@@ -1,0 +1,728 @@
+[
+ {
+  "pd": "1.1.2.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco tem uma área que administra e gere fundos de investimento. Um cliente pergunta a Hugo, profissional CPA, se essa atividade é supervisionada pelo Banco Central, como o resto do banco.",
+  "enunciado": "Hugo explica que a administração e a gestão de fundos:",
+  "certa": "são reguladas e supervisionadas pela CVM, que registra os fundos.",
+  "erradas": [
+   [
+    "são supervisionadas exclusivamente pelo Banco Central, por serem atividades de um banco.",
+    "Fundos e gestão de carteiras estão no âmbito da CVM, mesmo quando exercidos por bancos."
+   ],
+   [
+    "são supervisionadas pela SUSEP, que cuida de todos os produtos de investimento.",
+    "A SUSEP cuida de seguros, capitalização e previdência aberta."
+   ],
+   [
+    "dispensam supervisão, pois a Anbima substitui os órgãos públicos nessa atividade.",
+    "A autorregulação da Anbima complementa, não substitui, a CVM."
+   ]
+  ],
+  "gabarito": "Uma mesma instituição pode estar sob vários reguladores, conforme a atividade: como banco, BC; nas atividades do mercado de valores mobiliários (administração de carteiras, fundos, distribuição de valores mobiliários), CVM; como seguradora do grupo, SUSEP. Fundos de investimento são registrados na CVM e regidos pela Resolução CVM 175.",
+  "dica": "Fundo e gestão de carteiras = CVM, mesmo dentro de um banco."
+ },
+ {
+  "pd": "1.1.3.1.17",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Mara contratou um seguro residencial por meio de uma corretora de seguros. Após um sinistro, a corretora diz que quem paga a indenização é outra empresa. Ela pergunta a Wesley, profissional CPA, se é verdade.",
+  "enunciado": "Wesley explica que a corretora de seguros:",
+  "certa": "intermedeia a contratação; quem assume o risco e indeniza é a seguradora.",
+  "erradas": [
+   [
+    "é quem assume o risco e paga a indenização, por ter vendido a apólice.",
+    "A corretora não assume o risco do seguro."
+   ],
+   [
+    "é supervisionada pelo Banco Central e garante as indenizações com o FGC.",
+    "Corretores de seguros são supervisionados pela SUSEP, e não há FGC."
+   ],
+   [
+    "só pode vender seguros de uma única seguradora, indicada pela SUSEP.",
+    "Corretores podem trabalhar com várias seguradoras."
+   ]
+  ],
+  "gabarito": "Corretores de seguros (pessoas físicas ou jurídicas) são intermediários habilitados e registrados na SUSEP que aproximam segurados e seguradoras, orientam na escolha das coberturas e recebem comissão. Quem assume o risco, emite a apólice e paga a indenização é a seguradora, que pode transferir parte do risco a resseguradoras.",
+  "dica": "Corretor de seguros intermedeia; a seguradora assume o risco e indeniza."
+ },
+ {
+  "pd": "1.1.4.3",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Em 2025, Joana recebeu R$ 250 mil do FGC após a liquidação do Banco X. Em 2027, outro banco em que ela tem R$ 250 mil em CDB sofre intervenção. Ela pergunta a Paulo, profissional CPA, se terá cobertura.",
+  "enunciado": "Paulo explica que, pelo teto global do FGC:",
+  "certa": "ela tem cobertura, pois já usou R$ 250 mil do limite de R$ 1 milhão em 4 anos.",
+  "erradas": [
+   [
+    "ela não tem cobertura, pois cada CPF só pode ser indenizado uma vez na vida.",
+    "Não há limite de uma vez; há teto de R$ 1 milhão a cada 4 anos."
+   ],
+   [
+    "ela tem cobertura ilimitada, pois o teto vale por instituição, e não por CPF.",
+    "Além do limite por conglomerado, há o teto global por CPF."
+   ],
+   [
+    "ela só terá cobertura depois de 2029, quando se completam 4 anos da primeira indenização.",
+    "O teto de R$ 1 milhão ainda tem R$ 750 mil disponíveis."
+   ]
+  ],
+  "gabarito": "Além do limite de R$ 250 mil por CPF por conglomerado, o FGC tem teto global de R$ 1 milhão por CPF para pagamentos de garantias a cada período de 4 anos (para aplicações cobertas por essa regra). Se Joana recebeu R$ 250 mil, ainda tem R$ 750 mil no período. O teto incentiva a diversificação e reduz o risco de concentração em instituições arriscadas.",
+  "dica": "FGC: R$ 250 mil por conglomerado e teto de R$ 1 milhão por CPF a cada 4 anos."
+ },
+ {
+  "pd": "1.2.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "No fim do dia, um banco com sobra de caixa aplica por um dia em operações lastreadas em títulos públicos, enquanto outro banco toma recursos para cumprir suas reservas. Um estagiário pergunta a Lia, profissional CPA, em que mercado isso ocorre.",
+  "enunciado": "Lia explica que essas operações pertencem ao:",
+  "certa": "mercado monetário, de curtíssimo prazo e controle da liquidez.",
+  "erradas": [
+   [
+    "mercado de capitais, voltado ao financiamento de longo prazo das empresas.",
+    "O mercado de capitais trata de prazos longos (ações, debêntures)."
+   ],
+   [
+    "mercado cambial, em que os bancos trocam reais por moeda estrangeira.",
+    "Não há troca de moedas nessas operações."
+   ],
+   [
+    "mercado de crédito, em que os bancos financiam o consumo das famílias.",
+    "O crédito às famílias é mercado de crédito; aqui são operações entre bancos e com o BC."
+   ]
+  ],
+  "gabarito": "No mercado monetário ocorrem operações de curtíssimo prazo que regulam a liquidez da economia: operações compromissadas (com títulos públicos, entre bancos e com o BC) e operações interbancárias (DI). Nesse mercado se formam a taxa Selic efetiva e a taxa DI, e o BC atua para manter a Selic perto da meta.",
+  "dica": "Mercado monetário: curtíssimo prazo, liquidez, compromissadas e DI."
+ },
+ {
+  "pd": "1.2.4.1",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "A economia entra em recessão, com desemprego em alta e inflação abaixo da meta. Um cliente pergunta a Rita, profissional CPA, qual política o BC tende a adotar.",
+  "enunciado": "Rita explica que, nesse cenário, o BC tende a:",
+  "certa": "adotar política expansionista, cortando a Selic para estimular a atividade.",
+  "erradas": [
+   [
+    "adotar política contracionista, elevando a Selic para conter a inflação.",
+    "Com inflação abaixo da meta e recessão, a política tende a ser expansionista."
+   ],
+   [
+    "aumentar o depósito compulsório para reduzir a quantidade de moeda.",
+    "Isso seria contracionista."
+   ],
+   [
+    "vender títulos públicos no mercado aberto para enxugar a liquidez.",
+    "Vender títulos retira moeda (contracionista)."
+   ]
+  ],
+  "gabarito": "Política monetária expansionista: reduz juros e amplia liquidez (corte da Selic, compra de títulos, redução de compulsório e redesconto) para estimular crédito, consumo e investimento, adequada a cenários de inflação baixa e atividade fraca. Contracionista: o contrário, para conter a inflação. As decisões consideram as expectativas e as defasagens da política.",
+  "dica": "Recessão + inflação baixa → corte de juros (expansionista)."
+ },
+ {
+  "pd": "1.2.6.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê no extrato do CDB “100% do CDI” e pergunta a Leonardo, profissional CPA, o que exatamente é o CDI e quem o calcula.",
+  "enunciado": "Leonardo explica que a taxa DI (CDI):",
+  "certa": "é a média das operações de um dia entre instituições, apurada pela B3.",
+  "erradas": [
+   [
+    "é a taxa fixada pelo Copom em cada reunião para remunerar os CDBs.",
+    "O Copom fixa a meta Selic; a taxa DI é apurada no mercado."
+   ],
+   [
+    "é o índice de inflação calculado pelo IBGE e usado para corrigir os CDBs.",
+    "A inflação oficial é o IPCA."
+   ],
+   [
+    "é a taxa de juros máxima que os bancos podem pagar aos investidores.",
+    "A taxa DI é referência, não teto."
+   ]
+  ],
+  "gabarito": "CDI (Certificado de Depósito Interfinanceiro) é o título usado nos empréstimos de curtíssimo prazo entre instituições. A taxa DI é a média dessas operações de um dia, apurada e divulgada pela B3, e é o principal referencial de rentabilidade da renda fixa pós-fixada (CDBs, fundos DI). Fica muito próxima da Selic efetiva.",
+  "dica": "Taxa DI = média dos empréstimos de um dia entre bancos, apurada pela B3."
+ },
+ {
+  "pd": "1.2.7",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Seu Gilberto tem quase todo o patrimônio em um terreno e em ações de uma pequena empresa pouco negociada. Ao precisar de R$ 200 mil para uma cirurgia, não consegue vender nada rapidamente sem grande desconto. Pergunta a Tânia, profissional CPA, que risco é esse.",
+  "enunciado": "Tânia explica que o risco que se materializou foi o de:",
+  "certa": "liquidez: não conseguir converter ativos em dinheiro rápido sem perda relevante.",
+  "erradas": [
+   [
+    "crédito: a empresa e o comprador do terreno deixaram de pagar o que deviam.",
+    "Ninguém deixou de pagar; faltam compradores a preço justo."
+   ],
+   [
+    "mercado: os juros subiram e os títulos prefixados perderam valor.",
+    "Ele não tem títulos prefixados; o problema é vender rápido."
+   ],
+   [
+    "operacional: o banco errou ao registrar a venda dos ativos.",
+    "Não houve falha da instituição."
+   ]
+  ],
+  "gabarito": "Risco de liquidez é a dificuldade de vender um ativo rapidamente sem perda significativa de valor (liquidez de mercado) ou de honrar compromissos por falta de caixa (liquidez de fluxo). Imóveis, ações pouco negociadas e títulos sem secundário ativo têm maior risco de liquidez. Daí a importância da reserva em ativos líquidos.",
+  "dica": "Risco de liquidez: não conseguir vender rápido sem desconto. Reserva em ativo líquido evita o problema."
+ },
+ {
+  "pd": "1.3.3.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma debênture de valor nominal de R$ 1.000 paga juros de 10% ao ano, todo ano, e devolve o principal de uma vez no vencimento, em 3 anos. Um cliente pede a Bruno, profissional CPA, o fluxo de caixa que receberá, antes de impostos.",
+  "enunciado": "Bruno informa que o fluxo será:",
+  "certa": "R$ 100 no 1º ano, R$ 100 no 2º e R$ 1.100 no 3º.",
+  "erradas": [
+   [
+    "R$ 1.331 no 3º ano, sem pagamentos intermediários.",
+    "Isso seria um título sem cupons capitalizado; aqui os juros são pagos todo ano."
+   ],
+   [
+    "R$ 433,33 em cada um dos 3 anos, com juros e principal diluídos.",
+    "Isso seria amortização em parcelas iguais (tipo Price); o principal é pago no fim."
+   ],
+   [
+    "R$ 100 em cada ano, sem devolução do principal.",
+    "O principal de R$ 1.000 é devolvido no vencimento."
+   ]
+  ],
+  "gabarito": "Fluxo de pagamentos de um título com cupom e amortização no vencimento (bullet): juros periódicos sobre o valor nominal (10% × 1.000 = R$ 100 por ano) e devolução do principal no fim (R$ 1.000 + R$ 100 de juros no 3º ano). Outras estruturas: amortizações periódicas (o principal é devolvido em parcelas) ou título sem cupom (tudo no vencimento).",
+  "dica": "Bullet com cupom: juros todo período e principal inteiro no vencimento."
+ },
+ {
+  "pd": "1.3.3.5.5",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa financia 40% de seus ativos com dívidas a um custo de 10% ao ano e 60% com capital próprio, cujo custo exigido pelos acionistas é de 15% ao ano. Ignorando impostos, o diretor pergunta a Sandra, profissional CPA, qual o custo médio ponderado de capital.",
+  "enunciado": "Sandra calcula que o CMPC é de:",
+  "certa": "13% ao ano.",
+  "erradas": [
+   [
+    "12,5% ao ano.",
+    "12,5% é a média simples; é preciso ponderar pelos pesos (40% e 60%)."
+   ],
+   [
+    "25% ao ano.",
+    "Somar os custos não faz sentido."
+   ],
+   [
+    "12% ao ano.",
+    "Corresponderia a pesos de 60% em dívida e 40% em capital próprio."
+   ]
+  ],
+  "gabarito": "CMPC (custo médio ponderado de capital, ou WACC) = peso da dívida × custo da dívida + peso do capital próprio × custo do capital próprio = 0,40 × 10% + 0,60 × 15% = 4% + 9% = 13% ao ano (sem considerar o benefício fiscal dos juros). Projetos que rendem acima do CMPC criam valor. Alavancagem é o uso de dívida para financiar ativos, o que amplia ganhos e perdas.",
+  "dica": "CMPC = soma de (peso × custo) de cada fonte de financiamento."
+ },
+ {
+  "pd": "1.4.2.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Em um período de crescimento acelerado do crédito, o Banco Central decide exigir dos bancos um colchão adicional de capital para enfrentar uma eventual reversão. Um cliente pergunta a Marcelo, profissional CPA, qual órgão do BC avalia esse tipo de risco.",
+  "enunciado": "Marcelo explica que é o:",
+  "certa": "Comef, que monitora o risco sistêmico e define medidas macroprudenciais.",
+  "erradas": [
+   [
+    "Copom, que define a meta Selic e o capital mínimo dos bancos.",
+    "O Copom decide a Selic; o Comef trata da estabilidade financeira."
+   ],
+   [
+    "CMN, que se reúne todos os dias para avaliar a saúde de cada banco.",
+    "O CMN edita normas gerais; o monitoramento de estabilidade é do Comef."
+   ],
+   [
+    "FGC, que exige capital adicional dos bancos associados.",
+    "O FGC garante depósitos; não define capital regulatório."
+   ]
+  ],
+  "gabarito": "O Comitê de Estabilidade Financeira (Comef), do Banco Central, monitora o risco sistêmico e define medidas macroprudenciais, como o adicional contracíclico de capital (colchão exigido em fases de expansão do crédito, que pode ser liberado em crises). Outras ferramentas do BC para estabilidade: depósito compulsório, linhas financeiras de liquidez (LFL), regras de Basileia e supervisão.",
+  "dica": "Comef = estabilidade financeira e medidas macroprudenciais (ex.: adicional contracíclico)."
+ },
+ {
+  "pd": "2.1.1.1.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Eliane compara um Tesouro Prefixado e um CDB prefixado de um banco médio, ambos a 13% ao ano e com o mesmo vencimento. Pergunta a Vitor, profissional CPA, qual a principal diferença de risco.",
+  "enunciado": "Vitor explica que:",
+  "certa": "o Tesouro tem risco soberano; o CDB, risco do banco com FGC até o limite.",
+  "erradas": [
+   [
+    "o CDB tem menos risco, pois conta com o FGC, e o Tesouro não tem garantia.",
+    "O título público é considerado o ativo de menor risco de crédito do país."
+   ],
+   [
+    "os dois têm risco idêntico, pois a taxa e o prazo são iguais.",
+    "O emissor é diferente; o risco de crédito também."
+   ],
+   [
+    "o Tesouro não oscila de preço antes do vencimento, ao contrário do CDB.",
+    "Prefixados do Tesouro são marcados a mercado e oscilam."
+   ]
+  ],
+  "gabarito": "Títulos públicos federais têm risco de crédito soberano (do Tesouro Nacional), considerado o menor da economia em moeda local, por isso servem de referência (taxa livre de risco). CDBs têm risco do banco emissor, mitigado pelo FGC até R$ 250 mil. Com a mesma taxa, o título público tende a ser preferível em risco; diferenças de liquidez, custos e marcação a mercado também contam.",
+  "dica": "Tesouro = risco soberano (menor). CDB = risco do banco, com FGC até o limite."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Rui tem um CDB prefixado de 3 anos e precisa do dinheiro após 1 ano. O banco aceita recomprar o título, mas por valor abaixo do que ele esperava pela taxa contratada. Pergunta a Sueli, profissional CPA, o motivo.",
+  "enunciado": "Sueli explica que, na recompra antecipada:",
+  "certa": "o banco usa as taxas atuais de mercado, e o valor pode ficar abaixo do esperado.",
+  "erradas": [
+   [
+    "o banco é obrigado a pagar a taxa contratada proporcional ao tempo decorrido.",
+    "Sem cláusula de liquidez, a recompra segue condições de mercado."
+   ],
+   [
+    "o valor menor indica que o FGC reteve parte do rendimento como garantia.",
+    "O FGC não participa de resgates."
+   ],
+   [
+    "o banco cobra multa fixa de 10% definida pelo Banco Central.",
+    "Não existe multa fixa definida pelo BC."
+   ]
+  ],
+  "gabarito": "CDBs sem liquidez diária podem não permitir resgate antes do vencimento; quando o emissor aceita recomprar, usa taxa de mercado do momento, e títulos prefixados podem valer menos se os juros subiram. Por isso o prazo do CDB deve ser compatível com o objetivo, e para reserva usa-se liquidez diária.",
+  "dica": "Resgate antecipado de CDB sem liquidez = preço de mercado, possivelmente menor."
+ },
+ {
+  "pd": "2.1.1.1.3.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa com caixa sobrando pergunta a Natália, profissional CPA, se deve aplicar em LCA para aproveitar a isenção de IR, como fazem os sócios na pessoa física.",
+  "enunciado": "Natália explica que, para a pessoa jurídica:",
+  "certa": "os rendimentos de LCA são tributados; a isenção vale só para pessoa física.",
+  "erradas": [
+   [
+    "os rendimentos também são isentos, pois a isenção é do produto, não do investidor.",
+    "A isenção da LCA é para pessoa física."
+   ],
+   [
+    "a LCA é proibida para empresas, que só podem aplicar em CDB.",
+    "Empresas podem aplicar em LCA, mas são tributadas."
+   ],
+   [
+    "a isenção vale para empresas do agronegócio, qualquer que seja o porte.",
+    "A isenção não depende do setor da empresa investidora."
+   ]
+  ],
+  "gabarito": "LCI, LCA, CRI, CRA, debêntures incentivadas e poupança têm isenção de IR para pessoas físicas. Pessoas jurídicas têm os rendimentos tributados conforme seu regime de tributação. Na comparação entre produtos para empresas, a isenção da pessoa física não deve ser considerada.",
+  "dica": "Isenção de LCI e LCA é para pessoa física; empresa paga imposto."
+ },
+ {
+  "pd": "2.1.1.1.4",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "Uma debênture com taxa de 14% ao ano prevê que a empresa pode resgatá-la antecipadamente após 2 anos. Um ano depois, os juros de mercado caem para 10%. Um cliente pergunta a Rodrigo, profissional CPA, qual risco essa cláusula traz.",
+  "enunciado": "Rodrigo explica que o investidor corre o risco de:",
+  "certa": "resgate antecipado com juros baixos, tendo de reaplicar a taxas menores.",
+  "erradas": [
+   [
+    "a empresa elevar a taxa da debênture para 18%, prejudicando novos investidores.",
+    "A taxa contratada não sobe por decisão da empresa."
+   ],
+   [
+    "o Tesouro Nacional assumir a dívida e reduzir a taxa da debênture.",
+    "O Tesouro não assume dívidas de empresas."
+   ],
+   [
+    "perder a garantia do FGC quando a empresa exerce o resgate antecipado.",
+    "Debêntures nunca tiveram FGC."
+   ]
+  ],
+  "gabarito": "Cláusulas de resgate ou amortização antecipada facultativa (call) permitem à emissora pagar a dívida antes, em geral quando os juros caem e ela pode se refinanciar mais barato. Para o investidor, isso gera risco de reinvestimento: receber antes e reaplicar a taxas menores. Por isso a escritura costuma prever prêmio no resgate antecipado.",
+  "dica": "Call em debênture: a empresa paga antes quando os juros caem; o investidor reaplica a taxa menor."
+ },
+ {
+  "pd": "2.1.1.1.5",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Ana comprou um CRI de 10 anos que paga IPCA + 7%. Dois anos depois, precisa vender e descobre que há poucos compradores e que as ofertas estão bem abaixo da curva. Pergunta a Edson, profissional CPA.",
+  "enunciado": "Edson explica que Ana enfrenta principalmente:",
+  "certa": "o risco de liquidez do CRI, cujo mercado secundário é pouco negociado.",
+  "erradas": [
+   [
+    "a perda da isenção de IR, que só vale se o CRI for levado ao vencimento.",
+    "A isenção para pessoa física vale também na venda."
+   ],
+   [
+    "a cobrança de come-cotas, que reduz o valor do CRI a cada semestre.",
+    "Come-cotas é de fundos."
+   ],
+   [
+    "a obrigação de vender o CRI de volta à securitizadora pelo valor aplicado.",
+    "Não há essa obrigação."
+   ]
+  ],
+  "gabarito": "CRIs e CRAs costumam ter baixa liquidez no secundário: vender antes do vencimento pode exigir desconto relevante, além da marcação a mercado (juros e spread de crédito). Por isso são indicados para recursos que podem ficar até o vencimento. Os riscos principais são crédito do lastro, liquidez e mercado.",
+  "dica": "CRI/CRA: secundário pouco líquido; vender antes pode custar caro."
+ },
+ {
+  "pd": "2.1.1.1.8",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Com a meta Selic em 8% ao ano e TR zero, Júlio pergunta a Mariana, profissional CPA, quanto a poupança renderá em um ano.",
+  "enunciado": "Mariana calcula que a poupança renderá cerca de:",
+  "certa": "5,6% ao ano (70% da Selic), sem IR.",
+  "erradas": [
+   [
+    "6,17% ao ano (0,5% ao mês), pois essa regra vale para qualquer Selic.",
+    "0,5% ao mês vale só quando a Selic passa de 8,5% ao ano."
+   ],
+   [
+    "8% ao ano, igual à Selic, por ser título do governo.",
+    "A poupança não é título do governo e não rende a Selic integral."
+   ],
+   [
+    "4,76% ao ano, já descontado o IR de 15%.",
+    "A poupança é isenta de IR para pessoa física."
+   ]
+  ],
+  "gabarito": "Regra da poupança: com meta Selic de até 8,5% ao ano, rende 70% da Selic + TR; acima disso, 0,5% ao mês + TR. Com Selic de 8%: 0,70 × 8% = 5,6% ao ano, mais a TR (zero no exemplo). É isenta de IR para pessoa física, tem FGC e liquidez com rendimento no aniversário.",
+  "dica": "Selic até 8,5%: poupança = 70% da Selic + TR."
+ },
+ {
+  "pd": "2.1.1.2.2.1.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um empresário dono de uma S/A familiar quer captar recursos vendendo ações ao público em geral. Pergunta a Ivone, profissional CPA, se pode fazer isso.",
+  "enunciado": "Ivone explica que, para oferecer ações ao público:",
+  "certa": "a empresa precisa ser companhia aberta, registrada na CVM.",
+  "erradas": [
+   [
+    "basta ser sociedade anônima, mesmo de capital fechado, sem registro na CVM.",
+    "Companhias fechadas não podem fazer oferta pública de ações."
+   ],
+   [
+    "a empresa deve virar sociedade limitada, que é o tipo exigido para captar na bolsa.",
+    "Limitadas têm quotas, não ações negociáveis em bolsa."
+   ],
+   [
+    "é suficiente o registro na Junta Comercial e a aprovação do Banco Central.",
+    "O registro de companhia aberta e das ofertas é na CVM."
+   ]
+  ],
+  "gabarito": "Sociedade limitada: capital dividido em quotas, sem negociação em bolsa. Sociedade anônima: capital dividido em ações; pode ser fechada (sem valores mobiliários negociados publicamente) ou aberta (registrada na CVM, com valores mobiliários admitidos à negociação). Empresas listadas negociam ações em bolsa; algumas abertas negociam apenas títulos de dívida.",
+  "dica": "Vender ações ao público = companhia aberta, com registro na CVM."
+ },
+ {
+  "pd": "2.1.1.2.2.2.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma companhia teve lucro, mas o estatuto não define o dividendo mínimo. Um acionista minoritário pergunta a Tiago, profissional CPA, se tem direito a receber alguma parte do lucro.",
+  "enunciado": "Tiago explica que, se o estatuto for omisso, a Lei das S.A. garante:",
+  "certa": "dividendo mínimo obrigatório de metade do lucro líquido ajustado.",
+  "erradas": [
+   [
+    "dividendo mínimo de 95% do lucro, como nos fundos imobiliários.",
+    "95% é regra dos FIIs."
+   ],
+   [
+    "nenhum dividendo, pois a distribuição depende só da vontade do controlador.",
+    "A lei garante dividendo mínimo obrigatório."
+   ],
+   [
+    "dividendo mínimo de 10% do patrimônio líquido, pago todo trimestre.",
+    "A base é o lucro líquido ajustado, não o patrimônio."
+   ]
+  ],
+  "gabarito": "Pela Lei das S.A. (art. 202), o estatuto define o dividendo obrigatório; se for omisso, os acionistas têm direito a pelo menos metade do lucro líquido ajustado. Na prática, muitos estatutos fixam 25%, que é o mínimo quando o estatuto é alterado para incluir a regra. A AGO delibera sobre a destinação do lucro. Dividendos são, em regra, isentos de IR para pessoa física.",
+  "dica": "Estatuto omisso: dividendo obrigatório de metade do lucro líquido ajustado (Lei das S.A., art. 202)."
+ },
+ {
+  "pd": "2.1.1.2.3.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Acionistas minoritários desconfiam das contas de uma companhia e pedem a instalação de um órgão independente da administração para fiscalizar os atos dos gestores. Pergunta-se a Patrícia, profissional CPA, que órgão é esse.",
+  "enunciado": "Patrícia explica que é o:",
+  "certa": "conselho fiscal, que fiscaliza os administradores e opina sobre as contas.",
+  "erradas": [
+   [
+    "conselho de administração, que é eleito pelos minoritários para executar a gestão.",
+    "O conselho de administração orienta a estratégia e elege a diretoria."
+   ],
+   [
+    "comitê de investimentos, que define a política de dividendos da companhia.",
+    "Esse comitê não é órgão fiscalizador previsto em lei."
+   ],
+   [
+    "diretoria executiva, que fiscaliza o próprio trabalho e presta contas à CVM.",
+    "A diretoria é fiscalizada, não fiscalizadora."
+   ]
+  ],
+  "gabarito": "O conselho fiscal, previsto na Lei das S.A., fiscaliza os atos dos administradores, opina sobre o relatório anual e as demonstrações financeiras e denuncia irregularidades. Pode ser permanente ou instalado a pedido de acionistas. Os minoritários têm direito a eleger membros, reforçando a governança.",
+  "dica": "Conselho fiscal = fiscaliza administradores e contas; minoritários podem eleger membros."
+ },
+ {
+  "pd": "2.1.1.3.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Sílvio comprou 100 ações a R$ 10 e, depois, mais 100 da mesma empresa a R$ 14. Mais tarde, vendeu 100 ações a R$ 15, em operação comum, num mês com R$ 30 mil de vendas totais. Pergunta a Carla, profissional CPA, qual o lucro tributável.",
+  "enunciado": "Carla calcula que o lucro tributável na venda é de:",
+  "certa": "R$ 300, usando o custo médio de R$ 12 por ação.",
+  "erradas": [
+   [
+    "R$ 500, usando o custo da primeira compra (R$ 10).",
+    "Para o IR usa-se o custo médio de aquisição."
+   ],
+   [
+    "R$ 100, usando o custo da última compra (R$ 14).",
+    "Não se escolhe o lote; usa-se o custo médio."
+   ],
+   [
+    "zero, pois as vendas de ações até R$ 50 mil por mês são isentas.",
+    "A isenção é para vendas de até R$ 20 mil no mês."
+   ]
+  ],
+  "gabarito": "Para apurar o ganho em ações, usa-se o custo médio ponderado de aquisição (incluindo corretagens e emolumentos): (100 × 10 + 100 × 14) ÷ 200 = R$ 12. Lucro = 100 × (15 − 12) = R$ 300. Como as vendas no mês passaram de R$ 20 mil, o lucro é tributado em 15% (R$ 45), descontado o dedo-duro, pago por DARF.",
+  "dica": "IR em ações: lucro = venda − custo médio de aquisição."
+ },
+ {
+  "pd": "2.1.2.2.20.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Laura e os fundos",
+  "etapa": "1/3",
+  "contexto": "Laura compara uma classe de fundo DI com taxa de administração total de 1% ao ano e um CDB de 100% do CDI. Com o CDI em 14% ao ano, ela pergunta a Breno, profissional CPA, qual rende mais antes do IR.",
+  "enunciado": "Breno explica que, antes do IR:",
+  "certa": "o CDB tende a render mais; a taxa de 1% deixa o fundo perto de 13% ao ano.",
+  "erradas": [
+   [
+    "o fundo rende mais, pois a taxa de administração é cobrada só no resgate.",
+    "A taxa é cobrada diariamente e já reduz a cota."
+   ],
+   [
+    "os dois rendem igual, pois a taxa de administração é paga pelo administrador.",
+    "A taxa sai do patrimônio da classe, reduzindo o retorno do cotista."
+   ],
+   [
+    "o fundo rende mais, pois tem come-cotas, que antecipa os rendimentos.",
+    "Come-cotas antecipa imposto, não rendimento."
+   ]
+  ],
+  "gabarito": "A taxa de administração é cobrada diariamente sobre o patrimônio e já está refletida no valor da cota. Em fundos DI, uma taxa de 1% ao ano com CDI de 14% deixa o rendimento bruto perto de 13%, abaixo de um CDB de 100% do CDI. O fundo ainda tem come-cotas. Em produtos de renda fixa simples, taxas baixas são decisivas.",
+  "dica": "Fundo DI: a taxa de administração sai do rendimento todo dia. Compare com CDB pelo retorno líquido."
+ },
+ {
+  "pd": "2.1.2.3.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Laura e os fundos",
+  "etapa": "2/3",
+  "contexto": "Laura também tem uma classe “de ações” e pergunta a Breno por que ela não tem come-cotas e o que acontece se a carteira passar a ter só metade em ações.",
+  "enunciado": "Breno explica que a classe de ações:",
+  "certa": "deve manter ao menos 67% em ações para ter esse tratamento; abaixo disso, a tributação muda.",
+  "erradas": [
+   [
+    "pode ter qualquer percentual de ações, pois a classificação depende só do nome do fundo.",
+    "A classificação depende da composição mínima da carteira."
+   ],
+   [
+    "tem come-cotas de 15% em maio e novembro, como as demais classes.",
+    "Classes de ações não têm come-cotas."
+   ],
+   [
+    "é isenta de IR no resgate, desde que o investidor fique mais de 5 anos.",
+    "O ganho é tributado em 15% no resgate, sem isenção por prazo."
+   ]
+  ],
+  "gabarito": "Classes de ações devem manter no mínimo 67% do patrimônio em ações e ativos equivalentes. Para fins tributários, as que cumprem a regra pagam 15% sobre o ganho apenas no resgate, sem come-cotas e sem IOF regressivo. Se a carteira deixar de cumprir o mínimo, a classe passa a ser tributada pelas regras de renda fixa (curto ou longo prazo).",
+  "dica": "Classe de ações: mínimo de 67% em ações → 15% só no resgate, sem come-cotas."
+ },
+ {
+  "pd": "2.1.2.3.6.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Laura e os fundos",
+  "etapa": "3/3",
+  "contexto": "Por fim, Laura quer proteger parte do patrimônio contra a alta do dólar, pois planeja morar fora em 2 anos. Breno sugere uma classe cambial.",
+  "enunciado": "Breno explica que a classe cambial:",
+  "certa": "mantém ao menos 80% em ativos ligados a moeda estrangeira e oscila com o câmbio.",
+  "erradas": [
+   [
+    "garante o valor em dólar do patrimônio, sem qualquer oscilação em reais.",
+    "O valor em reais oscila com o câmbio."
+   ],
+   [
+    "investe em ações de empresas exportadoras, que sobem quando o dólar sobe.",
+    "Isso descreve uma estratégia de ações, não a classe cambial."
+   ],
+   [
+    "é isenta de IR, por proteger o investidor contra a desvalorização do real.",
+    "Classes cambiais são tributadas conforme o prazo da carteira."
+   ]
+  ],
+  "gabarito": "Classes cambiais mantêm ao menos 80% do patrimônio em ativos relacionados à variação de moeda estrangeira (por exemplo, títulos e derivativos atrelados ao dólar), servindo de proteção (hedge) para quem tem compromissos em moeda estrangeira. O valor da cota em reais oscila com o câmbio. A tributação segue a regra de curto ou longo prazo.",
+  "dica": "Classe cambial: 80% atrelado a moeda estrangeira; protege contra a alta do dólar e oscila com ele."
+ },
+ {
+  "pd": "2.1.4.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um FII anuncia nova emissão de cotas para comprar imóveis, e Ronaldo, cotista, recebe aviso de direito de preferência. Ele pergunta a Bianca, profissional CPA, o que fazer se não quiser investir mais.",
+  "enunciado": "Bianca explica que Ronaldo pode:",
+  "certa": "não exercer o direito e, se permitido, negociá-lo; sem subscrever, será diluído.",
+  "erradas": [
+   [
+    "exigir que o fundo recompre suas cotas pelo valor patrimonial, já que não vai subscrever.",
+    "FIIs são fechados; não há recompra obrigatória."
+   ],
+   [
+    "ignorar o aviso sem qualquer efeito sobre sua participação no fundo.",
+    "Com novas cotas emitidas, a participação de quem não subscreve diminui."
+   ],
+   [
+    "receber as novas cotas gratuitamente, por ser cotista antigo.",
+    "Na emissão, as novas cotas são pagas."
+   ]
+  ],
+  "gabarito": "FIIs captam recursos por novas emissões de cotas. Os cotistas costumam ter direito de preferência na proporção de suas cotas; podem exercê-lo, cedê-lo ou negociá-lo (quando o regulamento permite) ou deixá-lo expirar, sendo diluídos. As emissões têm custos (estruturação, distribuição) e devem ser avaliadas pelo preço da cota e pelos ativos a adquirir.",
+  "dica": "Emissão de FII: exercer, ceder ou deixar o direito de preferência. Quem não subscreve é diluído."
+ },
+ {
+  "pd": "2.1.4.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um FII investe parte em lajes corporativas alugadas e parte em CRIs. Um cliente pergunta a Juliano, profissional CPA, como classificar esse fundo e quais riscos combina.",
+  "enunciado": "Juliano explica que o fundo é:",
+  "certa": "híbrido, combinando riscos de imóveis (vacância) e de títulos (crédito).",
+  "erradas": [
+   [
+    "de tijolo, pois qualquer FII com imóveis físicos é considerado de tijolo.",
+    "Por ter também CRIs relevantes, é híbrido."
+   ],
+   [
+    "de papel, pois a presença de CRIs define a classificação do fundo.",
+    "As lajes alugadas tornam o fundo híbrido."
+   ],
+   [
+    "multimercado, por investir em mais de um tipo de ativo.",
+    "Multimercado é tipificação de FIF, não de FII."
+   ]
+  ],
+  "gabarito": "FIIs de tijolo investem em imóveis físicos (renda de aluguéis); de papel, em títulos imobiliários (CRI, LCI, cotas de FII); híbridos, nos dois. Os híbridos diversificam fontes de renda, mas combinam riscos: vacância, inadimplência de inquilinos e desvalorização de imóveis, além de risco de crédito e de juros dos títulos.",
+  "dica": "FII híbrido = imóveis + títulos imobiliários: riscos de vacância e de crédito."
+ },
+ {
+  "pd": "2.2.1.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Cristiano declara no modelo completo, contribui para o INSS e já aplica no PGBL o equivalente a 12% de sua renda bruta. Ele quer investir mais para a aposentadoria em previdência. Pergunta a Lúcia, profissional CPA.",
+  "enunciado": "Lúcia recomenda que o valor adicional vá para:",
+  "certa": "um VGBL, pois o PGBL acima de 12% não traz dedução e pagaria IR sobre o total.",
+  "erradas": [
+   [
+    "mais PGBL, pois todo aporte em PGBL é dedutível, sem limite.",
+    "A dedução é limitada a 12% da renda bruta tributável."
+   ],
+   [
+    "um fundo de pensão de outra empresa, que aceita qualquer pessoa.",
+    "Fundos de pensão são restritos a empregados ou associados."
+   ],
+   [
+    "título de capitalização, que tem benefício fiscal maior que a previdência.",
+    "Capitalização não tem esse benefício fiscal."
+   ]
+  ],
+  "gabarito": "Quem já aproveita o limite de 12% no PGBL deve direcionar aportes adicionais a VGBL (ou a outros investimentos), porque o VGBL tributa só o rendimento no resgate, enquanto o PGBL acima do limite seria tributado sobre o total sem ter gerado dedução. A combinação PGBL até 12% + VGBL é comum para quem declara no modelo completo.",
+  "dica": "PGBL até 12% da renda; o que passar disso, VGBL."
+ },
+ {
+  "pd": "2.2.2.2",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Elisa contribuiu para um VGBL no regime regressivo: R$ 50 mil há 9 anos e R$ 50 mil há 1 ano. Agora quer resgatar parte do saldo e pergunta a Hugo, profissional CPA, como o IR é calculado.",
+  "enunciado": "Hugo explica que, no regime regressivo:",
+  "certa": "saem primeiro os aportes mais antigos, com a alíquota do tempo de cada aporte.",
+  "erradas": [
+   [
+    "o resgate usa a média das alíquotas de todos os aportes, ponderada pelo valor.",
+    "Não há média; aplica-se a alíquota de cada aporte."
+   ],
+   [
+    "saem primeiro os aportes mais recentes, com a alíquota de 35%.",
+    "A ordem é a dos aportes mais antigos primeiro (PEPS)."
+   ],
+   [
+    "todo o resgate paga a alíquota mínima de 10%, pois o plano tem mais de 9 anos.",
+    "O prazo é contado por aporte, não pela idade do plano."
+   ]
+  ],
+  "gabarito": "No regime regressivo, cada aporte tem seu próprio prazo de acumulação, e os resgates seguem o critério PEPS (primeiro que entra, primeiro que sai): saem primeiro os recursos mais antigos, com alíquotas menores. No caso, o aporte de 9 anos paga 15% (8 a 10 anos), e o de 1 ano pagaria 35%. Na portabilidade, os prazos são preservados.",
+  "dica": "Regressivo: alíquota por aporte; no resgate saem primeiro os mais antigos (PEPS)."
+ },
+ {
+  "pd": "2.3.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Hélio tem financiamento imobiliário pelo SAC e recebeu um bônus de R$ 30 mil. Quer usá-lo para amortizar a dívida e pergunta a Rafaela, profissional CPA, o que pode escolher.",
+  "enunciado": "Rafaela explica que, na amortização extraordinária, ele pode:",
+  "certa": "reduzir o prazo ou a parcela; reduzir o prazo costuma economizar mais juros.",
+  "erradas": [
+   [
+    "apenas reduzir a parcela, pois o prazo do contrato não pode ser alterado.",
+    "Em geral o cliente escolhe entre reduzir prazo ou parcela."
+   ],
+   [
+    "apenas quitar toda a dívida, pois amortizações parciais não são permitidas.",
+    "Amortizações parciais são permitidas."
+   ],
+   [
+    "pagar multa de 10% sobre o valor amortizado, por antecipação.",
+    "A legislação garante a liquidação antecipada com redução proporcional dos juros."
+   ]
+  ],
+  "gabarito": "O consumidor tem direito à liquidação antecipada, total ou parcial, com redução proporcional dos juros. Na amortização extraordinária, pode-se reduzir o prazo (mantendo a parcela) ou a parcela (mantendo o prazo). Reduzir o prazo costuma gerar maior economia de juros; reduzir a parcela alivia o orçamento. O FGTS também pode ser usado nas condições do SFH.",
+  "dica": "Amortização extra: reduzir prazo economiza mais juros; reduzir parcela alivia o orçamento."
+ },
+ {
+  "pd": "2.4.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ivo vai viajar e quer comprar dólares em espécie. Um conhecido oferece dólares “mais baratos” sem nota. Ele pergunta a Sara, profissional CPA, onde pode comprar com segurança.",
+  "enunciado": "Sara explica que ele deve comprar moeda em:",
+  "certa": "instituições autorizadas pelo BC ou correspondentes, com identificação.",
+  "erradas": [
+   [
+    "qualquer pessoa, pois o mercado de câmbio é livre e não exige autorização.",
+    "Operar câmbio exige autorização do BC; compra informal é ilegal."
+   ],
+   [
+    "apenas no Banco Central, que vende moeda diretamente às pessoas físicas.",
+    "O BC não vende moeda ao público."
+   ],
+   [
+    "casas de câmbio estrangeiras, únicas autorizadas a vender dólar no Brasil.",
+    "Instituições brasileiras autorizadas operam câmbio no país."
+   ]
+  ],
+  "gabarito": "Podem operar câmbio as instituições autorizadas pelo BC (bancos, corretoras de câmbio, distribuidoras e corretoras de valores, entre outras) e seus correspondentes cambiais, como agências de turismo, dentro dos limites regulamentares. A operação exige identificação do cliente e informação do VET. Comprar moeda de pessoas ou empresas não autorizadas é irregular e arriscado (falsificação, lavagem).",
+  "dica": "Câmbio só em instituição autorizada pelo BC (ou correspondente), com identificação e VET."
+ },
+ {
+  "pd": "2.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao contratar um seguro de vida, Rosana quer indicar como beneficiária uma amiga que cuidou dela durante anos. Pergunta a Saulo, profissional CPA, se pode e se a indenização entra no inventário.",
+  "enunciado": "Saulo explica que, em regra:",
+  "certa": "ela pode indicar quem quiser, e a indenização não integra a herança nem paga IR.",
+  "erradas": [
+   [
+    "só herdeiros necessários podem ser beneficiários de seguro de vida.",
+    "O segurado pode indicar livremente os beneficiários."
+   ],
+   [
+    "a indenização entra no inventário e é dividida entre os herdeiros legais.",
+    "Em regra, o capital segurado não é herança."
+   ],
+   [
+    "a indenização é tributada pelo IR na tabela regressiva.",
+    "A indenização de seguro de vida é isenta de IR."
+   ]
+  ],
+  "gabarito": "No seguro de vida, o segurado indica livremente os beneficiários (na falta de indicação, segue-se a regra legal). O capital segurado não é considerado herança, por isso é pago diretamente aos beneficiários, fora do inventário, e é isento de IR. Isso torna o seguro útil no planejamento sucessório e para dar liquidez à família.",
+  "dica": "Seguro de vida: beneficiário livre, fora do inventário e isento de IR."
+ }
+]
