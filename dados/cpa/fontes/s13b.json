@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.1.5.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Rocha e as prioridades",
+  "etapa": "1/4",
+  "contexto": "A família Rocha consegue poupar R$ 1.200 por mês. Eles querem formar reserva de emergência (ainda não têm), trocar de carro e começar a previdência. Perguntam a Joana, profissional CPA, por onde começar.",
+  "enunciado": "Joana recomenda priorizar:",
+  "certa": "a reserva de emergência, e depois distribuir a poupança entre os demais objetivos.",
+  "erradas": [
+   [
+    "a troca do carro, que é o objetivo mais visível para a família.",
+    "Sem reserva, qualquer imprevisto desorganiza o plano."
+   ],
+   [
+    "a previdência, que tem benefício fiscal e deve vir sempre em primeiro lugar.",
+    "A reserva de emergência vem antes de compromissos de longo prazo."
+   ],
+   [
+    "dividir igualmente entre os três objetivos desde o início.",
+    "A reserva tem prioridade por proteger os demais objetivos."
+   ]
+  ],
+  "gabarito": "Ao estabelecer metas, é preciso priorizar. A reserva de emergência costuma vir primeiro, pois protege o orçamento e evita que imprevistos obriguem a desfazer investimentos ou recorrer a crédito caro. Depois, os recursos são distribuídos entre os objetivos conforme prazo, valor e importância para a família.",
+  "dica": "Primeiro a reserva de emergência; depois, os demais objetivos por prioridade."
+ },
+ {
+  "pd": "3.1.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Rocha e as prioridades",
+  "etapa": "2/4",
+  "contexto": "No diagnóstico, os Rocha têm ativos de R$ 300 mil (casa, carro e R$ 20 mil aplicados) e dívidas de R$ 90 mil, incluindo R$ 15 mil no rotativo do cartão. Joana calcula o endividamento.",
+  "enunciado": "O índice de endividamento (dívidas ÷ ativos) é de:",
+  "certa": "30%.",
+  "erradas": [
+   [
+    "5%.",
+    "Corresponde só à dívida do cartão sobre os ativos."
+   ],
+   [
+    "70%.",
+    "70% é a proporção do patrimônio líquido sobre os ativos."
+   ],
+   [
+    "450%.",
+    "Divide ativos por aplicações, sem sentido para o índice."
+   ]
+  ],
+  "gabarito": "Endividamento = passivos ÷ ativos totais = 90.000 ÷ 300.000 = 30%. Patrimônio líquido = 300.000 − 90.000 = R$ 210.000. Além do percentual, importa o tipo de dívida: o rotativo do cartão, mesmo pequeno, é a mais cara e deve ser eliminada primeiro.",
+  "dica": "Endividamento = dívidas ÷ ativos. Veja também o custo de cada dívida."
+ },
+ {
+  "pd": "3.1.3.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Rocha e as prioridades",
+  "etapa": "3/4",
+  "contexto": "Os Rocha têm R$ 20 mil aplicados rendendo 100% do CDI e R$ 15 mil no rotativo do cartão a 13% ao mês. Querem manter a aplicação “para não mexer na poupança”.",
+  "enunciado": "Joana orienta que:",
+  "certa": "vale usar parte da aplicação para quitar o rotativo, que custa muito mais do que ela rende.",
+  "erradas": [
+   [
+    "devem manter a aplicação e pagar o mínimo do cartão, para preservar o patrimônio.",
+    "Pagar 13% ao mês enquanto se ganha cerca de 1% ao mês destrói patrimônio."
+   ],
+   [
+    "devem contratar novo cartão para pagar o atual e manter a aplicação intacta.",
+    "Trocar cartão por cartão mantém a dívida cara."
+   ],
+   [
+    "devem resgatar e aplicar em ações, para tentar ganhar mais que os juros do cartão.",
+    "Nenhum investimento seguro supera 13% ao mês."
+   ]
+  ],
+  "gabarito": "A avaliação da melhor dívida compara o custo de cada dívida com o rendimento dos recursos disponíveis. Usar aplicações que rendem menos que o custo da dívida para quitá-la aumenta o patrimônio líquido. Depois, recompõe-se a reserva com o que seria pago de juros. Em seguida, evita-se voltar ao rotativo.",
+  "dica": "Dívida cara + dinheiro aplicado rendendo menos: quite a dívida."
+ },
+ {
+  "pd": "3.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Rocha e as prioridades",
+  "etapa": "4/4",
+  "contexto": "O Sr. Rocha é o único provedor da casa e não tem seguro de vida. Ele acha que a reserva e a casa própria bastam se algo lhe acontecer.",
+  "enunciado": "Joana explica que, na gestão de riscos da família:",
+  "certa": "o seguro protege a renda que a reserva não sustentaria por anos.",
+  "erradas": [
+   [
+    "a casa própria substitui o seguro, pois pode ser vendida a qualquer momento.",
+    "Vender a moradia da família não é solução de proteção."
+   ],
+   [
+    "seguros só fazem sentido para quem tem dívidas bancárias.",
+    "A proteção da renda vale para quem tem dependentes."
+   ],
+   [
+    "a reserva de 6 meses cobre qualquer imprevisto, inclusive a morte do provedor.",
+    "A reserva cobre meses, não anos de despesas."
+   ]
+  ],
+  "gabarito": "Gestão de risco e seguros: identificar riscos com alto impacto financeiro (morte ou invalidez do provedor, doenças graves, perda de bens) e decidir entre reter, reduzir ou transferir. Para famílias com um único provedor, o seguro de vida transfere à seguradora o risco de perda da renda, complementando a reserva e o patrimônio.",
+  "dica": "Provedor único: seguro de vida protege a renda que a reserva não cobriria por anos."
+ },
+ {
+  "pd": "3.1.3.4.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Márcia é CLT, tem emprego estável e gasta R$ 5.000 por mês. Pergunta a Hugo, profissional CPA, quanto ter de reserva de emergência, usando 6 meses como referência.",
+  "enunciado": "Hugo calcula uma reserva de:",
+  "certa": "R$ 30.000.",
+  "erradas": [
+   [
+    "R$ 5.000.",
+    "Corresponde a apenas 1 mês de despesas."
+   ],
+   [
+    "R$ 60.000.",
+    "Corresponde a 12 meses, referência mais usada para renda instável."
+   ],
+   [
+    "R$ 15.000.",
+    "Corresponde a 3 meses, não a 6."
+   ]
+  ],
+  "gabarito": "Reserva de emergência = despesas mensais × número de meses de referência: 5.000 × 6 = R$ 30.000. Para renda estável, a referência usual é de 3 a 6 meses; para autônomos e renda variável, de 6 a 12 meses. Deve ficar em ativos líquidos e de baixo risco.",
+  "dica": "Reserva = despesas mensais × meses de referência."
+ },
+ {
+  "pd": "3.1.5.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Rui quer se aposentar com renda de R$ 10.000 por mês. Pela estimativa, o INSS pagará cerca de R$ 6.000. Ele pergunta a Patrícia, profissional CPA, por onde começar o cálculo do planejamento complementar.",
+  "enunciado": "Patrícia explica que o ponto de partida é:",
+  "certa": "o déficit de R$ 4.000 por mês a ser coberto.",
+  "erradas": [
+   [
+    "a renda total de R$ 10.000, ignorando o benefício do INSS.",
+    "O benefício esperado reduz a necessidade de complemento."
+   ],
+   [
+    "o benefício do INSS, que já basta e dispensa planejamento.",
+    "Há um déficit de R$ 4.000 por mês."
+   ],
+   [
+    "o valor da última aplicação de Rui, sem considerar objetivos.",
+    "O cálculo parte da renda desejada."
+   ]
+  ],
+  "gabarito": "No planejamento da aposentadoria, estima-se a renda desejada, subtraem-se as fontes previstas (INSS, aluguéis, previdência já contratada) e calcula-se o patrimônio necessário para cobrir o déficit (por exemplo, déficit anual ÷ taxa real, se viver só de renda). Daí se definem aportes, prazo e produtos.",
+  "dica": "Aposentadoria: renda desejada − fontes previstas = déficit a cobrir com investimentos."
+ },
+ {
+  "pd": "3.1.6.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Júlio comprou um apartamento por R$ 400 mil há 5 anos, que hoje vale R$ 600 mil. Pergunta a Lúcia, profissional CPA, qual valor informar na declaração de IR.",
+  "enunciado": "Lúcia explica que, em regra, ele deve informar:",
+  "certa": "o custo de aquisição, não o valor de mercado.",
+  "erradas": [
+   [
+    "o valor de mercado atual (R$ 600 mil), atualizado todo ano.",
+    "Em regra, declara-se o custo de aquisição."
+   ],
+   [
+    "nada, pois imóveis próprios não precisam ser declarados.",
+    "Imóveis devem ser declarados em Bens e Direitos."
+   ],
+   [
+    "a média entre o custo e o valor de mercado.",
+    "Não existe essa regra."
+   ]
+  ],
+  "gabarito": "Na declaração de IRPF, bens e direitos são informados, em regra, pelo custo de aquisição (acrescido de benfeitorias comprovadas), e não pelo valor de mercado. A diferença só é apurada na venda, como ganho de capital, conforme as regras próprias. Aplicações financeiras também são declaradas pelo saldo ou custo, conforme o tipo.",
+  "dica": "Imóvel na declaração: custo de aquisição, não valor de mercado."
+ },
+ {
+  "pd": "3.2.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Dois fundos com a mesma estratégia tiveram o mesmo retorno bruto, mas um cobra 2% ao ano de taxa e o outro 0,5%. Um cliente acha que a diferença é pequena. Pergunta a Rubens, profissional CPA.",
+  "enunciado": "Rubens explica que, na gestão de investimentos:",
+  "certa": "custos e impostos corroem o retorno, cada vez mais com o tempo.",
+  "erradas": [
+   [
+    "taxas não importam, pois o retorno bruto é o que conta.",
+    "O que o investidor recebe é o retorno líquido."
+   ],
+   [
+    "taxas maiores sempre indicam gestores melhores e retornos maiores.",
+    "Não há essa garantia."
+   ],
+   [
+    "o efeito das taxas desaparece no longo prazo.",
+    "Pelo efeito composto, ele aumenta."
+   ]
+  ],
+  "gabarito": "Na gestão de investimentos, o resultado relevante é o retorno líquido de taxas e impostos. Diferenças de taxas que parecem pequenas se acumulam pelo efeito dos juros compostos em prazos longos. Comparar custos, eficiência tributária (come-cotas, prazo de IR) e liquidez é parte da escolha de produtos.",
+  "dica": "O que importa é o retorno líquido; taxas pequenas viram muito no longo prazo."
+ },
+ {
+  "pd": "3.3.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um cliente vai precisar de R$ 80 mil em 10 meses para dar entrada em um imóvel. O gerente sugere um VGBL “por ter vantagem tributária”. O cliente pergunta a Taís, profissional CPA.",
+  "enunciado": "Taís explica que o VGBL:",
+  "certa": "é inadequado: foi feito para o longo prazo e pode ter carência.",
+  "erradas": [
+   [
+    "é o produto mais adequado para qualquer objetivo, por ser previdência.",
+    "A adequação depende do objetivo e do prazo."
+   ],
+   [
+    "tem isenção total de IR em resgates antes de 1 ano.",
+    "No regressivo, resgates curtos pagam 35%."
+   ],
+   [
+    "garante rentabilidade mínima igual à poupança.",
+    "Não há rentabilidade garantida."
+   ]
+  ],
+  "gabarito": "A adequação considera o objetivo e o prazo do recurso. Produtos de previdência são pensados para o longo prazo (benefício fiscal no PGBL, regime regressivo que favorece prazos longos, planejamento sucessório) e podem ter carência para resgate. Para um objetivo de 10 meses, prefere-se renda fixa de baixo risco com liquidez ou vencimento compatível.",
+  "dica": "Objetivo de curto prazo não combina com previdência."
+ },
+ {
+  "pd": "3.4.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma corretora 100% digital, aderente ao código Anbima, acha que as regras de distribuição só valem para atendimento presencial. Pergunta a Breno, profissional CPA.",
+  "enunciado": "Breno explica que o código de distribuição:",
+  "certa": "vale para qualquer canal, inclusive o digital.",
+  "erradas": [
+   [
+    "vale só para agências físicas e atendimento por telefone.",
+    "Os canais digitais estão abrangidos."
+   ],
+   [
+    "vale só para bancos de grande porte.",
+    "Vale para associadas e aderentes, de qualquer porte."
+   ],
+   [
+    "vale só para fundos de investimento, e não para outros produtos.",
+    "Abrange produtos de investimento em geral."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição de produtos de investimento se aplica às instituições associadas ou aderentes em todos os canais de distribuição (presencial, telefone, plataformas digitais, aplicativos), abrangendo regras de conheça seu cliente, suitability, publicidade, transparência na remuneração e conduta dos profissionais.",
+  "dica": "Código de distribuição vale em qualquer canal, inclusive digital."
+ },
+ {
+  "pd": "3.4.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento de PLD, um colega pergunta a Clara, profissional CPA, se lavagem de dinheiro é só infração administrativa ou também crime.",
+  "enunciado": "Clara explica que a lavagem de dinheiro:",
+  "certa": "é crime, com reclusão de 3 a 10 anos e multa.",
+  "erradas": [
+   [
+    "é apenas infração administrativa, punida com advertência.",
+    "É crime, além das sanções administrativas aos setores obrigados."
+   ],
+   [
+    "só é crime quando envolve mais de R$ 1 milhão.",
+    "Não há valor mínimo."
+   ],
+   [
+    "deixou de ser crime após a criação do Pix.",
+    "Continua sendo crime."
+   ]
+  ],
+  "gabarito": "A Lei 9.613/1998 tipifica o crime de lavagem de dinheiro (ocultar ou dissimular a natureza, origem, localização, disposição, movimentação ou propriedade de bens provenientes de infração penal), com pena de reclusão de 3 a 10 anos e multa, podendo ser aumentada em certas situações. Também prevê deveres administrativos para setores obrigados e sanções por descumprimento.",
+  "dica": "Lavagem é crime: reclusão de 3 a 10 anos e multa."
+ },
+ {
+  "pd": "3.4.7.1.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um influenciador sem registro na CVM vende assinaturas de um grupo de mensagens em que recomenda, de forma individualizada, quais ações cada assinante deve comprar e vender.",
+  "enunciado": "A conduta pode configurar:",
+  "certa": "exercício irregular de atividade regulada (consultoria ou análise sem registro).",
+  "erradas": [
+   [
+    "atividade livre, pois opinar sobre ações é liberdade de expressão em qualquer forma.",
+    "Recomendação individualizada e remunerada exige registro."
+   ],
+   [
+    "insider trading, pois o influenciador tem muitos seguidores.",
+    "Não há informação privilegiada envolvida."
+   ],
+   [
+    "churning, pois os assinantes operam muito.",
+    "Churning é giro da conta do cliente pelo intermediário."
+   ]
+  ],
+  "gabarito": "Exercer, ainda que gratuitamente, atividade regulada no mercado de valores mobiliários, como análise, consultoria ou administração de carteira, sem registro ou autorização exigidos, pode configurar o crime do art. 27-E da Lei 6.385/76 e infrações perante a CVM. Conteúdo educativo genérico difere de recomendação individualizada remunerada.",
+  "dica": "Recomendar investimentos de forma individual e paga sem registro na CVM = atividade irregular."
+ },
+ {
+  "pd": "3.4.6.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma gerente recebe áudio no aplicativo de mensagens, com a voz idêntica à de um cliente conhecido, pedindo urgência em uma transferência alta para outra conta. Ela pergunta a Leonardo, profissional CPA, como agir.",
+  "enunciado": "Leonardo orienta:",
+  "certa": "confirmar a ordem por canal oficial antes de executar.",
+  "erradas": [
+   [
+    "executar de imediato, pois a voz do cliente é inconfundível.",
+    "Vozes podem ser clonadas por IA."
+   ],
+   [
+    "executar e avisar o cliente depois, para não perder o prazo.",
+    "Executar sem confirmar expõe o cliente a fraude."
+   ],
+   [
+    "pedir ao remetente que envie a senha da conta por mensagem para confirmar.",
+    "Nunca se pede senha por mensagem."
+   ]
+  ],
+  "gabarito": "Golpes com engenharia social e IA (vozes e vídeos falsos, deepfakes) exigem procedimentos de confirmação por canais oficiais, autenticação adequada e desconfiança diante de urgência incomum. Proteger os dados e o patrimônio dos clientes no mundo digital é parte do dever de confidencialidade e de gestão do risco operacional.",
+  "dica": "Pedido urgente por mensagem ou áudio: confirme pelo canal oficial antes de agir."
+ },
+ {
+  "pd": "3.1.3.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Ao montar o orçamento, Bia lista: aluguel, plano de saúde, mensalidade da escola, supermercado, lazer e combustível. Pergunta a Paulo, profissional CPA, quais são despesas fixas.",
+  "enunciado": "Paulo classifica como despesas fixas:",
+  "certa": "aluguel, plano de saúde e mensalidade da escola.",
+  "erradas": [
+   [
+    "supermercado, lazer e combustível, que mudam todo mês.",
+    "Essas variam de mês a mês: são variáveis."
+   ],
+   [
+    "aluguel, lazer e combustível, por serem pagos com frequência.",
+    "Lazer e combustível são variáveis."
+   ],
+   [
+    "todas elas, pois são pagas mensalmente pela família.",
+    "Ser mensal não torna a despesa fixa; o valor precisa ser estável."
+   ]
+  ],
+  "gabarito": "No orçamento, despesas fixas têm valor estável e recorrente (aluguel, plano de saúde, escola, financiamentos); despesas variáveis mudam conforme o consumo (supermercado, lazer, combustível); despesas sazonais concentram-se em certos meses (IPVA, IPTU, matrícula). A capacidade de poupança considera todas, com provisão para as sazonais.",
+  "dica": "Fixas: valor estável (aluguel, escola, plano). Variáveis: dependem do consumo."
+ },
+ {
+  "pd": "3.4.3.3.3.1.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em uma corretora, a mesa que opera os recursos próprios da instituição fica ao lado da mesa que executa ordens de clientes, com acesso às mesmas informações. O compliance quer mudar isso.",
+  "enunciado": "A medida adequada é:",
+  "certa": "segregar as atividades, física e logicamente.",
+  "erradas": [
+   [
+    "unificar as duas mesas, para que todos tenham as mesmas informações.",
+    "Isso aumenta o conflito e o risco de front running."
+   ],
+   [
+    "permitir o acesso desde que os operadores assinem termo de confidencialidade.",
+    "O termo sozinho não elimina o risco; a segregação é a medida estrutural."
+   ],
+   [
+    "eliminar a área de clientes e operar só com recursos próprios.",
+    "A medida é desproporcional e não é exigida."
+   ]
+  ],
+  "gabarito": "A segregação de funções separa atividades com interesses conflitantes, como a gestão de recursos próprios (tesouraria) e a execução de ordens ou a gestão de recursos de terceiros, com barreiras físicas, de sistemas e de informação. Ela previne o uso de informações de clientes em benefício da instituição (por exemplo, front running).",
+  "dica": "Recursos próprios e ordens de clientes: atividades segregadas."
+ },
+ {
+  "pd": "4.2.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora diz que não exclui empresas com práticas ambientais fracas; em vez disso, compra ações delas e usa seu voto e o diálogo com a diretoria para melhorar essas práticas. Um cliente pergunta a Sabrina, profissional CPA, que estratégia é essa.",
+  "enunciado": "Sabrina explica que é a estratégia de:",
+  "certa": "engajamento e voto.",
+  "erradas": [
+   [
+    "exclusão.",
+    "A gestora não exclui as empresas."
+   ],
+   [
+    "best-in-class.",
+    "Não se trata de escolher as melhores do setor."
+   ],
+   [
+    "investimento temático.",
+    "Não se trata de investir em um tema específico."
+   ]
+  ],
+  "gabarito": "Engajamento e voto (stewardship) é a estratégia ESG em que o investidor usa sua posição de acionista para dialogar com as empresas e votar em assembleias, buscando melhorar práticas ambientais, sociais e de governança. Complementa ou substitui a exclusão, o best-in-class, a integração e o investimento de impacto.",
+  "dica": "Engajamento: ficar na empresa e usar o voto e o diálogo para melhorá-la."
+ },
+ {
+  "pd": "4.4.4.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente ouve falar em “tokenização” e pede a Fábio, profissional CPA, uma definição simples.",
+  "enunciado": "Fábio explica que tokenização é:",
+  "certa": "representar um ativo em tokens digitais em blockchain.",
+  "erradas": [
+   [
+    "converter reais em dólares por meio de uma corretora de câmbio.",
+    "Isso é operação de câmbio."
+   ],
+   [
+    "dividir um empréstimo em parcelas mensais iguais.",
+    "Isso é amortização."
+   ],
+   [
+    "imprimir certificados físicos de ações para guardar em casa.",
+    "Tokenização é digital."
+   ]
+  ],
+  "gabarito": "Tokenização é a representação digital de ativos ou direitos (imóveis, recebíveis, títulos, obras de arte, créditos de carbono) em tokens registrados em blockchain. Permite fracionamento, transferência mais simples, rastreabilidade e potencial de liquidez, com riscos de tecnologia, custódia, regulação e do próprio ativo.",
+  "dica": "Tokenizar = transformar um ativo ou direito em tokens digitais em blockchain."
+ },
+ {
+  "pd": "4.5.1.1.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante pergunta a Lara, profissional CPA, qual norma criou o Open Finance no Brasil.",
+  "enunciado": "Lara explica que ele foi instituído pela:",
+  "certa": "Resolução Conjunta nº 1/2020, do CMN e do Banco Central.",
+  "erradas": [
+   [
+    "Lei Complementar 105/2001, que trata do sigilo bancário.",
+    "A LC 105 trata do sigilo, não instituiu o Open Finance."
+   ],
+   [
+    "Resolução CVM 175, que regula os fundos de investimento.",
+    "A CVM 175 trata de fundos."
+   ],
+   [
+    "Lei 9.613/1998, que trata da lavagem de dinheiro.",
+    "Essa lei trata de PLD."
+   ]
+  ],
+  "gabarito": "O Open Banking, depois Open Finance, foi instituído pela Resolução Conjunta nº 1/2020 (CMN e BC), que define o compartilhamento padronizado de dados e serviços entre instituições autorizadas, mediante consentimento. A CVM e a SUSEP regulam as frentes de investimentos (open investment) e de seguros (open insurance), integradas ao ecossistema.",
+  "dica": "Open Finance: Resolução Conjunta nº 1/2020 (CMN e BC)."
+ },
+ {
+  "pd": "4.6.1.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma plataforma oferece carteiras de investimento montadas por algoritmos (robo-advisor), a partir das respostas do cliente a um questionário. Um cliente pergunta a Gisele, profissional CPA, que cuidados existem.",
+  "enunciado": "Gisele explica que, mesmo automatizada, a recomendação:",
+  "certa": "segue as regras de suitability, sob responsabilidade da instituição.",
+  "erradas": [
+   [
+    "dispensa suitability, pois o algoritmo é neutro.",
+    "Recomendações automatizadas também exigem adequação."
+   ],
+   [
+    "é garantida contra perdas, por ser feita por inteligência artificial.",
+    "Não há garantia de resultado."
+   ],
+   [
+    "dispensa qualquer registro, por não haver pessoa envolvida.",
+    "A instituição responde pelo serviço."
+   ]
+  ],
+  "gabarito": "A IA é aplicada em investimentos em robo-advisors, análise de dados, gestão de riscos e atendimento. Recomendações automatizadas continuam sujeitas às regras de suitability, transparência, registro e supervisão, e a instituição responde pelo serviço. Modelos devem ser testados, monitorados e controlados quanto a vieses e erros.",
+  "dica": "Robo-advisor também precisa de suitability, supervisão e responsabilidade da instituição."
+ },
+ {
+  "pd": "4.7.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Rodrigo, profissional CPA, o que diferencia as fintechs de hoje dos bancos tradicionais.",
+  "enunciado": "Rodrigo explica que as fintechs, em geral:",
+  "certa": "usam tecnologia e canais digitais, com custos menores.",
+  "erradas": [
+   [
+    "não são reguladas e não precisam de autorização.",
+    "Fintechs são reguladas conforme a atividade."
+   ],
+   [
+    "oferecem apenas criptomoedas, sem outros serviços.",
+    "Atuam em pagamentos, crédito, investimentos, seguros e mais."
+   ],
+   [
+    "dependem de agências físicas para atender os clientes.",
+    "O modelo é principalmente digital."
+   ]
+  ],
+  "gabarito": "Fintechs são empresas que combinam tecnologia e serviços financeiros (pagamentos, contas digitais, crédito, investimentos, seguros, câmbio), em geral com operação digital, custos menores e foco na experiência do cliente. São reguladas conforme a atividade (BC, CVM, SUSEP) e se beneficiam do Pix e do Open Finance, ampliando a concorrência.",
+  "dica": "Fintech: serviço financeiro digital, com custo menor, regulado conforme a atividade."
+ }
+]

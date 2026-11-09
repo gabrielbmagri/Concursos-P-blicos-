@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.3.3.2.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Laura avalia um projeto",
+  "etapa": "1/3",
+  "contexto": "Laura, dona de uma pequena indústria, vai receber R$ 11.000 de um cliente daqui a 1 ano. Ela quer saber quanto esse valor vale hoje, se o custo de oportunidade é de 10% ao ano. Pergunta a Rafael, profissional CPA.",
+  "enunciado": "Rafael calcula que o valor presente é de:",
+  "certa": "R$ 10.000.",
+  "erradas": [
+   [
+    "R$ 9.900.",
+    "Corresponde a descontar 10% de forma simples sobre R$ 11.000."
+   ],
+   [
+    "R$ 12.100.",
+    "Esse é o valor futuro de R$ 11.000 após mais um ano a 10%."
+   ],
+   [
+    "R$ 11.000.",
+    "Sem desconto, ignora o valor do dinheiro no tempo."
+   ]
+  ],
+  "gabarito": "Valor presente = valor futuro ÷ (1 + taxa)^n = 11.000 ÷ 1,10 = R$ 10.000. O conceito de valor do dinheiro no tempo diz que um real hoje vale mais que um real no futuro, porque pode ser aplicado. A taxa de desconto usada deve refletir o custo de oportunidade ou o custo de capital.",
+  "dica": "VP = VF ÷ (1 + i)^n."
+ },
+ {
+  "pd": "1.3.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Laura avalia um projeto",
+  "etapa": "2/3",
+  "contexto": "Laura avalia uma máquina de R$ 50 mil que gera R$ 20 mil por ano. O payback simples é de 2,5 anos. O contador diz que, trazendo os fluxos a valor presente, o prazo de retorno seria maior. Ela pergunta a Rafael por quê.",
+  "enunciado": "Rafael explica que o payback descontado:",
+  "certa": "traz os fluxos a valor presente; como valem menos, o prazo aumenta.",
+  "erradas": [
+   [
+    "é sempre menor que o simples, pois considera os juros recebidos.",
+    "Descontar reduz os fluxos e alonga o prazo."
+   ],
+   [
+    "é igual ao simples, pois os fluxos anuais são iguais.",
+    "O desconto muda o valor dos fluxos, mesmo iguais."
+   ],
+   [
+    "ignora o valor do dinheiro no tempo, como o simples.",
+    "É justamente o simples que ignora."
+   ]
+  ],
+  "gabarito": "Payback simples: tempo para recuperar o investimento somando os fluxos nominais. Payback descontado: soma os fluxos trazidos a valor presente pela taxa de desconto; como cada fluxo futuro vale menos hoje, o prazo de recuperação é maior. Ambos ignoram os fluxos após a recuperação; VPL e TIR complementam a análise.",
+  "dica": "Payback descontado ≥ payback simples (fluxos descontados valem menos)."
+ },
+ {
+  "pd": "1.3.3.5.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Laura avalia um projeto",
+  "etapa": "3/3",
+  "contexto": "A empresa de Laura financia-se com dívidas e capital dos sócios. O contador sugere usar o custo médio ponderado de capital (CMPC) como taxa de desconto dos projetos. Ela pergunta a Rafael por quê.",
+  "enunciado": "Rafael explica que o CMPC:",
+  "certa": "é o retorno mínimo para remunerar credores e sócios.",
+  "erradas": [
+   [
+    "é a taxa Selic, que vale para qualquer projeto de qualquer empresa.",
+    "A Selic é referência, mas o CMPC reflete o custo de capital da empresa."
+   ],
+   [
+    "é a inflação do período, usada para corrigir os fluxos.",
+    "Inflação não é custo de capital."
+   ],
+   [
+    "é a taxa de rentabilidade máxima permitida pela regulação.",
+    "Não existe esse limite regulatório."
+   ]
+  ],
+  "gabarito": "O CMPC (WACC) pondera o custo do capital de terceiros (dívidas) e do capital próprio (retorno exigido pelos sócios) pelos pesos de cada fonte. Projetos com retorno acima do CMPC criam valor (VPL positivo); abaixo, destroem. Alavancagem financeira (mais dívida) altera o CMPC e o risco da empresa.",
+  "dica": "CMPC = retorno mínimo para pagar credores e sócios; é a taxa de desconto dos projetos."
+ },
+ {
+  "pd": "1.1.3.1.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Teresa, profissional CPA, se uma distribuidora de títulos e valores mobiliários (DTVM) pode executar ordens na bolsa, como uma corretora.",
+  "enunciado": "Teresa explica que, hoje:",
+  "certa": "DTVMs também podem operar em bolsa, como as corretoras.",
+  "erradas": [
+   [
+    "somente corretoras podem operar em bolsa; DTVMs atuam só no balcão.",
+    "Essa restrição deixou de existir."
+   ],
+   [
+    "DTVMs são supervisionadas pela SUSEP, e corretoras pelo Banco Central.",
+    "Ambas são supervisionadas pelo BC e pela CVM."
+   ],
+   [
+    "DTVMs só podem distribuir seguros e títulos de capitalização.",
+    "DTVMs atuam com títulos e valores mobiliários."
+   ]
+  ],
+  "gabarito": "Corretoras (CTVM) e distribuidoras (DTVM) de títulos e valores mobiliários intermedeiam operações, distribuem ofertas e prestam serviços de custódia e administração. Desde 2009, as DTVMs também podem operar diretamente em bolsa, o que aproximou as duas figuras. São autorizadas pelo BC e supervisionadas também pela CVM e pela BSM.",
+  "dica": "DTVM e corretora: hoje ambas podem operar em bolsa."
+ },
+ {
+  "pd": "1.2.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma exportadora fecha a venda de dólares recebidos do exterior a um banco autorizado, e o BC acompanha o volume dessas operações. Um estagiário pergunta a Paula, profissional CPA, que mercado é esse.",
+  "enunciado": "Paula explica que se trata do:",
+  "certa": "mercado cambial, de compra e venda de moeda estrangeira.",
+  "erradas": [
+   [
+    "mercado monetário, de empréstimos de um dia entre bancos.",
+    "Não há troca de moedas no mercado monetário."
+   ],
+   [
+    "mercado de capitais, de emissão de ações e debêntures.",
+    "A operação é de câmbio."
+   ],
+   [
+    "mercado de crédito, de empréstimos às famílias.",
+    "Não há concessão de crédito na operação descrita."
+   ]
+  ],
+  "gabarito": "O mercado cambial reúne as operações de compra e venda de moedas estrangeiras: exportações, importações, viagens, investimentos e remessas. Os agentes autorizados pelo BC (bancos, corretoras de câmbio, entre outros) intermedeiam as operações. O BC pode atuar para reduzir volatilidade, e a taxa resulta da oferta e da demanda.",
+  "dica": "Compra e venda de moeda estrangeira = mercado cambial."
+ },
+ {
+  "pd": "1.2.4.4",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "contexto": "O Copom corta a Selic em 0,5 ponto, mas as taxas dos títulos de 10 anos sobem no mesmo dia, porque o mercado considerou o corte precipitado diante da inflação. Um cliente pergunta a Tiago, profissional CPA, como isso é possível.",
+  "enunciado": "Tiago explica que:",
+  "certa": "os juros longos refletem expectativas e podem subir se a credibilidade cai.",
+  "erradas": [
+   [
+    "os juros longos sempre acompanham a Selic na mesma direção e magnitude.",
+    "Juros longos dependem também de expectativas e prêmios."
+   ],
+   [
+    "a alta foi erro de cálculo, pois um corte de Selic só reduz juros.",
+    "Expectativas de inflação maior podem elevar juros longos."
+   ],
+   [
+    "os juros longos são fixados pelo Tesouro e não reagem ao mercado.",
+    "São formados no mercado."
+   ]
+  ],
+  "gabarito": "A política monetária influencia diretamente os juros de curto prazo. Os juros de prazos longos refletem expectativas de juros futuros, de inflação e prêmios de risco. Se o mercado entende que o BC está sendo leniente com a inflação, as expectativas sobem e os juros longos podem subir mesmo com corte da Selic. A credibilidade do BC afeta toda a curva.",
+  "dica": "Selic mexe no curto; o longo depende de expectativas e credibilidade."
+ },
+ {
+  "pd": "1.2.6.2",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "O contrato de aluguel de Bruno prevê reajuste anual pelo IGP-M. O aluguel é de R$ 2.000, e o IGP-M acumulado em 12 meses foi de 5%. Ele pergunta a Sônia, profissional CPA, o novo valor.",
+  "enunciado": "Sônia calcula que o novo aluguel será de:",
+  "certa": "R$ 2.100.",
+  "erradas": [
+   [
+    "R$ 2.005.",
+    "Aplicou 0,25% em vez de 5%."
+   ],
+   [
+    "R$ 2.500.",
+    "Aplicou 25% em vez de 5%."
+   ],
+   [
+    "R$ 1.900.",
+    "O IGP-M positivo aumenta o valor; não reduz."
+   ]
+  ],
+  "gabarito": "Reajuste pelo índice: novo valor = valor atual × (1 + índice) = 2.000 × 1,05 = R$ 2.100. O IGP-M (FGV) é muito usado em aluguéis; por ter peso grande do atacado, pode variar bem diferente do IPCA. Em anos de IGP-M negativo, há discussões contratuais sobre redução.",
+  "dica": "Reajuste = valor × (1 + índice)."
+ },
+ {
+  "pd": "1.4.12.1.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma instituição aderente ao código Anbima de distribuição quer simplificar o cadastro dos clientes para agilizar vendas digitais. Pergunta a Hugo, profissional CPA, o que o código exige.",
+  "enunciado": "Hugo explica que, pelo capítulo “conheça sua clientela”, a instituição deve:",
+  "certa": "manter cadastro completo e atualizado do cliente.",
+  "erradas": [
+   [
+    "dispensar o cadastro em vendas digitais, por serem de iniciativa do cliente.",
+    "O canal digital não dispensa o cadastro."
+   ],
+   [
+    "coletar apenas nome e CPF, pois os demais dados são opcionais.",
+    "O cadastro deve ter informações suficientes para KYC e suitability."
+   ],
+   [
+    "atualizar o cadastro só quando o cliente pedir.",
+    "A instituição deve manter o cadastro atualizado."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição exige que as instituições adotem procedimentos para conhecer seus clientes: cadastro completo e atualizado, identificação, situação financeira e patrimonial, além de alinhamento às regras de PLD e de suitability. Isso vale em todos os canais, inclusive digitais.",
+  "dica": "Conheça sua clientela: cadastro completo e atualizado, em qualquer canal."
+ },
+ {
+  "pd": "1.4.12.1.3.8",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente com patrimônio elevado passa a ser atendida pela área private do banco. Ela pergunta a Davi, profissional CPA, se as regras de adequação mudam.",
+  "enunciado": "Davi explica que, na distribuição para o private:",
+  "certa": "o atendimento é especializado, mas segue os deveres de suitability e transparência.",
+  "erradas": [
+   [
+    "o suitability deixa de ser exigido, pois clientes private conhecem o mercado.",
+    "O código mantém deveres de adequação e transparência."
+   ],
+   [
+    "os produtos passam a ter garantia do FGC sem limite de valor.",
+    "O FGC tem limites para todos."
+   ],
+   [
+    "a instituição pode omitir custos, pois os clientes negociam taxas diretamente.",
+    "Transparência de custos continua obrigatória."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição tem regras específicas para o segmento private (clientes de alto patrimônio), com atendimento especializado, planejamento patrimonial e produtos mais sofisticados, mas mantendo deveres de conhecer o cliente, avaliar a adequação, ser transparente sobre custos e remuneração e gerenciar conflitos.",
+  "dica": "Private: atendimento sofisticado, mas suitability e transparência continuam."
+ },
+ {
+  "pd": "1.4.1.1.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um estudante pergunta a Ivo, profissional CPA, como o Pix consegue liquidar pagamentos em segundos, inclusive à noite e nos fins de semana.",
+  "enunciado": "Ivo explica que o Pix é liquidado no:",
+  "certa": "SPI, do Banco Central, que funciona 24 horas.",
+  "erradas": [
+   [
+    "Selic, que funciona só em dias úteis para títulos públicos.",
+    "O Selic liquida títulos públicos."
+   ],
+   [
+    "sistema de compensação de cheques, em lote no dia seguinte.",
+    "O Pix não usa compensação em lote."
+   ],
+   [
+    "sistema interno de cada banco, sem passar pelo Banco Central.",
+    "Pix entre instituições é liquidado no SPI."
+   ]
+  ],
+  "gabarito": "O Sistema de Pagamentos Instantâneos (SPI), operado pelo Banco Central, liquida as transações Pix em tempo real, 24/7, movimentando contas específicas das instituições participantes no BC. Junto com o STR (transferências entre reservas), o Selic (títulos públicos) e as câmaras privadas, integra o Sistema de Pagamentos Brasileiro.",
+  "dica": "Pix é liquidado no SPI, do Banco Central, 24/7."
+ },
+ {
+  "pd": "2.5.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Souza e os seguros",
+  "etapa": "1/3",
+  "contexto": "A família Souza teve vários aparelhos queimados por uma oscilação de energia. O seguro residencial contratado tinha só a cobertura básica. Eles perguntam a Laura, profissional CPA, por que não foram indenizados.",
+  "enunciado": "Laura explica que esse prejuízo é coberto, em geral, pela cobertura:",
+  "certa": "adicional de danos elétricos, que não faz parte da básica.",
+  "erradas": [
+   [
+    "básica de incêndio, que inclui qualquer dano elétrico.",
+    "Danos elétricos sem incêndio exigem cobertura adicional."
+   ],
+   [
+    "de responsabilidade civil, que indeniza os próprios bens do segurado.",
+    "RC indeniza danos causados a terceiros."
+   ],
+   [
+    "de roubo, que cobre aparelhos danificados por oscilação.",
+    "Roubo cobre subtração de bens."
+   ]
+  ],
+  "gabarito": "No seguro residencial, a cobertura básica costuma abranger incêndio, queda de raio e explosão. Danos elétricos, vendaval, roubo, responsabilidade civil, quebra de vidros e alagamento são, em geral, coberturas adicionais, contratadas à parte, com limites e franquias próprios. Ler as condições evita surpresas no sinistro.",
+  "dica": "Aparelho queimado por oscilação: cobertura adicional de danos elétricos."
+ },
+ {
+  "pd": "2.5.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Família Souza e os seguros",
+  "etapa": "2/3",
+  "contexto": "Em seguida, o Sr. Souza bate o carro em outro veículo, causando danos ao terceiro. Ele pergunta a Laura se o seguro do carro cobre o prejuízo do outro motorista.",
+  "enunciado": "Laura explica que isso depende da cobertura de:",
+  "certa": "responsabilidade civil facultativa, que paga danos causados a terceiros.",
+  "erradas": [
+   [
+    "casco, que só cobre o veículo do terceiro.",
+    "Casco cobre o veículo do próprio segurado."
+   ],
+   [
+    "assistência 24 horas, que paga os danos de qualquer pessoa envolvida.",
+    "A assistência oferece serviços como guincho e chaveiro."
+   ],
+   [
+    "vidros, que cobre todos os danos do outro carro.",
+    "A cobertura de vidros é restrita aos vidros do segurado."
+   ]
+  ],
+  "gabarito": "Seguro de automóvel: casco (danos ao próprio veículo, roubo e furto), responsabilidade civil facultativa (danos materiais e corporais causados a terceiros, até o limite contratado), acidentes pessoais de passageiros, assistência 24 horas e coberturas adicionais (vidros, carro reserva). O preço depende do perfil, da região e das coberturas.",
+  "dica": "Dano ao carro do outro: responsabilidade civil facultativa (RCF)."
+ },
+ {
+  "pd": "2.5.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Família Souza e os seguros",
+  "etapa": "3/3",
+  "contexto": "Por fim, o casal Souza quer um seguro de vida. O Sr. Souza sustenta a casa, que gasta R$ 8.000 por mês, e os filhos devem se tornar independentes em 10 anos. Eles perguntam a Laura como dimensionar o capital segurado.",
+  "enunciado": "Laura orienta que o capital segurado considere:",
+  "certa": "despesas no período de dependência, dívidas e objetivos, menos o que já existe.",
+  "erradas": [
+   [
+    "apenas o valor do prêmio que o casal consegue pagar, sem relação com as despesas.",
+    "O prêmio importa, mas a necessidade de proteção define o capital."
+   ],
+   [
+    "sempre 10 vezes a renda anual, para qualquer família.",
+    "Regras fixas ignoram a situação específica."
+   ],
+   [
+    "o valor do imóvel da família, que é o principal patrimônio.",
+    "O capital deve cobrir a renda e os compromissos, não o valor do imóvel."
+   ]
+  ],
+  "gabarito": "Para dimensionar o capital de um seguro de vida, estima-se a necessidade da família se o segurado faltar: despesas no período de dependência (por exemplo, 10 anos de despesas), quitação de dívidas, objetivos (educação dos filhos) e custos de sucessão, descontando recursos já disponíveis (aplicações, previdência, seguros existentes). Seguros temporários atendem bem a necessidades com prazo definido.",
+  "dica": "Capital segurado = necessidades da família (despesas, dívidas, objetivos) − recursos existentes."
+ },
+ {
+  "pd": "2.1.1.1.3.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Marina tem R$ 900 mil para aplicar em CDBs e quer manter tudo coberto pelo FGC. Pergunta a Wagner, profissional CPA, como distribuir.",
+  "enunciado": "Wagner explica que, para ficar dentro da garantia, ela precisa aplicar em:",
+  "certa": "pelo menos 4 conglomerados diferentes, com até R$ 250 mil em cada um.",
+  "erradas": [
+   [
+    "um único banco, pois o FGC garante até R$ 1 milhão por instituição.",
+    "R$ 1 milhão é teto global por CPF a cada 4 anos, não por instituição."
+   ],
+   [
+    "2 bancos do mesmo conglomerado, com R$ 450 mil em cada um.",
+    "Bancos do mesmo conglomerado somam para o limite de R$ 250 mil."
+   ],
+   [
+    "3 conglomerados, com R$ 300 mil em cada um.",
+    "Cada conglomerado só cobre R$ 250 mil."
+   ]
+  ],
+  "gabarito": "O FGC garante até R$ 250 mil por CPF por conglomerado financeiro (somando produtos cobertos), com teto global de R$ 1 milhão a cada 4 anos. Para R$ 900 mil totalmente cobertos, são necessários ao menos 4 conglomerados (por exemplo, 250 + 250 + 250 + 150). Rendimentos também contam para o limite, o que recomenda alguma folga.",
+  "dica": "R$ 250 mil por conglomerado: R$ 900 mil cobertos exigem 4 conglomerados (e o teto de R$ 1 milhão)."
+ },
+ {
+  "pd": "2.1.1.1.3.4",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Para 800 dias, Rogério compara uma LCA de 88% do CDI e um CDB de 104% do CDI do mesmo banco. Pergunta a Lauro, profissional CPA, qual rende mais líquido.",
+  "enunciado": "Lauro calcula que:",
+  "certa": "o CDB rende um pouco mais: 104% × 0,85 = 88,4% do CDI, contra 88% da LCA.",
+  "erradas": [
+   [
+    "a LCA rende mais, pois a isenção sempre supera a diferença de taxa.",
+    "Aqui o CDB líquido (88,4%) supera a LCA (88%)."
+   ],
+   [
+    "os dois rendem exatamente igual, pois a isenção compensa a diferença.",
+    "Há pequena diferença a favor do CDB."
+   ],
+   [
+    "o CDB rende 104% do CDI líquido, pois o IR só incide na declaração.",
+    "O IR é retido na fonte no resgate."
+   ]
+  ],
+  "gabarito": "Com mais de 720 dias, o IR do CDB é de 15%: 104% × 0,85 = 88,4% do CDI líquido, ligeiramente acima da LCA isenta (88%). Para a LCA empatar, precisaria pagar 104% × 0,85 = 88,4%. Na escolha, considere também liquidez, carência e limites do FGC.",
+  "dica": "Compare líquido: CDB × (1 − IR) vs LCA isenta. Nem sempre o isento ganha."
+ },
+ {
+  "pd": "2.1.1.2.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um investidor iniciante pergunta a Gisele, profissional CPA, o que caracteriza um investimento de renda variável.",
+  "enunciado": "Gisele explica que, na renda variável:",
+  "certa": "o retorno não é conhecido na aplicação e depende do desempenho do ativo.",
+  "erradas": [
+   [
+    "a rentabilidade é definida no momento da aplicação, como no CDB prefixado.",
+    "Isso caracteriza a renda fixa prefixada."
+   ],
+   [
+    "o capital investido é garantido pelo FGC até R$ 250 mil.",
+    "Ações e outros ativos de renda variável não têm FGC."
+   ],
+   [
+    "não há risco de perda, apenas de ganho menor que o esperado.",
+    "Pode haver perda de parte ou de todo o capital."
+   ]
+  ],
+  "gabarito": "Renda variável são investimentos cujo retorno não é conhecido previamente e depende de fatores como resultados das empresas, economia e mercado: ações, BDRs, ETFs de ações, cotas de FII, entre outros. Podem gerar ganhos ou perdas. Na renda fixa, a forma de remuneração é definida na aplicação (prefixada, pós-fixada ou híbrida).",
+  "dica": "Renda variável: retorno incerto, pode haver perda; sem FGC."
+ },
+ {
+  "pd": "2.1.1.2.2.1.8",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Lúcio quer comprar 37 ações de uma empresa, mas o lote padrão é de 100. Pergunta a Mara, profissional CPA, se é possível.",
+  "enunciado": "Mara explica que ele pode comprar no:",
+  "certa": "mercado fracionário (1 a 99 ações, código com F).",
+  "erradas": [
+   [
+    "mercado primário, que só vende ações em quantidades fracionadas.",
+    "O mercado primário é o das ofertas de emissão."
+   ],
+   [
+    "balcão não organizado, pois a bolsa só aceita lotes de 100.",
+    "A B3 tem o mercado fracionário."
+   ],
+   [
+    "mercado de opções, que permite comprar frações de ações.",
+    "Opções são derivativos, não frações de ações."
+   ]
+  ],
+  "gabarito": "No mercado à vista da B3, ações são negociadas em lotes padrão (em geral 100) e no mercado fracionário (1 a 99 ações), com o código seguido de F (por exemplo, PETR4F). Os preços costumam ser próximos aos do lote padrão. Mercado secundário é onde investidores negociam entre si; primário é o das ofertas de emissão.",
+  "dica": "Menos de 100 ações: mercado fracionário (código com F)."
+ },
+ {
+  "pd": "2.1.1.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Bete comprou ações de manhã e vendeu à tarde, pela mesma corretora. No dia seguinte, comprou outras ações e vendeu três dias depois. Pergunta a Jaqueline, profissional CPA, como cada operação é classificada.",
+  "enunciado": "Jaqueline explica que:",
+  "certa": "a primeira é day trade; a segunda, operação comum.",
+  "erradas": [
+   [
+    "as duas são day trade, pois as vendas ocorreram na mesma semana.",
+    "Day trade exige compra e venda no mesmo dia."
+   ],
+   [
+    "as duas são operação comum, pois day trade só existe em opções.",
+    "Day trade também ocorre no mercado à vista."
+   ],
+   [
+    "a segunda é day trade, pois foi vendida em menos de uma semana.",
+    "O critério é o mesmo dia."
+   ]
+  ],
+  "gabarito": "Day trade é a compra e a venda do mesmo ativo no mesmo dia, pela mesma corretora. Operações comuns (swing trade) envolvem compra e venda em dias diferentes. Day trade paga 20% sobre o ganho, sem isenção; operações comuns pagam 15%, com isenção para vendas de ações até R$ 20 mil no mês. Prejuízos só compensam lucros da mesma modalidade.",
+  "dica": "Day trade = mesmo dia e mesma corretora. Dias diferentes = operação comum."
+ },
+ {
+  "pd": "2.1.2.2.10",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Eva tem cotas de uma classe DI e de uma classe de ações. Pediu resgate das duas na segunda-feira e o dinheiro da classe DI caiu no mesmo dia, mas o da de ações só dias depois. Pergunta a Saulo, profissional CPA.",
+  "enunciado": "Saulo explica que:",
+  "certa": "cada classe define seus prazos, conforme a liquidez da carteira.",
+  "erradas": [
+   [
+    "houve erro no resgate da classe de ações, que deveria pagar no mesmo dia.",
+    "Prazos maiores são comuns em classes de ações."
+   ],
+   [
+    "a classe DI é isenta de prazos por ser de renda fixa.",
+    "Todas as classes têm prazos definidos no regulamento."
+   ],
+   [
+    "o atraso indica que a classe de ações está insolvente.",
+    "Prazo de liquidação não indica insolvência."
+   ]
+  ],
+  "gabarito": "Os prazos de cotização (conversão) e liquidação (pagamento) dos resgates são definidos no regulamento de cada classe, considerando a liquidez dos ativos. Classes DI costumam ter D+0; classes de ações, em geral, alguns dias úteis; crédito privado e multimercados podem ter prazos maiores. Antes de aplicar, compare o prazo com a necessidade de liquidez.",
+  "dica": "Prazo de resgate depende da classe: DI costuma ser D+0; ações, alguns dias."
+ },
+ {
+  "pd": "2.1.2.2.20.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "O regulamento de uma classe aberta prevê taxa de saída de 5% para resgates feitos antes de 180 dias da aplicação. Uma cliente pergunta a Helena, profissional CPA, para que serve.",
+  "enunciado": "Helena explica que a taxa de saída:",
+  "certa": "desestimula resgates antecipados e protege os cotistas que ficam.",
+  "erradas": [
+   [
+    "é um imposto federal cobrado em todos os resgates de fundos.",
+    "Taxa de saída não é tributo."
+   ],
+   [
+    "remunera o FGC pela garantia das cotas resgatadas.",
+    "Fundos não têm FGC."
+   ],
+   [
+    "é cobrada em todos os resgates, independentemente do prazo.",
+    "Aplica-se nas condições do regulamento."
+   ]
+  ],
+  "gabarito": "A taxa de saída, quando prevista no regulamento, é cobrada sobre resgates em determinadas condições (por exemplo, antes de um prazo ou em resgate com cotização mais rápida). Desestimula saídas que obrigariam o gestor a vender ativos em condições ruins, protegendo os cotistas remanescentes. Taxa de ingresso, por sua vez, incide na aplicação.",
+  "dica": "Taxa de saída: desestimula resgates antecipados e protege quem fica."
+ },
+ {
+  "pd": "2.1.3.2.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Joel resgatou cotas de uma classe de renda fixa de curto prazo após 100 dias, com rendimento de R$ 1.000 e sem come-cotas no período. Pergunta a Clara, profissional CPA, quanto paga de IR.",
+  "enunciado": "Clara calcula que o IR será de:",
+  "certa": "R$ 225 (22,5% sobre o rendimento).",
+  "erradas": [
+   [
+    "R$ 200 (20%), alíquota mínima do curto prazo.",
+    "20% vale acima de 180 dias no curto prazo."
+   ],
+   [
+    "R$ 150 (15%), pois classes de renda fixa pagam 15%.",
+    "15% é para longo prazo acima de 720 dias ou classes de ações."
+   ],
+   [
+    "zero, pois resgates abaixo de 180 dias são isentos.",
+    "Não há isenção; a alíquota é a maior."
+   ]
+  ],
+  "gabarito": "Classes de curto prazo: IR de 22,5% até 180 dias e 20% acima de 180 dias (alíquota mínima), com come-cotas de 20% em maio e novembro. Com 100 dias: 22,5% × 1.000 = R$ 225. Para resgates antes de 30 dias, há também IOF regressivo.",
+  "dica": "Curto prazo: 22,5% até 180 dias; 20% depois (nunca 15%)."
+ },
+ {
+  "pd": "2.1.4.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente quer diversificar em FIIs, mas não sabe escolher fundos e pergunta a Bruno, profissional CPA, sobre os “fundos de fundos” (FOFs).",
+  "enunciado": "Bruno explica que o FII de fundos:",
+  "certa": "investe em outros FIIs e diversifica, mas soma taxas.",
+  "erradas": [
+   [
+    "investe só em imóveis físicos próprios, como os de tijolo.",
+    "O FOF investe em cotas de outros FIIs."
+   ],
+   [
+    "tem rendimento garantido pelos fundos investidos.",
+    "Não há garantia."
+   ],
+   [
+    "é isento de qualquer taxa, pois os fundos investidos já cobram.",
+    "O FOF tem suas próprias taxas."
+   ]
+  ],
+  "gabarito": "FIIs de fundos (FOFs) aplicam em cotas de outros FIIs (e, às vezes, em CRIs), oferecendo diversificação e gestão ativa da alocação. Desvantagens: dupla camada de taxas (do FOF e dos fundos investidos) e dependência do desempenho dos fundos investidos. São classificados entre os FIIs de papel ou híbridos, conforme a estratégia.",
+  "dica": "FOF: diversificação em vários FIIs, com taxas em duas camadas."
+ },
+ {
+  "pd": "2.2.2.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Luciano, com renda alta e na faixa de 27,5% da tabela progressiva, resgatou parte do PGBL no regime progressivo. Foram retidos 15% na fonte. Ele pergunta a Ana, profissional CPA, se o imposto acabou aí.",
+  "enunciado": "Ana explica que:",
+  "certa": "não: no ajuste anual ele pode pagar a diferença até 27,5%.",
+  "erradas": [
+   [
+    "sim: os 15% são definitivos no regime progressivo.",
+    "No progressivo, os 15% são antecipação."
+   ],
+   [
+    "sim: resgates de PGBL são isentos acima de 10 anos.",
+    "Não há isenção por prazo no progressivo."
+   ],
+   [
+    "não: ele terá restituição integral, pois PGBL é dedutível.",
+    "A dedução vale para as contribuições, não para os resgates."
+   ]
+  ],
+  "gabarito": "No regime progressivo, o resgate tem retenção de 15% na fonte, como antecipação. O valor entra como rendimento tributável na declaração anual e é tributado pela tabela progressiva com os demais rendimentos: quem está na faixa de 27,5% paga a diferença; quem tem renda baixa pode restituir. Para rendas altas e longo prazo, o regressivo tende a ser mais vantajoso.",
+  "dica": "Progressivo: 15% na fonte é só antecipação; no ajuste, renda alta paga até 27,5%."
+ },
+ {
+  "pd": "2.3.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Sem conseguir pagar a fatura de R$ 3.000, Diana pode entrar no rotativo, a 14% ao mês, ou parcelar a fatura em 6 vezes, a 6% ao mês. Pergunta a Gustavo, profissional CPA.",
+  "enunciado": "Gustavo orienta que, se não houver alternativa mais barata:",
+  "certa": "parcelar tende a custar menos que ficar no rotativo.",
+  "erradas": [
+   [
+    "o rotativo é melhor, pois não tem prazo para pagar.",
+    "O rotativo só vale até a fatura seguinte e é mais caro."
+   ],
+   [
+    "as duas opções custam igual, pois a dívida é a mesma.",
+    "As taxas são muito diferentes."
+   ],
+   [
+    "ela deve pagar o mínimo todos os meses indefinidamente.",
+    "Ficar no rotativo é das opções mais caras."
+   ]
+  ],
+  "gabarito": "Rotativo e parcelamento da fatura são linhas caras, mas o parcelamento costuma ter juros menores e prazo definido. A regulação limita o rotativo até a fatura seguinte, obriga a oferta de parcelamento e limita encargos a 100% da dívida original (Lei 14.690/2023). Ainda assim, vale comparar com crédito pessoal ou consignado, pelo CET.",
+  "dica": "Entre rotativo e parcelamento da fatura, o parcelamento tende a ser menos caro. Compare o CET com outras linhas."
+ },
+ {
+  "pd": "2.4.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ítalo tem US$ 15 mil em uma conta internacional de uma fintech e pergunta a Luana, profissional CPA, se precisa informar isso na declaração de IR.",
+  "enunciado": "Luana explica que:",
+  "certa": "o saldo vai em Bens e Direitos, e os rendimentos são declarados.",
+  "erradas": [
+   [
+    "contas no exterior não precisam ser declaradas no Brasil.",
+    "Residentes declaram bens no exterior."
+   ],
+   [
+    "o saldo é coberto pelo FGC e por isso dispensa declaração.",
+    "Não há FGC e a declaração é obrigatória."
+   ],
+   [
+    "só é preciso declarar se o saldo passar de US$ 1 milhão.",
+    "A declaração de bens no exterior não depende desse valor."
+   ]
+  ],
+  "gabarito": "Residentes no Brasil devem informar na declaração de IR os bens e direitos no exterior, inclusive saldos em contas internacionais, e os rendimentos conforme as regras de tributação de aplicações no exterior (Lei 14.754/2023). Há também obrigações com o Banco Central para valores elevados no exterior (declaração de capitais brasileiros no exterior). Saldos fora do país não têm FGC.",
+  "dica": "Conta no exterior: declarar em Bens e Direitos; rendimentos seguem regras próprias."
+ },
+ {
+  "pd": "2.1.1.2.2.2.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma AGE aprova a incorporação da companhia por outra empresa. Laís votou contra e pergunta a Wilson, profissional CPA, se tem algum direito.",
+  "enunciado": "Wilson explica que, em certas deliberações previstas em lei:",
+  "certa": "o acionista dissidente pode ter direito de recesso: retirar-se mediante reembolso.",
+  "erradas": [
+   [
+    "o acionista dissidente é obrigado a vender suas ações ao controlador pelo preço que ele quiser.",
+    "Isso não é direito de recesso."
+   ],
+   [
+    "a decisão é anulada automaticamente se um acionista votar contra.",
+    "Prevalece a maioria, observada a lei."
+   ],
+   [
+    "o acionista dissidente passa a receber dividendos em dobro.",
+    "Não há essa compensação."
+   ]
+  ],
+  "gabarito": "Pela Lei das S.A., em deliberações como incorporação, fusão, cisão, mudança do objeto social e outras previstas no art. 137, o acionista dissidente pode exercer o direito de recesso: retirar-se da companhia mediante reembolso do valor de suas ações, nas condições da lei e do estatuto (há exceções, como para ações com liquidez e dispersão no mercado).",
+  "dica": "Direito de recesso: dissidente sai com reembolso em deliberações previstas em lei."
+ },
+ {
+  "pd": "2.1.2.2.19.4",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor quer comprar para a carteira de um fundo um ativo negociado apenas em contrato particular, sem registro em mercado organizado. Pergunta a Marta, profissional CPA, se é permitido.",
+  "enunciado": "Marta explica que, em regra, a CVM 175 exige que:",
+  "certa": "os ativos sejam negociados ou registrados em ambiente autorizado.",
+  "erradas": [
+   [
+    "os fundos negociem livremente qualquer ativo, sem exigência de registro.",
+    "Há exigência de negociação organizada ou registro."
+   ],
+   [
+    "os fundos negociem apenas títulos públicos federais.",
+    "Fundos podem investir em vários ativos."
+   ],
+   [
+    "os ativos sejam aprovados um a um pela CVM antes da compra.",
+    "Não há aprovação prévia individual."
+   ]
+  ],
+  "gabarito": "Como regra geral, a CVM 175 exige que os ativos financeiros das carteiras sejam negociados em mercados organizados (bolsa, balcão organizado) ou registrados em sistema de registro, custódia ou liquidação autorizado (como a B3), com exceções previstas. Isso dá transparência, segurança e formação de preços adequada.",
+  "dica": "Ativos de fundo: em mercado organizado ou registrados em sistema autorizado."
+ },
+ {
+  "pd": "2.1.2.3.5.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pergunta a Hélio, profissional CPA, se uma classe de FIF (fundo financeiro) pode comprar diretamente um prédio comercial.",
+  "enunciado": "Hélio explica que o FIF:",
+  "certa": "aplica em ativos financeiros, não em imóveis.",
+  "erradas": [
+   [
+    "pode comprar imóveis livremente, por ser um fundo de investimento.",
+    "Imóveis são típicos de FII."
+   ],
+   [
+    "só pode investir em poupança e CDB.",
+    "O FIF pode ter vários ativos financeiros."
+   ],
+   [
+    "só investe em ativos no exterior.",
+    "O FIF investe principalmente em ativos no Brasil, com limites para o exterior."
+   ]
+  ],
+  "gabarito": "Os FIFs (Anexo I da CVM 175) aplicam em ativos financeiros: títulos públicos e privados, ações, debêntures, cotas de fundos, derivativos, entre outros, no Brasil e, com limites, no exterior. Investimento direto em imóveis é próprio dos FIIs. Há limites por emissor e por modalidade de ativo.",
+  "dica": "FIF = ativos financeiros. Imóvel físico = FII."
+ },
+ {
+  "pd": "2.1.2.3.6.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Para alugar um apartamento, Leo pode oferecer como garantia cotas de um fundo destinado à garantia de locação, em vez de fiador. Pergunta a Igor, profissional CPA, como funciona.",
+  "enunciado": "Igor explica que, nesse fundo:",
+  "certa": "as cotas ficam vinculadas ao locador e seguem aplicadas.",
+  "erradas": [
+   [
+    "as cotas são transferidas ao locador, que pode resgatá-las a qualquer momento.",
+    "As cotas ficam vinculadas e só são usadas se houver inadimplência."
+   ],
+   [
+    "o fundo paga o aluguel mensal no lugar do inquilino.",
+    "O fundo é garantia, não pagador do aluguel."
+   ],
+   [
+    "as cotas perdem rendimento até o fim do contrato.",
+    "Os recursos seguem aplicados."
+   ]
+  ],
+  "gabarito": "A lei do inquilinato admite, como garantia locatícia, a cessão fiduciária de cotas de fundos de investimento. Há classes destinadas à garantia de locação imobiliária: as cotas ficam vinculadas ao contrato e só podem ser usadas pelo locador em caso de inadimplência; enquanto isso, os recursos seguem aplicados em nome do inquilino. Alternativas: fiador, caução em dinheiro, seguro-fiança e títulos de capitalização.",
+  "dica": "Cotas de fundo como garantia de aluguel: ficam vinculadas e continuam rendendo."
+ },
+ {
+  "pd": "2.1.1.1.8.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "O dono de uma pequena empresa quer deixar o caixa da empresa na poupança porque “é isenta de imposto”. Pergunta a Sueli, profissional CPA.",
+  "enunciado": "Sueli explica que, para a pessoa jurídica:",
+  "certa": "os rendimentos da poupança são tributados; a isenção vale para pessoa física.",
+  "erradas": [
+   [
+    "a poupança também é isenta, por ser produto incentivado.",
+    "A isenção é da pessoa física."
+   ],
+   [
+    "a poupança é proibida para empresas.",
+    "Empresas podem ter poupança, com tributação."
+   ],
+   [
+    "a poupança tem rendimento maior para empresas que para pessoas físicas.",
+    "A remuneração é a mesma; muda a tributação."
+   ]
+  ],
+  "gabarito": "A poupança tem a mesma regra de remuneração para todos (0,5% ao mês + TR ou 70% da Selic + TR), mas a isenção de IR vale para pessoas físicas. Para pessoas jurídicas, os rendimentos são tributados conforme o regime da empresa. Para caixa de empresas, outras opções (CDB com liquidez diária, fundos DI) costumam ser mais eficientes.",
+  "dica": "Poupança isenta só para pessoa física; empresa paga imposto."
+ }
+]
