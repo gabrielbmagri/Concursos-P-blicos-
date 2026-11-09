@@ -13,7 +13,7 @@
       ],
       "headers": [
         {
-          "source": "**/*.@(html|js)",
+          "source": "**/*.@(html|js|json|webmanifest)",
           "headers": [
             {
               "key": "Cache-Control",
@@ -36,7 +36,7 @@
       ],
       "headers": [
         {
-          "source": "**/*.@(html|js)",
+          "source": "**/*.@(html|js|json|webmanifest)",
           "headers": [
             {
               "key": "Cache-Control",

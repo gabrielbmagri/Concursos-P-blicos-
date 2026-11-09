@@ -1,0 +1,1078 @@
+{
+"id": "S01",
+"titulo": "Simulado 1",
+"descricao": "Prova completa no formato da CPA: 50 questões, com 10 em árvore de diálogo (previdência do casal Reis, atendimento de Marta e PLD do Sr. Otávio).",
+"criado": "2026-11-09",
+"q": [
+{
+"pd": "1.1.1.1.1",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Em um encontro com clientes, Paula, profissional CPA, comenta uma notícia: o Conselho Monetário Nacional (CMN) aprovou uma nova regra sobre o depósito compulsório, e o Banco Central publicou, no dia seguinte, a circular que detalha como os bancos devem cumpri-la. Um cliente pergunta por que dois órgãos diferentes aparecem na mesma notícia.",
+"enunciado": "Paula explica corretamente que:",
+"alt": [
+"o CMN define as diretrizes e as normas gerais do sistema, e o Banco Central as executa e fiscaliza as instituições.",
+"o Banco Central é o órgão normativo máximo do sistema, e o CMN atua como seu órgão executor, publicando circulares e fiscalizando os bancos.",
+"o CMN e o Banco Central têm as mesmas funções, e a dupla publicação ocorre apenas para dar publicidade à regra em dois canais oficiais.",
+"o CMN é responsável pela fiscalização direta dos bancos, e o Banco Central se limita a emitir moeda, sem papel regulamentar."
+],
+"certa": "A",
+"gabarito": "O CMN é o órgão normativo máximo do Sistema Financeiro Nacional: define as diretrizes das políticas monetária, de crédito e cambial e fixa a meta de inflação. É composto pelo Ministro da Fazenda (presidente), pelo Ministro do Planejamento e Orçamento e pelo Presidente do Banco Central. Não fiscaliza ninguém. O Banco Central é o órgão supervisor: executa as normas do CMN (por circulares e resoluções BCB), fiscaliza as instituições financeiras, administra o compulsório, emite moeda e executa a política monetária.",
+"porque": {
+"B": "Inverte os papéis. O CMN não fiscaliza nem publica circulares; quem executa e fiscaliza é o Banco Central.",
+"C": "Os dois órgãos têm funções distintas: um normatiza (CMN), o outro supervisiona e executa (BC).",
+"D": "O CMN não fiscaliza instituições. O BC, além de emitir moeda, regulamenta (circulares) e fiscaliza."
+},
+"dica": "CMN = normatiza (diretrizes). BC = executa e fiscaliza. CMN não fiscaliza ninguém."
+},
+{
+"pd": "1.1.2.1.3",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Rodrigo, cliente de uma agência, tem um plano de previdência PGBL contratado em uma seguradora e também participa do fundo de pensão da empresa onde trabalha. Insatisfeito com a demora na resposta a uma solicitação de informações sobre o PGBL, ele pergunta a Sílvia, profissional CPA, a qual órgão supervisor poderia recorrer em cada caso.",
+"enunciado": "A orientação correta de Sílvia é que:",
+"alt": [
+"os dois planos são supervisionados pela PREVIC, pois ambos são planos de previdência complementar.",
+"os dois planos são supervisionados pela CVM, pois ambos aplicam recursos no mercado de valores mobiliários.",
+"o PGBL, de previdência aberta, cabe à SUSEP, e o fundo de pensão, entidade fechada, cabe à PREVIC.",
+"o PGBL é supervisionado pelo Banco Central, por ser vendido em agência bancária, e o fundo de pensão pela SUSEP."
+],
+"certa": "C",
+"gabarito": "Na previdência complementar há dois mundos: a aberta (EAPC e seguradoras, que vendem PGBL e VGBL a qualquer pessoa), normatizada pelo CNSP e supervisionada pela SUSEP; e a fechada (EFPC, os fundos de pensão, acessíveis só a empregados de uma empresa ou associados de uma entidade), normatizada pelo CNPC e supervisionada pela PREVIC.",
+"porque": {
+"A": "A PREVIC supervisiona só as entidades fechadas (fundos de pensão). A previdência aberta (PGBL/VGBL) fica com a SUSEP.",
+"B": "A CVM supervisiona o mercado de valores mobiliários (fundos, ações, ofertas), não planos de previdência.",
+"D": "O canal de venda não muda o supervisor. O banco apenas distribui o plano, que é da seguradora/EAPC, supervisionada pela SUSEP."
+},
+"dica": "Aberta: CNSP normatiza, SUSEP supervisiona. Fechada (fundo de pensão): CNPC normatiza, PREVIC supervisiona."
+},
+{
+"pd": "1.1.4.3",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Helena tem, no Banco Alfa, R$ 180.000 em CDB e R$ 120.000 em LCI. No Banco Beta, que pertence ao mesmo conglomerado financeiro do Alfa, tem R$ 50.000 em poupança. Ela também possui R$ 200.000 em debêntures de uma empresa de energia, compradas pelo Banco Alfa. Preocupada com notícias sobre a saúde financeira do conglomerado, pergunta a Marcos, profissional CPA, quanto estaria garantido pelo Fundo Garantidor de Créditos (FGC).",
+"enunciado": "Marcos informa corretamente que, se o conglomerado sofresse intervenção, a garantia do FGC para Helena seria de:",
+"alt": [
+"R$ 500.000, pois o limite de R$ 250.000 vale para cada instituição do conglomerado separadamente.",
+"R$ 350.000, pois CDB, LCI e poupança são integralmente cobertos, sem limite quando o investidor diversifica os produtos.",
+"R$ 450.000, pois as debêntures distribuídas pelo banco também contam com a garantia do FGC.",
+"R$ 250.000, pois o limite vale por CPF e por conglomerado, somando CDB, LCI e poupança, e as debêntures não têm cobertura."
+],
+"certa": "D",
+"gabarito": "O FGC garante até R$ 250.000 por CPF/CNPJ por conglomerado financeiro, com teto global de R$ 1 milhão a cada 4 anos. Estão cobertos: depósitos à vista, poupança, CDB, RDB, LCI, LCA, LC, LH e operações compromissadas com títulos de empresa ligada. Não estão cobertos: debêntures, CRI, CRA, fundos de investimento, previdência, títulos públicos e ações. Helena tem R$ 350 mil em produtos cobertos no mesmo conglomerado, mas a garantia fica limitada a R$ 250 mil.",
+"porque": {
+"A": "O limite de R$ 250 mil é por CPF por conglomerado (instituições do mesmo grupo somam juntas), e não por instituição isolada.",
+"B": "Diversificar produtos não amplia a garantia. Tudo o que é coberto no mesmo conglomerado soma para o teto de R$ 250 mil.",
+"C": "Debêntures são títulos de empresas, não da instituição financeira. Não têm FGC, mesmo quando vendidas pelo banco."
+},
+"dica": "FGC: R$ 250 mil por CPF por conglomerado; teto de R$ 1 milhão a cada 4 anos. Garante produtos emitidos por instituição financeira (CDB, LCI, LCA, poupança), não títulos de empresas."
+},
+{
+"pd": "1.2.4.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Diante de inflação acima da meta e de expectativas desancoradas, o Banco Central decidiu atuar para reduzir a quantidade de moeda em circulação. Um cliente de Tatiana, profissional CPA, pergunta quais medidas fazem parte desse tipo de política.",
+"enunciado": "Tatiana explica que uma política monetária contracionista pode ser feita por meio de:",
+"alt": [
+"compra de títulos públicos no mercado aberto, redução da alíquota do compulsório e redução da taxa de redesconto.",
+"aumento dos gastos públicos e redução de impostos, com o objetivo de estimular o consumo das famílias.",
+"venda de títulos públicos no mercado aberto, aumento da alíquota do depósito compulsório e elevação da taxa de redesconto.",
+"desvalorização do real no mercado de câmbio e controle direto dos preços dos principais bens de consumo."
+],
+"certa": "C",
+"gabarito": "Os três instrumentos clássicos de política monetária são operações de mercado aberto (open market), depósito compulsório e redesconto. Para enxugar liquidez (política contracionista), o BC vende títulos (retira moeda), eleva o compulsório (os bancos têm menos para emprestar) e encarece o redesconto. O efeito esperado é juros mais altos, menos crédito, demanda menor e inflação em queda.",
+"porque": {
+"A": "Essas são medidas expansionistas: injetam moeda na economia.",
+"B": "Gastos e impostos são instrumentos de política fiscal, conduzida pelo governo (Tesouro), não pelo Banco Central.",
+"D": "Controle de preços não é instrumento de política monetária, e câmbio é tema da política cambial."
+},
+"dica": "Contracionista = retirar moeda: vender títulos, subir compulsório, subir redesconto. Expansionista é o inverso."
+},
+{
+"pd": "1.2.4.7",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao analisar o extrato, Fábio percebe que seu CDB rende 100% do CDI e que a taxa DI do dia ficou ligeiramente abaixo da meta Selic divulgada pelo Copom. Ele pergunta a Juliana, profissional CPA, como essas taxas se relacionam.",
+"enunciado": "Juliana explica corretamente que:",
+"alt": [
+"a taxa Selic efetiva é fixada diariamente pelo Copom, e o CDI é uma taxa definida pelo Banco Central para remunerar os depósitos bancários.",
+"o CDI é sempre igual à meta Selic, por determinação legal, e qualquer diferença entre as taxas indica erro no cálculo da rentabilidade do CDB.",
+"o Copom fixa a meta Selic; a Selic efetiva é apurada nas compromissadas com títulos públicos; e o CDI, nos empréstimos entre bancos, fica próximo dela.",
+"a meta Selic é calculada diariamente pela B3 com base nos empréstimos entre bancos, e a taxa DI é definida pelo CMN em suas reuniões mensais."
+],
+"certa": "C",
+"gabarito": "A meta Selic é a taxa básica de juros, fixada pelo Copom em reuniões a cada 45 dias (8 por ano). A Selic efetiva (taxa over) é a média ponderada das operações compromissadas de um dia lastreadas em títulos públicos registradas no sistema Selic, e o BC atua para mantê-la perto da meta. A taxa DI (CDI) é a média dos empréstimos de um dia entre instituições, apurada pela B3; por ter lastro em títulos privados, fica muito próxima da Selic efetiva, geralmente um pouco abaixo.",
+"porque": {
+"A": "O Copom fixa apenas a meta. A Selic efetiva e o DI são apurados no mercado, a partir das operações realizadas.",
+"B": "Não há igualdade legal. As taxas são apuradas no mercado e costumam ficar próximas, mas não idênticas.",
+"D": "Inverte os papéis: quem define a meta é o Copom (BC); a B3 apura a taxa DI."
+},
+"dica": "Copom → meta Selic. Mercado (títulos públicos) → Selic efetiva. Entre bancos (B3) → DI/CDI."
+},
+{
+"pd": "1.2.6.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Lúcia, aposentada, aluga um imóvel cujo contrato é reajustado pelo IGP-M e tem aplicações atreladas ao IPCA. Ela quer entender por que os dois índices variaram de forma tão diferente no último ano e qual deles é usado no regime de metas para a inflação. Procura Bruno, profissional CPA.",
+"enunciado": "Bruno explica corretamente que:",
+"alt": [
+"o IGP-M é o índice oficial do regime de metas, por medir a inflação de forma mais ampla que o IPCA, incluindo o atacado.",
+"os dois índices são calculados pelo IBGE com a mesma metodologia e só diferem pelo período de coleta dos preços.",
+"o IPCA mede apenas os preços no atacado e na construção civil, enquanto o IGP-M mede os preços ao consumidor final.",
+"o IPCA (IBGE) é o índice das metas; o IGP-M (FGV) tem forte peso do atacado e reage mais ao câmbio e às commodities."
+],
+"certa": "D",
+"gabarito": "O IPCA (IBGE) mede a inflação das famílias com renda de 1 a 40 salários mínimos e é o índice oficial do regime de metas definido pelo CMN. Os IGPs (FGV) são médias ponderadas de três índices: IPA, preços ao produtor (60%); IPC, preços ao consumidor (30%); e INCC, construção civil (10%). Pelo peso do IPA, o IGP-M reage mais ao dólar e às commodities. O IPC-Fipe mede a inflação ao consumidor no município de São Paulo.",
+"porque": {
+"A": "O índice oficial das metas é o IPCA. O IGP-M é usado sobretudo em contratos (aluguel, tarifas).",
+"B": "O IGP-M é da FGV e tem composição diferente (IPA, IPC e INCC); o IPCA é do IBGE e mede apenas preços ao consumidor.",
+"C": "É o contrário: o IPCA é um índice de preços ao consumidor; o IGP-M tem forte peso do atacado (IPA)."
+},
+"dica": "IPCA (IBGE) = meta de inflação. IGP-M (FGV) = 60% atacado, 30% consumidor, 10% construção; muito usado em aluguel."
+},
+{
+"pd": "1.3.4.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Ricardo aplicou em um título prefixado e obteve rentabilidade nominal de 12% no ano. No mesmo período, a inflação medida pelo IPCA foi de 5%. Ele afirma a Carla, profissional CPA, que seu ganho real foi de 7%.",
+"enunciado": "Carla corrige o cliente e explica que, pela fórmula de Fisher, o ganho real aproximado foi de:",
+"alt": [
+"7,00%, pois a taxa real é a diferença simples entre a taxa nominal e a inflação.",
+"17,60%, pois a taxa real é obtida multiplicando-se (1 + taxa nominal) por (1 + inflação).",
+"2,40%, pois a taxa real é obtida dividindo-se a taxa nominal pela inflação.",
+"6,67%, dividindo-se (1 + taxa nominal) por (1 + inflação) e subtraindo 1."
+],
+"certa": "D",
+"gabarito": "Fórmula de Fisher: (1 + nominal) = (1 + real) × (1 + inflação). Logo: real = (1,12 ÷ 1,05) − 1 = 1,0667 − 1 = 6,67% no ano. A diferença simples (12% − 5% = 7%) superestima o ganho real, e a distorção cresce com taxas mais altas.",
+"porque": {
+"A": "A subtração simples é só uma aproximação. A relação entre as taxas é multiplicativa: (1,12 ÷ 1,05) − 1.",
+"B": "Multiplicar soma os efeitos. Para descontar a inflação é preciso dividir.",
+"C": "Dividir 12 por 5 não tem sentido financeiro. A divisão deve ser feita entre os fatores (1 + taxa)."
+},
+"dica": "Taxa real = (1 + nominal) ÷ (1 + inflação) − 1. Nunca subtraia direto."
+},
+{
+"pd": "1.3.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Marta quer comparar duas propostas para aplicar R$ 10.000 por 12 meses a uma taxa de 1% ao mês. Na primeira, os juros são calculados sempre sobre o valor inicial; na segunda, os juros de cada mês são incorporados ao saldo. Ela pede a Diego, profissional CPA, os valores finais.",
+"enunciado": "Diego informa que os montantes ao final dos 12 meses serão, aproximadamente:",
+"alt": [
+"R$ 11.268,25 em juros simples e R$ 11.200,00 em juros compostos.",
+"R$ 11.200,00 nos dois regimes, pois a taxa é a mesma.",
+"R$ 11.200,00 em juros simples e R$ 11.268,25 em juros compostos.",
+"R$ 12.000,00 em juros simples e R$ 12.682,50 em juros compostos."
+],
+"certa": "C",
+"gabarito": "Juros simples: M = C × (1 + i × n) = 10.000 × (1 + 0,01 × 12) = R$ 11.200,00. Juros compostos: M = C × (1 + i)^n = 10.000 × 1,01^12 = R$ 11.268,25. A diferença de R$ 68,25 são os juros sobre juros. No mercado financeiro brasileiro, a regra é a capitalização composta.",
+"porque": {
+"A": "Inverte os regimes. Nos compostos há juros sobre juros, então o montante é maior.",
+"B": "Com mais de um período, os juros compostos rendem mais que os simples, porque os juros de cada mês passam a render.",
+"D": "Erro de conta: 1% × 12 = 12% (R$ 1.200 de juros), e não 20%."
+},
+"dica": "Simples: C × (1 + i·n). Composto: C × (1 + i)^n. No mercado, o padrão é composto."
+},
+{
+"pd": "1.2.7",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Antônio comprou um título prefixado com vencimento em 4 anos. Um ano depois, as taxas de juros de mercado subiram fortemente. Precisando do dinheiro, ele vendeu o título antes do vencimento e recebeu menos do que havia investido, embora o emissor estivesse em plena saúde financeira. Ele pede a Renata, profissional CPA, que identifique o risco que se materializou.",
+"enunciado": "Renata explica que a perda decorreu principalmente do risco:",
+"alt": [
+"de crédito, pois toda perda em renda fixa decorre da incapacidade do emissor de honrar o pagamento.",
+"de mercado, pois a alta dos juros derrubou o preço do prefixado, e a venda antecipada realizou a perda.",
+"de liquidez, pois o título não tinha comprador no mercado secundário.",
+"operacional, pois a perda resultou de falha nos sistemas da instituição ao registrar a venda."
+],
+"certa": "B",
+"gabarito": "Risco de mercado é a possibilidade de perda por variações de preço provocadas por fatores como juros, câmbio, ações e commodities. Em títulos prefixados, preço e taxa andam em sentidos opostos: se os juros sobem, o preço cai (marcação a mercado). Levando o título até o vencimento, Antônio receberia a taxa contratada; ao vender antes, realizou a perda. Risco de crédito é o calote do emissor. Risco de liquidez é não conseguir vender rápido sem perda relevante por falta de compradores.",
+"porque": {
+"A": "O emissor estava saudável e pagaria no vencimento. Risco de crédito é o calote do emissor, o que não ocorreu.",
+"C": "Houve comprador. O problema foi o preço mais baixo, provocado pela alta dos juros.",
+"D": "Não houve falha de processo ou de sistema; a perda veio da oscilação de preço."
+},
+"dica": "Juros sobem → preço do prefixado cai. Vender antes do vencimento = exposição ao risco de mercado."
+},
+{
+"pd": "1.4.10.1.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Cláudio é médico e tem R$ 1,5 milhão em aplicações financeiras. Interessado em um fundo destinado a investidores qualificados, pergunta a Patrícia, profissional CPA, se pode aplicar e o que é necessário. Ele também quer saber se, com esse patrimônio, seria considerado investidor profissional.",
+"enunciado": "Pela Resolução CVM 30, Patrícia explica que Cláudio:",
+"alt": [
+"pode ser investidor qualificado, por ter mais de R$ 1 milhão aplicado e atestar isso por escrito, mas não profissional, que exige mais de R$ 10 milhões.",
+"já é investidor profissional, pois todo investidor pessoa física com mais de R$ 1 milhão em aplicações financeiras recebe essa classificação.",
+"não pode ser qualificado, pois essa condição é reservada a instituições financeiras, fundos de investimento e investidores estrangeiros.",
+"é automaticamente qualificado, sem necessidade de qualquer declaração, pois a própria instituição verifica o patrimônio aplicado no sistema."
+],
+"certa": "A",
+"gabarito": "Pela Resolução CVM 30, investidor profissional é, entre outros, a pessoa física com mais de R$ 10 milhões em aplicações financeiras que atesta essa condição por escrito. Investidor qualificado é, entre outros, a pessoa física com mais de R$ 1 milhão em aplicações financeiras que atesta essa condição por escrito. Todo profissional é também qualificado. Há ainda critérios por certificação: profissionais aprovados em exames reconhecidos pela CVM são qualificados em relação aos recursos próprios.",
+"porque": {
+"B": "R$ 1 milhão é o patamar de qualificado. Profissional exige mais de R$ 10 milhões em aplicações financeiras e declaração própria.",
+"C": "Pessoas físicas podem ser qualificadas pelo critério de patrimônio (mais de R$ 1 milhão) com declaração por escrito.",
+"D": "A CVM 30 exige que o investidor ateste por escrito sua condição de qualificado (ou profissional) por critério de patrimônio."
+},
+"dica": "Qualificado: mais de R$ 1 milhão + declaração. Profissional: mais de R$ 10 milhões + declaração."
+},
+{
+"pd": "2.1.1.1.1.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Sandra, 35 anos, quer garantir parte da aposentadoria protegida da inflação e prefere não receber juros periódicos, para não ter de reinvesti-los. Ela pergunta a Eduardo, profissional CPA, qual título do Tesouro Direto atende a esse desejo e o que acontece se precisar vender antes do vencimento.",
+"enunciado": "Eduardo explica corretamente que o título adequado é o:",
+"alt": [
+"Tesouro IPCA+ com Juros Semestrais (NTN-B), que paga todo o rendimento apenas no vencimento e garante o valor aplicado em caso de venda antecipada.",
+"Tesouro Selic (LFT), que é corrigido pela inflação medida pelo IPCA e não sofre qualquer oscilação de preço antes do vencimento.",
+"Tesouro IPCA+ (NTN-B Principal), que paga tudo no vencimento; se vendido antes, vale o preço de mercado, que pode gerar ganho ou perda.",
+"Tesouro Prefixado (LTN), que acompanha o IPCA e paga a rentabilidade contratada mesmo se for vendido antes do vencimento."
+],
+"certa": "C",
+"gabarito": "Tesouro IPCA+ = NTN-B Principal: rende IPCA + taxa prefixada e paga tudo no vencimento (sem cupons). Tesouro IPCA+ com Juros Semestrais = NTN-B: paga cupons semestrais. Tesouro Prefixado = LTN (sem cupons); com Juros Semestrais = NTN-F. Tesouro Selic = LFT. Tesouro Renda+ e Tesouro Educa+ também são atrelados ao IPCA e pagam renda mensal (240 parcelas no Renda+ e 60 no Educa+). Em qualquer título, a rentabilidade contratada só está garantida se levado ao vencimento; antes disso, vale o preço de mercado.",
+"porque": {
+"A": "A NTN-B paga cupons semestrais, o que Sandra quer evitar. Nenhum título garante o valor aplicado em venda antecipada.",
+"B": "O Tesouro Selic é pós-fixado na Selic, não no IPCA, e também pode ter pequenas oscilações de preço.",
+"D": "A LTN é prefixada e não protege da inflação. A taxa contratada só é garantida no vencimento."
+},
+"dica": "Principal = sem cupom. Juros Semestrais = com cupom. A taxa contratada só é garantida no vencimento."
+},
+{
+"pd": "2.1.1.1.1.2",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Felipe, recém-contratado, quer montar sua reserva de emergência em títulos públicos. Ele quer o título com menor oscilação de preço, para poder resgatar a qualquer momento sem surpresas. Pede orientação a Vanessa, profissional CPA.",
+"enunciado": "Vanessa indica o:",
+"alt": [
+"Tesouro Prefixado (LTN) de longo prazo, pois a taxa travada na compra elimina a oscilação de preço até o resgate.",
+"Tesouro IPCA+ (NTN-B Principal), pois a correção pela inflação impede perdas em resgates antecipados.",
+"Tesouro Selic (LFT), pós-fixado atrelado à Selic, com a menor oscilação de preço entre os títulos públicos.",
+"Tesouro Renda+, pois oferece liquidez diária sem oscilação de preço e foi criado para emergências."
+],
+"certa": "C",
+"gabarito": "O Tesouro Selic (LFT) acompanha a Selic diariamente. Como seu rendimento se ajusta automaticamente às mudanças de juros, o preço quase não oscila: é o título público de menor volatilidade e o preferido para reserva de emergência e curto prazo. O Tesouro Direto permite resgate em qualquer dia útil, pelo preço de mercado.",
+"porque": {
+"A": "Prefixados longos são os que mais oscilam com a mudança dos juros (marcação a mercado).",
+"B": "A NTN-B Principal pode oscilar bastante antes do vencimento. A proteção contra a inflação só é garantida no vencimento.",
+"D": "O Renda+ foi criado para a aposentadoria: é de longo prazo e oscila com os juros reais."
+},
+"dica": "Reserva de emergência em título público → Tesouro Selic (LFT)."
+},
+{
+"pd": "2.1.1.1.1.3",
+"dif": "Difícil",
+"nivel": "Aplicação",
+"contexto": "Um cliente quer entender como é formado o preço de um Tesouro Prefixado (LTN), que paga R$ 1.000 no vencimento. Faltam exatamente 252 dias úteis para o vencimento, e a taxa negociada no mercado é de 10% ao ano. Gustavo, profissional CPA, usa a calculadora para responder.",
+"enunciado": "O preço unitário aproximado do título é:",
+"alt": [
+"R$ 900,00.",
+"R$ 1.100,00.",
+"R$ 1.000,00.",
+"R$ 909,09."
+],
+"certa": "D",
+"gabarito": "O preço de uma LTN é o valor presente do valor de face: PU = 1.000 ÷ (1 + taxa)^(du/252). Com 252 dias úteis (1 ano) e 10% a.a.: PU = 1.000 ÷ 1,10 = R$ 909,09. A conta mostra por que o preço cai quando a taxa sobe: com 12%, o PU seria 1.000 ÷ 1,12 = R$ 892,86.",
+"porque": {
+"A": "Corresponde a descontar 10% sobre R$ 1.000 (desconto comercial). Títulos públicos usam capitalização composta: 1.000 ÷ 1,10.",
+"B": "Esse seria o valor futuro de R$ 1.000 aplicados a 10%, e não o valor presente de R$ 1.000 a receber.",
+"C": "R$ 1.000 é o valor de face no vencimento. Hoje, o título vale menos, trazido a valor presente pela taxa."
+},
+"dica": "PU = 1.000 ÷ (1 + taxa)^(du/252). Taxa sobe → preço cai."
+},
+{
+"pd": "2.1.1.1.3.3",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Larissa, pessoa física, tem recursos para aplicar por 2 anos e meio e recebeu duas ofertas do mesmo banco: um CDB que paga 104% do CDI e uma LCI que paga 90% do CDI. Ambas têm garantia do FGC. Ela pergunta a Otávio, profissional CPA, qual oferece o maior retorno líquido.",
+"enunciado": "Otávio conclui corretamente que:",
+"alt": [
+"o CDB é mais vantajoso, pois 104% do CDI é sempre superior a 90% do CDI, independentemente da tributação.",
+"os dois são equivalentes, pois a isenção da LCI é compensada exatamente pela taxa maior paga pelo CDB.",
+"a LCI é mais vantajosa, pois o CDB, com IR de 15%, renderia cerca de 88,4% do CDI líquido, abaixo dos 90% da LCI.",
+"o CDB é mais vantajoso, pois sobre a LCI incide IR de 22,5% no resgate, por ser um título imobiliário."
+],
+"certa": "C",
+"gabarito": "Para comparar produto tributado com isento, transforme tudo em taxa líquida. CDB por 2 anos e meio (mais de 720 dias): IR de 15% → 104% × (1 − 0,15) = 88,4% do CDI líquido. LCI: 90% do CDI, isenta. Outra forma: a taxa bruta equivalente da LCI é 90% ÷ 0,85 = 105,9% do CDI, então o CDB precisaria pagar mais que isso para valer a pena. Para prazos menores, a alíquota maior do CDB amplia a vantagem da LCI.",
+"porque": {
+"A": "A comparação deve ser líquida de IR. A LCI é isenta para pessoa física; o CDB paga 15% nesse prazo.",
+"B": "Há diferença: 104% × 0,85 = 88,4% do CDI contra 90% da LCI.",
+"D": "LCI é isenta de IR para pessoa física. A alíquota de 22,5% vale para prazos de até 180 dias em produtos tributados."
+},
+"dica": "Taxa líquida = taxa bruta × (1 − IR). Equivalente bruto de um isento = taxa isenta ÷ (1 − IR)."
+},
+{
+"pd": "2.1.1.1.4.1",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Rogério, investidor pessoa física, ouviu falar em debêntures “incentivadas” e em debêntures “de infraestrutura” e pergunta a Elaine, profissional CPA, qual a diferença tributária para ele e se esses títulos têm garantia do FGC.",
+"enunciado": "Elaine explica corretamente que:",
+"alt": [
+"as duas são isentas de IR para pessoa física e contam com a garantia do FGC, por financiarem projetos de interesse público.",
+"as incentivadas (Lei 12.431) são isentas para pessoa física, nas de infraestrutura (Lei 14.801) o benefício é da emissora, e nenhuma tem FGC.",
+"as duas seguem a tabela regressiva de renda fixa, e apenas as incentivadas têm garantia do FGC.",
+"as incentivadas são tributadas pela tabela regressiva, e as de infraestrutura são isentas e garantidas pelo Tesouro Nacional."
+],
+"certa": "B",
+"gabarito": "Debêntures são títulos de dívida emitidos por sociedades anônimas, sem garantia do FGC. As incentivadas (Lei 12.431/2011) financiam projetos de infraestrutura prioritários, e seus rendimentos são isentos de IR para pessoa física. A Lei 14.801/2024 criou as debêntures de infraestrutura, em que o benefício fiscal é da emissora (que pode deduzir os juros pagos), e o investidor é tributado. As debêntures comuns seguem a tabela regressiva. O risco de crédito é sempre da empresa emissora.",
+"porque": {
+"A": "Debêntures nunca têm FGC: são títulos de empresas não financeiras. E o benefício das debêntures de infraestrutura é da emissora.",
+"C": "As incentivadas são isentas para pessoa física, e nenhuma debênture tem FGC.",
+"D": "Inverte o benefício e inventa uma garantia que não existe: não há garantia do Tesouro."
+},
+"dica": "Debênture = risco da empresa, sem FGC. Incentivada (12.431) = isenta para pessoa física. Infraestrutura (14.801) = benefício para a empresa."
+},
+{
+"pd": "2.1.1.1.8",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Com a meta Selic em 15% ao ano, Dona Inês, que mantém R$ 20.000 na poupança, pergunta a Rafael, profissional CPA, como seu dinheiro está sendo remunerado e o que acontece se ela sacar um dia antes da data de aniversário.",
+"enunciado": "Rafael explica que, nesse cenário, a poupança rende:",
+"alt": [
+"70% da Selic mais a TR, creditados diariamente, sem perda de rendimento em caso de saque antes do aniversário.",
+"100% do CDI, com desconto de IR na fonte, e o saque antes do aniversário não altera o rendimento.",
+"0,5% ao mês sem TR, com crédito proporcional aos dias corridos em caso de saque antes do aniversário.",
+"0,5% ao mês mais TR, creditados no aniversário; sacando antes, perde o rendimento do período."
+],
+"certa": "D",
+"gabarito": "Regra da poupança (depósitos desde maio de 2012): se a meta Selic for maior que 8,5% a.a., rende 0,5% ao mês + TR; se for igual ou menor que 8,5% a.a., rende 70% da Selic + TR. O rendimento é creditado mensalmente na data de aniversário (o dia do depósito). Saques antes dessa data perdem o rendimento do ciclo. A poupança é isenta de IR para pessoa física, tem garantia do FGC e financia o Sistema Financeiro da Habitação (SFH).",
+"porque": {
+"A": "70% da Selic + TR só vale quando a meta Selic é igual ou menor que 8,5% a.a. E o rendimento é mensal, não diário.",
+"B": "A poupança não rende CDI e é isenta de IR para pessoa física.",
+"C": "A TR compõe sempre a remuneração (mesmo que seja zero), e não há rendimento proporcional antes do aniversário."
+},
+"dica": "Selic acima de 8,5% → 0,5% a.m. + TR. Selic até 8,5% → 70% da Selic + TR. Rende só no aniversário."
+},
+{
+"pd": "2.1.1.1.11",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Cristina aplicou R$ 10.000 em um CDB e resgatou após 400 dias corridos, com rendimento bruto de R$ 1.000. Ela pergunta a Leandro, profissional CPA, quanto foi descontado de imposto de renda.",
+"enunciado": "Leandro informa que o IR retido na fonte foi de:",
+"alt": [
+"R$ 1.925,00, pois a alíquota incide sobre o valor total resgatado.",
+"R$ 175,00, pela alíquota de 17,5% sobre o rendimento.",
+"R$ 200,00, pois a alíquota para prazos de 181 a 360 dias é de 20%.",
+"R$ 150,00, pois após um ano aplica-se a alíquota mínima de 15%."
+],
+"certa": "B",
+"gabarito": "Tabela regressiva de IR para renda fixa (e fundos de longo prazo): até 180 dias, 22,5%; de 181 a 360, 20%; de 361 a 720, 17,5%; acima de 720, 15%. Incide sobre o rendimento, retido na fonte no resgate ou vencimento. Aqui: 400 dias → 17,5% × R$ 1.000 = R$ 175. O valor líquido recebido é R$ 10.825.",
+"porque": {
+"A": "O IR em renda fixa incide apenas sobre o rendimento (R$ 1.000), não sobre o valor total.",
+"C": "400 dias passam de 360; a faixa correta é de 361 a 720 dias (17,5%).",
+"D": "15% vale só acima de 720 dias."
+},
+"dica": "22,5 / 20 / 17,5 / 15, com cortes em 180, 360 e 720 dias. Sempre sobre o rendimento."
+},
+{
+"pd": "2.1.1.1.12",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Marcelo aplicou em um CDB de liquidez diária e precisou resgatar 10 dias depois. Ao ver o extrato, notou um desconto de IOF além do IR e procurou Joana, profissional CPA, para entender a cobrança.",
+"enunciado": "Joana explica corretamente que o IOF:",
+"alt": [
+"incide sobre o valor total aplicado em qualquer resgate, com alíquota fixa de 0,38%.",
+"incide sobre o rendimento de resgates antes de 30 dias, com alíquota regressiva de 96% a zero.",
+"incide sobre o rendimento de qualquer resgate feito antes de um ano, com alíquota fixa de 1%.",
+"substitui o imposto de renda nos resgates antes de 30 dias, que ficam isentos de IR."
+],
+"certa": "B",
+"gabarito": "Em aplicações de renda fixa e fundos (exceto fundos de ações), o IOF incide sobre o rendimento de resgates feitos em menos de 30 dias, com tabela regressiva: 96% no 1º dia, caindo diariamente até 0% no 30º dia. Ele é cobrado antes do IR, que incide sobre o rendimento já líquido de IOF. A poupança não sofre IOF, e em ações não há IOF na compra e venda.",
+"porque": {
+"A": "0,38% é a alíquota de IOF de outras operações (crédito, câmbio). Em aplicações, incide só sobre o rendimento de resgates antes de 30 dias.",
+"C": "O prazo é de 30 dias, e a alíquota é regressiva, não fixa.",
+"D": "O IOF não substitui o IR: os dois incidem. O IR é calculado sobre o rendimento já descontado do IOF."
+},
+"dica": "IOF em aplicações: só antes de 30 dias, sobre o rendimento, tabela regressiva de 96% a 0%."
+},
+{
+"pd": "2.1.1.2.2.1.4",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Pedro quer investir em ações de uma grande empresa e viu que ela tem ações com códigos terminados em 3 e em 4. Ele quer participar das decisões da companhia por meio do voto em assembleia. Pergunta a Sabrina, profissional CPA, qual tipo deve comprar.",
+"enunciado": "Sabrina explica que Pedro deve comprar ações:",
+"alt": [
+"preferenciais (PN, código final 4), que dão direito a voto e prioridade nos dividendos.",
+"preferenciais (PN), pois só elas recebem dividendos, enquanto as ordinárias recebem apenas juros sobre capital próprio.",
+"ordinárias (ON, código final 3), que dão direito a voto nas assembleias.",
+"de qualquer tipo, pois todas as ações dão o mesmo direito de voto, conforme a Lei das S.A."
+],
+"certa": "C",
+"gabarito": "Ações ordinárias (ON, final 3) conferem direito a voto nas assembleias. Ações preferenciais (PN, final 4, 5, 6...) normalmente não votam, mas têm preferência na distribuição de dividendos e/ou no reembolso do capital. Units (final 11) são certificados que reúnem mais de uma classe de ações (por exemplo, 1 ON + 2 PN). BDRs (finais 32 a 35) são recibos de ações de empresas estrangeiras negociados no Brasil.",
+"porque": {
+"A": "As PN, em regra, não têm direito a voto; em troca, têm preferência no recebimento de dividendos ou no reembolso do capital.",
+"B": "ON e PN recebem dividendos e JCP. A PN tem preferência, não exclusividade.",
+"D": "As ações diferem justamente quanto ao voto: a ON vota; a PN, em regra, não."
+},
+"dica": "ON (3) vota. PN (4) tem preferência nos dividendos. Unit (11) é um pacote de ações."
+},
+{
+"pd": "2.1.1.2.2.2.4",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Mariana recebeu em 2026, de uma empresa da qual é acionista, um valor de juros sobre capital próprio (JCP) e, em outra data, dividendos de R$ 3.000. Ela notou que só o JCP veio com desconto e pergunta a Henrique, profissional CPA, o motivo.",
+"enunciado": "Henrique explica que:",
+"alt": [
+"os dois são tributados à alíquota de 15% na fonte, mas os dividendos de pequeno valor ficam isentos por uma regra de valor mínimo.",
+"o JCP tem IR retido na fonte (17,5% desde 2026), enquanto os dividendos são, em regra, isentos, com retenção de 10% só acima de R$ 50 mil mensais por empresa.",
+"o JCP é isento e os dividendos são tributados, mas a empresa errou na retenção e deverá restituir o valor descontado.",
+"o JCP é tributado porque é pago apenas aos acionistas preferencialistas, enquanto os dividendos vão aos ordinaristas."
+],
+"certa": "B",
+"gabarito": "Dividendos são a distribuição do lucro e, em regra, isentos de IR para pessoa física. Com a Lei 15.270/2025, desde 2026 há retenção de 10% quando a mesma empresa paga mais de R$ 50 mil em um mês à mesma pessoa física. O JCP remunera o capital do acionista; para a empresa, é despesa dedutível do IR/CSLL. Para o acionista, sofre IR retido na fonte, de 15% até 2025 e 17,5% desde 2026 (mudança aprovada em dezembro de 2025, no PLP 128/2025). Atenção: materiais mais antigos citam 15%; o conceito-chave é que o JCP é tributado na fonte e o dividendo, em regra, não.",
+"porque": {
+"A": "Não existe tributação de 15% sobre dividendos. Desde 2026, há retenção de 10% apenas sobre o que uma empresa paga acima de R$ 50 mil por mês a uma pessoa física.",
+"C": "É o contrário: o JCP é tributado na fonte, e os dividendos são, em regra, isentos.",
+"D": "ON e PN recebem dividendos e JCP; o tipo de ação não define a tributação."
+},
+"dica": "JCP = IR retido na fonte (17,5% desde 2026) e dedutível para a empresa. Dividendo = isento até R$ 50 mil por mês por empresa pagadora."
+},
+{
+"pd": "2.1.1.3.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Em agosto, Júlio vendeu ações à vista em operações comuns (não day trade), totalizando R$ 18.500 em vendas no mês, com lucro de R$ 3.000. No mesmo mês, fez uma operação de day trade com lucro de R$ 400. Ele pergunta a Bianca, profissional CPA, o que deve pagar de imposto.",
+"enunciado": "Bianca orienta corretamente que:",
+"alt": [
+"os dois lucros são isentos, pois o total de vendas do mês ficou abaixo de R$ 20.000.",
+"os dois lucros são tributados em 15%, pois a isenção vale apenas para quem investe por mais de um ano.",
+"apenas o lucro das operações comuns é tributado, em 15%, pois o day trade de pequeno valor é isento.",
+"o lucro das operações comuns é isento, pois as vendas não passaram de R$ 20.000, mas o day trade paga 20%."
+],
+"certa": "D",
+"gabarito": "Ações no mercado à vista para pessoa física: em operações comuns (swing trade), o lucro paga IR de 15%, mas é isento se o total de vendas de ações no mês for de até R$ 20.000. Em day trade, a alíquota é de 20%, sem isenção. Há o “dedo-duro” (IRRF de 0,005% sobre as vendas comuns e 1% sobre o ganho em day trade), e o investidor recolhe o restante por DARF até o último dia útil do mês seguinte. Prejuízos só compensam lucros da mesma modalidade. A isenção dos R$ 20 mil não vale para FIIs, ETFs e BDRs.",
+"porque": {
+"A": "A isenção de vendas até R$ 20 mil por mês vale apenas para operações comuns em ações. Day trade é sempre tributado.",
+"B": "Não há prazo mínimo de permanência. A isenção depende do volume de vendas no mês, e o day trade paga 20%.",
+"C": "Inverte as regras: as operações comuns estão isentas (vendas até R$ 20 mil), e o day trade é tributado."
+},
+"dica": "Ações (operação comum): 15%, isento se as vendas do mês forem até R$ 20 mil. Day trade: 20%, sempre."
+},
+{
+"pd": "2.1.1.4",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um banco oferece a Aline um Certificado de Operações Estruturadas (COE) que paga 80% da alta de um índice de ações internacional em 3 anos, com a promessa de devolução de 100% do valor investido no vencimento caso o índice caia. Aline pergunta a Fernando, profissional CPA, quais cuidados deve ter.",
+"enunciado": "Fernando explica corretamente que esse COE:",
+"alt": [
+"é de capital protegido, mas a proteção vale no vencimento e depende do banco emissor, pois o COE não tem FGC.",
+"é da modalidade capital em risco, pois todo COE atrelado a ações pode gerar perda superior ao valor investido.",
+"tem garantia do FGC até R$ 250 mil por CPF, como os demais títulos de renda fixa emitidos por bancos.",
+"garante a devolução do capital a qualquer momento, inclusive em resgate antecipado, e é isento de IR."
+],
+"certa": "A",
+"gabarito": "O COE combina renda fixa e derivativos para gerar retorno ligado a um ativo de referência (índices, moedas, ações). Modalidades: capital protegido (devolve ao menos o valor nominal investido no vencimento) e capital em risco (pode perder parte ou todo o capital, nunca mais que ele). Riscos: crédito do emissor (sem FGC), liquidez (resgate antecipado pode não existir ou ter desconto) e mercado. Tributação: tabela regressiva da renda fixa, no vencimento ou na liquidação.",
+"porque": {
+"B": "O COE descrito devolve 100% no vencimento: é capital protegido. E mesmo o capital em risco não perde além do valor investido.",
+"C": "O COE não tem cobertura do FGC, embora seja emitido por banco.",
+"D": "A proteção vale só no vencimento; antes dele, pode haver perda. O COE é tributado pela tabela regressiva da renda fixa."
+},
+"dica": "COE: proteção só no vencimento, sem FGC, tabela regressiva. Nunca perde mais que o investido."
+},
+{
+"pd": "2.1.2.2.4",
+"dif": "Difícil",
+"nivel": "Compreensão",
+"contexto": "Em uma reunião, Roberta explica a Caio, profissional CPA, que um mesmo fundo oferece a classe A, voltada a investidores do varejo, e a classe B, voltada a investidores profissionais, com estratégia e ativos próprios. Dentro da classe A há duas subclasses, que diferem apenas no prazo de resgate e na taxa de administração. Ela quer saber o que ocorre se a classe B tiver um patrimônio líquido negativo.",
+"enunciado": "Caio explica corretamente, pela Resolução CVM 175, que:",
+"alt": [
+"as perdas da classe B são automaticamente divididas entre todas as classes e subclasses do fundo, pois o fundo é uma única comunhão de recursos.",
+"as subclasses têm patrimônios segregados entre si, enquanto as classes compartilham o mesmo patrimônio.",
+"a segregação patrimonial só existe entre fundos de administradores diferentes, e não entre classes de um mesmo fundo.",
+"cada classe tem patrimônio segregado, e as obrigações da classe B não atingem a classe A; as subclasses dividem o patrimônio da classe."
+],
+"certa": "D",
+"gabarito": "A Resolução CVM 175 permite que um fundo tenha diferentes classes de cotas, cada uma com patrimônio segregado, direitos e obrigações próprios, como se fosse um fundo independente. As subclasses ficam dentro de uma classe, compartilham o mesmo patrimônio e diferem em público-alvo, prazos de aplicação e resgate, taxas ou condições de distribuição. Assim, um PL negativo na classe B não contamina a classe A. A responsabilidade dos cotistas pode ser limitada ao valor subscrito, se o regulamento assim previr.",
+"porque": {
+"A": "A CVM 175 criou justamente a segregação patrimonial entre classes: as dívidas de uma não alcançam as outras.",
+"B": "É o contrário: a segregação é entre classes; as subclasses são divisões de uma mesma classe, com o mesmo patrimônio.",
+"C": "Pela CVM 175, cada classe de cotas pode ter patrimônio próprio dentro do mesmo fundo."
+},
+"dica": "Classe = patrimônio segregado. Subclasse = mesma carteira, condições diferentes (prazo, taxa, público)."
+},
+{
+"pd": "2.1.2.2.7",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Vinícius aplicou em uma classe fechada de um fundo e, dois anos depois, precisou de dinheiro. Ao pedir o resgate, foi informado de que isso não seria possível. Ele procura Bárbara, profissional CPA, para entender as alternativas.",
+"enunciado": "Bárbara explica corretamente que, em uma classe fechada:",
+"alt": [
+"não há resgate a pedido: as cotas são pagas no fim do prazo ou em amortizações, e o cotista pode vendê-las no secundário.",
+"o resgate pode ser solicitado a qualquer momento, desde que o cotista pague a taxa de saída prevista no regulamento.",
+"o cotista pode transferir as cotas apenas para outro fundo do mesmo administrador, sem qualquer negociação em mercado.",
+"o resgate é permitido somente após dois anos de aplicação, prazo de carência já cumprido por Vinícius."
+],
+"certa": "A",
+"gabarito": "Classe aberta: o cotista pode solicitar o resgate conforme as regras do regulamento (prazo de cotização e liquidação). Classe fechada: não há resgate a pedido; o cotista recebe na amortização ou no fim do prazo de duração e, para sair antes, precisa vender as cotas a outro investidor no mercado secundário (como nos FIIs listados). Por isso a liquidez da classe fechada depende do mercado.",
+"porque": {
+"B": "Resgate a pedido do cotista é característica das classes abertas. A taxa de saída também é instituto das classes abertas.",
+"C": "Cotas de classe fechada podem ser negociadas no mercado secundário, por exemplo na B3.",
+"D": "Não há resgate por prazo de carência em classe fechada. A saída é no fim do prazo, por amortização ou por venda no secundário."
+},
+"dica": "Aberta = resgata. Fechada = não resgata; vende no secundário ou espera amortização ou fim do prazo."
+},
+{
+"pd": "2.1.2.3.6",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao analisar três classes de FIF, Gabriel, profissional CPA, vê que a primeira mantém 85% do patrimônio em títulos atrelados a juros e inflação; a segunda, 70% em ações listadas; e a terceira, 85% em ativos ligados à variação do dólar. Um cliente pergunta como se classificam.",
+"enunciado": "Pela tipificação do Anexo I da Resolução CVM 175, as classes são, respectivamente:",
+"alt": [
+"multimercado, ações e cambial.",
+"renda fixa, ações e cambial.",
+"renda fixa, multimercado e cambial.",
+"renda fixa, ações e multimercado."
+],
+"certa": "B",
+"gabarito": "Tipificação dos FIFs (CVM 175, Anexo I): Renda Fixa, no mínimo 80% em ativos ligados à taxa de juros e/ou índice de preços; Ações, no mínimo 67% em ações e ativos equivalentes; Cambial, no mínimo 80% em ativos ligados à variação de moeda estrangeira; Multimercado, vários fatores de risco sem concentração obrigatória.",
+"porque": {
+"A": "A primeira tem mais de 80% em ativos ligados a taxa de juros e índice de preços, o que a caracteriza como renda fixa.",
+"C": "Com 67% ou mais em ações, a segunda é classe de ações.",
+"D": "Com 80% ou mais em ativos ligados à variação cambial, a terceira é cambial."
+},
+"dica": "RF ≥ 80%; Ações ≥ 67%; Cambial ≥ 80%; Multimercado = sem concentração."
+},
+{
+"pd": "2.1.3.2.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Simone tem cotas de uma classe de renda fixa de longo prazo e de uma classe de ações. No fim de maio, notou que a quantidade de cotas da renda fixa diminuiu, enquanto a da classe de ações ficou igual. Pergunta a Paulo, profissional CPA, o que aconteceu.",
+"enunciado": "Paulo explica corretamente que:",
+"alt": [
+"houve cobrança de taxa de administração, descontada semestralmente em cotas apenas nas classes de renda fixa.",
+"houve o come-cotas de maio, com 15% sobre o rendimento na classe de longo prazo; a classe de ações não tem come-cotas.",
+"houve o come-cotas nas duas classes, mas na de ações ele é compensado automaticamente pelos dividendos recebidos.",
+"houve o come-cotas à alíquota de 22,5%, pois o come-cotas sempre usa a maior alíquota da tabela regressiva."
+],
+"certa": "B",
+"gabarito": "Come-cotas: antecipação do IR no último dia útil de maio e de novembro, feita pela redução da quantidade de cotas. Alíquotas: 15% em fundos de longo prazo e 20% em fundos de curto prazo. No resgate, cobra-se a diferença até a alíquota final, pelo prazo de aplicação. Classes de ações não têm come-cotas: pagam 15% sobre o ganho apenas no resgate. Desde a Lei 14.754/2023, também os fundos fechados estão sujeitos ao come-cotas, em regra.",
+"porque": {
+"A": "A taxa de administração é cobrada diariamente, já refletida no valor da cota, e não reduz a quantidade de cotas.",
+"C": "Classes de ações não têm come-cotas.",
+"D": "No longo prazo, o come-cotas é de 15% (20% no curto prazo). A diferença para a alíquota final é cobrada no resgate."
+},
+"dica": "Come-cotas: maio e novembro; 15% no longo prazo e 20% no curto prazo; não existe em classes de ações."
+},
+{
+"pd": "2.2.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Ana e João Reis procuram Sérgio, profissional CPA, para contratar previdência. Ana é servidora pública, contribui para o regime próprio e faz a declaração completa do IR. João é autônomo, não contribui para o INSS e usa a declaração simplificada.",
+"enunciado": "Na primeira etapa do atendimento, Sérgio recomenda, de forma adequada à situação tributária de cada um:",
+"alt": [
+"PGBL para Ana, que pode deduzir até 12% da renda bruta, e VGBL para João, que não aproveitaria a dedução.",
+"PGBL para os dois, pois o PGBL sempre oferece mais vantagem fiscal que o VGBL, em qualquer situação.",
+"VGBL para Ana e PGBL para João, já que o profissional autônomo é o principal público do PGBL.",
+"VGBL para os dois, pois o PGBL só pode ser contratado por empregados de empresas patrocinadoras do plano."
+],
+"certa": "A",
+"gabarito": "PGBL: as contribuições podem ser deduzidas da base do IR até 12% da renda bruta tributável anual, desde que o participante use a declaração completa e contribua para o regime oficial (INSS ou regime próprio). No resgate, o IR incide sobre o valor total. VGBL: sem dedução; no resgate, o IR incide só sobre os rendimentos. É indicado para quem usa a declaração simplificada, é isento ou já atingiu os 12% no PGBL.",
+"porque": {
+"B": "João usa a declaração simplificada e não contribui para a previdência oficial; ele não aproveitaria a dedução e pagaria IR sobre o total no resgate.",
+"C": "A dedução do PGBL exige declaração completa e contribuição para a previdência oficial, condições que Ana cumpre e João não.",
+"D": "Qualquer pessoa pode contratar PGBL. O público com vantagem é quem declara no modelo completo e contribui para o regime oficial."
+},
+"dica": "PGBL: declaração completa + contribui ao INSS ou regime próprio; deduz até 12%; IR sobre o total. VGBL: IR só sobre o rendimento.",
+"caso": "Árvore de diálogo: Casal Reis e a previdência",
+"etapa": "1/3"
+},
+{
+"pd": "2.2.2.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Definidos os planos, o casal Reis informa a Sérgio que pretende manter os recursos aplicados por pelo menos 15 anos, até a aposentadoria, e quer pagar o mínimo possível de imposto na saída. Ambos terão renda elevada na aposentadoria.",
+"enunciado": "Sérgio orienta que o regime de tributação mais adequado é o:",
+"alt": [
+"progressivo, pois sua alíquota máxima de 15% é sempre menor que a do regime regressivo.",
+"regressivo, mas com alíquota calculada pelo tempo total do plano, e não por aporte.",
+"regressivo, com alíquota decrescente por aporte, chegando a 10% após 10 anos.",
+"progressivo, pois só ele permite resgates após 10 anos sem incidência de imposto."
+],
+"certa": "C",
+"gabarito": "Regime regressivo (definitivo): 35% até 2 anos, 30% de 2 a 4, 25% de 4 a 6, 20% de 6 a 8, 15% de 8 a 10 e 10% acima de 10 anos, por aporte. É ideal para horizontes longos. Regime progressivo (compensável): no resgate, retém 15% na fonte e o valor entra na declaração anual pela tabela progressiva; na renda mensal (benefício), aplica-se a tabela progressiva mensal. Pode ser bom para quem terá renda baixa na aposentadoria ou horizonte curto. Pela Lei 14.803/2024, a escolha pode ser feita até o pedido do benefício ou do primeiro resgate.",
+"porque": {
+"A": "No progressivo, o resgate retém 15% na fonte, mas o ajuste na declaração segue a tabela progressiva, que pode chegar a 27,5% com renda alta.",
+"B": "No regressivo, o prazo é contado para cada aporte individualmente (sistema PEPS: primeiro que entra, primeiro que sai).",
+"D": "Nenhum regime zera o IR. O menor nível é 10%, no regressivo, após 10 anos."
+},
+"dica": "Regressivo: de 35% a 10% em degraus de 2 anos, por aporte. Escolha do regime até o 1º resgate ou benefício (Lei 14.803/2024).",
+"caso": "Árvore de diálogo: Casal Reis e a previdência",
+"etapa": "2/3"
+},
+{
+"pd": "2.2.3.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Anos depois, Ana Reis encontra um PGBL com taxa de administração menor em outra seguradora e quer levar para lá os recursos do seu PGBL atual. Ela pergunta a Sérgio como fazer e se pagará imposto.",
+"enunciado": "Sérgio explica corretamente que Ana pode fazer:",
+"alt": [
+"a portabilidade para outro PGBL, direto entre as entidades, sem IR e mantendo o tempo de cada aporte.",
+"o resgate total e a nova aplicação, pois a portabilidade só é permitida entre planos da mesma seguradora.",
+"a portabilidade do PGBL para um VGBL de outra seguradora, sem incidência de IR, pois os planos são equivalentes.",
+"a portabilidade para outro PGBL, mas com retenção de 15% de IR antecipado sobre os rendimentos."
+],
+"certa": "A",
+"gabarito": "Portabilidade é a transferência de recursos acumulados entre planos de previdência, de entidade para entidade (externa) ou entre planos da mesma entidade (interna). Não há IR nem IOF, porque o dinheiro não passa pelas mãos do participante. Deve ocorrer entre planos da mesma modalidade (PGBL para PGBL, VGBL para VGBL), respeitando a carência do plano de origem. No regime regressivo, o tempo de acumulação de cada aporte é preservado.",
+"porque": {
+"B": "A portabilidade pode ser externa (para outra entidade) ou interna. Resgatar geraria IR.",
+"C": "A portabilidade só é permitida entre planos da mesma modalidade (PGBL para PGBL, VGBL para VGBL), pela diferença de tributação.",
+"D": "Na portabilidade os recursos não passam pelo participante, e não há incidência de IR."
+},
+"dica": "Portabilidade: sem IR, mesma modalidade (PGBL↔PGBL, VGBL↔VGBL), dinheiro vai direto de uma entidade para a outra.",
+"caso": "Árvore de diálogo: Casal Reis e a previdência",
+"etapa": "3/3"
+},
+{
+"pd": "2.3.2.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Bruna pagou só o valor mínimo da fatura do cartão de crédito, de R$ 4.000, e entrou no rotativo. No mês seguinte, ainda sem condições de quitar o saldo, procura Igor, profissional CPA, preocupada com a dívida crescendo sem limite.",
+"enunciado": "Igor explica corretamente que, pelas regras atuais:",
+"alt": [
+"o rotativo pode ser mantido indefinidamente, e os juros não têm limite, por se tratar de crédito pessoal sem garantia.",
+"o banco é obrigado a perdoar os juros acumulados se a cliente pagar ao menos o valor mínimo por três meses seguidos.",
+"o rotativo só vale até a fatura seguinte, depois o saldo deve ser pago ou parcelado, e os encargos não podem passar de 100% da dívida.",
+"o saldo devedor é transferido automaticamente para o cheque especial, que cobra juros menores que os do cartão de crédito."
+],
+"certa": "C",
+"gabarito": "Pela Resolução CMN 4.549/2017, o saldo da fatura só pode ficar no rotativo até o vencimento seguinte; depois, a instituição deve oferecer parcelamento em condições mais vantajosas. A Lei 14.690/2023 (programa Desenrola), em vigor desde janeiro de 2024, limita juros e encargos do rotativo e do parcelamento da fatura a 100% do valor original da dívida. Esse é um dos créditos mais caros do mercado e deve ser evitado ou substituído por crédito de menor custo efetivo total (CET).",
+"porque": {
+"A": "Desde 2017, o rotativo vale só até a fatura seguinte, e desde 2024 a Lei 14.690/2023 limita juros e encargos a 100% da dívida original.",
+"B": "Não há perdão obrigatório de juros. Há a obrigação de oferecer parcelamento e o limite total de encargos.",
+"D": "Não há transferência automática para o cheque especial. A alternativa obrigatória é o parcelamento da fatura em condições melhores."
+},
+"dica": "Rotativo: só até a próxima fatura, depois parcelamento obrigatório. Encargos limitados a 100% da dívida original (Lei 14.690)."
+},
+{
+"pd": "3.1.2.3",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Seu Valdir, 62 anos, vai se aposentar em um ano. Construiu um patrimônio relevante ao longo da vida, não tem dívidas e diz a Luana, profissional CPA, que sua prioridade agora é não perder o que juntou, aceitando rentabilidade menor em troca de segurança.",
+"enunciado": "Luana identifica que Valdir está na fase do ciclo de vida do investidor chamada de:",
+"alt": [
+"preservação de capital, em que a prioridade é proteger o patrimônio acumulado, com menor exposição a risco.",
+"acumulação de capital, em que a prioridade é formar patrimônio com aportes regulares e maior tolerância a risco.",
+"crescimento patrimonial, em que a prioridade é ampliar o patrimônio com maior exposição a ativos de risco.",
+"distribuição de renda, em que a prioridade é transferir o patrimônio aos herdeiros e consumir todo o capital."
+],
+"certa": "A",
+"gabarito": "Fases do ciclo de vida do investidor: acumulação (início da carreira, construção da reserva e do patrimônio, maior tolerância a risco pelo longo horizonte); crescimento patrimonial (renda maior, patrimônio crescendo, diversificação); preservação de capital (perto da aposentadoria, foco em proteger o que foi acumulado e reduzir risco); distribuição (uso do patrimônio para renda e planejamento sucessório). A exposição a risco tende a diminuir ao longo das fases.",
+"porque": {
+"B": "A acumulação é típica do início da vida profissional, quando há longo horizonte e pouco patrimônio.",
+"C": "O crescimento corresponde à fase intermediária, com renda maior e horizonte ainda longo; não é o foco de Valdir.",
+"D": "A distribuição (sucessão e uso do patrimônio) vem depois. O objetivo declarado por Valdir é proteger o patrimônio."
+},
+"dica": "Acumulação → Crescimento → Preservação → Distribuição. O risco tende a cair ao longo da vida."
+},
+{
+"pd": "3.1.4.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Cecília apresentou a Mateus, profissional CPA, seu balanço patrimonial: R$ 36.000 em aplicações de liquidez diária, imóvel próprio de R$ 400.000 e carro de R$ 60.000. Tem um financiamento imobiliário com saldo de R$ 92.000 e despesas mensais de R$ 6.000. Ela quer saber por quantos meses conseguiria se manter sem renda.",
+"enunciado": "Mateus calcula que o indicador de cobertura de despesas de Cecília é de:",
+"alt": [
+"82 meses, pois considera todo o patrimônio (R$ 496.000) dividido pelas despesas mensais.",
+"6 meses, considerando só os ativos líquidos (R$ 36.000) divididos pelas despesas mensais.",
+"66,7 meses, pois considera o patrimônio líquido (R$ 404.000) dividido pelas despesas mensais.",
+"0 meses, pois as dívidas (R$ 92.000) superam os ativos líquidos (R$ 36.000)."
+],
+"certa": "B",
+"gabarito": "Indicadores do balanço pessoal: cobertura de despesas = ativos líquidos ÷ despesas mensais (36.000 ÷ 6.000 = 6 meses); endividamento = passivos ÷ ativos totais (92.000 ÷ 496.000 ≈ 18,5%); patrimônio líquido = ativos − passivos (496.000 − 92.000 = R$ 404.000). Ativos de uso (casa, carro) servem ao consumo e não geram liquidez; ativos de não uso (aplicações) geram renda ou liquidez.",
+"porque": {
+"A": "Imóvel e carro são ativos de uso, sem liquidez imediata; não entram na cobertura de emergência.",
+"C": "O patrimônio líquido inclui ativos de uso, que não pagam despesas no curto prazo.",
+"D": "O saldo do financiamento é pago em parcelas ao longo do tempo; ele não anula a cobertura de curto prazo."
+},
+"dica": "Cobertura = ativos líquidos ÷ despesas mensais. Ativo de uso (casa, carro) não entra."
+},
+{
+"pd": "3.1.6.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Eduarda declara o IR no modelo simplificado. Neste ano, teve muitas despesas médicas, paga escola de dois filhos e quer saber se deveria contratar um PGBL e se o modelo de declaração faz diferença. Procura Tiago, profissional CPA.",
+"enunciado": "Tiago explica corretamente que:",
+"alt": [
+"no completo, deduzem-se despesas comprovadas e o PGBL (até 12%); ele compensa quando as deduções superam o desconto padrão do simplificado.",
+"o modelo simplificado permite deduzir as despesas médicas e o PGBL, além de aplicar o desconto padrão de 20% sobre os rendimentos.",
+"o modelo deve ser escolhido apenas pelo valor da restituição recebida no ano anterior, que indica a opção mais vantajosa.",
+"o PGBL traz benefício fiscal em qualquer modelo de declaração, por ser um produto de previdência complementar regulado."
+],
+"certa": "A",
+"gabarito": "Declaração completa: permite deduções legais comprovadas, como saúde (sem limite), educação (com limite por pessoa), dependentes, previdência oficial e PGBL (até 12% da renda bruta tributável). Declaração simplificada: aplica um desconto padrão de 20% sobre os rendimentos tributáveis, limitado a um teto anual, e substitui todas as deduções. Escolhe-se a que resulta em menor base de cálculo e imposto. O próprio programa da Receita indica a opção mais vantajosa.",
+"porque": {
+"B": "No simplificado, o desconto padrão de 20% (limitado a um teto) substitui todas as deduções legais.",
+"C": "A escolha correta é a que gera menor imposto devido no ano, comparando deduções reais com o desconto padrão.",
+"D": "A dedução do PGBL só existe na declaração completa."
+},
+"dica": "Completa = deduções reais (inclui PGBL até 12%). Simplificada = 20% padrão com teto. Escolha a de menor imposto."
+},
+{
+"pd": "3.4.2.3",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Marta, 29 anos, analista de sistemas, abriu conta e procura Diogo, profissional CPA. Recebeu uma herança de R$ 80.000 e diz: “Quero o investimento que mais rende, me indica um?”.",
+"enunciado": "Antes de recomendar qualquer produto, a primeira atitude adequada de Diogo é:",
+"alt": [
+"apresentar o produto de maior rentabilidade dos últimos 12 meses, já que esse foi o pedido explícito da cliente.",
+"verificar se Marta tem perfil de investidor válido e, se não, levantar objetivos, horizonte, situação financeira, tolerância a risco e conhecimento.",
+"sugerir que Marta divida o dinheiro igualmente entre todos os produtos disponíveis na instituição, para diversificar o risco.",
+"pedir que Marta assine um termo de responsabilidade e, em seguida, liberar qualquer produto que ela escolher."
+],
+"certa": "B",
+"gabarito": "Pela Resolução CVM 30 e pelo Código Anbima de Distribuição, a instituição não pode recomendar produtos sem verificar a adequação ao perfil do cliente. O perfil considera: objetivos de investimento (incluindo prazo e preferência de risco), situação financeira (renda, patrimônio, necessidade de liquidez) e conhecimento e experiência com produtos. Sem perfil ou com perfil desatualizado, o profissional deve primeiro identificá-lo.",
+"porque": {
+"A": "Atender ao pedido sem conhecer o perfil viola o dever de suitability. Rentabilidade passada não garante rentabilidade futura.",
+"C": "Diversificar sem conhecer objetivos e perfil não garante adequação.",
+"D": "O termo não substitui a análise de perfil. A recomendação exige verificar a adequação primeiro."
+},
+"dica": "Antes de recomendar: perfil (objetivos, situação financeira, conhecimento). Sem perfil válido, nada de recomendação.",
+"caso": "Árvore de diálogo: Marta, nova cliente",
+"etapa": "1/4"
+},
+{
+"pd": "3.1.3.4",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Feito o perfil, Marta foi classificada como moderada. Ela conta a Diogo que gasta R$ 4.000 por mês, tem emprego CLT estável e ainda não tem nenhuma reserva para imprevistos. Quer investir a herança pensando no longo prazo.",
+"enunciado": "Diogo orienta que o passo seguinte mais prudente é:",
+"alt": [
+"aplicar todo o valor em um fundo de ações, já que o horizonte de investimento é longo e o perfil é moderado.",
+"formar uma reserva de emergência equivalente a 6 meses de renda, aplicada em ações de boas pagadoras de dividendos.",
+"deixar a reserva de emergência parada na conta corrente, pois é o único lugar com liquidez imediata.",
+"montar antes uma reserva de cerca de 6 meses de despesas (R$ 24.000) em aplicações de alta liquidez e baixo risco, como o Tesouro Selic."
+],
+"certa": "D",
+"gabarito": "A reserva de emergência é o primeiro passo do planejamento: protege contra imprevistos sem obrigar a desfazer investimentos de longo prazo em momento ruim. Dimensionamento usual: de 3 a 6 meses de despesas para quem tem renda estável (CLT) e de 6 a 12 meses para autônomos e quem tem renda variável. Deve ficar em ativos de alta liquidez e baixo risco: Tesouro Selic, CDB com liquidez diária de emissor sólido, fundos DI com taxa baixa ou poupança.",
+"porque": {
+"A": "Sem reserva, qualquer imprevisto obrigaria a vender ações, talvez em momento de queda. Além disso, 100% em ações não é adequado ao perfil moderado.",
+"B": "A reserva deve ser dimensionada pelas despesas (não pela renda) e ficar em ativos líquidos e de baixo risco; ações oscilam.",
+"C": "A conta corrente não remunera. Há opções com liquidez diária, baixo risco e rendimento."
+},
+"dica": "Reserva = despesas (não renda) × 3 a 12 meses, em liquidez diária e baixo risco. Vem antes de tudo.",
+"caso": "Árvore de diálogo: Marta, nova cliente",
+"etapa": "2/4"
+},
+{
+"pd": "3.4.2.4",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Com a reserva montada, Marta insiste em aplicar R$ 30.000 em uma classe de fundo multimercado alavancada, classificada pela instituição como adequada apenas ao perfil arrojado. Ela diz que entende os riscos e quer seguir mesmo assim.",
+"enunciado": "Pela Resolução CVM 30, Diogo deve:",
+"alt": [
+"recusar a operação em qualquer hipótese, pois a regulação proíbe aplicações fora do perfil do cliente, mesmo a pedido dele.",
+"alertar Marta, antes da operação, de que o produto não é adequado ao seu perfil e obter dela declaração expressa de ciência.",
+"reclassificar Marta como arrojada para que a operação fique enquadrada, sem necessidade de novo questionário.",
+"realizar a operação normalmente, pois a decisão final é da cliente e não há obrigação de alerta ou registro."
+],
+"certa": "B",
+"gabarito": "Quando o cliente quer investir em produto inadequado ao seu perfil, ou está sem perfil ou com perfil desatualizado, a Resolução CVM 30 exige que a instituição o alerte antes da primeira operação, com as razões da não adequação, e obtenha declaração expressa de que ele está ciente. A decisão final é do cliente, mas o processo precisa ser documentado. Nunca se ajusta o perfil para encaixar o produto.",
+"porque": {
+"A": "A norma não proíbe: permite a operação a pedido do cliente, desde que haja alerta prévio e declaração expressa de ciência.",
+"C": "Alterar o perfil para viabilizar a venda é conduta irregular. O perfil deve refletir as respostas reais do cliente.",
+"D": "Antes da operação, é obrigatório alertar e obter a declaração expressa de ciência do desenquadramento."
+},
+"dica": "Fora do perfil: alertar antes + declaração expressa do cliente. Não é proibido, mas exige registro.",
+"caso": "Árvore de diálogo: Marta, nova cliente",
+"etapa": "3/4"
+},
+{
+"pd": "3.4.2.6",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Dois anos e meio depois, Marta volta à agência: casou-se, teve um filho e trocou de emprego, com renda menor. Diogo nota que o perfil de investidor dela foi feito no primeiro atendimento e nunca foi atualizado.",
+"enunciado": "Diogo deve considerar que:",
+"alt": [
+"o perfil continua válido por tempo indeterminado, pois só a própria cliente pode pedir sua atualização.",
+"o perfil está vencido: deve ser revisto no máximo a cada 24 meses e após mudanças relevantes na vida da cliente.",
+"o perfil é válido por 5 anos, que é o prazo legal de guarda dos documentos cadastrais do cliente.",
+"o perfil só precisa ser atualizado se Marta quiser investir em produtos mais arriscados do que os atuais."
+],
+"certa": "B",
+"gabarito": "Pela Resolução CVM 30, as informações do perfil do cliente devem ser atualizadas em intervalos não superiores a 24 meses. O Código Anbima prevê o monitoramento contínuo: mudanças relevantes (renda, família, objetivos) exigem nova avaliação. Com o perfil vencido, o cliente deve ser alertado e a instituição deve atualizá-lo antes de recomendar.",
+"porque": {
+"A": "A instituição deve atualizar o perfil periodicamente (no máximo a cada 24 meses) e diante de mudanças relevantes.",
+"C": "O prazo de guarda de documentos não se confunde com a validade do perfil, que é de até 24 meses.",
+"D": "A atualização é obrigatória independentemente do produto desejado; mudanças de vida alteram objetivos, prazo e capacidade de risco."
+},
+"dica": "Perfil de investidor: atualizar no máximo a cada 24 meses e sempre que a vida do cliente mudar.",
+"caso": "Árvore de diálogo: Marta, nova cliente",
+"etapa": "4/4"
+},
+{
+"pd": "3.4.1.1",
+"dif": "Fácil",
+"nivel": "Aplicação",
+"contexto": "Para bater a meta do mês, Leonardo, profissional CPA, diz a uma cliente conservadora que um fundo multimercado “tem rentabilidade garantida de 120% do CDI”, com base no desempenho dos últimos 12 meses. A cliente aplica.",
+"enunciado": "A conduta de Leonardo:",
+"alt": [
+"é aceitável, pois baseou-se em dados reais e verificáveis da rentabilidade passada do fundo.",
+"é aceitável, desde que a cliente tenha assinado o termo de adesão e ciência de risco do fundo.",
+"viola apenas as metas internas da instituição, sem relação com as normas de conduta e ética da Anbima para certificados.",
+"viola o Código de Conduta Ética da Anbima, pois promete rentabilidade que não pode ser garantida e omite os riscos."
+],
+"certa": "D",
+"gabarito": "O Código de Conduta Ética das Certificações Anbima traz princípios como integridade, transparência, diligência, lealdade, ética e conhecimento técnico. O profissional deve informar de modo claro e correto, sem promessas de rentabilidade e sem omitir riscos, e colocar o interesse do cliente acima das metas comerciais. Em fundos de investimento (exceto produtos com garantia contratual), não há rentabilidade garantida. Descumprimentos podem levar a sanções, inclusive à perda da certificação.",
+"porque": {
+"A": "Rentabilidade passada não garante rentabilidade futura; transformá-la em promessa é enganoso.",
+"B": "O termo não autoriza o profissional a fazer promessas falsas nem dispensa a transparência sobre riscos.",
+"C": "Prometer ganho e omitir riscos fere diretamente o Código de Ética e o dever de informar com clareza."
+},
+"dica": "Nunca prometa rentabilidade. Rentabilidade passada não é garantia. O interesse do cliente vem antes da meta comercial."
+},
+{
+"pd": "3.4.3.3.2",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Uma gestora oferece a Natália, profissional CPA de um banco distribuidor, uma viagem de luxo para cada R$ 2 milhões captados para seu novo fundo. Ao mesmo tempo, o banco recebe parte da taxa de administração desse fundo como remuneração pela distribuição.",
+"enunciado": "Diante dessa situação, a conduta adequada é:",
+"alt": [
+"recusar o benefício, comunicar a oferta ao compliance e garantir transparência ao cliente sobre a remuneração do distribuidor.",
+"aceitar a viagem, pois ela é oferecida pela gestora e não pelo cliente, o que afasta o conflito de interesses.",
+"aceitar a viagem e recomendar o fundo apenas a clientes de perfil arrojado, para manter a adequação.",
+"omitir do cliente a remuneração recebida pelo distribuidor, pois essa informação é sigilosa e estratégica."
+],
+"certa": "A",
+"gabarito": "Conflito de interesses ocorre quando um interesse pessoal ou da instituição pode comprometer a imparcialidade em relação ao cliente. As medidas de gestão incluem políticas claras, treinamento, divulgação obrigatória, segregação de funções, monitoramento, comitês de compliance e proibição de atividades específicas, como aceitar presentes e benefícios relevantes. O Código Anbima de Distribuição (Capítulo VIII) exige transparência sobre a remuneração do distribuidor, como rebates de taxa de administração.",
+"porque": {
+"B": "Um incentivo pessoal atrelado à captação cria conflito de interesses, porque pode levar à recomendação de produtos por interesse próprio.",
+"C": "Restringir o público não elimina o conflito. O benefício pessoal continua influenciando a recomendação.",
+"D": "O Código Anbima de Distribuição exige transparência sobre a remuneração do canal de distribuição."
+},
+"dica": "Benefício pessoal atrelado a vendas = conflito: recusar e informar o compliance. A remuneração do distribuidor deve ser transparente."
+},
+{
+"pd": "3.4.5.3",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Sr. Otávio, cliente cadastrado como aposentado com renda mensal de R$ 3.500, passou a receber em sua conta, em um mês, 40 depósitos em espécie de R$ 9.500 cada, feitos em agências de cidades diferentes, que logo são transferidos para contas de terceiros. Camila, profissional CPA, observa o movimento.",
+"enunciado": "Camila deve considerar que essa movimentação:",
+"alt": [
+"é regular, pois cada depósito fica abaixo de R$ 10.000 e, portanto, dispensa qualquer análise, registro ou comunicação.",
+"é atípica e incompatível com a renda, com depósitos fracionados e repasse rápido a terceiros, e deve ser analisada como possível lavagem.",
+"é regular, pois o cliente é aposentado e tem conta antiga, o que dispensa o monitoramento das operações.",
+"deve ser analisada apenas se o próprio cliente reclamar de alguma das transferências realizadas para terceiros."
+],
+"certa": "B",
+"gabarito": "A prevenção à lavagem de dinheiro (Lei 9.613/1998; Circular BC 3.978/2020; Resolução CVM 50) segue a abordagem baseada em risco: monitora-se a compatibilidade entre movimentação, renda e perfil. São sinais de alerta: fracionamento de depósitos em espécie (smurfing), movimentação incompatível com a renda, uso de várias praças e repasse rápido a terceiros (contas de passagem). As etapas da lavagem são colocação, ocultação e integração.",
+"porque": {
+"A": "Fracionar valores para ficar abaixo de limites de registro é justamente um indício clássico de lavagem (smurfing).",
+"C": "Todo cliente é monitorado; a antiguidade do relacionamento não dispensa a análise de operações atípicas.",
+"D": "O monitoramento é dever da instituição e independe de reclamação do cliente."
+},
+"dica": "Valores fracionados, incompatíveis com a renda e repassados rapidamente = alerta de lavagem de dinheiro.",
+"caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+"etapa": "1/3"
+},
+{
+"pd": "3.4.6.9",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Após análise da área de PLD, a instituição concluiu que há indícios de lavagem de dinheiro na conta do Sr. Otávio. No dia seguinte, ele procura Camila e pergunta, desconfiado, se “o banco está de olho” nas suas operações.",
+"enunciado": "A conduta correta de Camila e da instituição é:",
+"alt": [
+"comunicar a operação ao COAF no prazo regulamentar, sem informar o cliente sobre a análise ou a comunicação.",
+"informar ao cliente que a operação será comunicada ao COAF, em respeito ao princípio da transparência.",
+"encerrar imediatamente a conta e devolver os recursos ao cliente, sem comunicar nenhum órgão.",
+"pedir autorização do cliente antes de enviar os dados ao COAF, conforme exige a LGPD."
+],
+"certa": "A",
+"gabarito": "Identificados indícios de lavagem, a instituição deve comunicar ao COAF (Unidade de Inteligência Financeira) no prazo regulamentar, sem dar ciência ao cliente ou a terceiros. As comunicações de boa-fé não geram responsabilidade civil ou administrativa para a instituição e seus profissionais. O descumprimento dos deveres de PLD sujeita instituições e administradores a sanções administrativas (advertência, multa, inabilitação) aplicadas pelo regulador.",
+"porque": {
+"B": "Avisar o cliente (tipping-off) é vedado: pode frustrar a investigação. A transparência com o cliente não se aplica a comunicações de PLD.",
+"C": "A comunicação ao COAF é obrigatória diante de indícios. Encerrar a conta sem comunicar descumpre a lei.",
+"D": "A comunicação ao COAF é obrigação legal e não depende de consentimento do cliente."
+},
+"dica": "Indício de lavagem → comunica ao COAF e NÃO avisa o cliente (sem tipping-off).",
+"caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+"etapa": "2/3"
+},
+{
+"pd": "3.4.6.5",
+"dif": "Difícil",
+"nivel": "Análise",
+"contexto": "Meses depois, o advogado do Sr. Otávio procura a instituição alegando que a comunicação ao COAF violou o sigilo bancário e a LGPD, pois os dados do cliente foram compartilhados sem autorização.",
+"enunciado": "A resposta tecnicamente correta é que:",
+"alt": [
+"houve quebra de sigilo, pois somente uma ordem judicial autoriza o envio de informações bancárias a qualquer órgão.",
+"houve violação da LGPD, pois o consentimento do titular é a única base legal para o compartilhamento de dados.",
+"não houve violação apenas porque o cliente assinou, na abertura da conta, um termo autorizando qualquer uso de seus dados.",
+"não há quebra de sigilo: a LC 105/2001 permite comunicar suspeitas às autoridades, e a LGPD admite o tratamento para cumprir obrigação legal."
+],
+"certa": "D",
+"gabarito": "A LC 105/2001 garante o sigilo das operações financeiras, mas lista situações que não o violam: a troca de informações entre instituições para fins cadastrais, a comunicação de operações com indícios de crime às autoridades, a revelação com consentimento expresso do cliente e o fornecimento por ordem judicial ou nas hipóteses legais. A LGPD (Lei 13.709/2018) traz várias bases legais para o tratamento de dados, como consentimento, cumprimento de obrigação legal ou regulatória, execução de contrato, exercício regular de direitos e proteção do crédito.",
+"porque": {
+"A": "A LC 105 prevê expressamente que a comunicação de ilícitos às autoridades não é quebra de sigilo, sem necessidade de ordem judicial.",
+"B": "O consentimento é apenas uma das bases legais. O cumprimento de obrigação legal ou regulatória é outra, aplicável aqui.",
+"C": "A legitimidade decorre da lei, e não de um termo genérico, que inclusive seria questionável pela LGPD."
+},
+"dica": "Comunicar suspeita ao COAF não quebra sigilo (LC 105). Na LGPD, a base é a obrigação legal, não o consentimento.",
+"caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+"etapa": "3/3"
+},
+{
+"pd": "3.4.6.2",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Uma instituição passou a usar reconhecimento facial para liberar transações no aplicativo. Felipe, profissional CPA, participa de um treinamento sobre LGPD e precisa classificar os dados tratados: nome, CPF, renda, saldo em conta e a biometria facial.",
+"enunciado": "Pela LGPD, entre esses dados, é classificado como dado pessoal sensível:",
+"alt": [
+"o saldo em conta, por ser protegido pelo sigilo bancário.",
+"o CPF, por permitir a identificação inequívoca do titular.",
+"a biometria facial.",
+"a renda, por revelar a capacidade financeira do titular."
+],
+"certa": "C",
+"gabarito": "A LGPD define como dado pessoal sensível o dado sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou organização religiosa, filosófica ou política, dado referente à saúde ou à vida sexual e dado genético ou biométrico, quando vinculado a uma pessoa natural. Esses dados têm regras mais restritas de tratamento. Dados financeiros são pessoais (e protegidos pelo sigilo bancário), mas não sensíveis. A fiscalização da LGPD cabe à ANPD.",
+"porque": {
+"A": "O saldo é dado pessoal protegido pelo sigilo bancário, mas não está na lista de dados sensíveis da LGPD.",
+"B": "O CPF é dado pessoal identificador, mas não é sensível pela LGPD.",
+"D": "Dados financeiros são pessoais, mas não constam do rol de dados sensíveis."
+},
+"dica": "Sensível (LGPD): raça, religião, política, sindicato, saúde, vida sexual, genético e biométrico. Dado financeiro não é sensível."
+},
+{
+"pd": "3.4.7.1.2",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Durante um almoço, Guilherme, profissional CPA, ouve de um amigo diretor de uma companhia aberta que a empresa será comprada por um concorrente, informação que ainda não foi divulgada ao mercado. Guilherme compra ações da companhia e repassa a informação à irmã, que também compra.",
+"enunciado": "A conduta de Guilherme configura:",
+"alt": [
+"conduta legal, pois Guilherme não é administrador da companhia e não tem dever de sigilo sobre ela.",
+"manipulação de mercado, pois a compra das ações por ele e pela irmã alterou artificialmente sua cotação.",
+"insider trading (art. 27-D da Lei 6.385/76), crime que alcança quem negocia com a informação e quem a repassa.",
+"infração apenas administrativa, sem natureza criminal, por envolver valores pequenos e pessoas físicas."
+],
+"certa": "C",
+"gabarito": "Art. 27-D da Lei 6.385/76: utilizar informação relevante ainda não divulgada ao mercado, capaz de propiciar vantagem indevida, para negociar valores mobiliários. Pena de reclusão de 1 a 5 anos e multa de até 3 vezes a vantagem obtida. Também comete crime quem repassa a informação sigilosa a quem possa negociar. Insider primário: quem tem acesso direto (administradores, controladores). Insider secundário: quem recebe a informação de outro. Ambos são alcançados.",
+"porque": {
+"A": "Desde 2017, o crime de insider alcança qualquer pessoa que use informação relevante não divulgada (insider secundário), não só administradores.",
+"B": "Manipulação (art. 27-C) envolve operações para alterar artificialmente preços. Aqui o núcleo é usar informação relevante não pública.",
+"D": "O insider trading é crime, com pena de reclusão de 1 a 5 anos e multa, independentemente do valor."
+},
+"dica": "Insider (27-D): usar ou repassar informação relevante ainda não divulgada. Vale para qualquer pessoa."
+},
+{
+"pd": "3.4.7.2.2.4.3",
+"dif": "Médio",
+"nivel": "Análise",
+"contexto": "Rafaela, operadora de uma corretora, recebe de um grande cliente institucional uma ordem para comprar um volume expressivo de ações de baixa liquidez. Antes de executá-la, compra para sua conta pessoal as mesmas ações e as vende logo após a execução da ordem do cliente, com lucro.",
+"enunciado": "Pela Resolução CVM 62, essa conduta caracteriza:",
+"alt": [
+"front running, prática não equitativa em que o profissional se antecipa à ordem do cliente para obter vantagem.",
+"churning, operação fraudulenta caracterizada pelo giro excessivo da carteira do cliente para gerar corretagem.",
+"spoofing, manipulação por meio de ofertas que o agente não pretende executar.",
+"money pass, criação de condição artificial por transferência de recursos entre contas ligadas."
+],
+"certa": "A",
+"gabarito": "A Resolução CVM 62 trata dos ilícitos de mercado com tipologia aberta: (i) criação de condições artificiais de demanda, oferta ou preço (ex.: money pass); (ii) manipulação de preços (spoofing, layering, manipulação de benchmark); (iii) operações fraudulentas (ex.: churning); (iv) práticas não equitativas (ex.: insider trading e front running). Front running é usar o conhecimento de ordens de clientes ainda não executadas para operar antes delas em benefício próprio ou de terceiros.",
+"porque": {
+"B": "Churning é o giro excessivo da conta do cliente. Aqui houve antecipação à ordem do cliente em benefício próprio.",
+"C": "Spoofing envolve ofertas falsas para mover preços; Rafaela executou negócios reais aproveitando a ordem do cliente.",
+"D": "Money pass é a transferência artificial de recursos entre comitentes; não descreve a antecipação à ordem do cliente."
+},
+"dica": "Front running = passar na frente da ordem do cliente. Churning = girar a carteira para gerar corretagem. Spoofing = oferta falsa."
+},
+{
+"pd": "4.3",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Um cliente de Lívia, profissional CPA, quer investir em fundos sustentáveis e encontrou duas classes: uma com o sufixo “IS” no nome e outra que informa apenas que “integra questões ESG” na gestão. Ele pergunta qual a diferença.",
+"enunciado": "Pelas regras de autorregulação da Anbima, Lívia explica corretamente que:",
+"alt": [
+"as duas classes são equivalentes, e o uso do sufixo IS é opcional para qualquer fundo que considere fatores ESG na gestão.",
+"a classe que integra questões ESG é mais rigorosa que a classe IS, pois exclui da carteira todos os setores poluentes.",
+"o sufixo IS indica que a classe é isenta de imposto de renda por investir em projetos sustentáveis e de impacto social.",
+"a classe IS tem objetivo sustentável e regras de transparência; a que só integra ESG considera esses fatores, mas não pode usar o sufixo IS."
+],
+"certa": "D",
+"gabarito": "Pelas regras da Anbima, as classes de Investimento Sustentável (IS) têm objetivo sustentável em sua política, usam o sufixo IS no nome e devem cumprir exigências de transparência e monitoramento, como relatórios periódicos e metodologia. As classes que integram questões ESG consideram fatores ambientais, sociais e de governança na gestão, sem objetivo sustentável, e não podem usar o sufixo IS. As regras combatem o greenwashing. A CVM 175 também exige que classes com referência a fatores ESG detalhem no regulamento a metodologia utilizada.",
+"porque": {
+"A": "O sufixo IS é reservado às classes com objetivo sustentável que cumprem os requisitos da Anbima; quem só integra ESG não pode usá-lo.",
+"B": "A classe IS é a de maior exigência, com objetivo sustentável. Integrar ESG significa considerar fatores na análise, sem um objetivo sustentável.",
+"C": "IS significa Investimento Sustentável. Não há isenção fiscal associada ao nome."
+},
+"dica": "IS = objetivo sustentável e sufixo no nome. Integra ESG = considera fatores ESG, sem o sufixo. Combate ao greenwashing."
+},
+{
+"pd": "4.4.4.3",
+"dif": "Fácil",
+"nivel": "Compreensão",
+"contexto": "Um cliente de Ricardo, profissional CPA, leu sobre a tokenização de um prédio comercial, cujos direitos de participação foram divididos em milhares de tokens negociados em uma plataforma regulada. Ele pergunta quais são as principais vantagens desse modelo.",
+"enunciado": "Ricardo explica que entre os benefícios da tokenização de ativos está:",
+"alt": [
+"a eliminação de todos os riscos do ativo, pois o registro em blockchain impede a desvalorização do imóvel.",
+"o fracionamento do ativo, que permite aportes menores, com potencial de mais liquidez e rastreabilidade.",
+"a dispensa de qualquer regulação, já que tokens não são considerados valores mobiliários em nenhuma hipótese.",
+"a garantia de liquidez imediata e de recompra do token pelo emissor a qualquer momento."
+],
+"certa": "B",
+"gabarito": "Tokenização é a representação digital de um ativo (imóveis, recebíveis, obras de arte, títulos) em tokens registrados em blockchain. Benefícios: fracionamento (tíquetes menores), potencial de maior liquidez, rastreabilidade, liquidação mais rápida e menor custo operacional. Riscos e desafios: segurança cibernética, insegurança regulatória, liquidez efetiva, custódia e tecnologia. Se o token configurar valor mobiliário, sujeita-se à CVM.",
+"porque": {
+"A": "O registro em blockchain dá rastreabilidade, mas não elimina o risco econômico do ativo (vacância, mercado, liquidez).",
+"C": "Tokens que configuram contrato de investimento coletivo podem ser valores mobiliários, sujeitos à CVM.",
+"D": "Não há garantia de liquidez: depende de haver compradores na plataforma."
+},
+"dica": "Tokenização: fracionar e registrar em blockchain. Ganha acesso, rastreabilidade e potencial de liquidez; os riscos do ativo continuam."
+},
+{
+"pd": "4.5.1.1",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Ao pedir um empréstimo pelo aplicativo de um novo banco, Joana recebe a proposta de compartilhar seus dados de conta e de cartão mantidos em outra instituição, pelo Open Finance, para obter uma taxa melhor. Ela pergunta a Marcelo, profissional CPA, se é seguro e se poderá voltar atrás.",
+"enunciado": "Marcelo explica corretamente que, no Open Finance:",
+"alt": [
+"o compartilhamento depende do consentimento do cliente, com finalidade e prazo definidos, e pode ser revogado a qualquer momento.",
+"as instituições compartilham automaticamente os dados de todos os clientes, sem necessidade de consentimento.",
+"o consentimento, uma vez dado, é irrevogável até o fim do contrato de empréstimo firmado com o novo banco.",
+"o compartilhamento é permitido apenas entre instituições que pertencem ao mesmo conglomerado financeiro."
+],
+"certa": "A",
+"gabarito": "O Open Finance (Resolução Conjunta BCB/CMN nº 1/2020) é o sistema de compartilhamento padronizado de dados e serviços entre instituições autorizadas, mediante consentimento do cliente, com finalidade específica e prazo determinado (até 12 meses), revogável a qualquer momento. Vantagens: mais concorrência, ofertas personalizadas, melhor avaliação de crédito (por exemplo, para quem tem pouco histórico) e portabilidade facilitada. O Open Investment e o Open Insurance estendem a lógica a investimentos e seguros.",
+"porque": {
+"B": "O Open Finance tem como base o consentimento do cliente, que escolhe o que compartilhar, com quem e por quanto tempo.",
+"C": "O cliente pode revogar o consentimento a qualquer momento.",
+"D": "O objetivo é justamente permitir o compartilhamento entre instituições diferentes e participantes, ampliando a concorrência."
+},
+"dica": "Open Finance: consentimento, finalidade e prazo definidos; revogável a qualquer momento."
+},
+{
+"pd": "4.4.5.6",
+"dif": "Médio",
+"nivel": "Compreensão",
+"contexto": "Durante uma palestra, um participante pergunta a Patrícia, profissional CPA, se o Drex é uma criptomoeda como o bitcoin e se seu valor oscila conforme a oferta e a procura.",
+"enunciado": "Patrícia esclarece que o Drex:",
+"alt": [
+"é a iniciativa do Banco Central de moeda digital (CBDC), versão digital do real com o mesmo valor da moeda física, e não um criptoativo.",
+"é uma criptomoeda descentralizada emitida por bancos privados, cujo valor oscila livremente conforme a oferta e a procura.",
+"é uma stablecoin lastreada em dólar, criada pelos bancos para facilitar as remessas internacionais de recursos.",
+"substituiu o Pix e passou a ser o único meio de pagamento instantâneo disponível no país."
+],
+"certa": "A",
+"gabarito": "CBDC (Central Bank Digital Currency) é a moeda digital emitida ou controlada por um banco central. O Drex é a iniciativa brasileira, conduzida pelo Banco Central, voltada a uma infraestrutura para o real digital, com serviços financeiros mais eficientes, contratos programáveis e ativos tokenizados. Diferentemente do bitcoin (descentralizado e volátil) e das stablecoins privadas, tem valor equivalente ao real e está sob regulação do BC.",
+"porque": {
+"B": "O Drex é uma iniciativa do Banco Central, e sua unidade equivale ao real; não é descentralizado nem tem cotação própria.",
+"C": "O Drex é ligado ao real brasileiro, não ao dólar, e é de iniciativa do BC.",
+"D": "O Drex não substitui o Pix; são iniciativas complementares do Banco Central."
+},
+"dica": "Drex = real digital do Banco Central (CBDC). Não é criptomoeda volátil nem substitui o Pix."
+},
+{
+"pd": "4.6.3.1",
+"dif": "Médio",
+"nivel": "Aplicação",
+"contexto": "Uma corretora passou a usar um assistente virtual com IA generativa para responder clientes. Em um teste, o assistente afirmou com segurança que um fundo multimercado “não tem risco de perda”, informação incorreta. Renato, profissional CPA, participa da avaliação da ferramenta.",
+"enunciado": "A recomendação mais adequada de Renato é:",
+"alt": [
+"confiar integralmente no assistente, pois modelos de IA generativa são treinados com dados do mercado e não cometem erros factuais.",
+"proibir qualquer uso de IA no atendimento, pois a regulação brasileira veda chatbots no mercado financeiro.",
+"permitir que o assistente faça recomendações personalizadas sem verificar o perfil do cliente, para ganhar agilidade.",
+"manter supervisão humana e controles sobre as respostas, pois a IA generativa pode produzir informações incorretas com aparência de verdade."
+],
+"certa": "D",
+"gabarito": "A IA generativa produz textos, imagens e respostas a partir de padrões aprendidos. É útil em chatbots e assistentes virtuais, mas pode gerar alucinações (respostas erradas com aparência de verdade) e vieses. No atendimento financeiro, deve haver governança, supervisão humana, testes, transparência com o cliente, proteção de dados (LGPD) e aderência às regras de publicidade e suitability. A responsabilidade pela informação continua sendo da instituição.",
+"porque": {
+"A": "Modelos generativos podem “alucinar”, isto é, gerar respostas plausíveis, mas falsas.",
+"B": "Não há proibição. O uso é permitido com responsabilidade, governança e supervisão.",
+"C": "Recomendações exigem suitability, mesmo quando feitas por canais digitais ou por IA."
+},
+"dica": "IA no atendimento: útil, mas pode alucinar. Exige supervisão humana, LGPD e suitability; a responsabilidade é da instituição."
+}
+]
+}

@@ -3222,6 +3222,7 @@ function ntClick(a,t){
 function ntChange(e){
   const t=e.target;
   if(t.dataset&&t.dataset.nth){const v=t.value||"";ntSave({horas:{[t.dataset.nth]:v}});return true}
+  if(t.id==="nt-pausa"){const v=t.value||"";if(v&&v>T0())ntSave({pausaAte:v});return true}
   if(t.id==="nt-email"){const v=t.value.trim();ntSave({email:{addr:v}});return true}
   if(t.id==="nt-hm"){const v=Math.max(1,Math.min(12,parseFloat(t.value)||3));ntSave({horasMeta:v});return true}
   return false;
@@ -3235,7 +3236,7 @@ function lembretesHtml(){
   return `<section class="sec" style="margin-top:20px"><h2>Lembretes</h2>
   <p class="lead">Avisos no celular e no e-mail para você não perder prazo, revisão nem ofensiva.</p>
   ${nt.msg?`<div class="msg">${esc(nt.msg)}</div>`:""}${nt.err?`<div class="msg err">${esc(nt.err)}</div>`:""}
-  ${(NT.config||{}).pausaAte&&(NT.config||{}).pausaAte>T0()?`<div class="ntc off"><b>Lembretes pausados até ${fmtDay(NT.config.pausaAte)}</b><span>Nenhum aviso é enviado até essa data.</span><div class="bar-act" style="margin-top:10px"><button class="btn alt" data-act="nt-resume">Retomar agora</button></div></div>`:""}
+  ${(NT.config||{}).pausaAte&&(NT.config||{}).pausaAte>T0()?`<div class="ntc off"><b>Lembretes pausados até ${fmtDay(NT.config.pausaAte)}</b><span>Nenhum aviso é enviado até essa data.</span><div class="bar-act" style="margin-top:10px"><button class="btn alt" data-act="nt-resume">Retomar agora</button></div></div>`:`<div class="ntc"><b>Pausar os lembretes</b><span>Para dias sem estudo: nenhum aviso é enviado até a data escolhida (os avisos voltam nesse dia).</span><label class="lbl" for="nt-pausa" style="margin-top:12px">Voltar a avisar em</label><input class="in" id="nt-pausa" type="date" min="${T0()}" value=""></div>`}
   <div class="ntc ${on?"ok":"off"}"><b>${on?"Servidor de lembretes ativo":"Servidor de lembretes ainda não ativado"}</b><span>${on?`Última checagem há ${min} min.`:"Os avisos só começam a chegar depois que o servidor for ligado no Firebase. Veja o passo a passo em LEMBRETES.md."}</span></div>
   <div class="sec-h" style="margin-top:22px"><h3>Neste aparelho</h3></div>
   <div class="ntc"><b>${perm==="granted"&&mine?"Notificações ativadas":perm==="denied"?"Notificações bloqueadas no navegador":"Notificações desligadas"}</b><span>${tok} ${tok===1?"aparelho cadastrado":"aparelhos cadastrados"} na sua conta.${ios&&!standalone?" No iPhone, as notificações só funcionam com o painel instalado na tela inicial: toque em Compartilhar e em Adicionar à Tela de Início, depois abra por lá.":""}</span>

@@ -1,0 +1,496 @@
+[
+ {
+  "pd": "3.1.2.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Seu Valdir, 62 anos, vai se aposentar em um ano. Construiu um patrimônio relevante ao longo da vida, não tem dívidas e diz a Luana, profissional CPA, que sua prioridade agora é não perder o que juntou, aceitando rentabilidade menor em troca de segurança.",
+  "enunciado": "Luana identifica que Valdir está na fase do ciclo de vida do investidor chamada de:",
+  "certa": "preservação de capital, em que a prioridade é proteger o patrimônio acumulado, com menor exposição a risco.",
+  "erradas": [
+   [
+    "acumulação de capital, em que a prioridade é formar patrimônio com aportes regulares e maior tolerância a risco.",
+    "A acumulação é típica do início da vida profissional, quando há longo horizonte e pouco patrimônio."
+   ],
+   [
+    "crescimento patrimonial, em que a prioridade é ampliar o patrimônio com maior exposição a ativos de risco.",
+    "O crescimento corresponde à fase intermediária, com renda maior e horizonte ainda longo; não é o foco de Valdir."
+   ],
+   [
+    "distribuição de renda, em que a prioridade é transferir o patrimônio aos herdeiros e consumir todo o capital.",
+    "A distribuição (sucessão e uso do patrimônio) vem depois. O objetivo declarado por Valdir é proteger o patrimônio."
+   ]
+  ],
+  "gabarito": "Fases do ciclo de vida do investidor: acumulação (início da carreira, construção da reserva e do patrimônio, maior tolerância a risco pelo longo horizonte); crescimento patrimonial (renda maior, patrimônio crescendo, diversificação); preservação de capital (perto da aposentadoria, foco em proteger o que foi acumulado e reduzir risco); distribuição (uso do patrimônio para renda e planejamento sucessório). A exposição a risco tende a diminuir ao longo das fases.",
+  "dica": "Acumulação → Crescimento → Preservação → Distribuição. O risco tende a cair ao longo da vida."
+ },
+ {
+  "pd": "3.1.4.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Cecília apresentou a Mateus, profissional CPA, seu balanço patrimonial: R$ 36.000 em aplicações de liquidez diária, imóvel próprio de R$ 400.000 e carro de R$ 60.000. Tem um financiamento imobiliário com saldo de R$ 92.000 e despesas mensais de R$ 6.000. Ela quer saber por quantos meses conseguiria se manter sem renda.",
+  "enunciado": "Mateus calcula que o indicador de cobertura de despesas de Cecília é de:",
+  "certa": "6 meses, considerando só os ativos líquidos (R$ 36.000) divididos pelas despesas mensais.",
+  "erradas": [
+   [
+    "82 meses, pois considera todo o patrimônio (R$ 496.000) dividido pelas despesas mensais.",
+    "Imóvel e carro são ativos de uso, sem liquidez imediata; não entram na cobertura de emergência."
+   ],
+   [
+    "66,7 meses, pois considera o patrimônio líquido (R$ 404.000) dividido pelas despesas mensais.",
+    "O patrimônio líquido inclui ativos de uso, que não pagam despesas no curto prazo."
+   ],
+   [
+    "0 meses, pois as dívidas (R$ 92.000) superam os ativos líquidos (R$ 36.000).",
+    "O saldo do financiamento é pago em parcelas ao longo do tempo; ele não anula a cobertura de curto prazo."
+   ]
+  ],
+  "gabarito": "Indicadores do balanço pessoal: cobertura de despesas = ativos líquidos ÷ despesas mensais (36.000 ÷ 6.000 = 6 meses); endividamento = passivos ÷ ativos totais (92.000 ÷ 496.000 ≈ 18,5%); patrimônio líquido = ativos − passivos (496.000 − 92.000 = R$ 404.000). Ativos de uso (casa, carro) servem ao consumo e não geram liquidez; ativos de não uso (aplicações) geram renda ou liquidez.",
+  "dica": "Cobertura = ativos líquidos ÷ despesas mensais. Ativo de uso (casa, carro) não entra."
+ },
+ {
+  "pd": "3.1.6.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Eduarda declara o IR no modelo simplificado. Neste ano, teve muitas despesas médicas, paga escola de dois filhos e quer saber se deveria contratar um PGBL e se o modelo de declaração faz diferença. Procura Tiago, profissional CPA.",
+  "enunciado": "Tiago explica corretamente que:",
+  "certa": "no completo, deduzem-se despesas comprovadas e o PGBL (até 12%); ele compensa quando as deduções superam o desconto padrão do simplificado.",
+  "erradas": [
+   [
+    "o modelo simplificado permite deduzir as despesas médicas e o PGBL, além de aplicar o desconto padrão de 20% sobre os rendimentos.",
+    "No simplificado, o desconto padrão de 20% (limitado a um teto) substitui todas as deduções legais."
+   ],
+   [
+    "o modelo deve ser escolhido apenas pelo valor da restituição recebida no ano anterior, que indica a opção mais vantajosa.",
+    "A escolha correta é a que gera menor imposto devido no ano, comparando deduções reais com o desconto padrão."
+   ],
+   [
+    "o PGBL traz benefício fiscal em qualquer modelo de declaração, por ser um produto de previdência complementar regulado.",
+    "A dedução do PGBL só existe na declaração completa."
+   ]
+  ],
+  "gabarito": "Declaração completa: permite deduções legais comprovadas, como saúde (sem limite), educação (com limite por pessoa), dependentes, previdência oficial e PGBL (até 12% da renda bruta tributável). Declaração simplificada: aplica um desconto padrão de 20% sobre os rendimentos tributáveis, limitado a um teto anual, e substitui todas as deduções. Escolhe-se a que resulta em menor base de cálculo e imposto. O próprio programa da Receita indica a opção mais vantajosa.",
+  "dica": "Completa = deduções reais (inclui PGBL até 12%). Simplificada = 20% padrão com teto. Escolha a de menor imposto."
+ },
+ {
+  "pd": "3.4.2.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Marta, nova cliente",
+  "etapa": "1/4",
+  "contexto": "Marta, 29 anos, analista de sistemas, abriu conta e procura Diogo, profissional CPA. Recebeu uma herança de R$ 80.000 e diz: “Quero o investimento que mais rende, me indica um?”.",
+  "enunciado": "Antes de recomendar qualquer produto, a primeira atitude adequada de Diogo é:",
+  "certa": "verificar se Marta tem perfil de investidor válido e, se não, levantar objetivos, horizonte, situação financeira, tolerância a risco e conhecimento.",
+  "erradas": [
+   [
+    "apresentar o produto de maior rentabilidade dos últimos 12 meses, já que esse foi o pedido explícito da cliente.",
+    "Atender ao pedido sem conhecer o perfil viola o dever de suitability. Rentabilidade passada não garante rentabilidade futura."
+   ],
+   [
+    "sugerir que Marta divida o dinheiro igualmente entre todos os produtos disponíveis na instituição, para diversificar o risco.",
+    "Diversificar sem conhecer objetivos e perfil não garante adequação."
+   ],
+   [
+    "pedir que Marta assine um termo de responsabilidade e, em seguida, liberar qualquer produto que ela escolher.",
+    "O termo não substitui a análise de perfil. A recomendação exige verificar a adequação primeiro."
+   ]
+  ],
+  "gabarito": "Pela Resolução CVM 30 e pelo Código Anbima de Distribuição, a instituição não pode recomendar produtos sem verificar a adequação ao perfil do cliente. O perfil considera: objetivos de investimento (incluindo prazo e preferência de risco), situação financeira (renda, patrimônio, necessidade de liquidez) e conhecimento e experiência com produtos. Sem perfil ou com perfil desatualizado, o profissional deve primeiro identificá-lo.",
+  "dica": "Antes de recomendar: perfil (objetivos, situação financeira, conhecimento). Sem perfil válido, nada de recomendação."
+ },
+ {
+  "pd": "3.1.3.4",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Marta, nova cliente",
+  "etapa": "2/4",
+  "contexto": "Feito o perfil, Marta foi classificada como moderada. Ela conta a Diogo que gasta R$ 4.000 por mês, tem emprego CLT estável e ainda não tem nenhuma reserva para imprevistos. Quer investir a herança pensando no longo prazo.",
+  "enunciado": "Diogo orienta que o passo seguinte mais prudente é:",
+  "certa": "montar antes uma reserva de cerca de 6 meses de despesas (R$ 24.000) em aplicações de alta liquidez e baixo risco, como o Tesouro Selic.",
+  "erradas": [
+   [
+    "aplicar todo o valor em um fundo de ações, já que o horizonte de investimento é longo e o perfil é moderado.",
+    "Sem reserva, qualquer imprevisto obrigaria a vender ações, talvez em momento de queda. Além disso, 100% em ações não é adequado ao perfil moderado."
+   ],
+   [
+    "formar uma reserva de emergência equivalente a 6 meses de renda, aplicada em ações de boas pagadoras de dividendos.",
+    "A reserva deve ser dimensionada pelas despesas (não pela renda) e ficar em ativos líquidos e de baixo risco; ações oscilam."
+   ],
+   [
+    "deixar a reserva de emergência parada na conta corrente, pois é o único lugar com liquidez imediata.",
+    "A conta corrente não remunera. Há opções com liquidez diária, baixo risco e rendimento."
+   ]
+  ],
+  "gabarito": "A reserva de emergência é o primeiro passo do planejamento: protege contra imprevistos sem obrigar a desfazer investimentos de longo prazo em momento ruim. Dimensionamento usual: de 3 a 6 meses de despesas para quem tem renda estável (CLT) e de 6 a 12 meses para autônomos e quem tem renda variável. Deve ficar em ativos de alta liquidez e baixo risco: Tesouro Selic, CDB com liquidez diária de emissor sólido, fundos DI com taxa baixa ou poupança.",
+  "dica": "Reserva = despesas (não renda) × 3 a 12 meses, em liquidez diária e baixo risco. Vem antes de tudo."
+ },
+ {
+  "pd": "3.4.2.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Marta, nova cliente",
+  "etapa": "3/4",
+  "contexto": "Com a reserva montada, Marta insiste em aplicar R$ 30.000 em uma classe de fundo multimercado alavancada, classificada pela instituição como adequada apenas ao perfil arrojado. Ela diz que entende os riscos e quer seguir mesmo assim.",
+  "enunciado": "Pela Resolução CVM 30, Diogo deve:",
+  "certa": "alertar Marta, antes da operação, de que o produto não é adequado ao seu perfil e obter dela declaração expressa de ciência.",
+  "erradas": [
+   [
+    "recusar a operação em qualquer hipótese, pois a regulação proíbe aplicações fora do perfil do cliente, mesmo a pedido dele.",
+    "A norma não proíbe: permite a operação a pedido do cliente, desde que haja alerta prévio e declaração expressa de ciência."
+   ],
+   [
+    "reclassificar Marta como arrojada para que a operação fique enquadrada, sem necessidade de novo questionário.",
+    "Alterar o perfil para viabilizar a venda é conduta irregular. O perfil deve refletir as respostas reais do cliente."
+   ],
+   [
+    "realizar a operação normalmente, pois a decisão final é da cliente e não há obrigação de alerta ou registro.",
+    "Antes da operação, é obrigatório alertar e obter a declaração expressa de ciência do desenquadramento."
+   ]
+  ],
+  "gabarito": "Quando o cliente quer investir em produto inadequado ao seu perfil, ou está sem perfil ou com perfil desatualizado, a Resolução CVM 30 exige que a instituição o alerte antes da primeira operação, com as razões da não adequação, e obtenha declaração expressa de que ele está ciente. A decisão final é do cliente, mas o processo precisa ser documentado. Nunca se ajusta o perfil para encaixar o produto.",
+  "dica": "Fora do perfil: alertar antes + declaração expressa do cliente. Não é proibido, mas exige registro."
+ },
+ {
+  "pd": "3.4.2.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Marta, nova cliente",
+  "etapa": "4/4",
+  "contexto": "Dois anos e meio depois, Marta volta à agência: casou-se, teve um filho e trocou de emprego, com renda menor. Diogo nota que o perfil de investidor dela foi feito no primeiro atendimento e nunca foi atualizado.",
+  "enunciado": "Diogo deve considerar que:",
+  "certa": "o perfil está vencido: deve ser revisto no máximo a cada 24 meses e após mudanças relevantes na vida da cliente.",
+  "erradas": [
+   [
+    "o perfil continua válido por tempo indeterminado, pois só a própria cliente pode pedir sua atualização.",
+    "A instituição deve atualizar o perfil periodicamente (no máximo a cada 24 meses) e diante de mudanças relevantes."
+   ],
+   [
+    "o perfil é válido por 5 anos, que é o prazo legal de guarda dos documentos cadastrais do cliente.",
+    "O prazo de guarda de documentos não se confunde com a validade do perfil, que é de até 24 meses."
+   ],
+   [
+    "o perfil só precisa ser atualizado se Marta quiser investir em produtos mais arriscados do que os atuais.",
+    "A atualização é obrigatória independentemente do produto desejado; mudanças de vida alteram objetivos, prazo e capacidade de risco."
+   ]
+  ],
+  "gabarito": "Pela Resolução CVM 30, as informações do perfil do cliente devem ser atualizadas em intervalos não superiores a 24 meses. O Código Anbima prevê o monitoramento contínuo: mudanças relevantes (renda, família, objetivos) exigem nova avaliação. Com o perfil vencido, o cliente deve ser alertado e a instituição deve atualizá-lo antes de recomendar.",
+  "dica": "Perfil de investidor: atualizar no máximo a cada 24 meses e sempre que a vida do cliente mudar."
+ },
+ {
+  "pd": "3.4.1.1",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Para bater a meta do mês, Leonardo, profissional CPA, diz a uma cliente conservadora que um fundo multimercado “tem rentabilidade garantida de 120% do CDI”, com base no desempenho dos últimos 12 meses. A cliente aplica.",
+  "enunciado": "A conduta de Leonardo:",
+  "certa": "viola o Código de Conduta Ética da Anbima, pois promete rentabilidade que não pode ser garantida e omite os riscos.",
+  "erradas": [
+   [
+    "é aceitável, pois baseou-se em dados reais e verificáveis da rentabilidade passada do fundo.",
+    "Rentabilidade passada não garante rentabilidade futura; transformá-la em promessa é enganoso."
+   ],
+   [
+    "é aceitável, desde que a cliente tenha assinado o termo de adesão e ciência de risco do fundo.",
+    "O termo não autoriza o profissional a fazer promessas falsas nem dispensa a transparência sobre riscos."
+   ],
+   [
+    "viola apenas as metas internas da instituição, sem relação com as normas de conduta e ética da Anbima para certificados.",
+    "Prometer ganho e omitir riscos fere diretamente o Código de Ética e o dever de informar com clareza."
+   ]
+  ],
+  "gabarito": "O Código de Conduta Ética das Certificações Anbima traz princípios como integridade, transparência, diligência, lealdade, ética e conhecimento técnico. O profissional deve informar de modo claro e correto, sem promessas de rentabilidade e sem omitir riscos, e colocar o interesse do cliente acima das metas comerciais. Em fundos de investimento (exceto produtos com garantia contratual), não há rentabilidade garantida. Descumprimentos podem levar a sanções, inclusive à perda da certificação.",
+  "dica": "Nunca prometa rentabilidade. Rentabilidade passada não é garantia. O interesse do cliente vem antes da meta comercial."
+ },
+ {
+  "pd": "3.4.3.3.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma gestora oferece a Natália, profissional CPA de um banco distribuidor, uma viagem de luxo para cada R$ 2 milhões captados para seu novo fundo. Ao mesmo tempo, o banco recebe parte da taxa de administração desse fundo como remuneração pela distribuição.",
+  "enunciado": "Diante dessa situação, a conduta adequada é:",
+  "certa": "recusar o benefício, comunicar a oferta ao compliance e garantir transparência ao cliente sobre a remuneração do distribuidor.",
+  "erradas": [
+   [
+    "aceitar a viagem, pois ela é oferecida pela gestora e não pelo cliente, o que afasta o conflito de interesses.",
+    "Um incentivo pessoal atrelado à captação cria conflito de interesses, porque pode levar à recomendação de produtos por interesse próprio."
+   ],
+   [
+    "aceitar a viagem e recomendar o fundo apenas a clientes de perfil arrojado, para manter a adequação.",
+    "Restringir o público não elimina o conflito. O benefício pessoal continua influenciando a recomendação."
+   ],
+   [
+    "omitir do cliente a remuneração recebida pelo distribuidor, pois essa informação é sigilosa e estratégica.",
+    "O Código Anbima de Distribuição exige transparência sobre a remuneração do canal de distribuição."
+   ]
+  ],
+  "gabarito": "Conflito de interesses ocorre quando um interesse pessoal ou da instituição pode comprometer a imparcialidade em relação ao cliente. As medidas de gestão incluem políticas claras, treinamento, divulgação obrigatória, segregação de funções, monitoramento, comitês de compliance e proibição de atividades específicas, como aceitar presentes e benefícios relevantes. O Código Anbima de Distribuição (Capítulo VIII) exige transparência sobre a remuneração do distribuidor, como rebates de taxa de administração.",
+  "dica": "Benefício pessoal atrelado a vendas = conflito: recusar e informar o compliance. A remuneração do distribuidor deve ser transparente."
+ },
+ {
+  "pd": "3.4.5.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+  "etapa": "1/3",
+  "contexto": "Sr. Otávio, cliente cadastrado como aposentado com renda mensal de R$ 3.500, passou a receber em sua conta, em um mês, 40 depósitos em espécie de R$ 9.500 cada, feitos em agências de cidades diferentes, que logo são transferidos para contas de terceiros. Camila, profissional CPA, observa o movimento.",
+  "enunciado": "Camila deve considerar que essa movimentação:",
+  "certa": "é atípica e incompatível com a renda, com depósitos fracionados e repasse rápido a terceiros, e deve ser analisada como possível lavagem.",
+  "erradas": [
+   [
+    "é regular, pois cada depósito fica abaixo de R$ 10.000 e, portanto, dispensa qualquer análise, registro ou comunicação.",
+    "Fracionar valores para ficar abaixo de limites de registro é justamente um indício clássico de lavagem (smurfing)."
+   ],
+   [
+    "é regular, pois o cliente é aposentado e tem conta antiga, o que dispensa o monitoramento das operações.",
+    "Todo cliente é monitorado; a antiguidade do relacionamento não dispensa a análise de operações atípicas."
+   ],
+   [
+    "deve ser analisada apenas se o próprio cliente reclamar de alguma das transferências realizadas para terceiros.",
+    "O monitoramento é dever da instituição e independe de reclamação do cliente."
+   ]
+  ],
+  "gabarito": "A prevenção à lavagem de dinheiro (Lei 9.613/1998; Circular BC 3.978/2020; Resolução CVM 50) segue a abordagem baseada em risco: monitora-se a compatibilidade entre movimentação, renda e perfil. São sinais de alerta: fracionamento de depósitos em espécie (smurfing), movimentação incompatível com a renda, uso de várias praças e repasse rápido a terceiros (contas de passagem). As etapas da lavagem são colocação, ocultação e integração.",
+  "dica": "Valores fracionados, incompatíveis com a renda e repassados rapidamente = alerta de lavagem de dinheiro."
+ },
+ {
+  "pd": "3.4.6.9",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+  "etapa": "2/3",
+  "contexto": "Após análise da área de PLD, a instituição concluiu que há indícios de lavagem de dinheiro na conta do Sr. Otávio. No dia seguinte, ele procura Camila e pergunta, desconfiado, se “o banco está de olho” nas suas operações.",
+  "enunciado": "A conduta correta de Camila e da instituição é:",
+  "certa": "comunicar a operação ao COAF no prazo regulamentar, sem informar o cliente sobre a análise ou a comunicação.",
+  "erradas": [
+   [
+    "informar ao cliente que a operação será comunicada ao COAF, em respeito ao princípio da transparência.",
+    "Avisar o cliente (tipping-off) é vedado: pode frustrar a investigação. A transparência com o cliente não se aplica a comunicações de PLD."
+   ],
+   [
+    "encerrar imediatamente a conta e devolver os recursos ao cliente, sem comunicar nenhum órgão.",
+    "A comunicação ao COAF é obrigatória diante de indícios. Encerrar a conta sem comunicar descumpre a lei."
+   ],
+   [
+    "pedir autorização do cliente antes de enviar os dados ao COAF, conforme exige a LGPD.",
+    "A comunicação ao COAF é obrigação legal e não depende de consentimento do cliente."
+   ]
+  ],
+  "gabarito": "Identificados indícios de lavagem, a instituição deve comunicar ao COAF (Unidade de Inteligência Financeira) no prazo regulamentar, sem dar ciência ao cliente ou a terceiros. As comunicações de boa-fé não geram responsabilidade civil ou administrativa para a instituição e seus profissionais. O descumprimento dos deveres de PLD sujeita instituições e administradores a sanções administrativas (advertência, multa, inabilitação) aplicadas pelo regulador.",
+  "dica": "Indício de lavagem → comunica ao COAF e NÃO avisa o cliente (sem tipping-off)."
+ },
+ {
+  "pd": "3.4.6.5",
+  "dif": "Difícil",
+  "nivel": "Análise",
+  "caso": "Árvore de diálogo: Sr. Otávio e os depósitos",
+  "etapa": "3/3",
+  "contexto": "Meses depois, o advogado do Sr. Otávio procura a instituição alegando que a comunicação ao COAF violou o sigilo bancário e a LGPD, pois os dados do cliente foram compartilhados sem autorização.",
+  "enunciado": "A resposta tecnicamente correta é que:",
+  "certa": "não há quebra de sigilo: a LC 105/2001 permite comunicar suspeitas às autoridades, e a LGPD admite o tratamento para cumprir obrigação legal.",
+  "erradas": [
+   [
+    "houve quebra de sigilo, pois somente uma ordem judicial autoriza o envio de informações bancárias a qualquer órgão.",
+    "A LC 105 prevê expressamente que a comunicação de ilícitos às autoridades não é quebra de sigilo, sem necessidade de ordem judicial."
+   ],
+   [
+    "houve violação da LGPD, pois o consentimento do titular é a única base legal para o compartilhamento de dados.",
+    "O consentimento é apenas uma das bases legais. O cumprimento de obrigação legal ou regulatória é outra, aplicável aqui."
+   ],
+   [
+    "não houve violação apenas porque o cliente assinou, na abertura da conta, um termo autorizando qualquer uso de seus dados.",
+    "A legitimidade decorre da lei, e não de um termo genérico, que inclusive seria questionável pela LGPD."
+   ]
+  ],
+  "gabarito": "A LC 105/2001 garante o sigilo das operações financeiras, mas lista situações que não o violam: a troca de informações entre instituições para fins cadastrais, a comunicação de operações com indícios de crime às autoridades, a revelação com consentimento expresso do cliente e o fornecimento por ordem judicial ou nas hipóteses legais. A LGPD (Lei 13.709/2018) traz várias bases legais para o tratamento de dados, como consentimento, cumprimento de obrigação legal ou regulatória, execução de contrato, exercício regular de direitos e proteção do crédito.",
+  "dica": "Comunicar suspeita ao COAF não quebra sigilo (LC 105). Na LGPD, a base é a obrigação legal, não o consentimento."
+ },
+ {
+  "pd": "3.4.6.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma instituição passou a usar reconhecimento facial para liberar transações no aplicativo. Felipe, profissional CPA, participa de um treinamento sobre LGPD e precisa classificar os dados tratados: nome, CPF, renda, saldo em conta e a biometria facial.",
+  "enunciado": "Pela LGPD, entre esses dados, é classificado como dado pessoal sensível:",
+  "certa": "a biometria facial.",
+  "erradas": [
+   [
+    "o saldo em conta, por ser protegido pelo sigilo bancário.",
+    "O saldo é dado pessoal protegido pelo sigilo bancário, mas não está na lista de dados sensíveis da LGPD."
+   ],
+   [
+    "o CPF, por permitir a identificação inequívoca do titular.",
+    "O CPF é dado pessoal identificador, mas não é sensível pela LGPD."
+   ],
+   [
+    "a renda, por revelar a capacidade financeira do titular.",
+    "Dados financeiros são pessoais, mas não constam do rol de dados sensíveis."
+   ]
+  ],
+  "gabarito": "A LGPD define como dado pessoal sensível o dado sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou organização religiosa, filosófica ou política, dado referente à saúde ou à vida sexual e dado genético ou biométrico, quando vinculado a uma pessoa natural. Esses dados têm regras mais restritas de tratamento. Dados financeiros são pessoais (e protegidos pelo sigilo bancário), mas não sensíveis. A fiscalização da LGPD cabe à ANPD.",
+  "dica": "Sensível (LGPD): raça, religião, política, sindicato, saúde, vida sexual, genético e biométrico. Dado financeiro não é sensível."
+ },
+ {
+  "pd": "3.4.7.1.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Durante um almoço, Guilherme, profissional CPA, ouve de um amigo diretor de uma companhia aberta que a empresa será comprada por um concorrente, informação que ainda não foi divulgada ao mercado. Guilherme compra ações da companhia e repassa a informação à irmã, que também compra.",
+  "enunciado": "A conduta de Guilherme configura:",
+  "certa": "insider trading (art. 27-D da Lei 6.385/76), crime que alcança quem negocia com a informação e quem a repassa.",
+  "erradas": [
+   [
+    "conduta legal, pois Guilherme não é administrador da companhia e não tem dever de sigilo sobre ela.",
+    "Desde 2017, o crime de insider alcança qualquer pessoa que use informação relevante não divulgada (insider secundário), não só administradores."
+   ],
+   [
+    "manipulação de mercado, pois a compra das ações por ele e pela irmã alterou artificialmente sua cotação.",
+    "Manipulação (art. 27-C) envolve operações para alterar artificialmente preços. Aqui o núcleo é usar informação relevante não pública."
+   ],
+   [
+    "infração apenas administrativa, sem natureza criminal, por envolver valores pequenos e pessoas físicas.",
+    "O insider trading é crime, com pena de reclusão de 1 a 5 anos e multa, independentemente do valor."
+   ]
+  ],
+  "gabarito": "Art. 27-D da Lei 6.385/76: utilizar informação relevante ainda não divulgada ao mercado, capaz de propiciar vantagem indevida, para negociar valores mobiliários. Pena de reclusão de 1 a 5 anos e multa de até 3 vezes a vantagem obtida. Também comete crime quem repassa a informação sigilosa a quem possa negociar. Insider primário: quem tem acesso direto (administradores, controladores). Insider secundário: quem recebe a informação de outro. Ambos são alcançados.",
+  "dica": "Insider (27-D): usar ou repassar informação relevante ainda não divulgada. Vale para qualquer pessoa."
+ },
+ {
+  "pd": "3.4.7.2.2.4.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Rafaela, operadora de uma corretora, recebe de um grande cliente institucional uma ordem para comprar um volume expressivo de ações de baixa liquidez. Antes de executá-la, compra para sua conta pessoal as mesmas ações e as vende logo após a execução da ordem do cliente, com lucro.",
+  "enunciado": "Pela Resolução CVM 62, essa conduta caracteriza:",
+  "certa": "front running, prática não equitativa em que o profissional se antecipa à ordem do cliente para obter vantagem.",
+  "erradas": [
+   [
+    "churning, operação fraudulenta caracterizada pelo giro excessivo da carteira do cliente para gerar corretagem.",
+    "Churning é o giro excessivo da conta do cliente. Aqui houve antecipação à ordem do cliente em benefício próprio."
+   ],
+   [
+    "spoofing, manipulação por meio de ofertas que o agente não pretende executar.",
+    "Spoofing envolve ofertas falsas para mover preços; Rafaela executou negócios reais aproveitando a ordem do cliente."
+   ],
+   [
+    "money pass, criação de condição artificial por transferência de recursos entre contas ligadas.",
+    "Money pass é a transferência artificial de recursos entre comitentes; não descreve a antecipação à ordem do cliente."
+   ]
+  ],
+  "gabarito": "A Resolução CVM 62 trata dos ilícitos de mercado com tipologia aberta: (i) criação de condições artificiais de demanda, oferta ou preço (ex.: money pass); (ii) manipulação de preços (spoofing, layering, manipulação de benchmark); (iii) operações fraudulentas (ex.: churning); (iv) práticas não equitativas (ex.: insider trading e front running). Front running é usar o conhecimento de ordens de clientes ainda não executadas para operar antes delas em benefício próprio ou de terceiros.",
+  "dica": "Front running = passar na frente da ordem do cliente. Churning = girar a carteira para gerar corretagem. Spoofing = oferta falsa."
+ },
+ {
+  "pd": "4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente de Lívia, profissional CPA, quer investir em fundos sustentáveis e encontrou duas classes: uma com o sufixo “IS” no nome e outra que informa apenas que “integra questões ESG” na gestão. Ele pergunta qual a diferença.",
+  "enunciado": "Pelas regras de autorregulação da Anbima, Lívia explica corretamente que:",
+  "certa": "a classe IS tem objetivo sustentável e regras de transparência; a que só integra ESG considera esses fatores, mas não pode usar o sufixo IS.",
+  "erradas": [
+   [
+    "as duas classes são equivalentes, e o uso do sufixo IS é opcional para qualquer fundo que considere fatores ESG na gestão.",
+    "O sufixo IS é reservado às classes com objetivo sustentável que cumprem os requisitos da Anbima; quem só integra ESG não pode usá-lo."
+   ],
+   [
+    "a classe que integra questões ESG é mais rigorosa que a classe IS, pois exclui da carteira todos os setores poluentes.",
+    "A classe IS é a de maior exigência, com objetivo sustentável. Integrar ESG significa considerar fatores na análise, sem um objetivo sustentável."
+   ],
+   [
+    "o sufixo IS indica que a classe é isenta de imposto de renda por investir em projetos sustentáveis e de impacto social.",
+    "IS significa Investimento Sustentável. Não há isenção fiscal associada ao nome."
+   ]
+  ],
+  "gabarito": "Pelas regras da Anbima, as classes de Investimento Sustentável (IS) têm objetivo sustentável em sua política, usam o sufixo IS no nome e devem cumprir exigências de transparência e monitoramento, como relatórios periódicos e metodologia. As classes que integram questões ESG consideram fatores ambientais, sociais e de governança na gestão, sem objetivo sustentável, e não podem usar o sufixo IS. As regras combatem o greenwashing. A CVM 175 também exige que classes com referência a fatores ESG detalhem no regulamento a metodologia utilizada.",
+  "dica": "IS = objetivo sustentável e sufixo no nome. Integra ESG = considera fatores ESG, sem o sufixo. Combate ao greenwashing."
+ },
+ {
+  "pd": "4.4.4.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente de Ricardo, profissional CPA, leu sobre a tokenização de um prédio comercial, cujos direitos de participação foram divididos em milhares de tokens negociados em uma plataforma regulada. Ele pergunta quais são as principais vantagens desse modelo.",
+  "enunciado": "Ricardo explica que entre os benefícios da tokenização de ativos está:",
+  "certa": "o fracionamento do ativo, que permite aportes menores, com potencial de mais liquidez e rastreabilidade.",
+  "erradas": [
+   [
+    "a eliminação de todos os riscos do ativo, pois o registro em blockchain impede a desvalorização do imóvel.",
+    "O registro em blockchain dá rastreabilidade, mas não elimina o risco econômico do ativo (vacância, mercado, liquidez)."
+   ],
+   [
+    "a dispensa de qualquer regulação, já que tokens não são considerados valores mobiliários em nenhuma hipótese.",
+    "Tokens que configuram contrato de investimento coletivo podem ser valores mobiliários, sujeitos à CVM."
+   ],
+   [
+    "a garantia de liquidez imediata e de recompra do token pelo emissor a qualquer momento.",
+    "Não há garantia de liquidez: depende de haver compradores na plataforma."
+   ]
+  ],
+  "gabarito": "Tokenização é a representação digital de um ativo (imóveis, recebíveis, obras de arte, títulos) em tokens registrados em blockchain. Benefícios: fracionamento (tíquetes menores), potencial de maior liquidez, rastreabilidade, liquidação mais rápida e menor custo operacional. Riscos e desafios: segurança cibernética, insegurança regulatória, liquidez efetiva, custódia e tecnologia. Se o token configurar valor mobiliário, sujeita-se à CVM.",
+  "dica": "Tokenização: fracionar e registrar em blockchain. Ganha acesso, rastreabilidade e potencial de liquidez; os riscos do ativo continuam."
+ },
+ {
+  "pd": "4.5.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao pedir um empréstimo pelo aplicativo de um novo banco, Joana recebe a proposta de compartilhar seus dados de conta e de cartão mantidos em outra instituição, pelo Open Finance, para obter uma taxa melhor. Ela pergunta a Marcelo, profissional CPA, se é seguro e se poderá voltar atrás.",
+  "enunciado": "Marcelo explica corretamente que, no Open Finance:",
+  "certa": "o compartilhamento depende do consentimento do cliente, com finalidade e prazo definidos, e pode ser revogado a qualquer momento.",
+  "erradas": [
+   [
+    "as instituições compartilham automaticamente os dados de todos os clientes, sem necessidade de consentimento.",
+    "O Open Finance tem como base o consentimento do cliente, que escolhe o que compartilhar, com quem e por quanto tempo."
+   ],
+   [
+    "o consentimento, uma vez dado, é irrevogável até o fim do contrato de empréstimo firmado com o novo banco.",
+    "O cliente pode revogar o consentimento a qualquer momento."
+   ],
+   [
+    "o compartilhamento é permitido apenas entre instituições que pertencem ao mesmo conglomerado financeiro.",
+    "O objetivo é justamente permitir o compartilhamento entre instituições diferentes e participantes, ampliando a concorrência."
+   ]
+  ],
+  "gabarito": "O Open Finance (Resolução Conjunta BCB/CMN nº 1/2020) é o sistema de compartilhamento padronizado de dados e serviços entre instituições autorizadas, mediante consentimento do cliente, com finalidade específica e prazo determinado (até 12 meses), revogável a qualquer momento. Vantagens: mais concorrência, ofertas personalizadas, melhor avaliação de crédito (por exemplo, para quem tem pouco histórico) e portabilidade facilitada. O Open Investment e o Open Insurance estendem a lógica a investimentos e seguros.",
+  "dica": "Open Finance: consentimento, finalidade e prazo definidos; revogável a qualquer momento."
+ },
+ {
+  "pd": "4.4.5.6",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Durante uma palestra, um participante pergunta a Patrícia, profissional CPA, se o Drex é uma criptomoeda como o bitcoin e se seu valor oscila conforme a oferta e a procura.",
+  "enunciado": "Patrícia esclarece que o Drex:",
+  "certa": "é a iniciativa do Banco Central de moeda digital (CBDC), versão digital do real com o mesmo valor da moeda física, e não um criptoativo.",
+  "erradas": [
+   [
+    "é uma criptomoeda descentralizada emitida por bancos privados, cujo valor oscila livremente conforme a oferta e a procura.",
+    "O Drex é uma iniciativa do Banco Central, e sua unidade equivale ao real; não é descentralizado nem tem cotação própria."
+   ],
+   [
+    "é uma stablecoin lastreada em dólar, criada pelos bancos para facilitar as remessas internacionais de recursos.",
+    "O Drex é ligado ao real brasileiro, não ao dólar, e é de iniciativa do BC."
+   ],
+   [
+    "substituiu o Pix e passou a ser o único meio de pagamento instantâneo disponível no país.",
+    "O Drex não substitui o Pix; são iniciativas complementares do Banco Central."
+   ]
+  ],
+  "gabarito": "CBDC (Central Bank Digital Currency) é a moeda digital emitida ou controlada por um banco central. O Drex é a iniciativa brasileira, conduzida pelo Banco Central, voltada a uma infraestrutura para o real digital, com serviços financeiros mais eficientes, contratos programáveis e ativos tokenizados. Diferentemente do bitcoin (descentralizado e volátil) e das stablecoins privadas, tem valor equivalente ao real e está sob regulação do BC.",
+  "dica": "Drex = real digital do Banco Central (CBDC). Não é criptomoeda volátil nem substitui o Pix."
+ },
+ {
+  "pd": "4.6.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma corretora passou a usar um assistente virtual com IA generativa para responder clientes. Em um teste, o assistente afirmou com segurança que um fundo multimercado “não tem risco de perda”, informação incorreta. Renato, profissional CPA, participa da avaliação da ferramenta.",
+  "enunciado": "A recomendação mais adequada de Renato é:",
+  "certa": "manter supervisão humana e controles sobre as respostas, pois a IA generativa pode produzir informações incorretas com aparência de verdade.",
+  "erradas": [
+   [
+    "confiar integralmente no assistente, pois modelos de IA generativa são treinados com dados do mercado e não cometem erros factuais.",
+    "Modelos generativos podem “alucinar”, isto é, gerar respostas plausíveis, mas falsas."
+   ],
+   [
+    "proibir qualquer uso de IA no atendimento, pois a regulação brasileira veda chatbots no mercado financeiro.",
+    "Não há proibição. O uso é permitido com responsabilidade, governança e supervisão."
+   ],
+   [
+    "permitir que o assistente faça recomendações personalizadas sem verificar o perfil do cliente, para ganhar agilidade.",
+    "Recomendações exigem suitability, mesmo quando feitas por canais digitais ou por IA."
+   ]
+  ],
+  "gabarito": "A IA generativa produz textos, imagens e respostas a partir de padrões aprendidos. É útil em chatbots e assistentes virtuais, mas pode gerar alucinações (respostas erradas com aparência de verdade) e vieses. No atendimento financeiro, deve haver governança, supervisão humana, testes, transparência com o cliente, proteção de dados (LGPD) e aderência às regras de publicidade e suitability. A responsabilidade pela informação continua sendo da instituição.",
+  "dica": "IA no atendimento: útil, mas pode alucinar. Exige supervisão humana, LGPD e suitability; a responsabilidade é da instituição."
+ }
+]

@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CPA Anbima</title>
+<meta name="theme-color" content="#0f6b46">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CPA">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=4">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="../firebase-config.js"></script>
+<style>
+:root{
+  --bg:#f3f8f5;--card:#ffffff;--ink:#11291f;--ink2:#46604f;--ink3:#7b9284;--line:#dbe8e0;
+  --g9:#0b3b29;--g8:#0f5a3c;--g7:#0f6b46;--g6:#17885a;--g5:#2ea36f;--g4:#5fbf8f;--g3:#a3dcbd;--g2:#d3eedf;--g1:#ebf7f0;
+  --warn:#b7791f;--warn-bg:#fdf3e1;--bad:#b4472f;--bad-bg:#fbebe6;
+  --r:14px;--sh:0 1px 2px rgba(15,60,40,.06),0 4px 16px rgba(15,60,40,.05);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;-webkit-text-size-adjust:100%}
+body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+[hidden]{display:none!important}
+button{font:inherit;cursor:pointer}
+input,textarea,select{font:inherit;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:16px 16px 64px}
+h1,h2,h3{margin:0;line-height:1.25}
+h2{font-size:17px;font-weight:650;color:var(--g9)}
+h3{font-size:15px;font-weight:650}
+.muted{color:var(--ink3)}.small{font-size:13px}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:4px 0 16px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo b{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--g7);color:#fff;font-size:14px;letter-spacing:.5px}
+.logo h1{font-size:20px;color:var(--g9)}
+.logo span{display:block;font-size:12.5px;color:var(--ink3);font-weight:500}
+.top .sp{flex:1}
+.sync{font-size:12.5px;color:var(--ink3);display:flex;align-items:center;gap:6px}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--g5);display:inline-block}
+.sync.err i{background:var(--bad)}
+.btn{border:0;border-radius:10px;padding:9px 14px;background:var(--g7);color:#fff;font-weight:600;font-size:14px;transition:background .15s}
+.btn:hover{background:var(--g8)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.alt{background:var(--g1);color:var(--g8)}.btn.alt:hover{background:var(--g2)}
+.btn.ghost{background:transparent;color:var(--g7);padding:6px 8px}
+.btn.sm{padding:6px 10px;font-size:13px;border-radius:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--sh)}
+.grid{display:grid;gap:14px}
+.hero{display:grid;grid-template-columns:1.1fr 2fr;gap:14px;margin-bottom:14px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+.count{background:linear-gradient(150deg,var(--g7),var(--g9));color:#fff;border:0}
+.count .lb{font-size:12.5px;opacity:.85;text-transform:uppercase;letter-spacing:.6px}
+.count .big{font-size:44px;font-weight:750;line-height:1.05;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.count .sub{font-size:14px;opacity:.9}
+.count .row{display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.count input[type=date]{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:6px 8px;color-scheme:dark}
+.count .tip{margin-top:10px;font-size:13px;background:rgba(255,255,255,.12);border-radius:10px;padding:8px 10px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;box-shadow:var(--sh)}
+.kpi .lb{font-size:12.5px;color:var(--ink3);font-weight:500}
+.kpi .v{font-size:26px;font-weight:720;margin-top:2px;font-variant-numeric:tabular-nums;color:var(--g9)}
+.kpi .s{font-size:12.5px;color:var(--ink2);margin-top:2px}
+.meter{height:8px;border-radius:6px;background:var(--g1);margin-top:8px;position:relative;overflow:visible}
+.meter>b{display:block;height:100%;border-radius:6px;background:var(--g5)}
+.meter>i{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--g9);border-radius:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.sec-h{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.sec-h .sp{flex:1}
+.blk{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px solid var(--line)}
+.blk:first-of-type{border-top:0}
+.blk .nm{font-weight:600;font-size:14px}
+.blk .nm small{font-weight:500;color:var(--ink3);margin-left:6px}
+.blk .pc{font-weight:700;font-variant-numeric:tabular-nums}
+.blk .bar{grid-column:1/-1}
+.ok{color:var(--g6)}.mid{color:var(--warn)}.low{color:var(--bad)}
+.bar{height:8px;border-radius:6px;background:var(--g1);position:relative}
+.bar>b{display:block;height:100%;border-radius:6px}
+.bar>i{position:absolute;left:70%;top:-3px;bottom:-3px;width:2px;background:var(--g9);opacity:.55}
+.b-ok{background:var(--g5)}.b-mid{background:#e0a440}.b-low{background:#d0705a}.b-na{background:var(--g2)}
+.chart svg{width:100%;height:auto;display:block}
+.empty{color:var(--ink3);font-size:14px;padding:14px;border:1px dashed var(--line);border-radius:12px;text-align:center}
+.focus{display:grid;gap:8px}
+.fc{border-radius:12px;padding:10px 12px;background:var(--g1);border:1px solid var(--g2)}
+.fc.low{background:var(--bad-bg);border-color:#f2d3ca}.fc.mid{background:var(--warn-bg);border-color:#f3e0bb}
+.fc b{display:block;font-size:14px;color:var(--ink)}
+.fc span{font-size:13px;color:var(--ink2)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--ink3);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+th.n{text-align:right}
+tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:11.5px;font-weight:650;border-radius:20px;padding:2px 8px;background:var(--g1);color:var(--g8);white-space:nowrap}
+.tag.b1{background:#e3f4ea}.tag.b2{background:#d4eee0}.tag.b3{background:#c6e8d6}.tag.b4{background:#eef6e3;color:#4b6b1f}
+.minibar{width:70px;height:6px;border-radius:4px;background:var(--g1);display:inline-block;vertical-align:middle;margin-right:8px;overflow:hidden}
+.minibar b{display:block;height:100%}
+.tbl-wrap{overflow-x:auto}
+@media(max-width:600px){.col-b{display:none}.minibar{width:36px;margin-right:5px}td,th{padding:7px 4px}details.sv summary{flex-wrap:wrap}.wrap{padding:12px 12px 56px}.card{padding:14px}}
+.seg{display:inline-flex;background:var(--g1);border-radius:9px;padding:3px}
+.seg button{border:0;background:transparent;padding:5px 10px;border-radius:7px;font-size:13px;color:var(--ink2);font-weight:600}
+.seg button.on{background:#fff;color:var(--g8);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.sims{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.sim{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;display:flex;flex-direction:column;gap:6px;min-height:118px}
+.sim .t{font-weight:650;font-size:14.5px}
+.sim .st{font-size:12.5px;color:var(--ink3)}
+.sim .sc{font-size:22px;font-weight:720;font-variant-numeric:tabular-nums}
+.sim .sp{flex:1}
+.sim.done{background:var(--g1);border-color:var(--g2)}
+.sim.prog{border-color:var(--g4)}
+.sim .act{display:flex;gap:6px;flex-wrap:wrap}
+.redo{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.redo .v{font-size:30px;font-weight:750;color:var(--g8);font-variant-numeric:tabular-nums}
+.saved{display:grid;gap:8px}
+details.sv{border:1px solid var(--line);border-radius:12px;background:#fff}
+details.sv summary{list-style:none;cursor:pointer;padding:10px 12px;display:flex;gap:10px;align-items:flex-start}
+details.sv summary::-webkit-details-marker{display:none}
+details.sv summary .q{flex:1;font-size:14px}
+details.sv[open] summary{border-bottom:1px solid var(--line)}
+details.sv .body{padding:12px;font-size:14px}
+.in{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:#fff}
+.in:focus{outline:2px solid var(--g3);border-color:var(--g4)}
+textarea.in{min-height:120px;resize:vertical;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px}
+.msg{border-radius:10px;padding:9px 12px;font-size:14px;background:var(--g1);color:var(--g8);margin:8px 0}
+.msg.err{background:var(--bad-bg);color:var(--bad)}
+.foot{margin-top:24px;text-align:center;font-size:12.5px;color:var(--ink3)}
+.foot a{color:var(--g7)}
+/* login */
+.login{max-width:380px;margin:12vh auto;padding:0 16px}
+.login .card{padding:22px}
+.login label{display:block;font-size:13px;color:var(--ink2);margin:12px 0 4px}
+/* sessão (tela cheia) */
+.ov{position:fixed;inset:0;background:var(--bg);z-index:50;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.ov .bar-top{position:sticky;top:0;background:rgba(243,248,245,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:2}
+.ov .bar-top .in2{max-width:820px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ov .bar-top .ttl{font-weight:650;font-size:14.5px}
+.ov .bar-top .sp{flex:1}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;background:var(--g1);color:var(--g8);border-radius:8px;padding:4px 10px}
+.timer.warn{background:var(--warn-bg);color:var(--warn)}
+.prog{height:4px;background:var(--g1)}
+.prog b{display:block;height:100%;background:var(--g5);transition:width .2s}
+.qwrap{max-width:820px;margin:0 auto;padding:18px 16px 90px}
+.qmeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.case{background:var(--g1);border:1px solid var(--g2);border-radius:12px;padding:8px 12px;font-size:13px;color:var(--g8);font-weight:600;margin-bottom:10px}
+.ctx{font-size:16px;line-height:1.6}
+.enun{font-size:16px;font-weight:650;margin:14px 0 12px}
+.qz{font-size:var(--qfs,16px)}
+.qz .ctx,.qz .enun{font-size:inherit}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;color:var(--ink);font-size:inherit;line-height:1.5}
+.opt:hover:not(:disabled){border-color:var(--g4);background:#fbfefc}
+.opt .L{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--g1);color:var(--g8);font-weight:700;font-size:13.5px}
+.opt.sel{border-color:var(--g6);background:var(--g1)}
+.opt.sel .L{background:var(--g6);color:#fff}
+.opt.right{border-color:var(--g5);background:#eaf7ef}
+.opt.right .L{background:var(--g5);color:#fff}
+.opt.wrong{border-color:#e3a594;background:var(--bad-bg)}
+.opt.wrong .L{background:var(--bad);color:#fff}
+.opt:disabled{cursor:default}
+.why{font-size:13.5px;color:var(--ink2);margin-top:4px}
+.gab{margin-top:14px;border-radius:12px;padding:14px;background:#fff;border:1px solid var(--line)}
+.gab h3{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.gab .res{font-weight:700}
+.gab p{margin:6px 0}
+.dica{margin-top:10px;background:var(--g1);border-left:3px solid var(--g5);border-radius:8px;padding:8px 10px;font-size:14px}
+.nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:3}
+.nav .in2{max-width:820px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.nav .sp{flex:1}
+.star{border:0;background:transparent;font-size:20px;line-height:1;color:var(--ink3);padding:2px 6px}
+.star.on{color:#d39b1c}
+.res-hero{text-align:center;padding:22px 16px}
+.res-hero .sc{font-size:52px;font-weight:780;line-height:1;color:var(--g8);font-variant-numeric:tabular-nums}
+.res-hero .ap{display:inline-block;margin-top:10px;border-radius:20px;padding:4px 12px;font-weight:650;font-size:14px}
+.ap.yes{background:var(--g2);color:var(--g8)}.ap.no{background:var(--bad-bg);color:var(--bad)}
+.rv{display:grid;gap:10px;margin-top:14px}
+.rv .item{border:1px solid var(--line);border-radius:12px;background:#fff}
+.rv .item summary{list-style:none;cursor:pointer;padding:10px 12px;display:flex;gap:10px;align-items:center}
+.rv .item summary::-webkit-details-marker{display:none}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.dot.ok{background:var(--g5)}.dot.no{background:var(--bad)}.dot.na{background:#c9d6ce}
+.rv .item .body{padding:0 12px 12px}
+.pal{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.pal button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:600;color:var(--ink2)}
+.pal button.a{background:var(--g2);border-color:var(--g3);color:var(--g8)}
+.pal button.cur{outline:2px solid var(--g6)}
+.pal button.ok{background:#dff3e7;color:var(--g8)}.pal button.no{background:var(--bad-bg);color:var(--bad);border-color:#f0cfc5}
+.modal{position:fixed;inset:0;background:rgba(10,40,25,.35);display:grid;place-items:center;z-index:60;padding:16px}
+.modal .card{max-width:440px;width:100%}
+.modal p{margin:8px 0 14px;color:var(--ink2)}
+.modal .act{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.choice{display:grid;gap:8px;margin:10px 0 14px}
+.choice button{text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px}
+.choice button:hover{border-color:var(--g4)}
+.choice button b{display:block;color:var(--g8)}
+.choice button span{font-size:13px;color:var(--ink2)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+"use strict";
+/* ==================== dados fixos ==================== */
+const BLOCOS={1:{n:"Sistema financeiro e economia",p:.2},2:{n:"Produtos do mercado financeiro",p:.4},3:{n:"Relacionamento com o cliente",p:.3},4:{n:"Inovação e mercado",p:.1}};
+const TOTAL_Q=50,APROV=35,DURACAO=150*60;
+/* assuntos: o prefixo mais longo do código do programa detalhado define o assunto */
+const ASSUNTOS=[
+ ["1.1.1","Órgãos normativos (CMN, CNSP, CNPC)"],["1.1.2","Supervisores (BC, CVM, SUSEP, PREVIC)"],["1.1.3","Instituições e participantes do SFN"],
+ ["1.1.4","Autorreguladores e FGC"],["1.1.5","Sistema de pagamentos"],["1.1","Sistema financeiro nacional"],
+ ["1.2.1","Economia: fluxo da renda e mercados"],["1.2.2","Economia: fluxo da renda e mercados"],["1.2.3","Política fiscal"],["1.2.4","Política monetária e Copom"],
+ ["1.2.5","Política cambial"],["1.2.6","Indicadores econômicos"],["1.2.7","Riscos: liquidez, crédito e mercado"],["1.2","Política econômica"],
+ ["1.3","Matemática financeira"],
+ ["1.4.1","Infraestrutura de mercado (SPB, Pix, Selic, B3)"],["1.4.4","Infraestrutura de mercado (SPB, Pix, Selic, B3)"],["1.4.5","Infraestrutura de mercado (SPB, Pix, Selic, B3)"],["1.4.6","Infraestrutura de mercado (SPB, Pix, Selic, B3)"],["1.4.7","Infraestrutura de mercado (SPB, Pix, Selic, B3)"],
+ ["1.4.2","Estabilidade financeira e Basileia"],["1.4.3","Estabilidade financeira e Basileia"],
+ ["1.4.10","Classificação de investidores (CVM 30)"],["1.4.11","Regulação e liberdade econômica"],["1.4.12","Código Anbima de distribuição"],["1.4","Regulação e autorregulação"],
+ ["2.1.1.1.11","Tributação da renda fixa e IOF"],["2.1.1.1.12","Tributação da renda fixa e IOF"],
+ ["2.1.1.1.1","Títulos públicos e Tesouro Direto"],["2.1.1.1.2","Títulos públicos e Tesouro Direto"],
+ ["2.1.1.1.3","Títulos bancários (CDB, LCI, LCA)"],["2.1.1.1.4","Debêntures, CRI, CRA e rating"],["2.1.1.1.5","Debêntures, CRI, CRA e rating"],["2.1.1.1.6","Debêntures, CRI, CRA e rating"],["2.1.1.1.7","Debêntures, CRI, CRA e rating"],
+ ["2.1.1.1.8","Poupança, TR e TLP"],["2.1.1.1.9","Poupança, TR e TLP"],["2.1.1.1.10","Poupança, TR e TLP"],["2.1.1.1","Renda fixa"],
+ ["2.1.1.2.3","Governança e índices de ações"],["2.1.1.2.2.3","Governança e índices de ações"],["2.1.1.2","Ações e eventos corporativos"],
+ ["2.1.1.3","Tributação da renda variável"],["2.1.1.4","COE"],
+ ["2.1.2","Fundos de investimento (CVM 175)"],["2.1.3","Tributação de fundos"],["2.1.4","Fundos imobiliários (FII)"],["2.1","Produtos de investimento"],
+ ["2.2","Previdência (PGBL e VGBL)"],["2.3","Crédito e financiamento"],["2.4.1","Conta, Pix, tarifas e atendimento"],["2.4.2","Câmbio e conta internacional"],["2.4.3","Câmbio e conta internacional"],["2.4","Serviços bancários"],["2.5","Seguros"],
+ ["3.1.6","Imposto de renda da pessoa física"],["3.1","Finanças pessoais e planejamento"],["3.2","Orientação financeira ao cliente"],["3.3","Perfil do investidor e adequação"],
+ ["3.4.1","Código de ética Anbima"],["3.4.2","Suitability e código de distribuição"],["3.4.3","Atendimento e conflito de interesses"],["3.4.4","Riscos da atividade profissional"],
+ ["3.4.5","PLD/FT e conheça seu cliente"],["3.4.6","LGPD, sigilo e comunicação ao COAF"],["3.4.7","Crimes e ilícitos de mercado"],["3.4","Conduta profissional"],
+ ["4.1","ESG e investimento sustentável"],["4.2","ESG e investimento sustentável"],["4.3","ESG e investimento sustentável"],["4.4","DeFi, blockchain e tokenização"],
+ ["4.5","Open finance, investment e insurance"],["4.6","Inteligência artificial"],["4.7","Fintechs e meios de pagamento"],
+ ["1","Sistema financeiro e economia"],["2","Produtos do mercado financeiro"],["3","Relacionamento com o cliente"],["4","Inovação e mercado"]
+].sort((a,b)=>b[0].length-a[0].length);
+const assunto=pd=>{const p=String(pd||"");for(const [k,n] of ASSUNTOS){if(p===k||p.startsWith(k+"."))return n}return "Outros"};
+const bloco=pd=>{const b=parseInt(String(pd||"").split(".")[0],10);return BLOCOS[b]?b:0};
+const L="ABCD";
+
+/* ==================== utilidades ==================== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const txt=s=>esc(s).replace(/\n/g,"<br>");
+const pct=(a,n)=>n?Math.round(100*a/n):null;
+const cls=p=>p==null?"na":p>=70?"ok":p>=60?"mid":"low";
+const ymd=d=>{const z=n=>String(n).padStart(2,"0");return d.getFullYear()+"-"+z(d.getMonth()+1)+"-"+z(d.getDate())};
+const hoje=()=>ymd(new Date());
+const fmtData=s=>{if(!s)return "";const [y,m,d]=s.split("-");return `${d}/${m}/${y}`};
+const fmtT=s=>{s=Math.max(0,Math.round(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60,z=n=>String(n).padStart(2,"0");return h?`${h}:${z(m)}:${z(x)}`:`${z(m)}:${z(x)}`};
+const fmtDur=s=>{s=Math.round(s/60);const h=Math.floor(s/60),m=s%60;return h?`${h}h${String(m).padStart(2,"0")}`:`${m} min`};
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ==================== estado ==================== */
+/* E = {prova:"AAAA-MM-DD", sims:{S01:{modo,ini,fim,t,r:{"1":"B"},vis:{"1":1},atual,fin}}, ref:{"S01-05":[{d,ok}]}, salvos:{"S01-05":{em}}, fs} */
+let E=LS.get("cpa-estado",null)||{prova:"",sims:{},ref:{},salvos:{}};
+E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};
+let IDX=[];          /* simulados oficiais (index.json) */
+let EXTRA={};        /* simulados anexados: id -> objeto completo */
+const FULL={};       /* cache de simulados completos */
+let UI={filtroAss:"atencao",msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
+const fb={on:false,user:null,ready:false,doc:null,col:null,status:"local",err:"",msg:"",email:"",busy:false};
+
+const fbOk=()=>{const c=window.FIREBASE_CONFIG;return !!(window.firebase&&c&&c.apiKey&&!/COLE|SUA_|YOUR_/i.test(c.apiKey))};
+let saveT=null;
+function salvar(){
+  E.atualizado=Date.now();
+  LS.set("cpa-estado",E);
+  if(!fb.on||!fb.user)return;
+  clearTimeout(saveT);
+  saveT=setTimeout(()=>{fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()})},600);
+}
+function initFirebase(){
+  if(!fbOk())return false;
+  try{
+    firebase.initializeApp(window.FIREBASE_CONFIG);
+    fb.auth=firebase.auth();fb.fs=firebase.firestore();fb.auth.languageCode="pt-BR";
+    try{fb.fs.enablePersistence({synchronizeTabs:true}).catch(()=>{})}catch(e){}
+    try{fb.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(()=>{})}catch(e){}
+    fb.on=true;
+    fb.auth.onAuthStateChanged(u=>{
+      if(fb.unsub){fb.unsub();fb.unsub=null}if(fb.unsub2){fb.unsub2();fb.unsub2=null}
+      fb.user=u||null;fb.ready=true;
+      if(u){
+        const base=fb.fs.collection("usuarios").doc(u.uid);
+        fb.doc=base.collection("cpa").doc("estado");fb.col=base.collection("cpa_simulados");
+        let first=true;
+        fb.unsub=fb.doc.onSnapshot(s=>{
+          if(s.metadata.hasPendingWrites)return;
+          const d=s.exists?s.data():null;
+          if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
+          else if(E.atualizado&&d.atualizado&&E.atualizado>d.atualizado){salvar()} /* este aparelho tem a versão mais nova */
+          else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{}},d);LS.set("cpa-estado",E)}
+          first=false;fb.status="firebase";render();
+        },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
+        fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
+      }
+      render();
+    });
+    return true;
+  }catch(e){fb.on=false;return false}
+}
+const authMsg=er=>{const c=er&&er.code||"";
+  if(/invalid-credential|wrong-password|user-not-found|invalid-email|invalid-login/.test(c))return "E-mail ou senha incorretos.";
+  if(c==="auth/too-many-requests")return "Muitas tentativas. Aguarde alguns minutos e tente de novo.";
+  if(c==="auth/network-request-failed")return "Sem conexão. Tente de novo.";
+  return "Não consegui entrar. Tente de novo."};
+async function doLogin(){
+  const e=$("#lg-email"),p=$("#lg-pass");fb.email=e.value.trim();
+  if(!fb.email||!p.value){fb.err="Digite o e-mail e a senha.";render();return}
+  fb.busy=true;fb.err="";render();
+  try{await fb.auth.signInWithEmailAndPassword(fb.email,p.value)}catch(er){fb.err=authMsg(er)}
+  fb.busy=false;render();
+}
+async function doReset(){
+  const e=$("#lg-email");fb.email=e?e.value.trim():fb.email;
+  if(!fb.email){fb.err="Digite o seu e-mail para receber o link.";render();return}
+  try{await fb.auth.sendPasswordResetEmail(fb.email);fb.err="";fb.msg="Enviei um e-mail com o link para criar a senha. Se não aparecer, olhe o spam."}catch(er){fb.err=authMsg(er)}
+  render();
+}
+
+/* ==================== simulados ==================== */
+const listaSims=()=>{
+  const ofi=IDX.map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao,n:s.n,k:s.k,pd:s.pd,arquivo:s.arquivo,extra:false}));
+  const ext=Object.values(EXTRA).sort((a,b)=>String(a.id).localeCompare(String(b.id))).map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao||"",n:s.q.length,k:s.q.map(q=>q.certa).join(""),pd:s.q.map(q=>q.pd),extra:true}));
+  return ofi.concat(ext);
+};
+const simInfo=id=>listaSims().find(s=>s.id===id);
+async function carregarSim(id){
+  if(FULL[id])return FULL[id];
+  if(EXTRA[id]){FULL[id]=EXTRA[id];return FULL[id]}
+  const i=IDX.find(s=>s.id===id);if(!i)throw new Error("Simulado não encontrado");
+  const r=await fetch(i.arquivo+"?v="+(i.criado||""),{cache:"no-cache"});if(!r.ok)throw new Error("Falha ao baixar o simulado");
+  FULL[id]=await r.json();return FULL[id];
+}
+const qid=(sid,n)=>`${sid}-${String(n).padStart(2,"0")}`;
+const parseQid=t=>{const m=String(t).match(/^(.+)-(\d+)$/);return m?{sid:m[1],n:+m[2]}:null};
+
+/* ==================== estatísticas ==================== */
+function stats(){
+  const sims=listaSims(),S={feitos:0,emAndamento:0,resp:0,acertos:0,blocos:{},ass:{},hist:[],pend:[],recup:0,tempo:0,tempoQ:0};
+  for(const b in BLOCOS)S.blocos[b]={a:0,n:0};
+  for(const s of sims){
+    const st=E.sims[s.id];if(!st||!st.r)continue;
+    if(st.fin)S.feitos++;else if(Object.keys(st.r).length)S.emAndamento++;
+    let a=0,n=0;
+    for(let i=1;i<=s.n;i++){
+      const r=st.r[i];const pd=s.pd[i-1],b=bloco(pd),as=assunto(pd),k=s.k[i-1];
+      if(!r&&!st.fin)continue;
+      const ok=r===k;n++;if(ok)a++;
+      if(b){S.blocos[b].n++;if(ok)S.blocos[b].a++}
+      const x=S.ass[as]||(S.ass[as]={a:0,n:0,b});x.n++;if(ok)x.a++;
+      const id=qid(s.id,i),rf=E.ref[id],last=rf&&rf.length?rf[rf.length-1].ok:ok;
+      if(!ok){if(last)S.recup++;else S.pend.push(id)}
+    }
+    S.resp+=n;S.acertos+=a;
+    if(st.t){S.tempo+=st.t;S.tempoQ+=n}
+    if(st.fin)S.hist.push({id:s.id,titulo:s.titulo,a,n:s.n,fim:st.fim||0,modo:st.modo});
+  }
+  S.hist.sort((x,y)=>x.fim-y.fim);
+  /* nota estimada: acerto de cada bloco aplicado ao peso do bloco na prova */
+  let est=0,cob=0;for(const b in BLOCOS){const x=S.blocos[b];if(x.n){est+=x.a/x.n*BLOCOS[b].p*TOTAL_Q;cob+=BLOCOS[b].p}}
+  S.estimada=cob>=.999?Math.round(est):null;
+  return S;
+}
+
+/* ==================== render principal ==================== */
+function paintSync(){const el=$("#sync");if(el)el.outerHTML=syncHtml()}
+const syncHtml=()=>fb.on&&fb.user?`<span class="sync ${fb.status==="erro"?"err":""}" id="sync"><i></i>${fb.status==="erro"?"Erro ao salvar":"Salvo na nuvem"}</span>`:`<span class="sync" id="sync"><i style="background:var(--ink3)"></i>Salvo neste aparelho</span>`;
+
+function render(){
+  const app=$("#app");
+  if(fb.on&&!fb.ready){app.innerHTML=`<div class="login"><div class="card muted">Carregando…</div></div>`;return}
+  if(fb.on&&!fb.user){app.innerHTML=loginHtml();return}
+  const keepY=window.scrollY;
+  app.innerHTML=painelHtml()+(UI.ses?sessaoHtml():"")+(UI.modal?modalHtml():"");
+  document.body.style.overflow=UI.ses||UI.modal?"hidden":"";
+  if(!UI.ses)window.scrollTo(0,keepY);
+}
+function loginHtml(){
+  return `<div class="login"><div class="logo" style="margin-bottom:16px"><b>CPA</b><h1>Simulados CPA<span>Certificação Anbima</span></h1></div>
+  <div class="card"><h2>Entrar</h2><p class="muted small" style="margin:6px 0 0">Use o mesmo e-mail e senha do painel de metas.</p>
+  ${fb.err?`<div class="msg err">${esc(fb.err)}</div>`:""}${fb.msg?`<div class="msg">${esc(fb.msg)}</div>`:""}
+  <label for="lg-email">E-mail</label><input class="in" id="lg-email" type="email" autocomplete="username" value="${esc(fb.email)}">
+  <label for="lg-pass">Senha</label><input class="in" id="lg-pass" type="password" autocomplete="current-password">
+  <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><button class="btn" data-a="login" ${fb.busy?"disabled":""}>Entrar</button><button class="btn ghost" data-a="reset">Esqueci a senha</button></div></div></div>`;
+}
+function painelHtml(){
+  const S=stats(),sims=listaSims();
+  const p=pct(S.acertos,S.resp);
+  return `<div class="wrap">
+  <div class="top"><div class="logo"><b>CPA</b><h1>Simulados CPA<span>Certificação Profissional Anbima · 50 questões · 2h30 · aprovação com 35</span></h1></div><div class="sp"></div>${syncHtml()}${fb.on&&fb.user?`<button class="btn ghost sm" data-a="sair">Sair</button>`:""}</div>
+  ${UI.msg?`<div class="msg">${esc(UI.msg)}</div>`:""}${UI.err?`<div class="msg err">${esc(UI.err)}</div>`:""}
+  <div class="hero">${contagemHtml(S,sims)}
+    <div class="kpis">
+      <div class="kpi"><div class="lb">Acerto geral</div><div class="v ${p==null?"":cls(p)}">${p==null?"–":p+"%"}</div><div class="meter"><b class="b-${cls(p)}" style="width:${p||0}%"></b><i style="left:70%"></i></div><div class="s">meta: 70% (35 de 50)</div></div>
+      <div class="kpi"><div class="lb">Nota estimada na prova</div><div class="v ${S.estimada==null?"":S.estimada>=APROV?"ok":"low"}">${S.estimada==null?"–":S.estimada+"/50"}</div><div class="s">${S.estimada==null?"aparece quando houver questões dos 4 blocos":S.estimada>=APROV?"acima da linha de aprovação":`faltam ${APROV-S.estimada} acertos para 35`}</div></div>
+      <div class="kpi"><div class="lb">Simulados feitos</div><div class="v">${S.feitos}<span class="muted" style="font-size:16px;font-weight:600"> / ${sims.length}</span></div><div class="s">${S.emAndamento?`${S.emAndamento} em andamento`:"&nbsp;"}</div></div>
+      <div class="kpi"><div class="lb">Questões resolvidas</div><div class="v">${S.resp}</div><div class="s">${S.tempoQ?`${fmtT(S.tempo/S.tempoQ)} por questão (meta: 3 min)`:"&nbsp;"}</div></div>
+    </div></div>
+  <div class="two">
+    <div class="card"><div class="sec-h"><h2>Desempenho por bloco</h2><div class="sp"></div><span class="muted small">linha = 70%</span></div>${blocosHtml(S)}</div>
+    <div class="card"><div class="sec-h"><h2>Evolução nos simulados</h2></div>${graficoHtml(S)}</div>
+  </div>
+  <div class="two">
+    <div class="card"><div class="sec-h"><h2>Onde melhorar</h2></div>${focoHtml(S)}</div>
+    <div class="card"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
+  </div>
+  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Por assunto</h2><div class="sp"></div><div class="seg">${[["atencao","Precisa de atenção"],["todos","Todos"]].map(([k,l])=>`<button class="${UI.filtroAss===k?"on":""}" data-a="fass" data-k="${k}">${l}</button>`).join("")}</div></div>${assuntosHtml(S)}</div>
+  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Simulados</h2><div class="sp"></div><button class="btn alt sm" data-a="anexo">${UI.anexo?"Fechar":"Anexar simulado"}</button></div>${UI.anexo?anexoHtml():""}${simsHtml(sims)}</div>
+  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Gabaritos salvos</h2><div class="sp"></div><span class="muted small">${Object.keys(E.salvos).length} salvos · toque na ☆ de uma questão para guardar</span></div>${salvosHtml()}</div>
+  <div class="foot">Os gabaritos ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
+  </div>`;
+}
+function contagemHtml(S,sims){
+  let big="–",sub="Defina a data da prova",tip="";
+  if(E.prova){
+    const d=Math.round((new Date(E.prova+"T12:00:00")-new Date(hoje()+"T12:00:00"))/864e5);
+    big=d>1?`${d} dias`:d===1?"amanhã":d===0?"hoje":"já foi";
+    sub=d>=0?`Prova em ${fmtData(E.prova)}`:`A prova foi em ${fmtData(E.prova)}`;
+    const rest=sims.filter(s=>!(E.sims[s.id]&&E.sims[s.id].fin)).length;
+    if(d>0&&rest)tip=`Faltam ${rest} simulados: ${rest<=d?`1 por dia fecha todos antes da prova.`:`cerca de ${Math.ceil(rest/d)} por dia para fazer todos.`}`;
+    else if(d===0)tip="Dia de prova: revise os gabaritos salvos e descanse.";
+  }
+  return `<div class="card count"><div class="lb">Contagem regressiva</div><div class="big">${big}</div><div class="sub">${sub}</div>
+  <div class="row"><label class="small" for="dt-prova" style="opacity:.85">Data da prova</label><input type="date" id="dt-prova" value="${esc(E.prova)}">${E.prova?`<button class="btn ghost sm" style="color:#fff" data-a="semdata">Limpar</button>`:""}</div>
+  ${tip?`<div class="tip">${esc(tip)}</div>`:""}</div>`;
+}
+function blocosHtml(S){
+  return Object.entries(BLOCOS).map(([b,x])=>{const s=S.blocos[b],p=pct(s.a,s.n);
+    return `<div class="blk"><div class="nm">${b}. ${esc(x.n)}<small>${Math.round(x.p*100)}% da prova · ${Math.round(x.p*TOTAL_Q)} questões</small></div><div class="pc ${cls(p)}">${p==null?"–":p+"%"} <span class="muted small" style="font-weight:500">${s.n?`${s.a}/${s.n}`:""}</span></div><div class="bar"><b class="b-${cls(p)}" style="width:${p||0}%"></b><i></i></div></div>`}).join("");
+}
+function graficoHtml(S){
+  const h=S.hist;if(!h.length)return `<div class="empty">Termine o primeiro simulado para ver a evolução.</div>`;
+  const W=520,H=190,pl=40,pr=12,pt=12,pb=26,n=h.length,x=i=>n===1?pl+(W-pl-pr)/2:pl+i*(W-pl-pr)/(n-1),y=v=>pt+(1-v/100)*(H-pt-pb);
+  const pts=h.map((s,i)=>[x(i),y(100*s.a/s.n)]);
+  const grid=[0,50,70,100].map(v=>`<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="${v===70?"#0f5a3c":"#dbe8e0"}" stroke-width="${v===70?1.2:1}" ${v===70?'stroke-dasharray="4 4"':""}/><text x="${pl-6}" y="${y(v)+4}" font-size="10.5" fill="#7b9284" text-anchor="end">${v}%</text>`).join("");
+  const area=n>1?`<path d="M${pts.map(p=>p.join(",")).join(" L")} L${pts[n-1][0]},${y(0)} L${pts[0][0]},${y(0)} Z" fill="#2ea36f" opacity=".1"/>`:"";
+  const line=n>1?`<polyline points="${pts.map(p=>p.join(",")).join(" ")}" fill="none" stroke="#17885a" stroke-width="2.4" stroke-linejoin="round"/>`:"";
+  const dots=h.map((s,i)=>{const v=Math.round(100*s.a/s.n);return `<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="4.5" fill="${v>=70?"#17885a":v>=60?"#e0a440":"#d0705a"}" stroke="#fff" stroke-width="1.5"><title>${esc(s.titulo)}: ${s.a}/${s.n} (${v}%)</title></circle>${n<=12?`<text x="${pts[i][0]}" y="${pts[i][1]-9}" font-size="10.5" fill="#46604f" text-anchor="middle">${v}</text>`:""}<text x="${pts[i][0]}" y="${H-8}" font-size="10" fill="#7b9284" text-anchor="middle">${esc(s.id.replace(/^S0?/,""))}</text>`}).join("");
+  const ult=h[h.length-1],u=Math.round(100*ult.a/ult.n);
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Nota por simulado">${grid}${area}${line}${dots}</svg></div><div class="small muted">Último: ${esc(ult.titulo)}, ${ult.a}/${ult.n} (${u}%) ${u>=70?"· aprovado":"· abaixo de 70%"}</div>`;
+}
+function focoHtml(S){
+  const arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:100*x.a/x.n})).filter(x=>x.n>=3&&x.p<75);
+  if(!S.resp)return `<div class="empty">Depois do primeiro simulado, aqui aparecem os 4 assuntos que mais pedem atenção.</div>`;
+  if(!arr.length)return `<div class="empty">Nenhum assunto abaixo de 75% com pelo menos 3 questões. Continue assim.</div>`;
+  /* prioridade: distância até 75% vezes o peso do bloco na prova */
+  arr.sort((a,b)=>(75-b.p)*BLOCOS[b.b].p*Math.sqrt(b.n)-(75-a.p)*BLOCOS[a.b].p*Math.sqrt(a.n));
+  return `<div class="focus">${arr.slice(0,4).map(x=>{const p=Math.round(x.p),e=x.n-x.a;return `<div class="fc ${cls(p)}"><b>${esc(x.nome)} · ${p}%</b><span>${e} ${e===1?"erro":"erros"} em ${x.n} questões · bloco ${x.b} vale ${Math.round(BLOCOS[x.b].p*100)}% da prova. Refaça as erradas deste assunto e releia os gabaritos.</span><div style="margin-top:6px"><button class="btn alt sm" data-a="refazer" data-ass="${esc(x.nome)}">Refazer erradas deste assunto</button></div></div>`}).join("")}</div>`;
+}
+function refazerHtml(S){
+  const n=S.pend.length;
+  const porBloco={1:0,2:0,3:0,4:0};S.pend.forEach(id=>{const t=parseQid(id),s=simInfo(t.sid);if(s)porBloco[bloco(s.pd[t.n-1])]=(porBloco[bloco(s.pd[t.n-1])]||0)+1});
+  return `<div class="redo"><div class="v">${n}</div><div style="flex:1;min-width:160px"><b>${n===1?"questão errada pendente":"questões erradas pendentes"}</b><div class="muted small">${S.recup?`${S.recup} já ${S.recup===1?"foi recuperada":"foram recuperadas"} ao refazer. `:""}Acertou ao refazer, sai da lista.</div></div></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" data-a="refazer" ${n?"":"disabled"}>Refazer ${n>20?"20 erradas":"todas"}</button>${Object.entries(porBloco).filter(([,v])=>v).map(([b,v])=>`<button class="btn alt sm" data-a="refazer" data-b="${b}">Bloco ${b} (${v})</button>`).join("")}</div>`;
+}
+function assuntosHtml(S){
+  let arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:Math.round(100*x.a/x.n)}));
+  if(!arr.length)return `<div class="empty">Ainda sem questões respondidas.</div>`;
+  if(UI.filtroAss==="atencao")arr=arr.filter(x=>x.p<70);
+  arr.sort((a,b)=>a.p-b.p||b.n-a.n);
+  if(!arr.length)return `<div class="empty">Todos os assuntos estão em 70% ou mais.</div>`;
+  return `<div class="tbl-wrap"><table><thead><tr><th>Assunto</th><th class="col-b">Bloco</th><th class="n">Acertos</th><th class="n">%</th></tr></thead><tbody>${arr.map(x=>`<tr><td>${esc(x.nome)}</td><td class="col-b"><span class="tag b${x.b}">${x.b}</span></td><td class="n">${x.a}/${x.n}</td><td class="n"><span class="minibar"><b class="b-${cls(x.p)}" style="width:${x.p}%"></b></span><b class="${cls(x.p)}">${x.p}%</b></td></tr>`).join("")}</tbody></table></div>`;
+}
+function simsHtml(sims){
+  if(!sims.length)return `<div class="empty">Carregando simulados…</div>`;
+  return `<div class="sims">${sims.map(s=>{const st=E.sims[s.id];let cl="",body="",act="";
+    if(st&&st.fin){const a=s.k.split("").filter((k,i)=>st.r[i+1]===k).length,p=Math.round(100*a/s.n);cl="done";
+      body=`<div class="sc ${cls(p)}">${a}/${s.n}</div><div class="st">${p}% · ${st.modo==="prova"?"modo prova":"modo estudo"}${st.t?" · "+fmtDur(st.t):""}</div>`;
+      act=`<button class="btn alt sm" data-a="rever" data-id="${s.id}">Ver gabarito</button>`}
+    else if(st&&Object.keys(st.r||{}).length){const r=Object.keys(st.r).length;cl="prog";body=`<div class="st">${r} de ${s.n} respondidas · ${st.modo==="prova"?"modo prova":"modo estudo"}</div>`;act=`<button class="btn sm" data-a="continuar" data-id="${s.id}">Continuar</button>`}
+    else{body=`<div class="st">${s.n} questões${s.extra?" · anexado":""}</div>`;act=`<button class="btn sm" data-a="iniciar" data-id="${s.id}">Fazer</button>`}
+    return `<div class="sim ${cl}"><div class="t">${esc(s.titulo)}</div>${body}<div class="sp"></div><div class="act">${act}${s.extra&&!(st&&Object.keys(st.r||{}).length)?`<button class="btn ghost sm" data-a="remover" data-id="${s.id}">Remover</button>`:""}${st&&!st.fin&&Object.keys(st.r||{}).length?`<button class="btn ghost sm" data-a="zerar" data-id="${s.id}">Recomeçar</button>`:""}</div></div>`}).join("")}</div>`;
+}
+function anexoHtml(){
+  return `<div style="margin-bottom:14px;padding:12px;border:1px dashed var(--g3);border-radius:12px;background:#fbfefc">
+  <p class="small" style="margin:0 0 8px">Cole o JSON de um simulado gerado pelo Claude (formato em <b>painel/cpa/FORMATO-SIMULADO.md</b>) ou escolha o arquivo .json.</p>
+  <textarea class="in" id="anx-txt" placeholder='{"titulo":"Simulado extra","q":[...]}'></textarea>
+  <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center"><button class="btn sm" data-a="anexar">Anexar</button><label class="btn alt sm" style="display:inline-block">Escolher arquivo<input type="file" id="anx-file" accept=".json,application/json" hidden></label></div></div>`;
+}
+function salvosHtml(){
+  const ids=Object.keys(E.salvos).sort((a,b)=>(E.salvos[b].em||0)-(E.salvos[a].em||0));
+  if(!ids.length)return `<div class="empty">Nenhum gabarito salvo ainda. Durante a correção, toque na ☆ para guardar os que valem revisar antes da prova.</div>`;
+  const need=[...new Set(ids.map(i=>parseQid(i).sid))].filter(s=>!FULL[s]);
+  if(need.length){Promise.all(need.map(s=>carregarSim(s).catch(()=>null))).then(()=>render());return `<div class="empty">Carregando…</div>`}
+  const q=UI.busca.trim().toLowerCase();
+  const rows=ids.map(id=>{const t=parseQid(id),s=FULL[t.sid],x=s&&s.q[t.n-1];return x?{id,x,s}:null}).filter(Boolean).filter(r=>!q||(r.x.contexto+r.x.enunciado+r.x.gabarito+assunto(r.x.pd)).toLowerCase().includes(q));
+  return `<input class="in" id="busca" placeholder="Buscar nos gabaritos salvos" value="${esc(UI.busca)}" style="margin-bottom:10px">
+  <div class="saved">${rows.map(({id,x,s})=>`<details class="sv"><summary><span class="tag b${bloco(x.pd)}">${esc(assunto(x.pd))}</span><span class="q">${esc(x.enunciado)}<span class="muted small"> · ${esc(s.titulo)}, questão ${parseQid(id).n}</span></span></summary><div class="body">${questaoCorrigidaHtml(x,null,id)}<div style="margin-top:8px"><button class="btn ghost sm" data-a="unsave" data-id="${id}">Remover dos salvos</button></div></div></details>`).join("")||`<div class="empty">Nada encontrado.</div>`}</div>`;
+}
+function questaoCorrigidaHtml(x,resp,id){
+  const k=x.certa;
+  return `<div class="ctx" style="font-size:14.5px">${txt(x.contexto)}</div><div class="enun" style="font-size:14.5px">${txt(x.enunciado)}</div>
+  <div class="opts">${x.alt.map((a,i)=>{const l=L[i],c=l===k?"right":l===resp?"wrong":"";const w=x.porque&&x.porque[l];
+    return `<div class="opt ${c}" style="cursor:default"><span class="L">${l}</span><span>${txt(a)}${c==="wrong"&&w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></div>`}).join("")}</div>
+  ${gabaritoHtml(x,resp,id,true)}`;
+}
+function gabaritoHtml(x,resp,id,compacto){
+  const k=x.certa,ok=resp===k;
+  const outros=Object.entries(x.porque||{}).filter(([l])=>l!==resp);
+  return `<div class="gab"><h3>${resp==null?"":`<span class="res ${ok?"ok":"low"}">${ok?"Você acertou":`Você marcou ${resp}`}</span> ·`} Gabarito: ${k}<span style="flex:1"></span>${id?`<button class="star ${E.salvos[id]?"on":""}" data-a="star" data-id="${id}" title="Salvar este gabarito" aria-label="Salvar este gabarito">${E.salvos[id]?"★":"☆"}</button>`:""}</h3>
+  <p>${txt(x.gabarito)}</p>
+  ${!ok&&resp&&x.porque&&x.porque[resp]&&!compacto?`<p><b>Por que a ${resp} está errada:</b> ${txt(x.porque[resp])}</p>`:""}
+  ${outros.length?`<details style="margin-top:6px"><summary class="small" style="cursor:pointer;color:var(--g7);font-weight:600">Por que as outras alternativas estão erradas</summary>${outros.map(([l,w])=>`<p class="small"><b>${l})</b> ${txt(w)}</p>`).join("")}</details>`:""}
+  ${x.dica?`<div class="dica"><b>Para lembrar:</b> ${txt(x.dica)}</div>`:""}</div>`;
+}
+
+/* ==================== sessão (simulado ou refazer) ==================== */
+/* UI.ses = {tipo:"sim"|"ref", sid, modo:"prova"|"estudo", itens:[{id,x}], i, resp:{}, fim:false, t0} */
+async function abrirSim(id,modo,continuar){
+  try{
+    const s=await carregarSim(id);
+    let st=E.sims[id];
+    if(!continuar||!st){st=E.sims[id]={modo,ini:Date.now(),r:{},vis:{},t:0,atual:1,fin:false}}
+    UI.ses={tipo:"sim",sid:id,titulo:s.titulo,modo:st.modo,itens:s.q.map((x,i)=>({id:qid(id,i+1),x,n:i+1})),i:Math.min((st.atual||1),s.q.length)-1,fim:!!st.fin,t0:Date.now(),rev:!!st.fin};
+    if(st.fin){UI.ses.i=0}
+    salvar();UI.modal=null;tick();render();window.scrollTo(0,0);
+  }catch(e){UI.err="Não consegui abrir o simulado. Verifique a conexão.";render()}
+}
+async function abrirRefazer(filtro){
+  const S=stats();let ids=S.pend.slice();
+  const sims=[...new Set(ids.map(i=>parseQid(i).sid))];
+  try{await Promise.all(sims.map(carregarSim))}catch(e){UI.err="Não consegui carregar as questões.";render();return}
+  let itens=ids.map(id=>{const t=parseQid(id);return {id,x:FULL[t.sid].q[t.n-1],n:t.n,sid:t.sid}});
+  if(filtro&&filtro.b)itens=itens.filter(it=>bloco(it.x.pd)===+filtro.b);
+  if(filtro&&filtro.ass)itens=itens.filter(it=>assunto(it.x.pd)===filtro.ass);
+  for(let i=itens.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[itens[i],itens[j]]=[itens[j],itens[i]]}
+  itens=itens.slice(0,20);
+  if(!itens.length)return;
+  UI.ses={tipo:"ref",titulo:"Refazendo erradas",modo:"estudo",itens,i:0,resp:{},fim:false,t0:Date.now()};
+  UI.modal=null;render();window.scrollTo(0,0);
+}
+const sesSt=()=>UI.ses&&UI.ses.tipo==="sim"?E.sims[UI.ses.sid]:null;
+const respDe=(it,idx)=>{const s=UI.ses;if(s.tipo==="sim")return (E.sims[s.sid].r||{})[idx+1];return s.resp[it.id]};
+let tickT=null;
+function tick(){
+  clearInterval(tickT);
+  tickT=setInterval(()=>{
+    const s=UI.ses;if(!s||s.tipo!=="sim"||s.fim)return;
+    const st=sesSt();if(document.hidden)return;
+    st.t=(st.t||0)+1;
+    if(st.t%15===0)salvar();
+    const el=$("#timer");if(el){const rest=DURACAO-st.t;el.textContent=s.modo==="prova"?fmtT(rest):fmtT(st.t);el.className="timer"+(s.modo==="prova"&&rest<900?" warn":"")}
+    if(s.modo==="prova"&&st.t>=DURACAO){finalizar(true)}
+  },1000);
+}
+function sessaoHtml(){
+  const s=UI.ses;
+  if(s.fim&&!s.rev)return resultadoHtml();
+  if(s.rev)return revisaoHtml();
+  const it=s.itens[s.i],x=it.x,resp=respDe(it,s.i),st=sesSt();
+  const prova=s.modo==="prova",feito=resp!=null&&!prova;
+  const nResp=s.tipo==="sim"?Object.keys(st.r).length:Object.keys(s.resp).length;
+  const tempo=s.tipo==="sim"?(prova?fmtT(DURACAO-(st.t||0)):fmtT(st.t||0)):"";
+  return `<div class="ov" id="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · ${s.i+1}/${s.itens.length}</span><span class="sp"></span>${s.tipo==="sim"?`<span class="timer" id="timer" title="${prova?"tempo restante":"tempo gasto"}">${tempo}</span>`:""}<button class="btn ghost sm" data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button class="btn ghost sm" data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button></div><div class="prog"><b style="width:${100*nResp/s.itens.length}%"></b></div></div>
+  <div class="qwrap qz" style="--qfs:${UI.fs}px">
+    <div class="qmeta"><span class="tag b${bloco(x.pd)}">Bloco ${bloco(x.pd)}</span><span class="tag">${esc(assunto(x.pd))}</span>${x.dif?`<span class="tag" style="background:#fff;border:1px solid var(--line);color:var(--ink2)">${esc(x.dif)}</span>`:""}${s.tipo==="ref"?`<span class="muted small">${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}</span>`:""}</div>
+    ${x.caso?`<div class="case">${esc(x.caso)}${x.etapa?` · etapa ${esc(x.etapa)}`:""}</div>`:""}
+    <div class="ctx">${txt(x.contexto)}</div><div class="enun">${txt(x.enunciado)}</div>
+    <div class="opts">${x.alt.map((a,i)=>{const l=L[i];let c="";if(feito){c=l===x.certa?"right":l===resp?"wrong":""}else if(resp===l)c="sel";
+      const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
+      return `<button class="opt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""}><span class="L">${l}</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>
+    ${feito?gabaritoHtml(x,resp,it.id,true):""}
+    ${prova?`<p class="muted small" style="margin-top:14px">Modo prova: como no exame, a questão fica travada depois que você avança. O gabarito aparece no final.</p>`:""}
+  </div>
+  <div class="nav"><div class="in2">
+    ${!prova&&s.i>0?`<button class="btn alt" data-a="ant">Anterior</button>`:""}
+    <span class="sp"></span>
+    ${prova?`<button class="btn" data-a="prox" ${resp?"":"disabled"}>${s.i===s.itens.length-1?"Responder e finalizar":"Responder e avançar"}</button>${resp?"":`<button class="btn ghost" data-a="pular">Deixar em branco</button>`}`
+      :s.i===s.itens.length-1?`<button class="btn" data-a="fim">Finalizar</button>`:(feito?`<button class="btn" data-a="prox">Próxima</button>`:`<button class="btn ghost" data-a="prox">Pular</button>`)}
+  </div></div></div>`;
+}
+function resultadoHtml(){
+  const s=UI.ses;
+  let a=0,n=s.itens.length;const bl={1:{a:0,n:0},2:{a:0,n:0},3:{a:0,n:0},4:{a:0,n:0}};
+  s.itens.forEach((it,i)=>{const r=respDe(it,i),ok=r===it.x.certa,b=bloco(it.x.pd);if(ok)a++;if(bl[b]){bl[b].n++;if(ok)bl[b].a++}});
+  const p=Math.round(100*a/n),st=sesSt();
+  const aprov=s.tipo==="sim"&&n===TOTAL_Q?a>=APROV:p>=70;
+  return `<div class="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · resultado</span></div></div>
+  <div class="qwrap"><div class="card res-hero"><div class="muted small">${s.tipo==="sim"?"Você acertou":"Recuperadas"}</div><div class="sc">${a}/${n}</div><div class="muted">${p}%${st&&st.t?` · ${fmtDur(st.t)}`:""}</div>
+  ${s.tipo==="sim"?`<span class="ap ${aprov?"yes":"no"}">${aprov?"Aprovado (35 ou mais)":`Abaixo de 35: faltaram ${Math.max(0,APROV-a)}`}</span>`:`<span class="ap ${a===n?"yes":"no"}">${a===n?"Todas recuperadas":`${n-a} continuam na lista de erradas`}</span>`}</div>
+  <div class="card" style="margin-top:14px">${Object.entries(BLOCOS).filter(([b])=>bl[b].n).map(([b,x])=>{const q=pct(bl[b].a,bl[b].n);return `<div class="blk"><div class="nm">${b}. ${esc(x.n)}</div><div class="pc ${cls(q)}">${q}% <span class="muted small" style="font-weight:500">${bl[b].a}/${bl[b].n}</span></div><div class="bar"><b class="b-${cls(q)}" style="width:${q}%"></b><i></i></div></div>`}).join("")}</div>
+  <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" data-a="ver-rev">Ver correção comentada</button><button class="btn alt" data-a="sair-ses">Voltar ao painel</button></div></div></div>`;
+}
+function revisaoHtml(){
+  const s=UI.ses,f=UI.revF||"todas";
+  const itens=s.itens.map((it,i)=>({it,i,r:respDe(it,i)})).filter(o=>f==="todas"||(f==="erradas"&&o.r!==o.it.x.certa));
+  return `<div class="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · correção</span><span class="sp"></span><div class="seg">${[["todas","Todas"],["erradas","Erradas"]].map(([k,l])=>`<button class="${f===k?"on":""}" data-a="revf" data-k="${k}">${l}</button>`).join("")}</div></div></div>
+  <div class="qwrap"><div class="rv">${itens.map(({it,i,r})=>{const ok=r===it.x.certa;return `<details class="item" ${!ok&&f==="erradas"?"open":""}><summary><span class="dot ${r==null?"na":ok?"ok":"no"}"></span><b style="min-width:26px">${i+1}</b><span style="flex:1;font-size:14px">${esc(it.x.enunciado)} <span class="muted small">· ${esc(assunto(it.x.pd))}</span></span><span class="small ${ok?"ok":"low"}" style="font-weight:700">${r||"–"}${ok?"":" → "+it.x.certa}</span></summary><div class="body">${it.x.caso?`<div class="case">${esc(it.x.caso)}${it.x.etapa?` · etapa ${esc(it.x.etapa)}`:""}</div>`:""}${questaoCorrigidaHtml(it.x,r,it.id)}</div></details>`}).join("")||`<div class="empty">Nenhuma questão errada.</div>`}</div></div></div>`;
+}
+function responder(l){
+  const s=UI.ses,it=s.itens[s.i];
+  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar()}
+  else{if(s.resp[it.id])return;s.resp[it.id]=l;(E.ref[it.id]=E.ref[it.id]||[]).push({d:Date.now(),ok:l===it.x.certa});salvar()}
+  render();
+}
+function avancar(pular){
+  const s=UI.ses;
+  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="prova"){st.vis[s.i+1]=1;if(s.i===s.itens.length-1){finalizar();return}}st.atual=s.i+2;salvar()}
+  if(s.i<s.itens.length-1){s.i++;render();const o=$("#ov");if(o)o.scrollTop=0}
+  else if(s.tipo==="ref"){s.fim=true;render()}
+}
+function finalizar(auto){
+  const s=UI.ses;
+  if(s.tipo==="sim"){const st=sesSt();st.fin=true;st.fim=Date.now();salvar();if(auto)UI.msg="O tempo de 2h30 acabou e o simulado foi finalizado."}
+  s.fim=true;s.rev=false;render();const o=$("#ov");if(o)o.scrollTop=0;
+}
+function modalHtml(){
+  const m=UI.modal;
+  if(m.tipo==="modo")return `<div class="modal" data-a="fecha-modal"><div class="card" data-stop="1"><h2>${esc(m.titulo)}</h2><p>Como você quer fazer?</p>
+  <div class="choice"><button data-a="comecar" data-id="${m.id}" data-m="prova"><b>Modo prova</b><span>Cronômetro de 2h30, sem voltar às questões, como no exame. Correção comentada no final.</span></button>
+  <button data-a="comecar" data-id="${m.id}" data-m="estudo"><b>Modo estudo</b><span>Corrige na hora, com gabarito comentado e o porquê de cada alternativa errada.</span></button></div>
+  <div class="act"><button class="btn alt" data-a="fecha-modal">Cancelar</button></div></div></div>`;
+  if(m.tipo==="conf")return `<div class="modal" data-a="fecha-modal"><div class="card" data-stop="1"><h2>${esc(m.titulo)}</h2><p>${esc(m.texto)}</p><div class="act"><button class="btn alt" data-a="fecha-modal">Cancelar</button><button class="btn" data-a="${m.ok}" data-id="${m.id||""}">${esc(m.btn)}</button></div></div></div>`;
+  return "";
+}
+
+/* ==================== anexar simulado ==================== */
+function validarSim(o){
+  if(!o||!Array.isArray(o.q)||!o.q.length)throw new Error("O JSON precisa ter a lista \"q\" com as questões.");
+  o.q.forEach((x,i)=>{
+    const n=i+1;
+    if(!x.contexto&&!x.enunciado)throw new Error(`Questão ${n}: falta contexto ou enunciado.`);
+    if(!Array.isArray(x.alt)||x.alt.length!==4)throw new Error(`Questão ${n}: precisa de 4 alternativas em "alt".`);
+    if(!L.includes(x.certa))throw new Error(`Questão ${n}: "certa" deve ser A, B, C ou D.`);
+    if(!x.pd||!bloco(x.pd))throw new Error(`Questão ${n}: "pd" precisa ser um código do programa detalhado (ex.: 2.1.3).`);
+    if(!x.gabarito)throw new Error(`Questão ${n}: falta o gabarito comentado.`);
+    x.contexto=x.contexto||"";x.enunciado=x.enunciado||"";x.porque=x.porque||{};
+  });
+  return o;
+}
+async function anexar(texto){
+  UI.err="";UI.msg="";
+  try{
+    const o=validarSim(JSON.parse(texto));
+    const usados=new Set(listaSims().map(s=>s.id));let k=1;while(usados.has("X"+String(k).padStart(2,"0")))k++;
+    o.id="X"+String(k).padStart(2,"0");o.titulo=o.titulo||`Simulado extra ${k}`;
+    EXTRA[o.id]=o;
+    if(fb.on&&fb.user){const j=JSON.stringify(o);if(j.length>900000)throw new Error("O simulado é grande demais (máximo de cerca de 900 KB).");await fb.col.doc(o.id).set({json:j,em:Date.now()})}
+    else LS.set("cpa-extra",EXTRA);
+    UI.anexo=false;UI.msg=`${o.titulo} anexado com ${o.q.length} questões.`;
+  }catch(e){UI.err="Não consegui anexar: "+(e instanceof SyntaxError?"o texto não é um JSON válido.":e.message)}
+  render();
+}
+
+/* ==================== eventos ==================== */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-a]");if(!t)return;
+  if(t.dataset.a==="fecha-modal"&&e.target.closest("[data-stop]")&&e.target!==t)return;
+  const a=t.dataset.a,id=t.dataset.id;
+  if(a!=="anexar"&&a!=="star"){UI.msg="";UI.err=""}
+  switch(a){
+    case "login":doLogin();return;
+    case "reset":doReset();return;
+    case "sair":fb.auth.signOut();return;
+    case "semdata":E.prova="";salvar();break;
+    case "fass":UI.filtroAss=t.dataset.k;break;
+    case "anexo":UI.anexo=!UI.anexo;break;
+    case "anexar":anexar(($("#anx-txt")||{}).value||"");return;
+    case "iniciar":UI.modal={tipo:"modo",id,titulo:(simInfo(id)||{}).titulo};break;
+    case "comecar":abrirSim(id,t.dataset.m,false);return;
+    case "continuar":abrirSim(id,null,true);return;
+    case "rever":abrirSim(id,null,true).then(()=>{if(UI.ses){UI.ses.rev=true;UI.revF="todas";render()}});return;
+    case "zerar":UI.modal={tipo:"conf",titulo:"Recomeçar o simulado?",texto:"As respostas dadas até agora neste simulado serão apagadas.",ok:"zerar-ok",btn:"Recomeçar",id};break;
+    case "zerar-ok":delete E.sims[id];salvar();UI.modal=null;break;
+    case "remover":UI.modal={tipo:"conf",titulo:"Remover simulado anexado?",texto:"O simulado sai da lista. Você pode anexá-lo de novo depois.",ok:"remover-ok",btn:"Remover",id};break;
+    case "remover-ok":delete EXTRA[id];if(fb.on&&fb.user)fb.col.doc(id).delete().catch(()=>{});else LS.set("cpa-extra",EXTRA);UI.modal=null;break;
+    case "fecha-modal":UI.modal=null;break;
+    case "refazer":abrirRefazer(t.dataset.b?{b:t.dataset.b}:t.dataset.ass?{ass:t.dataset.ass}:null);return;
+    case "resp":responder(t.dataset.l);return;
+    case "prox":avancar();return;
+    case "pular":avancar(true);return;
+    case "ant":if(UI.ses.i>0){UI.ses.i--;render()}return;
+    case "fim":finalizar();return;
+    case "ver-rev":UI.ses.rev=true;UI.revF="todas";break;
+    case "revf":UI.revF=t.dataset.k;break;
+    case "sair-ses":if(UI.ses&&UI.ses.tipo==="sim"&&!UI.ses.fim)salvar();UI.ses=null;clearInterval(tickT);break;
+    case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
+    case "star":if(E.salvos[id])delete E.salvos[id];else E.salvos[id]={em:Date.now()};salvar();break;
+    case "unsave":delete E.salvos[id];salvar();break;
+    default:return;
+  }
+  render();
+});
+document.addEventListener("change",e=>{
+  const t=e.target;
+  if(t.id==="dt-prova"){E.prova=t.value||"";salvar();render()}
+  if(t.id==="anx-file"&&t.files&&t.files[0]){const r=new FileReader();r.onload=()=>anexar(String(r.result));r.readAsText(t.files[0])}
+});
+document.addEventListener("input",e=>{
+  if(e.target.id==="busca"){UI.busca=e.target.value;const pos=e.target.selectionStart;render();const b=$("#busca");if(b){b.focus();try{b.setSelectionRange(pos,pos)}catch(_){}}}
+});
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea"))return;
+  const s=UI.ses;if(!s||s.fim||s.rev)return;
+  const k=e.key.toUpperCase();
+  if(L.includes(k)&&k.length===1){responder(k)}
+  else if(e.key==="ArrowRight"||e.key==="Enter"){const b=document.querySelector('[data-a="prox"]:not([disabled]),[data-a="fim"]');if(b)b.click()}
+  else if(e.key==="ArrowLeft"&&s.modo==="estudo"){const b=document.querySelector('[data-a="ant"]');if(b)b.click()}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.id&&e.target.id.startsWith("lg-"))doLogin()});
+window.addEventListener("beforeunload",()=>{if(UI.ses&&UI.ses.tipo==="sim")LS.set("cpa-estado",E)});
+
+/* ==================== início ==================== */
+(async function(){
+  if(!initFirebase()){EXTRA=LS.get("cpa-extra",{})}
+  render();
+  try{const r=await fetch("simulados/index.json",{cache:"no-cache"});IDX=await r.json()}catch(e){UI.err="Não consegui carregar a lista de simulados. Verifique a conexão e recarregue."}
+  render();
+})();
+</script>
+</body>
+</html>
