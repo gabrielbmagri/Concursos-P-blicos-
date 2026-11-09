@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.1.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma empresa precisa pagar um fornecedor ainda hoje com uma transferência de alto valor entre bancos. O financeiro pergunta a Tânia, profissional CPA, como essa transferência é liquidada no Sistema de Pagamentos Brasileiro.",
+  "enunciado": "Tânia explica que transferências como a TED são liquidadas pelo:",
+  "certa": "STR, do Banco Central, que liquida cada operação em tempo real e de forma bruta.",
+  "erradas": [
+   [
+    "Selic, que liquida as transferências entre bancos ao fim do dia, pelo saldo líquido de cada instituição.",
+    "O Selic liquida operações com títulos públicos; transferências de reservas entre bancos passam pelo STR."
+   ],
+   [
+    "SPI, que liquida apenas boletos e cheques, sempre com prazo de dois dias úteis.",
+    "O SPI liquida o Pix, de forma instantânea; boletos e cheques têm sistemas próprios de compensação."
+   ],
+   [
+    "sistema interno do banco pagador, sem participação do Banco Central na liquidação.",
+    "Transferências entre bancos movimentam as reservas no BC, por meio do STR."
+   ]
+  ],
+  "gabarito": "O Sistema de Pagamentos Brasileiro reúne as infraestruturas que transferem recursos e liquidam operações. O STR (Sistema de Transferência de Reservas), operado pelo BC, liquida em tempo real e de forma bruta (operação por operação, LBTR) as transferências entre instituições, como a TED. O SPI liquida o Pix. O Selic liquida operações com títulos públicos federais. A liquidação bruta em tempo real reduz o risco sistêmico.",
+  "dica": "STR = transferências entre bancos (TED) em tempo real e bruto. SPI = Pix. Selic = títulos públicos."
+ },
+ {
+  "pd": "1.2.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente servidor municipal ouviu que a prefeitura não pode contratar mais pessoal porque “estourou a LRF”. Ele pergunta a Mariana, profissional CPA, o que é essa lei.",
+  "enunciado": "Mariana explica que a Lei de Responsabilidade Fiscal:",
+  "certa": "fixa regras de gestão fiscal, como limites de gasto com pessoal e de endividamento dos entes públicos.",
+  "erradas": [
+   [
+    "proíbe qualquer déficit público e obriga o governo a zerar a dívida até o fim de cada mandato.",
+    "A LRF impõe limites e metas, não a eliminação da dívida em cada mandato."
+   ],
+   [
+    "vale apenas para o governo federal, sem efeito sobre estados e municípios.",
+    "A LRF vale para União, estados, Distrito Federal e municípios."
+   ],
+   [
+    "define a meta de inflação e os instrumentos que o Banco Central deve usar para cumpri-la.",
+    "A meta de inflação é definida pelo CMN; a LRF trata das finanças públicas."
+   ]
+  ],
+  "gabarito": "A Lei Complementar 101/2000 (LRF) estabelece normas de finanças públicas voltadas à responsabilidade na gestão fiscal: planejamento e transparência, metas de resultado, limites para despesas com pessoal (percentual da receita corrente líquida), limites de endividamento e restrições em fim de mandato. Complementa-a o arcabouço fiscal federal (LC 200/2023), que limita o crescimento das despesas. O equilíbrio fiscal reduz o risco-país e a pressão sobre juros e inflação.",
+  "dica": "LRF: limites para pessoal e dívida, metas fiscais e transparência, para todos os entes."
+ },
+ {
+  "pd": "1.3.5",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma pequena empresa tem uma duplicata de R$ 10.000 que vence em 3 meses e quer antecipar o recebimento no banco, que aplica desconto comercial simples de 2% ao mês. O dono pergunta a Gilson, profissional CPA, quanto vai receber.",
+  "enunciado": "Gilson calcula que o valor líquido recebido, sem considerar tarifas e IOF, será de:",
+  "certa": "R$ 9.400,00, pois o desconto é 10.000 × 2% × 3 = R$ 600.",
+  "erradas": [
+   [
+    "R$ 9.800,00, pois o desconto de 2% é aplicado uma única vez sobre o valor da duplicata.",
+    "O desconto é de 2% ao mês, por 3 meses: 6% no total."
+   ],
+   [
+    "R$ 9.423,22, pois o desconto comercial usa juros compostos sobre o valor de face.",
+    "No desconto comercial simples, o desconto é linear sobre o valor de face: 6%."
+   ],
+   [
+    "R$ 10.600,00, pois o banco acrescenta os juros do período ao valor da duplicata.",
+    "Na antecipação, o banco desconta (reduz) o valor, não acrescenta."
+   ]
+  ],
+  "gabarito": "Desconto comercial (bancário) simples: o desconto incide sobre o valor nominal (de face) do título. D = N × d × n = 10.000 × 0,02 × 3 = R$ 600. Valor líquido = 10.000 − 600 = R$ 9.400. Na prática, somam-se tarifas e IOF, e a taxa efetiva da operação fica acima da taxa de desconto nominal. É usado na antecipação de recebíveis (duplicatas, cheques, cartões).",
+  "dica": "Desconto comercial simples: D = valor de face × taxa × prazo."
+ },
+ {
+  "pd": "1.3.3.5.6",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente tem dois títulos prefixados com vencimento em 6 anos: um paga cupons semestrais e o outro paga tudo no vencimento. Ele pergunta a Fábio, profissional CPA, qual deles oscila mais quando os juros mudam.",
+  "enunciado": "Fábio explica corretamente que:",
+  "certa": "o título sem cupons tem duration maior (igual ao prazo) e por isso é mais sensível aos juros.",
+  "erradas": [
+   [
+    "o título com cupons é mais sensível, pois os pagamentos semestrais aumentam a duration acima do prazo.",
+    "Cupons antecipam fluxos e reduzem a duration abaixo do prazo."
+   ],
+   [
+    "os dois têm a mesma sensibilidade, pois o vencimento final é igual.",
+    "Com cupons, a duration é menor que o prazo; sem cupons, é igual ao prazo."
+   ],
+   [
+    "nenhum dos dois oscila, pois títulos prefixados têm preço fixo até o vencimento.",
+    "Prefixados são marcados a mercado e oscilam com as taxas."
+   ]
+  ],
+  "gabarito": "Duration é o prazo médio ponderado dos fluxos de caixa de um título (pelo valor presente). Para título sem cupons, a duration é igual ao prazo; com cupons, é menor. Quanto maior a duration, maior a sensibilidade do preço às variações de juros (risco de mercado). Por isso títulos longos e sem cupons oscilam mais.",
+  "dica": "Duration: sem cupom = prazo; com cupom < prazo. Duration maior = preço mais sensível aos juros."
+ },
+ {
+  "pd": "1.4.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma palestra, um participante pergunta a Ricardo, profissional CPA, por que os bancos não podem emprestar todo o dinheiro que captam e o que são os acordos de Basileia.",
+  "enunciado": "Ricardo explica que os acordos de Basileia:",
+  "certa": "exigem capital proporcional ao risco dos ativos e regras de liquidez e alavancagem.",
+  "erradas": [
+   [
+    "fixam a taxa de juros máxima que os bancos podem cobrar dos clientes em cada país.",
+    "Basileia trata de capital, liquidez e alavancagem, não de teto de juros."
+   ],
+   [
+    "garantem os depósitos dos clientes até um limite por CPF, como o FGC.",
+    "A garantia de depósitos é do FGC; Basileia exige capital dos bancos."
+   ],
+   [
+    "proíbem os bancos de emprestar a empresas sem rating de grau de investimento.",
+    "Não há essa proibição; o capital exigido varia conforme o risco."
+   ]
+  ],
+  "gabarito": "Os acordos de Basileia (I, II e III), do Comitê de Basileia, recomendam padrões prudenciais adotados no Brasil pelo CMN e pelo BC: capital mínimo em proporção aos ativos ponderados pelo risco (crédito, mercado, operacional), colchões adicionais de capital, índice de liquidez de curto prazo (LCR), de liquidez estrutural (NSFR) e limite de alavancagem. O objetivo é que os bancos absorvam perdas sem contaminar a economia real.",
+  "dica": "Basileia: capital proporcional ao risco + liquidez + limite de alavancagem."
+ },
+ {
+  "pd": "1.4.1.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ivo vendeu ações na bolsa e pergunta a Diana, profissional CPA, o que acontece se o comprador, que ele nem conhece, não pagar na liquidação.",
+  "enunciado": "Diana explica que Ivo está protegido porque a B3:",
+  "certa": "atua como contraparte central e garante a liquidação com margens e garantias.",
+  "erradas": [
+   [
+    "devolve as ações a Ivo e cancela a operação, sem garantir o pagamento do valor da venda.",
+    "Com contraparte central, a liquidação é garantida a quem cumpriu sua parte."
+   ],
+   [
+    "repassa o prejuízo ao FGC, que reembolsa até R$ 250 mil por investidor.",
+    "O FGC não cobre operações em bolsa."
+   ],
+   [
+    "exige que Ivo cobre o comprador judicialmente, pois a bolsa só registra as ordens.",
+    "A B3 garante a liquidação; o investidor não precisa cobrar o comprador."
+   ]
+  ],
+  "gabarito": "A contraparte central (CCP) interpõe-se entre comprador e vendedor (novação): torna-se compradora de todo vendedor e vendedora de todo comprador, garantindo a liquidação. Para isso exige margens e garantias e mantém fundos e mecanismos de salvaguarda. Isso reduz o risco de contraparte e o risco sistêmico. A B3 atua como contraparte central nos mercados de bolsa e derivativos.",
+  "dica": "Contraparte central: a B3 fica no meio, garante a liquidação e elimina o risco de contraparte para o investidor."
+ },
+ {
+  "pd": "1.4.9",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Júlia teve prejuízo porque a corretora executou uma ordem diferente da que ela deu, e a corretora se recusa a ressarcir. Ela pergunta a Rogério, profissional CPA, a quem recorrer.",
+  "enunciado": "Rogério orienta que ela pode recorrer à:",
+  "certa": "BSM, que supervisiona os participantes da B3 e administra o mecanismo de ressarcimento de prejuízos (MRP).",
+  "erradas": [
+   [
+    "Anbima, que ressarce prejuízos de qualquer investidor causados por instituições não associadas.",
+    "A Anbima não administra ressarcimento de prejuízos em operações de bolsa."
+   ],
+   [
+    "Receita Federal, que restitui ao investidor o valor perdido por falhas de intermediários.",
+    "A Receita não tem essa função."
+   ],
+   [
+    "SUSEP, que supervisiona as corretoras de valores e indeniza investidores prejudicados.",
+    "A SUSEP supervisiona seguros; corretoras de valores são supervisionadas por BC, CVM e BSM."
+   ]
+  ],
+  "gabarito": "A BSM (BSM Supervisão de Mercados) é a autorreguladora ligada à B3: fiscaliza os participantes (corretoras) e as operações, e administra o MRP (Mecanismo de Ressarcimento de Prejuízos), que ressarce investidores, até um limite por ocorrência, por prejuízos causados por ação ou omissão de participantes, como execução infiel de ordens ou uso inadequado de recursos. O pedido é feito à BSM dentro do prazo previsto.",
+  "dica": "Erro da corretora em operação na B3? BSM e o MRP."
+ },
+ {
+  "pd": "1.4.8",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Empresa Delta busca recursos",
+  "etapa": "1/3",
+  "contexto": "A Empresa Delta, companhia aberta de logística, precisa de R$ 200 milhões para novos centros de distribuição. O diretor financeiro compara um empréstimo bancário com a emissão de debêntures vendidas diretamente a investidores e consulta Paulo, profissional CPA.",
+  "enunciado": "Paulo explica que a emissão de debêntures é um exemplo de:",
+  "certa": "desintermediação financeira: a empresa capta direto com investidores, sem crédito bancário.",
+  "erradas": [
+   [
+    "intermediação financeira, pois o banco coordenador empresta os recursos com o próprio balanço.",
+    "Na emissão de debêntures, o banco estrutura e distribui, mas quem financia são os investidores."
+   ],
+   [
+    "política monetária expansionista, pois a emissão aumenta a quantidade de moeda na economia.",
+    "Uma captação privada não é instrumento de política monetária."
+   ],
+   [
+    "operação de mercado monetário, pois os recursos são de curtíssimo prazo.",
+    "Debêntures para expansão são de longo prazo e pertencem ao mercado de capitais."
+   ]
+  ],
+  "gabarito": "Na intermediação financeira, o banco capta recursos (depósitos, CDB) e empresta com seu balanço, assumindo o risco de crédito. Na desintermediação, poupadores e tomadores se encontram diretamente no mercado de capitais (ações, debêntures, notas comerciais), e as instituições atuam como estruturadoras, distribuidoras e prestadoras de serviço. Para a empresa, pode reduzir o custo e alongar prazos.",
+  "dica": "Desintermediação: empresa capta direto com investidores (debêntures, ações), sem empréstimo bancário."
+ },
+ {
+  "pd": "1.2.2.4",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Empresa Delta busca recursos",
+  "etapa": "2/3",
+  "contexto": "Além das debêntures de longo prazo, a Delta faz no mesmo dia: um adiantamento de contrato de câmbio para receber de um cliente no exterior e um capital de giro de 6 meses com o banco. Paulo organiza as operações por mercado.",
+  "enunciado": "As debêntures de longo prazo, o adiantamento de câmbio e o capital de giro pertencem, respectivamente, aos mercados:",
+  "certa": "de capitais, cambial e de crédito.",
+  "erradas": [
+   [
+    "monetário, de capitais e cambial.",
+    "Debêntures de longo prazo não são do mercado monetário, que trata de liquidez de curtíssimo prazo."
+   ],
+   [
+    "de crédito, cambial e de capitais.",
+    "Debêntures pertencem ao mercado de capitais; capital de giro bancário é do mercado de crédito."
+   ],
+   [
+    "cambial, de crédito e monetário.",
+    "Debêntures não são operação cambial, e capital de giro não é mercado monetário."
+   ]
+  ],
+  "gabarito": "Subdivisões do mercado financeiro: monetário (operações de curtíssimo prazo para controle da liquidez, como compromissadas e DI); de crédito (empréstimos e financiamentos de curto e médio prazo feitos por instituições financeiras, como capital de giro e CDC); de capitais (financiamento de médio e longo prazo e investimentos, com ações, debêntures e notas comerciais); cambial (compra e venda de moeda estrangeira, como importação, exportação, ACC e remessas).",
+  "dica": "Monetário = liquidez de curtíssimo prazo. Crédito = empréstimos bancários. Capitais = longo prazo (ações, debêntures). Cambial = moeda estrangeira."
+ },
+ {
+  "pd": "1.3.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Empresa Delta busca recursos",
+  "etapa": "3/3",
+  "contexto": "Um dos centros custará R$ 60 milhões e deve gerar R$ 15 milhões por ano de caixa líquido. A diretoria quer saber em quanto tempo recupera o investimento, sem considerar o valor do dinheiro no tempo.",
+  "enunciado": "O payback simples do projeto é de:",
+  "certa": "4 anos.",
+  "erradas": [
+   [
+    "2 anos e meio.",
+    "60 ÷ 15 = 4 anos; 2,5 anos não corresponde à conta."
+   ],
+   [
+    "6 anos.",
+    "Seria o caso com R$ 10 milhões por ano de caixa."
+   ],
+   [
+    "15 anos.",
+    "Confunde o fluxo anual (15) com o prazo de recuperação."
+   ]
+  ],
+  "gabarito": "Payback simples é o tempo necessário para que os fluxos de caixa acumulados igualem o investimento inicial: 60 ÷ 15 = 4 anos. Não considera o valor do dinheiro no tempo nem os fluxos após a recuperação. O payback descontado traz os fluxos a valor presente antes de acumular e, por isso, resulta em prazo maior. Para decidir, é mais completo usar o VPL e a TIR.",
+  "dica": "Payback simples = investimento ÷ fluxo anual (se constante). Ignora o valor do dinheiro no tempo."
+ },
+ {
+  "pd": "2.1.1.1.1.3",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Gustavo comprou um Tesouro Prefixado com Juros Semestrais (NTN-F), cujo cupom é de 10% ao ano, pago a cada seis meses sobre o valor de face de R$ 1.000. Ele pergunta a Raquel, profissional CPA, quanto recebe em cada cupom, antes do IR.",
+  "enunciado": "Raquel informa que cada cupom semestral é de aproximadamente:",
+  "certa": "R$ 48,81, pois 10% ao ano equivale a cerca de 4,88% ao semestre em juros compostos.",
+  "erradas": [
+   [
+    "R$ 50,00, pois o cupom anual de 10% é dividido igualmente em dois pagamentos.",
+    "A taxa semestral equivalente em juros compostos é 1,10^0,5 − 1 = 4,88%, não 5%."
+   ],
+   [
+    "R$ 100,00, pois o cupom de 10% ao ano é pago integralmente em cada semestre.",
+    "Isso pagaria 20% ao ano, o dobro do cupom."
+   ],
+   [
+    "R$ 25,00, pois o cupom é pago trimestralmente e cada semestre tem dois pagamentos.",
+    "A NTN-F paga cupons semestrais."
+   ]
+  ],
+  "gabarito": "A NTN-F (Tesouro Prefixado com Juros Semestrais) paga cupom de 10% ao ano, em base semestral equivalente: (1,10)^(1/2) − 1 ≈ 4,8809% sobre o valor de face de R$ 1.000, ou seja, cerca de R$ 48,81 por semestre, mais o principal no vencimento. A NTN-B paga cupom de 6% ao ano (cerca de 2,96% ao semestre) sobre o valor corrigido pelo IPCA. Cada cupom sofre IR pela tabela regressiva.",
+  "dica": "Cupom semestral equivalente = (1 + taxa anual)^(1/2) − 1. NTN-F: 10% ao ano ≈ 4,88% ao semestre."
+ },
+ {
+  "pd": "2.1.1.1.9",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Ao revisar o contrato de financiamento habitacional e o extrato do FGTS, Clara vê em ambos a sigla TR. Ela pergunta a Juliano, profissional CPA, o que é.",
+  "enunciado": "Juliano explica que a TR (Taxa Referencial):",
+  "certa": "é calculada pelo BC e corrige poupança, FGTS e financiamento habitacional.",
+  "erradas": [
+   [
+    "é a taxa básica de juros definida pelo Copom a cada 45 dias.",
+    "A taxa básica é a Selic; a TR é outra taxa, calculada pelo BC."
+   ],
+   [
+    "é o índice oficial de inflação usado no regime de metas.",
+    "O índice oficial de inflação é o IPCA."
+   ],
+   [
+    "é a taxa cobrada pelos bancos no cheque especial e no rotativo do cartão.",
+    "A TR não tem relação com as taxas do cheque especial ou do cartão."
+   ]
+  ],
+  "gabarito": "A TR (Taxa Referencial) é calculada pelo Banco Central a partir das taxas de juros de títulos públicos (metodologia definida pelo CMN). É usada na remuneração da poupança (junto com 0,5% ao mês ou 70% da Selic), na correção do FGTS e em contratos do Sistema Financeiro da Habitação. Em períodos de juros baixos, costuma ficar próxima de zero.",
+  "dica": "TR: poupança, FGTS e financiamento habitacional. Calculada pelo BC."
+ },
+ {
+  "pd": "2.1.1.2.2.1.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma companhia precisa financiar sua expansão e avalia emitir novas ações ou emitir debêntures. O acionista Mauro pergunta a Rita, profissional CPA, a diferença entre as duas formas.",
+  "enunciado": "Rita explica corretamente que:",
+  "certa": "ações são capital próprio, sem obrigação de devolver; debêntures são capital de terceiros, com juros e prazo.",
+  "erradas": [
+   [
+    "ações e debêntures são capital de terceiros, pois os dois títulos são vendidos a investidores externos.",
+    "Quem compra ações vira sócio: é capital próprio."
+   ],
+   [
+    "debêntures tornam o investidor sócio da empresa, com direito a voto, e ações são dívidas com prazo.",
+    "É o contrário: ações dão participação; debêntures são dívida."
+   ],
+   [
+    "as duas formas obrigam a empresa a pagar dividendos fixos todos os anos aos investidores.",
+    "Debêntures pagam juros; dividendos dependem do lucro e não são fixos."
+   ]
+  ],
+  "gabarito": "Capital próprio: recursos dos sócios (ações), que participam dos resultados (dividendos) e dos riscos, sem prazo de devolução. Capital de terceiros: dívidas (empréstimos, debêntures, notas comerciais), com juros e prazos definidos, que devem ser pagos independentemente do resultado. Emitir ações dilui os sócios atuais; emitir dívida aumenta a alavancagem. O custo médio ponderado de capital (CMPC) combina os dois.",
+  "dica": "Ação = capital próprio (sócio). Debênture = capital de terceiros (credor)."
+ },
+ {
+  "pd": "2.1.1.2.2.1.7",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma empresa listada há cinco anos anuncia uma nova oferta pública de ações para captar recursos. Gabriel, acionista, pergunta a Lilian, profissional CPA, que tipo de oferta é essa e qual o efeito para quem não participar.",
+  "enunciado": "Lilian explica que se trata de um:",
+  "certa": "follow-on; quem não acompanhar a oferta pode ter sua participação diluída.",
+  "erradas": [
+   [
+    "IPO, pois toda nova emissão de ações é considerada uma oferta pública inicial.",
+    "IPO é a primeira oferta; nova oferta de empresa já listada é follow-on."
+   ],
+   [
+    "OPA, pois a empresa está comprando as ações de seus acionistas para fechar o capital.",
+    "OPA é oferta de aquisição de ações; aqui a empresa vende novas ações."
+   ],
+   [
+    "desdobramento, que aumenta o número de ações sem alterar a participação dos acionistas.",
+    "No desdobramento não há captação; na oferta primária entram novas ações e recursos."
+   ]
+  ],
+  "gabarito": "IPO: primeira oferta pública de ações (abertura de capital). Follow-on: oferta subsequente de empresa já listada, que pode ser primária (novas ações, recursos para a empresa, com possível diluição de quem não participa) ou secundária (venda de ações existentes por acionistas). OPA: oferta pública de aquisição, em que alguém se propõe a comprar ações dos acionistas, por exemplo para fechar o capital ou na troca de controle.",
+  "dica": "IPO = primeira oferta. Follow-on = nova oferta de empresa já listada. OPA = oferta para comprar ações."
+ },
+ {
+  "pd": "2.1.1.2.2.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um acionista recebe dois editais: um convoca assembleia para aprovar as demonstrações financeiras e a distribuição de dividendos do último exercício; outro convoca assembleia para alterar o estatuto e aprovar uma incorporação. Ele pergunta a Sílvio, profissional CPA, a diferença.",
+  "enunciado": "Sílvio explica que as assembleias são, respectivamente:",
+  "certa": "AGO (anual, para contas e lucros) e AGE (outros temas, como estatuto e incorporação).",
+  "erradas": [
+   [
+    "AGE e AGO, pois a aprovação de contas pode ocorrer em qualquer época do ano.",
+    "As contas e a destinação do lucro são matérias da AGO, realizada anualmente."
+   ],
+   [
+    "duas AGOs, pois toda assembleia que trata de dividendos ou estatuto é ordinária.",
+    "Alteração do estatuto e incorporação são matérias de AGE."
+   ],
+   [
+    "reuniões do conselho fiscal, pois a assembleia de acionistas não delibera sobre esses temas.",
+    "Esses temas são de competência da assembleia geral de acionistas."
+   ]
+  ],
+  "gabarito": "Pela Lei das S.A., a AGO (assembleia geral ordinária) ocorre anualmente nos 4 primeiros meses após o fim do exercício para: tomar as contas dos administradores e aprovar as demonstrações financeiras, deliberar sobre a destinação do lucro e os dividendos e eleger administradores e conselheiros fiscais, quando for o caso. A AGE (extraordinária) trata dos demais assuntos, como reforma do estatuto, fusão, incorporação, cisão e aumento de capital fora do autorizado.",
+  "dica": "AGO: anual (até 4 meses), contas, lucros e eleições. AGE: o resto (estatuto, fusão, incorporação)."
+ },
+ {
+  "pd": "2.1.1.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Em um mês, Wilson vendeu R$ 15.000 em cotas de um ETF de ações, com lucro de R$ 2.000, e não fez outras operações. Ele acredita estar isento, como nas ações. Pergunta a Helena, profissional CPA.",
+  "enunciado": "Helena explica corretamente que:",
+  "certa": "o lucro é tributado em 15%, pois a isenção de vendas até R$ 20 mil não vale para ETFs.",
+  "erradas": [
+   [
+    "o lucro é isento, pois ETFs de ações seguem as mesmas regras das ações à vista.",
+    "A isenção de R$ 20 mil é exclusiva de ações no mercado à vista em operações comuns."
+   ],
+   [
+    "o lucro é tributado em 20%, a alíquota usada para todos os fundos negociados em bolsa.",
+    "20% é a alíquota de FII e de day trade; ETF de ações em operação comum paga 15%."
+   ],
+   [
+    "o IR é retido automaticamente pelo administrador do ETF no momento da venda, com alíquota de 22,5%.",
+    "O IR sobre ganho com ETF negociado em bolsa é apurado pelo investidor e pago por DARF."
+   ]
+  ],
+  "gabarito": "ETFs (fundos de índice) negociados em bolsa: ETF de renda variável paga 15% sobre o ganho em operações comuns (20% em day trade), sem a isenção de R$ 20 mil, com recolhimento por DARF pelo investidor. ETFs de renda fixa têm regras próprias, baseadas no prazo da carteira. A isenção de vendas até R$ 20 mil por mês vale só para ações à vista em operações comuns.",
+  "dica": "ETF de ações: 15%, sem isenção de R$ 20 mil. Isenção é só para ações à vista."
+ },
+ {
+  "pd": "2.1.2.2.13",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Pedro aplicou em um fundo pela plataforma de uma corretora que atua por conta e ordem. Ele recebeu um aviso de assembleia de cotistas e pergunta a Mônica, profissional CPA, se pode votar, já que no registro do fundo aparece o nome da corretora.",
+  "enunciado": "Mônica explica corretamente que:",
+  "certa": "Pedro pode votar; a corretora deve repassar as comunicações e viabilizar sua participação.",
+  "erradas": [
+   [
+    "somente a corretora vota, pois ela é a titular das cotas perante o administrador do fundo.",
+    "Na conta e ordem, o investidor é o titular final e mantém seus direitos políticos."
+   ],
+   [
+    "Pedro só pode votar se transferir as cotas para o seu nome diretamente no administrador.",
+    "Não é preciso transferir; o distribuidor viabiliza a participação."
+   ],
+   [
+    "investidores por conta e ordem não recebem comunicações nem têm direito de voto em fundos.",
+    "O distribuidor deve repassar as comunicações e permitir o exercício do voto."
+   ]
+  ],
+  "gabarito": "Na distribuição por conta e ordem, o distribuidor subscreve cotas em nome dos seus clientes, mantendo o cadastro e o controle individualizado de cada investidor. O investidor continua titular das cotas e tem os mesmos direitos dos demais cotistas, inclusive o de votar em assembleias. O distribuidor deve repassar convocações e comunicações e viabilizar a participação.",
+  "dica": "Conta e ordem: o distribuidor aparece no registro, mas o investidor é o cotista e vota."
+ },
+ {
+  "pd": "2.1.2.2.18",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "O gestor de uma classe de fundo propõe aumentar a taxa de administração e substituir o custodiante. Um cotista pergunta a Lucas, profissional CPA, se o gestor pode decidir isso sozinho.",
+  "enunciado": "Lucas explica que:",
+  "certa": "o aumento de taxa exige aprovação em assembleia de cotistas, conforme o regulamento e a CVM 175.",
+  "erradas": [
+   [
+    "o gestor pode aumentar as taxas livremente, bastando comunicar os cotistas com 5 dias de antecedência.",
+    "Aumento de taxas é matéria de assembleia, não decisão unilateral."
+   ],
+   [
+    "as taxas só podem ser alteradas pela CVM, mediante pedido formal do administrador.",
+    "A CVM não aprova taxas de cada fundo; quem delibera são os cotistas."
+   ],
+   [
+    "os cotistas só votam em assembleia sobre a liquidação do fundo, e não sobre taxas.",
+    "As assembleias deliberam sobre vários temas, como taxas, prestadores, regulamento e fusões."
+   ]
+  ],
+  "gabarito": "Pela CVM 175, compete à assembleia de cotistas deliberar, entre outros, sobre: demonstrações contábeis; substituição de prestadores de serviços essenciais; fusão, incorporação, cisão, transformação ou liquidação; aumento das taxas; alteração do regulamento. A assembleia geral reúne os cotistas do fundo; a assembleia especial, só os de uma classe ou subclasse, para temas específicos dela. Reduções de taxa podem dispensar assembleia.",
+  "dica": "Aumento de taxa, troca de prestador essencial, fusão e liquidação → assembleia de cotistas."
+ },
+ {
+  "pd": "2.1.2.3.6.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente pessoa física quer exposição a infraestrutura com benefício fiscal, mas sem escolher debêntures individualmente. Pergunta a Sueli, profissional CPA, se há fundos com essa característica.",
+  "enunciado": "Sueli indica os Fundos Incentivados em Infraestrutura (FI-Infra), cujos rendimentos:",
+  "certa": "são isentos de IR para pessoa física, pois a carteira se concentra em debêntures incentivadas.",
+  "erradas": [
+   [
+    "sofrem come-cotas de 15%, como os demais fundos de renda fixa de longo prazo.",
+    "FI-Infra que cumpre os requisitos dá isenção à pessoa física, sem come-cotas."
+   ],
+   [
+    "são garantidos pelo FGC, pois financiam projetos de interesse público.",
+    "Fundos não têm FGC."
+   ],
+   [
+    "são isentos para qualquer investidor, inclusive pessoas jurídicas e fundos de pensão.",
+    "A isenção é para pessoa física; pessoas jurídicas têm tributação própria."
+   ]
+  ],
+  "gabarito": "Os FI-Infra (Lei 12.431/2011) investem majoritariamente em debêntures incentivadas de infraestrutura. Para pessoa física, os rendimentos e ganhos são isentos de IR, desde que o fundo cumpra os requisitos de enquadramento. Muitos são negociados em bolsa (cotas listadas). Os riscos incluem crédito dos emissores, juros (títulos longos) e liquidez.",
+  "dica": "FI-Infra: carteira de debêntures incentivadas, isento para pessoa física."
+ },
+ {
+  "pd": "2.1.3.1",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Paula resgatou cotas de um fundo de renda fixa de longo prazo com prejuízo. No mês seguinte, teve ganho em outro fundo de renda fixa de longo prazo do mesmo administrador. Pergunta a Otávio, profissional CPA, se pode abater o prejuízo.",
+  "enunciado": "Otávio explica corretamente que:",
+  "certa": "pode compensá-lo em fundo do mesmo administrador e mesma classificação tributária.",
+  "erradas": [
+   [
+    "prejuízos em fundos nunca podem ser compensados, pois o IR é retido na fonte em definitivo.",
+    "A legislação permite compensar prejuízos em fundos, observadas as condições."
+   ],
+   [
+    "o prejuízo pode ser compensado com ganhos em ações na bolsa, declarados no mesmo mês.",
+    "A compensação ocorre entre fundos, nas condições da norma, e não com renda variável."
+   ],
+   [
+    "o prejuízo só pode ser compensado na declaração anual de IR, como despesa dedutível.",
+    "A compensação é feita pelo administrador no cálculo do IR na fonte, e não na declaração."
+   ]
+  ],
+  "gabarito": "Pelas regras da Receita, perdas em resgates de cotas de fundos podem ser compensadas com rendimentos de resgates posteriores no mesmo fundo ou em outro fundo administrado pela mesma pessoa jurídica, desde que tenham a mesma classificação tributária (curto prazo, longo prazo, ações). O administrador mantém o controle e aplica a compensação na retenção do IR.",
+  "dica": "Prejuízo em fundo: compensa com ganho em fundo do mesmo administrador e mesma classificação tributária."
+ },
+ {
+  "pd": "2.1.4.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ronaldo pergunta a Bianca, profissional CPA, por que os FIIs pagam rendimentos todos os meses e se o gestor pode decidir reter todo o lucro para reinvestir.",
+  "enunciado": "Bianca explica que, por lei, os FIIs devem:",
+  "certa": "distribuir ao menos 95% do lucro apurado pelo regime de caixa, a cada semestre.",
+  "erradas": [
+   [
+    "distribuir 100% do patrimônio líquido todos os meses, sem possibilidade de reinvestir.",
+    "A regra é distribuir 95% do lucro de caixa, não o patrimônio."
+   ],
+   [
+    "distribuir apenas 25% do lucro, como o dividendo mínimo das sociedades anônimas.",
+    "25% é a referência da Lei das S.A. para companhias; FII segue a regra de 95%."
+   ],
+   [
+    "reter todo o lucro até a liquidação do fundo, quando ele é pago aos cotistas.",
+    "Os FIIs são obrigados a distribuir ao menos 95% do lucro semestralmente."
+   ]
+  ],
+  "gabarito": "Pela Lei 8.668/1993, o FII deve distribuir aos cotistas, no mínimo, 95% dos lucros auferidos, apurados pelo regime de caixa, com base em balanço semestral. Muitos fundos antecipam pagamentos mensais. O restante pode ser retido. Rendimentos de FII são isentos para pessoa física nas condições legais, e o ganho de capital na venda das cotas paga 20%.",
+  "dica": "FII: distribuir ao menos 95% do lucro de caixa a cada semestre (muitos pagam mensalmente)."
+ },
+ {
+  "pd": "2.2.2.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Neuza, 58 anos, tem um VGBL no regime progressivo e fará um resgate parcial. Ela pergunta a Mário, profissional CPA, quanto será retido de imposto e se esse é o valor final.",
+  "enunciado": "Mário explica corretamente que, no regime progressivo:",
+  "certa": "o resgate tem retenção antecipada de 15%, e o valor final é ajustado na declaração anual.",
+  "erradas": [
+   [
+    "o resgate tem retenção definitiva de 35%, por ser a primeira faixa da tabela.",
+    "35% é a primeira faixa do regime regressivo, que é definitivo."
+   ],
+   [
+    "não há retenção no resgate, e todo o imposto é pago apenas na declaração anual.",
+    "No progressivo há retenção de 15% na fonte em resgates."
+   ],
+   [
+    "o resgate é isento após 10 anos de plano, independentemente da renda do participante.",
+    "Nenhum regime isenta resgates após 10 anos."
+   ]
+  ],
+  "gabarito": "Regime progressivo (compensável): em resgates, retenção de 15% na fonte, como antecipação; na declaração anual, o valor entra como rendimento tributável e o imposto é recalculado pela tabela progressiva, podendo gerar restituição ou imposto a pagar. Na renda mensal (benefício), aplica-se a tabela progressiva mensal. No VGBL, a base é só o rendimento; no PGBL, o valor total.",
+  "dica": "Progressivo: retém 15% no resgate e ajusta na declaração. Regressivo: definitivo, de 35% a 10%."
+ },
+ {
+  "pd": "2.3.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Valter usa o cheque especial com frequência e acha que os juros não têm limite. Pergunta a Lúcia, profissional CPA, se existe alguma regra.",
+  "enunciado": "Lúcia explica corretamente que:",
+  "certa": "os juros do cheque especial de pessoa física são limitados a 8% ao mês, e há IOF sobre o uso.",
+  "erradas": [
+   [
+    "os juros do cheque especial são livres, e cada banco cobra a taxa que quiser, sem teto.",
+    "Desde 2020 há teto de 8% ao mês para pessoa física e microempresa individual."
+   ],
+   [
+    "o cheque especial é isento de IOF, por ser crédito pré-aprovado no contrato da conta.",
+    "O uso do cheque especial tem IOF, com parcela fixa e parcela diária."
+   ],
+   [
+    "os juros incidem sobre todo o limite disponível, mesmo que não seja utilizado.",
+    "Os juros incidem sobre o valor efetivamente utilizado, pelos dias de uso."
+   ]
+  ],
+  "gabarito": "Pela Resolução CMN 4.765/2019, os juros do cheque especial para pessoa física e MEI são limitados a 8% ao mês. Os juros incidem sobre o saldo devedor efetivamente utilizado, pelos dias de uso. Há IOF com alíquota fixa e alíquota diária. Mesmo com teto, é uma linha cara, adequada só para emergências de curtíssimo prazo.",
+  "dica": "Cheque especial: teto de 8% ao mês (pessoa física e MEI), juros só sobre o valor usado, mais IOF."
+ },
+ {
+  "pd": "2.3.8",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ana quer comprar um carro em 5 anos e pensa em entrar em um consórcio em vez de financiar. Pergunta a Marcelo, profissional CPA, como funciona.",
+  "enunciado": "Marcelo explica corretamente que, no consórcio:",
+  "certa": "não há juros, mas há taxa de administração, e o bem sai por sorteio ou lance, supervisionado pelo BC.",
+  "erradas": [
+   [
+    "o bem é entregue imediatamente após a assinatura, e as parcelas incluem juros compostos.",
+    "A entrega depende da contemplação; não há juros, mas há taxa de administração."
+   ],
+   [
+    "a administradora é supervisionada pela SUSEP, e o grupo tem garantia do FGC.",
+    "Administradoras de consórcio são supervisionadas pelo BC, e não há FGC."
+   ],
+   [
+    "o participante pode ser contemplado apenas no último mês do grupo, para garantir a igualdade.",
+    "A contemplação ocorre ao longo do grupo, por sorteio ou lance."
+   ]
+  ],
+  "gabarito": "Consórcio é a reunião de pessoas em grupo para formar poupança comum e adquirir bens ou serviços. Não há juros; os custos são a taxa de administração, o fundo de reserva e eventuais seguros. A contemplação ocorre por sorteio ou lance (que pode antecipar a contemplação). As parcelas costumam ser corrigidas pelo preço do bem. As administradoras são autorizadas e supervisionadas pelo BC (Lei 11.795/2008).",
+  "dica": "Consórcio: sem juros, com taxa de administração; contemplação por sorteio ou lance; supervisão do BC."
+ },
+ {
+  "pd": "2.4.1.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Cristina, autônoma, recebe pagamentos de clientes por Pix e também paga contas pessoais por Pix. Ela pergunta a Rafael, profissional CPA, se pode ser cobrada por isso e o que fazer se cair em um golpe.",
+  "enunciado": "Rafael explica corretamente que:",
+  "certa": "para pessoa física, enviar e receber Pix é, em regra, gratuito; em fraude, pode-se pedir o MED.",
+  "erradas": [
+   [
+    "todo Pix tem tarifa de 1% para pessoas físicas, cobrada pelo banco do pagador.",
+    "Para pessoa física, enviar e receber Pix é gratuito, salvo situações específicas previstas na regra."
+   ],
+   [
+    "o Pix funciona só em dias úteis, das 8h às 17h, e pode ser cancelado pelo pagador em até 24 horas.",
+    "O Pix funciona 24 horas por dia, todos os dias; não há cancelamento livre pelo pagador."
+   ],
+   [
+    "em caso de golpe, o Banco Central devolve automaticamente o valor com recursos próprios.",
+    "O MED busca recuperar os recursos na conta do recebedor; não há reembolso pelo BC."
+   ]
+  ],
+  "gabarito": "Pix: pagamento instantâneo do Banco Central, disponível 24/7, liquidado pelo SPI. Para pessoa física, enviar e receber Pix para compras e transferências é, em regra, gratuito (há exceções, como o recebimento com finalidade comercial em certos casos); pessoas jurídicas podem ser tarifadas. As chaves (CPF/CNPJ, e-mail, celular, aleatória) identificam contas. Em fraude ou falha operacional, o MED (Mecanismo Especial de Devolução) permite bloquear e devolver recursos na conta do recebedor.",
+  "dica": "Pix: 24/7, gratuito para pessoa física em regra, PJ pode pagar tarifa; golpe → MED."
+ },
+ {
+  "pd": "2.4.2.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Viagem da família Lopes",
+  "etapa": "1/3",
+  "contexto": "A família Lopes vai passar um mês na Europa e quer evitar levar muito dinheiro em espécie. Pergunta a Sandra, profissional CPA, sobre as contas internacionais oferecidas por bancos e fintechs.",
+  "enunciado": "Sandra explica que, entre as facilidades dessas contas, está:",
+  "certa": "converter reais em moeda estrangeira antes e pagar com cartão de débito lá fora.",
+  "erradas": [
+   [
+    "eliminar qualquer cobrança de IOF, pois a conversão é feita fora do Brasil.",
+    "A conversão de reais para moeda estrangeira tem IOF, em qualquer canal."
+   ],
+   [
+    "garantir a cotação do câmbio do dia da abertura da conta para todas as compras futuras.",
+    "Cada conversão usa a cotação do momento em que é feita."
+   ],
+   [
+    "contar com a garantia do FGC sobre o saldo mantido em moeda estrangeira no exterior.",
+    "Saldos em contas no exterior não têm cobertura do FGC brasileiro."
+   ]
+  ],
+  "gabarito": "Contas internacionais (contas globais) permitem converter reais em moeda estrangeira com antecedência, mantendo saldo em dólar ou euro e usando cartão de débito no exterior. Vantagens: previsibilidade do custo, conversões em vários momentos (diluindo o risco cambial) e spreads em geral menores que os do cartão de crédito. Há IOF na conversão, e o saldo no exterior não tem FGC.",
+  "dica": "Conta global: converte antes, usa débito lá fora; tem IOF e não tem FGC."
+ },
+ {
+  "pd": "2.4.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Viagem da família Lopes",
+  "etapa": "2/3",
+  "contexto": "O Sr. Lopes também quer enviar recursos para investir em ações no exterior e pergunta a Sandra se o IOF é o mesmo da conversão para gastos de viagem.",
+  "enunciado": "Sandra explica que:",
+  "certa": "o IOF de câmbio varia conforme a finalidade, e remessas para investimento têm alíquota própria.",
+  "erradas": [
+   [
+    "o IOF de câmbio é único para qualquer operação, inclusive compras com cartão e investimentos.",
+    "As alíquotas do IOF-câmbio variam conforme a natureza da operação."
+   ],
+   [
+    "remessas para investimento são isentas de IOF e de imposto de renda no Brasil.",
+    "Há IOF na remessa, e os ganhos no exterior são tributados no Brasil."
+   ],
+   [
+    "o IOF só é cobrado na volta dos recursos ao Brasil, e não na ida.",
+    "O IOF-câmbio incide na operação de câmbio, inclusive no envio."
+   ]
+  ],
+  "gabarito": "O IOF-câmbio tem alíquotas diferentes conforme a natureza da operação (compras com cartão no exterior, compra de moeda em espécie, transferências para conta própria, remessas para investimento etc.), definidas por decreto e alteradas ao longo do tempo. A finalidade deve ser declarada corretamente no contrato de câmbio. Além disso, rendimentos e ganhos de aplicações no exterior de residentes no Brasil são tributados no Brasil (Lei 14.754/2023).",
+  "dica": "IOF-câmbio varia pela finalidade; remessa para investimento tem alíquota própria. Ganho lá fora paga IR aqui."
+ },
+ {
+  "pd": "2.4.3.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Viagem da família Lopes",
+  "etapa": "3/3",
+  "contexto": "Na volta, a família tem 800 euros em espécie sobrando e quer trocá-los por reais. Antes de fechar, compara as propostas de duas casas de câmbio.",
+  "enunciado": "Sandra orienta que a comparação seja feita pelo:",
+  "certa": "VET (Valor Efetivo Total), que soma taxa de câmbio, tarifas e tributos.",
+  "erradas": [
+   [
+    "valor da cotação PTAX, que é a taxa obrigatória para todas as casas de câmbio.",
+    "A PTAX é referência do BC; cada instituição pratica sua própria taxa."
+   ],
+   [
+    "valor da tarifa fixa cobrada por operação, que define sozinho a melhor proposta.",
+    "A tarifa é só um componente; o VET reúne todos os custos."
+   ],
+   [
+    "menor spread anunciado em cartaz, pois o IOF não incide na recompra de moeda.",
+    "O spread não mostra todos os custos; o VET é a medida completa."
+   ]
+  ],
+  "gabarito": "Na compra e venda de moeda estrangeira, as instituições devem informar o VET (Valor Efetivo Total), que representa o custo total da operação em reais por unidade de moeda estrangeira, considerando taxa de câmbio, tarifas e tributos. É o indicador para comparar propostas. A PTAX, calculada pelo BC com base nas operações do dia, é taxa de referência, não obrigatória para o varejo.",
+  "dica": "Câmbio: compare pelo VET (taxa + tarifas + tributos). PTAX é só referência."
+ },
+ {
+  "pd": "2.5.2.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Após uma batida leve, Cauã descobre que terá de pagar R$ 3.000 do conserto, e o seguro cobre o restante. Ele reclama com Bruna, profissional CPA, dizendo que “pagou o seguro à toa”.",
+  "enunciado": "Bruna explica que esse valor corresponde à:",
+  "certa": "franquia, a parte do prejuízo paga pelo segurado em sinistro parcial.",
+  "erradas": [
+   [
+    "prêmio, que o segurado paga a cada sinistro para acionar a cobertura do seguro.",
+    "Prêmio é o valor pago pela contratação do seguro, não pelo sinistro."
+   ],
+   [
+    "indenização, que é o valor pago pelo segurado à seguradora em caso de batida.",
+    "Indenização é paga pela seguradora ao segurado ou ao terceiro."
+   ],
+   [
+    "carência, período em que o segurado deve pagar integralmente qualquer conserto.",
+    "Carência é o prazo inicial sem cobertura, previsto em certos seguros."
+   ]
+  ],
+  "gabarito": "Termos do seguro: prêmio (valor pago pelo segurado pela cobertura); apólice (contrato); sinistro (evento coberto); indenização (valor pago pela seguradora); franquia (participação obrigatória do segurado nos prejuízos de sinistros parciais; em geral não se aplica à perda total); bônus (desconto na renovação para quem não teve sinistros). Franquias maiores reduzem o prêmio.",
+  "dica": "Franquia = parte do conserto paga pelo segurado em sinistro parcial. Prêmio = preço do seguro."
+ },
+ {
+  "pd": "2.5.2.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Lia contratou um seguro residencial com cobertura básica e, depois de um vendaval, descobre que o destelhamento não foi coberto. Pergunta a Hugo, profissional CPA, o que a cobertura básica inclui.",
+  "enunciado": "Hugo explica que a cobertura básica do seguro residencial normalmente abrange:",
+  "certa": "incêndio, queda de raio e explosão; vendaval e roubo são adicionais.",
+  "erradas": [
+   [
+    "todos os danos ao imóvel e aos bens, sem necessidade de coberturas adicionais.",
+    "A cobertura básica é restrita; outros riscos exigem contratação adicional."
+   ],
+   [
+    "apenas roubo e furto de bens, sem cobrir danos ao imóvel.",
+    "Roubo costuma ser cobertura adicional; a básica protege contra incêndio, raio e explosão."
+   ],
+   [
+    "danos causados por vendaval e alagamento, que são os riscos mais frequentes.",
+    "Esses são, em geral, coberturas adicionais."
+   ]
+  ],
+  "gabarito": "No seguro residencial, a cobertura básica costuma incluir incêndio, queda de raio e explosão. Coberturas adicionais podem incluir vendaval, roubo e furto qualificado, danos elétricos, responsabilidade civil, alagamento, quebra de vidros e assistência 24 horas. A apólice define limites, franquias e exclusões. Ler as condições gerais evita surpresas.",
+  "dica": "Residencial básico: incêndio, raio, explosão. Vendaval, roubo e danos elétricos são adicionais."
+ }
+]

@@ -1,0 +1,490 @@
+[
+ {
+  "pd": "3.4.1.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Clara, nova profissional CPA",
+  "etapa": "1/4",
+  "contexto": "Clara foi contratada por um banco para atender clientes na distribuição de produtos de investimento. No primeiro dia, o gestor descobre que a certificação CPA dela venceu há dois meses e não foi atualizada.",
+  "enunciado": "A orientação correta é que Clara:",
+  "certa": "não exerça as atividades que exigem a certificação até regularizá-la, como manda o código Anbima.",
+  "erradas": [
+   [
+    "continue atendendo normalmente, pois a certificação vencida mantém a validade por mais um ano.",
+    "Não há prorrogação automática; vencida, a certificação perde a validade."
+   ],
+   [
+    "atenda apenas clientes antigos do banco, que dispensam a exigência de certificação.",
+    "A exigência vale para a atividade, independentemente de o cliente ser antigo."
+   ],
+   [
+    "peça a outro profissional certificado que assine as operações feitas por ela.",
+    "Usar a certificação de outra pessoa é conduta irregular."
+   ]
+  ],
+  "gabarito": "A manutenção da certificação é responsabilidade do próprio profissional, que deve acompanhar o vencimento e concluir a atualização no prazo (para a CPA, microcertificações no ANBIMA Edu e pagamento da taxa). Com a certificação vencida, o profissional não pode exercer atividades em que ela é exigida pelas instituições aderentes ao código, até se regularizar ou ser aprovado em novo exame. A instituição também deve controlar a situação de seus profissionais.",
+  "dica": "Certificação vencida = não pode exercer a atividade que a exige até regularizar."
+ },
+ {
+  "pd": "3.4.3.3.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Clara, nova profissional CPA",
+  "etapa": "2/4",
+  "contexto": "Já com a certificação em dia, Clara recebe na carteira de clientes o cunhado, que pede para ela cuidar das aplicações dele “com carinho especial”, inclusive em ofertas com poucas vagas.",
+  "enunciado": "A conduta mais adequada de Clara é:",
+  "certa": "informar o vínculo ao gestor e ao compliance e seguir as regras da instituição, sem favorecer o cunhado.",
+  "erradas": [
+   [
+    "dar prioridade ao cunhado nas ofertas com poucas vagas, pois a relação familiar gera confiança.",
+    "Favorecer parente em detrimento de outros clientes é conflito de interesses e prática não equitativa."
+   ],
+   [
+    "recusar o atendimento, pois a regulação proíbe que parentes sejam clientes da mesma instituição.",
+    "Não há proibição; exige-se transparência e tratamento equitativo."
+   ],
+   [
+    "atender o cunhado sem registrar o vínculo, para preservar a privacidade da família.",
+    "O vínculo deve ser declarado para que a instituição gerencie o conflito."
+   ]
+  ],
+  "gabarito": "Relações pessoais e familiares com clientes podem gerar conflitos de interesses reais ou aparentes. As boas práticas exigem declarar o vínculo, seguir as políticas internas (que podem prever redistribuição do atendimento) e garantir tratamento equitativo a todos os clientes, sem privilégios em alocação de ofertas, preços ou informações.",
+  "dica": "Parente como cliente: declarar o vínculo, seguir as políticas e tratar todos de forma igual."
+ },
+ {
+  "pd": "3.4.4.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Clara, nova profissional CPA",
+  "etapa": "3/4",
+  "contexto": "Animada com uma grande captação, Clara pensa em postar nas redes sociais uma foto da tela com o nome e o valor aplicado pelo cliente, para celebrar a conquista.",
+  "enunciado": "A postagem seria inadequada principalmente porque:",
+  "certa": "expõe dados sigilosos do cliente, viola sigilo bancário e LGPD e cria risco de imagem para a instituição.",
+  "erradas": [
+   [
+    "só seria um problema se o cliente fosse pessoa jurídica, pois dados de pessoa física são públicos.",
+    "Dados de pessoas físicas são protegidos por sigilo bancário e LGPD."
+   ],
+   [
+    "só seria um problema se Clara usasse o perfil oficial do banco, e não o pessoal.",
+    "A exposição de dados do cliente é indevida em qualquer perfil."
+   ],
+   [
+    "é adequada, pois mostrar resultados atrai novos clientes e não envolve risco para o banco.",
+    "Expor clientes gera riscos legal, regulatório e de imagem."
+   ]
+  ],
+  "gabarito": "O profissional deve preservar o sigilo das informações dos clientes (LC 105/2001) e tratar dados pessoais conforme a LGPD. Publicar dados de clientes, mesmo com boa intenção, expõe a instituição a riscos legais, regulatórios e de imagem (reputacional), e o profissional a sanções. Comunicações em redes sociais devem seguir as políticas da instituição.",
+  "dica": "Nunca publique dados de cliente: sigilo, LGPD e risco de imagem."
+ },
+ {
+  "pd": "3.4.6.7",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Clara, nova profissional CPA",
+  "etapa": "4/4",
+  "contexto": "Um cliente de longa data, com renda compatível e sem histórico suspeito, deposita R$ 60.000 em espécie, explicando que vendeu um carro a um particular. Clara se pergunta se algo precisa ser comunicado.",
+  "enunciado": "Pelas regras de PLD do Banco Central, a instituição deve:",
+  "certa": "comunicar ao COAF o depósito em espécie a partir de R$ 50 mil, independentemente de suspeita.",
+  "erradas": [
+   [
+    "não comunicar nada, pois a explicação do cliente afasta qualquer obrigação de comunicação.",
+    "Depósitos em espécie acima do limite são comunicados sempre, mesmo sem suspeita."
+   ],
+   [
+    "recusar o depósito, pois bancos não podem receber valores em espécie acima de R$ 10 mil.",
+    "Não há essa proibição; há obrigação de registro e comunicação."
+   ],
+   [
+    "avisar o cliente de que o depósito será comunicado e pedir sua autorização formal.",
+    "A comunicação é obrigação legal e não depende de autorização; não se deve alertar o cliente."
+   ]
+  ],
+  "gabarito": "A Circular BC 3.978/2020 prevê comunicação ao COAF de operações em espécie (depósitos, saques, pedidos de provisionamento) de valor igual ou superior a R$ 50 mil, independentemente de análise de suspeita. Além disso, operações com indícios de lavagem devem ser comunicadas após análise. As instituições devem registrar as operações e manter as informações pelo prazo regulamentar.",
+  "dica": "Espécie a partir de R$ 50 mil: comunicação automática ao COAF, mesmo sem suspeita."
+ },
+ {
+  "pd": "3.1.3.3.6",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um casal com renda líquida de R$ 12.000 por mês quer financiar um apartamento e recebeu simulação com parcela inicial de R$ 5.500. Eles perguntam a Felipe, profissional CPA, se é uma boa ideia.",
+  "enunciado": "Felipe orienta corretamente que:",
+  "certa": "a parcela compromete cerca de 46% da renda, acima do recomendado; vale mais entrada ou prazo maior.",
+  "erradas": [
+   [
+    "a parcela está adequada, pois financiamentos imobiliários podem comprometer até 70% da renda.",
+    "Bancos costumam limitar a parcela a cerca de 30% da renda; 46% é arriscado."
+   ],
+   [
+    "a parcela é irrelevante, pois o imóvel valoriza e compensa qualquer esforço financeiro.",
+    "Valorização não paga as parcelas; o orçamento precisa ser sustentável."
+   ],
+   [
+    "devem aceitar a proposta, já que o financiamento imobiliário não admite renegociação futura.",
+    "Há alternativas, como portabilidade e amortizações extras, mas o risco inicial deve ser avaliado."
+   ]
+  ],
+  "gabarito": "No financiamento imobiliário, considera-se o comprometimento de renda (as instituições costumam limitar a parcela a cerca de 30% da renda), a entrada (mais entrada, menos juros), o prazo, o sistema de amortização (SAC ou Price), o CET (juros, seguros obrigatórios de morte e invalidez e de danos físicos, tarifas) e a reserva de emergência. O uso do FGTS no SFH pode ajudar na entrada ou na amortização.",
+  "dica": "Financiamento imobiliário: parcela até cerca de 30% da renda; compare pelo CET; mais entrada, menos juros."
+ },
+ {
+  "pd": "3.1.3.3.12",
+  "dif": "Fácil",
+  "nivel": "Aplicação",
+  "contexto": "Rui gasta R$ 600 por mês de energia elétrica e recebe proposta de financiamento de painéis solares com parcela de R$ 450 por 5 anos, com expectativa de reduzir a conta para R$ 100. Ele pergunta a Taís, profissional CPA, como avaliar.",
+  "enunciado": "Taís orienta que a análise deve considerar:",
+  "certa": "se a economia na conta cobre a parcela, o custo total (CET) e o prazo de retorno.",
+  "erradas": [
+   [
+    "apenas o valor da parcela, pois o financiamento sustentável é sempre isento de juros.",
+    "Linhas sustentáveis podem ter condições melhores, mas não são automaticamente isentas de juros."
+   ],
+   [
+    "apenas a economia de energia, pois o custo do financiamento é irrelevante em projetos verdes.",
+    "O custo do crédito precisa ser comparado à economia gerada."
+   ],
+   [
+    "a valorização do imóvel, que é o único benefício financeiro dos painéis solares.",
+    "O principal benefício financeiro é a redução da conta de energia."
+   ]
+  ],
+  "gabarito": "Crédito para energia sustentável (painéis solares, eficiência energética) deve ser analisado como qualquer financiamento: comparar o CET entre propostas, verificar se a economia mensal cobre a parcela (aqui, economia de R$ 500 e parcela de R$ 450), calcular o payback do investimento e considerar vida útil, manutenção e garantias dos equipamentos.",
+  "dica": "Crédito sustentável: economia gerada versus parcela, CET e payback."
+ },
+ {
+  "pd": "3.1.5.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Ao ser perguntada sobre seus objetivos, uma cliente diz a Rodrigo, profissional CPA: “Quero ter bastante dinheiro um dia”.",
+  "enunciado": "Para estabelecer metas financeiras adequadas, Rodrigo deve ajudá-la a:",
+  "certa": "transformar o desejo em metas específicas, com valor, prazo e prioridade definidos.",
+  "erradas": [
+   [
+    "manter o objetivo amplo, para não limitar as possibilidades de investimento da cliente.",
+    "Objetivos vagos não permitem calcular aportes nem escolher produtos adequados."
+   ],
+   [
+    "escolher primeiro o produto mais rentável e definir a meta depois, conforme o resultado.",
+    "A meta orienta a escolha dos produtos, e não o contrário."
+   ],
+   [
+    "definir uma meta igual à média dos clientes da mesma idade, como padrão da instituição.",
+    "As metas devem ser personalizadas."
+   ]
+  ],
+  "gabarito": "Metas financeiras devem ser específicas, mensuráveis, atingíveis, relevantes e com prazo (critério SMART). Exemplo: “acumular R$ 40 mil para a entrada de um imóvel em 4 anos”. Com valor e prazo, calcula-se o aporte necessário e escolhem-se produtos compatíveis com o horizonte e o perfil. Metas devem ser priorizadas e revisadas periodicamente.",
+  "dica": "Meta boa: específica, mensurável, com valor, prazo e prioridade."
+ },
+ {
+  "pd": "3.2.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "A carteira de Diogo foi planejada com 70% em renda fixa e 30% em ações. Após um ano de forte alta da bolsa, passou a ter 55% em renda fixa e 45% em ações. Ele pergunta a Sílvia, profissional CPA, se deve fazer algo.",
+  "enunciado": "Sílvia recomenda:",
+  "certa": "rebalancear a carteira para a alocação planejada, coerente com o perfil e os objetivos.",
+  "erradas": [
+   [
+    "vender toda a parte em ações, pois a alta forte indica que a bolsa vai cair em seguida.",
+    "Tentar prever o mercado não é a lógica do rebalanceamento; o objetivo é manter o risco planejado."
+   ],
+   [
+    "manter a carteira como está, pois a alocação deve sempre acompanhar o desempenho dos ativos.",
+    "Sem rebalancear, o risco da carteira fica acima do planejado."
+   ],
+   [
+    "aumentar a parcela em ações para 60%, para aproveitar a tendência de alta.",
+    "Aumentar a exposição foge da alocação adequada ao perfil."
+   ]
+  ],
+  "gabarito": "Na gestão de investimentos, define-se uma alocação estratégica coerente com perfil, objetivos e horizonte. Com as oscilações dos mercados, os pesos se desviam e o risco muda. O rebalanceamento periódico (por tempo ou por faixas de desvio) devolve a carteira à alocação-alvo, vendendo o que subiu mais e comprando o que ficou para trás, o que ajuda a disciplinar o investidor.",
+  "dica": "Rebalancear = voltar à alocação planejada. Controla o risco e evita decisões por impulso."
+ },
+ {
+  "pd": "3.3.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Dois fundos tiveram rentabilidade média de 12% ao ano nos últimos 5 anos. No fundo A, os retornos anuais variaram entre 10% e 14%; no fundo B, entre −15% e 40%. Um cliente pergunta a Tiago, profissional CPA, se são equivalentes.",
+  "enunciado": "Tiago explica que:",
+  "certa": "o fundo B tem volatilidade muito maior e, portanto, mais risco, mesmo com a mesma média.",
+  "erradas": [
+   [
+    "os fundos são equivalentes, pois a rentabilidade média é o único critério de comparação.",
+    "O risco (dispersão dos retornos) também deve ser considerado."
+   ],
+   [
+    "o fundo B é melhor, pois teve anos com retorno de 40%, superior ao melhor ano do fundo A.",
+    "O melhor ano não compensa a maior chance de perdas; é preciso comparar risco e retorno."
+   ],
+   [
+    "o fundo A tem mais risco, pois a variação pequena indica que o gestor não aproveita oportunidades.",
+    "Menor variação significa menor volatilidade e menor risco."
+   ]
+  ],
+  "gabarito": "Risco, em investimentos, costuma ser medido pela volatilidade (desvio-padrão dos retornos): quanto maior a dispersão em torno da média, mais incerto o resultado. Investimentos com retorno esperado igual e risco diferente não são equivalentes. Investidores avessos a risco exigem retorno maior para aceitar mais volatilidade. A avaliação risco–retorno orienta a adequação ao perfil.",
+  "dica": "Mesma média, mais oscilação = mais risco. Compare sempre risco e retorno juntos."
+ },
+ {
+  "pd": "3.3.5",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Uma cliente com R$ 300 mil em aplicações pede a Wagner, profissional CPA, para investir em uma classe de fundo destinada exclusivamente a investidores qualificados, que viu anunciada.",
+  "enunciado": "Wagner deve informar que:",
+  "certa": "ela ainda não pode investir, pois não atende aos critérios de investidora qualificada da CVM 30.",
+  "erradas": [
+   [
+    "ela pode investir, desde que assine termo declarando ter mais de R$ 1 milhão aplicado.",
+    "A declaração deve ser verdadeira; não é possível atestar condição que não se tem."
+   ],
+   [
+    "ela pode investir, pois a restrição a qualificados é só recomendação, sem caráter obrigatório.",
+    "A restrição de público-alvo é obrigatória."
+   ],
+   [
+    "ela pode investir, pois o perfil arrojado no suitability substitui a condição de qualificada.",
+    "Perfil de suitability e classificação de investidor qualificado são coisas distintas."
+   ]
+  ],
+  "gabarito": "Alguns produtos e classes de fundos são restritos a investidores qualificados ou profissionais, por terem regras mais flexíveis e riscos maiores. Pela CVM 30, pessoa física é qualificada, por exemplo, se tiver mais de R$ 1 milhão em aplicações financeiras e atestar por escrito, ou se tiver certificações e registros específicos; profissional, se tiver mais de R$ 10 milhões. O suitability avalia adequação; a classificação define o acesso.",
+  "dica": "Produto para qualificado exige classificação real (ex.: mais de R$ 1 milhão + declaração). Perfil arrojado não basta."
+ },
+ {
+  "pd": "3.4.2.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "A área de auditoria interna pede a Daniela, profissional CPA, os registros das recomendações feitas a um cliente que reclamou de prejuízo, incluindo o perfil e as informações coletadas.",
+  "enunciado": "Pelo código Anbima de distribuição, a instituição deve:",
+  "certa": "manter registros do cadastro, do perfil e das informações que embasaram as recomendações.",
+  "erradas": [
+   [
+    "guardar apenas o contrato de abertura de conta, já que as recomendações são verbais.",
+    "Recomendações e o processo de suitability devem ser documentados e mantidos."
+   ],
+   [
+    "descartar os registros após a reclamação, para proteger a privacidade do cliente.",
+    "Descartar documentos impediria a apuração e violaria a regulação."
+   ],
+   [
+    "manter os registros somente se o cliente for investidor profissional.",
+    "O dever de documentação vale para todos os clientes."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição e a CVM 30 exigem que a instituição mantenha documentação e registros do cadastro, das informações para definição do perfil, das recomendações e alertas (por exemplo, de desenquadramento) e das declarações do cliente. Os registros permitem comprovar a adequação, apurar reclamações e passar por supervisões.",
+  "dica": "Suitability tem de ser documentado: cadastro, perfil, recomendações, alertas e declarações."
+ },
+ {
+  "pd": "3.4.5.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um banco classifica seus clientes, produtos, canais de distribuição e regiões em níveis de risco de lavagem de dinheiro e, com base nisso, define controles mais rígidos onde o risco é maior.",
+  "enunciado": "Esse procedimento corresponde à:",
+  "certa": "avaliação interna de risco, base da abordagem baseada em risco exigida pela regulação de PLD/FT.",
+  "erradas": [
+   [
+    "análise de suitability, que classifica os clientes conforme a tolerância a perdas financeiras.",
+    "Suitability avalia adequação de investimentos; a classificação de risco de PLD é outro processo."
+   ],
+   [
+    "auditoria externa obrigatória, feita uma única vez na abertura da instituição.",
+    "A avaliação de risco é interna e deve ser revista periodicamente."
+   ],
+   [
+    "política de crédito, que define limites de empréstimo conforme a renda do cliente.",
+    "A política de crédito trata do risco de inadimplência, não de lavagem."
+   ]
+  ],
+  "gabarito": "A abordagem baseada em risco (Circular BC 3.978/2020; Resolução CVM 50) exige que as instituições façam avaliação interna de risco: identificar e mensurar o risco de seus produtos, serviços, clientes, canais e regiões serem usados para lavagem ou financiamento do terrorismo; estabelecer política compatível com seu porte e perfil; e controlar a efetividade das políticas e procedimentos. Controles mais rigorosos vão para situações de maior risco.",
+  "dica": "Abordagem baseada em risco: avaliar o risco (clientes, produtos, canais) e reforçar controles onde ele é maior."
+ },
+ {
+  "pd": "3.4.7.2.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Em um treinamento, um participante pergunta a Hélio, profissional CPA, por que a Resolução CVM 62 descreve os ilícitos de mercado de forma ampla, em vez de listar todas as condutas proibidas.",
+  "enunciado": "Hélio explica que a norma adota uma tipologia aberta, o que significa que:",
+  "certa": "o conceito de cada ilícito alcança condutas não listadas, se tiverem a mesma natureza e efeito.",
+  "erradas": [
+   [
+    "somente as condutas expressamente listadas na norma podem ser punidas pela CVM.",
+    "Com tipologia aberta, a lista é exemplificativa."
+   ],
+   [
+    "os profissionais podem praticar qualquer conduta até que a CVM publique um exemplo específico.",
+    "A ausência de exemplo não torna a conduta permitida."
+   ],
+   [
+    "a CVM só pune ilícitos de mercado quando há condenação criminal prévia.",
+    "A esfera administrativa é independente da criminal."
+   ]
+  ],
+  "gabarito": "A Resolução CVM 62 define, em termos amplos, as práticas vedadas: criação de condições artificiais de demanda, oferta ou preço; manipulação de preços; operações fraudulentas; e práticas não equitativas. Os exemplos (spoofing, layering, churning, front running, insider) são ilustrativos. Isso permite à CVM enquadrar condutas novas e exige dos profissionais atenção ao espírito da norma, além do texto.",
+  "dica": "Tipologia aberta: os exemplos são ilustrativos; o que tiver a mesma natureza e efeito também é ilícito."
+ },
+ {
+  "pd": "3.4.7.2.2.2.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um operador coloca grandes ofertas de compra de uma ação, que não pretende executar, para dar a impressão de demanda. Quando o preço sobe, vende suas posições e cancela as ofertas de compra.",
+  "enunciado": "Essa prática é conhecida como:",
+  "certa": "spoofing, uma forma de manipulação de preços por meio de ofertas sem intenção de execução.",
+  "erradas": [
+   [
+    "front running, que consiste em operar antes de ordens de clientes conhecidas pelo operador.",
+    "Front running envolve antecipar-se a ordens de clientes, o que não ocorre aqui."
+   ],
+   [
+    "churning, que consiste em girar excessivamente a carteira de clientes para gerar corretagem.",
+    "Churning envolve contas de clientes e corretagem."
+   ],
+   [
+    "money pass, que consiste em transferir recursos entre contas ligadas por negócios artificiais.",
+    "Money pass é a transferência artificial de recursos entre comitentes."
+   ]
+  ],
+  "gabarito": "Spoofing: inserir ofertas relevantes sem intenção de executá-las, para induzir outros participantes e alterar o preço, cancelando-as em seguida. Layering é variante com várias camadas de ofertas em diferentes níveis de preço. Ambos são manipulação de preços pela Resolução CVM 62 e podem configurar crime de manipulação (art. 27-C da Lei 6.385/76).",
+  "dica": "Spoofing = oferta de fachada para mexer no preço. Layering = várias camadas de ofertas falsas."
+ },
+ {
+  "pd": "3.4.7.2.2.3.2",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Um assessor percebe que a conta de um cliente idoso e conservador teve mais de 200 operações em um mês, quase todas sugeridas pelo próprio assessor, gerando muita corretagem e nenhum ganho ao cliente.",
+  "enunciado": "A conduta descrita caracteriza:",
+  "certa": "churning, giro excessivo da conta para gerar receita ao intermediário.",
+  "erradas": [
+   [
+    "spoofing, pois as operações criaram ofertas sem intenção de execução no mercado.",
+    "As operações foram executadas; o problema é o giro excessivo em benefício do intermediário."
+   ],
+   [
+    "insider trading, pois o assessor tinha informações privilegiadas sobre o cliente.",
+    "Insider envolve informação relevante não divulgada sobre emissores."
+   ],
+   [
+    "prática legítima, pois todas as operações foram registradas na conta do cliente.",
+    "O registro não torna legítimo o giro excessivo e inadequado ao perfil."
+   ]
+  ],
+  "gabarito": "Churning é a realização de operações em excesso na conta do cliente, sem justificativa econômica para ele, com o objetivo de gerar corretagem ou remuneração para o intermediário. É operação fraudulenta pela Resolução CVM 62 e também fere o dever de adequação (suitability). Sinais: giro alto, perfil conservador e custos desproporcionais.",
+  "dica": "Churning = girar a carteira do cliente para gerar corretagem."
+ },
+ {
+  "pd": "4.4.2.1",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Em uma palestra sobre inovação, um participante pede a Alice, profissional CPA, uma definição simples de blockchain.",
+  "enunciado": "Alice explica que blockchain é:",
+  "certa": "um registro distribuído em blocos encadeados, compartilhado em rede, difícil de alterar depois de validado.",
+  "erradas": [
+   [
+    "um banco de dados central controlado pelo Banco Central, que registra todas as transações do país.",
+    "Blockchain é distribuído, não centralizado em uma autoridade."
+   ],
+   [
+    "uma criptomoeda emitida por bancos privados com valor fixo em reais.",
+    "Blockchain é a tecnologia de registro; criptomoedas são ativos que podem usar essa tecnologia."
+   ],
+   [
+    "um aplicativo de pagamentos instantâneos que substituiu o Pix no Brasil.",
+    "Blockchain não é aplicativo de pagamentos e não substituiu o Pix."
+   ]
+  ],
+  "gabarito": "Blockchain é uma tecnologia de registro distribuído (DLT): as transações são agrupadas em blocos, ligados por criptografia ao bloco anterior, e validadas por consenso entre os participantes da rede. Características: descentralização, transparência, rastreabilidade e imutabilidade prática. É a base de criptoativos, contratos inteligentes, tokenização e aplicações DeFi.",
+  "dica": "Blockchain: livro-razão distribuído, em blocos encadeados por criptografia, praticamente imutável."
+ },
+ {
+  "pd": "4.4.5.4",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um cliente quer exposição ao bitcoin, mas não quer lidar com carteiras digitais e chaves privadas. Pergunta a Ivan, profissional CPA, sobre os ETFs de criptoativos negociados na B3.",
+  "enunciado": "Ivan explica corretamente que esses ETFs:",
+  "certa": "dão exposição ao bitcoin pela bolsa, sem chaves, mas com a mesma volatilidade.",
+  "erradas": [
+   [
+    "garantem o valor investido, pois são regulados pela CVM e negociados em bolsa.",
+    "Regulação e negociação em bolsa não eliminam o risco de mercado."
+   ],
+   [
+    "têm isenção de IR para vendas até R$ 20 mil por mês, como as ações.",
+    "A isenção de R$ 20 mil vale só para ações; ganhos com ETF pagam 15%."
+   ],
+   [
+    "são títulos de renda fixa com rendimento atrelado ao CDI e lastro em bitcoin.",
+    "São fundos de índice de renda variável, que acompanham o preço dos criptoativos."
+   ]
+  ],
+  "gabarito": "ETFs de criptoativos são fundos de índice negociados na B3 que acompanham o preço de um criptoativo ou de uma cesta. Facilitam o acesso (conta em corretora, custódia profissional, regulação da CVM) sem que o investidor guarde chaves privadas. Riscos: alta volatilidade, risco cambial e de custódia. Tributação: 15% sobre o ganho, sem isenção de R$ 20 mil.",
+  "dica": "ETF de bitcoin: acesso fácil pela bolsa, mas mesma volatilidade; 15% de IR sem isenção."
+ },
+ {
+  "pd": "4.5.4.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ao renovar o seguro do carro, Luíza recebe a proposta de compartilhar seus dados de apólices e sinistros de outra seguradora para obter uma cotação melhor. Pergunta a Ricardo, profissional CPA, o que é isso.",
+  "enunciado": "Ricardo explica que se trata do open insurance, que:",
+  "certa": "permite, com consentimento, compartilhar dados de seguros, previdência e capitalização entre empresas.",
+  "erradas": [
+   [
+    "obriga as seguradoras a cobrar o mesmo preço de todos os clientes, padronizando as apólices.",
+    "O objetivo é ampliar a concorrência, não padronizar preços."
+   ],
+   [
+    "é coordenado pelo Banco Central e se aplica apenas a contas correntes e cartões.",
+    "O open insurance é regulado pela SUSEP e trata de seguros, previdência aberta e capitalização."
+   ],
+   [
+    "transfere automaticamente a apólice para a seguradora mais barata, sem pedido do cliente.",
+    "Não há transferência automática; tudo depende do consentimento e da decisão do cliente."
+   ]
+  ],
+  "gabarito": "O open insurance, regulado pela SUSEP, é o sistema de compartilhamento padronizado de dados e serviços de seguros, previdência complementar aberta e capitalização, mediante consentimento do cliente. Vantagens: mais concorrência, produtos personalizados e portabilidade de informações. Desvantagens e riscos: segurança dos dados e necessidade de educação do consumidor.",
+  "dica": "Open insurance: dados de seguros, previdência e capitalização compartilhados com consentimento, sob a SUSEP."
+ },
+ {
+  "pd": "4.7.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Duas fintechs de crédito pedem orientação a Glória, profissional CPA. A primeira empresta com capital próprio por plataforma eletrônica; a segunda conecta investidores e tomadores, que emprestam entre si pela plataforma.",
+  "enunciado": "Glória explica que as fintechs são, respectivamente:",
+  "certa": "Sociedade de Crédito Direto (SCD) e Sociedade de Empréstimo entre Pessoas (SEP).",
+  "erradas": [
+   [
+    "Sociedade de Empréstimo entre Pessoas (SEP) e Sociedade de Crédito Direto (SCD).",
+    "A ordem está invertida: a SCD usa capital próprio; a SEP intermedia entre pessoas."
+   ],
+   [
+    "banco comercial e cooperativa de crédito.",
+    "Fintechs de crédito têm modalidades próprias: SCD e SEP."
+   ],
+   [
+    "instituição de pagamento e administradora de consórcio.",
+    "Instituições de pagamento não concedem crédito com recursos de clientes, e consórcio é outra atividade."
+   ]
+  ],
+  "gabarito": "Pela Resolução CMN 4.656/2018, há dois tipos de fintechs de crédito autorizadas pelo BC: a SCD (Sociedade de Crédito Direto), que concede empréstimos e financiamentos exclusivamente com capital próprio, por plataforma eletrônica; e a SEP (Sociedade de Empréstimo entre Pessoas), que intermedeia operações de crédito entre credores e devedores por plataforma (peer-to-peer). Ambas são instituições financeiras supervisionadas pelo BC.",
+  "dica": "SCD = empresta com capital próprio. SEP = conecta quem empresta e quem toma (peer-to-peer)."
+ },
+ {
+  "pd": "4.2.6.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente desconfia de fundos que se dizem sustentáveis e pergunta a Bruno, profissional CPA, quais os principais desafios para a evolução dos investimentos ESG.",
+  "enunciado": "Bruno cita, entre os desafios:",
+  "certa": "a falta de dados padronizados e confiáveis, que favorece o greenwashing.",
+  "erradas": [
+   [
+    "a proibição legal de fundos ESG no Brasil, que só podem ser oferecidos no exterior.",
+    "Fundos ESG são permitidos no Brasil, com regras da CVM e da Anbima."
+   ],
+   [
+    "a garantia de rentabilidade obrigatória dos fundos ESG, que encarece sua gestão.",
+    "Não existe rentabilidade garantida em fundos ESG."
+   ],
+   [
+    "a exigência de que todo fundo ESG invista apenas em títulos públicos verdes.",
+    "Fundos ESG podem investir em vários ativos, conforme a política."
+   ]
+  ],
+  "gabarito": "Desafios dos investimentos ESG: falta de padronização de métricas e de dados confiáveis, diferenças entre metodologias de ratings ESG, risco de greenwashing (alegar sustentabilidade sem prática real), custos de análise e evolução da regulação. Respostas: regras da CVM (como no art. 49 da CVM 175), autorregulação da Anbima (fundos IS), PRI e normas de divulgação de sustentabilidade.",
+  "dica": "Desafios ESG: dados sem padrão, ratings divergentes e greenwashing."
+ }
+]
