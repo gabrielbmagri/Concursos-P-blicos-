@@ -1,0 +1,734 @@
+[
+ {
+  "pd": "1.4.3.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Banco Gama em crise",
+  "etapa": "1/3",
+  "contexto": "Circula a notícia de que o Banco Gama, de porte médio, tem dificuldades. Clientes de outros bancos começam a sacar recursos com medo de contágio. Um cliente pergunta a Marta, profissional CPA, por que o BC se preocupa tanto.",
+  "enunciado": "Marta explica que o BC busca evitar o risco sistêmico, que é:",
+  "certa": "o risco de a crise de um banco contaminar todo o sistema.",
+  "erradas": [
+   [
+    "o risco de um único cliente deixar de pagar um empréstimo ao banco.",
+    "Isso é risco de crédito individual."
+   ],
+   [
+    "o risco de o preço de uma ação cair por notícias da empresa.",
+    "Isso é risco de mercado específico."
+   ],
+   [
+    "o risco de falha nos sistemas de informática de uma agência.",
+    "Isso é risco operacional localizado."
+   ]
+  ],
+  "gabarito": "Risco sistêmico é a possibilidade de que dificuldades de uma ou mais instituições se propaguem (por exposições interbancárias, corridas bancárias, perda de confiança) e comprometam o funcionamento do sistema financeiro e da economia real. O BC atua com regulação prudencial (Basileia), supervisão, compulsórios, linhas de liquidez e regimes de resolução.",
+  "dica": "Risco sistêmico = contágio que ameaça o sistema inteiro."
+ },
+ {
+  "pd": "1.1.2.1.1",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: Banco Gama em crise",
+  "etapa": "2/3",
+  "contexto": "Constatada a insolvência, o Banco Central decide intervir no Banco Gama e, depois, decretar sua liquidação extrajudicial. Um correntista pergunta a Marta o que isso significa.",
+  "enunciado": "Marta explica que esses regimes:",
+  "certa": "são regimes especiais do BC para resolver instituições em crise e proteger o sistema.",
+  "erradas": [
+   [
+    "são decididos pela CVM, que assume a gestão do banco até sua venda.",
+    "Os regimes especiais de instituições financeiras são decretados pelo BC."
+   ],
+   [
+    "significam que o governo vai devolver integralmente todos os valores aos clientes.",
+    "A garantia é do FGC, com limites."
+   ],
+   [
+    "só podem ser decretados por decisão do presidente da República.",
+    "A competência é do Banco Central."
+   ]
+  ],
+  "gabarito": "O Banco Central pode decretar regimes especiais em instituições financeiras com problemas graves: intervenção (afasta a administração e suspende atividades por prazo determinado), RAET (administração especial temporária, a instituição continua operando) e liquidação extrajudicial (encerramento ordenado, com levantamento de ativos e pagamento de credores). Com a decretação, o FGC passa a pagar as garantias aos depositantes, nos limites.",
+  "dica": "Intervenção, RAET e liquidação extrajudicial: regimes especiais decretados pelo BC."
+ },
+ {
+  "pd": "1.1.4.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "caso": "Árvore de diálogo: Banco Gama em crise",
+  "etapa": "3/3",
+  "contexto": "O correntista tem R$ 180 mil em CDB e R$ 120 mil em fundo de investimento administrado pelo Banco Gama. Ele pergunta a Marta o que recebe pelo FGC.",
+  "enunciado": "Marta explica que o FGC garante:",
+  "certa": "os R$ 180 mil do CDB; o fundo não tem FGC, mas é dos cotistas.",
+  "erradas": [
+   [
+    "os R$ 300 mil, pois CDB e fundo são produtos do mesmo banco.",
+    "Fundos não têm FGC."
+   ],
+   [
+    "só R$ 120 mil do fundo, pois CDB é risco do investidor.",
+    "CDB tem FGC; fundo não."
+   ],
+   [
+    "nada, pois a liquidação extrajudicial cancela as garantias.",
+    "A liquidação é justamente o evento que aciona o FGC."
+   ]
+  ],
+  "gabarito": "O FGC cobre CDB, RDB, depósitos, poupança, LCI, LCA e outros, até R$ 250 mil por CPF por conglomerado. Fundos de investimento não são cobertos, mas seus ativos não pertencem ao banco: ficam segregados em nome do fundo e custodiados, e outro administrador pode assumir. Por isso, a quebra do administrador não significa perda automática para os cotistas.",
+  "dica": "Na quebra: CDB tem FGC (até o limite); fundo não tem FGC, mas os ativos são dos cotistas."
+ },
+ {
+  "pd": "1.1.3.1.10",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma instituição financeira de pequeno porte concede crédito apenas a microempreendedores e empresas de pequeno porte em sua região. Um estudante pergunta a Rui, profissional CPA, que tipo de instituição é essa.",
+  "enunciado": "Rui explica que pode ser uma:",
+  "certa": "sociedade de crédito ao microempreendedor e à empresa de pequeno porte.",
+  "erradas": [
+   [
+    "sociedade de capitalização, que concede crédito a pequenas empresas por sorteio.",
+    "Capitalização não concede crédito."
+   ],
+   [
+    "bolsa de valores regional, especializada em pequenas empresas.",
+    "Bolsas não concedem crédito."
+   ],
+   [
+    "entidade fechada de previdência, que financia associados.",
+    "Previdência fechada não é instituição de microcrédito."
+   ]
+  ],
+  "gabarito": "As sociedades de crédito ao microempreendedor e à empresa de pequeno porte (SCMEPP) concedem financiamentos a pessoas físicas microempreendedoras e a microempresas e empresas de pequeno porte, para viabilizar empreendimentos. Não captam recursos do público como depósitos. São autorizadas e supervisionadas pelo Banco Central.",
+  "dica": "SCMEPP: crédito para microempreendedores e pequenas empresas, sob o BC."
+ },
+ {
+  "pd": "1.2.1.1",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Em uma aula sobre fluxo circular da renda, um aluno pergunta a Lívia, profissional CPA, como o governo entra nesse fluxo.",
+  "enunciado": "Lívia explica que o governo:",
+  "certa": "arrecada tributos e devolve recursos com gastos e transferências.",
+  "erradas": [
+   [
+    "não participa do fluxo, que envolve apenas famílias e empresas.",
+    "O governo é agente relevante do fluxo."
+   ],
+   [
+    "define os preços de todos os bens para equilibrar o fluxo.",
+    "Em economia de mercado, os preços resultam da oferta e da demanda."
+   ],
+   [
+    "fornece mão de obra às empresas em troca de lucros.",
+    "Quem fornece trabalho são as famílias."
+   ]
+  ],
+  "gabarito": "No fluxo circular ampliado: famílias oferecem fatores (trabalho, capital) e recebem renda; empresas produzem bens e serviços; o governo arrecada tributos de famílias e empresas e gasta (compras, salários, investimentos, transferências como benefícios sociais); o setor externo entra com exportações e importações; o sistema financeiro canaliza a poupança. Decisões de cada agente afetam a demanda e a atividade.",
+  "dica": "Governo no fluxo: tira (tributos) e devolve (gastos e transferências)."
+ },
+ {
+  "pd": "1.2.5.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um contrato de importação prevê pagamento convertido pela “PTAX do dia anterior”. O importador pergunta a Sandro, profissional CPA, o que é a PTAX.",
+  "enunciado": "Sandro explica que a PTAX é:",
+  "certa": "a taxa de câmbio de referência calculada pelo BC com base nas operações do mercado.",
+  "erradas": [
+   [
+    "a taxa fixa definida pelo governo para todas as operações de câmbio do dia.",
+    "O câmbio é flutuante; a PTAX é referência, não taxa obrigatória."
+   ],
+   [
+    "a taxa do câmbio turismo cobrada em casas de câmbio.",
+    "A PTAX é calculada a partir do mercado interbancário."
+   ],
+   [
+    "o imposto cobrado nas operações de câmbio de importação.",
+    "O imposto é o IOF-câmbio."
+   ]
+  ],
+  "gabarito": "A PTAX é a taxa de câmbio de referência calculada e divulgada pelo Banco Central a partir de consultas a instituições do mercado durante o dia. É usada em contratos, derivativos e conversões contábeis e tributárias. As instituições praticam taxas próprias. Câmbio comercial (empresas, comércio exterior) e câmbio turismo (pessoas físicas, viagens) têm cotações diferentes.",
+  "dica": "PTAX = taxa de referência do BC, usada em contratos e conversões."
+ },
+ {
+  "pd": "1.3.3.5.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Júlio deixou R$ 50 mil parados na conta corrente por um ano, enquanto poderia ter aplicado em um CDB de 100% do CDI que renderia cerca de 12% líquidos no período. Ele pergunta a Lúcia, profissional CPA, quanto “perdeu”.",
+  "enunciado": "Lúcia explica que o custo de oportunidade foi de cerca de:",
+  "certa": "R$ 6.000, o rendimento da melhor alternativa que ele deixou de ter.",
+  "erradas": [
+   [
+    "zero, pois o dinheiro na conta corrente não sofreu nenhuma perda.",
+    "O custo de oportunidade é o ganho que deixou de existir."
+   ],
+   [
+    "R$ 50.000, pois todo o valor ficou sem rendimento.",
+    "O custo é o rendimento perdido, não o principal."
+   ],
+   [
+    "R$ 1.500, que é a tarifa anual da conta corrente.",
+    "A tarifa não mede o custo de oportunidade do dinheiro parado."
+   ]
+  ],
+  "gabarito": "Custo de oportunidade é o retorno da melhor alternativa abandonada ao escolher outra. Manter R$ 50 mil sem rendimento quando havia um CDB que renderia cerca de 12% líquidos significa abrir mão de cerca de R$ 6.000 no ano, além da perda de poder de compra pela inflação.",
+  "dica": "Custo de oportunidade = quanto você deixou de ganhar na melhor alternativa."
+ },
+ {
+  "pd": "1.4.12.1.3.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê na documentação de um fundo que o distribuidor recebe parte da taxa de administração. Pergunta a Henrique, profissional CPA, por que isso aparece.",
+  "enunciado": "Henrique explica que o código Anbima de distribuição exige:",
+  "certa": "transparência sobre a remuneração do distribuidor, para o cliente avaliar conflitos.",
+  "erradas": [
+   [
+    "que a remuneração do distribuidor seja sigilosa, para proteger a estratégia comercial.",
+    "O código exige transparência."
+   ],
+   [
+    "que o distribuidor não receba nenhuma remuneração dos fundos que distribui.",
+    "A remuneração é permitida, com transparência."
+   ],
+   [
+    "que a remuneração seja informada só à CVM, e não ao investidor.",
+    "A informação deve chegar ao investidor."
+   ]
+  ],
+  "gabarito": "O código Anbima de distribuição (capítulo de transparência na remuneração) exige que as instituições informem aos investidores, de forma clara, como são remuneradas pela distribuição de produtos (taxas, rebates, comissões), para que o cliente compreenda potenciais conflitos de interesses. A CVM 175 também separa a taxa máxima de distribuição.",
+  "dica": "Distribuidor deve ser transparente sobre como é remunerado."
+ },
+ {
+  "pd": "1.4.12.1.3.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Uma corretora brasileira passa a oferecer, por meio de parceira estrangeira, acesso a ações negociadas nos EUA. Um cliente pergunta a Gisele, profissional CPA, que cuidados o código Anbima exige nesse serviço.",
+  "enunciado": "Gisele explica que a instituição deve, entre outros:",
+  "certa": "informar riscos, custos e proteção do mercado e checar a adequação.",
+  "erradas": [
+   [
+    "garantir os investimentos no exterior com o FGC brasileiro.",
+    "O FGC não cobre investimentos no exterior."
+   ],
+   [
+    "dispensar o suitability, pois as regras do outro país passam a valer.",
+    "A adequação continua sendo exigida."
+   ],
+   [
+    "omitir a parceira estrangeira, para simplificar a comunicação.",
+    "O cliente deve saber quem presta o serviço e a que regras está sujeito."
+   ]
+  ],
+  "gabarito": "Nos serviços de intermediação no exterior, o código Anbima exige que a instituição informe ao cliente quem presta o serviço, os riscos (cambial, jurídico, de custódia), os custos, a tributação e as diferenças de proteção em relação ao mercado brasileiro, além de cumprir regras de suitability e de conheça seu cliente.",
+  "dica": "Investimento no exterior via corretora: transparência sobre riscos, custos e proteção + suitability."
+ },
+ {
+  "pd": "1.2.5.3",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um tesoureiro de empresa importadora vê no mercado futuro a taxa de “cupom cambial” e pergunta a Diogo, profissional CPA, o que ela representa.",
+  "enunciado": "Diogo explica que o cupom cambial é:",
+  "certa": "a taxa de juros em dólar no mercado brasileiro.",
+  "erradas": [
+   [
+    "o desconto que o importador obtém ao pagar fornecedores à vista.",
+    "Isso é desconto comercial."
+   ],
+   [
+    "o imposto sobre operações de câmbio de importação.",
+    "Esse é o IOF-câmbio."
+   ],
+   [
+    "a taxa fixa de câmbio garantida pelo BC para exportadores.",
+    "O BC não garante taxa fixa."
+   ]
+  ],
+  "gabarito": "Cupom cambial é a taxa de juros em dólar praticada no Brasil, que pode ser entendida como a diferença entre a taxa de juros em reais (DI) e a variação cambial esperada. É negociado na B3 (DDI, FRA de cupom) e usado em hedges e na precificação de swaps cambiais. Influencia o retorno de quem aplica em reais com proteção cambial.",
+  "dica": "Cupom cambial = juro em dólar no Brasil (DI menos a variação cambial esperada)."
+ },
+ {
+  "pd": "2.1.2.2.18.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: O fundo do Sr. Lino",
+  "etapa": "1/3",
+  "contexto": "Sr. Lino é cotista da subclasse B de uma classe multimercado. O gestor quer alterar o prazo de resgate apenas dessa subclasse. Lino pergunta a Paula, profissional CPA, quem decide.",
+  "enunciado": "Paula explica que a matéria é deliberada em:",
+  "certa": "assembleia especial dos cotistas da subclasse afetada.",
+  "erradas": [
+   [
+    "assembleia geral de todos os cotistas do fundo, inclusive das outras classes.",
+    "Matérias de uma subclasse são deliberadas por seus cotistas."
+   ],
+   [
+    "reunião exclusiva do gestor, sem participação dos cotistas.",
+    "Alterações relevantes do regulamento exigem assembleia."
+   ],
+   [
+    "decisão da CVM, mediante pedido do administrador.",
+    "A CVM não delibera sobre regras de cada fundo."
+   ]
+  ],
+  "gabarito": "Pela CVM 175, a assembleia geral reúne todos os cotistas do fundo, para matérias comuns; a assembleia especial reúne apenas os cotistas de uma classe ou subclasse, para temas que afetam somente ela. Alterações de prazos, taxas e regras específicas de uma subclasse são deliberadas na assembleia especial correspondente.",
+  "dica": "Assunto só de uma classe ou subclasse → assembleia especial dela."
+ },
+ {
+  "pd": "2.1.2.2.22",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: O fundo do Sr. Lino",
+  "etapa": "2/3",
+  "contexto": "Aprovada a mudança, Lino quer saber quais obrigações o administrador tem com os cotistas a partir daí.",
+  "enunciado": "Paula explica que, entre as obrigações do administrador, está:",
+  "certa": "manter registros e divulgar as informações exigidas aos cotistas.",
+  "erradas": [
+   [
+    "garantir a rentabilidade mínima prometida aos cotistas na assembleia.",
+    "Prometer ou garantir rentabilidade é vedado."
+   ],
+   [
+    "decidir sozinho as aplicações da carteira, substituindo o gestor.",
+    "A gestão da carteira é do gestor."
+   ],
+   [
+    "ocultar dos cotistas as mudanças aprovadas até o fim do semestre.",
+    "As mudanças devem ser divulgadas."
+   ]
+  ],
+  "gabarito": "O administrador fiduciário deve, entre outras obrigações: manter registros e documentação atualizados, divulgar informações periódicas e eventuais, atualizar o regulamento após deliberações, calcular a cota, enviar comunicações aos cotistas, fiscalizar prestadores contratados e cumprir as normas. O gestor responde pela gestão da carteira, inclusive riscos e liquidez.",
+  "dica": "Administrador: registros, informações aos cotistas, regulamento atualizado e controles."
+ },
+ {
+  "pd": "2.1.2.2.25.2",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "caso": "Árvore de diálogo: O fundo do Sr. Lino",
+  "etapa": "3/3",
+  "contexto": "Lino descobre que outra classe do mesmo gestor não limita a responsabilidade dos cotistas ao valor subscrito e opera com alta alavancagem. Ele pergunta a Paula o que isso implica.",
+  "enunciado": "Paula explica que, nessa classe:",
+  "certa": "o cotista pode ter de cobrir patrimônio negativo (termo próprio).",
+  "erradas": [
+   [
+    "o cotista nunca perde mais que o investido, em qualquer fundo.",
+    "Sem limitação de responsabilidade, a perda pode superar o investido."
+   ],
+   [
+    "o FGC cobre o patrimônio negativo até R$ 250 mil.",
+    "Fundos não têm FGC."
+   ],
+   [
+    "o gestor assume integralmente qualquer prejuízo da classe.",
+    "O gestor não garante resultados."
+   ]
+  ],
+  "gabarito": "Pela CVM 175, o regulamento pode limitar a responsabilidade dos cotistas ao valor subscrito. Sem essa limitação, se o patrimônio da classe ficar negativo, os cotistas podem ser chamados a aportar recursos. Nesse caso, ao ingressar, o cotista assina termo de ciência e assunção de responsabilidade ilimitada, além do termo de adesão e ciência de risco.",
+  "dica": "Sem limitação de responsabilidade: o cotista pode ter de cobrir patrimônio negativo (termo específico)."
+ },
+ {
+  "pd": "2.1.1.1.1.3",
+  "dif": "Médio",
+  "nivel": "Análise",
+  "contexto": "Bia comprou um Tesouro Prefixado a 13% ao ano. Seis meses depois, a taxa desse título caiu para 11%. Ela pergunta a Ciro, profissional CPA, o que acontece se vender agora.",
+  "enunciado": "Ciro explica que, vendendo agora:",
+  "certa": "ela tende a obter rentabilidade acima de 13% ao ano no período.",
+  "erradas": [
+   [
+    "ela recebe exatamente 13% ao ano proporcional, pois a taxa foi travada.",
+    "A taxa só é garantida no vencimento; antes vale o preço de mercado."
+   ],
+   [
+    "ela tem prejuízo, pois a queda da taxa reduz o preço dos prefixados.",
+    "Taxa menor significa preço maior."
+   ],
+   [
+    "ela não pode vender, pois o Tesouro só recompra no vencimento.",
+    "O Tesouro recompra diariamente."
+   ]
+  ],
+  "gabarito": "Em títulos prefixados, o preço sobe quando as taxas de mercado caem. Vendendo antes do vencimento após uma queda de taxas, o investidor realiza ganho acima da taxa contratada para o período. Se as taxas subissem, o preço cairia. Mantendo até o vencimento, recebe exatamente a taxa contratada.",
+  "dica": "Taxa caiu depois da compra → preço subiu → vender antes rende acima do contratado."
+ },
+ {
+  "pd": "2.1.1.1.3.3",
+  "dif": "Difícil",
+  "nivel": "Aplicação",
+  "contexto": "Para um prazo de 200 dias, Lara compara um CDB de 110% do CDI e uma LCI de 92% do CDI, ambos com FGC. Pergunta a Mateus, profissional CPA, qual rende mais líquido.",
+  "enunciado": "Mateus calcula que:",
+  "certa": "a LCI rende mais: o CDB com IR de 20% fica em cerca de 88% do CDI líquido.",
+  "erradas": [
+   [
+    "o CDB rende mais, pois 110% do CDI supera 92% em qualquer prazo.",
+    "É preciso descontar o IR do CDB: 110% × 0,80 = 88%."
+   ],
+   [
+    "os dois rendem igual, pois a diferença de 18 pontos compensa o IR exatamente.",
+    "88% contra 92%: há diferença."
+   ],
+   [
+    "o CDB rende mais, pois com 200 dias a alíquota de IR é de 15%.",
+    "Com 200 dias a alíquota é de 20%."
+   ]
+  ],
+  "gabarito": "Prazo de 200 dias: faixa de 181 a 360 dias, IR de 20%. CDB: 110% × (1 − 0,20) = 88% do CDI líquido. LCI: 92% do CDI, isenta para pessoa física. A LCI rende mais. Para o CDB empatar, precisaria pagar 92% ÷ 0,80 = 115% do CDI. Atenção à carência da LCI.",
+  "dica": "Compare líquido: CDB × (1 − IR) contra LCI isenta. Prazo curto = IR maior = vantagem da LCI."
+ },
+ {
+  "pd": "2.1.1.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Um cliente lê no prospecto de debêntures a figura do “agente fiduciário”. Pergunta a Eliane, profissional CPA, qual o papel dele.",
+  "enunciado": "Eliane explica que o agente fiduciário:",
+  "certa": "representa os debenturistas e fiscaliza o cumprimento da escritura pela emissora.",
+  "erradas": [
+   [
+    "garante o pagamento das debêntures com recursos próprios em caso de calote.",
+    "O agente fiduciário não garante pagamento."
+   ],
+   [
+    "é o banco que compra todas as debêntures e as revende ao público.",
+    "Esse papel pode ser do coordenador da oferta."
+   ],
+   [
+    "define o rating das debêntures e a taxa de juros da emissão.",
+    "Rating é dado por agências; a taxa é definida na oferta."
+   ]
+  ],
+  "gabarito": "Na emissão de debêntures, a escritura de emissão define direitos e obrigações (taxa, prazo, garantias, covenants). O agente fiduciário representa a comunhão de debenturistas, acompanha as obrigações da emissora, informa os investidores sobre inadimplementos e pode convocar assembleias e tomar medidas para proteger os credores. Não garante o pagamento.",
+  "dica": "Agente fiduciário: representa e protege os debenturistas, sem garantir o pagamento."
+ },
+ {
+  "pd": "2.1.1.1.11",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Ronaldo aplicou em CDB do mesmo banco em três datas diferentes ao longo de dois anos e agora resgata tudo de uma vez. Pergunta a Sueli, profissional CPA, qual alíquota de IR será aplicada.",
+  "enunciado": "Sueli explica que:",
+  "certa": "cada aplicação tem seu prazo e sua alíquota.",
+  "erradas": [
+   [
+    "a alíquota é definida pela primeira aplicação e vale para todo o saldo.",
+    "Cada aplicação é tratada separadamente."
+   ],
+   [
+    "a alíquota é definida pela última aplicação, a mais recente.",
+    "Não há essa regra."
+   ],
+   [
+    "aplica-se a média simples das alíquotas, independentemente dos valores.",
+    "O cálculo é por aplicação."
+   ]
+  ],
+  "gabarito": "Em aplicações de renda fixa, cada aporte tem seu próprio prazo, contado da data da aplicação até o resgate, e a alíquota da tabela regressiva incide sobre o rendimento de cada aporte. Assim, um resgate total pode combinar alíquotas diferentes (por exemplo, 15% sobre aportes antigos e 22,5% sobre os recentes).",
+  "dica": "Cada aporte tem seu prazo e sua alíquota de IR."
+ },
+ {
+  "pd": "2.1.1.2.2.1.4",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma investidora quer saber quais vantagens as ações preferenciais podem oferecer em troca da ausência de voto. Pergunta a Wilson, profissional CPA.",
+  "enunciado": "Wilson explica que as PN podem ter, entre outras:",
+  "certa": "prioridade em dividendos ou no reembolso do capital.",
+  "erradas": [
+   [
+    "direito de voto em dobro nas assembleias.",
+    "As PN, em regra, não votam."
+   ],
+   [
+    "garantia de recompra pela empresa ao preço de emissão.",
+    "Não há garantia de recompra."
+   ],
+   [
+    "isenção de IR sobre ganhos de capital em qualquer valor.",
+    "A tributação não depende da classe da ação."
+   ]
+  ],
+  "gabarito": "Ações preferenciais (PN) em geral não têm direito a voto (ou têm voto restrito), mas contam com vantagens previstas na Lei das S.A. e no estatuto, como prioridade na distribuição de dividendos (por exemplo, dividendo mínimo ou diferenciado) e prioridade no reembolso do capital em caso de liquidação. Em certas situações, podem adquirir direito de voto (por exemplo, se não receberem dividendos por três exercícios).",
+  "dica": "PN: sem voto (em regra), com prioridade em dividendos ou no reembolso do capital."
+ },
+ {
+  "pd": "2.1.1.2.3.1.3",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "No acordo de acionistas de uma empresa fechada, há uma cláusula que permite ao controlador obrigar os minoritários a vender suas ações junto com ele se receber uma oferta pela totalidade da empresa. Um sócio pergunta a Nelson, profissional CPA, o nome dessa cláusula.",
+  "enunciado": "Nelson explica que é a cláusula de:",
+  "certa": "drag along.",
+  "erradas": [
+   [
+    "tag along.",
+    "Tag along é o direito do minoritário de vender junto com o controlador."
+   ],
+   [
+    "free float.",
+    "Free float é a parcela de ações em circulação."
+   ],
+   [
+    "bonificação.",
+    "Bonificação é distribuição de ações gratuitas."
+   ]
+  ],
+  "gabarito": "Drag along: o controlador pode “arrastar” os minoritários, obrigando-os a vender suas ações nas mesmas condições, para viabilizar a venda de 100% da empresa. Tag along: o minoritário tem o direito de acompanhar a venda do controle, recebendo um percentual do preço pago ao controlador. Free float: ações em livre circulação.",
+  "dica": "Drag along = minoritário é obrigado a vender. Tag along = minoritário tem direito de vender."
+ },
+ {
+  "pd": "2.1.1.3.3",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Carlos teve prejuízo de R$ 3.000 em operações comuns com ações em junho, em mês com vendas de R$ 40 mil. Em agosto, teve lucro de R$ 5.000 em operações comuns, com vendas de R$ 50 mil. Pergunta a Vanessa, profissional CPA, quanto pagará.",
+  "enunciado": "Vanessa calcula que o IR de agosto será de:",
+  "certa": "R$ 300 (15% sobre R$ 2.000, após compensar o prejuízo).",
+  "erradas": [
+   [
+    "R$ 750 (15% sobre R$ 5.000, sem compensação).",
+    "O prejuízo de junho pode ser compensado."
+   ],
+   [
+    "R$ 400 (20% sobre R$ 2.000).",
+    "Operações comuns pagam 15%."
+   ],
+   [
+    "zero, pois os prejuízos zeram todo o imposto do ano.",
+    "Compensa-se só até o valor do prejuízo."
+   ]
+  ],
+  "gabarito": "Prejuízos em operações comuns com ações podem ser compensados com lucros futuros da mesma modalidade, sem prazo. Em agosto: 5.000 − 3.000 = R$ 2.000 de base; IR de 15% = R$ 300, descontado o IRRF de 0,005% das vendas, pago por DARF até o último dia útil de setembro. É preciso registrar os prejuízos acumulados.",
+  "dica": "Prejuízo de operação comum compensa lucro futuro de operação comum, sem prazo."
+ },
+ {
+  "pd": "2.1.2.2.2",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Um investidor iniciante pergunta a Patrícia, profissional CPA, o que é exatamente um fundo de investimento.",
+  "enunciado": "Patrícia explica que o fundo é:",
+  "certa": "uma comunhão de recursos em condomínio, com gestão profissional.",
+  "erradas": [
+   [
+    "uma empresa de capital aberto cujas ações são negociadas na bolsa.",
+    "Fundos são condomínios, não sociedades por ações."
+   ],
+   [
+    "um título de dívida emitido por banco, com garantia do FGC.",
+    "Fundos não são títulos bancários nem têm FGC."
+   ],
+   [
+    "um seguro de vida com acumulação de recursos.",
+    "Isso descreve planos como o VGBL."
+   ]
+  ],
+  "gabarito": "Fundo de investimento é uma comunhão de recursos constituída sob a forma de condomínio de natureza especial, destinada à aplicação em ativos financeiros, bens e direitos. Os cotistas detêm cotas, e a carteira é administrada por prestadores de serviços especializados (administrador e gestor), sob a regulação da CVM. Vantagens: gestão profissional, diversificação e acesso a ativos.",
+  "dica": "Fundo = condomínio de investidores com gestão profissional, regulado pela CVM."
+ },
+ {
+  "pd": "2.1.2.2.20.5",
+  "dif": "Difícil",
+  "nivel": "Compreensão",
+  "contexto": "Um gestor devolve parte de sua taxa a um grande distribuidor, conforme acordo de remuneração. Um cliente pergunta a Hugo, profissional CPA, se isso é permitido.",
+  "enunciado": "Hugo explica que acordos de remuneração entre prestadores:",
+  "certa": "são permitidos, com transparência e sem custo extra ao cotista.",
+  "erradas": [
+   [
+    "são proibidos em qualquer hipótese pela regulação.",
+    "São permitidos, com transparência e limites."
+   ],
+   [
+    "permitem cobrar do cotista uma taxa extra não prevista no regulamento.",
+    "As taxas cobradas devem estar previstas e divulgadas."
+   ],
+   [
+    "devem ser mantidos em sigilo, para proteger a negociação comercial.",
+    "A regra exige transparência."
+   ]
+  ],
+  "gabarito": "Prestadores de serviço podem firmar acordos de remuneração (por exemplo, repasse de parte da taxa ao distribuidor, o rebate), desde que não impliquem aumento das taxas pagas pelos cotistas e sejam transparentes, nos termos da regulação e do código Anbima. A transparência permite ao investidor avaliar possíveis conflitos de interesses.",
+  "dica": "Rebate entre prestadores: permitido, com transparência e sem custo extra ao cotista."
+ },
+ {
+  "pd": "2.1.2.3.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma classe de renda fixa tem muitos pedidos de resgate e ativos pouco líquidos. Um cotista pergunta a Joana, profissional CPA, quem é responsável por gerenciar esse risco.",
+  "enunciado": "Joana explica que a gestão do risco de liquidez da carteira cabe principalmente:",
+  "certa": "ao gestor, que deve compatibilizar ativos e prazos de resgate.",
+  "erradas": [
+   [
+    "aos cotistas, que devem evitar pedir resgates em momentos difíceis.",
+    "Os cotistas podem resgatar conforme o regulamento."
+   ],
+   [
+    "ao FGC, que cobre a falta de liquidez dos fundos.",
+    "O FGC não atua em fundos."
+   ],
+   [
+    "à CVM, que compra os ativos ilíquidos dos fundos.",
+    "A CVM não compra ativos."
+   ]
+  ],
+  "gabarito": "Pela CVM 175, o gestor é responsável pela gestão da carteira, incluindo o risco de liquidez (compatibilizar a liquidez dos ativos com os prazos de resgate e o perfil do passivo), em conjunto com o administrador, conforme as atribuições. Em situações excepcionais, o regulamento e a regulação preveem medidas como o fechamento para resgates.",
+  "dica": "Risco de liquidez da carteira: responsabilidade do gestor, com o administrador."
+ },
+ {
+  "pd": "2.1.3.2.1",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Elisa aplicou em uma classe de renda fixa e resgatou após 10 dias. Também resgatou após 10 dias uma aplicação em classe de ações. Pergunta a Mário, profissional CPA, onde há IOF.",
+  "enunciado": "Mário explica que o IOF regressivo:",
+  "certa": "incide no resgate da classe de renda fixa, mas não no da classe de ações.",
+  "erradas": [
+   [
+    "incide nas duas classes, sempre que o resgate for antes de 30 dias.",
+    "Classes de ações não têm IOF regressivo."
+   ],
+   [
+    "não incide em nenhum fundo, só em CDB.",
+    "Fundos de renda fixa têm IOF em resgates antes de 30 dias."
+   ],
+   [
+    "incide só na classe de ações, por ser renda variável.",
+    "É o contrário."
+   ]
+  ],
+  "gabarito": "Em fundos, o IOF regressivo incide sobre o rendimento de resgates feitos antes de 30 dias da aplicação nas classes de renda fixa, multimercado e cambiais. Classes de ações não sofrem esse IOF. Depois do IOF, aplica-se o IR conforme a classificação tributária.",
+  "dica": "IOF regressivo em fundo: renda fixa, multimercado, cambial. Classe de ações: sem IOF."
+ },
+ {
+  "pd": "2.1.4.2",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Um FII tem um prédio que, totalmente ocupado, gera R$ 100 mil de aluguel por mês. Um dos andares, que representa 20% da área, ficou vago. Um cotista pergunta a Bruna, profissional CPA, o efeito na receita.",
+  "enunciado": "Bruna calcula que a receita de aluguel cai para cerca de:",
+  "certa": "R$ 80 mil por mês, com reflexo nos rendimentos.",
+  "erradas": [
+   [
+    "R$ 100 mil, pois o fundo continua recebendo pelo andar vago.",
+    "Área vaga não gera aluguel."
+   ],
+   [
+    "R$ 20 mil por mês, pois só o andar vago gera receita.",
+    "Os 80% ocupados continuam gerando receita."
+   ],
+   [
+    "zero, pois qualquer vacância suspende os aluguéis do prédio.",
+    "Só a área vaga deixa de gerar aluguel."
+   ]
+  ],
+  "gabarito": "Vacância é a parcela da área não alugada, que deixa de gerar receita e ainda gera custos (condomínio, IPTU). Com 20% de vacância: 100 mil × 80% = R$ 80 mil por mês. Isso reduz os rendimentos distribuídos e pode afetar o preço das cotas. Fundos com mais imóveis e inquilinos diluem esse risco.",
+  "dica": "Vacância de 20% → receita de aluguel 20% menor (e custos da área vaga)."
+ },
+ {
+  "pd": "2.1.1.1.12",
+  "dif": "Médio",
+  "nivel": "Aplicação",
+  "contexto": "Juliano aplicou em um CDB e precisou resgatar no 5º dia, com rendimento bruto de R$ 60. A alíquota de IOF no 5º dia é de 83%. Ele pergunta a Tânia, profissional CPA, quanto pagará de IOF.",
+  "enunciado": "Tânia calcula que o IOF será de aproximadamente:",
+  "certa": "R$ 49,80.",
+  "erradas": [
+   [
+    "R$ 0,23, pois o IOF é de 0,38% sobre o rendimento.",
+    "A alíquota de aplicações é regressiva; no 5º dia, 83%."
+   ],
+   [
+    "R$ 60,00, pois no primeiro mês o IOF consome todo o rendimento.",
+    "No 5º dia a alíquota é de 83%, não 100%."
+   ],
+   [
+    "R$ 13,50, pois o IOF é igual ao IR de 22,5%.",
+    "IOF e IR são tributos distintos."
+   ]
+  ],
+  "gabarito": "IOF regressivo sobre o rendimento em resgates antes de 30 dias: 5º dia = 83% × 60 = R$ 49,80. O IR (22,5%) incide sobre o rendimento após o IOF: 22,5% × 10,20 ≈ R$ 2,30. Resgates muito rápidos praticamente anulam o rendimento.",
+  "dica": "Resgate em poucos dias: o IOF come quase todo o rendimento."
+ },
+ {
+  "pd": "2.1.2.2.7",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Uma gestora lança uma classe fechada com prazo de duração de 6 anos para investir em participações em empresas. Um cliente pergunta a Rogério, profissional CPA, quando receberá o dinheiro de volta.",
+  "enunciado": "Rogério explica que, nessa classe:",
+  "certa": "volta por amortização ou no fim; antes, só vendendo as cotas.",
+  "erradas": [
+   [
+    "o cliente pode resgatar mensalmente, com cotização em D+30.",
+    "Classes fechadas não têm resgate a pedido."
+   ],
+   [
+    "o capital é garantido no vencimento pelo administrador.",
+    "Não há garantia de capital."
+   ],
+   [
+    "o prazo de 6 anos é apenas indicativo, e o resgate é livre.",
+    "O prazo de duração é definido no regulamento."
+   ]
+  ],
+  "gabarito": "Classes fechadas têm prazo de duração definido (ou indeterminado, conforme o regulamento) e não admitem resgate a pedido. Os recursos voltam ao cotista por amortizações (à medida que os investimentos são vendidos) e na liquidação ao fim do prazo. Antes disso, o cotista só sai vendendo suas cotas no secundário, se houver comprador.",
+  "dica": "Classe fechada: dinheiro volta por amortização ou no fim; antes, só vendendo cotas."
+ },
+ {
+  "pd": "2.2.3.4.5",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Juliana quer complementar a renda por 10 anos, até começar a receber outra aposentadoria. Ela não se importa que os pagamentos cessem se falecer antes. Pergunta a Leandro, profissional CPA, qual modalidade escolher.",
+  "enunciado": "Leandro indica a renda:",
+  "certa": "temporária, paga por prazo definido enquanto ela estiver viva.",
+  "erradas": [
+   [
+    "vitalícia reversível, que paga por toda a vida dela e dos beneficiários.",
+    "Ela quer prazo definido, sem reversão."
+   ],
+   [
+    "por prazo certo, que encerra os pagamentos se ela falecer.",
+    "No prazo certo, os beneficiários recebem até o fim do prazo."
+   ],
+   [
+    "vitalícia com prazo mínimo garantido, que paga só por 10 anos.",
+    "A vitalícia paga por toda a vida."
+   ]
+  ],
+  "gabarito": "Renda temporária: pagamento mensal por prazo determinado, enquanto o titular estiver vivo; cessa com a morte ou com o fim do prazo. É a modalidade com maior renda mensal para um mesmo saldo e prazo, por não ter garantias aos beneficiários. Renda por prazo certo paga até o fim do prazo mesmo se o titular falecer (aos beneficiários).",
+  "dica": "Temporária: prazo definido, só enquanto o titular viver. Prazo certo: continua aos beneficiários."
+ },
+ {
+  "pd": "2.3.5.2",
+  "dif": "Médio",
+  "nivel": "Compreensão",
+  "contexto": "Paulo quer financiar uma moto e compara o CDC da loja, com a moto em garantia e prazo de 48 meses, com um crédito pessoal sem garantia de 24 meses. Pergunta a Gilberto, profissional CPA, a diferença.",
+  "enunciado": "Gilberto explica que o CDC:",
+  "certa": "costuma ter juros menores e prazo maior, por ter o bem como garantia.",
+  "erradas": [
+   [
+    "costuma ter juros maiores, pois é oferecido pela loja e não por banco.",
+    "O CDC é crédito de instituição financeira, com garantia do bem."
+   ],
+   [
+    "não exige pagamento de juros, só de tarifas.",
+    "O CDC tem juros."
+   ],
+   [
+    "permite usar o dinheiro em qualquer finalidade, como o crédito pessoal.",
+    "O CDC financia um bem ou serviço específico."
+   ]
+  ],
+  "gabarito": "O Crédito Direto ao Consumidor (CDC) financia a aquisição de bens e serviços, em geral com o próprio bem como garantia (alienação fiduciária), o que permite juros menores e prazos maiores que o crédito pessoal sem garantia. A destinação é específica. Compare sempre o CET e a parcela no orçamento.",
+  "dica": "CDC: bem em garantia → juros menores e prazos maiores que o crédito pessoal."
+ },
+ {
+  "pd": "2.4.1.5.3",
+  "dif": "Fácil",
+  "nivel": "Compreensão",
+  "contexto": "Uma cliente precisa de dinheiro em espécie numa cidade pequena sem agência do seu banco. O mercado local oferece “Pix Saque”. Ela pergunta a Rafael, profissional CPA, como funciona.",
+  "enunciado": "Rafael explica que, no Pix Saque:",
+  "certa": "ela faz um Pix ao estabelecimento e recebe o valor em dinheiro.",
+  "erradas": [
+   [
+    "ela saca o dinheiro em qualquer caixa eletrônico sem cartão, por QR Code do BC.",
+    "O Pix Saque é feito em estabelecimentos participantes."
+   ],
+   [
+    "o estabelecimento empresta o dinheiro, cobrando juros do Pix.",
+    "Não há empréstimo; é troca de Pix por dinheiro."
+   ],
+   [
+    "ela precisa ter conta no mesmo banco do estabelecimento.",
+    "O Pix funciona entre instituições diferentes."
+   ]
+  ],
+  "gabarito": "O Pix tem aplicações além de transferências e pagamentos: Pix Cobrança (com vencimento), Pix Agendado e Automático e Pix Saque e Pix Troco, em que o cliente faz um Pix a um estabelecimento participante e recebe dinheiro em espécie (no Troco, junto com uma compra). Isso amplia o acesso a dinheiro em locais sem agência.",
+  "dica": "Pix Saque: faz um Pix ao estabelecimento e recebe dinheiro vivo."
+ }
+]
