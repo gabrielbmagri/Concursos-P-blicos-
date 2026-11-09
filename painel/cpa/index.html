@@ -138,14 +138,15 @@ textarea.in{min-height:120px;resize:vertical;font-family:ui-monospace,Menlo,Cons
 /* sessão (tela cheia) */
 .ov{position:fixed;inset:0;background:var(--bg);z-index:50;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .ov .bar-top{position:sticky;top:0;background:rgba(243,248,245,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:2}
-.ov .bar-top .in2{max-width:820px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.ov .bar-top .ttl{font-weight:650;font-size:14.5px}
+.ov .bar-top .in2{max-width:820px;margin:0 auto;padding:8px 12px;display:flex;align-items:center;gap:6px}
+.ov .bar-top .ttl{font-weight:650;font-size:14.5px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ov .bar-top .btn.sm{padding-left:8px;padding-right:8px}
 .ov .bar-top .sp{flex:1}
 .timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;background:var(--g1);color:var(--g8);border-radius:8px;padding:4px 10px}
 .timer.warn{background:var(--warn-bg);color:var(--warn)}
 .prog{height:4px;background:var(--g1)}
 .prog b{display:block;height:100%;background:var(--g5);transition:width .2s}
-.qwrap{max-width:820px;margin:0 auto;padding:18px 16px 90px}
+.qwrap{max-width:820px;margin:0 auto;padding:18px 16px calc(28px + env(safe-area-inset-bottom))}
 .qmeta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 .case{background:var(--g1);border:1px solid var(--g2);border-radius:12px;padding:8px 12px;font-size:13px;color:var(--g8);font-weight:600;margin-bottom:10px}
 .ctx{font-size:16px;line-height:1.6}
@@ -169,8 +170,8 @@ textarea.in{min-height:120px;resize:vertical;font-family:ui-monospace,Menlo,Cons
 .gab .res{font-weight:700}
 .gab p{margin:6px 0}
 .dica{margin-top:10px;background:var(--g1);border-left:3px solid var(--g5);border-radius:8px;padding:8px 10px;font-size:14px}
-.nav{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:3}
-.nav .in2{max-width:820px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.nav{margin-top:16px}
+.nav .in2{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .nav .sp{flex:1}
 .star{border:0;background:transparent;font-size:20px;line-height:1;color:var(--ink3);padding:2px 6px}
 .star.on{color:#d39b1c}
@@ -267,7 +268,22 @@ function salvar(){
   LS.set("cpa-estado",E);
   if(!fb.on||!fb.user)return;
   clearTimeout(saveT);
-  saveT=setTimeout(()=>{fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()})},600);
+  saveT=setTimeout(()=>{saveT=null;fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()})},600);
+}
+function salvarJa(){
+  LS.set("cpa-estado",E);
+  if(!fb.on||!fb.user||!fb.doc||!saveT)return;
+  clearTimeout(saveT);saveT=null;
+  fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()});
+}
+/* reabre o simulado que ficou aberto, na questão em que você parou */
+let retomou=false;
+function retomar(){
+  if(retomou||UI.ses||!IDX.length)return;
+  if(fb.on&&!fb.carregou)return;
+  retomou=true;
+  const id=E.aberto,st=id&&E.sims[id];
+  if(st&&!st.fin&&(simInfo(id)))abrirSim(id,null,true);
 }
 function initFirebase(){
   if(!fbOk())return false;
@@ -290,7 +306,7 @@ function initFirebase(){
           if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
           else if(E.atualizado&&d.atualizado&&E.atualizado>d.atualizado){salvar()} /* este aparelho tem a versão mais nova */
           else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{}},d);LS.set("cpa-estado",E)}
-          first=false;fb.status="firebase";render();
+          first=false;fb.status="firebase";fb.carregou=true;render();retomar();
         },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
         fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
       }
@@ -513,7 +529,7 @@ async function abrirSim(id,modo,continuar){
     let st=E.sims[id];
     if(!continuar||!st){st=E.sims[id]={modo,ini:Date.now(),r:{},vis:{},t:0,atual:1,fin:false}}
     UI.ses={tipo:"sim",sid:id,titulo:s.titulo,modo:st.modo,itens:s.q.map((x,i)=>({id:qid(id,i+1),x,n:i+1})),i:Math.min((st.atual||1),s.q.length)-1,fim:!!st.fin,t0:Date.now(),rev:!!st.fin};
-    if(st.fin){UI.ses.i=0}
+    if(st.fin){UI.ses.i=0;if(E.aberto===id)delete E.aberto}else E.aberto=id;
     salvar();UI.modal=null;tick();render();window.scrollTo(0,0);
   }catch(e){UI.err="Não consegui abrir o simulado. Verifique a conexão.";render()}
 }
@@ -531,6 +547,8 @@ async function abrirRefazer(filtro){
   UI.modal=null;render();window.scrollTo(0,0);
 }
 const sesSt=()=>UI.ses&&UI.ses.tipo==="sim"?E.sims[UI.ses.sid]:null;
+/* guarda a questão em que você está, para voltar nela depois */
+function marcarPos(){const s=UI.ses,st=sesSt();if(!st||s.fim)return;st.atual=s.i+1;E.aberto=s.sid;salvar()}
 const respDe=(it,idx)=>{const s=UI.ses;if(s.tipo==="sim")return (E.sims[s.sid].r||{})[idx+1];return s.resp[it.id]};
 let tickT=null;
 function tick(){
@@ -552,7 +570,7 @@ function sessaoHtml(){
   const prova=s.modo==="prova",feito=resp!=null&&!prova;
   const nResp=s.tipo==="sim"?Object.keys(st.r).length:Object.keys(s.resp).length;
   const tempo=s.tipo==="sim"?(prova?fmtT(DURACAO-(st.t||0)):fmtT(st.t||0)):"";
-  return `<div class="ov" id="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · ${s.i+1}/${s.itens.length}</span><span class="sp"></span>${s.tipo==="sim"?`<span class="timer" id="timer" title="${prova?"tempo restante":"tempo gasto"}">${tempo}</span>`:""}<button class="btn ghost sm" data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button class="btn ghost sm" data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button></div><div class="prog"><b style="width:${100*nResp/s.itens.length}%"></b></div></div>
+  return `<div class="ov" id="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · ${s.i+1}/${s.itens.length}</span>${s.tipo==="sim"?`<span class="timer" id="timer" title="${prova?"tempo restante":"tempo gasto"}">${tempo}</span>`:""}<button class="btn ghost sm" data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button class="btn ghost sm" data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button></div><div class="prog"><b style="width:${100*nResp/s.itens.length}%"></b></div></div>
   <div class="qwrap qz" style="--qfs:${UI.fs}px">
     <div class="qmeta"><span class="tag b${bloco(x.pd)}">Bloco ${bloco(x.pd)}</span><span class="tag">${esc(assunto(x.pd))}</span>${x.dif?`<span class="tag" style="background:#fff;border:1px solid var(--line);color:var(--ink2)">${esc(x.dif)}</span>`:""}${s.tipo==="ref"?`<span class="muted small">${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}</span>`:""}</div>
     ${x.caso?`<div class="case">${esc(x.caso)}${x.etapa?` · etapa ${esc(x.etapa)}`:""}</div>`:""}
@@ -561,14 +579,14 @@ function sessaoHtml(){
       const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
       return `<button class="opt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""}><span class="L">${l}</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>
     ${feito?gabaritoHtml(x,resp,it.id,true):""}
-    ${prova?`<p class="muted small" style="margin-top:14px">Modo prova: como no exame, a questão fica travada depois que você avança. O gabarito aparece no final.</p>`:""}
-  </div>
   <div class="nav"><div class="in2">
     ${!prova&&s.i>0?`<button class="btn alt" data-a="ant">Anterior</button>`:""}
     <span class="sp"></span>
     ${prova?`<button class="btn" data-a="prox" ${resp?"":"disabled"}>${s.i===s.itens.length-1?"Responder e finalizar":"Responder e avançar"}</button>${resp?"":`<button class="btn ghost" data-a="pular">Deixar em branco</button>`}`
-      :s.i===s.itens.length-1?`<button class="btn" data-a="fim">Finalizar</button>`:(feito?`<button class="btn" data-a="prox">Próxima</button>`:`<button class="btn ghost" data-a="prox">Pular</button>`)}
-  </div></div></div>`;
+      :s.i===s.itens.length-1||(s.tipo==="sim"&&nResp===s.itens.length)?`${s.i<s.itens.length-1?`<button class="btn alt" data-a="prox">Próxima</button>`:""}<button class="btn" data-a="fim">Finalizar</button>`:(feito?`<button class="btn" data-a="prox">Próxima</button>`:`<button class="btn ghost" data-a="prox">Pular</button>`)}
+  </div></div>
+    ${prova?`<p class="muted small" style="margin-top:14px">Modo prova: como no exame, a questão fica travada depois que você avança. O gabarito aparece no final.</p>`:`${s.tipo==="sim"?`<p class="muted small" style="margin-top:14px">Suas respostas ficam salvas. Pode sair quando quiser: ao voltar, o simulado abre nesta questão.</p>`:""}`}
+  </div></div>`;
 }
 function resultadoHtml(){
   const s=UI.ses;
@@ -597,12 +615,12 @@ function responder(l){
 function avancar(pular){
   const s=UI.ses;
   if(s.tipo==="sim"){const st=sesSt();if(s.modo==="prova"){st.vis[s.i+1]=1;if(s.i===s.itens.length-1){finalizar();return}}st.atual=s.i+2;salvar()}
-  if(s.i<s.itens.length-1){s.i++;render();const o=$("#ov");if(o)o.scrollTop=0}
+  if(s.i<s.itens.length-1){s.i++;marcarPos();render();const o=$("#ov");if(o)o.scrollTop=0}
   else if(s.tipo==="ref"){s.fim=true;render()}
 }
 function finalizar(auto){
   const s=UI.ses;
-  if(s.tipo==="sim"){const st=sesSt();st.fin=true;st.fim=Date.now();salvar();if(auto)UI.msg="O tempo de 2h30 acabou e o simulado foi finalizado."}
+  if(s.tipo==="sim"){const st=sesSt();st.fin=true;st.fim=Date.now();if(E.aberto===s.sid)delete E.aberto;salvar();if(auto)UI.msg="O tempo de 2h30 acabou e o simulado foi finalizado."}
   s.fim=true;s.rev=false;render();const o=$("#ov");if(o)o.scrollTop=0;
 }
 function modalHtml(){
@@ -662,7 +680,7 @@ document.addEventListener("click",e=>{
     case "continuar":abrirSim(id,null,true);return;
     case "rever":abrirSim(id,null,true).then(()=>{if(UI.ses){UI.ses.rev=true;UI.revF="todas";render()}});return;
     case "zerar":UI.modal={tipo:"conf",titulo:"Recomeçar o simulado?",texto:"As respostas dadas até agora neste simulado serão apagadas.",ok:"zerar-ok",btn:"Recomeçar",id};break;
-    case "zerar-ok":delete E.sims[id];salvar();UI.modal=null;break;
+    case "zerar-ok":delete E.sims[id];if(E.aberto===id)delete E.aberto;salvar();UI.modal=null;break;
     case "remover":UI.modal={tipo:"conf",titulo:"Remover simulado anexado?",texto:"O simulado sai da lista. Você pode anexá-lo de novo depois.",ok:"remover-ok",btn:"Remover",id};break;
     case "remover-ok":delete EXTRA[id];if(fb.on&&fb.user)fb.col.doc(id).delete().catch(()=>{});else LS.set("cpa-extra",EXTRA);UI.modal=null;break;
     case "fecha-modal":UI.modal=null;break;
@@ -670,11 +688,11 @@ document.addEventListener("click",e=>{
     case "resp":responder(t.dataset.l);return;
     case "prox":avancar();return;
     case "pular":avancar(true);return;
-    case "ant":if(UI.ses.i>0){UI.ses.i--;render()}return;
+    case "ant":if(UI.ses.i>0){UI.ses.i--;marcarPos();render();const o=$("#ov");if(o)o.scrollTop=0}return;
     case "fim":finalizar();return;
     case "ver-rev":UI.ses.rev=true;UI.revF="todas";break;
     case "revf":UI.revF=t.dataset.k;break;
-    case "sair-ses":if(UI.ses&&UI.ses.tipo==="sim"&&!UI.ses.fim)salvar();UI.ses=null;clearInterval(tickT);break;
+    case "sair-ses":if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
     case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
     case "star":if(E.salvos[id])delete E.salvos[id];else E.salvos[id]={em:Date.now()};salvar();break;
     case "unsave":delete E.salvos[id];salvar();break;
@@ -700,13 +718,15 @@ document.addEventListener("keydown",e=>{
 });
 document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.id&&e.target.id.startsWith("lg-"))doLogin()});
 window.addEventListener("beforeunload",()=>{if(UI.ses&&UI.ses.tipo==="sim")LS.set("cpa-estado",E)});
+window.addEventListener("pagehide",salvarJa);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)salvarJa()});
 
 /* ==================== início ==================== */
 (async function(){
   if(!initFirebase()){EXTRA=LS.get("cpa-extra",{})}
   render();
   try{const r=await fetch("simulados/index.json",{cache:"no-cache"});IDX=await r.json()}catch(e){UI.err="Não consegui carregar a lista de simulados. Verifique a conexão e recarregue."}
-  render();
+  render();retomar();
 })();
 </script>
 </body>
