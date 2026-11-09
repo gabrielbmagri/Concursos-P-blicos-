@@ -9,6 +9,8 @@
 
 Em https://painel-de-metas.web.app/cpa/ fica um painel separado, de uma página só, para os simulados da CPA: contagem regressiva, acerto geral e por bloco e assunto, nota estimada, simulados em modo prova (2h30, sem voltar) ou estudo (correção na hora), refazer erradas e gabaritos salvos. Usa o mesmo login, e os dados ficam em `usuarios/{id}/cpa` e `usuarios/{id}/cpa_simulados`. Formato e regras dos simulados: `painel/cpa/FORMATO-SIMULADO.md`.
 
+O modo prova reproduz as regras de tela do edital da Anbima (versão 1.6, setembro de 2026): tela inicial de ciência das condições, 2h30 regressivas, questão bloqueada ao avançar (com aviso se ficar em branco), revisão final só para conferência, calculadora, bloco de notas, rascunho e fórmulas, e resultado provisório com a quantidade de acertos. A aparência exata do sistema da prova não é pública; o layout é uma aproximação. No modo estudo, a mesma tela traz a correção na hora e permite voltar às questões.
+
 ## Ankis
 
 A aba **Ankis** guarda os cartões de estudo (repetição espaçada, com filtros e estatísticas de memória). Para gerar baralhos com o Claude, veja `FORMATO-BARALHOS.md`. Os cartões entram nos backups abaixo.
