@@ -505,7 +505,7 @@ function painelHtml(){
   const S=stats(),sims=listaSims();
   const p=pct(S.acertos,S.resp);
   return `<div class="wrap">
-  <div class="top"><div class="logo"><b>CPA</b><h1>Simulados CPA<span>Certificação Profissional Anbima · 50 questões · 2h30 · aprovação com 35</span></h1></div><div class="sp"></div>${syncHtml()}${fb.on&&fb.user?`<button class="btn ghost sm" data-a="sair">Sair</button>`:""}</div>
+  <div class="top"><div class="logo"><b>CPA</b><h1>Simulados CPA<span>Certificação Profissional Anbima · 50 questões · 2h30 · aprovação com 35</span></h1></div><div class="sp"></div><a class="btn ghost sm" href="resumo-cpa.pdf" target="_blank" rel="noopener">Resumo (PDF)</a>${syncHtml()}${fb.on&&fb.user?`<button class="btn ghost sm" data-a="sair">Sair</button>`:""}</div>
   ${UI.msg?`<div class="msg">${esc(UI.msg)}</div>`:""}${UI.err?`<div class="msg err">${esc(UI.err)}</div>`:""}
   <div class="hero">${contagemHtml(S,sims)}
     <div class="kpis">

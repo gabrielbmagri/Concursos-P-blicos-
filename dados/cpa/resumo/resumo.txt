@@ -1,0 +1,598 @@
+# Bloco 1 | Sistema financeiro e economia
+
+## Estrutura do Sistema Financeiro Nacional
+| Mercado | Normatiza | Supervisiona |
+| Moeda, crédito, câmbio e instituições financeiras | CMN | Banco Central |
+| Valores mobiliários (ações, debêntures, fundos) | CMN | CVM |
+| Seguros, capitalização e previdência aberta | CNSP | SUSEP |
+| Previdência fechada (fundos de pensão) | CNPC | PREVIC |
+- CMN: órgão normativo máximo; define diretrizes e normas gerais; fixa a meta de inflação. Formado pelo ministro da Fazenda (preside), ministro do Planejamento e presidente do Banco Central. Não fiscaliza ninguém.
+- CNSP: normatiza seguros, capitalização, resseguro e previdência aberta.
+- CNPC: normatiza a previdência fechada (fundos de pensão).
+- Banco Central: executa as políticas monetária e cambial; autoriza, fiscaliza e pune instituições financeiras; emite moeda (com exclusividade); administra as reservas internacionais; recolhe o compulsório; faz o redesconto (emprestador de última instância); supervisiona consórcios, cooperativas e instituições de pagamento.
+- Regimes especiais: intervenção, RAET e liquidação extrajudicial, decretados pelo Banco Central.
+- CVM: mercado de valores mobiliários; registro de companhias abertas e de ofertas públicas; fundos de investimento e gestão de carteiras (mesmo dentro de um banco); fato relevante. Punições administrativas: advertência, multa, inabilitação, suspensão e cassação.
+- SUSEP: fiscaliza seguradoras, capitalização, previdência aberta (PGBL e VGBL), resseguradoras e corretores de seguros.
+- PREVIC: fiscaliza os fundos de pensão (EFPC), com patrocinador (empresa) ou instituidor (associação, sindicato).
+
+## Instituições e participantes
+- Banco comercial: depósitos à vista e crédito de curto e médio prazo.
+- Banco múltiplo: várias carteiras (comercial, investimento, crédito imobiliário etc.) em uma só instituição.
+- Banco de investimento: ofertas de ações e debêntures, fusões e aquisições, crédito de longo prazo. Sem depósito à vista.
+- Caixa Econômica Federal: banco público com função social: FGTS, habitação, loterias e benefícios sociais.
+- Financeira (SCFI): CDC e crédito pessoal; capta com letra de câmbio e RDB.
+- Companhia hipotecária: financiamento imobiliário, sem depósito à vista.
+- Agência de fomento: financia o desenvolvimento regional; não capta do público.
+- SCMEPP: crédito a microempreendedores e pequenas empresas.
+- Cooperativa de crédito: o cooperado é dono e participa das sobras; em regra, só associado aplica; supervisão do Banco Central; garantia do FGCoop.
+- Corretora e DTVM: intermediam a negociação (ambas podem operar na B3); levam a ordem à bolsa e fazem a custódia. Os ativos ficam em nome do investidor.
+- B3: bolsa, balcão, registro, depositária central e contraparte central.
+- Instituição de pagamento: carteira pré-paga = emissor de moeda eletrônica; maquininha = credenciador. Conta de pagamento não tem FGC, mas o dinheiro é patrimônio separado, aplicado em títulos públicos ou no Banco Central.
+- Fintech: regulada conforme a atividade (Banco Central, CVM ou SUSEP).
+- Seguradora: assume o risco e paga a indenização. Corretor de seguros: só intermedeia.
+- Resseguro: seguro da seguradora. Cosseguro: várias seguradoras dividem o mesmo risco.
+- Previdência aberta: PGBL é oferecido por seguradora ou entidade aberta; VGBL é seguro de vida, oferecido por seguradora.
+- Fundo de pensão (EFPC): fechado, sem fins lucrativos, supervisão da PREVIC.
+- Capitalização: guarda + sorteios; rende pouco e pode devolver menos que o pago. Não é investimento nem reserva.
+- Assessor de investimento: vinculado a um intermediário; não recebe dinheiro do cliente; não promete retorno.
+
+## Autorreguladores e FGC
+- Anbima: entidade privada; autorregulação por códigos para associadas e aderentes; certificações; informações de mercado.
+- Ancord: corretoras, distribuidoras e assessores. Apimec: analistas. Planejar: planejadores financeiros (CFP).
+- BSM: autorregulação da B3. MRP: ressarce o investidor por erro ou falha da corretora em operação na B3.
+- FGC: até R$ 250 mil por CPF ou CNPJ por conglomerado; teto de R$ 1 milhão a cada 4 anos. Conta conjunta: o valor é dividido entre os titulares.
+- Com FGC: conta corrente, poupança, CDB, RDB, LCI, LCA e letra de câmbio.
+- Sem FGC: fundos, previdência, Tesouro Direto, debêntures, CRI, CRA, COE e ações.
+- FGCoop: garantia equivalente para depósitos em cooperativas (ex.: RDC).
+- Fundo de investimento: não tem FGC, mas os ativos são dos cotistas, separados do patrimônio da instituição.
+
+## Infraestrutura de mercado e pagamentos
+- STR: transferências entre bancos (TED), em tempo real e pelo valor bruto.
+- SPI: liquida o Pix, do Banco Central, 24 horas por dia, 7 dias por semana.
+- Selic (sistema): registro e liquidação dos títulos públicos federais, no Banco Central.
+- B3: ações e ativos privados; depositária central e contraparte central.
+- Contraparte central: fica entre comprador e vendedor e garante a liquidação; elimina o risco de contraparte.
+- Risco de contraparte: a outra parte não pagar ou não entregar.
+- Clearing: compensa as operações e liquida só o saldo líquido, com garantias.
+- Registradora: registra ativos e gravames; evita a mesma garantia em duplicidade.
+- Portabilidade de custódia: troca de corretora sem vender os ativos e sem IR.
+
+## Economia e mercados
+- Fluxo da renda: famílias e empresas trocam trabalho, produção e renda; o governo arrecada tributos e devolve em gastos e transferências.
+- Sistema financeiro: leva recursos dos agentes superavitários (poupadores) aos deficitários (tomadores).
+- Mercado monetário: curtíssimo prazo, liquidez entre instituições, compromissadas e DI.
+- Mercado de crédito: empréstimos e financiamentos bancários.
+- Mercado de capitais: longo prazo; ações e debêntures; a empresa capta direto dos investidores (desintermediação).
+- Mercado cambial: compra e venda de moeda estrangeira.
+- Spread bancário: taxa do empréstimo − custo de captação (risco, custos, impostos e lucro).
+
+## Política fiscal
+- Funções: alocativa (bens públicos), distributiva (reduz desigualdades) e estabilizadora (suaviza os ciclos).
+- Resultado primário: receitas − despesas, sem juros da dívida.
+- Resultado nominal: primário − juros. Superávit primário pode conviver com déficit nominal.
+- Gasto alto com economia aquecida: pressiona a inflação e os juros. Risco fiscal sobe os juros longos (a curva inclina).
+- Arcabouço fiscal: despesas crescem limitadas às receitas, com metas de resultado.
+- LRF: limites para gasto com pessoal e dívida, metas fiscais e transparência, para todos os entes.
+
+## Política monetária e Copom
+| Instrumento | Contracionista (retira moeda) | Expansionista (injeta moeda) |
+| Títulos públicos (mercado aberto) | Banco Central vende | Banco Central compra |
+| Depósito compulsório | sobe | cai |
+| Redesconto | mais caro | mais barato |
+| Selic | sobe | cai |
+- Objetivo: manter a inflação na meta.
+- Meta de inflação: fixada pelo CMN e medida pelo IPCA (IBGE). Meta contínua: 6 meses seguidos fora do intervalo de tolerância = carta aberta do Banco Central.
+- Copom: diretoria do Banco Central; 8 reuniões por ano; define a meta da Selic; publica comunicado e ata.
+- Selic meta: decidida pelo Copom. Selic efetiva: média das operações com títulos públicos. DI (CDI): média dos empréstimos de um dia entre bancos, apurada pela B3.
+- Selic alta: crédito mais caro, atividade mais fraca, entrada de capital estrangeiro, real mais forte, prefixados já comprados perdem valor.
+- Expectativas: inflação esperada alta tende a virar inflação. A comunicação do Copom mexe nos preços antes da decisão. A Selic atua no curto prazo; os juros longos dependem de expectativas e credibilidade.
+- Recessão com inflação baixa: corte de juros (política expansionista).
+
+## Política cambial
+- Regime brasileiro: câmbio flutuante; o Banco Central só suaviza a volatilidade (leilões, swaps).
+- Reservas internacionais: colchão em moeda forte contra choques externos, administrado pelo Banco Central.
+- Swap cambial tradicional: protege contra a alta do dólar, sem entrega de moeda. Swap reverso: protege contra a queda.
+- PTAX: taxa de câmbio de referência do Banco Central, usada em contratos e conversões.
+- Cupom cambial: juro em dólar no Brasil (DI − variação cambial esperada).
+- Câmbio real: câmbio nominal ajustado pela inflação dos dois países.
+- Dólar em alta: importados e insumos mais caros → inflação → juros podem subir.
+- Retorno do investidor estrangeiro: juro local ± variação cambial.
+
+## Indicadores econômicos
+- PIB: C + I + G + (X − M). Crescimento econômico = variação do PIB real (sem efeito de preços).
+- IPCA (IBGE): inflação oficial; base da meta de inflação.
+- IGP-M (FGV): 60% IPA (atacado), 30% IPC (consumidor), 10% INCC (construção); sensível ao dólar e às commodities; muito usado em aluguel.
+- INCC: construção civil. IPA: preços ao produtor. IPC-Fipe: consumidor da cidade de São Paulo.
+- Reajuste: valor × (1 + índice).
+- Mercado de trabalho aquecido: pressão inflacionária → juros tendem a subir.
+
+## Riscos de investimento e estabilidade financeira
+- Risco de mercado: oscilação de preços (juros, câmbio, ações). Juros sobem → prefixado cai. A perda só se realiza se vender antes do vencimento.
+- Risco de crédito: o emissor não pagar.
+- Risco de liquidez: não conseguir vender rápido sem desconto.
+- Risco sistêmico: contágio que ameaça o sistema inteiro.
+- Basileia: capital proporcional aos riscos + liquidez mínima + limite de alavancagem.
+- Comef (Banco Central): estabilidade financeira e medidas macroprudenciais (ex.: adicional contracíclico de capital).
+- Crise de liquidez: o Banco Central libera compulsório e oferece redesconto.
+
+## Matemática financeira
+- Juros simples: M = C × (1 + i × n). Taxas proporcionais: 1% a.m. = 12% a.a.
+- Juros compostos: M = C × (1 + i)^{n}. Padrão do mercado; taxas equivalentes.
+- Simples × composto: n < 1, simples rende mais; n = 1, iguais; n > 1, composto rende mais.
+- Taxa equivalente: (1 + i anual) = (1 + i mensal)^{12}. 2% a.m. ≈ 26,8% a.a.; 12% a.a. ≈ 0,95% a.m.
+- Taxa semestral equivalente: (1 + i anual)^{1/2} − 1. 10% a.a. ≈ 4,88% a.s.; 6% a.a. ≈ 2,96% a.s.
+- Taxa real: (1 + nominal) ÷ (1 + inflação) − 1. Nunca subtrair direto. Rendeu menos que a inflação = ganho real negativo.
+- Valor futuro e presente: VF = VP × (1 + i)^{n}; VP = VF ÷ (1 + i)^{n}.
+- VPL: valor presente dos fluxos − investimento. VPL > 0 cria valor.
+- TIR: taxa que zera o VPL. TIR > custo de capital ⇔ VPL > 0.
+- Custo de oportunidade: o que se deixa de ganhar na melhor alternativa.
+- Taxa livre de risco: título público; outros ativos precisam pagar um prêmio de risco acima dela.
+- CMPC (WACC): soma de peso × custo de cada fonte (credores e sócios); taxa de desconto dos projetos.
+- Taxa líquida: taxa bruta × (1 − IR). Bruto equivalente a um isento: taxa isenta ÷ (1 − IR).
+- Fluxos de títulos: bullet (tudo no vencimento); com cupom (juros periódicos, principal no fim); com amortização (capital volta antes).
+- Duration: prazo médio ponderado dos fluxos. Sem cupom = prazo; com cupom < prazo. Maior duration = preço mais sensível aos juros.
+- Alavancagem: amplia ganhos e perdas.
+- Retorno esperado da carteira: soma de peso × retorno de cada ativo.
+- Payback simples: investimento ÷ fluxo anual; ignora o valor do dinheiro no tempo. Payback descontado ≥ payback simples.
+- Desconto comercial (bancário) simples: D = valor de face × taxa × prazo; a taxa efetiva fica acima da nominal.
+| Sistema | Amortização | Parcela | Juros totais |
+| SAC | constante (valor ÷ prazo) | decrescente | menores |
+| Price | crescente | fixa | maiores |
+
+## Regulação e autorregulação
+- Investidor qualificado (CVM 30): mais de R$ 1 milhão em investimentos + declaração (ou certificações aceitas pela CVM, para recursos próprios).
+- Investidor profissional: mais de R$ 10 milhões em investimentos + declaração.
+- Investidor não residente: representante e custodiante no Brasil + registro no Banco Central.
+- Lei da Liberdade Econômica: livre iniciativa, boa-fé presumida, intervenção do Estado só subsidiária.
+- Código Anbima de Distribuição: boa-fé, transparência, diligência, lealdade e gestão de conflitos; vale em qualquer canal, inclusive o digital e o private.
+- Conheça sua clientela: cadastro completo e atualizado.
+- Publicidade: clara, sem destacar só o melhor período, com o aviso de que rentabilidade passada não garante rentabilidade futura.
+- Remuneração do distribuidor: transparente para o cliente.
+- Investimento no exterior: transparência sobre riscos, custos e proteção + suitability.
+- Extrato: valor de mercado (marcação a mercado); a taxa contratada só vale no vencimento.
+
+# Bloco 2 | Produtos do mercado financeiro
+
+## Títulos públicos (Tesouro Direto)
+| Título | Rentabilidade | Fluxo |
+| Tesouro Selic (LFT) | Selic | sem cupom |
+| Tesouro Prefixado (LTN) | taxa fixa | sem cupom |
+| Prefixado com juros semestrais (NTN-F) | taxa fixa | cupom de 10% a.a. |
+| Tesouro IPCA+ (NTN-B Principal) | IPCA + taxa | sem cupom |
+| IPCA+ com juros semestrais (NTN-B) | IPCA + taxa | cupom de 6% a.a. sobre o valor corrigido |
+| Tesouro Renda+ | IPCA + taxa | 240 parcelas mensais (aposentadoria) |
+| Tesouro Educa+ | IPCA + taxa | 60 parcelas mensais (educação) |
+- Risco: soberano, o menor do país; referência livre de risco. Sem FGC.
+- Liquidez: diária, garantida pelo Tesouro, pelo preço de mercado. A taxa contratada só é garantida no vencimento.
+- Marcação a mercado: juros sobem → preço cai; juros caem → preço sobe (vender antes pode render acima do contratado).
+- Preço da LTN: PU = 1.000 ÷ (1 + taxa)^{du/252}.
+- Custos: taxa de custódia da B3, taxa da corretora (se houver), IR regressivo e IOF antes de 30 dias.
+- Cupom: IR a cada pagamento, com alíquota pelo prazo desde a compra; risco de reinvestimento. Sem cupom: IR só no fim, sobre todo o rendimento.
+- Escolha: reserva de emergência → Tesouro Selic; expectativa de queda de juros → prefixado; proteção contra inflação e objetivo longo → IPCA+.
+
+## Títulos bancários
+- CDB: emitido por banco; prefixado, pós-fixado (% do CDI) ou híbrido (IPCA + taxa); FGC; IR regressivo; resgate antecipado pelo preço de mercado quando não tem liquidez diária.
+- RDB: como o CDB, mas intransferível; FGC. RDC: de cooperativas; FGCoop.
+- LCI e LCA: emitidas por bancos, com lastro imobiliário (LCI) ou do agronegócio (LCA); isentas de IR para pessoa física; FGC; carência mínima. Não servem como reserva de emergência.
+- LCD: emitida por bancos de desenvolvimento para financiar atividade produtiva; isenta de IR para pessoa física.
+- Letra de câmbio: emitida por financeiras; FGC.
+- Taxa x risco: taxa maior = risco maior do emissor. Prazo maior e menos liquidez = taxa maior (prêmio de liquidez).
+- Comparação: CDB líquido = taxa × (1 − IR) contra LCI ou LCA isenta. Prazo curto = IR maior = vantagem do isento.
+- Isenção: vale só para pessoa física; empresa paga imposto.
+
+## Debêntures, CRI e CRA
+- Debênture: título de dívida emitido por S.A.; sem FGC; riscos de crédito, mercado e liquidez.
+- Garantias (da mais forte à mais fraca): real > flutuante > quirografária > subordinada.
+- Conversível: pode virar ações da própria emissora (paga juros menores). Permutável: ações de outra empresa.
+- Incentivada (Lei 12.431): infraestrutura; isenta de IR para pessoa física.
+- Debênture de infraestrutura (Lei 14.801): benefício fiscal para a empresa emissora.
+- Agente fiduciário: representa e protege os debenturistas; não garante o pagamento.
+- Resgate antecipado (call): a empresa paga antes quando os juros caem; o investidor reaplica a taxa menor.
+- CRI e CRA: emitidos por securitizadora, com lastro em recebíveis imobiliários (CRI) ou do agronegócio (CRA); regime fiduciário (patrimônio separado); isentos para pessoa física; sem FGC; risco do devedor do lastro; pré-pagamento antecipa o fluxo; pouca liquidez no secundário.
+- Rating: opinião sobre o risco de crédito, não garantia; pode mudar. BBB− é o último degrau do grau de investimento. Rebaixamento → spread maior → preço cai.
+
+## Poupança, TR e TLP
+| Selic | Rendimento da poupança (depósitos desde 4/5/2012) |
+| acima de 8,5% a.a. | 0,5% a.m. + TR |
+| até 8,5% a.a. | 70% da Selic + TR |
+- Poupança antiga (até 3/5/2012): sempre 0,5% a.m. + TR.
+- Aniversário: rende uma vez por mês, na data do depósito; depósitos nos dias 29, 30 e 31 fazem aniversário no dia 1º.
+- Características: liquidez diária, FGC, isenta de IR só para pessoa física; pode perder da inflação. Financia a habitação (SFH).
+- TR: calculada pelo Banco Central; corrige poupança, FGTS e financiamento habitacional.
+- TLP: taxa do BNDES; IPCA + juro real.
+
+## Tributação da renda fixa e IOF
+| Prazo da aplicação | IR sobre o rendimento |
+| até 180 dias | 22,5% |
+| de 181 a 360 dias | 20% |
+| de 361 a 720 dias | 17,5% |
+| acima de 720 dias | 15% |
+- IR: retido na fonte (definitivo), sobre o rendimento; cada aporte tem seu próprio prazo.
+- IOF: só em resgates antes de 30 dias; sobre o rendimento; tabela regressiva de 96% (1º dia) a 0% (30º dia). Primeiro o IOF, depois o IR sobre o que sobrou.
+- Isentos para pessoa física: poupança, LCI, LCA, LCD, CRI, CRA, debêntures incentivadas e rendimentos de FII (com requisitos).
+
+## Ações e eventos corporativos
+- Ação: fração do capital; o acionista é sócio (capital próprio). Debênture: o investidor é credor (capital de terceiros).
+- ON (final 3): direito a voto. PN (final 4): em regra sem voto; prioridade em dividendos ou no reembolso de capital. Unit (final 11): pacote de ações (final 11 também é usado por ETF e FII).
+- Mercado fracionário: menos de 100 ações (código com F).
+- Companhia aberta: registro na CVM; pode ter só debêntures no mercado (aberta não é o mesmo que listada). Limitada: capital em quotas.
+- BDR: certificado de ação estrangeira negociado na B3; risco cambial; sem isenção de R$ 20 mil.
+- Renda variável: retorno incerto, pode haver perda; sem FGC.
+- Mercado primário: dinheiro vai para a empresa. Secundário: negócios entre investidores.
+- IPO: primeira oferta pública. Follow-on: nova oferta de empresa já listada. Preço por bookbuilding; demanda maior que a oferta = rateio.
+- Oferta primária: novas ações, dinheiro para a empresa, dilui. Secundária: sócio vende ações existentes, sem diluição.
+- OPA: oferta pública para comprar ações (fechar capital, troca de controle).
+- Bônus de subscrição: direito de comprar novas ações a preço e prazo definidos.
+- AGO: anual, até 4 meses após o fim do exercício; contas, destinação dos lucros e eleições. AGE: demais assuntos (estatuto, fusão, incorporação).
+- Direito de recesso: o acionista dissidente sai com reembolso nas deliberações previstas em lei.
+- Dividendos: isentos; desde 2026, retenção de 10% sobre o que passar de R$ 50 mil por mês da mesma empresa.
+- Dividendo mínimo obrigatório: se o estatuto for omisso, metade do lucro líquido ajustado.
+- JCP: IR de 17,5% retido na fonte (desde 2026); dedutível para a empresa. R$ 1.000 brutos = R$ 825 líquidos.
+- Data com: último dia para ter direito ao provento. Data ex: a ação já é negociada sem o provento.
+- Desdobramento: mais ações, preço menor. Grupamento: menos ações, preço maior. Valor total igual nos dois.
+- Bonificação: ações novas grátis por capitalização de reservas; preço ajustado.
+- Subscrição: o acionista paga pelas novas ações (direito de preferência) ou vende o direito.
+- Restituição de capital: devolução de capital social (não é distribuição de resultado).
+
+## Governança e índices de ações
+- Estrutura: assembleia elege o conselho de administração; o conselho elege e fiscaliza a diretoria; o conselho fiscal fiscaliza contas e administradores (minoritários podem eleger membros).
+- Conselheiro independente: sem vínculo com o controlador ou a gestão; protege os minoritários.
+- Tag along: direito do minoritário de vender junto com o controlador. 80% na lei (ON); 100% no Novo Mercado e no Nível 2.
+- Drag along: obrigação do minoritário de vender junto.
+- Free float: ações em circulação; baixo free float = menos liquidez.
+| Segmento da B3 | Principais exigências |
+| Nível 1 | transparência e free float mínimo |
+| Nível 2 | aceita PN; tag along de 100% |
+| Novo Mercado | só ON; tag along de 100%; conselheiros independentes; free float mínimo |
+| Bovespa Mais | acesso gradual ao mercado, com boa governança |
+- Ibovespa: ações mais negociadas; índice de retorno total (preço + proventos reinvestidos); carteira revista a cada 4 meses.
+- IBrX-100 e IBrX-50: as 100 e as 50 ações mais negociadas.
+
+## Tributação da renda variável
+| Operação | IR |
+| Ações, operação comum | 15%; isento se as vendas do mês somarem até R$ 20 mil |
+| Day trade | 20%, sem isenção |
+| Venda de cotas de FII | 20%, sem isenção |
+| ETF de ações e BDR | 15%, sem isenção |
+| ETF de renda fixa | 15% a 25% na fonte, pelo prazo médio da carteira |
+- Ganho: venda − custo médio de aquisição. Ações herdadas: custo = valor declarado no inventário.
+- Day trade: compra e venda no mesmo dia, na mesma corretora.
+- Isenção de R$ 20 mil: sobre o total vendido no mês (não sobre o lucro); só ações no mercado à vista. Isento também é declarado.
+- Pagamento: DARF até o último dia útil do mês seguinte.
+- Dedo-duro: 0,005% sobre as vendas (operação comum) ou 1% do ganho (day trade); antecipação abatida no DARF.
+- Prejuízo: compensa lucro futuro da mesma modalidade, sem prazo. Prejuízo de FII só compensa lucro de FII.
+
+## COE
+- Estrutura: renda fixa (protege o capital) + derivativos (buscam o ganho); emitido por banco; risco do emissor; sem FGC.
+- VNP: valor nominal protegido no vencimento. VNR: valor nominal em risco; pode perder até tudo, nunca mais que o investido.
+- Liquidez: baixa; a proteção só vale no vencimento; antes, preço de mercado.
+- IR: tabela regressiva, retido na fonte; sem come-cotas.
+
+## Fundos de investimento: regras gerais (CVM 175)
+- Fundo: condomínio de investidores com gestão profissional, regulado pela CVM. Os ativos são dos cotistas, separados do patrimônio do administrador e do gestor.
+- Prestadores essenciais: administrador (estrutura, cálculo da cota, registros, informações, regulamento) e gestor (carteira, liquidez, dever fiduciário de lealdade). Constituem o fundo e o registram na CVM antes do início.
+- Custodiante: guarda os ativos. Distribuidor: instituição autorizada; dinheiro em conta pessoal do vendedor é sinal de fraude.
+- Classe: patrimônio segregado. Subclasse: mesma carteira com condições diferentes (prazo, taxa, público).
+- Responsabilidade limitada: o cotista perde no máximo o que subscreveu (patrimônio negativo pode levar à insolvência da classe). Ilimitada: o cotista pode ter de cobrir o patrimônio negativo.
+- Classe aberta: o cotista sai pelo resgate. Fechada: sem resgate; vende no secundário ou recebe por amortização ou no fim do prazo.
+- Cota: patrimônio líquido ÷ número de cotas. Rentabilidade = variação da cota.
+- Resgate: conversão (qual cota vale) × liquidação (quando o dinheiro cai). Prazos variam por classe (DI costuma ser D+0; ações, alguns dias).
+- Carência: prazo sem resgate após a aplicação. Taxa de saída: desestimula resgate antecipado e protege quem fica.
+- Amortização: devolve parte do valor das cotas sem cancelá-las. Resgate: cancela as cotas.
+- Subscrição: compromisso de investir. Integralização: pagamento (de uma vez ou por chamadas de capital).
+- Taxas: administração, gestão e distribuição informadas separadamente; saem do patrimônio todo dia.
+- Taxa de performance: só sobre o que exceder o benchmark e acima da linha d'água (último pico com cobrança); índice compatível com a estratégia.
+- Encargos do fundo: taxas da CVM, auditoria, custódia, corretagens. O resto é custo do prestador. Rebate: permitido com transparência e sem custo extra ao cotista.
+- Assembleia de cotistas: aumento de taxa, troca de prestador essencial, fusão, incorporação, cisão e liquidação. Assunto de uma só classe: assembleia especial.
+- Documentos: regulamento e lâmina antes de investir; termo de adesão e ciência de risco na entrada. Divulgação de cota, patrimônio, carteira, demonstrações auditadas e fatos relevantes; comunicação eletrônica permitida.
+- Conta e ordem: o distribuidor aparece no registro, mas o investidor é o cotista e vota.
+- Vedações: prometer rendimento predeterminado. Rentabilidade sempre comparada ao benchmark do fundo e com os avisos obrigatórios.
+
+## Fundos de investimento: classes e limites
+| Classe | Composição mínima |
+| Renda fixa | 80% em renda fixa (juros e inflação) |
+| Ações | 67% em ações |
+| Cambial | 80% atrelado a moeda estrangeira |
+| Multimercado | vários fatores de risco, sem concentração obrigatória; pode usar derivativos |
+| Classe em cotas | 95% em cotas de outros fundos (taxas em duas camadas) |
+- FIF: fundo de ativos financeiros. Imóveis físicos: FII.
+- Crédito privado: mais de 50% em crédito privado = "Crédito Privado" no nome e alerta de risco; risco de crédito e resgate mais demorado.
+- FI-Infra: carteira de debêntures incentivadas; isento para pessoa física.
+- Classe restrita: regras mais flexíveis, só para qualificados ou profissionais.
+- Título público federal: sem limite de concentração por emissor.
+- Alavancagem: multiplica ganhos e perdas.
+- Risco de liquidez da carteira: responsabilidade do gestor, com o administrador.
+- Cotas em garantia (ex.: aluguel): ficam vinculadas e continuam rendendo.
+
+## Tributação de fundos
+| Classificação | Come-cotas | IR no resgate |
+| Curto prazo (prazo médio até 365 dias) | 20% | 22,5% até 180 dias; 20% depois |
+| Longo prazo (prazo médio acima de 365 dias) | 15% | 22,5% a 15% pela tabela regressiva |
+| Ações (mínimo de 67%) | não tem | 15% |
+- Come-cotas: antecipação semestral do IR, em maio e novembro. No resgate, paga-se a diferença entre a alíquota final e o que já foi retido.
+- Classificação: depende da carteira, não do nome do fundo.
+- IOF: resgate antes de 30 dias em renda fixa, multimercado e cambial. Classe de ações não tem IOF.
+- Prejuízo: compensa ganho em fundo do mesmo administrador e da mesma classificação tributária.
+- Título direto (CDB, Tesouro, debênture): não tem come-cotas; IR no resgate ou no cupom.
+
+## Fundos imobiliários (FII)
+- Tipos: tijolo (imóveis: vacância e inquilino), papel (CRI: risco de crédito), híbrido e fundo de fundos (FOF: taxas em duas camadas).
+- Negociação: fundo fechado; entra e sai pela bolsa, sem resgate. Pouco negociado = risco de liquidez.
+- Distribuição: ao menos 95% do lucro de caixa a cada semestre (muitos pagam todo mês). As taxas reduzem o rendimento.
+- Rendimentos isentos para pessoa física: cotas negociadas em bolsa, fundo com 100 ou mais cotistas e cotista com menos de 10%. Com 10% ou mais, paga 20%.
+- Venda das cotas: 20% sobre o ganho, por DARF, sem isenção de R$ 20 mil.
+- P/VP: cotação ÷ valor patrimonial. Desconto não garante ganho.
+- Vacância: área vaga reduz a receita na mesma proporção, além dos custos da área vaga.
+- Nova emissão: direito de preferência (exercer, ceder ou deixar); quem não subscreve é diluído.
+
+## Previdência complementar (PGBL e VGBL)
+| | PGBL | VGBL |
+| Indicado para | declaração completa + contribuinte do INSS ou regime próprio | declaração simplificada, isento, ou o que passar de 12% da renda |
+| Dedução no IR | até 12% da renda bruta tributável | não deduz |
+| IR no resgate | sobre o valor total | só sobre o rendimento |
+| Na declaração | contribuições em Pagamentos Efetuados | saldo em Bens e Direitos |
+| Regime | Como funciona |
+| Progressivo | 15% na fonte como antecipação; ajuste na declaração anual pela tabela (até 27,5%) |
+| Regressivo | definitivo, por tempo de cada aporte: 35% (até 2 anos), 30%, 25%, 20%, 15% e 10% (acima de 10 anos), em degraus de 2 anos |
+- Escolha do regime: até o primeiro resgate ou recebimento do benefício (Lei 14.803/2024).
+- Regressivo: cada aporte tem seu prazo; no resgate saem primeiro os mais antigos. Progressivo pode compensar para quem terá renda baixa na aposentadoria.
+- Fases: diferimento (contribui e acumula) → benefício (renda ou pagamento único).
+- Taxas: administração (anual, sobre o patrimônio) e carregamento (sobre aportes ou resgates).
+- Tributação: sem come-cotas; IR só no resgate ou na renda.
+- Portabilidade: mesma modalidade (PGBL para PGBL, VGBL para VGBL), sem IR, direto entre entidades, respeitando carência.
+- Sucessão: saldo vai aos beneficiários indicados, em geral fora do inventário.
+- Renda vitalícia: paga enquanto o titular viver. Com prazo mínimo garantido: se morrer antes, beneficiários recebem até o fim do prazo.
+- Renda temporária: prazo definido, só enquanto o titular viver. Prazo certo: prazo fixo, continua para os beneficiários.
+- Reversível: continua para o beneficiário após a morte do titular (mais garantia, renda menor).
+- Pagamento único: liquidez imediata, sem renda futura.
+
+## Crédito e financiamento
+- CET: custo efetivo total (juros + tarifas + IOF + seguros). É o número para comparar crédito.
+- Empréstimo: uso livre. Financiamento: bem específico, em geral como garantia. Leasing: o bem é do arrendador, com opção de compra no fim.
+- CDC: crédito direto ao consumidor, com o bem em garantia; juros menores e prazos maiores que o crédito pessoal.
+- Alienação fiduciária: o cliente usa o bem, mas o credor é dono até a quitação.
+- Garantia real: bem (alienação, hipoteca). Garantia pessoal: pessoa (aval, fiança). Mais garantia = juros menores.
+- Consignado: desconto em folha; juros menores; limite da margem consignável.
+- Custo típico (do menor ao maior): consignado → crédito pessoal → cheque especial e rotativo do cartão.
+- Cheque especial: teto de 8% ao mês (pessoa física e MEI); juros só sobre o valor usado, mais IOF.
+- Cartão de crédito: fatura integral = sem juros. Rotativo: só até a próxima fatura, depois parcelamento; encargos limitados a 100% da dívida original (Lei 14.690). Parcelado sem juros ocupa o limite. Melhor dia de compra: logo após o fechamento da fatura.
+- IOF no crédito: parcela diária (com teto de prazo) + adicional fixo; entra no CET.
+- Taxa de juros: reflete o risco do cliente (score, histórico, renda, garantias).
+- SCR: cadastro de dívidas no sistema financeiro (Banco Central); consulta pelo Registrato. Cadastro positivo: histórico de bom pagador, inclusão automática, pode pedir saída.
+- Portabilidade de crédito: o novo banco quita a dívida no antigo, sem tarifa e sem dinheiro do cliente.
+- Imobiliário: SFH (limites de valor e juros, aceita FGTS) × SFI (regras livres, sem FGTS). Amortização extra: reduzir prazo economiza mais juros; reduzir parcela alivia o orçamento.
+- Consórcio: sem juros, com taxa de administração; contemplação por sorteio ou lance; supervisão do Banco Central. Desistente recebe quando sorteado entre os excluídos ou no fim do grupo.
+- Linhas específicas: capital de giro (dia a dia da empresa), microcrédito (pequeno empreendedor, orientação), crédito rural (recursos direcionados), financiamento estudantil.
+- Superendividamento (Lei 14.181): repactuar as dívidas preservando o mínimo existencial.
+
+## Serviços bancários e Pix
+- Serviços essenciais gratuitos (conta corrente): cartão de débito, 4 saques, 2 transferências entre contas da mesma instituição e 2 extratos por mês. Pacote é opcional.
+- Conta-salário: portabilidade gratuita para o banco escolhido pelo empregado.
+- Conta corrente: tem FGC, mas o dinheiro parado não rende.
+- Boleto vencido: pode ser pago em qualquer banco, com multa e juros calculados automaticamente.
+- Pix: arranjo do Banco Central; instantâneo, 24 horas, gratuito para pessoa física (em regra); empresa pode pagar tarifa. Golpe: MED (Mecanismo Especial de Devolução).
+- Pix noturno: limite menor para pessoa física; aumento com prazo de segurança.
+- Pix Automático: autorização única para cobranças recorrentes, com controle e cancelamento.
+- Pix Saque: Pix ao estabelecimento em troca de dinheiro em espécie.
+- Segurança: biometria e limites no aplicativo.
+
+## Câmbio e investimento no exterior
+- Câmbio: só em instituição autorizada pelo Banco Central (ou correspondente), com contrato, finalidade declarada e identificação.
+- VET: valor efetivo total (taxa + tarifas + tributos); é o número para comparar. PTAX é só referência.
+- IOF-câmbio: alíquota conforme a finalidade.
+- Conta global: converte antes e usa lá fora; tem IOF; sem FGC.
+- Investimento no exterior (pessoa física): 15% sobre os rendimentos, apurados na declaração anual (Lei 14.754/2023). Bens no exterior em Bens e Direitos.
+
+## Seguros
+- Conceitos: prêmio (preço do seguro), sinistro (evento coberto), indenização, franquia (parte do prejuízo paga pelo segurado em sinistro parcial), carência, bônus (desconto na renovação sem sinistro).
+- Vida temporário: prazo definido, prêmio menor. Vida inteira: cobertura vitalícia, prêmio maior, liquidez para a sucessão.
+- Seguro de vida: beneficiário de livre escolha; fora do inventário; isento de IR. Cobertura por qualquer causa é mais ampla (e mais cara) que só acidental.
+- Capital segurado: necessidades da família (despesas, dívidas, objetivos) − recursos existentes.
+- Prestamista: quita a dívida se o devedor morrer ou ficar inválido; beneficiário é o credor. Venda casada é proibida.
+- Auto: danos ao carro de terceiros = responsabilidade civil facultativa (RCF). Perda total ou roubo: sem franquia, indenização pelo valor de referência da apólice.
+- Residencial: cobertura básica (incêndio, raio, explosão) + adicionais (vendaval, roubo, danos elétricos).
+
+# Bloco 3 | Relacionamento com o cliente
+
+## Orçamento e reserva de emergência
+- Orçamento: anotar receitas e despesas; separar a poupança assim que o dinheiro entra.
+- Despesas fixas: valor estável (aluguel, escola, plano de saúde). Variáveis: dependem do consumo.
+- Capacidade de poupança: renda recorrente − despesas (com provisão das sazonais).
+- Renda variável (autônomo): orçar pela renda mínima e poupar o excedente dos meses bons.
+- Reserva de emergência: despesas mensais (não a renda) × 3 a 12 meses. Renda instável (autônomo) = 6 a 12 meses. Vem antes dos outros objetivos.
+- Onde: liquidez diária, baixo risco e custo baixo (Tesouro Selic, CDB com liquidez diária, fundo DI barato). Imóvel não serve.
+- Juros compostos: aliados de quem investe, inimigos de quem deve.
+
+## Dívidas e uso do crédito
+- Prioridade: quitar primeiro a dívida mais cara (rotativo, cheque especial); trocar por crédito mais barato.
+- Dívida cara + dinheiro aplicado rendendo menos que ela: quitar a dívida.
+- Comprometimento: soma das parcelas ÷ renda líquida; acima de 30% é sinal de alerta.
+- Financiamento imobiliário: parcela até cerca de 30% da renda; mais entrada e menos prazo = menos juros.
+- Sem urgência: poupar ou consórcio tendem a sair mais barato que financiar.
+- Crédito com garantia: juros menores, mas o bem pode ser perdido; útil para trocar dívida cara.
+- Finalidade: crédito para gerar renda (curso, negócio) pode valer a pena; para consumo supérfluo, cautela.
+- Cartão: pagar a fatura integral, controlar parcelas futuras, nunca usar o rotativo. Cheque especial: só para emergência de poucos dias.
+- Renegociação: comparar custo total e parcela com o orçamento.
+
+## Balanço patrimonial pessoal
+| Indicador | Cálculo |
+| Patrimônio líquido | tudo o que tem − tudo o que deve |
+| Endividamento | dívidas ÷ ativos |
+| Liquidez | ativos líquidos ÷ dívidas de curto prazo (acima de 1 é confortável) |
+| Cobertura de despesas | ativos líquidos ÷ despesas mensais (bens de uso não entram) |
+- Bens de uso: casa e carro do dia a dia. Bens de investimento: geram renda ou valorização.
+- Patrimônio ilíquido: risco de faltar dinheiro para inventário e impostos.
+- Antes de recomendar: balanço patrimonial e fluxo de caixa do cliente.
+
+## Ciclo de vida do investidor
+| Fase | Foco |
+| Acumulação | início da carreira; reserva e hábito de investir |
+| Crescimento (consolidação) | renda alta, horizonte longo; ampliar e diversificar |
+| Preservação | perto da aposentadoria; proteger o patrimônio |
+| Distribuição | viver da renda e planejar a sucessão |
+- Risco ao longo da vida: tende a cair; perto de usar o dinheiro, reduzir o risco aos poucos.
+- Momento financeiro ≠ idade: considerar dependentes, dívidas, renda e objetivos.
+- Capacidade de risco: maior com horizonte longo e renda estável.
+
+## Planejamento financeiro e aposentadoria
+- Etapas: objetivos → diagnóstico → plano → implementação → monitoramento. Revisar sempre que a vida mudar.
+- Meta: específica, mensurável, com valor, prazo e prioridade. Casal: metas comuns com prioridades definidas.
+- Ordem: dívida cara → reserva de emergência → proteção (seguros) → investimentos por objetivo.
+- Um investimento por objetivo: o prazo da meta define o produto. Data marcada = renda fixa com vencimento casado (ex.: Educa+, IPCA+).
+- Objetivo de curto prazo: previsibilidade. Longo prazo: tolera mais oscilação, com proteção da inflação.
+- Começar cedo: com juros compostos, aportes menores chegam ao mesmo valor.
+- Fundo educacional: valor futuro + prazo + taxa + inflação → aporte mensal.
+- Aposentadoria: renda desejada − fontes previstas (INSS etc.) = déficit a cobrir com investimentos.
+- Independência financeira sem consumir o principal: patrimônio = gasto anual ÷ taxa real. Consumir o principal exige menos patrimônio, mas há risco de longevidade.
+- Aportes regulares: diluem o preço médio. Rebalancear: voltar à alocação planejada.
+- Custos: o que importa é o retorno líquido; taxas pequenas pesam muito no longo prazo.
+- Proteção: reserva para imprevistos pequenos e frequentes; seguro para perdas grandes e improváveis (morte, invalidez). Quem vive do próprio trabalho protege a renda.
+- Sucessão: seguro de vida e previdência com beneficiários dão liquidez; plano sucessório revisto quando família, patrimônio ou leis mudam.
+
+## Imposto de renda da pessoa física
+- Tributáveis: salário, aluguel (de pessoa física: carnê-leão mensal + ajuste).
+- Tributação exclusiva na fonte: renda fixa, fundos, JCP, 13º salário (fora do ajuste anual).
+- Isentos: poupança, LCI, LCA, dividendos (até o limite), lucro com ações até R$ 20 mil em vendas no mês.
+- Declaração completa: deduções reais (saúde, educação, dependentes, PGBL até 12%). Simplificada: desconto padrão de 20% com teto. Escolher a de menor imposto.
+- Onde declarar: saldos em Bens e Direitos; isentos em Rendimentos Isentos; aplicações tributadas na fonte em Tributação Exclusiva; VGBL em Bens e Direitos; PGBL em Pagamentos Efetuados.
+- Imóvel: declarado pelo custo de aquisição, não pelo valor de mercado.
+
+## Perfil do investidor e suitability
+- Suitability: adequação do produto ao cliente. Perfil = objetivos + situação financeira + conhecimento e experiência.
+- Perfis: conservador (segurança), moderado (equilíbrio), arrojado (aceita oscilação por mais retorno potencial).
+- Tolerância × capacidade: querer arriscar ≠ poder arriscar. Vale a menor das duas.
+- Processo: classificar o cliente e o produto por critérios formais e comparar. Sem perfil válido, sem recomendação.
+- Questionário: é do cliente; o profissional explica, mas não responde por ele. Respostas contraditórias: esclarecer antes de definir o perfil.
+- Titularidade: perfil é individual (mesmo no casal). Com procurador, vale o perfil do titular dos recursos.
+- Atualização: no máximo a cada 24 meses e sempre que a situação do cliente mudar. Perfil vencido: alertar, colher declaração e atualizar.
+- Fora do perfil: não é proibido; exige alerta prévio e declaração expressa do cliente. Sem isso, venda irregular.
+- Produto mudou de risco: avisar os clientes afetados e reavaliar a adequação.
+- Documentação: cadastro, perfil, recomendações, alertas e declarações.
+- Produto para qualificado: exige a classificação real (mais de R$ 1 milhão + declaração); perfil arrojado não basta.
+- Risco e retorno: mais retorno esperado = mais risco. Mesma média com mais oscilação = mais risco. Retorno alto "sem risco" = sinal de golpe.
+- Diversificação: ativos com baixa correlação (emissores, indexadores, classes, setores). Reduz o risco específico; o sistemático continua. Exterior reduz o risco-Brasil, mas traz risco cambial.
+- Conservador que vive de renda: liquidez para emergências + renda fixa sólida e escalonada.
+
+## Atendimento e conflito de interesses
+- Escuta ativa: perguntas abertas, confirmar o entendimento e só depois propor.
+- Personalizar: mesma qualidade para todos, linguagem e exemplos ajustados a cada cliente.
+- Proatividade: antecipar problemas e propor soluções; a decisão é sempre do cliente.
+- Transparência: o cliente precisa entender; linguagem simples, sem omitir riscos, sem prometer retorno.
+- Expectativa irreal: explicar risco e retorno, mostrar cenários e realinhar o objetivo.
+- Erro da instituição: reconhecer, explicar e encaminhar a solução formal.
+- Titular dos recursos: é ele quem decide, mesmo sob pressão de familiares. Nunca operar com a senha do cliente; representação só por procuração.
+- Conflito de interesses: identificar, eliminar quando possível; se não der, gerir e divulgar ao cliente. Na dúvida, consultar o compliance.
+- Remuneração: bônus ou comissão por produto pode distorcer a recomendação; o interesse do cliente vem antes da meta. Comissão por volume exige monitoramento de giro.
+- Parente como cliente: declarar o vínculo e seguir a política de conflitos.
+- Presentes: acima do valor simbólico, recusar e comunicar o compliance.
+- Segregação: recursos próprios separados das ordens de clientes. Chinese wall: barreira de informação entre áreas.
+- Produto da casa × de terceiros: recomendar o mais adequado, com transparência.
+- Reclamação de ordem não autorizada: conferir gravações e registros.
+- Educação continuada: normas e produtos mudam; o profissional precisa acompanhar.
+
+## Ética Anbima e certificação
+- Princípios: integridade, transparência, diligência e lealdade ao cliente.
+- Rentabilidade: nunca prometer; rentabilidade passada não garante a futura.
+- Só oferecer o que entende: conhecimento técnico é dever profissional.
+- Redes sociais: o código vale também nas contas pessoais.
+- Sigilo: dados do cliente protegidos, dentro e fora do trabalho.
+- Vantagem indevida para burlar regras: recusar.
+- Certificação vencida: não pode exercer a atividade que a exige até regularizar.
+- Exame: sem celular, anotações ou calculadora própria (a plataforma oferece calculadora). Questões sigilosas; divulgar gera sanções.
+
+## Riscos da atividade profissional
+| Risco | Exemplo |
+| Operacional | falhas de pessoas, processos, sistemas ou eventos externos (fraude interna, desastre) |
+| Legal | processo judicial, contrato mal feito |
+| Regulatório | descumprir norma e ser punido pelo regulador |
+| Imagem (reputacional) | notícia negativa, perda de clientes |
+- Prevenção: segregação de funções, plano de continuidade de negócios e redundância.
+
+## Prevenção à lavagem de dinheiro (PLD/FT)
+- Lavagem: crime (Lei 9.613/1998), reclusão de 3 a 10 anos e multa. O crime antecedente pode ser qualquer infração penal.
+- Etapas: colocação → ocultação → integração.
+- Abordagem baseada em risco: avaliar clientes, produtos e canais e reforçar controles onde o risco é maior. Política sob medida para a instituição, com avaliação de efetividade.
+- Quem está sujeito: instituições financeiras e também seguradoras, imobiliárias, joalherias e outros setores.
+- Responsabilidade: a instituição responde administrativamente (advertência, multa, inabilitação, cassação); o profissional pode responder até criminalmente.
+- Conheça seu cliente (KYC): cadastro, origem dos recursos, capacidade financeira, beneficiário final (pessoa física por trás da empresa). KYE: funcionário. KYP: parceiro e fornecedor.
+- PEP (pessoa exposta politicamente): não é proibida nem suspeita por si só; exige diligência reforçada.
+- Sinais de alerta: valores fracionados, incompatíveis com a renda, passagem rápida de dinheiro (conta laranja), remessas sem justificativa a paraísos fiscais, recusa em informar a origem.
+- Mudança forte na movimentação: atualizar cadastro, verificar capacidade financeira e analisar.
+
+## LGPD, sigilo e comunicação ao COAF
+- Comunicação ao COAF: operação suspeita, sem avisar o cliente. Espécie a partir de R$ 50 mil: comunicação automática, mesmo sem suspeita. Sem ocorrências no ano: declaração de não ocorrência.
+- Sigilo bancário (LC 105): comunicar ao COAF não quebra o sigilo. Exceções ao sigilo: ordem judicial, comunicações legais, troca de cadastro entre instituições nos termos da norma.
+- Sanções do Conselho de Segurança da ONU: indisponibilidade imediata dos bens, sem avisar o cliente, e comunicação às autoridades.
+- Registro de operações: obrigatório, guardado pelo prazo regulamentar.
+- LGPD: vale para dados em papel e digitais. Base legal pode ser obrigação legal (ex.: PLD), sem depender de consentimento. Nova finalidade = nova base legal e transparência.
+- Papéis: controlador decide; operador executa; encarregado é o canal com titulares e ANPD.
+- Dado sensível: origem racial, religião, opinião política, sindicato, saúde, vida sexual, genético e biométrico. Dado financeiro não é sensível.
+- Dado anonimizado (não identifica ninguém): em regra, fora da LGPD.
+- Direitos do titular: acesso, correção, informação sobre compartilhamento, revisão de decisão automatizada.
+- Vazamento relevante: conter e comunicar a ANPD e os titulares. Sanções: advertência, multa de até 2% do faturamento (limitada por infração), bloqueio e eliminação de dados.
+- Dados a terceiros: só com autorização formal ou procuração.
+- Golpes: banco não pede senha, código nem transferência por telefone. Link urgente pedindo dados = phishing. Confirmar sempre pelo canal oficial.
+
+## Crimes e ilícitos de mercado
+- Manipulação de mercado (Lei 6.385, art. 27-C): inflar ou derrubar preços artificialmente; reclusão de 1 a 8 anos.
+- Uso de informação privilegiada (art. 27-D): usar ou repassar informação relevante ainda não divulgada; vale para qualquer pessoa. Repassar já é ilícito.
+- Insider primário: acesso direto pelo cargo. Secundário: recebeu de quem tinha acesso. Administrador com resultado em mãos: período de vedação.
+- Exercício irregular (art. 27-E): atuar como gestor, consultor ou analista sem registro na CVM.
+- Condição artificial de demanda, oferta ou preço: volume falso entre contas ligadas.
+- Spoofing: oferta de fachada para mexer no preço. Layering: várias camadas de ofertas falsas.
+- Money pass: negócios artificiais para passar dinheiro de uma conta para outra.
+- Manipulação de benchmark: distorcer índice de referência para ganhar em posições atreladas.
+- Operação fraudulenta: enganar com ardil para obter vantagem.
+- Prática não equitativa: vantagem indevida sobre os demais.
+- Front running: operar antes da ordem do cliente ou do fundo. Churning: girar a carteira do cliente para gerar corretagem.
+- Omissão: quem tinha o dever de agir e não agiu responde pelo resultado. Os exemplos das normas são ilustrativos (tipologia aberta).
+
+# Bloco 4 | Inovação e mercado
+
+## ESG e investimento sustentável
+- ESG: ambiental (E), social (S) e governança (G); riscos e oportunidades com impacto financeiro. Não garante retorno.
+- Ambiental: clima, recursos, poluição. Risco físico: evento climático. Risco de transição: regras e mercado mudando para baixo carbono.
+- Social: pessoas (trabalho, direitos humanos, diversidade, comunidade, consumidor, inclusão financeira).
+- Governança: conselho, incentivos, ética e transparência.
+- Estratégias: exclusão (tira setores), best-in-class (melhores de cada setor), integração (ESG na análise), engajamento (voto e diálogo com a empresa), impacto (intenção + retorno + impacto mensurável).
+- Títulos: green bond (recursos para projetos ambientais; risco de crédito continua). Sustainability-linked: taxa atrelada a metas ESG da empresa.
+- Greenwashing: discurso verde sem prática e sem transparência. Desafios: dados sem padrão e ratings divergentes.
+- Regras: Anbima distingue fundos IS (objetivo sustentável, sufixo no nome, relatórios de resultado) e fundos que integram ESG (sem o sufixo). CVM 175: fundo ESG detalha metodologia e indicadores no regulamento. Companhias divulgam ESG no formulário de referência (pratique ou explique).
+- PRI: princípios voluntários, apoiados pela ONU, para integrar ESG aos investimentos.
+
+## Blockchain, DeFi e tokenização
+- Blockchain: livro-razão distribuído, em blocos encadeados por criptografia, praticamente imutável.
+- Contrato inteligente: código em blockchain que se executa sozinho quando as condições ocorrem. Oráculo: leva dados do mundo real ao contrato.
+- DeFi: serviços financeiros por contratos inteligentes, sem intermediário; aberto, 24 horas, transparente; riscos de código; sem FGC.
+- Empréstimo DeFi: garantia maior que a dívida; liquidação automática se a garantia cair.
+- DEX: autocustódia e contratos inteligentes. Exchange centralizada: a empresa guarda os ativos.
+- DAO: organização governada por código e voto dos detentores de tokens.
+- Tokenização: transformar ativo ou direito em tokens; fracionamento, rastreabilidade e potencial de liquidez. O risco do ativo continua, mais riscos de tecnologia, regulação e liquidez.
+- Security token: direito econômico (pode ser valor mobiliário). Utility token: acesso a serviço. NFT: token único; não transfere direito autoral automaticamente.
+- Stablecoin: cripto pareada a uma moeda, com lastro; depende do emissor e das reservas.
+- Drex: real digital do Banco Central (CBDC), com contratos programáveis e ativos tokenizados. Não é criptomoeda volátil nem substitui o Pix.
+- ETF de cripto: acesso pela bolsa, regulado, mas com a mesma volatilidade; IR de 15% sem isenção.
+- Seguro paramétrico: paga automaticamente quando o parâmetro (ex.: chuva) é atingido.
+- Imóvel tokenizado: mais rapidez e menos custo, mas a validade jurídica depende do registro oficial.
+
+## Open Finance
+- Open Finance: compartilhamento de dados cadastrais, transacionais e de serviços (ex.: iniciação de pagamento) entre instituições, com consentimento do cliente. Resolução Conjunta nº 1/2020 (CMN e Banco Central).
+- Consentimento: finalidade e prazo definidos; revogável a qualquer momento; canal seguro, sem compartilhar senha.
+- Benefícios: menos assimetria de informação, mais concorrência e personalização; ajuda o bom pagador sem histórico de crédito.
+- Open investment: dados de investimentos para visão consolidada. Open insurance: dados de seguros, previdência e capitalização, sob a SUSEP.
+- Portabilidade de valores mobiliários: troca de custodiante sem vender e sem IR.
+
+## Inteligência artificial
+- IA preditiva: estima probabilidades (crédito, fraude). IA generativa: cria conteúdo (textos, respostas, imagens).
+- Uso no atendimento: chatbot para o simples; casos complexos vão para um humano. Pode errar (alucinar); exige supervisão humana, segurança, LGPD e transparência.
+- Robo-advisor: também precisa de suitability, supervisão e responsabilidade da instituição.
+- Decisão automatizada (ex.: score): o titular pode pedir revisão e os critérios (LGPD, art. 20).
+
+## Fintechs e meios de pagamento
+- Fintech: serviço financeiro digital, com custo menor, regulada conforme a atividade.
+- SCD: empresta com capital próprio. SEP: conecta quem empresta e quem toma (peer-to-peer). Ambas autorizadas pelo Banco Central.
+- Sandbox regulatório: teste com prazo, limites e supervisão do regulador.
+- Crowdfunding (CVM): empresa capta direto dos investidores.
+- Arranjo de pagamento: regras do serviço. Instituidor: define as regras (a bandeira; no Pix, o Banco Central).
+- Bandeira: regras. Emissor: cartão do consumidor. Adquirente (credenciador): credencia o lojista, processa e paga as vendas (antecipa com desconto). Subadquirente: intermediário de pequenos lojistas.
+- Débito: saldo da conta. Crédito: limite e fatura. Pré-pago: saldo carregado antes.
