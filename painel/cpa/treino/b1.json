@@ -1,0 +1,909 @@
+{
+"id": "T1",
+"titulo": "Treino do bloco 1",
+"q": [
+{
+"pd": "1.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Lúcia começou a trabalhar em uma corretora e pergunta à colega Renata, profissional CPA, qual órgão está no topo do Sistema Financeiro Nacional e dita as regras gerais para moeda e crédito.",
+"enunciado": "Renata responde corretamente que esse órgão é o:",
+"alt": [
+"Banco Central, que define sozinho as diretrizes de moeda e crédito do país.",
+"Conselho Monetário Nacional, que define as diretrizes e normas gerais do sistema.",
+"Ministério da Fazenda, que edita as normas e fiscaliza todas as instituições.",
+"Copom, que define as normas gerais de funcionamento dos bancos do país."
+],
+"certa": "B",
+"gabarito": "O CMN é o órgão normativo máximo do SFN: define diretrizes e normas gerais para moeda, crédito e câmbio e fixa a meta de inflação. Ele não executa nem fiscaliza; essas tarefas ficam com o Banco Central (e com a CVM no mercado de valores mobiliários).",
+"porque": {
+"A": "O Banco Central executa e fiscaliza; quem define as diretrizes gerais é o CMN.",
+"C": "O ministro da Fazenda preside o CMN, mas o ministério não fiscaliza instituições financeiras.",
+"D": "O Copom só decide a meta da taxa Selic; não edita normas para os bancos."
+},
+"dica": "CMN = cabeça normativa. Não executa e não fiscaliza."
+},
+{
+"pd": "1.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Em uma aula, o professor pede que os alunos identifiquem quem integra o Conselho Monetário Nacional.",
+"enunciado": "A composição correta do CMN é:",
+"alt": [
+"ministro da Fazenda, ministro do Planejamento e presidente do Banco Central.",
+"presidente da República, ministro da Fazenda e presidente da Febraban.",
+"ministro da Fazenda, presidente do BNDES e presidente da Caixa.",
+"presidente do Banco Central, presidente da CVM e ministro da Fazenda."
+],
+"certa": "A",
+"gabarito": "O CMN tem três membros: o ministro da Fazenda (que preside), o ministro do Planejamento e Orçamento e o presidente do Banco Central. Por ter só autoridades do governo, suas decisões são tomadas em reuniões mensais, com votos registrados em resoluções.",
+"porque": {
+"B": "Nem o presidente da República nem entidades privadas integram o CMN.",
+"C": "BNDES e Caixa são instituições financeiras, não membros do CMN.",
+"D": "O presidente da CVM não integra o CMN."
+},
+"dica": "CMN = Fazenda + Planejamento + presidente do BC."
+},
+{
+"pd": "1.1.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente leu que uma seguradora foi multada e pergunta a Marcos, profissional CPA, quem cria as regras do mercado de seguros e quem fiscaliza as seguradoras.",
+"enunciado": "Marcos explica corretamente que:",
+"alt": [
+"o CMN cria as normas e o Banco Central fiscaliza as seguradoras.",
+"o CNPC cria as normas e a PREVIC fiscaliza as seguradoras.",
+"a SUSEP cria as normas e o CNSP fiscaliza as seguradoras.",
+"o CNSP cria as normas e a SUSEP fiscaliza as seguradoras."
+],
+"certa": "D",
+"gabarito": "No mercado de seguros, capitalização e previdência aberta, o CNSP é o órgão normativo e a SUSEP é a supervisora. A lógica se repete em todo o SFN: um conselho cria as regras e uma autarquia fiscaliza (CMN/BC, CMN/CVM, CNSP/SUSEP, CNPC/PREVIC).",
+"porque": {
+"A": "Seguros não ficam com CMN e BC; ficam com CNSP e SUSEP.",
+"B": "CNPC e PREVIC cuidam da previdência fechada, não de seguros.",
+"C": "Os papéis estão invertidos: CNSP normatiza e SUSEP fiscaliza."
+},
+"dica": "Seguros: CNSP normatiza, SUSEP fiscaliza."
+},
+{
+"pd": "1.1.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Carla trabalha em uma empresa que oferece um fundo de pensão aos funcionários. Ela pergunta a quem cabe fiscalizar esse plano.",
+"enunciado": "O órgão que fiscaliza o fundo de pensão da empresa de Carla é:",
+"alt": [
+"a SUSEP, que supervisiona todos os planos de previdência complementar.",
+"o CNPC, que fiscaliza as entidades fechadas de previdência complementar.",
+"a PREVIC, que supervisiona as entidades fechadas de previdência complementar.",
+"a CVM, porque o fundo de pensão investe em ações e títulos privados."
+],
+"certa": "C",
+"gabarito": "Fundo de pensão é entidade fechada de previdência complementar (EFPC): atende só empregados de uma empresa patrocinadora ou associados de um instituidor. O CNPC normatiza e a PREVIC fiscaliza. Já a previdência aberta, vendida a qualquer pessoa, fica com CNSP e SUSEP.",
+"porque": {
+"A": "A SUSEP fiscaliza a previdência aberta (PGBL e VGBL), não a fechada.",
+"B": "O CNPC cria as normas; a fiscalização é da PREVIC.",
+"D": "Investir em ações não transfere a supervisão da entidade para a CVM."
+},
+"dica": "Previdência fechada: CNPC normatiza, PREVIC fiscaliza."
+},
+{
+"pd": "1.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um estudante pergunta a Ana, profissional CPA, qual instituição tem o poder exclusivo de emitir moeda no Brasil.",
+"enunciado": "Ana responde corretamente que a emissão de moeda é exclusiva:",
+"alt": [
+"da Casa da Moeda, por decisão própria.",
+"do Banco Central do Brasil.",
+"do Tesouro Nacional.",
+"do Conselho Monetário Nacional."
+],
+"certa": "B",
+"gabarito": "A Constituição dá ao Banco Central a competência exclusiva de emitir moeda. A Casa da Moeda apenas fabrica cédulas e moedas por encomenda dele. O Tesouro Nacional capta recursos com títulos públicos, que é outra coisa.",
+"porque": {
+"A": "A Casa da Moeda fabrica cédulas sob encomenda do Banco Central; não decide emitir.",
+"C": "O Tesouro emite títulos públicos, não moeda.",
+"D": "O CMN normatiza; a competência de emitir moeda é do Banco Central."
+},
+"dica": "Emitir moeda = só o Banco Central."
+},
+{
+"pd": "1.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um investidor quer saber qual órgão registra as ofertas públicas de ações e fiscaliza as companhias abertas.",
+"enunciado": "Esse papel é da:",
+"alt": [
+"Banco Central, que supervisiona todo o mercado de capitais.",
+"B3, que registra as ofertas e pune as companhias abertas.",
+"CVM, supervisora do mercado de valores mobiliários.",
+"Anbima, que fiscaliza as companhias abertas por lei."
+],
+"certa": "C",
+"gabarito": "A CVM supervisiona o mercado de valores mobiliários: registra companhias abertas e ofertas públicas, fiscaliza fundos, gestores, analistas e consultores e exige a divulgação de fatos relevantes. Pode punir com advertência, multa, inabilitação, suspensão e cassação.",
+"porque": {
+"A": "O Banco Central cuida das instituições financeiras; valores mobiliários são da CVM.",
+"B": "A B3 é a bolsa; o registro de ofertas e a fiscalização das companhias são da CVM.",
+"D": "A Anbima é autorreguladora privada; não tem poder legal de fiscalizar companhias."
+},
+"dica": "Ações, debêntures, fundos e ofertas = CVM."
+},
+{
+"pd": "1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um banco médio enfrenta falta de dinheiro em caixa por um dia, embora seus ativos sejam bons. Ele recorre a uma linha do Banco Central para cobrir a necessidade.",
+"enunciado": "Essa linha, em que o Banco Central atua como emprestador de última instância, é o:",
+"alt": [
+"mercado interbancário.",
+"swap cambial.",
+"depósito compulsório.",
+"redesconto."
+],
+"certa": "D",
+"gabarito": "No redesconto, o Banco Central empresta a instituições que estão com falta momentânea de liquidez, cobrando uma taxa. Por isso é chamado de emprestador de última instância. Tornar o redesconto mais caro é uma medida restritiva; mais barato, expansionista.",
+"porque": {
+"A": "No interbancário, um banco empresta a outro; o BC não é a contraparte.",
+"B": "Swap cambial é instrumento de proteção contra variação do dólar.",
+"C": "O compulsório é um recolhimento obrigatório dos bancos ao BC, não um empréstimo a eles."
+},
+"dica": "Redesconto = BC empresta ao banco sem liquidez."
+},
+{
+"pd": "1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um banco de pequeno porte tem problemas graves de gestão e risco de quebra. O Banco Central decide afastar os administradores e nomear um interventor para tentar recuperá-lo.",
+"enunciado": "Essa medida corresponde a:",
+"alt": [
+"um regime especial decretado pelo Banco Central.",
+"uma garantia acionada automaticamente pelo FGC.",
+"uma decisão da CVM sobre a companhia em crise.",
+"uma recuperação judicial pedida pelos próprios donos."
+],
+"certa": "A",
+"gabarito": "Diante de problemas graves, o Banco Central pode decretar regimes especiais: intervenção, RAET (administração especial temporária) ou liquidação extrajudicial. Na intervenção, os administradores são afastados e um interventor assume. O FGC só entra para pagar os depositantes até o limite.",
+"porque": {
+"B": "O FGC paga depositantes em caso de quebra; não administra o banco.",
+"C": "Regimes especiais de instituições financeiras são decretados pelo Banco Central, não pela CVM.",
+"D": "Instituições financeiras seguem regimes especiais próprios, conduzidos pelo BC."
+},
+"dica": "Intervenção, RAET e liquidação extrajudicial = Banco Central."
+},
+{
+"pd": "1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Pedro quer abrir conta e precisa de cheque especial, cartão e empréstimo. Também quer aplicar em CDB e ter uma área de crédito imobiliário na mesma instituição.",
+"enunciado": "O tipo de instituição que reúne essas várias carteiras é o:",
+"alt": [
+"companhia hipotecária.",
+"banco múltiplo.",
+"agência de fomento.",
+"banco de investimento."
+],
+"certa": "B",
+"gabarito": "O banco múltiplo reúne em uma única instituição várias carteiras: comercial, de investimento, de crédito imobiliário, de crédito e financiamento, entre outras. Para ser banco múltiplo, precisa ter pelo menos duas carteiras, sendo uma delas comercial ou de investimento.",
+"porque": {
+"A": "Companhia hipotecária só financia imóveis e não tem conta corrente.",
+"C": "Agência de fomento financia projetos regionais e não atende o público com conta.",
+"D": "Banco de investimento não capta depósito à vista nem oferece conta corrente."
+},
+"dica": "Banco múltiplo = várias carteiras em uma só instituição."
+},
+{
+"pd": "1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Jorge é associado de uma cooperativa de crédito e ouviu falar de bancos cooperativos. Ele pergunta a Paula, profissional CPA, qual a diferença entre os dois.",
+"enunciado": "Paula explica corretamente que:",
+"alt": [
+"a cooperativa atende só pessoas jurídicas, e o banco cooperativo só pessoas físicas.",
+"o banco cooperativo atende o associado na ponta, e a cooperativa só presta serviços de compensação.",
+"os dois são a mesma instituição, com nomes diferentes conforme a região do país.",
+"a cooperativa atende o associado na ponta, e o banco cooperativo dá liquidez e acesso a mercados ao sistema."
+],
+"certa": "D",
+"gabarito": "A cooperativa singular é quem se relaciona com o associado: capta, empresta e oferece serviços. O banco cooperativo é a estrutura que dá escala ao sistema cooperativo: liquidez, compensação, acesso ao mercado financeiro e produtos. As cooperativas são supervisionadas pelo Banco Central e os depósitos têm garantia do FGCoop.",
+"porque": {
+"A": "A diferença não está no tipo de cliente, e sim no papel de cada um no sistema.",
+"B": "É o contrário: a cooperativa atende o associado e o banco cooperativo dá estrutura ao sistema.",
+"C": "São instituições distintas, com papéis e autorizações diferentes."
+},
+"dica": "Cooperativa = ponta (associado). Banco cooperativo = estrutura (liquidez e mercado)."
+},
+{
+"pd": "1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa quer abrir capital e precisa de uma instituição para estruturar a oferta de ações e assessorar a operação.",
+"enunciado": "A instituição especializada nessa atividade, que não capta depósitos à vista, é o:",
+"alt": [
+"sociedade de crédito ao microempreendedor.",
+"banco comercial.",
+"banco de investimento.",
+"cooperativa de crédito."
+],
+"certa": "C",
+"gabarito": "O banco de investimento atua em ofertas de ações e debêntures, fusões e aquisições, administração de recursos e crédito de longo prazo. Não pode captar depósitos à vista; capta com depósitos a prazo e outras fontes.",
+"porque": {
+"A": "Atende pequenos negócios com crédito, sem atuação em mercado de capitais.",
+"B": "Banco comercial foca em depósitos à vista e crédito de curto prazo.",
+"D": "Cooperativas atendem associados e não estruturam ofertas de ações."
+},
+"dica": "Banco de investimento = ofertas, fusões e longo prazo. Sem conta corrente."
+},
+{
+"pd": "1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Juliana usa uma carteira digital em que coloca dinheiro antes de pagar contas. Ela pergunta se esse saldo tem a garantia do FGC.",
+"enunciado": "O profissional CPA explica corretamente que o saldo da conta de pagamento:",
+"alt": [
+"não tem FGC, mas fica separado do patrimônio da empresa, em títulos públicos ou no Banco Central.",
+"tem FGC até R$ 250 mil, como qualquer conta corrente de banco.",
+"tem FGCoop, porque instituições de pagamento são cooperativas.",
+"não tem nenhuma proteção e pode ser usado pela empresa para pagar suas dívidas."
+],
+"certa": "A",
+"gabarito": "Instituições de pagamento (como carteiras digitais) não são cobertas pelo FGC. Em compensação, a regulação exige que o saldo dos clientes seja patrimônio separado, aplicado em títulos públicos federais ou depositado no Banco Central. Assim, se a empresa quebrar, esse dinheiro não entra na massa falida.",
+"porque": {
+"B": "Conta de pagamento de instituição de pagamento não tem FGC.",
+"C": "Instituição de pagamento não é cooperativa e não tem FGCoop.",
+"D": "O dinheiro do cliente é patrimônio separado e não pode ser usado pela empresa."
+},
+"dica": "Conta de pagamento: sem FGC, mas dinheiro separado e protegido."
+},
+{
+"pd": "1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente compra ações pela corretora X e pergunta se as ações ficam em nome da corretora ou dele.",
+"enunciado": "O profissional explica corretamente que as ações:",
+"alt": [
+"ficam em nome da empresa emissora até o pagamento de dividendos.",
+"ficam em nome da B3 até o investidor vendê-las.",
+"ficam em nome do investidor, na depositária da B3, e a corretora faz a custódia.",
+"ficam em nome da corretora, que repassa os direitos ao investidor."
+],
+"certa": "C",
+"gabarito": "A corretora leva a ordem à bolsa e presta o serviço de custódia, mas as ações ficam registradas em nome do investidor na depositária central da B3. Por isso, se a corretora quebrar, os ativos não se misturam ao patrimônio dela.",
+"porque": {
+"A": "A emissora não guarda as ações dos investidores.",
+"B": "A B3 é depositária, mas a titularidade é do investidor.",
+"D": "Os ativos ficam registrados em nome do próprio investidor."
+},
+"dica": "Ativo em bolsa = registrado no CPF do investidor."
+},
+{
+"pd": "1.1.4",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Bianca tem R$ 400 mil em CDB de um único banco, que acaba de quebrar.",
+"enunciado": "Considerando a garantia do FGC, Bianca receberá:",
+"alt": [
+"R$ 1 milhão do FGC, que é o limite por instituição.",
+"até R$ 250 mil do FGC; o restante dependerá da liquidação do banco.",
+"nada do FGC, porque o CDB não tem essa garantia.",
+"R$ 400 mil do FGC, porque o CDB é totalmente garantido."
+],
+"certa": "B",
+"gabarito": "O FGC garante até R$ 250 mil por CPF ou CNPJ por conglomerado financeiro, incluindo rendimentos até a data da quebra. Há também um teto de R$ 1 milhão a cada 4 anos para o total recebido do FGC. O que passar do limite vira crédito na liquidação do banco, sem garantia de recebimento.",
+"porque": {
+"A": "R$ 1 milhão é o teto a cada 4 anos para todas as garantias somadas, não o limite por instituição.",
+"C": "CDB tem garantia do FGC até o limite.",
+"D": "O FGC tem limite de R$ 250 mil por CPF por conglomerado."
+},
+"dica": "FGC: R$ 250 mil por conglomerado; teto de R$ 1 milhão a cada 4 anos."
+},
+{
+"pd": "1.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor tem dinheiro em Tesouro Direto, LCI, debêntures e um fundo de renda fixa e pergunta quais têm garantia do FGC.",
+"enunciado": "Das aplicações citadas, tem garantia do FGC apenas a:",
+"alt": [
+"LCI.",
+"debênture.",
+"aplicação no Tesouro Direto.",
+"aplicação no fundo de renda fixa."
+],
+"certa": "A",
+"gabarito": "O FGC cobre produtos emitidos por instituições financeiras associadas: depósitos, poupança, CDB, RDB, LCI, LCA e letras de câmbio, entre outros. Não cobre Tesouro Direto (risco do governo), debêntures, CRI, CRA, COE, fundos e previdência.",
+"porque": {
+"B": "Debênture é dívida de empresa, sem FGC.",
+"C": "Título público tem risco soberano e não é coberto pelo FGC.",
+"D": "Fundos não têm FGC; os ativos são dos cotistas."
+},
+"dica": "FGC = produto de banco (CDB, LCI, LCA, poupança). Fundo, Tesouro e debênture: não."
+},
+{
+"pd": "1.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um profissional recém-contratado pergunta o que a Anbima faz e se ela pode multar instituições.",
+"enunciado": "A resposta correta é que a Anbima:",
+"alt": [
+"é um departamento da CVM responsável pelas certificações profissionais.",
+"é uma autarquia federal que fiscaliza e pune todas as instituições financeiras.",
+"é a bolsa de valores responsável pelos fundos de investimento no Brasil.",
+"é uma entidade privada que faz autorregulação por códigos, aplicáveis às instituições que aderem a eles."
+],
+"certa": "D",
+"gabarito": "A Anbima é uma associação privada que representa instituições do mercado. Ela faz autorregulação por meio de códigos (de distribuição, de fundos, de ética etc.), que valem para associadas e aderentes e podem gerar penalidades previstas nos próprios códigos. Também oferece certificações, como a CPA, e informações de mercado.",
+"porque": {
+"A": "A Anbima não faz parte da CVM.",
+"B": "Autarquias são BC, CVM, SUSEP e PREVIC; a Anbima é privada.",
+"C": "A bolsa é a B3; a Anbima é associação privada."
+},
+"dica": "Anbima = autorregulação privada + certificações."
+},
+{
+"pd": "1.1.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa paga um fornecedor por TED e, no mesmo dia, um cliente paga a empresa por Pix.",
+"enunciado": "Os sistemas do Banco Central que liquidam, respectivamente, a TED e o Pix são:",
+"alt": [
+"o STR e o SPI.",
+"o Selic e a B3.",
+"o SPI e o STR.",
+"a B3 e o Selic."
+],
+"certa": "A",
+"gabarito": "O STR (Sistema de Transferência de Reservas) liquida transferências entre bancos, como a TED, em tempo real e pelo valor bruto. O SPI (Sistema de Pagamentos Instantâneos) liquida o Pix, 24 horas por dia. O Selic registra e liquida títulos públicos federais.",
+"porque": {
+"B": "Nenhum desses dois liquida TED ou Pix.",
+"C": "A ordem está invertida: TED é liquidada no STR e Pix no SPI.",
+"D": "A B3 liquida ativos de bolsa e balcão; o Selic, títulos públicos."
+},
+"dica": "TED = STR. Pix = SPI. Título público = Selic."
+},
+{
+"pd": "1.2.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Em uma palestra sobre economia, Paulo explica o papel do sistema financeiro para um grupo de estudantes.",
+"enunciado": "A função principal do sistema financeiro é:",
+"alt": [
+"arrecadar tributos para financiar os gastos do governo.",
+"garantir que todos os investimentos tenham retorno positivo.",
+"levar recursos de quem tem sobra (poupadores) para quem precisa (tomadores).",
+"definir os preços de todos os produtos da economia."
+],
+"certa": "C",
+"gabarito": "O sistema financeiro faz a intermediação: capta recursos dos agentes superavitários (que poupam) e os direciona aos deficitários (que precisam investir ou consumir). Essa ponte acontece por bancos (crédito) ou diretamente pelo mercado de capitais (ações e debêntures).",
+"porque": {
+"A": "Arrecadar tributos é papel do governo, não do sistema financeiro.",
+"B": "O sistema financeiro não garante retorno de investimentos.",
+"D": "Preços são formados pelos mercados de bens e serviços."
+},
+"dica": "Sistema financeiro = ponte entre poupadores e tomadores."
+},
+{
+"pd": "1.2.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa precisa de recursos para um projeto de 10 anos e decide captar diretamente com investidores, sem tomar empréstimo bancário.",
+"enunciado": "Essa captação acontece no:",
+"alt": [
+"mercado monetário, com operações de curtíssimo prazo entre bancos.",
+"mercado de crédito, com financiamento bancário de longo prazo.",
+"mercado cambial, com a venda de moeda estrangeira.",
+"mercado de capitais, por exemplo com emissão de debêntures ou ações."
+],
+"certa": "D",
+"gabarito": "O mercado de capitais reúne operações de médio e longo prazo em que a empresa capta diretamente com investidores, como ações (sócios) e debêntures (credores). É a chamada desintermediação. O mercado de crédito, ao contrário, passa pelo banco.",
+"porque": {
+"A": "O monetário cuida de liquidez de curtíssimo prazo.",
+"B": "No mercado de crédito, o banco é o intermediário; aqui a captação é direta.",
+"C": "O mercado cambial é de compra e venda de moedas."
+},
+"dica": "Captar direto com investidores, a longo prazo = mercado de capitais."
+},
+{
+"pd": "1.2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma notícia diz que o governo teve superávit primário, mas déficit nominal no ano. Um cliente acha a informação contraditória.",
+"enunciado": "O profissional CPA explica corretamente que:",
+"alt": [
+"os dois resultados medem a mesma coisa, então a notícia está errada.",
+"o primário exclui os juros da dívida; somando os juros, o resultado pode ficar negativo.",
+"o primário inclui os juros da dívida, e o nominal exclui esses juros.",
+"o nominal considera só os gastos com pessoal, e o primário todos os demais."
+],
+"certa": "B",
+"gabarito": "Resultado primário = receitas − despesas, sem os juros da dívida. Resultado nominal = primário − juros. Se o governo arrecada mais do que gasta (superávit primário), mas paga muitos juros, o nominal pode ser deficitário.",
+"porque": {
+"A": "São medidas diferentes, e os dois podem ter sinais opostos.",
+"C": "É o contrário: o nominal inclui juros; o primário não.",
+"D": "A diferença entre eles é o pagamento de juros."
+},
+"dica": "Primário: sem juros. Nominal: com juros."
+},
+{
+"pd": "1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Investidores passam a duvidar da capacidade do governo de controlar suas contas, e as taxas dos títulos públicos longos sobem.",
+"enunciado": "O efeito mais provável desse desequilíbrio fiscal sobre a economia é:",
+"alt": [
+"aumento do risco-país e de juros, com menos espaço para investimentos produtivos.",
+"redução da inflação esperada, pela confiança maior no governo.",
+"queda imediata dos juros longos e valorização dos títulos prefixados já emitidos.",
+"valorização automática do real, por causa da entrada de capital estrangeiro."
+],
+"certa": "A",
+"gabarito": "Quando o mercado percebe descontrole fiscal, exige prêmio de risco maior para financiar o governo. Os juros (sobretudo os longos) sobem, os títulos prefixados já emitidos caem de preço, o crédito encarece e o investimento produtivo diminui. O equilíbrio fiscal faz o caminho inverso.",
+"porque": {
+"B": "Desconfiança fiscal tende a elevar a inflação esperada.",
+"C": "Com mais risco, os juros sobem e os prefixados já emitidos perdem valor.",
+"D": "A percepção de risco costuma afastar capital e desvalorizar o real."
+},
+"dica": "Risco fiscal → prêmio maior → juros longos sobem → títulos caem."
+},
+{
+"pd": "1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um aluno pergunta quais regras ajudam a manter as contas públicas sob controle no Brasil.",
+"enunciado": "A combinação correta de instrumentos de responsabilidade fiscal é:",
+"alt": [
+"a política monetária do Copom, que controla a despesa pública por meio da Selic.",
+"o câmbio flutuante, que equilibra automaticamente receitas e despesas do governo.",
+"a Lei de Responsabilidade Fiscal, com limites de gasto e dívida, e o arcabouço fiscal, que limita o crescimento das despesas.",
+"o depósito compulsório, que obriga o governo a guardar parte das receitas no Banco Central."
+],
+"certa": "C",
+"gabarito": "A LRF estabelece limites para despesas com pessoal e dívida, metas fiscais e transparência para todos os entes. O arcabouço fiscal limita o crescimento das despesas a uma parcela do crescimento das receitas, com metas de resultado primário. Juntos, formam a estrutura de sustentabilidade fiscal.",
+"porque": {
+"A": "O Copom cuida da inflação, não das despesas do governo.",
+"B": "O regime de câmbio não equilibra as contas públicas.",
+"D": "Compulsório é recolhimento dos bancos, não do governo."
+},
+"dica": "LRF (limites e transparência) + arcabouço fiscal (teto para o crescimento das despesas)."
+},
+{
+"pd": "1.2.4",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "A inflação está acima da meta e o Banco Central quer reduzir a quantidade de dinheiro na economia.",
+"enunciado": "Uma medida coerente com esse objetivo é:",
+"alt": [
+"reduzir a alíquota do depósito compulsório.",
+"vender títulos públicos no mercado aberto.",
+"comprar títulos públicos no mercado aberto.",
+"baratear o redesconto para os bancos."
+],
+"certa": "B",
+"gabarito": "Política monetária contracionista retira moeda da economia: o Banco Central vende títulos (recolhe dinheiro), aumenta o compulsório e encarece o redesconto, e o Copom eleva a Selic. A expansionista faz o contrário.",
+"porque": {
+"A": "Compulsório menor libera dinheiro para os bancos emprestarem.",
+"C": "Comprar títulos injeta dinheiro na economia.",
+"D": "Redesconto mais barato facilita a liquidez, o oposto do desejado."
+},
+"dica": "Contracionista: vende título, sobe compulsório, encarece redesconto."
+},
+{
+"pd": "1.2.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um banco tem sobra de caixa no fim do dia, e o Banco Central faz com ele uma operação em que vende títulos hoje e se compromete a recomprá-los amanhã.",
+"enunciado": "Esse tipo de operação:",
+"alt": [
+"é um empréstimo de redesconto concedido ao banco que tem sobra de caixa.",
+"é uma venda definitiva de títulos que aumenta a dívida pública em longo prazo.",
+"é uma operação de swap cambial para proteger o banco contra a alta do dólar.",
+"é uma compromissada que enxuga liquidez do sistema por um prazo curto."
+],
+"certa": "D",
+"gabarito": "Na compromissada, uma parte vende títulos com compromisso de recomprá-los em data futura. Quando o Banco Central vende títulos com compromisso de recompra, retira dinheiro do sistema por um período (enxuga liquidez). É um instrumento de curtíssimo prazo do mercado monetário, usado para manter a taxa Selic efetiva perto da meta.",
+"porque": {
+"A": "Redesconto é para quem tem falta de liquidez, não sobra.",
+"B": "É temporária: os títulos voltam ao BC no prazo combinado.",
+"C": "Não envolve moeda estrangeira."
+},
+"dica": "Compromissada do BC = enxuga ou injeta liquidez por pouco tempo."
+},
+{
+"pd": "1.2.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente pergunta quem decide a taxa Selic e com que frequência.",
+"enunciado": "O profissional explica corretamente que a meta da Selic é definida:",
+"alt": [
+"pelo Copom, formado pela diretoria do Banco Central, em 8 reuniões por ano.",
+"pelo CMN, em reunião mensal, junto com a meta de inflação.",
+"pelo Tesouro Nacional, nos leilões semanais de títulos públicos.",
+"pela B3, conforme a média dos empréstimos entre bancos."
+],
+"certa": "A",
+"gabarito": "O Copom (Comitê de Política Monetária), formado pelo presidente e pelos diretores do Banco Central, se reúne 8 vezes por ano, decide a meta da Selic e divulga comunicado e ata. A meta de inflação, que o Copom persegue, é fixada pelo CMN e medida pelo IPCA.",
+"porque": {
+"B": "O CMN fixa a meta de inflação; a Selic é decidida pelo Copom.",
+"C": "Leilões do Tesouro formam preços dos títulos, mas não definem a meta da Selic.",
+"D": "A B3 apura a taxa DI; a meta da Selic é do Copom."
+},
+"dica": "Copom = meta Selic, 8 vezes por ano. CMN = meta de inflação."
+},
+{
+"pd": "1.2.4",
+"dif": "Difícil",
+"nivel": "",
+"contexto": "O Copom eleva a Selic de forma forte e inesperada. Um cliente tem um título prefixado comprado há um ano e pergunta o que acontece com ele.",
+"enunciado": "O efeito esperado sobre o título prefixado do cliente é:",
+"alt": [
+"nada muda, porque a taxa contratada está garantida em qualquer data.",
+"o preço de mercado sobe, porque o título passa a pagar a nova Selic.",
+"o título é automaticamente convertido em pós-fixado.",
+"o preço de mercado cai, e vender antes do vencimento pode gerar perda."
+],
+"certa": "D",
+"gabarito": "Quando os juros sobem, o fluxo fixo do prefixado é descontado por uma taxa maior, e o preço de mercado cai. Quem segura até o vencimento recebe a taxa contratada; quem vende antes realiza a perda. Selic alta também encarece o crédito, desacelera a atividade e tende a valorizar o real.",
+"porque": {
+"A": "A taxa só é garantida se o título for levado até o vencimento.",
+"B": "Prefixado não acompanha a Selic; sua taxa é fixa.",
+"C": "Não há conversão automática de indexador."
+},
+"dica": "Juros sobem → prefixado cai. Taxa garantida só no vencimento."
+},
+{
+"pd": "1.2.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta se o governo define o preço do dólar no Brasil.",
+"enunciado": "A resposta correta é que o Brasil adota:",
+"alt": [
+"câmbio fixo, com o dólar definido pelo CMN a cada mês.",
+"câmbio flutuante, com intervenções do Banco Central só para suavizar a volatilidade.",
+"câmbio livre, sem nenhuma atuação do Banco Central no mercado.",
+"câmbio fixo, com o dólar definido pelo Banco Central todo dia útil."
+],
+"certa": "B",
+"gabarito": "No câmbio flutuante, a taxa é formada pela oferta e demanda de moeda estrangeira. O Banco Central pode atuar (leilões de dólar à vista, swaps cambiais) para reduzir oscilações bruscas, sem perseguir um preço específico. A PTAX é só a taxa de referência que ele calcula.",
+"porque": {
+"A": "O Brasil não fixa o câmbio.",
+"C": "O BC pode atuar com leilões e swaps para reduzir oscilações bruscas.",
+"D": "A PTAX é uma média de referência, não um preço fixado."
+},
+"dica": "Câmbio flutuante: mercado define; BC só suaviza."
+},
+{
+"pd": "1.2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Diante de forte procura por proteção contra a alta do dólar, o Banco Central faz leilões de um instrumento que oferece essa proteção sem entregar moeda física.",
+"enunciado": "Esse instrumento é o:",
+"alt": [
+"recolhimento de compulsório sobre câmbio.",
+"swap cambial reverso.",
+"swap cambial tradicional.",
+"leilão de compra de dólares à vista."
+],
+"certa": "C",
+"gabarito": "No swap cambial tradicional, o Banco Central assume a ponta que perde quando o dólar sobe, oferecendo hedge ao mercado sem vender reservas. O swap reverso faz o oposto. O câmbio continua flutuante; o BC só atende a demanda por proteção.",
+"porque": {
+"A": "Compulsório não é instrumento de proteção cambial para o mercado.",
+"B": "O reverso protege contra a queda do dólar.",
+"D": "Comprar dólares aumenta a demanda e não protege contra a alta."
+},
+"dica": "Swap tradicional = proteção contra a alta do dólar."
+},
+{
+"pd": "1.2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa importadora usa a cotação divulgada diariamente pelo Banco Central como referência para seus contratos em dólar.",
+"enunciado": "Essa cotação de referência é a:",
+"alt": [
+"PTAX.",
+"taxa Selic.",
+"TR.",
+"taxa DI."
+],
+"certa": "A",
+"gabarito": "A PTAX é a taxa de câmbio de referência calculada pelo Banco Central a partir de consultas feitas aos dealers ao longo do dia. É usada em contratos, conversões e liquidação de derivativos. Não é um preço fixado pelo governo.",
+"porque": {
+"B": "A Selic é a taxa básica de juros.",
+"C": "A TR corrige poupança e FGTS, não câmbio.",
+"D": "A taxa DI é de juros entre bancos, não de câmbio."
+},
+"dica": "PTAX = taxa de referência do dólar, calculada pelo BC."
+},
+{
+"pd": "1.2.6",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente quer saber qual índice é usado como inflação oficial do país e na meta de inflação.",
+"enunciado": "Esse índice é o:",
+"alt": [
+"IGP-M, calculado pela FGV.",
+"INCC, calculado pela FGV.",
+"IPCA, calculado pelo IBGE.",
+"IPC-Fipe, calculado pela Fipe."
+],
+"certa": "C",
+"gabarito": "O IPCA, do IBGE, mede a inflação das famílias com renda de 1 a 40 salários mínimos nas principais regiões e é o índice oficial da meta de inflação, fixada pelo CMN. O IGP-M (FGV) é composto em 60% por preços no atacado e reage mais ao dólar e às commodities.",
+"porque": {
+"A": "O IGP-M é muito usado em aluguel, mas não é a inflação oficial.",
+"B": "O INCC mede custos da construção civil.",
+"D": "O IPC-Fipe mede preços ao consumidor da cidade de São Paulo."
+},
+"dica": "IPCA (IBGE) = inflação oficial e meta."
+},
+{
+"pd": "1.2.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Em um ano de forte alta do dólar e das commodities, um inquilino percebe que o reajuste do seu aluguel foi bem maior que o IPCA.",
+"enunciado": "Isso ocorreu porque o contrato usa o IGP-M, que:",
+"alt": [
+"acompanha mês a mês a variação da Selic definida pelo Copom.",
+"mede só os preços dos aluguéis residenciais nas capitais do país.",
+"é calculado pelo IBGE com a mesma cesta de produtos do IPCA.",
+"tem 60% de peso no atacado e reage mais ao dólar e às commodities."
+],
+"certa": "D",
+"gabarito": "O IGP-M (FGV) combina IPA (preços ao produtor, 60%), IPC (consumidor, 30%) e INCC (construção, 10%). Como o atacado é sensível a câmbio e commodities, o IGP-M oscila mais que o IPCA. Reajuste = valor × (1 + índice).",
+"porque": {
+"A": "O IGP-M é índice de preços, não de juros.",
+"B": "O IGP-M não é índice de aluguel; mede preços amplos da economia.",
+"C": "O IGP-M é da FGV e tem composição diferente."
+},
+"dica": "IGP-M = 60% atacado. Dólar sobe → IGP-M dispara."
+},
+{
+"pd": "1.2.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O PIB nominal cresceu 9% no ano, e a inflação do período foi de 5%. Um cliente diz que a economia cresceu 9%.",
+"enunciado": "O profissional corrige corretamente que o crescimento econômico:",
+"alt": [
+"é a soma do PIB nominal com a inflação, ou seja, 14%.",
+"é medido pelo PIB real e ficou em torno de 4%.",
+"é medido pelo PIB nominal e foi mesmo de 9%.",
+"só pode ser medido no fim de cada década."
+],
+"certa": "B",
+"gabarito": "Crescimento econômico é a variação do PIB real, que retira o efeito da inflação. De forma exata: (1,09 ÷ 1,05) − 1 ≈ 3,8%. Pelo lado da demanda, PIB = consumo + investimento + gastos do governo + exportações − importações.",
+"porque": {
+"A": "Inflação deve ser descontada, não somada.",
+"C": "O nominal inclui o aumento de preços; crescimento se mede em termos reais.",
+"D": "O PIB é medido trimestralmente e anualmente."
+},
+"dica": "Crescimento = PIB real, descontada a inflação."
+},
+{
+"pd": "1.2.7",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um investidor precisa vender rapidamente um imóvel e só consegue comprador aceitando um desconto grande.",
+"enunciado": "O risco que se materializou nessa situação é o risco de:",
+"alt": [
+"liquidez.",
+"câmbio.",
+"crédito.",
+"contraparte central."
+],
+"certa": "A",
+"gabarito": "Risco de liquidez é a dificuldade de vender um ativo rapidamente sem perda de valor. Imóveis, títulos sem mercado secundário ativo e cotas pouco negociadas têm liquidez menor. Por isso a reserva de emergência deve ficar em ativos de liquidez diária.",
+"porque": {
+"B": "Não há moeda estrangeira envolvida.",
+"C": "Risco de crédito é o devedor não pagar.",
+"D": "Contraparte central é a B3 garantindo liquidações em bolsa."
+},
+"dica": "Liquidez = vender rápido sem desconto."
+},
+{
+"pd": "1.2.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente comprou uma debênture de uma empresa que, meses depois, deixou de pagar os juros.",
+"enunciado": "O risco que se materializou foi o risco de:",
+"alt": [
+"liquidez.",
+"operacional.",
+"mercado.",
+"crédito."
+],
+"certa": "D",
+"gabarito": "Risco de crédito é a possibilidade de o emissor ou devedor não pagar juros ou principal. Debêntures, CRI, CRA e CDB carregam risco de crédito do emissor (no CDB, mitigado pelo FGC até o limite). O rating é uma opinião sobre esse risco.",
+"porque": {
+"A": "Liquidez é a dificuldade de vender; aqui o problema é o não pagamento.",
+"B": "Risco operacional envolve falhas de pessoas, processos ou sistemas.",
+"C": "Risco de mercado é oscilação de preços, não calote."
+},
+"dica": "Calote = risco de crédito."
+},
+{
+"pd": "1.3.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma aplicação de R$ 10.000 rende 1% ao mês, com juros compostos, por 2 meses.",
+"enunciado": "O valor ao final do período será de:",
+"alt": [
+"R$ 10.020,00.",
+"R$ 10.200,00.",
+"R$ 10.201,00.",
+"R$ 10.100,00."
+],
+"certa": "C",
+"gabarito": "Juros compostos: M = C × (1 + i)^n = 10.000 × 1,01² = 10.201. No segundo mês, os juros incidem também sobre os juros do primeiro mês (R$ 100 + R$ 101). Em juros simples seriam R$ 200 no total.",
+"porque": {
+"A": "Valor sem relação com a taxa de 1% ao mês por 2 meses.",
+"B": "Esse seria o resultado com juros simples.",
+"D": "Esse é o valor após um mês apenas."
+},
+"dica": "Composto: M = C × (1 + i)^n. Juros sobre juros."
+},
+{
+"pd": "1.3.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente diz que uma taxa de 1% ao mês equivale a 12% ao ano em uma aplicação com juros compostos.",
+"enunciado": "O profissional corrige corretamente que a taxa anual equivalente é de aproximadamente:",
+"alt": [
+"12% ao ano, porque basta multiplicar por 12.",
+"12,68% ao ano.",
+"13,5% ao ano, somando 1,5% de capitalização.",
+"11,39% ao ano, porque os juros compostos reduzem a taxa."
+],
+"certa": "B",
+"gabarito": "Taxa equivalente composta: (1 + i anual) = (1 + i mensal)^12. Assim, 1,01^12 ≈ 1,1268, ou 12,68% ao ano. Multiplicar por 12 é a lógica dos juros simples (taxa proporcional).",
+"porque": {
+"A": "Multiplicar por 12 vale para taxas proporcionais (juros simples).",
+"C": "Não há esse acréscimo fixo.",
+"D": "Com juros compostos, a taxa anual fica acima de 12%."
+},
+"dica": "Equivalente (composto): (1 + i)^12. Proporcional (simples): i × 12."
+},
+{
+"pd": "1.3.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investimento rendeu 10% no ano, e a inflação do período foi de 4%.",
+"enunciado": "O ganho real do investidor foi de aproximadamente:",
+"alt": [
+"6%.",
+"2,5%.",
+"14,4%.",
+"5,77%."
+],
+"certa": "D",
+"gabarito": "Taxa real (Fisher): (1 + nominal) ÷ (1 + inflação) − 1 = 1,10 ÷ 1,04 − 1 ≈ 5,77%. Subtrair direto (10% − 4%) dá uma aproximação que exagera o ganho real.",
+"porque": {
+"A": "Subtrair a inflação é só uma aproximação; o cálculo correto é pela divisão.",
+"B": "Valor sem relação com a fórmula correta.",
+"C": "A inflação deve ser descontada, não somada."
+},
+"dica": "Real = (1 + nominal) ÷ (1 + inflação) − 1."
+},
+{
+"pd": "1.3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa avalia um projeto com investimento de R$ 1 milhão. Trazidos a valor presente pelo custo de capital, os fluxos futuros somam R$ 1,2 milhão.",
+"enunciado": "Sobre esse projeto, é correto afirmar que:",
+"alt": [
+"o VPL é de R$ 1,2 milhão, porque considera só os fluxos futuros.",
+"não é possível avaliar o projeto sem conhecer a TIR.",
+"o VPL é positivo, de R$ 200 mil, e o projeto cria valor.",
+"o VPL é negativo, porque o investimento ocorre antes dos fluxos."
+],
+"certa": "C",
+"gabarito": "VPL = valor presente dos fluxos − investimento = 1,2 milhão − 1 milhão = R$ 200 mil. VPL positivo significa que o projeto rende mais que o custo de capital (TIR acima da taxa de desconto) e cria valor.",
+"porque": {
+"A": "O VPL desconta o investimento inicial.",
+"B": "O VPL já basta para decidir.",
+"D": "O VPL já considera o tempo; aqui ele é positivo."
+},
+"dica": "VPL > 0 = cria valor. VPL = VP dos fluxos − investimento."
+},
+{
+"pd": "1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma família compara o financiamento de um imóvel pelos sistemas SAC e Price, com mesma taxa e prazo.",
+"enunciado": "É correto afirmar que, no SAC:",
+"alt": [
+"não há cobrança de juros nas primeiras parcelas.",
+"a amortização é constante, as parcelas caem com o tempo e o total de juros é menor.",
+"a parcela é fixa do início ao fim e o total de juros é maior.",
+"a amortização cresce com o tempo e as parcelas aumentam."
+],
+"certa": "B",
+"gabarito": "No SAC, a amortização é constante (valor ÷ prazo), e os juros incidem sobre um saldo que cai rápido; por isso as parcelas diminuem e o total de juros é menor. Na Price, a parcela é fixa, a amortização começa pequena e cresce, e o total de juros é maior.",
+"porque": {
+"A": "Há juros desde a primeira parcela, sobre o saldo devedor.",
+"C": "Isso descreve a tabela Price.",
+"D": "No SAC a amortização é constante e as parcelas diminuem."
+},
+"dica": "SAC: amortização fixa, parcela cai. Price: parcela fixa, mais juros."
+},
+{
+"pd": "1.4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Dois investidores negociam ações na bolsa. Um deles pergunta o que acontece se a outra parte não pagar ou não entregar as ações.",
+"enunciado": "O profissional explica corretamente que a B3 atua como:",
+"alt": [
+"contraparte central, garantindo a liquidação e eliminando o risco de contraparte para o investidor.",
+"banco emissor das ações, devolvendo o valor investido.",
+"fiscal da CVM, punindo o investidor que não pagar a operação.",
+"seguradora, indenizando o investidor que perder dinheiro com a queda das ações."
+],
+"certa": "A",
+"gabarito": "Na contraparte central, a B3 se coloca entre comprador e vendedor e garante a liquidação, usando garantias depositadas pelos participantes. Assim o investidor não corre o risco de a outra ponta não cumprir. A B3 também atua como depositária central e câmara de compensação (clearing).",
+"porque": {
+"B": "Quem emite ações é a companhia.",
+"C": "A B3 não é fiscal da CVM.",
+"D": "A B3 não protege contra queda de preço."
+},
+"dica": "Contraparte central = B3 no meio, garantindo a liquidação."
+},
+{
+"pd": "1.4.10",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Roberto tem R$ 1,5 milhão aplicado e quer investir em um fundo restrito a investidores qualificados.",
+"enunciado": "Para ser considerado investidor qualificado, Roberto precisa:",
+"alt": [
+"ter renda mensal acima de R$ 50 mil, comprovada por holerite.",
+"ter mais de R$ 10 milhões em investimentos e assinar declaração.",
+"ter mais de R$ 1 milhão em investimentos e assinar uma declaração dessa condição.",
+"ter perfil arrojado no questionário de suitability."
+],
+"certa": "C",
+"gabarito": "Pela Resolução CVM 30, é qualificado quem tem mais de R$ 1 milhão em aplicações financeiras e atesta isso por escrito (há outras hipóteses, como certas certificações para recursos próprios). Profissional é quem tem mais de R$ 10 milhões, também com declaração.",
+"porque": {
+"A": "O critério é o valor investido, não a renda.",
+"B": "R$ 10 milhões é o critério do investidor profissional.",
+"D": "Perfil não define a classificação de investidor qualificado."
+},
+"dica": "Qualificado: mais de R$ 1 milhão. Profissional: mais de R$ 10 milhões."
+},
+{
+"pd": "1.4.12",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma instituição vai divulgar a rentabilidade de um fundo em material publicitário.",
+"enunciado": "Pelo Código Anbima, é obrigatório:",
+"alt": [
+"prometer que o retorno passado se repetirá nos próximos anos.",
+"destacar só o período de melhor desempenho do fundo.",
+"omitir as taxas, para não confundir o investidor.",
+"incluir o aviso de que rentabilidade passada não é garantia de rentabilidade futura."
+],
+"certa": "D",
+"gabarito": "O Código de Distribuição da Anbima exige publicidade clara e equilibrada: períodos comparáveis, sem destacar só o melhor, com avisos obrigatórios como o de que rentabilidade passada não garante rentabilidade futura. Os princípios são boa-fé, transparência, diligência e lealdade.",
+"porque": {
+"A": "Prometer retorno é proibido.",
+"B": "Escolher só o melhor período induz o investidor a erro.",
+"C": "As informações devem ser claras e completas."
+},
+"dica": "Publicidade: sem cherry picking e com o aviso de rentabilidade passada."
+},
+{
+"pd": "1.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta como o Banco Central evita que a quebra de um banco contamine todo o sistema.",
+"enunciado": "O profissional explica corretamente que o Banco Central:",
+"alt": [
+"exige capital proporcional ao risco e liquidez mínima e monitora o risco sistêmico.",
+"define diariamente o preço das ações dos bancos negociadas na bolsa.",
+"garante com recursos públicos todos os depósitos acima do limite do FGC, sem exceção.",
+"proíbe os bancos de emprestar em momentos de crise para evitar qualquer perda."
+],
+"certa": "A",
+"gabarito": "A regulação prudencial (inspirada em Basileia) exige capital proporcional aos riscos, colchões de liquidez e limite de alavancagem. O Banco Central monitora o risco sistêmico (contágio) e pode usar medidas macroprudenciais, como o adicional contracíclico de capital, além de linhas de liquidez em crises.",
+"porque": {
+"B": "O BC não fixa preços de ações.",
+"C": "O BC não garante depósitos; o FGC tem limite.",
+"D": "Emprestar é atividade normal dos bancos; o que se exige é capital e controle de risco."
+},
+"dica": "Basileia = capital proporcional ao risco + liquidez + limite de alavancagem."
+}
+]
+}

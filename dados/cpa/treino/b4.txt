@@ -1,0 +1,179 @@
+## 4.1 fácil
+Q: Um cliente pergunta o que significam as letras da sigla ESG.
+P: A resposta correta é:
++ ambiental, social e governança.
+- economia, sustentabilidade e gestão. || A sigla não significa isso.
+- energia, saúde e garantias. || A sigla não significa isso.
+- emissões, solidez e governo. || A sigla não significa isso.
+G: ESG reúne três dimensões avaliadas além dos números financeiros: ambiental (clima, recursos, poluição), social (trabalho, direitos humanos, diversidade, comunidade, consumidor) e governança (conselho, incentivos, ética e transparência).
+D: E = ambiental. S = social. G = governança.
+
+## 4.1 fácil
+Q: Uma empresa melhora a independência do conselho de administração e cria regras de remuneração alinhadas ao longo prazo.
+P: Essas medidas se referem ao pilar:
++ de governança.
+- ambiental. || O ambiental trata de clima, recursos e poluição.
+- social. || O social trata de pessoas e comunidade.
+- de inovação. || Inovação não é pilar do ESG.
+G: Governança envolve estrutura de conselho, independência, incentivos, ética, controles e transparência. Inclusão financeira, condições de trabalho e diversidade são do pilar social; emissões e uso de recursos, do ambiental.
+D: Conselho, incentivos e ética = governança.
+
+## 4.2 médio
+Q: Uma empresa diz em sua propaganda que é "100% sustentável", mas não divulga dados, metas nem resultados ambientais.
+P: Essa prática é chamada de:
++ greenwashing.
+- best-in-class. || Best-in-class é escolher as melhores empresas de cada setor.
+- engajamento. || Engajamento é o investidor dialogar e votar para melhorar a empresa.
+- investimento de impacto. || Impacto exige resultado mensurável.
+G: Greenwashing é apresentar uma imagem sustentável sem prática real nem transparência. As regras da CVM e da Anbima exigem que fundos e empresas que se dizem sustentáveis expliquem metodologia, critérios e indicadores, justamente para combater essa prática.
+D: Greenwashing = discurso verde sem prática.
+
+## 4.2 médio
+Q: Um fundo deixa de investir em empresas de tabaco e armas por causa de critérios ESG.
+P: Essa estratégia é chamada de:
++ exclusão (filtro negativo).
+- best-in-class. || Best-in-class seleciona os melhores de cada setor, sem excluir setores.
+- integração ESG. || Integração considera ESG na análise de todos os ativos.
+- engajamento. || Engajamento é atuar dentro da empresa para melhorá-la.
+G: Estratégias ESG: exclusão (retira setores ou empresas), best-in-class (escolhe as melhores de cada setor), integração (inclui fatores ESG na análise financeira), engajamento (voto e diálogo com as empresas) e impacto (busca resultado socioambiental mensurável, além do retorno).
+D: Exclusão = tirar setores. Best-in-class = os melhores de cada setor.
+
+## 4.3 médio
+Q: Uma empresa emite um título de dívida cujos recursos só podem ser usados em projetos de energia solar.
+P: Esse título é um:
++ green bond, e o investidor continua com o risco de crédito da empresa.
+- green bond, garantido pelo FGC por ter finalidade ambiental. || A finalidade ambiental não traz FGC.
+- sustainability-linked bond, com taxa ligada a metas ESG. || No sustainability-linked, os recursos são livres e a taxa depende de metas.
+- fundo IS, que precisa ter o sufixo no nome. || É um título de dívida, não um fundo.
+G: O green bond é um título de dívida cujos recursos vão para projetos ambientais. O risco de crédito da emissora continua igual. No sustainability-linked, o uso dos recursos é livre, mas a taxa muda conforme a empresa cumpre ou não metas ESG.
+D: Green bond = recursos para projeto verde. Risco de crédito continua.
+
+## 4.3 médio
+Q: Um fundo tem como objetivo principal gerar benefício ambiental e divulga relatórios periódicos com os resultados alcançados.
+P: Pelas regras da Anbima, esse fundo:
++ é um fundo IS (investimento sustentável) e pode usar esse sufixo no nome.
+- é um fundo que apenas integra ESG e não pode usar o sufixo IS. || Quem tem objetivo sustentável e reporta resultados é IS.
+- é obrigado a ter garantia de retorno mínimo aos cotistas. || ESG não garante retorno.
+- não precisa explicar metodologia nem critérios no regulamento. || Transparência é exigida justamente nesses fundos.
+G: A Anbima diferencia fundos IS (com objetivo sustentável, sufixo no nome e relatórios de resultado) de fundos que integram ESG (consideram fatores ESG na análise, mas não têm objetivo sustentável como finalidade). A CVM 175 exige que fundos ESG detalhem metodologia e indicadores.
+D: IS = objetivo sustentável + sufixo + relatório. Integra ESG = sem sufixo.
+
+## 4.4 fácil
+Q: Um cliente pergunta o que é blockchain.
+P: A resposta correta é que blockchain é:
++ um registro distribuído, em blocos encadeados por criptografia, praticamente imutável.
+- um banco digital autorizado pelo Banco Central a emitir criptomoedas. || Blockchain é tecnologia, não instituição.
+- um tipo de fundo de investimento que aplica em moedas estrangeiras. || Blockchain não é produto de investimento.
+- uma moeda digital emitida pelo governo com valor fixo em reais. || Isso lembra o Drex, que usa a tecnologia, mas não é a tecnologia.
+G: Blockchain é um livro-razão distribuído: os registros ficam em blocos ligados por criptografia e copiados em vários computadores, o que dificulta alterações. É a base de criptoativos, contratos inteligentes, DeFi e tokenização.
+D: Blockchain = registro distribuído e praticamente imutável.
+
+## 4.4 médio
+Q: Um seguro agrícola registrado em blockchain paga a indenização automaticamente quando a estação meteorológica registra seca acima de um limite.
+P: Esse mecanismo é possível graças a:
++ um contrato inteligente, que recebe os dados do clima por meio de um oráculo.
+- um corretor de seguros, que analisa cada caso e decide se paga. || Aqui o pagamento é automático, sem análise manual.
+- uma DAO, que vota cada indenização em assembleia dos segurados. || O pagamento depende de uma regra automática.
+- um título de capitalização, que sorteia os agricultores premiados. || Não há sorteio.
+G: Contrato inteligente é um código em blockchain que se executa sozinho quando as condições previstas acontecem. O oráculo leva dados do mundo real (como chuva ou preço) ao contrato. O seguro paramétrico paga automaticamente quando o parâmetro é atingido.
+D: Contrato inteligente se executa sozinho. Oráculo traz os dados de fora.
+
+## 4.4 médio
+Q: Um microempreendedor consegue um empréstimo em uma plataforma DeFi, depositando em garantia criptoativos de valor maior que a dívida.
+P: Uma característica correta desse empréstimo é:
++ se a garantia perder valor, o contrato pode vendê-la automaticamente para quitar a dívida.
+- o empréstimo tem garantia do FGC, porque foi feito em plataforma digital. || DeFi não tem FGC.
+- a plataforma analisa o score do cliente no Banco Central antes de liberar. || Em DeFi, a garantia substitui a análise de crédito.
+- a garantia não pode ser vendida em hipótese alguma até o fim do contrato. || A liquidação automática é justamente o mecanismo de proteção.
+G: Em DeFi, o crédito costuma ser sobrecolateralizado: a garantia vale mais que a dívida. Se a garantia cair abaixo de um limite, o contrato inteligente a liquida automaticamente. Há mais acesso e transparência, mas também riscos de código, de volatilidade e ausência de FGC.
+D: Empréstimo DeFi: garantia maior que a dívida e liquidação automática.
+
+## 4.4 médio
+Q: Um investidor quer negociar criptoativos sem deixá-los sob a guarda de uma empresa, usando a própria carteira digital.
+P: O tipo de plataforma adequado a esse desejo é a:
++ DEX (exchange descentralizada), com autocustódia e contratos inteligentes.
+- exchange centralizada, em que a empresa guarda os ativos dos clientes. || Na centralizada, a empresa faz a custódia.
+- corretora de valores, que registra os criptoativos na B3. || Corretoras tradicionais não negociam cripto dessa forma.
+- conta de pagamento, que guarda os criptoativos com garantia do FGC. || Conta de pagamento não guarda cripto, e não há FGC.
+G: Na DEX, a negociação ocorre por contratos inteligentes e o investidor mantém a custódia dos próprios ativos (autocustódia), sem ponto central de falha. Na exchange centralizada, a empresa guarda os ativos, o que traz risco de contraparte e de ataques ao sistema dela.
+D: DEX = autocustódia. Exchange centralizada = a empresa guarda.
+
+## 4.4 médio
+Q: Uma plataforma divide um imóvel comercial em milhares de tokens e vende cada fração a investidores.
+P: Sobre essa tokenização, é correto afirmar que:
++ facilita o acesso e o fracionamento, mas os riscos do imóvel continuam.
+- elimina o risco de vacância, porque o imóvel passa a ser digital. || Tokenizar muda o registro, não o risco do ativo.
+- garante liquidez diária aos investidores, como um CDB. || A liquidez depende de haver compradores.
+- dispensa qualquer registro oficial do imóvel em cartório. || A validade jurídica depende do registro oficial.
+G: Tokenizar é representar um ativo ou direito em tokens digitais. Isso facilita o fracionamento, a rastreabilidade e pode ampliar a liquidez, mas os riscos do ativo (vacância, crédito, mercado) continuam, somados a riscos de tecnologia, regulação e plataforma.
+D: Tokenizar muda o registro, não o risco.
+
+## 4.4 médio
+Q: Um cliente pergunta se o Drex é uma criptomoeda como o bitcoin.
+P: A resposta correta é que o Drex:
++ é a versão digital do real, emitida pelo Banco Central, com contratos programáveis.
+- é uma criptomoeda privada com preço livre, sem relação com o real. || O Drex é o real em formato digital.
+- vai substituir o Pix em todas as transferências do país. || O Drex não substitui o Pix.
+- é um fundo de investimento em criptoativos negociado na B3. || Não é produto de investimento.
+G: O Drex é a plataforma do real digital (CBDC) do Banco Central, pensada para operações com ativos tokenizados e contratos programáveis. Não é criptomoeda volátil, porque representa o próprio real, e não substitui o Pix.
+D: Drex = real digital do Banco Central. Não é cripto volátil.
+
+## 4.5 fácil
+Q: Um cliente autoriza que seu banco compartilhe seus dados de conta com outra instituição para receber uma oferta de crédito melhor.
+P: Esse compartilhamento acontece no:
++ Open Finance, sempre com consentimento do cliente.
+- Pix, que transfere dados junto com os pagamentos. || Pix é meio de pagamento.
+- SCR, que é público e não depende de autorização. || O SCR é cadastro de dívidas, com acesso restrito.
+- cadastro positivo, que só vale para empresas. || O cadastro positivo também vale para pessoas.
+G: O Open Finance permite compartilhar dados cadastrais e transacionais, além de serviços como iniciação de pagamento, entre instituições, com consentimento do cliente, para finalidade e prazo definidos e revogável a qualquer momento. Isso aumenta a concorrência e ajuda quem tem pouco histórico de crédito.
+D: Open Finance = compartilhar dados com consentimento.
+
+## 4.5 médio
+Q: Um cliente deu consentimento no Open Finance há 6 meses e agora não quer mais compartilhar seus dados.
+P: O cliente pode:
++ revogar o consentimento a qualquer momento.
+- revogar só depois de 2 anos de compartilhamento. || A revogação pode ser feita a qualquer momento.
+- revogar apenas pessoalmente, em uma agência. || A revogação pode ser feita nos canais digitais.
+- revogar apenas se a instituição concordar. || A decisão é do cliente.
+G: No Open Finance, o consentimento tem finalidade e prazo definidos e pode ser revogado pelo cliente a qualquer momento. O compartilhamento ocorre por canais seguros, sem que o cliente precise passar sua senha para a outra instituição.
+D: Consentimento no Open Finance: revogável a qualquer momento.
+
+## 4.6 fácil
+Q: Um banco usa inteligência artificial para estimar a probabilidade de fraude em cada compra com cartão.
+P: Esse uso é um exemplo de:
++ IA preditiva.
+- IA generativa. || A generativa cria conteúdo, como textos e imagens.
+- blockchain. || Blockchain é tecnologia de registro, não de previsão.
+- tokenização. || Tokenização é representar ativos em tokens.
+G: A IA preditiva estima probabilidades a partir de dados (fraude, risco de crédito, cancelamento). A IA generativa cria conteúdo, como textos e respostas em chatbots. Nos dois casos, a instituição continua responsável pelo resultado.
+D: Preditiva = estima. Generativa = cria.
+
+## 4.6 médio
+Q: Um banco usa um chatbot com IA generativa para responder dúvidas de investimento.
+P: Um cuidado necessário nesse uso é:
++ ter supervisão humana e encaminhar casos complexos a uma pessoa, porque a IA pode errar.
+- deixar a IA recomendar produtos sem suitability, porque ela é imparcial. || Recomendações por IA também exigem suitability.
+- usar dados de clientes livremente, porque a LGPD não se aplica à IA. || A LGPD se aplica.
+- dispensar a responsabilidade da instituição pelas respostas da IA. || A instituição responde pelas respostas.
+G: IA generativa pode produzir respostas erradas (alucinações). Por isso exige supervisão humana, segurança e respeito à LGPD, opção de atendimento humano e, em recomendações, suitability. A responsabilidade continua sendo da instituição.
+D: IA no atendimento: supervisão humana, LGPD e suitability.
+
+## 4.7 médio
+Q: Uma fintech quer conectar diretamente pessoas que querem emprestar com pessoas que precisam de crédito, por uma plataforma digital.
+P: O tipo de instituição autorizada pelo Banco Central para isso é a:
++ SEP (Sociedade de Empréstimo entre Pessoas).
+- SCD (Sociedade de Crédito Direto), que empresta com capital próprio. || A SCD usa recursos próprios, sem conectar credores.
+- corretora de valores, que intermedeia ações na bolsa. || Corretora atua em valores mobiliários.
+- seguradora, que aceita os riscos de crédito das pessoas. || Seguradora não faz empréstimos entre pessoas.
+G: A SEP faz o peer-to-peer lending: conecta credores e devedores por plataforma eletrônica. A SCD empresta com capital próprio. As duas são fintechs de crédito autorizadas e supervisionadas pelo Banco Central.
+D: SEP = conecta pessoas (P2P). SCD = empresta capital próprio.
+
+## 4.7 médio
+Q: Uma loja quer aceitar cartões e contrata uma empresa que credencia o lojista, processa as vendas e repassa os valores.
+P: Essa empresa é a:
++ adquirente (credenciadora).
+- bandeira do cartão. || A bandeira define as regras do arranjo.
+- emissora do cartão. || A emissora é a instituição do consumidor.
+- registradora de recebíveis. || A registradora registra recebíveis, não credencia lojistas.
+G: No arranjo de cartões: a bandeira define as regras; o emissor fornece o cartão ao consumidor; a adquirente (credenciadora) credencia o lojista, processa e paga as vendas (e pode antecipá-las com desconto); a subadquirente intermedeia pequenos lojistas.
+D: Bandeira = regras. Emissor = consumidor. Adquirente = lojista.

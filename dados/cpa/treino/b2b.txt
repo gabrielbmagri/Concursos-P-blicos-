@@ -1,0 +1,219 @@
+## 2.2 fácil
+Q: Rita faz a declaração completa do IR, contribui para o INSS e quer um plano de previdência para reduzir o imposto do ano.
+P: O plano mais indicado para Rita é o:
++ PGBL, que permite deduzir até 12% da renda bruta tributável.
+- VGBL, que permite deduzir até 12% da renda bruta tributável. || O VGBL não permite dedução na declaração.
+- PGBL, que permite deduzir 100% das contribuições feitas no ano. || A dedução é limitada a 12% da renda bruta tributável.
+- VGBL, porque é o único plano com IR só sobre o rendimento. || O VGBL tem IR só sobre o rendimento, mas não reduz o IR do ano.
+G: O PGBL permite deduzir as contribuições até 12% da renda bruta tributável, para quem faz a declaração completa e contribui para o INSS ou regime próprio. Em troca, no resgate o IR incide sobre o valor total. O VGBL não deduz, mas o IR incide só sobre o rendimento.
+D: PGBL: deduz até 12%, IR sobre o total. VGBL: não deduz, IR só sobre o rendimento.
+
+## 2.2 fácil
+Q: Sérgio faz a declaração simplificada do IR e quer começar a investir para a aposentadoria pela previdência privada.
+P: O plano mais adequado para Sérgio é o:
++ VGBL, porque ele não aproveitaria a dedução do PGBL.
+- PGBL, porque toda contribuição pode ser deduzida no modelo simplificado. || No modelo simplificado não há dedução de PGBL.
+- PGBL, porque o IR no resgate incide só sobre os rendimentos. || No PGBL o IR incide sobre o total resgatado.
+- VGBL, porque ele é isento de IR em qualquer prazo de resgate. || O VGBL tem IR sobre o rendimento.
+G: Quem faz a declaração simplificada (ou é isento) não aproveita a dedução do PGBL e acabaria pagando IR sobre o valor total no resgate. Para esse público, o VGBL é mais vantajoso, porque o IR incide apenas sobre o rendimento. O VGBL também recebe o que passar de 12% da renda de quem usa o PGBL.
+D: Sem dedução (simplificado ou isento) → VGBL.
+
+## 2.2 médio
+Q: Um cliente vai resgatar um plano de previdência no regime regressivo. Os aportes foram feitos há 7 anos.
+P: A alíquota de IR aplicada a esses aportes é de:
++ 20%.
+- 15%. || 15% vale para recursos com mais de 8 até 10 anos.
+- 25%. || 25% vale para recursos com mais de 4 até 6 anos.
+- 10%. || 10% só vale para recursos com mais de 10 anos.
+G: Tabela regressiva da previdência, por tempo de cada aporte: até 2 anos, 35%; 2 a 4, 30%; 4 a 6, 25%; 6 a 8, 20%; 8 a 10, 15%; acima de 10 anos, 10%. É definitiva e começa a contar a partir de cada aporte.
+D: Regressivo: 35, 30, 25, 20, 15, 10, em degraus de 2 anos.
+
+## 2.2 médio
+Q: Um cliente abriu um PGBL há um ano e ainda não decidiu se quer o regime progressivo ou o regressivo de tributação.
+P: Pelas regras atuais (Lei 14.803/2024), ele pode escolher o regime:
++ até o primeiro resgate ou o recebimento do primeiro benefício.
+- apenas no momento da contratação, sem possibilidade de mudança. || A lei passou a permitir a escolha mais tarde.
+- a qualquer momento, inclusive depois de vários resgates. || A escolha deve ser feita até o primeiro resgate ou benefício.
+- apenas nos primeiros 30 dias após a contratação do plano. || O prazo é até o primeiro resgate ou benefício.
+G: A Lei 14.803/2024 permite escolher o regime de tributação da previdência até o primeiro resgate ou o recebimento do benefício. No progressivo, há retenção de 15% na fonte e ajuste na declaração (até 27,5%). No regressivo, a alíquota é definitiva e cai com o tempo.
+D: Escolha do regime: até o 1º resgate ou benefício (Lei 14.803).
+
+## 2.2 médio
+Q: Um cliente quer trocar seu PGBL de seguradora porque achou um plano com taxa menor.
+P: Essa troca pode ser feita por:
++ portabilidade para outro PGBL, sem incidência de IR.
+- resgate total do PGBL e aplicação em um VGBL, sem IR. || Resgatar gera IR, e a portabilidade exige mesma modalidade.
+- portabilidade para um VGBL, com IR só sobre o rendimento. || A portabilidade só vale entre planos da mesma modalidade.
+- transferência para um CDB do mesmo banco, sem IR. || Não existe portabilidade de previdência para CDB.
+G: Na portabilidade, os recursos vão direto de uma entidade para outra, sem passar pelo cliente e sem IR, entre planos da mesma modalidade (PGBL para PGBL, VGBL para VGBL). Pode haver carência para fazê-la. É a forma de trocar de plano sem perder o benefício tributário.
+D: Portabilidade: mesma modalidade, sem IR, direto entre entidades.
+
+## 2.2 médio
+Q: Na fase de benefício, um cliente escolhe uma renda que será paga por 15 anos. Se ele morrer antes, os beneficiários continuam recebendo até completar esse prazo.
+P: Essa modalidade de renda é a:
++ renda por prazo certo.
+- renda temporária. || Na temporária, os pagamentos param com a morte do titular.
+- renda vitalícia simples. || A vitalícia paga enquanto o titular viver, sem prazo fixo.
+- renda vitalícia reversível ao cônjuge. || A reversível continua para o beneficiário por toda a vida dele.
+G: Na renda por prazo certo, o pagamento dura o prazo escolhido e, se o titular morrer antes, continua para os beneficiários até o fim. Na temporária, o prazo também é definido, mas os pagamentos cessam com a morte. Na vitalícia, paga-se enquanto o titular viver.
+D: Prazo certo: continua aos beneficiários. Temporária: acaba com a morte.
+
+## 2.2 médio
+Q: Um cliente pergunta sobre as taxas cobradas em planos de previdência.
+P: A diferença correta entre elas é:
++ a de administração incide sobre o patrimônio; a de carregamento, sobre os aportes ou resgates.
+- a de administração incide sobre os aportes; a de carregamento, sobre o patrimônio. || Os conceitos estão trocados.
+- as duas incidem só sobre os rendimentos do plano, uma vez por ano. || Nenhuma das duas incide sobre o rendimento.
+- as duas são proibidas desde que a Lei 14.803 entrou em vigor. || As duas continuam permitidas.
+G: A taxa de administração é cobrada ao ano sobre o patrimônio acumulado. A taxa de carregamento incide sobre cada aporte (na entrada) ou sobre o resgate (na saída). Muitos planos atuais têm carregamento zero, mas é preciso conferir.
+D: Administração = patrimônio. Carregamento = aportes ou resgates.
+
+## 2.3 fácil
+Q: Um cliente compara dois empréstimos com a mesma taxa de juros, mas tarifas e seguros diferentes.
+P: Para saber qual é realmente mais barato, ele deve comparar o:
++ CET, que inclui juros, tarifas, impostos e seguros.
+- valor da primeira parcela de cada um dos empréstimos. || A parcela sozinha não mostra o custo total.
+- prazo de pagamento, escolhendo sempre o mais longo. || Prazo maior costuma aumentar o custo total.
+- índice de inflação usado como referência pelo banco. || O que importa é o custo total do crédito.
+G: O Custo Efetivo Total (CET) reúne juros, tarifas, IOF, seguros e demais encargos, expressos como taxa. É obrigatório informá-lo e é o número certo para comparar ofertas de crédito.
+D: Comparar crédito = CET, não só a taxa de juros.
+
+## 2.3 fácil
+Q: Uma cliente usou R$ 1.000 do limite de R$ 5.000 do cheque especial por 5 dias.
+P: Os juros do cheque especial incidem sobre:
++ os R$ 1.000 utilizados, pelos dias de uso, além do IOF.
+- os R$ 5.000 do limite total, mesmo sem uso. || Os juros incidem só sobre o valor usado.
+- os R$ 4.000 de limite que não foram usados. || Não há juros sobre o limite disponível.
+- nenhum valor, se a conta for coberta em até 30 dias. || Há juros desde o primeiro dia de uso.
+G: No cheque especial, os juros são cobrados sobre o valor efetivamente usado e pelos dias de uso, com teto de 8% ao mês para pessoa física e MEI. Também incide IOF. É uma das linhas mais caras e deve ser usado só por poucos dias.
+D: Cheque especial: juros só sobre o usado; teto de 8% ao mês.
+
+## 2.3 médio
+Q: Uma cliente pagou só o mínimo da fatura do cartão e ficou no rotativo.
+P: Sobre o rotativo do cartão, é correto afirmar que:
++ vale só até a fatura seguinte, com encargos limitados a 100% da dívida original.
+- pode durar quantos meses a cliente quiser, sem nenhum limite de encargos. || Há prazo e limite de encargos.
+- não cobra juros, apenas uma multa fixa de 2% ao mês sobre o saldo. || O rotativo cobra juros elevados.
+- tem juros limitados a 8% ao mês, igual ao teto do cheque especial. || O teto de 8% é do cheque especial.
+G: O rotativo do cartão só pode ser usado até o vencimento da fatura seguinte; depois, o saldo deve ir para um parcelamento. A Lei 14.690 limitou o total de juros e encargos do rotativo e do parcelamento da fatura a 100% do valor original da dívida.
+D: Rotativo: até a próxima fatura; encargos limitados a 100% da dívida.
+
+## 2.3 médio
+Q: Um cliente com várias dívidas caras troca todas por um único contrato, com juros menores e parcela que cabe no orçamento.
+P: Essa operação é chamada de:
++ refinanciamento ou consolidação de dívidas.
+- portabilidade de salário para outro banco. || Portabilidade de salário não renegocia dívidas.
+- alienação fiduciária do salário do cliente. || Alienação fiduciária é garantia sobre um bem.
+- antecipação de recebíveis do cartão de crédito. || Antecipação é para quem tem vendas a receber.
+G: No refinanciamento, o cliente substitui contratos existentes por um novo, com condições melhores (juros menores, prazo maior, parcela adequada). Faz sentido quando o custo total cai. Com a portabilidade de crédito, outra instituição pode quitar a dívida e assumir o contrato.
+D: Refinanciar = trocar dívida cara por uma mais barata e organizada.
+
+## 2.3 médio
+Q: Uma servidora pública precisa de crédito e o banco oferece consignado, com desconto das parcelas na folha.
+P: O consignado costuma ter juros menores porque:
++ o desconto em folha reduz o risco de inadimplência para o banco.
+- o governo paga parte dos juros para todos os servidores. || Não há subsídio geral do governo.
+- não incide IOF nem nenhuma tarifa sobre essa operação. || O consignado pode ter IOF.
+- o banco pode cobrar a dívida de qualquer conta do cliente. || A garantia é o desconto em folha.
+G: No crédito consignado, a parcela é descontada diretamente do salário ou benefício, o que reduz muito o risco de calote. Por isso os juros são menores e os prazos maiores. Há limite de margem consignável, que protege parte da renda do cliente.
+D: Consignado: desconto em folha → risco menor → juros menores.
+
+## 2.3 médio
+Q: Uma família quer comprar um carro com crédito e recebe uma oferta de CDC com o próprio carro como garantia.
+P: Nessa operação, até a quitação:
++ o carro fica alienado ao banco, que é o dono até o fim do contrato.
+- o carro é do cliente, e o banco não tem nenhuma garantia. || No CDC com alienação fiduciária, o bem é a garantia.
+- o carro fica guardado com o banco até a última parcela. || O cliente usa o bem normalmente.
+- o banco é dono do carro mesmo depois de quitado o contrato. || Quitado o contrato, a propriedade passa ao cliente.
+G: Na alienação fiduciária, o cliente usa o bem, mas a propriedade fica com o credor até a quitação. Com essa garantia, o CDC costuma ter juros menores e prazo maior que o crédito pessoal. Se o cliente não pagar, o bem pode ser retomado.
+D: Alienação fiduciária: o cliente usa; o credor é dono até quitar.
+
+## 2.3 médio
+Q: Um cliente quer comprar um imóvel daqui a 5 anos, não tem pressa e está avaliando um consórcio.
+P: Uma característica correta do consórcio é:
++ não ter juros, mas cobrar taxa de administração, com contemplação por sorteio ou lance.
+- ter juros iguais aos do financiamento imobiliário, com o imóvel entregue na hora. || Consórcio não tem juros, e a entrega depende da contemplação.
+- garantir a contemplação no primeiro mês para quem pagar a entrada. || Contemplação é por sorteio ou lance.
+- ser fiscalizado pela CVM, como os fundos imobiliários. || Consórcios são supervisionados pelo Banco Central.
+G: O consórcio é um grupo de pessoas que contribuem mensalmente para comprar um bem. Não há juros; há taxa de administração e, às vezes, fundo de reserva e seguro. A contemplação ocorre por sorteio ou lance. A supervisão é do Banco Central.
+D: Consórcio: sem juros, com taxa de administração; sorteio ou lance; Banco Central.
+
+## 2.4.1 fácil
+Q: Um cliente reclama que o banco cobra um pacote de tarifas que ele nunca pediu e pergunta o que tem direito a usar de graça.
+P: Na conta corrente, são serviços essenciais gratuitos, entre outros:
++ cartão de débito, 4 saques e 2 transferências entre contas da mesma instituição por mês.
+- cartão de crédito sem anuidade e saques ilimitados no caixa eletrônico. || Esses não estão entre os serviços essenciais gratuitos.
+- 10 saques, 10 transferências e talão de cheques todos os meses. || As quantidades gratuitas são menores.
+- todos os serviços do banco, porque é proibido cobrar tarifas. || É permitido cobrar tarifas além dos essenciais.
+G: Os serviços essenciais gratuitos incluem cartão de débito, 4 saques por mês, 2 transferências entre contas da mesma instituição, 2 extratos por mês e consultas pela internet, entre outros. O pacote de tarifas é opcional: o cliente pode ficar só com os essenciais.
+D: Essenciais grátis: débito, 4 saques, 2 transferências, 2 extratos por mês.
+
+## 2.4.1 médio
+Q: Uma cliente caiu em um golpe e fez um Pix para um fraudador. Ela pede ajuda ao banco no mesmo dia.
+P: O mecanismo do Pix que pode ajudar a recuperar o dinheiro é o:
++ MED, Mecanismo Especial de Devolução.
+- FGC, que devolve até R$ 250 mil por golpe. || O FGC cobre quebra de banco, não golpes.
+- Pix Automático, que cancela pagamentos recorrentes. || Pix Automático é para cobranças recorrentes autorizadas.
+- Pix Saque, que devolve o dinheiro em espécie. || Pix Saque é forma de sacar dinheiro no comércio.
+G: O MED permite bloquear e devolver valores de um Pix em casos de fraude ou falha operacional, desde que acionado rapidamente pelo cliente junto ao banco. O Pix é um arranjo do Banco Central, liquidado no SPI, 24 horas por dia.
+D: Golpe no Pix → acionar o MED o quanto antes.
+
+## 2.4.1 médio
+Q: O Banco Central aumenta a alíquota do depósito compulsório sobre os depósitos à vista.
+P: O efeito esperado sobre os bancos é:
++ menos dinheiro disponível para emprestar e crédito mais restrito.
+- mais dinheiro para emprestar, com queda dos juros do crédito. || Compulsório maior retém mais recursos no BC.
+- garantia maior do FGC para os depósitos à vista. || O compulsório não altera a cobertura do FGC.
+- fim da cobrança de tarifas nas contas correntes. || Não tem relação com tarifas.
+G: O compulsório é a parte dos depósitos que os bancos precisam manter no Banco Central. Elevá-lo reduz a liquidez e a capacidade de emprestar (política contracionista); reduzi-lo libera recursos para o crédito (expansionista).
+D: Compulsório sobe → menos crédito. Compulsório cai → mais crédito.
+
+## 2.4.2 médio
+Q: Um cliente vai fazer uma viagem e compara a compra de moeda estrangeira em duas casas de câmbio.
+P: Para comparar corretamente o custo das duas ofertas, ele deve usar o:
++ VET, que soma a taxa de câmbio, as tarifas e os tributos.
+- PTAX, porque é a taxa que as casas de câmbio cobram. || A PTAX é só referência; cada instituição cobra a sua taxa.
+- cupom cambial, que mede o custo da moeda para turistas. || Cupom cambial é juro em dólar, não custo de compra.
+- CET, que é usado em todas as operações de câmbio. || Em câmbio, o indicador de custo total é o VET.
+G: O VET (Valor Efetivo Total) mostra quanto custa cada unidade de moeda estrangeira, somando taxa de câmbio, tarifas e IOF. Câmbio só pode ser feito em instituição autorizada pelo Banco Central ou por seus correspondentes.
+D: Câmbio: compare pelo VET. PTAX é só referência.
+
+## 2.4.3 médio
+Q: Um investidor pessoa física aplica em um fundo nos Estados Unidos por meio de conta no exterior e tem rendimentos no ano.
+P: Pelas regras atuais (Lei 14.754/2023), esses rendimentos são tributados:
++ em 15%, apurados na declaração anual de IR.
+- pela tabela regressiva, com retenção na fonte no Brasil. || Não há retenção no Brasil; a apuração é anual.
+- em 27,5%, como salário, no carnê-leão mensal. || A lei fixou alíquota de 15% para esses rendimentos.
+- de forma isenta, porque o dinheiro está fora do país. || Rendimentos no exterior são tributados.
+G: A Lei 14.754/2023 estabeleceu que rendimentos de aplicações financeiras no exterior de pessoas físicas são tributados em 15%, apurados na declaração anual. A conta e os bens no exterior devem ser declarados em Bens e Direitos.
+D: Investimento no exterior (pessoa física): 15% na declaração anual.
+
+## 2.5 fácil
+Q: Um cliente bateu o carro e o conserto custou R$ 6 mil. A apólice prevê franquia de R$ 2 mil.
+P: Nesse sinistro parcial, a seguradora pagará:
++ R$ 4 mil, porque os R$ 2 mil da franquia ficam por conta do segurado.
+- R$ 6 mil, porque a franquia só vale para roubo. || A franquia vale para sinistros parciais.
+- R$ 2 mil, que é o valor da franquia contratada. || A franquia é a parte paga pelo segurado.
+- R$ 8 mil, somando o conserto e a franquia. || A franquia é descontada, não somada.
+G: Franquia é a parte do prejuízo que fica com o segurado em sinistros parciais. Aqui, 6 mil − 2 mil = 4 mil pagos pela seguradora. Em perda total ou roubo, em regra não há franquia, e a indenização segue o valor previsto na apólice.
+D: Franquia = parte do conserto paga pelo segurado.
+
+## 2.5 médio
+Q: Um cliente quer deixar dinheiro para os filhos caso morra, sem que o valor entre no inventário.
+P: Uma característica do seguro de vida que atende esse objetivo é:
++ o capital vai direto aos beneficiários indicados, fora do inventário e isento de IR.
+- o capital entra no inventário e é dividido por um juiz entre os herdeiros. || O seguro de vida não entra no inventário.
+- o capital só pode ser pago aos herdeiros previstos em lei, na ordem legal. || O beneficiário é de livre escolha.
+- o capital é pago só depois de concluído o inventário, com desconto de IR. || É pago direto e é isento de IR.
+G: No seguro de vida, o segurado indica livremente os beneficiários. O capital é pago diretamente a eles, não entra no inventário e é isento de IR, o que dá liquidez rápida para a família. Pode haver carência, principalmente para morte por doença.
+D: Seguro de vida: beneficiário livre, fora do inventário, isento de IR.
+
+## 2.5 médio
+Q: Um cliente refinanciou um empréstimo que tinha seguro prestamista. O contrato novo tem saldo e prazo diferentes.
+P: Em relação ao seguro prestamista, o correto é:
++ contratar uma nova cobertura ligada ao novo contrato, livremente, sem venda casada.
+- manter a apólice antiga, que passa a cobrir automaticamente o novo contrato. || O seguro está ligado ao contrato original.
+- cancelar o seguro, porque refinanciamentos não podem ter prestamista. || Refinanciamentos podem ter prestamista.
+- indicar os filhos como beneficiários do novo prestamista. || No prestamista, o beneficiário é o credor.
+G: O seguro prestamista quita a dívida (total ou parcialmente) se o devedor morrer ou ficar inválido; o beneficiário é o credor. Como está ligado a um contrato específico, o refinanciamento exige nova cobertura, de contratação livre: a venda casada é proibida.
+D: Prestamista: quita a dívida; beneficiário é o credor; sem venda casada.

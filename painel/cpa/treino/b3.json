@@ -1,0 +1,783 @@
+{
+"id": "T3",
+"titulo": "Treino do bloco 3",
+"q": [
+{
+"pd": "3.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Lia ganha R$ 6 mil líquidos por mês e gasta R$ 4 mil com as despesas da casa. Ela quer montar uma reserva de emergência de 6 meses.",
+"enunciado": "O valor-alvo dessa reserva é de:",
+"alt": [
+"R$ 36 mil, calculados sobre a renda mensal.",
+"R$ 24 mil, calculados sobre as despesas mensais.",
+"R$ 60 mil, somando renda e despesas.",
+"R$ 12 mil, calculados sobre a sobra mensal."
+],
+"certa": "B",
+"gabarito": "A reserva de emergência é dimensionada pelas despesas mensais × número de meses (em geral de 3 a 12, conforme a estabilidade da renda): 4 mil × 6 = 24 mil. Deve ficar em aplicação de liquidez diária e baixo risco.",
+"porque": {
+"A": "A reserva cobre despesas, não a renda.",
+"C": "Não se somam renda e despesas.",
+"D": "A sobra não é a base de cálculo da reserva."
+},
+"dica": "Reserva = despesas mensais × meses."
+},
+{
+"pd": "3.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Paulo é autônomo e tem renda que varia muito de um mês para outro. Ele pergunta quantos meses de reserva deveria ter.",
+"enunciado": "A orientação mais adequada é:",
+"alt": [
+"uma reserva menor, de 1 mês de renda, porque ele pode trabalhar mais.",
+"nenhuma reserva, investindo tudo em ações para crescer mais rápido.",
+"uma reserva aplicada em imóvel, que protege contra a inflação.",
+"uma reserva maior, de 6 a 12 meses de despesas, em ativos líquidos."
+],
+"certa": "D",
+"gabarito": "Quanto mais instável a renda, maior a reserva. Para autônomos, recomenda-se de 6 a 12 meses de despesas, em aplicações com liquidez diária e baixo risco (Tesouro Selic, CDB com liquidez diária, fundo DI barato).",
+"porque": {
+"A": "Renda instável pede reserva maior.",
+"B": "A reserva vem antes de investimentos de risco.",
+"C": "Imóvel não tem a liquidez necessária."
+},
+"dica": "Renda instável → reserva de 6 a 12 meses."
+},
+{
+"pd": "3.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente recebe salário fixo e, em alguns meses, bônus incertos. Ela também tem gastos sazonais, como IPVA e material escolar.",
+"enunciado": "Para calcular sua capacidade de poupança mensal, o mais prudente é:",
+"alt": [
+"usar o mês com maior renda do ano como referência.",
+"usar só o valor dos bônus, porque o salário vai todo para despesas.",
+"usar a renda recorrente, descontando despesas fixas e uma provisão mensal para as sazonais.",
+"usar a média da renda com os bônus, ignorando os gastos sazonais."
+],
+"certa": "C",
+"gabarito": "A capacidade de poupança deve ser calculada sobre a renda recorrente (certa), descontando as despesas fixas, a média das variáveis e uma provisão mensal para os gastos sazonais. Rendas incertas, como bônus, entram como reforço quando acontecem.",
+"porque": {
+"A": "O melhor mês superestima a capacidade de poupar.",
+"B": "A poupança deve vir da renda recorrente.",
+"D": "Bônus incertos não devem entrar na base, e sazonais devem ser provisionados."
+},
+"dica": "Poupança = renda recorrente − despesas (com provisão das sazonais)."
+},
+{
+"pd": "3.1.3.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente tem R$ 8 mil no rotativo do cartão e R$ 10 mil aplicados em um CDB que rende bem menos que os juros do cartão.",
+"enunciado": "A orientação mais adequada é:",
+"alt": [
+"usar parte da aplicação para quitar o rotativo, que é a dívida mais cara.",
+"manter a aplicação e pagar só o mínimo do cartão todo mês.",
+"tomar um cheque especial para pagar o cartão.",
+"investir os R$ 10 mil em ações para tentar ganhar mais que os juros."
+],
+"certa": "A",
+"gabarito": "Quando a dívida custa mais do que a aplicação rende, vale quitar a dívida. Rotativo do cartão e cheque especial são as linhas mais caras e devem ser eliminadas primeiro. Depois, recompõe-se a reserva.",
+"porque": {
+"B": "O rotativo custa muito mais do que o CDB rende.",
+"C": "Cheque especial também é caro; não resolve o problema.",
+"D": "Arriscar não compensa uma dívida tão cara."
+},
+"dica": "Dívida cara + dinheiro rendendo menos = quitar a dívida."
+},
+{
+"pd": "3.1.3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma família tem renda líquida de R$ 10 mil e soma R$ 4 mil em parcelas de empréstimos e financiamentos.",
+"enunciado": "Sobre o comprometimento de renda dessa família, é correto afirmar que:",
+"alt": [
+"não pode ser calculado sem saber o valor dos bens.",
+"está em 40%, acima do nível de alerta de cerca de 30%.",
+"está em 40%, que é o nível ideal recomendado.",
+"está em 25%, dentro de um nível confortável."
+],
+"certa": "B",
+"gabarito": "Comprometimento de renda = soma das parcelas ÷ renda líquida = 4 mil ÷ 10 mil = 40%. Acima de cerca de 30%, o orçamento fica apertado e qualquer imprevisto pode levar ao atraso. É hora de renegociar ou reduzir dívidas.",
+"porque": {
+"A": "Comprometimento = parcelas ÷ renda.",
+"C": "Acima de 30% já é sinal de alerta.",
+"D": "4 mil ÷ 10 mil = 40%."
+},
+"dica": "Comprometimento = parcelas ÷ renda líquida; acima de 30% é alerta."
+},
+{
+"pd": "3.1.3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente superendividado não consegue pagar as dívidas de consumo sem comprometer o básico da família.",
+"enunciado": "A Lei do Superendividamento (Lei 14.181) prevê:",
+"alt": [
+"a proibição de o cliente ter conta em banco por 5 anos.",
+"o perdão automático de todas as dívidas de consumo do cliente.",
+"a repactuação das dívidas, preservando o mínimo existencial do consumidor.",
+"a transferência das dívidas para o governo federal."
+],
+"certa": "C",
+"gabarito": "A Lei 14.181 permite ao consumidor superendividado repactuar suas dívidas em um plano de pagamento, com todos os credores, preservando o mínimo existencial (o necessário para viver). Também reforça deveres de informação e crédito responsável.",
+"porque": {
+"A": "A lei não prevê essa proibição.",
+"B": "Não há perdão automático.",
+"D": "As dívidas continuam com os credores."
+},
+"dica": "Superendividamento: repactuar preservando o mínimo existencial."
+},
+{
+"pd": "3.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente tem R$ 50 mil em aplicações com liquidez diária, uma casa onde mora e um carro. Suas despesas mensais são de R$ 5 mil.",
+"enunciado": "O índice de cobertura de despesas desse cliente é de:",
+"alt": [
+"10 meses, considerando só os ativos líquidos.",
+"mais de 100 meses, somando a casa e o carro.",
+"não pode ser calculado sem saber o valor das dívidas.",
+"5 meses, porque metade da aplicação deve ficar parada."
+],
+"certa": "A",
+"gabarito": "Cobertura de despesas = ativos líquidos ÷ despesas mensais = 50 mil ÷ 5 mil = 10 meses. Casa e carro de uso não entram, porque não podem ser usados para pagar contas sem perda grave de qualidade de vida.",
+"porque": {
+"B": "Bens de uso não entram no cálculo.",
+"C": "A cobertura usa ativos líquidos e despesas.",
+"D": "Usa-se todo o ativo líquido."
+},
+"dica": "Cobertura = ativos líquidos ÷ despesas mensais."
+},
+{
+"pd": "3.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente tem R$ 600 mil em bens e R$ 150 mil em dívidas.",
+"enunciado": "O patrimônio líquido e o índice de endividamento são, respectivamente:",
+"alt": [
+"R$ 450 mil e 75%.",
+"R$ 600 mil e 33%.",
+"R$ 750 mil e 25%.",
+"R$ 450 mil e 25%."
+],
+"certa": "D",
+"gabarito": "Patrimônio líquido = tudo o que tem − tudo o que deve = 600 − 150 = 450 mil. Endividamento = dívidas ÷ ativos = 150 ÷ 600 = 25%. Além do índice, é preciso olhar o custo de cada dívida.",
+"porque": {
+"A": "Endividamento = dívidas ÷ ativos = 25%.",
+"B": "O PL desconta as dívidas, e o endividamento é sobre os ativos.",
+"C": "Patrimônio líquido subtrai as dívidas."
+},
+"dica": "PL = ativos − dívidas. Endividamento = dívidas ÷ ativos."
+},
+{
+"pd": "3.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Bruno tem 24 anos, acabou de entrar no primeiro emprego e quer começar a investir.",
+"enunciado": "A fase do ciclo de vida financeiro de Bruno e o foco adequado são:",
+"alt": [
+"distribuição: viver da renda dos investimentos.",
+"preservação: proteger o patrimônio já formado.",
+"crescimento: ampliar e diversificar um patrimônio grande.",
+"acumulação: formar reserva e criar o hábito de investir."
+],
+"certa": "D",
+"gabarito": "Fases do ciclo de vida: acumulação (início da carreira, reserva e hábito de investir), crescimento ou consolidação (renda alta, ampliar e diversificar), preservação (perto da aposentadoria, proteger o patrimônio) e distribuição (viver da renda e planejar a sucessão).",
+"porque": {
+"A": "Distribuição é a fase de usufruir do patrimônio.",
+"B": "Preservação é típica de quem está perto da aposentadoria.",
+"C": "Bruno ainda está começando a acumular."
+},
+"dica": "Acumulação → crescimento → preservação → distribuição."
+},
+{
+"pd": "3.1.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um casal diz ao profissional que quer \"juntar dinheiro para o futuro\".",
+"enunciado": "Para transformar isso em uma meta de planejamento, o profissional deve:",
+"alt": [
+"definir valor, prazo e prioridade de cada objetivo do casal.",
+"adiar o planejamento até que o casal tenha mais renda.",
+"indicar logo o produto com maior rentabilidade dos últimos anos.",
+"sugerir que cada um invista sem conversar com o outro."
+],
+"certa": "A",
+"gabarito": "Uma meta bem definida é específica e mensurável, com valor, prazo e prioridade. O processo de planejamento segue: objetivos → diagnóstico (orçamento e balanço) → plano → implementação → monitoramento, revisando sempre que a vida mudar.",
+"porque": {
+"B": "Planejar cedo ajuda, mesmo com pouca renda.",
+"C": "Produto vem depois de definir o objetivo.",
+"D": "Metas comuns devem ser alinhadas pelo casal."
+},
+"dica": "Meta = valor + prazo + prioridade."
+},
+{
+"pd": "3.1.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente de 40 anos quer se aposentar aos 60 com renda de R$ 10 mil por mês. Ele espera receber R$ 4 mil do INSS.",
+"enunciado": "O primeiro cálculo do planejamento é:",
+"alt": [
+"o valor da aposentadoria do INSS, que define todo o plano.",
+"o déficit de R$ 6 mil por mês que precisa ser coberto pelos investimentos.",
+"a soma de R$ 14 mil por mês entre a renda desejada e o INSS.",
+"o valor total de R$ 10 mil por mês a ser coberto só pelos investimentos."
+],
+"certa": "B",
+"gabarito": "Na aposentadoria, calcula-se a renda desejada menos as fontes previstas (INSS, aluguéis etc.). O resultado é o déficit a ser coberto pelos investimentos. Depois, define-se o patrimônio necessário, considerando taxa real e expectativa de vida.",
+"porque": {
+"A": "O plano parte da renda desejada.",
+"C": "O INSS deve ser subtraído.",
+"D": "A renda do INSS reduz a necessidade."
+},
+"dica": "Déficit = renda desejada − fontes previstas."
+},
+{
+"pd": "3.1.6",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma cliente tem muitas despesas médicas, dois dependentes e contribui para um PGBL. Ela quer saber qual modelo de declaração usar.",
+"enunciado": "A orientação correta é:",
+"alt": [
+"usar sempre o simplificado, porque o desconto de 20% não tem limite.",
+"usar o completo só se a renda passar de R$ 1 milhão por ano.",
+"comparar os dois modelos; com muitas deduções, o completo tende a pagar menos imposto.",
+"usar sempre o simplificado, porque é obrigatório para quem tem PGBL."
+],
+"certa": "C",
+"gabarito": "A declaração completa permite deduzir despesas reais (saúde, educação, dependentes, PGBL até 12%, previdência oficial). A simplificada aplica desconto padrão de 20%, com teto. Deve-se escolher o modelo que resulta em menos imposto.",
+"porque": {
+"A": "O desconto simplificado tem teto.",
+"B": "A escolha não depende de faixa de renda.",
+"D": "Quem quer deduzir o PGBL precisa da declaração completa."
+},
+"dica": "Muitas deduções → completo. Poucas → simplificado."
+},
+{
+"pd": "3.1.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta onde declarar, no IR, o saldo da poupança, o rendimento de uma LCI e o rendimento de um CDB.",
+"enunciado": "A forma correta é:",
+"alt": [
+"saldos em Bens e Direitos; LCI em Exclusiva; CDB em Isentos.",
+"saldos em Bens e Direitos; LCI em Isentos; CDB em Tributação Exclusiva.",
+"saldos em Isentos; LCI e CDB em Bens e Direitos.",
+"todos os valores em Rendimentos Tributáveis, no ajuste anual."
+],
+"certa": "B",
+"gabarito": "Saldos de aplicações vão em Bens e Direitos. Rendimentos isentos (poupança, LCI, LCA, dividendos) vão em Rendimentos Isentos. Rendimentos com IR retido na fonte de forma definitiva (CDB, fundos, Tesouro, JCP) vão em Tributação Exclusiva.",
+"porque": {
+"A": "A LCI é isenta, e o CDB tem tributação exclusiva.",
+"C": "Saldos vão em Bens e Direitos.",
+"D": "Esses rendimentos não entram na tabela progressiva."
+},
+"dica": "Saldo = Bens e Direitos. Isento = Isentos. CDB/fundo = Exclusiva."
+},
+{
+"pd": "3.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente quer guardar dinheiro para dar entrada em um imóvel daqui a 3 anos, em data já definida.",
+"enunciado": "A estratégia mais adequada é:",
+"alt": [
+"ações de empresas de crescimento, que podem render mais.",
+"previdência privada, para aproveitar o benefício fiscal.",
+"poupança, porque é a aplicação que mais rende em 3 anos.",
+"renda fixa com vencimento próximo da data do objetivo."
+],
+"certa": "D",
+"gabarito": "Objetivo com data definida pede previsibilidade: renda fixa com vencimento casado com a data. Ativos voláteis podem estar em queda justamente quando o dinheiro for necessário. Previdência faz sentido para objetivos longos.",
+"porque": {
+"A": "Objetivo com data marcada não combina com ativo volátil.",
+"B": "Previdência é para longo prazo.",
+"C": "Poupança não é a que mais rende."
+},
+"dica": "Data marcada = renda fixa com vencimento casado."
+},
+{
+"pd": "3.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente diz que quer arriscar bastante para ganhar mais, mas depende de todo o dinheiro aplicado para pagar a faculdade do filho no ano que vem.",
+"enunciado": "O profissional deve considerar que:",
+"alt": [
+"a capacidade de assumir risco é baixa, e vale a menor entre capacidade e tolerância.",
+"a cliente deve ser classificada como arrojada, porque é o que ela deseja.",
+"a tolerância ao risco é alta, e isso basta para indicar renda variável.",
+"a faculdade deve ser paga com crédito estudantil para liberar os recursos."
+],
+"certa": "A",
+"gabarito": "Tolerância é querer arriscar; capacidade é poder arriscar sem comprometer objetivos. Quando o dinheiro tem destino próximo, a capacidade é baixa, e prevalece a menor das duas. A recomendação deve proteger o objetivo.",
+"porque": {
+"B": "O perfil considera objetivos e situação financeira.",
+"C": "A capacidade financeira limita o risco.",
+"D": "O dinheiro já tem um destino de curto prazo."
+},
+"dica": "Tolerância (querer) ≠ capacidade (poder). Vale a menor."
+},
+{
+"pd": "3.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um profissional autônomo, único provedor da família, tem reserva de 6 meses e quer saber se precisa de seguro.",
+"enunciado": "A orientação mais adequada é:",
+"alt": [
+"investir a reserva em ações e usar o lucro como seguro da família.",
+"trocar a reserva por um título de capitalização com sorteios mensais.",
+"contratar seguro de vida e de renda, pois a reserva não cobre morte ou invalidez.",
+"dispensar seguros, porque a reserva de 6 meses cobre qualquer situação da família."
+],
+"certa": "C",
+"gabarito": "A reserva cobre imprevistos pequenos e frequentes; o seguro cobre perdas grandes e improváveis, como morte ou invalidez. Para quem vive do próprio trabalho e sustenta a família, proteger a renda é parte do planejamento, logo depois da reserva.",
+"porque": {
+"A": "Ações não protegem a renda da família.",
+"B": "Capitalização não substitui reserva nem seguro.",
+"D": "Reserva cobre imprevistos pequenos, não perdas longas."
+},
+"dica": "Reserva = imprevisto pequeno. Seguro = perda grande."
+},
+{
+"pd": "3.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente prefere segurança e aceita pouca oscilação, mesmo que isso signifique retorno menor.",
+"enunciado": "Esse comportamento é típico do perfil:",
+"alt": [
+"conservador.",
+"qualificado.",
+"moderado.",
+"arrojado."
+],
+"certa": "A",
+"gabarito": "Os perfis mais usados são conservador (prioriza segurança e liquidez), moderado (equilíbrio) e arrojado (aceita mais oscilação por mais retorno potencial). O perfil resulta de objetivos, situação financeira e conhecimento.",
+"porque": {
+"B": "Qualificado é classificação por patrimônio, não perfil de risco.",
+"C": "O moderado busca equilíbrio entre segurança e retorno.",
+"D": "O arrojado aceita oscilação em busca de mais retorno."
+},
+"dica": "Conservador = segurança. Moderado = equilíbrio. Arrojado = mais risco."
+},
+{
+"pd": "3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta por que deveria diversificar se já investe em ações de três bancos diferentes.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"três ações diferentes já eliminam todo o risco da carteira.",
+"ações do mesmo setor oscilam juntas; diversificar exige baixa correlação.",
+"bancos não têm risco porque são fiscalizados pelo Banco Central.",
+"a diversificação só faz sentido para quem tem mais de R$ 1 milhão."
+],
+"certa": "B",
+"gabarito": "Diversificar reduz o risco específico de cada ativo, desde que os ativos tenham baixa correlação (setores, classes, emissores e indexadores diferentes). O risco sistemático, de mercado, continua. Investir no exterior reduz o risco-Brasil, mas acrescenta risco cambial.",
+"porque": {
+"A": "Diversificação reduz, mas não elimina o risco.",
+"C": "Ações de bancos oscilam como outras.",
+"D": "Serve para qualquer investidor."
+},
+"dica": "Diversificar = baixa correlação. Reduz o específico; o sistemático fica."
+},
+{
+"pd": "3.4.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pede para investir em um produto que, pelo seu perfil de suitability, é considerado inadequado.",
+"enunciado": "O profissional pode atender o pedido desde que:",
+"alt": [
+"convença o cliente a mudar as respostas do questionário de perfil.",
+"aplique o dinheiro e informe o cliente sobre o risco depois.",
+"alerte antes sobre a inadequação e obtenha a declaração expressa do cliente.",
+"reclassifique o cliente como arrojado, sem uma nova análise."
+],
+"certa": "C",
+"gabarito": "Investir fora do perfil não é proibido, mas exige alerta prévio sobre a inadequação e declaração expressa do cliente de que está ciente. Tudo deve ser documentado. Sem isso, a venda é irregular, com ou sem prejuízo.",
+"porque": {
+"A": "O questionário é do cliente; não se manipula.",
+"B": "O alerta deve ser prévio.",
+"D": "Não se muda o perfil para encaixar o produto."
+},
+"dica": "Fora do perfil: alertar antes + declaração expressa."
+},
+{
+"pd": "3.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O perfil de investidor de um cliente foi definido há 30 meses, e ele quer aplicar em um novo produto.",
+"enunciado": "Pelas regras, o profissional deve:",
+"alt": [
+"aplicar normalmente, porque o perfil vale por 5 anos.",
+"usar o perfil antigo, porque o cliente não informou mudanças.",
+"recusar qualquer aplicação até o cliente refazer o cadastro em cartório.",
+"atualizar o perfil, que deve ser revisto no máximo a cada 24 meses."
+],
+"certa": "D",
+"gabarito": "O perfil de investidor deve ser atualizado em intervalos de no máximo 24 meses e sempre que houver mudança relevante na vida do cliente. Com perfil vencido, a instituição deve alertar, colher declaração e atualizar antes de recomendar.",
+"porque": {
+"A": "O prazo máximo é de 24 meses.",
+"B": "O perfil vencido precisa ser atualizado.",
+"C": "Não há exigência de cartório."
+},
+"dica": "Perfil: atualizar no máximo a cada 24 meses."
+},
+{
+"pd": "3.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "A esposa de um cliente liga e pede ao profissional que responda o questionário de suitability no lugar do marido, dizendo que ele é arrojado.",
+"enunciado": "A conduta correta é:",
+"alt": [
+"usar o perfil já cadastrado da esposa para os dois.",
+"preencher o questionário com as respostas dadas pela esposa.",
+"explicar que o questionário deve ser respondido pelo próprio titular.",
+"marcar o perfil arrojado e pedir a assinatura do cliente depois."
+],
+"certa": "C",
+"gabarito": "O suitability é do titular dos recursos: o profissional pode explicar as perguntas, mas não responde pelo cliente nem aceita respostas de terceiros. Mesmo com procurador, o perfil analisado é o do titular.",
+"porque": {
+"A": "Cada titular tem seu próprio perfil.",
+"B": "O perfil é individual, do titular.",
+"D": "O profissional não responde pelo cliente."
+},
+"dica": "Suitability: é do titular. Ninguém responde por ele."
+},
+{
+"pd": "3.4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O banco lança uma campanha com bônus para quem vender um fundo da casa com taxa alta. Um cliente conservador procura o profissional.",
+"enunciado": "A conduta correta do profissional é:",
+"alt": [
+"esconder do cliente as taxas do fundo para facilitar a venda.",
+"dividir o bônus com o cliente para compensar a taxa alta.",
+"recomendar o fundo da campanha, porque a meta do banco vem primeiro.",
+"recomendar o que é adequado ao cliente, mesmo que não renda o bônus."
+],
+"certa": "D",
+"gabarito": "Incentivos atrelados a produtos podem distorcer a recomendação e geram conflito de interesses. O dever do profissional é recomendar o que é adequado ao perfil e aos objetivos do cliente, com transparência sobre custos e remuneração.",
+"porque": {
+"A": "Transparência sobre custos é obrigatória.",
+"B": "Isso não resolve a inadequação e é irregular.",
+"C": "O interesse do cliente vem antes da meta."
+},
+"dica": "Conflito de interesses: o interesse do cliente vem antes da meta."
+},
+{
+"pd": "3.4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "A irmã de um profissional vira cliente da carteira dele na instituição.",
+"enunciado": "A conduta correta do profissional é:",
+"alt": [
+"declarar o vínculo e seguir a política de conflitos de interesses da instituição.",
+"atender normalmente, sem informar ninguém, porque não há conflito com parentes.",
+"dar à irmã condições melhores que aos demais clientes.",
+"operar a conta da irmã com a senha dela, para agilizar."
+],
+"certa": "A",
+"gabarito": "Relações pessoais com clientes podem gerar conflito de interesses, real ou potencial. O profissional deve declarar o vínculo, seguir a política da instituição (que pode exigir abstenção) e tratar todos os clientes com equidade.",
+"porque": {
+"B": "Vínculo familiar pode gerar conflito e deve ser declarado.",
+"C": "Os clientes devem ser tratados de forma igual.",
+"D": "Nunca se opera com a senha do cliente."
+},
+"dica": "Parente cliente: declarar o vínculo e seguir a política."
+},
+{
+"pd": "3.4.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente satisfeito oferece ao profissional uma viagem de alto valor como agradecimento.",
+"enunciado": "A conduta correta é:",
+"alt": [
+"aceitar e oferecer ao cliente uma taxa menor em troca.",
+"recusar o presente e comunicar o compliance.",
+"aceitar, porque o presente foi espontâneo.",
+"aceitar desde que a viagem seja nas férias."
+],
+"certa": "B",
+"gabarito": "Presentes e benefícios acima de um valor simbólico podem comprometer a independência do profissional. A conduta é recusar e informar o compliance, conforme a política da instituição.",
+"porque": {
+"A": "Isso agrava o conflito de interesses.",
+"C": "Presentes acima do simbólico geram conflito.",
+"D": "O problema é o valor, não a data."
+},
+"dica": "Presente acima do simbólico: recusar e comunicar o compliance."
+},
+{
+"pd": "3.4.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um profissional certificado quer divulgar em sua rede social pessoal um investimento que \"rende 3% ao mês garantido\".",
+"enunciado": "À luz do Código de Ética da Anbima, essa publicação:",
+"alt": [
+"é permitida, porque foi feita em perfil pessoal e fora do expediente.",
+"é obrigatória, para dar transparência sobre os produtos aos clientes.",
+"é permitida, desde que o investimento seja da própria instituição.",
+"é inadequada: promete retorno, e o código vale também nas redes pessoais."
+],
+"certa": "D",
+"gabarito": "O Código de Ética exige integridade, transparência, diligência e lealdade. Prometer rentabilidade é vedado, e a conduta do profissional certificado deve seguir esses princípios também em canais pessoais, como redes sociais.",
+"porque": {
+"A": "O código vale também nas redes pessoais.",
+"B": "Promessa de retorno não é transparência.",
+"C": "Prometer rentabilidade é vedado em qualquer caso."
+},
+"dica": "Nunca prometer retorno, nem nas redes pessoais."
+},
+{
+"pd": "3.4.4",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma falha no sistema de uma corretora impediu clientes de enviar ordens durante uma manhã inteira.",
+"enunciado": "Essa ocorrência é um exemplo de risco:",
+"alt": [
+"operacional.",
+"legal.",
+"de mercado.",
+"de crédito."
+],
+"certa": "A",
+"gabarito": "Risco operacional é o de perdas por falhas de pessoas, processos, sistemas ou eventos externos (incluindo fraudes internas e desastres). Plano de continuidade, redundância e segregação de funções ajudam a reduzi-lo.",
+"porque": {
+"B": "Risco legal envolve contratos e processos.",
+"C": "Risco de mercado é oscilação de preços.",
+"D": "Risco de crédito é calote."
+},
+"dica": "Falha de pessoas, processos ou sistemas = risco operacional."
+},
+{
+"pd": "3.4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma instituição foi multada pela CVM por descumprir uma norma, e depois saiu uma reportagem negativa que fez clientes saírem.",
+"enunciado": "Os riscos envolvidos, nessa ordem, são:",
+"alt": [
+"legal (multa) e operacional (saída de clientes).",
+"de mercado (multa) e de liquidez (saída de clientes).",
+"regulatório (multa) e de imagem (saída de clientes).",
+"operacional (multa) e de crédito (saída de clientes)."
+],
+"certa": "C",
+"gabarito": "Risco regulatório: punição por descumprir normas do regulador. Risco legal: processos judiciais e contratos mal feitos. Risco de imagem (reputacional): perda de confiança e de clientes por notícias negativas. Risco operacional: falhas internas.",
+"porque": {
+"A": "Processo judicial é legal; multa do regulador, regulatório.",
+"B": "Não houve oscilação de preços.",
+"D": "Multa de regulador é risco regulatório; perda por notícia, de imagem."
+},
+"dica": "Multa = regulatório. Processo = legal. Notícia ruim = imagem."
+},
+{
+"pd": "3.4.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um treinamento de prevenção à lavagem de dinheiro apresenta as etapas usadas pelos criminosos.",
+"enunciado": "A ordem correta das etapas da lavagem é:",
+"alt": [
+"integração, colocação e ocultação.",
+"colocação, ocultação e integração.",
+"colocação, integração e ocultação.",
+"ocultação, colocação e integração."
+],
+"certa": "B",
+"gabarito": "Colocação: o dinheiro ilícito entra no sistema (depósitos fracionados, compras). Ocultação: movimentações para apagar a origem (transferências em camadas). Integração: o dinheiro volta com aparência legal (investimentos, empresas). Lavagem é crime, com pena de 3 a 10 anos.",
+"porque": {
+"A": "A integração é a última etapa.",
+"C": "A ocultação vem antes da integração.",
+"D": "O dinheiro primeiro entra no sistema (colocação)."
+},
+"dica": "Lavagem: colocação → ocultação → integração."
+},
+{
+"pd": "3.4.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa quer abrir conta em uma instituição. O cadastro mostra que ela é controlada por outra empresa, sediada no exterior.",
+"enunciado": "Pelas regras de \"conheça seu cliente\", a instituição deve:",
+"alt": [
+"pedir apenas o contrato social da empresa estrangeira.",
+"identificar o beneficiário final, a pessoa física que controla a empresa.",
+"recusar a conta, porque empresas estrangeiras são proibidas.",
+"abrir a conta só com os dados da empresa brasileira."
+],
+"certa": "B",
+"gabarito": "Pelo KYC (conheça seu cliente), quando o cliente é pessoa jurídica, a instituição deve identificar o beneficiário final, ou seja, a pessoa física que controla ou se beneficia dela. A diligência deve ser maior conforme o risco.",
+"porque": {
+"A": "O objetivo é identificar quem controla de fato.",
+"C": "Não há proibição geral.",
+"D": "É preciso chegar à pessoa física por trás."
+},
+"dica": "Empresa cliente: descobrir o beneficiário final."
+},
+{
+"pd": "3.4.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um novo cliente é deputado federal e quer abrir conta de investimentos.",
+"enunciado": "Por ser pessoa exposta politicamente (PEP), o cliente:",
+"alt": [
+"pode ser atendido, com diligência reforçada e verificação da origem dos recursos.",
+"não pode ser atendido por nenhuma instituição financeira.",
+"dispensa o cadastro completo, por ser autoridade pública.",
+"deve ser comunicado ao COAF logo na abertura da conta."
+],
+"certa": "A",
+"gabarito": "PEP é quem exerce ou exerceu cargos públicos relevantes (e seus familiares e associados próximos). Não é proibido nem suspeito por si só, mas exige diligência reforçada, monitoramento mais atento e verificação da origem dos recursos.",
+"porque": {
+"B": "Não há proibição de atender PEP.",
+"C": "PEP exige controles mais rigorosos.",
+"D": "Ser PEP não é, por si só, motivo de comunicação."
+},
+"dica": "PEP: pode, mas com diligência reforçada."
+},
+{
+"pd": "3.4.6",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "O profissional identifica movimentações incompatíveis com a renda de um cliente e suspeita de lavagem de dinheiro.",
+"enunciado": "A conduta correta é:",
+"alt": [
+"ignorar o caso, porque o cliente é antigo e sempre foi bom pagador.",
+"encerrar a conta imediatamente e devolver todos os recursos ao cliente.",
+"levar à área responsável para análise e comunicação ao COAF, sem avisar o cliente.",
+"avisar o cliente para que ele explique a situação antes de qualquer comunicação."
+],
+"certa": "C",
+"gabarito": "Indícios de lavagem devem seguir o fluxo interno e, se confirmados como suspeitos, ser comunicados ao COAF. É proibido avisar o cliente (tipping-off). A comunicação de boa-fé não quebra o sigilo bancário (LC 105).",
+"porque": {
+"A": "Indícios devem ser analisados sempre.",
+"B": "O procedimento é analisar e comunicar.",
+"D": "Avisar o cliente é proibido (tipping-off)."
+},
+"dica": "Suspeita → comunica ao COAF, sem avisar o cliente."
+},
+{
+"pd": "3.4.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente faz um saque de R$ 60 mil em espécie, com justificativa coerente e renda compatível.",
+"enunciado": "Sobre a comunicação ao COAF, é correto afirmar que:",
+"alt": [
+"a comunicação só ocorre se o saque em espécie passar de R$ 100 mil.",
+"não há comunicação, porque a operação não é considerada suspeita.",
+"o cliente precisa autorizar por escrito a comunicação ao COAF.",
+"operação em espécie a partir de R$ 50 mil é comunicada mesmo sem suspeita."
+],
+"certa": "D",
+"gabarito": "Operações em espécie a partir de R$ 50 mil (saques, depósitos, provisionamentos) são comunicadas ao COAF de forma automática, independentemente de suspeita. Já as operações suspeitas são comunicadas por análise, em qualquer valor.",
+"porque": {
+"A": "O limite é R$ 50 mil.",
+"B": "Operações em espécie acima do limite são comunicadas mesmo sem suspeita.",
+"C": "A comunicação é obrigação legal, sem autorização."
+},
+"dica": "Espécie a partir de R$ 50 mil = comunicação automática ao COAF."
+},
+{
+"pd": "3.4.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma instituição usa dados de saúde de clientes para oferecer seguros.",
+"enunciado": "Pela LGPD, esses dados:",
+"alt": [
+"podem ser vendidos a parceiros sem informar os titulares.",
+"deixam de ser protegidos depois de 5 anos.",
+"são dados financeiros comuns, sem regras especiais.",
+"são dados sensíveis e exigem proteção reforçada e base legal específica."
+],
+"certa": "D",
+"gabarito": "A LGPD classifica como sensíveis os dados sobre origem racial, religião, opinião política, filiação sindical, saúde, vida sexual, dados genéticos e biométricos. Eles exigem proteção maior e bases legais específicas. Dado financeiro não é sensível, mas é protegido por sigilo.",
+"porque": {
+"A": "O compartilhamento exige base legal e transparência.",
+"B": "Não há essa regra.",
+"C": "Dados de saúde são sensíveis."
+},
+"dica": "Saúde, biometria e religião são sensíveis. Financeiro não."
+},
+{
+"pd": "3.4.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma pessoa liga dizendo ser do banco e pede o código recebido por SMS para \"cancelar uma compra suspeita\".",
+"enunciado": "A orientação correta ao cliente é:",
+"alt": [
+"desligar e ligar no canal oficial; banco não pede senha nem código.",
+"informar o código, porque o banco precisa dele para cancelar a compra.",
+"passar o código e trocar a senha do aplicativo depois.",
+"informar só metade do código, por segurança, e aguardar."
+],
+"certa": "A",
+"gabarito": "Bancos não pedem senhas, códigos de verificação ou transferências por telefone, mensagem ou e-mail. Diante de pedido urgente, o cliente deve desligar e confirmar pelo canal oficial. Links urgentes pedindo dados são phishing.",
+"porque": {
+"B": "Banco não pede código por telefone.",
+"C": "Passar o código já permite o golpe.",
+"D": "Nenhuma parte do código deve ser passada."
+},
+"dica": "Banco não pede senha nem código. Use o canal oficial."
+},
+{
+"pd": "3.4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um diretor de uma companhia aberta sabe que a empresa vai anunciar um lucro recorde e conta a um amigo, que compra ações antes do anúncio.",
+"enunciado": "A conduta do amigo é:",
+"alt": [
+"front running, porque passou na frente das ordens de clientes.",
+"manipulação de mercado por criação de volume artificial.",
+"uso de informação privilegiada (insider secundário).",
+"legítima, porque o amigo não trabalha na empresa."
+],
+"certa": "C",
+"gabarito": "Usar ou repassar informação relevante ainda não divulgada para negociar é crime (Lei 6.385, art. 27-D). O diretor é insider primário (teve acesso pelo cargo); o amigo é insider secundário (recebeu de quem tinha acesso). O simples repasse já é ilícito.",
+"porque": {
+"A": "Front running envolve ordens de clientes.",
+"B": "Não houve volume artificial.",
+"D": "Vale para qualquer pessoa que use informação relevante não divulgada."
+},
+"dica": "Informação relevante não divulgada: não negociar nem repassar."
+},
+{
+"pd": "3.4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um assessor faz várias compras e vendas na conta de um cliente, sem necessidade, só para gerar corretagem.",
+"enunciado": "Essa prática é chamada de:",
+"alt": [
+"front running.",
+"churning.",
+"money pass.",
+"spoofing."
+],
+"certa": "B",
+"gabarito": "Churning é girar excessivamente a carteira do cliente para gerar corretagem e remuneração, sem benefício para ele. O profissional que identifica indícios deve reportar ao compliance. Monitorar giro e custos desproporcionais ajuda a detectar a prática.",
+"porque": {
+"A": "Front running é operar antes da ordem do cliente.",
+"C": "Money pass é passar dinheiro entre contas com negócios artificiais.",
+"D": "Spoofing são ofertas falsas para mexer no preço."
+},
+"dica": "Churning = girar a carteira do cliente para gerar corretagem."
+},
+{
+"pd": "3.4.7",
+"dif": "Difícil",
+"nivel": "",
+"contexto": "Um operador coloca ofertas grandes de compra que não pretende executar, para fazer o preço subir, e as cancela antes de serem fechadas.",
+"enunciado": "Essa prática é chamada de:",
+"alt": [
+"insider trading, porque usa informação privilegiada.",
+"spoofing, uma forma de manipulação de mercado.",
+"money pass, porque transfere dinheiro entre contas.",
+"churning, porque gera corretagem ao operador."
+],
+"certa": "B",
+"gabarito": "Spoofing é colocar ofertas de fachada para induzir outros investidores e mexer no preço, cancelando-as antes da execução. Layering é a versão com várias camadas de ofertas falsas. As duas são manipulação de mercado (art. 27-C, reclusão de 1 a 8 anos).",
+"porque": {
+"A": "Não há informação privilegiada.",
+"C": "Não há transferência entre contas.",
+"D": "Churning envolve a conta de um cliente."
+},
+"dica": "Spoofing = oferta de fachada para mexer no preço."
+}
+]
+}

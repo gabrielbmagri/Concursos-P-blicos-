@@ -1,0 +1,369 @@
+## 3.1.3 fácil
+Q: Lia ganha R$ 6 mil líquidos por mês e gasta R$ 4 mil com as despesas da casa. Ela quer montar uma reserva de emergência de 6 meses.
+P: O valor-alvo dessa reserva é de:
++ R$ 24 mil, calculados sobre as despesas mensais.
+- R$ 36 mil, calculados sobre a renda mensal. || A reserva cobre despesas, não a renda.
+- R$ 12 mil, calculados sobre a sobra mensal. || A sobra não é a base de cálculo da reserva.
+- R$ 60 mil, somando renda e despesas. || Não se somam renda e despesas.
+G: A reserva de emergência é dimensionada pelas despesas mensais × número de meses (em geral de 3 a 12, conforme a estabilidade da renda): 4 mil × 6 = 24 mil. Deve ficar em aplicação de liquidez diária e baixo risco.
+D: Reserva = despesas mensais × meses.
+
+## 3.1.3 fácil
+Q: Paulo é autônomo e tem renda que varia muito de um mês para outro. Ele pergunta quantos meses de reserva deveria ter.
+P: A orientação mais adequada é:
++ uma reserva maior, de 6 a 12 meses de despesas, em ativos líquidos.
+- uma reserva menor, de 1 mês de renda, porque ele pode trabalhar mais. || Renda instável pede reserva maior.
+- nenhuma reserva, investindo tudo em ações para crescer mais rápido. || A reserva vem antes de investimentos de risco.
+- uma reserva aplicada em imóvel, que protege contra a inflação. || Imóvel não tem a liquidez necessária.
+G: Quanto mais instável a renda, maior a reserva. Para autônomos, recomenda-se de 6 a 12 meses de despesas, em aplicações com liquidez diária e baixo risco (Tesouro Selic, CDB com liquidez diária, fundo DI barato).
+D: Renda instável → reserva de 6 a 12 meses.
+
+## 3.1.3 médio
+Q: Uma cliente recebe salário fixo e, em alguns meses, bônus incertos. Ela também tem gastos sazonais, como IPVA e material escolar.
+P: Para calcular sua capacidade de poupança mensal, o mais prudente é:
++ usar a renda recorrente, descontando despesas fixas e uma provisão mensal para as sazonais.
+- usar a média da renda com os bônus, ignorando os gastos sazonais. || Bônus incertos não devem entrar na base, e sazonais devem ser provisionados.
+- usar o mês com maior renda do ano como referência. || O melhor mês superestima a capacidade de poupar.
+- usar só o valor dos bônus, porque o salário vai todo para despesas. || A poupança deve vir da renda recorrente.
+G: A capacidade de poupança deve ser calculada sobre a renda recorrente (certa), descontando as despesas fixas, a média das variáveis e uma provisão mensal para os gastos sazonais. Rendas incertas, como bônus, entram como reforço quando acontecem.
+D: Poupança = renda recorrente − despesas (com provisão das sazonais).
+
+## 3.1.3.3 fácil
+Q: Um cliente tem R$ 8 mil no rotativo do cartão e R$ 10 mil aplicados em um CDB que rende bem menos que os juros do cartão.
+P: A orientação mais adequada é:
++ usar parte da aplicação para quitar o rotativo, que é a dívida mais cara.
+- manter a aplicação e pagar só o mínimo do cartão todo mês. || O rotativo custa muito mais do que o CDB rende.
+- tomar um cheque especial para pagar o cartão. || Cheque especial também é caro; não resolve o problema.
+- investir os R$ 10 mil em ações para tentar ganhar mais que os juros. || Arriscar não compensa uma dívida tão cara.
+G: Quando a dívida custa mais do que a aplicação rende, vale quitar a dívida. Rotativo do cartão e cheque especial são as linhas mais caras e devem ser eliminadas primeiro. Depois, recompõe-se a reserva.
+D: Dívida cara + dinheiro rendendo menos = quitar a dívida.
+
+## 3.1.3.3 médio
+Q: Uma família tem renda líquida de R$ 10 mil e soma R$ 4 mil em parcelas de empréstimos e financiamentos.
+P: Sobre o comprometimento de renda dessa família, é correto afirmar que:
++ está em 40%, acima do nível de alerta de cerca de 30%.
+- está em 25%, dentro de um nível confortável. || 4 mil ÷ 10 mil = 40%.
+- está em 40%, que é o nível ideal recomendado. || Acima de 30% já é sinal de alerta.
+- não pode ser calculado sem saber o valor dos bens. || Comprometimento = parcelas ÷ renda.
+G: Comprometimento de renda = soma das parcelas ÷ renda líquida = 4 mil ÷ 10 mil = 40%. Acima de cerca de 30%, o orçamento fica apertado e qualquer imprevisto pode levar ao atraso. É hora de renegociar ou reduzir dívidas.
+D: Comprometimento = parcelas ÷ renda líquida; acima de 30% é alerta.
+
+## 3.1.3.3 médio
+Q: Um cliente superendividado não consegue pagar as dívidas de consumo sem comprometer o básico da família.
+P: A Lei do Superendividamento (Lei 14.181) prevê:
++ a repactuação das dívidas, preservando o mínimo existencial do consumidor.
+- o perdão automático de todas as dívidas de consumo do cliente. || Não há perdão automático.
+- a proibição de o cliente ter conta em banco por 5 anos. || A lei não prevê essa proibição.
+- a transferência das dívidas para o governo federal. || As dívidas continuam com os credores.
+G: A Lei 14.181 permite ao consumidor superendividado repactuar suas dívidas em um plano de pagamento, com todos os credores, preservando o mínimo existencial (o necessário para viver). Também reforça deveres de informação e crédito responsável.
+D: Superendividamento: repactuar preservando o mínimo existencial.
+
+## 3.1.4 médio
+Q: Um cliente tem R$ 50 mil em aplicações com liquidez diária, uma casa onde mora e um carro. Suas despesas mensais são de R$ 5 mil.
+P: O índice de cobertura de despesas desse cliente é de:
++ 10 meses, considerando só os ativos líquidos.
+- 5 meses, porque metade da aplicação deve ficar parada. || Usa-se todo o ativo líquido.
+- mais de 100 meses, somando a casa e o carro. || Bens de uso não entram no cálculo.
+- não pode ser calculado sem saber o valor das dívidas. || A cobertura usa ativos líquidos e despesas.
+G: Cobertura de despesas = ativos líquidos ÷ despesas mensais = 50 mil ÷ 5 mil = 10 meses. Casa e carro de uso não entram, porque não podem ser usados para pagar contas sem perda grave de qualidade de vida.
+D: Cobertura = ativos líquidos ÷ despesas mensais.
+
+## 3.1.4 médio
+Q: Um cliente tem R$ 600 mil em bens e R$ 150 mil em dívidas.
+P: O patrimônio líquido e o índice de endividamento são, respectivamente:
++ R$ 450 mil e 25%.
+- R$ 750 mil e 25%. || Patrimônio líquido subtrai as dívidas.
+- R$ 450 mil e 75%. || Endividamento = dívidas ÷ ativos = 25%.
+- R$ 600 mil e 33%. || O PL desconta as dívidas, e o endividamento é sobre os ativos.
+G: Patrimônio líquido = tudo o que tem − tudo o que deve = 600 − 150 = 450 mil. Endividamento = dívidas ÷ ativos = 150 ÷ 600 = 25%. Além do índice, é preciso olhar o custo de cada dívida.
+D: PL = ativos − dívidas. Endividamento = dívidas ÷ ativos.
+
+## 3.1.1 fácil
+Q: Bruno tem 24 anos, acabou de entrar no primeiro emprego e quer começar a investir.
+P: A fase do ciclo de vida financeiro de Bruno e o foco adequado são:
++ acumulação: formar reserva e criar o hábito de investir.
+- preservação: proteger o patrimônio já formado. || Preservação é típica de quem está perto da aposentadoria.
+- distribuição: viver da renda dos investimentos. || Distribuição é a fase de usufruir do patrimônio.
+- crescimento: ampliar e diversificar um patrimônio grande. || Bruno ainda está começando a acumular.
+G: Fases do ciclo de vida: acumulação (início da carreira, reserva e hábito de investir), crescimento ou consolidação (renda alta, ampliar e diversificar), preservação (perto da aposentadoria, proteger o patrimônio) e distribuição (viver da renda e planejar a sucessão).
+D: Acumulação → crescimento → preservação → distribuição.
+
+## 3.1.5 fácil
+Q: Um casal diz ao profissional que quer "juntar dinheiro para o futuro".
+P: Para transformar isso em uma meta de planejamento, o profissional deve:
++ definir valor, prazo e prioridade de cada objetivo do casal.
+- indicar logo o produto com maior rentabilidade dos últimos anos. || Produto vem depois de definir o objetivo.
+- sugerir que cada um invista sem conversar com o outro. || Metas comuns devem ser alinhadas pelo casal.
+- adiar o planejamento até que o casal tenha mais renda. || Planejar cedo ajuda, mesmo com pouca renda.
+G: Uma meta bem definida é específica e mensurável, com valor, prazo e prioridade. O processo de planejamento segue: objetivos → diagnóstico (orçamento e balanço) → plano → implementação → monitoramento, revisando sempre que a vida mudar.
+D: Meta = valor + prazo + prioridade.
+
+## 3.1.5 médio
+Q: Um cliente de 40 anos quer se aposentar aos 60 com renda de R$ 10 mil por mês. Ele espera receber R$ 4 mil do INSS.
+P: O primeiro cálculo do planejamento é:
++ o déficit de R$ 6 mil por mês que precisa ser coberto pelos investimentos.
+- o valor total de R$ 10 mil por mês a ser coberto só pelos investimentos. || A renda do INSS reduz a necessidade.
+- a soma de R$ 14 mil por mês entre a renda desejada e o INSS. || O INSS deve ser subtraído.
+- o valor da aposentadoria do INSS, que define todo o plano. || O plano parte da renda desejada.
+G: Na aposentadoria, calcula-se a renda desejada menos as fontes previstas (INSS, aluguéis etc.). O resultado é o déficit a ser coberto pelos investimentos. Depois, define-se o patrimônio necessário, considerando taxa real e expectativa de vida.
+D: Déficit = renda desejada − fontes previstas.
+
+## 3.1.6 fácil
+Q: Uma cliente tem muitas despesas médicas, dois dependentes e contribui para um PGBL. Ela quer saber qual modelo de declaração usar.
+P: A orientação correta é:
++ comparar os dois modelos; com muitas deduções, o completo tende a pagar menos imposto.
+- usar sempre o simplificado, porque é obrigatório para quem tem PGBL. || Quem quer deduzir o PGBL precisa da declaração completa.
+- usar o completo só se a renda passar de R$ 1 milhão por ano. || A escolha não depende de faixa de renda.
+- usar sempre o simplificado, porque o desconto de 20% não tem limite. || O desconto simplificado tem teto.
+G: A declaração completa permite deduzir despesas reais (saúde, educação, dependentes, PGBL até 12%, previdência oficial). A simplificada aplica desconto padrão de 20%, com teto. Deve-se escolher o modelo que resulta em menos imposto.
+D: Muitas deduções → completo. Poucas → simplificado.
+
+## 3.1.6 médio
+Q: Um cliente pergunta onde declarar, no IR, o saldo da poupança, o rendimento de uma LCI e o rendimento de um CDB.
+P: A forma correta é:
++ saldos em Bens e Direitos; LCI em Isentos; CDB em Tributação Exclusiva.
+- todos os valores em Rendimentos Tributáveis, no ajuste anual. || Esses rendimentos não entram na tabela progressiva.
+- saldos em Isentos; LCI e CDB em Bens e Direitos. || Saldos vão em Bens e Direitos.
+- saldos em Bens e Direitos; LCI em Exclusiva; CDB em Isentos. || A LCI é isenta, e o CDB tem tributação exclusiva.
+G: Saldos de aplicações vão em Bens e Direitos. Rendimentos isentos (poupança, LCI, LCA, dividendos) vão em Rendimentos Isentos. Rendimentos com IR retido na fonte de forma definitiva (CDB, fundos, Tesouro, JCP) vão em Tributação Exclusiva.
+D: Saldo = Bens e Direitos. Isento = Isentos. CDB/fundo = Exclusiva.
+
+## 3.2 fácil
+Q: Um cliente quer guardar dinheiro para dar entrada em um imóvel daqui a 3 anos, em data já definida.
+P: A estratégia mais adequada é:
++ renda fixa com vencimento próximo da data do objetivo.
+- ações de empresas de crescimento, que podem render mais. || Objetivo com data marcada não combina com ativo volátil.
+- previdência privada, para aproveitar o benefício fiscal. || Previdência é para longo prazo.
+- poupança, porque é a aplicação que mais rende em 3 anos. || Poupança não é a que mais rende.
+G: Objetivo com data definida pede previsibilidade: renda fixa com vencimento casado com a data. Ativos voláteis podem estar em queda justamente quando o dinheiro for necessário. Previdência faz sentido para objetivos longos.
+D: Data marcada = renda fixa com vencimento casado.
+
+## 3.2 médio
+Q: Uma cliente diz que quer arriscar bastante para ganhar mais, mas depende de todo o dinheiro aplicado para pagar a faculdade do filho no ano que vem.
+P: O profissional deve considerar que:
++ a capacidade de assumir risco é baixa, e vale a menor entre capacidade e tolerância.
+- a tolerância ao risco é alta, e isso basta para indicar renda variável. || A capacidade financeira limita o risco.
+- a cliente deve ser classificada como arrojada, porque é o que ela deseja. || O perfil considera objetivos e situação financeira.
+- a faculdade deve ser paga com crédito estudantil para liberar os recursos. || O dinheiro já tem um destino de curto prazo.
+G: Tolerância é querer arriscar; capacidade é poder arriscar sem comprometer objetivos. Quando o dinheiro tem destino próximo, a capacidade é baixa, e prevalece a menor das duas. A recomendação deve proteger o objetivo.
+D: Tolerância (querer) ≠ capacidade (poder). Vale a menor.
+
+## 3.2 médio
+Q: Um profissional autônomo, único provedor da família, tem reserva de 6 meses e quer saber se precisa de seguro.
+P: A orientação mais adequada é:
++ contratar seguro de vida e de renda, pois a reserva não cobre morte ou invalidez.
+- dispensar seguros, porque a reserva de 6 meses cobre qualquer situação da família. || Reserva cobre imprevistos pequenos, não perdas longas.
+- trocar a reserva por um título de capitalização com sorteios mensais. || Capitalização não substitui reserva nem seguro.
+- investir a reserva em ações e usar o lucro como seguro da família. || Ações não protegem a renda da família.
+G: A reserva cobre imprevistos pequenos e frequentes; o seguro cobre perdas grandes e improváveis, como morte ou invalidez. Para quem vive do próprio trabalho e sustenta a família, proteger a renda é parte do planejamento, logo depois da reserva.
+D: Reserva = imprevisto pequeno. Seguro = perda grande.
+
+## 3.3 fácil
+Q: Um cliente prefere segurança e aceita pouca oscilação, mesmo que isso signifique retorno menor.
+P: Esse comportamento é típico do perfil:
++ conservador.
+- arrojado. || O arrojado aceita oscilação em busca de mais retorno.
+- moderado. || O moderado busca equilíbrio entre segurança e retorno.
+- qualificado. || Qualificado é classificação por patrimônio, não perfil de risco.
+G: Os perfis mais usados são conservador (prioriza segurança e liquidez), moderado (equilíbrio) e arrojado (aceita mais oscilação por mais retorno potencial). O perfil resulta de objetivos, situação financeira e conhecimento.
+D: Conservador = segurança. Moderado = equilíbrio. Arrojado = mais risco.
+
+## 3.3 médio
+Q: Um cliente pergunta por que deveria diversificar se já investe em ações de três bancos diferentes.
+P: O profissional explica corretamente que:
++ ações do mesmo setor oscilam juntas; diversificar exige baixa correlação.
+- três ações diferentes já eliminam todo o risco da carteira. || Diversificação reduz, mas não elimina o risco.
+- a diversificação só faz sentido para quem tem mais de R$ 1 milhão. || Serve para qualquer investidor.
+- bancos não têm risco porque são fiscalizados pelo Banco Central. || Ações de bancos oscilam como outras.
+G: Diversificar reduz o risco específico de cada ativo, desde que os ativos tenham baixa correlação (setores, classes, emissores e indexadores diferentes). O risco sistemático, de mercado, continua. Investir no exterior reduz o risco-Brasil, mas acrescenta risco cambial.
+D: Diversificar = baixa correlação. Reduz o específico; o sistemático fica.
+
+## 3.4.2 fácil
+Q: Um cliente pede para investir em um produto que, pelo seu perfil de suitability, é considerado inadequado.
+P: O profissional pode atender o pedido desde que:
++ alerte antes sobre a inadequação e obtenha a declaração expressa do cliente.
+- convença o cliente a mudar as respostas do questionário de perfil. || O questionário é do cliente; não se manipula.
+- reclassifique o cliente como arrojado, sem uma nova análise. || Não se muda o perfil para encaixar o produto.
+- aplique o dinheiro e informe o cliente sobre o risco depois. || O alerta deve ser prévio.
+G: Investir fora do perfil não é proibido, mas exige alerta prévio sobre a inadequação e declaração expressa do cliente de que está ciente. Tudo deve ser documentado. Sem isso, a venda é irregular, com ou sem prejuízo.
+D: Fora do perfil: alertar antes + declaração expressa.
+
+## 3.4.2 médio
+Q: O perfil de investidor de um cliente foi definido há 30 meses, e ele quer aplicar em um novo produto.
+P: Pelas regras, o profissional deve:
++ atualizar o perfil, que deve ser revisto no máximo a cada 24 meses.
+- aplicar normalmente, porque o perfil vale por 5 anos. || O prazo máximo é de 24 meses.
+- recusar qualquer aplicação até o cliente refazer o cadastro em cartório. || Não há exigência de cartório.
+- usar o perfil antigo, porque o cliente não informou mudanças. || O perfil vencido precisa ser atualizado.
+G: O perfil de investidor deve ser atualizado em intervalos de no máximo 24 meses e sempre que houver mudança relevante na vida do cliente. Com perfil vencido, a instituição deve alertar, colher declaração e atualizar antes de recomendar.
+D: Perfil: atualizar no máximo a cada 24 meses.
+
+## 3.4.2 médio
+Q: A esposa de um cliente liga e pede ao profissional que responda o questionário de suitability no lugar do marido, dizendo que ele é arrojado.
+P: A conduta correta é:
++ explicar que o questionário deve ser respondido pelo próprio titular.
+- preencher o questionário com as respostas dadas pela esposa. || O perfil é individual, do titular.
+- marcar o perfil arrojado e pedir a assinatura do cliente depois. || O profissional não responde pelo cliente.
+- usar o perfil já cadastrado da esposa para os dois. || Cada titular tem seu próprio perfil.
+G: O suitability é do titular dos recursos: o profissional pode explicar as perguntas, mas não responde pelo cliente nem aceita respostas de terceiros. Mesmo com procurador, o perfil analisado é o do titular.
+D: Suitability: é do titular. Ninguém responde por ele.
+
+## 3.4.3 médio
+Q: O banco lança uma campanha com bônus para quem vender um fundo da casa com taxa alta. Um cliente conservador procura o profissional.
+P: A conduta correta do profissional é:
++ recomendar o que é adequado ao cliente, mesmo que não renda o bônus.
+- recomendar o fundo da campanha, porque a meta do banco vem primeiro. || O interesse do cliente vem antes da meta.
+- esconder do cliente as taxas do fundo para facilitar a venda. || Transparência sobre custos é obrigatória.
+- dividir o bônus com o cliente para compensar a taxa alta. || Isso não resolve a inadequação e é irregular.
+G: Incentivos atrelados a produtos podem distorcer a recomendação e geram conflito de interesses. O dever do profissional é recomendar o que é adequado ao perfil e aos objetivos do cliente, com transparência sobre custos e remuneração.
+D: Conflito de interesses: o interesse do cliente vem antes da meta.
+
+## 3.4.3 médio
+Q: A irmã de um profissional vira cliente da carteira dele na instituição.
+P: A conduta correta do profissional é:
++ declarar o vínculo e seguir a política de conflitos de interesses da instituição.
+- atender normalmente, sem informar ninguém, porque não há conflito com parentes. || Vínculo familiar pode gerar conflito e deve ser declarado.
+- dar à irmã condições melhores que aos demais clientes. || Os clientes devem ser tratados de forma igual.
+- operar a conta da irmã com a senha dela, para agilizar. || Nunca se opera com a senha do cliente.
+G: Relações pessoais com clientes podem gerar conflito de interesses, real ou potencial. O profissional deve declarar o vínculo, seguir a política da instituição (que pode exigir abstenção) e tratar todos os clientes com equidade.
+D: Parente cliente: declarar o vínculo e seguir a política.
+
+## 3.4.3 fácil
+Q: Um cliente satisfeito oferece ao profissional uma viagem de alto valor como agradecimento.
+P: A conduta correta é:
++ recusar o presente e comunicar o compliance.
+- aceitar, porque o presente foi espontâneo. || Presentes acima do simbólico geram conflito.
+- aceitar e oferecer ao cliente uma taxa menor em troca. || Isso agrava o conflito de interesses.
+- aceitar desde que a viagem seja nas férias. || O problema é o valor, não a data.
+G: Presentes e benefícios acima de um valor simbólico podem comprometer a independência do profissional. A conduta é recusar e informar o compliance, conforme a política da instituição.
+D: Presente acima do simbólico: recusar e comunicar o compliance.
+
+## 3.4.1 médio
+Q: Um profissional certificado quer divulgar em sua rede social pessoal um investimento que "rende 3% ao mês garantido".
+P: À luz do Código de Ética da Anbima, essa publicação:
++ é inadequada: promete retorno, e o código vale também nas redes pessoais.
+- é permitida, porque foi feita em perfil pessoal e fora do expediente. || O código vale também nas redes pessoais.
+- é permitida, desde que o investimento seja da própria instituição. || Prometer rentabilidade é vedado em qualquer caso.
+- é obrigatória, para dar transparência sobre os produtos aos clientes. || Promessa de retorno não é transparência.
+G: O Código de Ética exige integridade, transparência, diligência e lealdade. Prometer rentabilidade é vedado, e a conduta do profissional certificado deve seguir esses princípios também em canais pessoais, como redes sociais.
+D: Nunca prometer retorno, nem nas redes pessoais.
+
+## 3.4.4 fácil
+Q: Uma falha no sistema de uma corretora impediu clientes de enviar ordens durante uma manhã inteira.
+P: Essa ocorrência é um exemplo de risco:
++ operacional.
+- de mercado. || Risco de mercado é oscilação de preços.
+- de crédito. || Risco de crédito é calote.
+- legal. || Risco legal envolve contratos e processos.
+G: Risco operacional é o de perdas por falhas de pessoas, processos, sistemas ou eventos externos (incluindo fraudes internas e desastres). Plano de continuidade, redundância e segregação de funções ajudam a reduzi-lo.
+D: Falha de pessoas, processos ou sistemas = risco operacional.
+
+## 3.4.4 médio
+Q: Uma instituição foi multada pela CVM por descumprir uma norma, e depois saiu uma reportagem negativa que fez clientes saírem.
+P: Os riscos envolvidos, nessa ordem, são:
++ regulatório (multa) e de imagem (saída de clientes).
+- operacional (multa) e de crédito (saída de clientes). || Multa de regulador é risco regulatório; perda por notícia, de imagem.
+- de mercado (multa) e de liquidez (saída de clientes). || Não houve oscilação de preços.
+- legal (multa) e operacional (saída de clientes). || Processo judicial é legal; multa do regulador, regulatório.
+G: Risco regulatório: punição por descumprir normas do regulador. Risco legal: processos judiciais e contratos mal feitos. Risco de imagem (reputacional): perda de confiança e de clientes por notícias negativas. Risco operacional: falhas internas.
+D: Multa = regulatório. Processo = legal. Notícia ruim = imagem.
+
+## 3.4.5 fácil
+Q: Um treinamento de prevenção à lavagem de dinheiro apresenta as etapas usadas pelos criminosos.
+P: A ordem correta das etapas da lavagem é:
++ colocação, ocultação e integração.
+- ocultação, colocação e integração. || O dinheiro primeiro entra no sistema (colocação).
+- integração, colocação e ocultação. || A integração é a última etapa.
+- colocação, integração e ocultação. || A ocultação vem antes da integração.
+G: Colocação: o dinheiro ilícito entra no sistema (depósitos fracionados, compras). Ocultação: movimentações para apagar a origem (transferências em camadas). Integração: o dinheiro volta com aparência legal (investimentos, empresas). Lavagem é crime, com pena de 3 a 10 anos.
+D: Lavagem: colocação → ocultação → integração.
+
+## 3.4.5 médio
+Q: Uma empresa quer abrir conta em uma instituição. O cadastro mostra que ela é controlada por outra empresa, sediada no exterior.
+P: Pelas regras de "conheça seu cliente", a instituição deve:
++ identificar o beneficiário final, a pessoa física que controla a empresa.
+- abrir a conta só com os dados da empresa brasileira. || É preciso chegar à pessoa física por trás.
+- recusar a conta, porque empresas estrangeiras são proibidas. || Não há proibição geral.
+- pedir apenas o contrato social da empresa estrangeira. || O objetivo é identificar quem controla de fato.
+G: Pelo KYC (conheça seu cliente), quando o cliente é pessoa jurídica, a instituição deve identificar o beneficiário final, ou seja, a pessoa física que controla ou se beneficia dela. A diligência deve ser maior conforme o risco.
+D: Empresa cliente: descobrir o beneficiário final.
+
+## 3.4.5 médio
+Q: Um novo cliente é deputado federal e quer abrir conta de investimentos.
+P: Por ser pessoa exposta politicamente (PEP), o cliente:
++ pode ser atendido, com diligência reforçada e verificação da origem dos recursos.
+- não pode ser atendido por nenhuma instituição financeira. || Não há proibição de atender PEP.
+- deve ser comunicado ao COAF logo na abertura da conta. || Ser PEP não é, por si só, motivo de comunicação.
+- dispensa o cadastro completo, por ser autoridade pública. || PEP exige controles mais rigorosos.
+G: PEP é quem exerce ou exerceu cargos públicos relevantes (e seus familiares e associados próximos). Não é proibido nem suspeito por si só, mas exige diligência reforçada, monitoramento mais atento e verificação da origem dos recursos.
+D: PEP: pode, mas com diligência reforçada.
+
+## 3.4.6 fácil
+Q: O profissional identifica movimentações incompatíveis com a renda de um cliente e suspeita de lavagem de dinheiro.
+P: A conduta correta é:
++ levar à área responsável para análise e comunicação ao COAF, sem avisar o cliente.
+- avisar o cliente para que ele explique a situação antes de qualquer comunicação. || Avisar o cliente é proibido (tipping-off).
+- encerrar a conta imediatamente e devolver todos os recursos ao cliente. || O procedimento é analisar e comunicar.
+- ignorar o caso, porque o cliente é antigo e sempre foi bom pagador. || Indícios devem ser analisados sempre.
+G: Indícios de lavagem devem seguir o fluxo interno e, se confirmados como suspeitos, ser comunicados ao COAF. É proibido avisar o cliente (tipping-off). A comunicação de boa-fé não quebra o sigilo bancário (LC 105).
+D: Suspeita → comunica ao COAF, sem avisar o cliente.
+
+## 3.4.6 médio
+Q: Um cliente faz um saque de R$ 60 mil em espécie, com justificativa coerente e renda compatível.
+P: Sobre a comunicação ao COAF, é correto afirmar que:
++ operação em espécie a partir de R$ 50 mil é comunicada mesmo sem suspeita.
+- não há comunicação, porque a operação não é considerada suspeita. || Operações em espécie acima do limite são comunicadas mesmo sem suspeita.
+- a comunicação só ocorre se o saque em espécie passar de R$ 100 mil. || O limite é R$ 50 mil.
+- o cliente precisa autorizar por escrito a comunicação ao COAF. || A comunicação é obrigação legal, sem autorização.
+G: Operações em espécie a partir de R$ 50 mil (saques, depósitos, provisionamentos) são comunicadas ao COAF de forma automática, independentemente de suspeita. Já as operações suspeitas são comunicadas por análise, em qualquer valor.
+D: Espécie a partir de R$ 50 mil = comunicação automática ao COAF.
+
+## 3.4.6 médio
+Q: Uma instituição usa dados de saúde de clientes para oferecer seguros.
+P: Pela LGPD, esses dados:
++ são dados sensíveis e exigem proteção reforçada e base legal específica.
+- são dados financeiros comuns, sem regras especiais. || Dados de saúde são sensíveis.
+- podem ser vendidos a parceiros sem informar os titulares. || O compartilhamento exige base legal e transparência.
+- deixam de ser protegidos depois de 5 anos. || Não há essa regra.
+G: A LGPD classifica como sensíveis os dados sobre origem racial, religião, opinião política, filiação sindical, saúde, vida sexual, dados genéticos e biométricos. Eles exigem proteção maior e bases legais específicas. Dado financeiro não é sensível, mas é protegido por sigilo.
+D: Saúde, biometria e religião são sensíveis. Financeiro não.
+
+## 3.4.6 médio
+Q: Uma pessoa liga dizendo ser do banco e pede o código recebido por SMS para "cancelar uma compra suspeita".
+P: A orientação correta ao cliente é:
++ desligar e ligar no canal oficial; banco não pede senha nem código.
+- informar o código, porque o banco precisa dele para cancelar a compra. || Banco não pede código por telefone.
+- informar só metade do código, por segurança, e aguardar. || Nenhuma parte do código deve ser passada.
+- passar o código e trocar a senha do aplicativo depois. || Passar o código já permite o golpe.
+G: Bancos não pedem senhas, códigos de verificação ou transferências por telefone, mensagem ou e-mail. Diante de pedido urgente, o cliente deve desligar e confirmar pelo canal oficial. Links urgentes pedindo dados são phishing.
+D: Banco não pede senha nem código. Use o canal oficial.
+
+## 3.4.7 médio
+Q: Um diretor de uma companhia aberta sabe que a empresa vai anunciar um lucro recorde e conta a um amigo, que compra ações antes do anúncio.
+P: A conduta do amigo é:
++ uso de informação privilegiada (insider secundário).
+- legítima, porque o amigo não trabalha na empresa. || Vale para qualquer pessoa que use informação relevante não divulgada.
+- manipulação de mercado por criação de volume artificial. || Não houve volume artificial.
+- front running, porque passou na frente das ordens de clientes. || Front running envolve ordens de clientes.
+G: Usar ou repassar informação relevante ainda não divulgada para negociar é crime (Lei 6.385, art. 27-D). O diretor é insider primário (teve acesso pelo cargo); o amigo é insider secundário (recebeu de quem tinha acesso). O simples repasse já é ilícito.
+D: Informação relevante não divulgada: não negociar nem repassar.
+
+## 3.4.7 médio
+Q: Um assessor faz várias compras e vendas na conta de um cliente, sem necessidade, só para gerar corretagem.
+P: Essa prática é chamada de:
++ churning.
+- spoofing. || Spoofing são ofertas falsas para mexer no preço.
+- front running. || Front running é operar antes da ordem do cliente.
+- money pass. || Money pass é passar dinheiro entre contas com negócios artificiais.
+G: Churning é girar excessivamente a carteira do cliente para gerar corretagem e remuneração, sem benefício para ele. O profissional que identifica indícios deve reportar ao compliance. Monitorar giro e custos desproporcionais ajuda a detectar a prática.
+D: Churning = girar a carteira do cliente para gerar corretagem.
+
+## 3.4.7 difícil
+Q: Um operador coloca ofertas grandes de compra que não pretende executar, para fazer o preço subir, e as cancela antes de serem fechadas.
+P: Essa prática é chamada de:
++ spoofing, uma forma de manipulação de mercado.
+- churning, porque gera corretagem ao operador. || Churning envolve a conta de um cliente.
+- insider trading, porque usa informação privilegiada. || Não há informação privilegiada.
+- money pass, porque transfere dinheiro entre contas. || Não há transferência entre contas.
+G: Spoofing é colocar ofertas de fachada para induzir outros investidores e mexer no preço, cancelando-as antes da execução. Layering é a versão com várias camadas de ofertas falsas. As duas são manipulação de mercado (art. 27-C, reclusão de 1 a 8 anos).
+D: Spoofing = oferta de fachada para mexer no preço.

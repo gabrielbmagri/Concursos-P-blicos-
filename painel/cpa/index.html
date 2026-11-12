@@ -106,6 +106,24 @@ tr:last-child td{border-bottom:0}
 .seg{display:inline-flex;background:var(--g1);border-radius:9px;padding:3px}
 .seg button{border:0;background:transparent;padding:5px 10px;border-radius:7px;font-size:13px;color:var(--ink2);font-weight:600}
 .seg button.on{background:#fff;color:var(--g8);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tblocos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:980px){.tblocos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.tblocos{grid-template-columns:1fr}}
+.tb{position:relative;overflow:hidden;border-radius:16px;padding:16px;color:#fff;border:0;text-align:left;display:flex;flex-direction:column;gap:8px;min-height:178px;box-shadow:var(--sh);transition:transform .15s,box-shadow .15s}
+.tb:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,60,40,.18)}
+.tb.b1{background:linear-gradient(135deg,#0b4f35,#17885a)}.tb.b2{background:linear-gradient(135deg,#0f5a3c,#2ea36f)}
+.tb.b3{background:linear-gradient(135deg,#145c52,#2b9a86)}.tb.b4{background:linear-gradient(135deg,#2c6236,#5fa35a)}
+.tb::after{content:attr(data-n);position:absolute;right:-6px;bottom:-30px;font-size:120px;font-weight:800;opacity:.10;line-height:1}
+.tb .k{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;opacity:.85;font-weight:650}
+.tb .nm{font-size:17px;font-weight:720;line-height:1.25}
+.tb .ct{font-size:13px;opacity:.9}
+.tb .pb{height:6px;border-radius:4px;background:rgba(255,255,255,.22);overflow:hidden;margin-top:auto}
+.tb .pb b{display:block;height:100%;background:#fff;border-radius:4px}
+.tb .ft{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;gap:8px}
+.tb .go{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-weight:650;white-space:nowrap}
+.choice button .pr{display:block;font-size:12px;color:var(--ink3);margin-top:2px}
+.choice .row{display:flex;gap:6px;align-items:stretch}.choice .row button:first-child{flex:1}
+.choice .row .rz{flex:none;font-size:12.5px;color:var(--ink2);text-align:center;padding:8px 10px}
 .sims{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
 .sim{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;display:flex;flex-direction:column;gap:6px;min-height:118px}
 .sim .t{font-weight:650;font-size:14.5px}
@@ -353,8 +371,9 @@ const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.par
 /* ==================== estado ==================== */
 /* E = {prova:"AAAA-MM-DD", sims:{S01:{modo,ini,fim,t,r:{"1":"B"},vis:{"1":1},atual,fin}}, ref:{"S01-05":[{d,ok}]}, salvos:{"S01-05":{em}}, fs} */
 let E=LS.get("cpa-estado",null)||{prova:"",sims:{},ref:{},salvos:{}};
-E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};
+E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};E.tr=E.tr||{};E.trs=E.trs||{};
 let IDX=[];          /* simulados oficiais (index.json) */
+let TIDX=[];         /* banco de treino por bloco (treino/index.json) */
 let EXTRA={};        /* simulados anexados: id -> objeto completo */
 const FULL={};       /* cache de simulados completos */
 let UI={filtroAss:"atencao",msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
@@ -382,7 +401,9 @@ function retomar(){
   if(retomou||UI.ses||!IDX.length)return;
   if(fb.on&&!fb.carregou)return;
   retomou=true;
-  const id=E.aberto,st=id&&E.sims[id];
+  const id=E.aberto;
+  if(id&&String(id).startsWith("treino:")){const m=String(id).slice(7).match(/^B(\d)-(novas|sims|todas)$/);if(m&&E.trs[m[0]])abrirBloco(m[1],m[2],false);return}
+  const st=id&&E.sims[id];
   if(st&&!st.fin&&(simInfo(id)))abrirSim(id,null,true);
 }
 function initFirebase(){
@@ -405,7 +426,7 @@ function initFirebase(){
           const d=s.exists?s.data():null;
           if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
           else if(E.atualizado&&d.atualizado&&E.atualizado>d.atualizado){salvar()} /* este aparelho tem a versão mais nova */
-          else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{}},d);LS.set("cpa-estado",E)}
+          else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{}},d);LS.set("cpa-estado",E)}
           first=false;fb.status="firebase";fb.carregou=true;render();retomar();
         },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
         fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
@@ -440,11 +461,11 @@ const listaSims=()=>{
   const ext=Object.values(EXTRA).sort((a,b)=>String(a.id).localeCompare(String(b.id))).map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao||"",n:s.q.length,k:s.q.map(q=>q.certa).join(""),pd:s.q.map(q=>q.pd),extra:true}));
   return ofi.concat(ext);
 };
-const simInfo=id=>listaSims().find(s=>s.id===id);
+const simInfo=id=>listaSims().find(s=>s.id===id)||(t=>t?{...t,titulo:`Treino do bloco ${t.b}`}:null)(TIDX.find(s=>s.id===id));
 async function carregarSim(id){
   if(FULL[id])return FULL[id];
   if(EXTRA[id]){FULL[id]=EXTRA[id];return FULL[id]}
-  const i=IDX.find(s=>s.id===id);if(!i)throw new Error("Simulado não encontrado");
+  const i=IDX.find(s=>s.id===id)||TIDX.find(s=>s.id===id);if(!i)throw new Error("Simulado não encontrado");
   const r=await fetch(i.arquivo+"?v="+(i.criado||""),{cache:"no-cache"});if(!r.ok)throw new Error("Falha ao baixar o simulado");
   FULL[id]=await r.json();return FULL[id];
 }
@@ -473,6 +494,11 @@ function stats(){
     if(st.fin)S.hist.push({id:s.id,titulo:s.titulo,a,n:s.n,fim:st.fim||0,modo:st.modo});
   }
   S.hist.sort((x,y)=>x.fim-y.fim);
+  /* treino por bloco: conta nos assuntos e nas erradas (revelada conta como não sabida) */
+  S.treino=0;const jaPend=new Set(S.pend);
+  for(const id in E.tr){const t=E.tr[id];if(!t||!t.pd)continue;S.treino++;
+    const as=assunto(t.pd),x=S.ass[as]||(S.ass[as]={a:0,n:0,b:bloco(t.pd)});x.n++;if(t.ok)x.a++;
+    if(!t.ok){const rf=E.ref[id],last=rf&&rf.length?rf[rf.length-1].ok:false;if(last)S.recup++;else if(!jaPend.has(id)){S.pend.push(id);jaPend.add(id)}}}
   /* nota estimada: acerto de cada bloco aplicado ao peso do bloco na prova */
   let est=0,cob=0;for(const b in BLOCOS){const x=S.blocos[b];if(x.n){est+=x.a/x.n*BLOCOS[b].p*TOTAL_Q;cob+=BLOCOS[b].p}}
   S.estimada=cob>=.999?Math.round(est):null;
@@ -505,15 +531,16 @@ function painelHtml(){
   const S=stats(),sims=listaSims();
   const p=pct(S.acertos,S.resp);
   return `<div class="wrap">
-  <div class="top"><div class="logo"><b>CPA</b><h1>Simulados CPA<span>Certificação Profissional Anbima · 50 questões · 2h30 · aprovação com 35</span></h1></div><div class="sp"></div><a class="btn ghost sm" href="resumo-cpa.pdf" target="_blank" rel="noopener">Resumo (PDF)</a>${syncHtml()}${fb.on&&fb.user?`<button class="btn ghost sm" data-a="sair">Sair</button>`:""}</div>
+  <div class="top"><div class="logo"><b>CPA</b><h1>Simulados CPA<span>Certificação Profissional Anbima · 50 questões · 2h30 · aprovação com 35</span></h1></div><div class="sp"></div><a class="btn ghost sm" href="resumo-cpa.pdf" target="_blank" rel="noopener">Resumo (PDF)</a><a class="btn ghost sm" href="https://www.anbima.com.br/data/files/DF/86/EE/B6/EB6F8910C03A3F89B82BA2A8/Caderno-de-questoes-CPA.pdf" target="_blank" rel="noopener">Caderno oficial Anbima</a>${syncHtml()}${fb.on&&fb.user?`<button class="btn ghost sm" data-a="sair">Sair</button>`:""}</div>
   ${UI.msg?`<div class="msg">${esc(UI.msg)}</div>`:""}${UI.err?`<div class="msg err">${esc(UI.err)}</div>`:""}
   <div class="hero">${contagemHtml(S,sims)}
     <div class="kpis">
       <div class="kpi"><div class="lb">Acerto geral</div><div class="v ${p==null?"":cls(p)}">${p==null?"–":p+"%"}</div><div class="meter"><b class="b-${cls(p)}" style="width:${p||0}%"></b><i style="left:70%"></i></div><div class="s">meta: 70% (35 de 50)</div></div>
       <div class="kpi"><div class="lb">Nota estimada na prova</div><div class="v ${S.estimada==null?"":S.estimada>=APROV?"ok":"low"}">${S.estimada==null?"–":S.estimada+"/50"}</div><div class="s">${S.estimada==null?"aparece quando houver questões dos 4 blocos":S.estimada>=APROV?"acima da linha de aprovação":`faltam ${APROV-S.estimada} acertos para 35`}</div></div>
       <div class="kpi"><div class="lb">Simulados feitos</div><div class="v">${S.feitos}<span class="muted" style="font-size:16px;font-weight:600"> / ${sims.length}</span></div><div class="s">${S.emAndamento?`${S.emAndamento} em andamento`:"&nbsp;"}</div></div>
-      <div class="kpi"><div class="lb">Questões resolvidas</div><div class="v">${S.resp}</div><div class="s">${S.tempoQ?`${fmtT(S.tempo/S.tempoQ)} por questão (meta: 3 min)`:"&nbsp;"}</div></div>
+      <div class="kpi"><div class="lb">Questões resolvidas</div><div class="v">${S.resp+S.treino}</div><div class="s">${S.treino?`${S.resp} em simulados · ${S.treino} no treino`:S.tempoQ?`${fmtT(S.tempo/S.tempoQ)} por questão (meta: 3 min)`:"&nbsp;"}</div></div>
     </div></div>
+  ${treinoHtml()}
   <div class="two">
     <div class="card"><div class="sec-h"><h2>Desempenho por bloco</h2><div class="sp"></div><span class="muted small">linha = 70%</span></div>${blocosHtml(S)}</div>
     <div class="card"><div class="sec-h"><h2>Evolução nos simulados</h2></div>${graficoHtml(S)}</div>
@@ -622,6 +649,69 @@ function gabaritoHtml(x,resp,id,compacto){
   ${x.dica?`<div class="dica"><b>Para lembrar:</b> ${txt(x.dica)}</div>`:""}</div>`;
 }
 
+/* ==================== treino por bloco ==================== */
+const DIFN={"Fácil":0,"Médio":1,"Difícil":2};
+const pdCmp=(a,b)=>{const x=String(a).split(".").map(Number),y=String(b).split(".").map(Number);for(let i=0;i<Math.max(x.length,y.length);i++){const d=(x[i]||0)-(y[i]||0);if(d)return d}return 0};
+function treinoConta(b){
+  const t=TIDX.find(x=>x.b===b),novas=t?t.n:0;
+  let sims=0;for(const s of IDX)for(const pd of s.pd||[])if(bloco(pd)===b)sims++;
+  let feitas=0,ok=0,vistas=0;for(const id in E.tr){const r=E.tr[id];if(!r||bloco(r.pd)!==b)continue;feitas++;if(r.ok)ok++;if(r.v)vistas++}
+  return {novas,sims,feitas,ok,vistas};
+}
+function treinoHtml(){
+  if(!TIDX.length&&!IDX.length)return "";
+  return `<div class="card" style="margin-bottom:14px"><div class="sec-h"><h2>Treinar por bloco</h2><div class="sp"></div><span class="muted small">sem tempo · com botão "Ver resposta"</span></div>
+  <div class="tblocos">${Object.entries(BLOCOS).map(([b,x])=>{b=+b;const c=treinoConta(b),tot=c.novas+c.sims,pc=tot?Math.round(100*c.feitas/tot):0;
+    return `<button class="tb b${b}" data-a="treino" data-b="${b}" data-n="${b}"><span class="k">Bloco ${b}</span><span class="nm">${esc(x.n)}</span>
+    <span class="ct">${c.novas} questões novas · ${c.sims} dos simulados</span>
+    <span class="pb"><b style="width:${pc}%"></b></span>
+    <span class="ft"><span>${c.feitas?`${c.feitas} feitas · ${Math.round(100*c.ok/c.feitas)}% de acerto`:"ainda não começou"}</span><span class="go">${c.feitas?"Continuar":"Começar"}</span></span></button>`}).join("")}</div></div>`;
+}
+const tKey=(b,f)=>`B${b}-${f}`;
+async function abrirBloco(b,fonte,recomecar){
+  b=+b;const key=tKey(b,fonte);
+  try{
+    const ids=[];
+    if(fonte!=="sims"){const t=TIDX.find(x=>x.b===b);if(t)ids.push(t.id)}
+    if(fonte!=="novas")for(const s of IDX)if((s.pd||[]).some(pd=>bloco(pd)===b))ids.push(s.id);
+    await Promise.all(ids.map(carregarSim));
+    const todos=[];
+    for(const sid of ids)FULL[sid].q.forEach((x,i)=>{if(bloco(x.pd)===b)todos.push({id:qid(sid,i+1),x,n:i+1,sid})});
+    /* ordem de estudo: por assunto do programa, do fácil ao difícil */
+    todos.sort((p,q)=>pdCmp(p.x.pd,q.x.pd)||(DIFN[p.x.dif]??1)-(DIFN[q.x.dif]??1)||(p.sid<q.sid?-1:p.sid>q.sid?1:p.n-q.n));
+    const mapa=Object.fromEntries(todos.map(it=>[it.id,it]));
+    let st=E.trs[key];
+    if(recomecar&&st){for(const id of st.ordem)delete E.tr[id];st=null}
+    if(!st)st=E.trs[key]={ordem:todos.map(it=>it.id),atual:0};
+    for(const it of todos)if(!st.ordem.includes(it.id))st.ordem.push(it.id); /* questões novas entram no fim */
+    const itens=st.ordem.map(id=>mapa[id]).filter(Boolean);
+    if(!itens.length){UI.err="Ainda não há questões para esse bloco.";render();return}
+    const nomeF={novas:"questões novas",sims:"questões dos simulados",todas:"todas as questões"}[fonte];
+    UI.ses={tipo:"bloco",key,b,fonte,titulo:`Bloco ${b} · ${nomeF}`,modo:"estudo",itens,i:Math.min(st.atual||0,itens.length-1),fim:false,t0:Date.now()};
+    E.aberto="treino:"+key;salvar();UI.modal=null;render();window.scrollTo(0,0);
+  }catch(e){UI.err="Não consegui carregar as questões do bloco. Verifique a conexão.";render()}
+}
+function treinoModalHtml(m){
+  const b=+m.b,c=treinoConta(b);
+  const op=(f,tit,desc,n)=>{const st=E.trs[tKey(b,f)],feitas=st?st.ordem.filter(id=>E.tr[id]).length:0;
+    if(!n)return "";
+    return `<div class="row"><button data-a="treino-ir" data-b="${b}" data-f="${f}"><b>${tit}</b><span>${desc}</span><span class="pr">${n} questões${feitas?` · ${feitas} feitas · continua de onde parou`:""}</span></button>${feitas?`<button class="rz" data-a="treino-zera" data-b="${b}" data-f="${f}">Recomeçar</button>`:""}</div>`};
+  return `<div class="modal" data-a="fecha-modal"><div class="card" data-stop="1"><h2>Bloco ${b} · ${esc(BLOCOS[b].n)}</h2><p class="muted small" style="margin:4px 0 0">Questões em ordem de estudo (por assunto, do fácil ao difícil), sem tempo, com correção na hora e botão "Ver resposta".</p>
+  <div class="choice">${op("novas","Questões novas de treino","Feitas só para o treino; não gastam os simulados.",c.novas)}
+  ${op("sims","Questões dos simulados","Todas as do bloco nos 15 simulados (as respostas daqui não mexem nos simulados).",c.sims)}
+  ${op("todas","Todas juntas","Novas e dos simulados, misturadas por assunto.",c.novas+c.sims)}</div>
+  <div class="act"><button class="btn alt" data-a="fecha-modal">Fechar</button></div></div></div>`;
+}
+function blocoResultadoHtml(){
+  const s=UI.ses;let a=0,e=0,v=0,n=0;const as={};
+  s.itens.forEach(it=>{const r=E.tr[it.id];if(!r)return;n++;if(r.ok)a++;else if(r.v)v++;else e++;const k=assunto(it.x.pd),x=as[k]||(as[k]={a:0,n:0});x.n++;if(r.ok)x.a++});
+  const lin=Object.entries(as).sort((p,q)=>p[1].a/p[1].n-q[1].a/q[1].n);
+  return `<div class="ov"><div class="bar-top"><div class="in2"><button class="btn ghost sm" data-a="sair-ses">← Painel</button><span class="ttl">${esc(s.titulo)} · resumo</span></div></div>
+  <div class="qwrap"><div class="card res-hero"><div class="muted small">Você acertou</div><div class="sc">${a}/${n}</div><div class="muted">${n?Math.round(100*a/n):0}% · ${e} erradas · ${v} com resposta revelada · ${s.itens.length-n} puladas</div></div>
+  ${lin.length?`<div class="card" style="margin-top:14px"><h2 style="margin-bottom:8px">Por assunto</h2>${lin.map(([k,x])=>{const q=pct(x.a,x.n);return `<div class="blk"><div class="nm">${esc(k)}</div><div class="pc ${cls(q)}">${q}% <span class="muted small" style="font-weight:500">${x.a}/${x.n}</span></div><div class="bar"><b class="b-${cls(q)}" style="width:${q}%"></b><i></i></div></div>`}).join("")}</div>`:""}
+  <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">${e+v?`<button class="btn" data-a="refazer" data-b="${s.b}">Refazer erradas do bloco ${s.b}</button>`:""}<button class="btn alt" data-a="sair-ses">Voltar ao painel</button></div></div></div>`;
+}
+
 /* ==================== sessão (simulado ou refazer) ==================== */
 /* UI.ses = {tipo:"sim"|"ref", sid, modo:"prova"|"estudo", itens:[{id,x}], i, resp:{}, fim:false, t0} */
 async function abrirSim(id,modo,continuar){
@@ -651,8 +741,11 @@ async function abrirRefazer(filtro){
 const topoQ=()=>document.querySelectorAll("#ov .cbt-m, #ov .cbt-m>div").forEach(o=>o.scrollTop=0);
 const sesSt=()=>UI.ses&&UI.ses.tipo==="sim"?E.sims[UI.ses.sid]:null;
 /* guarda a questão em que você está, para voltar nela depois */
-function marcarPos(){const s=UI.ses,st=sesSt();if(!st||s.fim)return;st.atual=s.i+1;E.aberto=s.sid;salvar()}
-const respDe=(it,idx)=>{const s=UI.ses;if(s.tipo==="sim")return (E.sims[s.sid].r||{})[idx+1];return s.resp[it.id]};
+function marcarPos(){const s=UI.ses;if(!s||s.fim)return;
+  if(s.tipo==="bloco"){const st=E.trs[s.key];if(st){st.atual=s.i;E.aberto="treino:"+s.key;salvar()}return}
+  const st=sesSt();if(!st)return;st.atual=s.i+1;E.aberto=s.sid;salvar()}
+const respDe=(it,idx)=>{const s=UI.ses;if(s.tipo==="sim")return (E.sims[s.sid].r||{})[idx+1];if(s.tipo==="bloco"){const r=E.tr[it.id];return r&&r.r||null}return s.resp[it.id]};
+const revelada=it=>UI.ses&&UI.ses.tipo==="bloco"&&!!(E.tr[it.id]&&E.tr[it.id].v);
 let tickT=null;
 function tick(){
   clearInterval(tickT);
@@ -677,7 +770,7 @@ function cbtShell(main,foot,opt){
   const tempo=s.tipo==="sim"?(prova?fmtT(DURACAO-(st.t||0)):fmtT(st.t||0)):"";
   const warn=prova&&DURACAO-(st.t||0)<900;
   const T=TOOLS.open;
-  return `<div class="cbt" id="ov"><div class="cbt-h"><div class="tt"><span class="t1">${esc(s.titulo)}</span><span class="t2">${s.tipo==="ref"?"Refazendo erradas":prova?"Simulação do ambiente de prova":"Modo estudo"}</span></div>
+  return `<div class="cbt" id="ov"><div class="cbt-h"><div class="tt"><span class="t1">${esc(s.titulo)}</span><span class="t2">${s.tipo==="ref"?"Refazendo erradas":s.tipo==="bloco"?"Treino por bloco · sem tempo":prova?"Simulação do ambiente de prova":"Modo estudo"}</span></div>
   ${opt&&opt.qn?`<span class="qn">${opt.qn}</span>`:""}
   ${s.tipo==="sim"?`<div class="tm ${warn?"warn":""}"><small>${prova?"Tempo restante":"Tempo"}</small><b id="timer">${tempo}</b></div>`:""}</div>
   <div class="cbt-tb">${[["calc","Calculadora"],["notas","Bloco de notas"],["rasc","Rascunho"],["form","Fórmulas"]].map(([k,l])=>`<button class="${T[k]?"on":""}" data-a="tool" data-k="${k}" title="${l}">${ICO[k]}<span class="lb2">${l}</span></button>`).join("")}
@@ -687,6 +780,7 @@ function cbtShell(main,foot,opt){
 }
 function sessaoHtml(){
   const s=UI.ses;
+  if(s.fim&&s.tipo==="bloco")return blocoResultadoHtml();
   if(s.fim&&!s.rev)return resultadoHtml();
   if(s.rev)return revisaoHtml();
   const st=sesSt(),prova=s.modo==="prova";
@@ -704,23 +798,24 @@ function sessaoHtml(){
     <div style="margin-top:16px;text-align:right"><button class="cbt-b" data-a="iniciar-exame" id="btn-ini" disabled>Iniciar exame</button></div></div></div></div>`,"");
   if(prova&&st&&st.final)return finalHtml();
   const it=s.itens[s.i],x=it.x,resp=respDe(it,s.i);
-  const feito=resp!=null&&!prova,ult=s.i===s.itens.length-1;
-  const nResp=s.tipo==="sim"?Object.keys(st.r).length:Object.keys(s.resp).length;
+  const rev=revelada(it),feito=(resp!=null||rev)&&!prova,ult=s.i===s.itens.length-1;
+  const nResp=s.tipo==="sim"?Object.keys(st.r).length:s.tipo==="bloco"?s.itens.filter(q=>E.tr[q.id]).length:Object.keys(s.resp).length;
   const split=(x.contexto||"").length>300||!!x.caso;
   const caseHtml=`${x.caso?`<div class="cbt-cs">${esc(x.caso.replace(/^Árvore de diálogo:\s*/,"Árvore de diálogo · "))}${x.etapa?` · etapa ${esc(x.etapa)}`:""}</div>`:""}<div class="ctx">${txt(x.contexto)}</div>`;
   const alts=`<div class="cbt-alts">${x.alt.map((a,i)=>{const l=L[i];let c="";if(feito){c=l===x.certa?"right":l===resp?"wrong":""}else if(resp===l)c="sel";
       const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
       return `<button class="cbt-alt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""} aria-pressed="${resp===l}"><span class="rd"></span><span class="lt">${l.toLowerCase()})</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>`;
-  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="ref"?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}</div>
-    ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito?gabaritoHtml(x,resp,it.id,true):""}`;
+  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}</div>
+    ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito?(rev&&!resp?`<div class="msg" style="margin-top:12px">Resposta revelada: a certa é a <b>${x.certa.toLowerCase()})</b>. A questão vai para a lista de erradas, para você refazer depois.</div>`:"")+gabaritoHtml(x,resp,it.id,true):""}`;
   const main=split?`<div class="cbt-m split"><div class="cbt-case" style="--qfs:${UI.fs}px"><div class="in3"><div class="cbt-lb">${x.caso?"Case":"Texto da questão"}</div>${caseHtml}</div></div><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`
     :`<div class="cbt-m"><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`;
   let foot;
   if(prova)foot=`<span class="nt">${nResp} de ${s.itens.length} respondidas · ao avançar, esta questão fica bloqueada</span><button class="cbt-b" data-a="prox">${ult?"Ir para a revisão final":"Próxima"} ›</button>`;
   else{
     const podeFim=ult||(s.tipo==="sim"&&nResp===s.itens.length);
-    foot=`${s.i>0?`<button class="cbt-b sec" data-a="ant">‹ Anterior</button>`:""}<span class="nt">${nResp} de ${s.itens.length} respondidas</span>
-    ${!ult?`<button class="cbt-b ${podeFim||!feito?"sec":""}" data-a="prox">${feito?"Próxima":"Pular"} ›</button>`:""}${podeFim?`<button class="cbt-b" data-a="fim">Finalizar</button>`:""}`;
+    foot=`${s.i>0?`<button class="cbt-b sec" data-a="ant">‹ Anterior</button>`:""}<span class="nt">${nResp} de ${s.itens.length} ${s.tipo==="bloco"?"feitas":"respondidas"}</span>
+    ${s.tipo==="bloco"&&!feito?`<button class="cbt-b sec" data-a="ver-resp">Ver resposta</button>`:""}
+    ${!ult?`<button class="cbt-b ${podeFim||!feito?"sec":""}" data-a="prox">${feito?"Próxima":"Pular"} ›</button>`:""}${podeFim?`<button class="cbt-b" data-a="fim">${s.tipo==="bloco"?"Concluir":"Finalizar"}</button>`:""}`;
   }
   return cbtShell(main,foot,{qn:`Questão ${s.i+1} de ${s.itens.length}`});
 }
@@ -754,6 +849,7 @@ function revisaoHtml(){
 function responder(l){
   const s=UI.ses,it=s.itens[s.i];
   if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar()}
+  else if(s.tipo==="bloco"){if(E.tr[it.id])return;E.tr[it.id]={r:l,ok:l===it.x.certa,pd:it.x.pd,d:Date.now()};marcarPos()}
   else{if(s.resp[it.id])return;s.resp[it.id]=l;(E.ref[it.id]=E.ref[it.id]||[]).push({d:Date.now(),ok:l===it.x.certa});salvar()}
   render();
 }
@@ -763,8 +859,13 @@ function avancar(pular){
   if(s.i<s.itens.length-1){s.i++;marcarPos();render();topoQ()}
   else if(s.tipo==="ref"){s.fim=true;render()}
 }
+function verResposta(){
+  const s=UI.ses,it=s&&s.itens[s.i];if(!it||s.tipo!=="bloco"||E.tr[it.id])return;
+  E.tr[it.id]={v:1,ok:false,pd:it.x.pd,d:Date.now()};marcarPos();render();
+}
 function finalizar(auto){
   const s=UI.ses;
+  if(s.tipo==="bloco"){if(E.aberto==="treino:"+s.key)delete E.aberto;const st=E.trs[s.key];if(st)st.atual=0;salvar()}
   if(s.tipo==="sim"){const st=sesSt();st.fin=true;st.fim=Date.now();if(E.aberto===s.sid)delete E.aberto;salvar();if(auto)UI.msg="O tempo de 2h30 acabou e o simulado foi finalizado."}
   s.fim=true;s.rev=false;render();const o=$("#ov");if(o)o.scrollTop=0;
 }
@@ -774,6 +875,7 @@ function modalHtml(){
   <div class="choice"><button data-a="comecar" data-id="${m.id}" data-m="prova"><b>Modo prova (ambiente do exame)</b><span>Tela parecida com a do exame: condições iniciais, 2h30 regressivas, questão travada ao avançar, revisão final, calculadora, bloco de notas, rascunho e fórmulas. Correção comentada no final.</span></button>
   <button data-a="comecar" data-id="${m.id}" data-m="estudo"><b>Modo estudo</b><span>Corrige na hora, com gabarito comentado e o porquê de cada alternativa errada.</span></button></div>
   <div class="act"><button class="btn alt" data-a="fecha-modal">Cancelar</button></div></div></div>`;
+  if(m.tipo==="treino")return treinoModalHtml(m);
   if(m.tipo==="conf")return `<div class="modal" data-a="fecha-modal"><div class="card" data-stop="1"><h2>${esc(m.titulo)}</h2><p>${esc(m.texto)}</p><div class="act"><button class="btn alt" data-a="fecha-modal">Cancelar</button><button class="btn" data-a="${m.ok}" data-id="${m.id||""}">${esc(m.btn)}</button></div></div></div>`;
   return "";
 }
@@ -968,11 +1070,17 @@ document.addEventListener("click",e=>{
     case "fim-ok":UI.modal=null;finalizar();return;
     case "iniciar-exame":{const st=sesSt();if(st){st.ciente=true;salvar()}break}
     case "tool":toolToggle(t.dataset.k);break;
+    case "treino":UI.modal={tipo:"treino",b:t.dataset.b};break;
+    case "treino-ir":abrirBloco(t.dataset.b,t.dataset.f,false);return;
+    case "treino-zera":UI.modal={tipo:"conf",titulo:"Recomeçar este treino?",texto:"As respostas dadas nesta lista de questões serão apagadas e você começa do início.",ok:"treino-zera-ok",btn:"Recomeçar",id:t.dataset.b+"|"+t.dataset.f};break;
+    case "treino-zera-ok":{const [b,f]=String(id).split("|");abrirBloco(b,f,true);return}
+    case "ver-resp":verResposta();return;
     case "ant":if(UI.ses.i>0){UI.ses.i--;marcarPos();render();topoQ()}return;
     case "fim":finalizar();return;
     case "ver-rev":UI.ses.rev=true;UI.revF="todas";break;
     case "revf":UI.revF=t.dataset.k;break;
-    case "sair-ses":toolsFechar();if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
+    case "sair-ses":toolsFechar();if(UI.ses&&UI.ses.tipo==="bloco"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}
+      if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
     case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
     case "star":if(E.salvos[id])delete E.salvos[id];else E.salvos[id]={em:Date.now()};salvar();break;
     case "unsave":delete E.salvos[id];salvar();break;
@@ -1008,6 +1116,7 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden)salvarJa()}
   if(!initFirebase()){EXTRA=LS.get("cpa-extra",{})}
   render();
   try{const r=await fetch("simulados/index.json",{cache:"no-cache"});IDX=await r.json()}catch(e){UI.err="Não consegui carregar a lista de simulados. Verifique a conexão e recarregue."}
+  try{const r=await fetch("treino/index.json",{cache:"no-cache"});if(r.ok)TIDX=await r.json()}catch(e){}
   render();retomar();
 })();
 </script>

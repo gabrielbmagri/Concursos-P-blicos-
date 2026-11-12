@@ -1,0 +1,1413 @@
+{
+"id": "T2",
+"titulo": "Treino do bloco 2",
+"q": [
+{
+"pd": "2.1.1.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Fernanda quer montar sua reserva de emergência em título público e pede uma indicação a Rui, profissional CPA.",
+"enunciado": "O título mais adequado para esse objetivo é o:",
+"alt": [
+"Tesouro Selic, que acompanha os juros básicos e oscila pouco.",
+"Tesouro Prefixado de longo prazo, que paga uma taxa fixa conhecida.",
+"Tesouro Renda+, que paga parcelas mensais na aposentadoria.",
+"Tesouro IPCA+ com vencimento em 2045, que protege contra a inflação."
+],
+"certa": "A",
+"gabarito": "A reserva precisa de liquidez e baixa oscilação. O Tesouro Selic (LFT) é pós-fixado na Selic, com variação de preço pequena, e pode ser vendido em qualquer dia útil. Prefixados e IPCA+ longos podem ter perdas relevantes se vendidos antes do vencimento.",
+"porque": {
+"B": "Prefixado longo oscila muito se vendido antes do vencimento.",
+"C": "O Renda+ é voltado à aposentadoria, não à reserva de emergência.",
+"D": "Título longo atrelado ao IPCA oscila bastante antes do vencimento."
+},
+"dica": "Reserva em título público = Tesouro Selic."
+},
+{
+"pd": "2.1.1.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta qual título público paga juros semestrais e é corrigido pela inflação.",
+"enunciado": "O título que tem essas duas características é:",
+"alt": [
+"o Tesouro Selic (LFT).",
+"o Tesouro Prefixado com Juros Semestrais (NTN-F).",
+"o Tesouro IPCA+ com Juros Semestrais (NTN-B).",
+"o Tesouro IPCA+ (NTN-B Principal)."
+],
+"certa": "C",
+"gabarito": "A NTN-B paga IPCA + taxa, com cupons semestrais de 6% ao ano sobre o valor corrigido pela inflação. A NTN-B Principal tem a mesma rentabilidade, mas paga tudo no vencimento. A NTN-F é prefixada com cupom de 10% ao ano.",
+"porque": {
+"A": "A LFT é pós-fixada na Selic e não paga cupons.",
+"B": "A NTN-F paga cupons, mas tem taxa fixa, sem correção pela inflação.",
+"D": "A versão Principal não paga cupons; paga tudo no vencimento."
+},
+"dica": "NTN-B = IPCA + cupom. NTN-B Principal = IPCA sem cupom. NTN-F = prefixado com cupom."
+},
+{
+"pd": "2.1.1.1.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente comprou Tesouro IPCA+ 2035 com taxa de 6% ao ano. Dois anos depois, as taxas desse título caíram para 5% ao ano.",
+"enunciado": "Se ele vender o título agora, o mais provável é que:",
+"alt": [
+"tenha prejuízo, porque a taxa de mercado ficou abaixo da contratada.",
+"obtenha exatamente a rentabilidade contratada de 6% mais IPCA.",
+"não consiga vender, porque o Tesouro só recompra no vencimento.",
+"obtenha rentabilidade acima da contratada, porque o preço subiu com a queda da taxa."
+],
+"certa": "D",
+"gabarito": "O preço dos títulos anda ao contrário das taxas. Quando a taxa de mercado cai, o preço sobe, e quem vende antes ganha acima do contratado. Se a taxa subisse, o preço cairia e a venda antecipada poderia dar perda. Mantido até o vencimento, rende o contratado.",
+"porque": {
+"A": "Taxa de mercado menor eleva o preço do título.",
+"B": "A taxa contratada só é garantida no vencimento; antes, vale o preço de mercado.",
+"C": "O Tesouro Direto tem liquidez diária, pelo preço de mercado."
+},
+"dica": "Taxa cai → preço sobe. Taxa sobe → preço cai."
+},
+{
+"pd": "2.1.1.1.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor aplica R$ 30 mil no Tesouro Direto e pergunta quais custos e tributos terá.",
+"enunciado": "Os custos e tributos que podem incidir são:",
+"alt": [
+"nenhum custo, porque títulos públicos são isentos para pessoa física.",
+"custódia da B3, taxa da corretora (se houver), IR regressivo e IOF antes de 30 dias.",
+"IR de 15% sobre todo o valor investido, cobrado no momento da compra.",
+"apenas a taxa de administração cobrada pelo Tesouro e IR fixo de 15%."
+],
+"certa": "B",
+"gabarito": "No Tesouro Direto incidem a taxa de custódia da B3 (sobre o valor aplicado, acima de um piso), a taxa da corretora se ela cobrar, IR pela tabela regressiva sobre o rendimento e IOF em resgates antes de 30 dias. Não há FGC: o risco é do Tesouro Nacional.",
+"porque": {
+"A": "Títulos públicos não são isentos de IR.",
+"C": "O IR incide sobre o rendimento, no resgate ou no cupom.",
+"D": "Não há taxa de administração do Tesouro, e o IR segue a tabela regressiva."
+},
+"dica": "Tesouro: custódia B3 + IR regressivo (+ IOF antes de 30 dias)."
+},
+{
+"pd": "2.1.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Clara quer juntar dinheiro para a faculdade do filho, que começa daqui a 10 anos, e receber o valor em parcelas mensais durante o curso.",
+"enunciado": "O título público pensado para esse objetivo é o:",
+"alt": [
+"Tesouro Selic, que paga todo o valor no vencimento.",
+"Tesouro Educa+, corrigido pelo IPCA e pago em 60 parcelas mensais.",
+"Tesouro Renda+, pago em 240 parcelas mensais na aposentadoria.",
+"Tesouro Prefixado com Juros Semestrais, que paga cupons fixos."
+],
+"certa": "B",
+"gabarito": "O Tesouro Educa+ acumula até a data escolhida e depois paga 60 parcelas mensais (5 anos), corrigidas pelo IPCA, para custear estudos. O Renda+ segue a mesma lógica, com 240 parcelas (20 anos), para a aposentadoria.",
+"porque": {
+"A": "A LFT não foi desenhada para pagar parcelas.",
+"C": "O Renda+ é voltado à aposentadoria.",
+"D": "Paga cupons semestrais, não parcelas mensais durante o curso."
+},
+"dica": "Educa+ = 60 parcelas (estudos). Renda+ = 240 parcelas (aposentadoria)."
+},
+{
+"pd": "2.1.1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente quer saber o que é um CDB.",
+"enunciado": "O profissional explica corretamente que o CDB é:",
+"alt": [
+"um título emitido por banco para captar recursos, com garantia do FGC até o limite.",
+"uma ação preferencial de banco, que paga dividendos mensais.",
+"uma cota de fundo de investimento que aplica em títulos públicos.",
+"um título emitido pelo Tesouro Nacional, com risco do governo federal."
+],
+"certa": "A",
+"gabarito": "O CDB (Certificado de Depósito Bancário) é um título de renda fixa emitido por bancos. Pode ser prefixado, pós-fixado (geralmente % do CDI) ou híbrido (IPCA + taxa). Tem IR pela tabela regressiva e garantia do FGC até R$ 250 mil por conglomerado.",
+"porque": {
+"B": "CDB é renda fixa, não ação.",
+"C": "CDB é título bancário, não cota de fundo.",
+"D": "Títulos do Tesouro são títulos públicos, não CDB."
+},
+"dica": "CDB = dívida do banco, com FGC."
+},
+{
+"pd": "2.1.1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um CDB paga 100% do CDI, e uma LCI do mesmo banco paga 90% do CDI. O cliente vai aplicar por 200 dias.",
+"enunciado": "Considerando o IR, a melhor opção para o cliente pessoa física é:",
+"alt": [
+"o CDB, porque a LCI tem IR de 22,5% nesse prazo.",
+"o CDB, porque 100% do CDI é sempre melhor que 90% do CDI.",
+"a LCI, porque o CDB, com IR de 20%, renderia 80% do CDI líquido.",
+"as duas empatam, porque os dois títulos têm o mesmo IR."
+],
+"certa": "C",
+"gabarito": "Com 200 dias, o CDB paga IR de 20%: 100% × (1 − 0,20) = 80% do CDI líquido. A LCI é isenta para pessoa física, então rende 90% do CDI líquido. Compare sempre líquido com líquido: taxa × (1 − IR) contra a taxa isenta.",
+"porque": {
+"A": "A LCI é isenta de IR para pessoa física.",
+"B": "É preciso comparar o rendimento líquido, depois do IR.",
+"D": "Só o CDB paga IR."
+},
+"dica": "Compare líquido: CDB × (1 − IR) contra LCI/LCA isenta."
+},
+{
+"pd": "2.1.1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta se pode usar uma LCA como reserva de emergência, já que ela é isenta e tem FGC.",
+"enunciado": "O profissional explica corretamente que a LCA:",
+"alt": [
+"perde a isenção de IR se for resgatada depois de terminada a carência.",
+"não pode ser comprada por pessoa física, só por empresas do agronegócio.",
+"é ideal para a reserva, porque tem liquidez diária garantida desde o primeiro dia.",
+"tem carência mínima, por isso não serve para uma reserva que pode ser usada a qualquer hora."
+],
+"certa": "D",
+"gabarito": "LCI e LCA são isentas de IR para pessoa física e têm FGC, mas exigem prazo mínimo de carência antes do resgate. Por isso não atendem uma reserva de emergência, que precisa de liquidez imediata. São boas para objetivos com prazo definido.",
+"porque": {
+"A": "A isenção não depende do momento do resgate.",
+"B": "Pessoa física pode aplicar e é isenta.",
+"C": "LCI e LCA têm carência mínima obrigatória."
+},
+"dica": "LCI/LCA: isentas e com FGC, mas com carência. Não servem de reserva."
+},
+{
+"pd": "2.1.1.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente compara uma LCA a 92% do CDI e um CRA a 98% do CDI, ambos isentos.",
+"enunciado": "O profissional explica corretamente que a diferença de taxa reflete principalmente:",
+"alt": [
+"o IR mais alto cobrado na LCA, que precisa ser compensado na taxa.",
+"o risco maior do CRA, emitido por securitizadora, sem FGC e dependente do lastro.",
+"a garantia maior do CRA, que tem FGC ilimitado por investidor.",
+"a liquidez diária garantida do CRA, que a LCA não oferece."
+],
+"certa": "B",
+"gabarito": "A LCA é emitida por banco e tem FGC até o limite. O CRA é emitido por securitizadora, com lastro em recebíveis do agronegócio em patrimônio separado (regime fiduciário), sem FGC; o risco é o do devedor do lastro. Taxa maior costuma remunerar risco maior.",
+"porque": {
+"A": "Os dois são isentos para pessoa física.",
+"C": "O CRA não tem FGC.",
+"D": "CRA costuma ter baixa liquidez no secundário."
+},
+"dica": "LCA = banco + FGC. CRA = securitizadora, sem FGC, risco do lastro."
+},
+{
+"pd": "2.1.1.1.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa emitiu debêntures e nomeou um agente fiduciário. Um debenturista pergunta qual é o papel dele.",
+"enunciado": "O agente fiduciário:",
+"alt": [
+"compra as debêntures que os investidores quiserem vender.",
+"define a taxa de juros que a empresa vai pagar aos debenturistas.",
+"garante o pagamento das debêntures se a empresa não pagar.",
+"representa e protege os interesses dos debenturistas, fiscalizando a emissão."
+],
+"certa": "D",
+"gabarito": "O agente fiduciário atua em nome dos debenturistas: acompanha o cumprimento das obrigações da emissora, fiscaliza garantias, convoca assembleias e age em caso de inadimplência. Ele não paga a dívida no lugar da empresa.",
+"porque": {
+"A": "Ele não é formador de mercado.",
+"B": "A taxa é definida na emissão, não pelo agente.",
+"C": "O agente fiduciário não é garantidor."
+},
+"dica": "Agente fiduciário protege os debenturistas, mas não garante o pagamento."
+},
+{
+"pd": "2.1.1.1.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor compara duas debêntures da mesma empresa: uma com garantia real e outra subordinada.",
+"enunciado": "Se a empresa quebrar, a ordem de preferência no recebimento é:",
+"alt": [
+"a com garantia real recebe antes da subordinada.",
+"as duas recebem juntas, na mesma proporção.",
+"nenhuma recebe, porque debênture não dá direito sobre os bens.",
+"a subordinada recebe antes, porque paga taxa maior."
+],
+"certa": "A",
+"gabarito": "A ordem de prioridade das debêntures é: garantia real (bem específico) > garantia flutuante (privilégio geral sobre os ativos) > quirografária (sem garantia) > subordinada (recebe só antes dos acionistas). Quanto menor a garantia, maior a taxa exigida.",
+"porque": {
+"B": "As garantias definem preferências diferentes.",
+"C": "Debenturistas são credores e têm direito conforme a garantia.",
+"D": "Subordinada fica por último entre os credores."
+},
+"dica": "Real > flutuante > quirografária > subordinada."
+},
+{
+"pd": "2.1.1.1.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma pessoa física compra debêntures incentivadas de uma empresa de energia.",
+"enunciado": "Sobre a tributação dessa aplicação, é correto afirmar que:",
+"alt": [
+"os rendimentos pagam IR fixo de 15% na fonte.",
+"a isenção só vale se a debênture for mantida por mais de 10 anos.",
+"os rendimentos são isentos de IR para pessoa física.",
+"os rendimentos pagam IR pela tabela regressiva, como um CDB."
+],
+"certa": "C",
+"gabarito": "As debêntures incentivadas (Lei 12.431) financiam infraestrutura e são isentas de IR para pessoa física. Ainda assim, têm risco de crédito da emissora, risco de mercado e liquidez restrita, e não têm FGC.",
+"porque": {
+"A": "Para pessoa física não há IR nessas debêntures.",
+"B": "A isenção não depende de prazo mínimo de 10 anos.",
+"D": "As incentivadas da Lei 12.431 são isentas para pessoa física."
+},
+"dica": "Debênture incentivada = isenta para pessoa física, mas com risco de crédito."
+},
+{
+"pd": "2.1.1.1.6",
+"dif": "Difícil",
+"nivel": "",
+"contexto": "Uma debênture conversível paga taxa menor que uma debênture simples da mesma empresa.",
+"enunciado": "Isso acontece porque a conversível:",
+"alt": [
+"tem garantia do FGC, o que reduz o risco do investidor.",
+"pode ser trocada por ações de outra companhia do mercado.",
+"é emitida pelo Tesouro Nacional, com risco soberano.",
+"dá ao investidor a opção de trocá-la por ações da própria emissora."
+],
+"certa": "D",
+"gabarito": "A conversível embute uma opção: o investidor pode convertê-la em ações da própria emissora. Como essa opção tem valor, a empresa paga juros menores. A permutável dá o direito de troca por ações de outra companhia.",
+"porque": {
+"A": "Debênture não tem FGC.",
+"B": "Troca por ações de outra empresa é a debênture permutável.",
+"C": "É emitida pela empresa."
+},
+"dica": "Conversível = ações da emissora. Permutável = ações de outra empresa."
+},
+{
+"pd": "2.1.1.1.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "A agência de rating rebaixa a nota de uma empresa que tem debêntures negociadas no mercado.",
+"enunciado": "O efeito esperado sobre o preço dessas debêntures é:",
+"alt": [
+"nenhum, porque o rating é só uma opinião sem efeito no preço.",
+"resgate automático das debêntures pela empresa.",
+"queda, porque o mercado passa a exigir uma taxa maior pelo risco.",
+"alta, porque a empresa terá de pagar juros maiores aos atuais investidores."
+],
+"certa": "C",
+"gabarito": "O rating é uma opinião sobre o risco de crédito, não uma garantia. Quando ele cai, o mercado exige spread maior para carregar aquele risco; como o fluxo do título é fixo, o preço cai. BBB− é o último degrau do grau de investimento.",
+"porque": {
+"A": "Mesmo sendo opinião, o rating influencia a taxa exigida.",
+"B": "Rebaixamento não gera resgate automático.",
+"D": "A taxa do título já emitido não muda; o preço é que se ajusta."
+},
+"dica": "Rating cai → spread sobe → preço cai."
+},
+{
+"pd": "2.1.1.1.8",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Com a Selic em 12% ao ano, um cliente pergunta quanto rende a poupança.",
+"enunciado": "O rendimento da poupança, nesse cenário, é de:",
+"alt": [
+"0,5% ao mês mais TR.",
+"100% do CDI, sem IR.",
+"70% da Selic mais TR.",
+"0,5% ao mês mais IPCA."
+],
+"certa": "A",
+"gabarito": "Para depósitos feitos desde 4/5/2012: com Selic acima de 8,5% ao ano, a poupança rende 0,5% ao mês + TR; com Selic até 8,5%, rende 70% da Selic + TR. O rendimento é creditado no aniversário mensal e é isento de IR para pessoa física.",
+"porque": {
+"B": "A poupança não acompanha o CDI.",
+"C": "Essa regra vale quando a Selic está em 8,5% ao ano ou menos.",
+"D": "A correção é pela TR, não pelo IPCA."
+},
+"dica": "Selic > 8,5%: 0,5% a.m. + TR. Selic ≤ 8,5%: 70% da Selic + TR."
+},
+{
+"pd": "2.1.1.1.9",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente depositou dinheiro na poupança no dia 30 de janeiro e pergunta quando recebe o primeiro rendimento.",
+"enunciado": "O profissional explica corretamente que o aniversário dessa aplicação será:",
+"alt": [
+"todos os dias, porque a poupança rende diariamente.",
+"no dia 1º de cada mês.",
+"no último dia útil de cada mês.",
+"no dia 30 de cada mês, inclusive em fevereiro."
+],
+"certa": "B",
+"gabarito": "A poupança credita rendimento uma vez por mês, na data de aniversário do depósito. Depósitos feitos nos dias 29, 30 e 31 passam a ter aniversário no dia 1º do mês seguinte. Quem resgata antes do aniversário perde o rendimento daquele mês.",
+"porque": {
+"A": "A poupança rende uma vez por mês, no aniversário.",
+"C": "A regra não é o último dia útil.",
+"D": "Depósitos em 29, 30 e 31 têm aniversário no dia 1º."
+},
+"dica": "Depósito em 29, 30 ou 31 → aniversário no dia 1º."
+},
+{
+"pd": "2.1.1.1.10",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta para que serve a TR e a TLP.",
+"enunciado": "A resposta correta é:",
+"alt": [
+"as duas são fixadas pelo Copom, nas reuniões que definem a Selic.",
+"a TR corrige poupança, FGTS e financiamento habitacional; a TLP é a taxa do BNDES.",
+"a TR é a taxa dos empréstimos do BNDES; a TLP corrige a poupança e o FGTS.",
+"as duas são índices oficiais de inflação calculados pelo IBGE."
+],
+"certa": "B",
+"gabarito": "A TR (Taxa Referencial), calculada pelo Banco Central, corrige a poupança, o FGTS e contratos do sistema de habitação. A TLP (Taxa de Longo Prazo) é usada nos financiamentos do BNDES e combina IPCA com uma taxa de juro real.",
+"porque": {
+"A": "O Copom fixa só a meta da Selic.",
+"C": "Os papéis estão trocados.",
+"D": "Nenhuma é índice de inflação do IBGE."
+},
+"dica": "TR = poupança, FGTS e habitação. TLP = BNDES."
+},
+{
+"pd": "2.1.1.1.11",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente vai resgatar um CDB aplicado há 400 dias.",
+"enunciado": "A alíquota de IR sobre o rendimento será de:",
+"alt": [
+"17,5%.",
+"15%.",
+"20%.",
+"22,5%."
+],
+"certa": "A",
+"gabarito": "Tabela regressiva da renda fixa: até 180 dias, 22,5%; de 181 a 360, 20%; de 361 a 720, 17,5%; acima de 720, 15%. O IR incide só sobre o rendimento e é retido na fonte.",
+"porque": {
+"B": "15% vale para aplicações com mais de 720 dias.",
+"C": "20% vale para aplicações de 181 a 360 dias.",
+"D": "22,5% vale para aplicações de até 180 dias."
+},
+"dica": "22,5 / 20 / 17,5 / 15 nos cortes de 180, 360 e 720 dias."
+},
+{
+"pd": "2.1.1.1.12",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente aplicou em um CDB com liquidez diária e precisou resgatar depois de 10 dias.",
+"enunciado": "Sobre a tributação desse resgate, é correto afirmar que:",
+"alt": [
+"não incide IOF, porque o CDB é isento desse imposto.",
+"incide apenas IR de 15%, porque o prazo foi curto.",
+"incide IOF sobre o valor total aplicado, e não há IR.",
+"incide IOF sobre o rendimento, e o IR de 22,5% incide sobre o que sobrar."
+],
+"certa": "D",
+"gabarito": "Em resgates antes de 30 dias, incide IOF sobre o rendimento, por uma tabela regressiva que vai de 96% (1º dia) a 0% (30º dia). Primeiro se calcula o IOF; depois, o IR de 22,5% sobre o rendimento que sobrou. Em poucos dias, o IOF consome quase todo o ganho.",
+"porque": {
+"A": "O IOF incide em resgates antes de 30 dias.",
+"B": "Prazo curto tem a alíquota mais alta: 22,5%.",
+"C": "O IOF incide sobre o rendimento, e o IR também é devido."
+},
+"dica": "Antes de 30 dias: IOF primeiro, depois IR sobre o que sobrou."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta qual a diferença entre ações ON e PN.",
+"enunciado": "A resposta correta é que:",
+"alt": [
+"as duas dão os mesmos direitos; só muda o código de negociação na bolsa.",
+"a ON paga dividendos fixos todo ano; a PN paga dividendos variáveis.",
+"a ON vota; a PN, em regra, não vota, mas tem prioridade em dividendos ou reembolso.",
+"a PN dá direito a voto; a ON tem prioridade nos dividendos."
+],
+"certa": "C",
+"gabarito": "Ação ordinária (ON, código terminado em 3) dá direito a voto em assembleia. Ação preferencial (PN, final 4) em regra não vota, mas tem preferência na distribuição de dividendos ou no reembolso do capital. Units (final 11) são pacotes de ações.",
+"porque": {
+"A": "Há diferenças de direitos entre elas.",
+"B": "O tipo de ação não define dividendo fixo.",
+"D": "Os papéis estão invertidos."
+},
+"dica": "ON (3) vota. PN (4) tem preferência. Unit (11) é pacote."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma empresa com ações negociadas a R$ 80 aprova um desdobramento de 1 para 4.",
+"enunciado": "Depois do desdobramento, um acionista que tinha 100 ações terá:",
+"alt": [
+"25 ações valendo R$ 320 cada.",
+"400 ações valendo R$ 80 cada, quadruplicando seu patrimônio.",
+"100 ações valendo R$ 20 cada, perdendo parte do patrimônio.",
+"400 ações valendo cerca de R$ 20 cada, com o mesmo valor total."
+],
+"certa": "D",
+"gabarito": "No desdobramento, cada ação vira várias, e o preço é ajustado na mesma proporção; o valor total do investimento não muda. A empresa costuma fazer isso para dar mais liquidez à ação. O grupamento é o inverso: menos ações, preço maior.",
+"porque": {
+"A": "Isso seria um grupamento, não um desdobramento.",
+"B": "O preço é ajustado na mesma proporção.",
+"C": "A quantidade aumenta, preservando o valor total."
+},
+"dica": "Desdobramento: mais ações, preço menor, mesmo valor total."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa anuncia dividendos com data com no dia 10. Um investidor compra as ações no dia 11.",
+"enunciado": "Sobre esse provento, o investidor:",
+"alt": [
+"terá direito, porque comprou antes do pagamento.",
+"não terá direito, porque comprou depois da data com.",
+"terá direito só se mantiver as ações por 30 dias.",
+"terá direito a metade do valor anunciado."
+],
+"certa": "B",
+"gabarito": "Data com é o último dia em que quem tem a ação garante o direito ao provento. No dia seguinte (data ex), a ação passa a ser negociada sem o direito, e o preço costuma cair aproximadamente no valor do provento.",
+"porque": {
+"A": "O direito depende de ter a ação no fim da data com.",
+"C": "Não existe prazo mínimo para o direito.",
+"D": "Não há direito proporcional."
+},
+"dica": "Data com = último dia para ter direito. Data ex = sem o provento."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa paga R$ 1.000 de juros sobre capital próprio (JCP) a um acionista pessoa física em 2026.",
+"enunciado": "O valor líquido recebido será de:",
+"alt": [
+"R$ 850, porque há retenção de 15% de IR na fonte.",
+"R$ 775, porque há retenção de 22,5% de IR na fonte.",
+"R$ 825, porque há retenção de 17,5% de IR na fonte.",
+"R$ 1.000, porque JCP é isento como os dividendos."
+],
+"certa": "C",
+"gabarito": "O JCP é uma forma de distribuir resultado que é dedutível para a empresa. Para o acionista, tem IR retido na fonte, de 17,5% desde 2026: R$ 1.000 × 0,825 = R$ 825. Já os dividendos são isentos, com retenção de 10% apenas sobre o que passar de R$ 50 mil por mês da mesma empresa.",
+"porque": {
+"A": "A alíquota passou a 17,5% em 2026.",
+"B": "22,5% é alíquota da renda fixa de curto prazo.",
+"D": "JCP tem IR retido na fonte."
+},
+"dica": "JCP: 17,5% na fonte. Dividendo: isento até R$ 50 mil por mês por empresa."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa fez seu IPO, e a procura dos investidores foi três vezes maior que a quantidade de ações ofertadas.",
+"enunciado": "Nessa situação, o mais provável é que:",
+"alt": [
+"haja rateio entre os investidores, que recebem menos ações do que pediram.",
+"a oferta seja cancelada pela CVM por excesso de demanda.",
+"todos recebam a quantidade pedida, com emissão de ações extras sem limite.",
+"o preço seja definido depois do início das negociações."
+],
+"certa": "A",
+"gabarito": "No IPO, o preço é definido pelo bookbuilding (coleta de intenções). Quando a demanda supera a oferta, há rateio. A demanda não atendida pode criar pressão compradora nos primeiros dias de negociação no mercado secundário.",
+"porque": {
+"B": "Demanda alta não cancela a oferta.",
+"C": "A oferta tem quantidade definida; o excesso de demanda leva ao rateio.",
+"D": "O preço é fixado antes, pelo bookbuilding."
+},
+"dica": "Demanda maior que a oferta = rateio."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa listada faz uma nova oferta de ações. Os acionistas atuais recebem o direito de comprar as novas ações antes dos demais.",
+"enunciado": "Esse direito é chamado de:",
+"alt": [
+"tag along na venda do controle.",
+"direito de preferência na subscrição.",
+"direito de recesso do dissidente.",
+"bonificação em novas ações."
+],
+"certa": "B",
+"gabarito": "Na subscrição, o acionista tem preferência para comprar novas ações na proporção que já tem, evitando a diluição. Ele pode exercer, vender (ceder) o direito ou deixá-lo expirar. Se não participar, sua fatia na empresa diminui.",
+"porque": {
+"A": "Tag along é o direito de vender junto com o controlador.",
+"C": "Recesso é sair da companhia com reembolso em certas deliberações.",
+"D": "Bonificação distribui ações grátis."
+},
+"dica": "Subscrição: pagar pelas novas ações (ou vender o direito)."
+},
+{
+"pd": "2.1.1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O controlador de uma companhia listada no Novo Mercado vende o controle para outro grupo.",
+"enunciado": "Os acionistas minoritários dessa companhia têm direito de:",
+"alt": [
+"vender suas ações pelo mesmo preço pago ao controlador (tag along de 100%).",
+"vender suas ações por 80% do preço pago ao controlador.",
+"receber gratuitamente novas ações do comprador.",
+"impedir a venda do controle por votação em assembleia."
+],
+"certa": "A",
+"gabarito": "Tag along é o direito do minoritário de vender suas ações junto com o controlador. A Lei das S.A. garante 80% do preço para ações ON; o Novo Mercado e o Nível 2 exigem 100%. Drag along é o oposto: obrigação de vender junto.",
+"porque": {
+"B": "80% é o mínimo legal; no Novo Mercado é 100%.",
+"C": "Não há essa previsão.",
+"D": "Minoritários não podem barrar a venda do controle."
+},
+"dica": "Tag along: 80% na lei; 100% no Novo Mercado e Nível 2."
+},
+{
+"pd": "2.1.1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor quer aplicar em empresas com o mais alto padrão de governança da B3, que só podem emitir ações com direito a voto.",
+"enunciado": "O segmento de listagem com essas características é o:",
+"alt": [
+"Bovespa Mais.",
+"Nível 2.",
+"Novo Mercado.",
+"Nível 1."
+],
+"certa": "C",
+"gabarito": "O Novo Mercado é o segmento mais exigente: só ações ON, tag along de 100%, conselheiros independentes e free float mínimo. O Nível 2 se parece, mas aceita PN. O Nível 1 exige basicamente transparência e free float mínimo.",
+"porque": {
+"A": "É um segmento de acesso gradual, voltado a empresas menores.",
+"B": "O Nível 2 tem tag along de 100%, mas aceita PN.",
+"D": "O Nível 1 exige transparência e free float, mas aceita PN."
+},
+"dica": "Novo Mercado = só ON + tag along 100% + independentes."
+},
+{
+"pd": "2.1.1.2.2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta o que é o Ibovespa.",
+"enunciado": "O profissional explica corretamente que o Ibovespa é:",
+"alt": [
+"a taxa de juros cobrada nas operações de compra de ações a prazo.",
+"a lista de empresas com maior lucro anual no Brasil.",
+"um fundo de investimento que replica as ações de bancos brasileiros.",
+"o principal índice da bolsa, formado pelas ações mais negociadas e revisto a cada 4 meses."
+],
+"certa": "D",
+"gabarito": "O Ibovespa é o principal indicador da bolsa brasileira. Reúne as ações mais negociadas, tem carteira revista a cada 4 meses e é um índice de retorno total (considera preço e proventos reinvestidos). IBrX-100 e IBrX-50 reúnem as 100 e as 50 mais negociadas.",
+"porque": {
+"A": "Não é taxa de juros.",
+"B": "O critério é negociação, não lucro.",
+"C": "Ibovespa é índice, não fundo."
+},
+"dica": "Ibovespa = mais negociadas; revisão a cada 4 meses."
+},
+{
+"pd": "2.1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Em um mês, um investidor vendeu R$ 18 mil em ações (operações comuns) e teve R$ 3 mil de lucro.",
+"enunciado": "Sobre o IR desse lucro, é correto afirmar que:",
+"alt": [
+"está isento, porque o total vendido no mês não passou de R$ 20 mil.",
+"paga 15% sobre R$ 18 mil vendidos.",
+"paga 15% sobre R$ 3 mil, porque o lucro foi positivo.",
+"paga 20% sobre R$ 3 mil, porque é renda variável."
+],
+"certa": "A",
+"gabarito": "Em operações comuns com ações no mercado à vista, o lucro é isento se o total das vendas no mês for de até R$ 20 mil. Acima disso, paga 15% sobre o lucro. A isenção não vale para day trade (20%), FII (20%), ETF e BDR (15%).",
+"porque": {
+"B": "O IR incide sobre o lucro, não sobre o valor vendido.",
+"C": "Com vendas até R$ 20 mil no mês, o lucro em ações à vista é isento.",
+"D": "20% é para day trade e FII."
+},
+"dica": "Isenção de R$ 20 mil = sobre o total vendido no mês, só ações à vista."
+},
+{
+"pd": "2.1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor comprou e vendeu as mesmas ações no mesmo dia, pela mesma corretora, com lucro.",
+"enunciado": "Essa operação é tributada em:",
+"alt": [
+"15% sobre o lucro, com isenção para vendas até R$ 20 mil no mês.",
+"20% sobre o lucro, sem isenção, com DARF até o último dia útil do mês seguinte.",
+"22,5% sobre o lucro, retido na fonte pela corretora.",
+"nada, porque a operação foi encerrada no mesmo dia."
+],
+"certa": "B",
+"gabarito": "Day trade (compra e venda no mesmo dia, na mesma corretora) paga 20% sobre o lucro, sem isenção. A corretora retém 1% do ganho (dedo-duro), que é abatido no DARF. O prejuízo de day trade só compensa lucro de day trade.",
+"porque": {
+"A": "Day trade não tem isenção e paga 20%.",
+"C": "Day trade não segue a tabela da renda fixa.",
+"D": "O lucro de day trade é tributado."
+},
+"dica": "Day trade = 20%, sem isenção; prejuízo só compensa day trade."
+},
+{
+"pd": "2.1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Em março, um investidor teve prejuízo de R$ 5 mil em operações comuns com ações. Em junho, teve lucro de R$ 8 mil, com vendas de R$ 60 mil no mês.",
+"enunciado": "O IR devido em junho será calculado sobre:",
+"alt": [
+"R$ 13 mil, somando o prejuízo ao lucro.",
+"nada, porque houve prejuízo no ano.",
+"R$ 8 mil, porque o prejuízo só vale no próprio mês.",
+"R$ 3 mil, compensando o prejuízo de março."
+],
+"certa": "D",
+"gabarito": "Prejuízos em renda variável podem ser compensados com lucros futuros da mesma modalidade (operação comum com operação comum, day trade com day trade), sem prazo. Aqui: 8 mil − 5 mil = 3 mil, tributados a 15%.",
+"porque": {
+"A": "O prejuízo reduz o lucro, não aumenta.",
+"B": "A apuração é mensal, com compensação.",
+"C": "Prejuízo pode ser compensado em meses seguintes, sem prazo."
+},
+"dica": "Prejuízo compensa lucro futuro da mesma modalidade, sem prazo."
+},
+{
+"pd": "2.1.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente conservador se interessa por um COE com capital protegido atrelado ao índice da bolsa americana.",
+"enunciado": "O profissional deve explicar corretamente que o COE:",
+"alt": [
+"garante o capital em qualquer data de resgate, sem risco algum.",
+"tem garantia do FGC e liquidez diária pelo valor investido.",
+"protege o capital só no vencimento e depende da saúde do banco emissor, sem FGC.",
+"é isento de IR para pessoa física, como a LCI."
+],
+"certa": "C",
+"gabarito": "O COE combina renda fixa (que protege o capital) com derivativos (que buscam o ganho). No COE de valor nominal protegido, o capital volta no vencimento; antes disso, vale o preço de mercado. É emitido por banco, sem FGC, e tributado pela tabela regressiva, retido na fonte.",
+"porque": {
+"A": "A proteção vale no vencimento e há risco do emissor.",
+"B": "COE não tem FGC e tem baixa liquidez.",
+"D": "COE segue a tabela regressiva."
+},
+"dica": "COE: proteção só no vencimento, sem FGC, risco do banco emissor."
+},
+{
+"pd": "2.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma cliente pergunta o que é um fundo de investimento.",
+"enunciado": "O profissional explica corretamente que o fundo é:",
+"alt": [
+"uma conta corrente remunerada pelo banco, com garantia do FGC.",
+"um condomínio de investidores, com gestão profissional, em que os ativos pertencem aos cotistas.",
+"um título emitido pelo banco administrador, com o risco desse banco.",
+"um empréstimo dos investidores ao gestor, que paga juros fixos a eles."
+],
+"certa": "B",
+"gabarito": "Fundo é uma comunhão de recursos organizada como condomínio de natureza especial, regulada pela CVM (Resolução 175). O patrimônio é dos cotistas e fica separado do patrimônio do administrador e do gestor. A rentabilidade vem da variação da cota.",
+"porque": {
+"A": "Fundo não é conta e não tem FGC.",
+"C": "Os ativos do fundo são separados do patrimônio do banco.",
+"D": "Os cotistas são donos do patrimônio, não credores do gestor."
+},
+"dica": "Fundo = condomínio de cotistas, com gestão profissional; sem FGC."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Pela Resolução CVM 175, um fundo pode ter várias classes, cada uma com carteira e regras próprias.",
+"enunciado": "Uma consequência importante dessa estrutura para o investidor é que:",
+"alt": [
+"todas as classes respondem juntas pelas perdas de qualquer uma delas.",
+"o investidor de uma classe pode resgatar cotas de outra classe livremente.",
+"o patrimônio de cada classe é segregado, e o problema de uma classe não atinge as demais.",
+"o gestor pode transferir ativos entre classes sem informar os cotistas."
+],
+"certa": "C",
+"gabarito": "A CVM 175 prevê classes com patrimônio segregado: as obrigações de uma classe não atingem as outras. Subclasses compartilham a mesma carteira, mas podem ter condições diferentes (prazos, taxas, público). Essa separação protege os cotistas.",
+"porque": {
+"A": "A segregação patrimonial impede isso.",
+"B": "Cada classe tem suas cotas e regras.",
+"D": "Cada classe tem patrimônio próprio."
+},
+"dica": "Classe = patrimônio segregado. Subclasse = mesma carteira, condições diferentes."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Ao entrar em um fundo, o cliente assina um documento em que declara conhecer o regulamento, os riscos e a possibilidade de perdas.",
+"enunciado": "Esse documento é o:",
+"alt": [
+"prospecto da distribuição pública de cotas.",
+"contrato de custódia dos ativos da carteira.",
+"relatório de classificação de risco do fundo.",
+"termo de adesão e ciência de risco."
+],
+"certa": "D",
+"gabarito": "Antes de investir, o investidor deve ter acesso ao regulamento e à lâmina. Ao ingressar, assina o termo de adesão e ciência de risco, atestando que conhece a política de investimento, os riscos e a possibilidade de perdas.",
+"porque": {
+"A": "O prospecto é documento de oferta, não declaração do cotista.",
+"B": "Custódia é serviço entre fundo e custodiante.",
+"C": "Rating não é assinado pelo cotista."
+},
+"dica": "Antes: regulamento e lâmina. Na entrada: termo de adesão e ciência de risco."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente quer entender quem faz o quê em um fundo de investimento.",
+"enunciado": "Pela CVM 175, os prestadores de serviços essenciais e seus papéis são:",
+"alt": [
+"o administrador, que cuida da estrutura, da cota e das informações, e o gestor, que decide os investimentos.",
+"o custodiante, que decide os investimentos, e o distribuidor, que calcula a cota.",
+"o auditor, que escolhe os ativos, e o cotista, que registra o fundo.",
+"o gestor, que guarda os ativos, e o custodiante, que vende as cotas."
+],
+"certa": "A",
+"gabarito": "Os prestadores essenciais são o administrador (registros, cálculo da cota, informações aos cotistas, regulamento, controles) e o gestor (gestão da carteira, liquidez, dever fiduciário). O custodiante guarda os ativos, e o distribuidor vende as cotas.",
+"porque": {
+"B": "Gestor decide os investimentos; administrador calcula a cota.",
+"C": "Nenhum deles tem essas funções.",
+"D": "Quem guarda os ativos é o custodiante; quem vende cotas é o distribuidor."
+},
+"dica": "Administrador = estrutura e cota. Gestor = carteira."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um fundo de ações tem taxa de performance de 20% sobre o que superar o Ibovespa. No semestre, o fundo rendeu 12% e o Ibovespa 8%, e o fundo está acima da linha d'água.",
+"enunciado": "A taxa de performance incide sobre:",
+"alt": [
+"os 12% de rentabilidade total do fundo.",
+"todo o patrimônio do fundo, como a taxa de administração.",
+"os 8% de rentabilidade do Ibovespa.",
+"os 4 pontos que excederam o Ibovespa."
+],
+"certa": "D",
+"gabarito": "A taxa de performance é cobrada sobre a rentabilidade que exceder o benchmark e só acima da linha d'água (o último valor de cota em que houve cobrança). Aqui, 20% sobre os 4 pontos acima do Ibovespa.",
+"porque": {
+"A": "A performance só incide sobre o que superar o índice de referência.",
+"B": "Performance não é sobre o patrimônio total.",
+"C": "O benchmark é a base de comparação, não da cobrança."
+},
+"dica": "Performance = taxa × (retorno − benchmark), acima da linha d'água."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pediu resgate de um fundo de ações com conversão em D+1 e pagamento em D+3.",
+"enunciado": "Isso significa que:",
+"alt": [
+"o dinheiro cai 1 dia útil após o pedido, e a cota é apurada em 3 dias úteis.",
+"o valor da cota é apurado 1 dia útil após o pedido, e o dinheiro cai 3 dias úteis após o pedido.",
+"o resgate só pode ser pedido entre o primeiro e o terceiro dia útil do mês.",
+"o cliente paga 1% de taxa no primeiro dia e 3% no terceiro dia."
+],
+"certa": "B",
+"gabarito": "Conversão é a data da cota usada no resgate; liquidação é a data em que o dinheiro é pago. Fundos DI costumam ter D+0; fundos de ações costumam ter prazos maiores. Alguns fundos têm carência (prazo sem resgate) ou taxa de saída.",
+"porque": {
+"A": "Os conceitos estão invertidos.",
+"C": "Os prazos contam a partir do pedido.",
+"D": "D+1 e D+3 são prazos, não taxas."
+},
+"dica": "Conversão = qual cota vale. Liquidação = quando o dinheiro cai."
+},
+{
+"pd": "2.1.2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente quer um fundo que invista principalmente em ações.",
+"enunciado": "Pela CVM 175, a classe de ações deve ter, no mínimo:",
+"alt": [
+"51% do patrimônio em ações e ativos relacionados.",
+"95% do patrimônio em ações e ativos relacionados.",
+"67% do patrimônio em ações e ativos relacionados.",
+"80% do patrimônio em ações e ativos relacionados."
+],
+"certa": "C",
+"gabarito": "Limites de composição: renda fixa, no mínimo 80% em ativos de renda fixa; ações, no mínimo 67%; cambial, no mínimo 80% atrelado a moeda estrangeira; multimercado, sem concentração obrigatória. Classe em cotas aplica ao menos 95% em cotas de outros fundos.",
+"porque": {
+"A": "O mínimo é 67%.",
+"B": "95% é o mínimo da classe em cotas de outros fundos.",
+"D": "80% é o mínimo das classes de renda fixa e cambial."
+},
+"dica": "RF 80% · Ações 67% · Cambial 80% · Multimercado sem concentração."
+},
+{
+"pd": "2.1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um fundo de renda fixa tem 60% da carteira em debêntures e outros títulos de empresas.",
+"enunciado": "Por causa dessa composição, o fundo deve:",
+"alt": [
+"ter \"Crédito Privado\" no nome e alertar os investidores sobre o risco.",
+"reduzir a parcela de crédito privado para 30% em até 10 dias.",
+"mudar obrigatoriamente para a classe multimercado.",
+"oferecer garantia do FGC aos cotistas."
+],
+"certa": "A",
+"gabarito": "Fundos com mais de 50% do patrimônio em ativos de crédito privado precisam trazer \"Crédito Privado\" no nome e um alerta sobre o risco de perdas por inadimplência. Esses fundos podem ter resgate mais demorado e não servem para quem precisa de liquidez imediata.",
+"porque": {
+"B": "Não há essa obrigação.",
+"C": "Pode continuar como renda fixa, com o sufixo.",
+"D": "Fundos não têm FGC."
+},
+"dica": "Mais de 50% em crédito privado = \"Crédito Privado\" no nome."
+},
+{
+"pd": "2.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente tem um fundo de renda fixa de longo prazo e percebe uma redução no número de cotas em maio.",
+"enunciado": "Essa redução se deve:",
+"alt": [
+"à taxa de saída cobrada quando o fundo atinge 6 meses.",
+"ao IOF cobrado sobre o patrimônio todo semestre.",
+"a uma taxa de performance cobrada duas vezes por ano.",
+"ao come-cotas, que antecipa o IR à alíquota de 15% em maio e novembro."
+],
+"certa": "D",
+"gabarito": "O come-cotas é a antecipação semestral do IR em fundos, cobrada em maio e novembro, reduzindo a quantidade de cotas. Nos fundos de longo prazo, a alíquota é de 15%; nos de curto prazo, 20%. Classes de ações não têm come-cotas.",
+"porque": {
+"A": "Não há taxa de saída automática.",
+"B": "O IOF só incide em resgates antes de 30 dias.",
+"C": "Performance é taxa do gestor, não IR."
+},
+"dica": "Come-cotas: maio e novembro; 15% longo prazo, 20% curto prazo."
+},
+{
+"pd": "2.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor resgata cotas de um fundo de ações depois de 2 anos, com lucro.",
+"enunciado": "A tributação desse resgate é de:",
+"alt": [
+"22,5% a 15% pela tabela regressiva, com come-cotas.",
+"15% sobre o ganho, só no resgate, sem come-cotas.",
+"15% sobre o ganho, com come-cotas semestral.",
+"isento, porque o fundo aplica em ações."
+],
+"certa": "B",
+"gabarito": "Classes de ações (com pelo menos 67% em ações) pagam 15% sobre o ganho, apenas no resgate, sem come-cotas e sem IOF. Diferentemente das ações compradas diretamente, não têm a isenção de vendas até R$ 20 mil no mês.",
+"porque": {
+"A": "Fundos de ações têm alíquota única de 15%.",
+"C": "Classes de ações não têm come-cotas.",
+"D": "Fundo de ações não tem a isenção de R$ 20 mil."
+},
+"dica": "Fundo de ações: 15% só no resgate, sem come-cotas."
+},
+{
+"pd": "2.1.4",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente quer vender suas cotas de um fundo imobiliário e pergunta como pedir o resgate.",
+"enunciado": "O profissional explica corretamente que, no FII:",
+"alt": [
+"não há resgate; as cotas são vendidas na bolsa, pelo preço de mercado.",
+"o resgate só é permitido depois de 5 anos de aplicação.",
+"o resgate é feito com o administrador em D+30, pelo valor patrimonial.",
+"o resgate é automático quando os imóveis são vendidos."
+],
+"certa": "A",
+"gabarito": "O FII é um fundo fechado: o investidor entra e sai negociando cotas na bolsa, por meio de uma corretora. O preço pode ser diferente do valor patrimonial (P/VP). Cotas pouco negociadas têm risco de liquidez.",
+"porque": {
+"B": "Não há resgate em nenhum prazo.",
+"C": "FII é fundo fechado, sem resgate.",
+"D": "A venda de imóveis não gera resgate de cotas."
+},
+"dica": "FII: sem resgate; compra e venda na bolsa."
+},
+{
+"pd": "2.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma pessoa física recebe rendimentos mensais de um FII com mais de 100 cotistas, cotas negociadas em bolsa, e tem menos de 10% das cotas.",
+"enunciado": "Esses rendimentos são:",
+"alt": [
+"tributados em 20% na fonte.",
+"isentos apenas se o cotista tiver mais de 10% das cotas.",
+"isentos de IR.",
+"tributados em 15% pela tabela regressiva."
+],
+"certa": "C",
+"gabarito": "Os rendimentos de FII são isentos para pessoa física quando as cotas são negociadas em bolsa, o fundo tem 100 ou mais cotistas e o cotista tem menos de 10% das cotas. O ganho na venda das cotas paga 20%, sem isenção de R$ 20 mil.",
+"porque": {
+"A": "Com os requisitos cumpridos, os rendimentos são isentos.",
+"B": "Ter 10% ou mais faz perder a isenção.",
+"D": "FII não segue a tabela regressiva."
+},
+"dica": "Rendimento de FII: isento com requisitos. Venda da cota: 20%."
+},
+{
+"pd": "2.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um FII de lajes corporativas tem 25% da área vaga, e os cotistas notam queda nos rendimentos.",
+"enunciado": "O risco que explica essa queda é o risco de:",
+"alt": [
+"liquidez, porque as cotas pararam de ser negociadas.",
+"câmbio, porque os aluguéis são pagos em dólar.",
+"vacância, que reduz a receita de aluguel do fundo.",
+"crédito, porque o fundo deixou de pagar seus credores."
+],
+"certa": "C",
+"gabarito": "Em FII de tijolo (imóveis), a vacância reduz a receita de aluguéis e ainda gera custos com a área vaga, como condomínio e IPTU. Em FII de papel (CRI), o principal risco é o de crédito dos devedores. Os rendimentos distribuídos caem junto.",
+"porque": {
+"A": "A queda é de receita, não de negociação.",
+"B": "Não há relação com câmbio.",
+"D": "O problema é falta de inquilino, não calote do fundo."
+},
+"dica": "Tijolo: vacância e inquilino. Papel: crédito dos CRIs."
+},
+{
+"pd": "2.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Rita faz a declaração completa do IR, contribui para o INSS e quer um plano de previdência para reduzir o imposto do ano.",
+"enunciado": "O plano mais indicado para Rita é o:",
+"alt": [
+"PGBL, que permite deduzir até 12% da renda bruta tributável.",
+"VGBL, que permite deduzir até 12% da renda bruta tributável.",
+"VGBL, porque é o único plano com IR só sobre o rendimento.",
+"PGBL, que permite deduzir 100% das contribuições feitas no ano."
+],
+"certa": "A",
+"gabarito": "O PGBL permite deduzir as contribuições até 12% da renda bruta tributável, para quem faz a declaração completa e contribui para o INSS ou regime próprio. Em troca, no resgate o IR incide sobre o valor total. O VGBL não deduz, mas o IR incide só sobre o rendimento.",
+"porque": {
+"B": "O VGBL não permite dedução na declaração.",
+"C": "O VGBL tem IR só sobre o rendimento, mas não reduz o IR do ano.",
+"D": "A dedução é limitada a 12% da renda bruta tributável."
+},
+"dica": "PGBL: deduz até 12%, IR sobre o total. VGBL: não deduz, IR só sobre o rendimento."
+},
+{
+"pd": "2.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Sérgio faz a declaração simplificada do IR e quer começar a investir para a aposentadoria pela previdência privada.",
+"enunciado": "O plano mais adequado para Sérgio é o:",
+"alt": [
+"VGBL, porque ele é isento de IR em qualquer prazo de resgate.",
+"PGBL, porque o IR no resgate incide só sobre os rendimentos.",
+"VGBL, porque ele não aproveitaria a dedução do PGBL.",
+"PGBL, porque toda contribuição pode ser deduzida no modelo simplificado."
+],
+"certa": "C",
+"gabarito": "Quem faz a declaração simplificada (ou é isento) não aproveita a dedução do PGBL e acabaria pagando IR sobre o valor total no resgate. Para esse público, o VGBL é mais vantajoso, porque o IR incide apenas sobre o rendimento. O VGBL também recebe o que passar de 12% da renda de quem usa o PGBL.",
+"porque": {
+"A": "O VGBL tem IR sobre o rendimento.",
+"B": "No PGBL o IR incide sobre o total resgatado.",
+"D": "No modelo simplificado não há dedução de PGBL."
+},
+"dica": "Sem dedução (simplificado ou isento) → VGBL."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente vai resgatar um plano de previdência no regime regressivo. Os aportes foram feitos há 7 anos.",
+"enunciado": "A alíquota de IR aplicada a esses aportes é de:",
+"alt": [
+"25%.",
+"15%.",
+"10%.",
+"20%."
+],
+"certa": "D",
+"gabarito": "Tabela regressiva da previdência, por tempo de cada aporte: até 2 anos, 35%; 2 a 4, 30%; 4 a 6, 25%; 6 a 8, 20%; 8 a 10, 15%; acima de 10 anos, 10%. É definitiva e começa a contar a partir de cada aporte.",
+"porque": {
+"A": "25% vale para recursos com mais de 4 até 6 anos.",
+"B": "15% vale para recursos com mais de 8 até 10 anos.",
+"C": "10% só vale para recursos com mais de 10 anos."
+},
+"dica": "Regressivo: 35, 30, 25, 20, 15, 10, em degraus de 2 anos."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente abriu um PGBL há um ano e ainda não decidiu se quer o regime progressivo ou o regressivo de tributação.",
+"enunciado": "Pelas regras atuais (Lei 14.803/2024), ele pode escolher o regime:",
+"alt": [
+"apenas nos primeiros 30 dias após a contratação do plano.",
+"até o primeiro resgate ou o recebimento do primeiro benefício.",
+"a qualquer momento, inclusive depois de vários resgates.",
+"apenas no momento da contratação, sem possibilidade de mudança."
+],
+"certa": "B",
+"gabarito": "A Lei 14.803/2024 permite escolher o regime de tributação da previdência até o primeiro resgate ou o recebimento do benefício. No progressivo, há retenção de 15% na fonte e ajuste na declaração (até 27,5%). No regressivo, a alíquota é definitiva e cai com o tempo.",
+"porque": {
+"A": "O prazo é até o primeiro resgate ou benefício.",
+"C": "A escolha deve ser feita até o primeiro resgate ou benefício.",
+"D": "A lei passou a permitir a escolha mais tarde."
+},
+"dica": "Escolha do regime: até o 1º resgate ou benefício (Lei 14.803)."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente quer trocar seu PGBL de seguradora porque achou um plano com taxa menor.",
+"enunciado": "Essa troca pode ser feita por:",
+"alt": [
+"portabilidade para um VGBL, com IR só sobre o rendimento.",
+"portabilidade para outro PGBL, sem incidência de IR.",
+"resgate total do PGBL e aplicação em um VGBL, sem IR.",
+"transferência para um CDB do mesmo banco, sem IR."
+],
+"certa": "B",
+"gabarito": "Na portabilidade, os recursos vão direto de uma entidade para outra, sem passar pelo cliente e sem IR, entre planos da mesma modalidade (PGBL para PGBL, VGBL para VGBL). Pode haver carência para fazê-la. É a forma de trocar de plano sem perder o benefício tributário.",
+"porque": {
+"A": "A portabilidade só vale entre planos da mesma modalidade.",
+"C": "Resgatar gera IR, e a portabilidade exige mesma modalidade.",
+"D": "Não existe portabilidade de previdência para CDB."
+},
+"dica": "Portabilidade: mesma modalidade, sem IR, direto entre entidades."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Na fase de benefício, um cliente escolhe uma renda que será paga por 15 anos. Se ele morrer antes, os beneficiários continuam recebendo até completar esse prazo.",
+"enunciado": "Essa modalidade de renda é a:",
+"alt": [
+"renda por prazo certo.",
+"renda vitalícia reversível ao cônjuge.",
+"renda vitalícia simples.",
+"renda temporária."
+],
+"certa": "A",
+"gabarito": "Na renda por prazo certo, o pagamento dura o prazo escolhido e, se o titular morrer antes, continua para os beneficiários até o fim. Na temporária, o prazo também é definido, mas os pagamentos cessam com a morte. Na vitalícia, paga-se enquanto o titular viver.",
+"porque": {
+"B": "A reversível continua para o beneficiário por toda a vida dele.",
+"C": "A vitalícia paga enquanto o titular viver, sem prazo fixo.",
+"D": "Na temporária, os pagamentos param com a morte do titular."
+},
+"dica": "Prazo certo: continua aos beneficiários. Temporária: acaba com a morte."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta sobre as taxas cobradas em planos de previdência.",
+"enunciado": "A diferença correta entre elas é:",
+"alt": [
+"as duas incidem só sobre os rendimentos do plano, uma vez por ano.",
+"a de administração incide sobre os aportes; a de carregamento, sobre o patrimônio.",
+"a de administração incide sobre o patrimônio; a de carregamento, sobre os aportes ou resgates.",
+"as duas são proibidas desde que a Lei 14.803 entrou em vigor."
+],
+"certa": "C",
+"gabarito": "A taxa de administração é cobrada ao ano sobre o patrimônio acumulado. A taxa de carregamento incide sobre cada aporte (na entrada) ou sobre o resgate (na saída). Muitos planos atuais têm carregamento zero, mas é preciso conferir.",
+"porque": {
+"A": "Nenhuma das duas incide sobre o rendimento.",
+"B": "Os conceitos estão trocados.",
+"D": "As duas continuam permitidas."
+},
+"dica": "Administração = patrimônio. Carregamento = aportes ou resgates."
+},
+{
+"pd": "2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente compara dois empréstimos com a mesma taxa de juros, mas tarifas e seguros diferentes.",
+"enunciado": "Para saber qual é realmente mais barato, ele deve comparar o:",
+"alt": [
+"índice de inflação usado como referência pelo banco.",
+"prazo de pagamento, escolhendo sempre o mais longo.",
+"valor da primeira parcela de cada um dos empréstimos.",
+"CET, que inclui juros, tarifas, impostos e seguros."
+],
+"certa": "D",
+"gabarito": "O Custo Efetivo Total (CET) reúne juros, tarifas, IOF, seguros e demais encargos, expressos como taxa. É obrigatório informá-lo e é o número certo para comparar ofertas de crédito.",
+"porque": {
+"A": "O que importa é o custo total do crédito.",
+"B": "Prazo maior costuma aumentar o custo total.",
+"C": "A parcela sozinha não mostra o custo total."
+},
+"dica": "Comparar crédito = CET, não só a taxa de juros."
+},
+{
+"pd": "2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma cliente usou R$ 1.000 do limite de R$ 5.000 do cheque especial por 5 dias.",
+"enunciado": "Os juros do cheque especial incidem sobre:",
+"alt": [
+"os R$ 4.000 de limite que não foram usados.",
+"os R$ 1.000 utilizados, pelos dias de uso, além do IOF.",
+"os R$ 5.000 do limite total, mesmo sem uso.",
+"nenhum valor, se a conta for coberta em até 30 dias."
+],
+"certa": "B",
+"gabarito": "No cheque especial, os juros são cobrados sobre o valor efetivamente usado e pelos dias de uso, com teto de 8% ao mês para pessoa física e MEI. Também incide IOF. É uma das linhas mais caras e deve ser usado só por poucos dias.",
+"porque": {
+"A": "Não há juros sobre o limite disponível.",
+"C": "Os juros incidem só sobre o valor usado.",
+"D": "Há juros desde o primeiro dia de uso."
+},
+"dica": "Cheque especial: juros só sobre o usado; teto de 8% ao mês."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente pagou só o mínimo da fatura do cartão e ficou no rotativo.",
+"enunciado": "Sobre o rotativo do cartão, é correto afirmar que:",
+"alt": [
+"tem juros limitados a 8% ao mês, igual ao teto do cheque especial.",
+"não cobra juros, apenas uma multa fixa de 2% ao mês sobre o saldo.",
+"pode durar quantos meses a cliente quiser, sem nenhum limite de encargos.",
+"vale só até a fatura seguinte, com encargos limitados a 100% da dívida original."
+],
+"certa": "D",
+"gabarito": "O rotativo do cartão só pode ser usado até o vencimento da fatura seguinte; depois, o saldo deve ir para um parcelamento. A Lei 14.690 limitou o total de juros e encargos do rotativo e do parcelamento da fatura a 100% do valor original da dívida.",
+"porque": {
+"A": "O teto de 8% é do cheque especial.",
+"B": "O rotativo cobra juros elevados.",
+"C": "Há prazo e limite de encargos."
+},
+"dica": "Rotativo: até a próxima fatura; encargos limitados a 100% da dívida."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente com várias dívidas caras troca todas por um único contrato, com juros menores e parcela que cabe no orçamento.",
+"enunciado": "Essa operação é chamada de:",
+"alt": [
+"refinanciamento ou consolidação de dívidas.",
+"alienação fiduciária do salário do cliente.",
+"antecipação de recebíveis do cartão de crédito.",
+"portabilidade de salário para outro banco."
+],
+"certa": "A",
+"gabarito": "No refinanciamento, o cliente substitui contratos existentes por um novo, com condições melhores (juros menores, prazo maior, parcela adequada). Faz sentido quando o custo total cai. Com a portabilidade de crédito, outra instituição pode quitar a dívida e assumir o contrato.",
+"porque": {
+"B": "Alienação fiduciária é garantia sobre um bem.",
+"C": "Antecipação é para quem tem vendas a receber.",
+"D": "Portabilidade de salário não renegocia dívidas."
+},
+"dica": "Refinanciar = trocar dívida cara por uma mais barata e organizada."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma servidora pública precisa de crédito e o banco oferece consignado, com desconto das parcelas na folha.",
+"enunciado": "O consignado costuma ter juros menores porque:",
+"alt": [
+"não incide IOF nem nenhuma tarifa sobre essa operação.",
+"o banco pode cobrar a dívida de qualquer conta do cliente.",
+"o desconto em folha reduz o risco de inadimplência para o banco.",
+"o governo paga parte dos juros para todos os servidores."
+],
+"certa": "C",
+"gabarito": "No crédito consignado, a parcela é descontada diretamente do salário ou benefício, o que reduz muito o risco de calote. Por isso os juros são menores e os prazos maiores. Há limite de margem consignável, que protege parte da renda do cliente.",
+"porque": {
+"A": "O consignado pode ter IOF.",
+"B": "A garantia é o desconto em folha.",
+"D": "Não há subsídio geral do governo."
+},
+"dica": "Consignado: desconto em folha → risco menor → juros menores."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma família quer comprar um carro com crédito e recebe uma oferta de CDC com o próprio carro como garantia.",
+"enunciado": "Nessa operação, até a quitação:",
+"alt": [
+"o carro é do cliente, e o banco não tem nenhuma garantia.",
+"o banco é dono do carro mesmo depois de quitado o contrato.",
+"o carro fica guardado com o banco até a última parcela.",
+"o carro fica alienado ao banco, que é o dono até o fim do contrato."
+],
+"certa": "D",
+"gabarito": "Na alienação fiduciária, o cliente usa o bem, mas a propriedade fica com o credor até a quitação. Com essa garantia, o CDC costuma ter juros menores e prazo maior que o crédito pessoal. Se o cliente não pagar, o bem pode ser retomado.",
+"porque": {
+"A": "No CDC com alienação fiduciária, o bem é a garantia.",
+"B": "Quitado o contrato, a propriedade passa ao cliente.",
+"C": "O cliente usa o bem normalmente."
+},
+"dica": "Alienação fiduciária: o cliente usa; o credor é dono até quitar."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente quer comprar um imóvel daqui a 5 anos, não tem pressa e está avaliando um consórcio.",
+"enunciado": "Uma característica correta do consórcio é:",
+"alt": [
+"garantir a contemplação no primeiro mês para quem pagar a entrada.",
+"ser fiscalizado pela CVM, como os fundos imobiliários.",
+"não ter juros, mas cobrar taxa de administração, com contemplação por sorteio ou lance.",
+"ter juros iguais aos do financiamento imobiliário, com o imóvel entregue na hora."
+],
+"certa": "C",
+"gabarito": "O consórcio é um grupo de pessoas que contribuem mensalmente para comprar um bem. Não há juros; há taxa de administração e, às vezes, fundo de reserva e seguro. A contemplação ocorre por sorteio ou lance. A supervisão é do Banco Central.",
+"porque": {
+"A": "Contemplação é por sorteio ou lance.",
+"B": "Consórcios são supervisionados pelo Banco Central.",
+"D": "Consórcio não tem juros, e a entrega depende da contemplação."
+},
+"dica": "Consórcio: sem juros, com taxa de administração; sorteio ou lance; Banco Central."
+},
+{
+"pd": "2.4.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente reclama que o banco cobra um pacote de tarifas que ele nunca pediu e pergunta o que tem direito a usar de graça.",
+"enunciado": "Na conta corrente, são serviços essenciais gratuitos, entre outros:",
+"alt": [
+"cartão de débito, 4 saques e 2 transferências entre contas da mesma instituição por mês.",
+"10 saques, 10 transferências e talão de cheques todos os meses.",
+"cartão de crédito sem anuidade e saques ilimitados no caixa eletrônico.",
+"todos os serviços do banco, porque é proibido cobrar tarifas."
+],
+"certa": "A",
+"gabarito": "Os serviços essenciais gratuitos incluem cartão de débito, 4 saques por mês, 2 transferências entre contas da mesma instituição, 2 extratos por mês e consultas pela internet, entre outros. O pacote de tarifas é opcional: o cliente pode ficar só com os essenciais.",
+"porque": {
+"B": "As quantidades gratuitas são menores.",
+"C": "Esses não estão entre os serviços essenciais gratuitos.",
+"D": "É permitido cobrar tarifas além dos essenciais."
+},
+"dica": "Essenciais grátis: débito, 4 saques, 2 transferências, 2 extratos por mês."
+},
+{
+"pd": "2.4.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente caiu em um golpe e fez um Pix para um fraudador. Ela pede ajuda ao banco no mesmo dia.",
+"enunciado": "O mecanismo do Pix que pode ajudar a recuperar o dinheiro é o:",
+"alt": [
+"Pix Saque, que devolve o dinheiro em espécie.",
+"MED, Mecanismo Especial de Devolução.",
+"Pix Automático, que cancela pagamentos recorrentes.",
+"FGC, que devolve até R$ 250 mil por golpe."
+],
+"certa": "B",
+"gabarito": "O MED permite bloquear e devolver valores de um Pix em casos de fraude ou falha operacional, desde que acionado rapidamente pelo cliente junto ao banco. O Pix é um arranjo do Banco Central, liquidado no SPI, 24 horas por dia.",
+"porque": {
+"A": "Pix Saque é forma de sacar dinheiro no comércio.",
+"C": "Pix Automático é para cobranças recorrentes autorizadas.",
+"D": "O FGC cobre quebra de banco, não golpes."
+},
+"dica": "Golpe no Pix → acionar o MED o quanto antes."
+},
+{
+"pd": "2.4.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O Banco Central aumenta a alíquota do depósito compulsório sobre os depósitos à vista.",
+"enunciado": "O efeito esperado sobre os bancos é:",
+"alt": [
+"fim da cobrança de tarifas nas contas correntes.",
+"menos dinheiro disponível para emprestar e crédito mais restrito.",
+"mais dinheiro para emprestar, com queda dos juros do crédito.",
+"garantia maior do FGC para os depósitos à vista."
+],
+"certa": "B",
+"gabarito": "O compulsório é a parte dos depósitos que os bancos precisam manter no Banco Central. Elevá-lo reduz a liquidez e a capacidade de emprestar (política contracionista); reduzi-lo libera recursos para o crédito (expansionista).",
+"porque": {
+"A": "Não tem relação com tarifas.",
+"C": "Compulsório maior retém mais recursos no BC.",
+"D": "O compulsório não altera a cobertura do FGC."
+},
+"dica": "Compulsório sobe → menos crédito. Compulsório cai → mais crédito."
+},
+{
+"pd": "2.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente vai fazer uma viagem e compara a compra de moeda estrangeira em duas casas de câmbio.",
+"enunciado": "Para comparar corretamente o custo das duas ofertas, ele deve usar o:",
+"alt": [
+"VET, que soma a taxa de câmbio, as tarifas e os tributos.",
+"PTAX, porque é a taxa que as casas de câmbio cobram.",
+"cupom cambial, que mede o custo da moeda para turistas.",
+"CET, que é usado em todas as operações de câmbio."
+],
+"certa": "A",
+"gabarito": "O VET (Valor Efetivo Total) mostra quanto custa cada unidade de moeda estrangeira, somando taxa de câmbio, tarifas e IOF. Câmbio só pode ser feito em instituição autorizada pelo Banco Central ou por seus correspondentes.",
+"porque": {
+"B": "A PTAX é só referência; cada instituição cobra a sua taxa.",
+"C": "Cupom cambial é juro em dólar, não custo de compra.",
+"D": "Em câmbio, o indicador de custo total é o VET."
+},
+"dica": "Câmbio: compare pelo VET. PTAX é só referência."
+},
+{
+"pd": "2.4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor pessoa física aplica em um fundo nos Estados Unidos por meio de conta no exterior e tem rendimentos no ano.",
+"enunciado": "Pelas regras atuais (Lei 14.754/2023), esses rendimentos são tributados:",
+"alt": [
+"pela tabela regressiva, com retenção na fonte no Brasil.",
+"de forma isenta, porque o dinheiro está fora do país.",
+"em 27,5%, como salário, no carnê-leão mensal.",
+"em 15%, apurados na declaração anual de IR."
+],
+"certa": "D",
+"gabarito": "A Lei 14.754/2023 estabeleceu que rendimentos de aplicações financeiras no exterior de pessoas físicas são tributados em 15%, apurados na declaração anual. A conta e os bens no exterior devem ser declarados em Bens e Direitos.",
+"porque": {
+"A": "Não há retenção no Brasil; a apuração é anual.",
+"B": "Rendimentos no exterior são tributados.",
+"C": "A lei fixou alíquota de 15% para esses rendimentos."
+},
+"dica": "Investimento no exterior (pessoa física): 15% na declaração anual."
+},
+{
+"pd": "2.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente bateu o carro e o conserto custou R$ 6 mil. A apólice prevê franquia de R$ 2 mil.",
+"enunciado": "Nesse sinistro parcial, a seguradora pagará:",
+"alt": [
+"R$ 8 mil, somando o conserto e a franquia.",
+"R$ 2 mil, que é o valor da franquia contratada.",
+"R$ 4 mil, porque os R$ 2 mil da franquia ficam por conta do segurado.",
+"R$ 6 mil, porque a franquia só vale para roubo."
+],
+"certa": "C",
+"gabarito": "Franquia é a parte do prejuízo que fica com o segurado em sinistros parciais. Aqui, 6 mil − 2 mil = 4 mil pagos pela seguradora. Em perda total ou roubo, em regra não há franquia, e a indenização segue o valor previsto na apólice.",
+"porque": {
+"A": "A franquia é descontada, não somada.",
+"B": "A franquia é a parte paga pelo segurado.",
+"D": "A franquia vale para sinistros parciais."
+},
+"dica": "Franquia = parte do conserto paga pelo segurado."
+},
+{
+"pd": "2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente quer deixar dinheiro para os filhos caso morra, sem que o valor entre no inventário.",
+"enunciado": "Uma característica do seguro de vida que atende esse objetivo é:",
+"alt": [
+"o capital só pode ser pago aos herdeiros previstos em lei, na ordem legal.",
+"o capital entra no inventário e é dividido por um juiz entre os herdeiros.",
+"o capital é pago só depois de concluído o inventário, com desconto de IR.",
+"o capital vai direto aos beneficiários indicados, fora do inventário e isento de IR."
+],
+"certa": "D",
+"gabarito": "No seguro de vida, o segurado indica livremente os beneficiários. O capital é pago diretamente a eles, não entra no inventário e é isento de IR, o que dá liquidez rápida para a família. Pode haver carência, principalmente para morte por doença.",
+"porque": {
+"A": "O beneficiário é de livre escolha.",
+"B": "O seguro de vida não entra no inventário.",
+"C": "É pago direto e é isento de IR."
+},
+"dica": "Seguro de vida: beneficiário livre, fora do inventário, isento de IR."
+},
+{
+"pd": "2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente refinanciou um empréstimo que tinha seguro prestamista. O contrato novo tem saldo e prazo diferentes.",
+"enunciado": "Em relação ao seguro prestamista, o correto é:",
+"alt": [
+"manter a apólice antiga, que passa a cobrir automaticamente o novo contrato.",
+"contratar uma nova cobertura ligada ao novo contrato, livremente, sem venda casada.",
+"indicar os filhos como beneficiários do novo prestamista.",
+"cancelar o seguro, porque refinanciamentos não podem ter prestamista."
+],
+"certa": "B",
+"gabarito": "O seguro prestamista quita a dívida (total ou parcialmente) se o devedor morrer ou ficar inválido; o beneficiário é o credor. Como está ligado a um contrato específico, o refinanciamento exige nova cobertura, de contratação livre: a venda casada é proibida.",
+"porque": {
+"A": "O seguro está ligado ao contrato original.",
+"C": "No prestamista, o beneficiário é o credor.",
+"D": "Refinanciamentos podem ter prestamista."
+},
+"dica": "Prestamista: quita a dívida; beneficiário é o credor; sem venda casada."
+}
+]
+}

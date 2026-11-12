@@ -1,0 +1,384 @@
+{
+"id": "T4",
+"titulo": "Treino do bloco 4",
+"q": [
+{
+"pd": "4.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta o que significam as letras da sigla ESG.",
+"enunciado": "A resposta correta é:",
+"alt": [
+"ambiental, social e governança.",
+"economia, sustentabilidade e gestão.",
+"energia, saúde e garantias.",
+"emissões, solidez e governo."
+],
+"certa": "A",
+"gabarito": "ESG reúne três dimensões avaliadas além dos números financeiros: ambiental (clima, recursos, poluição), social (trabalho, direitos humanos, diversidade, comunidade, consumidor) e governança (conselho, incentivos, ética e transparência).",
+"porque": {
+"B": "A sigla não significa isso.",
+"C": "A sigla não significa isso.",
+"D": "A sigla não significa isso."
+},
+"dica": "E = ambiental. S = social. G = governança."
+},
+{
+"pd": "4.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma empresa melhora a independência do conselho de administração e cria regras de remuneração alinhadas ao longo prazo.",
+"enunciado": "Essas medidas se referem ao pilar:",
+"alt": [
+"de inovação.",
+"social.",
+"ambiental.",
+"de governança."
+],
+"certa": "D",
+"gabarito": "Governança envolve estrutura de conselho, independência, incentivos, ética, controles e transparência. Inclusão financeira, condições de trabalho e diversidade são do pilar social; emissões e uso de recursos, do ambiental.",
+"porque": {
+"A": "Inovação não é pilar do ESG.",
+"B": "O social trata de pessoas e comunidade.",
+"C": "O ambiental trata de clima, recursos e poluição."
+},
+"dica": "Conselho, incentivos e ética = governança."
+},
+{
+"pd": "4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa diz em sua propaganda que é \"100% sustentável\", mas não divulga dados, metas nem resultados ambientais.",
+"enunciado": "Essa prática é chamada de:",
+"alt": [
+"best-in-class.",
+"investimento de impacto.",
+"greenwashing.",
+"engajamento."
+],
+"certa": "C",
+"gabarito": "Greenwashing é apresentar uma imagem sustentável sem prática real nem transparência. As regras da CVM e da Anbima exigem que fundos e empresas que se dizem sustentáveis expliquem metodologia, critérios e indicadores, justamente para combater essa prática.",
+"porque": {
+"A": "Best-in-class é escolher as melhores empresas de cada setor.",
+"B": "Impacto exige resultado mensurável.",
+"D": "Engajamento é o investidor dialogar e votar para melhorar a empresa."
+},
+"dica": "Greenwashing = discurso verde sem prática."
+},
+{
+"pd": "4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um fundo deixa de investir em empresas de tabaco e armas por causa de critérios ESG.",
+"enunciado": "Essa estratégia é chamada de:",
+"alt": [
+"engajamento.",
+"exclusão (filtro negativo).",
+"integração ESG.",
+"best-in-class."
+],
+"certa": "B",
+"gabarito": "Estratégias ESG: exclusão (retira setores ou empresas), best-in-class (escolhe as melhores de cada setor), integração (inclui fatores ESG na análise financeira), engajamento (voto e diálogo com as empresas) e impacto (busca resultado socioambiental mensurável, além do retorno).",
+"porque": {
+"A": "Engajamento é atuar dentro da empresa para melhorá-la.",
+"C": "Integração considera ESG na análise de todos os ativos.",
+"D": "Best-in-class seleciona os melhores de cada setor, sem excluir setores."
+},
+"dica": "Exclusão = tirar setores. Best-in-class = os melhores de cada setor."
+},
+{
+"pd": "4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa emite um título de dívida cujos recursos só podem ser usados em projetos de energia solar.",
+"enunciado": "Esse título é um:",
+"alt": [
+"fundo IS, que precisa ter o sufixo no nome.",
+"green bond, garantido pelo FGC por ter finalidade ambiental.",
+"green bond, e o investidor continua com o risco de crédito da empresa.",
+"sustainability-linked bond, com taxa ligada a metas ESG."
+],
+"certa": "C",
+"gabarito": "O green bond é um título de dívida cujos recursos vão para projetos ambientais. O risco de crédito da emissora continua igual. No sustainability-linked, o uso dos recursos é livre, mas a taxa muda conforme a empresa cumpre ou não metas ESG.",
+"porque": {
+"A": "É um título de dívida, não um fundo.",
+"B": "A finalidade ambiental não traz FGC.",
+"D": "No sustainability-linked, os recursos são livres e a taxa depende de metas."
+},
+"dica": "Green bond = recursos para projeto verde. Risco de crédito continua."
+},
+{
+"pd": "4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um fundo tem como objetivo principal gerar benefício ambiental e divulga relatórios periódicos com os resultados alcançados.",
+"enunciado": "Pelas regras da Anbima, esse fundo:",
+"alt": [
+"é um fundo IS (investimento sustentável) e pode usar esse sufixo no nome.",
+"é obrigado a ter garantia de retorno mínimo aos cotistas.",
+"não precisa explicar metodologia nem critérios no regulamento.",
+"é um fundo que apenas integra ESG e não pode usar o sufixo IS."
+],
+"certa": "A",
+"gabarito": "A Anbima diferencia fundos IS (com objetivo sustentável, sufixo no nome e relatórios de resultado) de fundos que integram ESG (consideram fatores ESG na análise, mas não têm objetivo sustentável como finalidade). A CVM 175 exige que fundos ESG detalhem metodologia e indicadores.",
+"porque": {
+"B": "ESG não garante retorno.",
+"C": "Transparência é exigida justamente nesses fundos.",
+"D": "Quem tem objetivo sustentável e reporta resultados é IS."
+},
+"dica": "IS = objetivo sustentável + sufixo + relatório. Integra ESG = sem sufixo."
+},
+{
+"pd": "4.4",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pergunta o que é blockchain.",
+"enunciado": "A resposta correta é que blockchain é:",
+"alt": [
+"um banco digital autorizado pelo Banco Central a emitir criptomoedas.",
+"um registro distribuído, em blocos encadeados por criptografia, praticamente imutável.",
+"uma moeda digital emitida pelo governo com valor fixo em reais.",
+"um tipo de fundo de investimento que aplica em moedas estrangeiras."
+],
+"certa": "B",
+"gabarito": "Blockchain é um livro-razão distribuído: os registros ficam em blocos ligados por criptografia e copiados em vários computadores, o que dificulta alterações. É a base de criptoativos, contratos inteligentes, DeFi e tokenização.",
+"porque": {
+"A": "Blockchain é tecnologia, não instituição.",
+"C": "Isso lembra o Drex, que usa a tecnologia, mas não é a tecnologia.",
+"D": "Blockchain não é produto de investimento."
+},
+"dica": "Blockchain = registro distribuído e praticamente imutável."
+},
+{
+"pd": "4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um seguro agrícola registrado em blockchain paga a indenização automaticamente quando a estação meteorológica registra seca acima de um limite.",
+"enunciado": "Esse mecanismo é possível graças a:",
+"alt": [
+"um corretor de seguros, que analisa cada caso e decide se paga.",
+"uma DAO, que vota cada indenização em assembleia dos segurados.",
+"um título de capitalização, que sorteia os agricultores premiados.",
+"um contrato inteligente, que recebe os dados do clima por meio de um oráculo."
+],
+"certa": "D",
+"gabarito": "Contrato inteligente é um código em blockchain que se executa sozinho quando as condições previstas acontecem. O oráculo leva dados do mundo real (como chuva ou preço) ao contrato. O seguro paramétrico paga automaticamente quando o parâmetro é atingido.",
+"porque": {
+"A": "Aqui o pagamento é automático, sem análise manual.",
+"B": "O pagamento depende de uma regra automática.",
+"C": "Não há sorteio."
+},
+"dica": "Contrato inteligente se executa sozinho. Oráculo traz os dados de fora."
+},
+{
+"pd": "4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um microempreendedor consegue um empréstimo em uma plataforma DeFi, depositando em garantia criptoativos de valor maior que a dívida.",
+"enunciado": "Uma característica correta desse empréstimo é:",
+"alt": [
+"a plataforma analisa o score do cliente no Banco Central antes de liberar.",
+"o empréstimo tem garantia do FGC, porque foi feito em plataforma digital.",
+"a garantia não pode ser vendida em hipótese alguma até o fim do contrato.",
+"se a garantia perder valor, o contrato pode vendê-la automaticamente para quitar a dívida."
+],
+"certa": "D",
+"gabarito": "Em DeFi, o crédito costuma ser sobrecolateralizado: a garantia vale mais que a dívida. Se a garantia cair abaixo de um limite, o contrato inteligente a liquida automaticamente. Há mais acesso e transparência, mas também riscos de código, de volatilidade e ausência de FGC.",
+"porque": {
+"A": "Em DeFi, a garantia substitui a análise de crédito.",
+"B": "DeFi não tem FGC.",
+"C": "A liquidação automática é justamente o mecanismo de proteção."
+},
+"dica": "Empréstimo DeFi: garantia maior que a dívida e liquidação automática."
+},
+{
+"pd": "4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor quer negociar criptoativos sem deixá-los sob a guarda de uma empresa, usando a própria carteira digital.",
+"enunciado": "O tipo de plataforma adequado a esse desejo é a:",
+"alt": [
+"exchange centralizada, em que a empresa guarda os ativos dos clientes.",
+"DEX (exchange descentralizada), com autocustódia e contratos inteligentes.",
+"conta de pagamento, que guarda os criptoativos com garantia do FGC.",
+"corretora de valores, que registra os criptoativos na B3."
+],
+"certa": "B",
+"gabarito": "Na DEX, a negociação ocorre por contratos inteligentes e o investidor mantém a custódia dos próprios ativos (autocustódia), sem ponto central de falha. Na exchange centralizada, a empresa guarda os ativos, o que traz risco de contraparte e de ataques ao sistema dela.",
+"porque": {
+"A": "Na centralizada, a empresa faz a custódia.",
+"C": "Conta de pagamento não guarda cripto, e não há FGC.",
+"D": "Corretoras tradicionais não negociam cripto dessa forma."
+},
+"dica": "DEX = autocustódia. Exchange centralizada = a empresa guarda."
+},
+{
+"pd": "4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma plataforma divide um imóvel comercial em milhares de tokens e vende cada fração a investidores.",
+"enunciado": "Sobre essa tokenização, é correto afirmar que:",
+"alt": [
+"dispensa qualquer registro oficial do imóvel em cartório.",
+"elimina o risco de vacância, porque o imóvel passa a ser digital.",
+"facilita o acesso e o fracionamento, mas os riscos do imóvel continuam.",
+"garante liquidez diária aos investidores, como um CDB."
+],
+"certa": "C",
+"gabarito": "Tokenizar é representar um ativo ou direito em tokens digitais. Isso facilita o fracionamento, a rastreabilidade e pode ampliar a liquidez, mas os riscos do ativo (vacância, crédito, mercado) continuam, somados a riscos de tecnologia, regulação e plataforma.",
+"porque": {
+"A": "A validade jurídica depende do registro oficial.",
+"B": "Tokenizar muda o registro, não o risco do ativo.",
+"D": "A liquidez depende de haver compradores."
+},
+"dica": "Tokenizar muda o registro, não o risco."
+},
+{
+"pd": "4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente pergunta se o Drex é uma criptomoeda como o bitcoin.",
+"enunciado": "A resposta correta é que o Drex:",
+"alt": [
+"é a versão digital do real, emitida pelo Banco Central, com contratos programáveis.",
+"é uma criptomoeda privada com preço livre, sem relação com o real.",
+"é um fundo de investimento em criptoativos negociado na B3.",
+"vai substituir o Pix em todas as transferências do país."
+],
+"certa": "A",
+"gabarito": "O Drex é a plataforma do real digital (CBDC) do Banco Central, pensada para operações com ativos tokenizados e contratos programáveis. Não é criptomoeda volátil, porque representa o próprio real, e não substitui o Pix.",
+"porque": {
+"B": "O Drex é o real em formato digital.",
+"C": "Não é produto de investimento.",
+"D": "O Drex não substitui o Pix."
+},
+"dica": "Drex = real digital do Banco Central. Não é cripto volátil."
+},
+{
+"pd": "4.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente autoriza que seu banco compartilhe seus dados de conta com outra instituição para receber uma oferta de crédito melhor.",
+"enunciado": "Esse compartilhamento acontece no:",
+"alt": [
+"SCR, que é público e não depende de autorização.",
+"Open Finance, sempre com consentimento do cliente.",
+"cadastro positivo, que só vale para empresas.",
+"Pix, que transfere dados junto com os pagamentos."
+],
+"certa": "B",
+"gabarito": "O Open Finance permite compartilhar dados cadastrais e transacionais, além de serviços como iniciação de pagamento, entre instituições, com consentimento do cliente, para finalidade e prazo definidos e revogável a qualquer momento. Isso aumenta a concorrência e ajuda quem tem pouco histórico de crédito.",
+"porque": {
+"A": "O SCR é cadastro de dívidas, com acesso restrito.",
+"C": "O cadastro positivo também vale para pessoas.",
+"D": "Pix é meio de pagamento."
+},
+"dica": "Open Finance = compartilhar dados com consentimento."
+},
+{
+"pd": "4.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente deu consentimento no Open Finance há 6 meses e agora não quer mais compartilhar seus dados.",
+"enunciado": "O cliente pode:",
+"alt": [
+"revogar o consentimento a qualquer momento.",
+"revogar apenas pessoalmente, em uma agência.",
+"revogar apenas se a instituição concordar.",
+"revogar só depois de 2 anos de compartilhamento."
+],
+"certa": "A",
+"gabarito": "No Open Finance, o consentimento tem finalidade e prazo definidos e pode ser revogado pelo cliente a qualquer momento. O compartilhamento ocorre por canais seguros, sem que o cliente precise passar sua senha para a outra instituição.",
+"porque": {
+"B": "A revogação pode ser feita nos canais digitais.",
+"C": "A decisão é do cliente.",
+"D": "A revogação pode ser feita a qualquer momento."
+},
+"dica": "Consentimento no Open Finance: revogável a qualquer momento."
+},
+{
+"pd": "4.6",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um banco usa inteligência artificial para estimar a probabilidade de fraude em cada compra com cartão.",
+"enunciado": "Esse uso é um exemplo de:",
+"alt": [
+"tokenização.",
+"IA generativa.",
+"IA preditiva.",
+"blockchain."
+],
+"certa": "C",
+"gabarito": "A IA preditiva estima probabilidades a partir de dados (fraude, risco de crédito, cancelamento). A IA generativa cria conteúdo, como textos e respostas em chatbots. Nos dois casos, a instituição continua responsável pelo resultado.",
+"porque": {
+"A": "Tokenização é representar ativos em tokens.",
+"B": "A generativa cria conteúdo, como textos e imagens.",
+"D": "Blockchain é tecnologia de registro, não de previsão."
+},
+"dica": "Preditiva = estima. Generativa = cria."
+},
+{
+"pd": "4.6",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um banco usa um chatbot com IA generativa para responder dúvidas de investimento.",
+"enunciado": "Um cuidado necessário nesse uso é:",
+"alt": [
+"dispensar a responsabilidade da instituição pelas respostas da IA.",
+"usar dados de clientes livremente, porque a LGPD não se aplica à IA.",
+"deixar a IA recomendar produtos sem suitability, porque ela é imparcial.",
+"ter supervisão humana e encaminhar casos complexos a uma pessoa, porque a IA pode errar."
+],
+"certa": "D",
+"gabarito": "IA generativa pode produzir respostas erradas (alucinações). Por isso exige supervisão humana, segurança e respeito à LGPD, opção de atendimento humano e, em recomendações, suitability. A responsabilidade continua sendo da instituição.",
+"porque": {
+"A": "A instituição responde pelas respostas.",
+"B": "A LGPD se aplica.",
+"C": "Recomendações por IA também exigem suitability."
+},
+"dica": "IA no atendimento: supervisão humana, LGPD e suitability."
+},
+{
+"pd": "4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma fintech quer conectar diretamente pessoas que querem emprestar com pessoas que precisam de crédito, por uma plataforma digital.",
+"enunciado": "O tipo de instituição autorizada pelo Banco Central para isso é a:",
+"alt": [
+"corretora de valores, que intermedeia ações na bolsa.",
+"SCD (Sociedade de Crédito Direto), que empresta com capital próprio.",
+"SEP (Sociedade de Empréstimo entre Pessoas).",
+"seguradora, que aceita os riscos de crédito das pessoas."
+],
+"certa": "C",
+"gabarito": "A SEP faz o peer-to-peer lending: conecta credores e devedores por plataforma eletrônica. A SCD empresta com capital próprio. As duas são fintechs de crédito autorizadas e supervisionadas pelo Banco Central.",
+"porque": {
+"A": "Corretora atua em valores mobiliários.",
+"B": "A SCD usa recursos próprios, sem conectar credores.",
+"D": "Seguradora não faz empréstimos entre pessoas."
+},
+"dica": "SEP = conecta pessoas (P2P). SCD = empresta capital próprio."
+},
+{
+"pd": "4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma loja quer aceitar cartões e contrata uma empresa que credencia o lojista, processa as vendas e repassa os valores.",
+"enunciado": "Essa empresa é a:",
+"alt": [
+"adquirente (credenciadora).",
+"registradora de recebíveis.",
+"emissora do cartão.",
+"bandeira do cartão."
+],
+"certa": "A",
+"gabarito": "No arranjo de cartões: a bandeira define as regras; o emissor fornece o cartão ao consumidor; a adquirente (credenciadora) credencia o lojista, processa e paga as vendas (e pode antecipá-las com desconto); a subadquirente intermedeia pequenos lojistas.",
+"porque": {
+"B": "A registradora registra recebíveis, não credencia lojistas.",
+"C": "A emissora é a instituição do consumidor.",
+"D": "A bandeira define as regras do arranjo."
+},
+"dica": "Bandeira = regras. Emissor = consumidor. Adquirente = lojista."
+}
+]
+}

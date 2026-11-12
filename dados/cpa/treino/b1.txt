@@ -1,0 +1,429 @@
+## 1.1.1 fácil
+Q: Lúcia começou a trabalhar em uma corretora e pergunta à colega Renata, profissional CPA, qual órgão está no topo do Sistema Financeiro Nacional e dita as regras gerais para moeda e crédito.
+P: Renata responde corretamente que esse órgão é o:
++ Conselho Monetário Nacional, que define as diretrizes e normas gerais do sistema.
+- Banco Central, que define sozinho as diretrizes de moeda e crédito do país. || O Banco Central executa e fiscaliza; quem define as diretrizes gerais é o CMN.
+- Copom, que define as normas gerais de funcionamento dos bancos do país. || O Copom só decide a meta da taxa Selic; não edita normas para os bancos.
+- Ministério da Fazenda, que edita as normas e fiscaliza todas as instituições. || O ministro da Fazenda preside o CMN, mas o ministério não fiscaliza instituições financeiras.
+G: O CMN é o órgão normativo máximo do SFN: define diretrizes e normas gerais para moeda, crédito e câmbio e fixa a meta de inflação. Ele não executa nem fiscaliza; essas tarefas ficam com o Banco Central (e com a CVM no mercado de valores mobiliários).
+D: CMN = cabeça normativa. Não executa e não fiscaliza.
+
+## 1.1.1 fácil
+Q: Em uma aula, o professor pede que os alunos identifiquem quem integra o Conselho Monetário Nacional.
+P: A composição correta do CMN é:
++ ministro da Fazenda, ministro do Planejamento e presidente do Banco Central.
+- presidente do Banco Central, presidente da CVM e ministro da Fazenda. || O presidente da CVM não integra o CMN.
+- ministro da Fazenda, presidente do BNDES e presidente da Caixa. || BNDES e Caixa são instituições financeiras, não membros do CMN.
+- presidente da República, ministro da Fazenda e presidente da Febraban. || Nem o presidente da República nem entidades privadas integram o CMN.
+G: O CMN tem três membros: o ministro da Fazenda (que preside), o ministro do Planejamento e Orçamento e o presidente do Banco Central. Por ter só autoridades do governo, suas decisões são tomadas em reuniões mensais, com votos registrados em resoluções.
+D: CMN = Fazenda + Planejamento + presidente do BC.
+
+## 1.1.1 médio
+Q: Um cliente leu que uma seguradora foi multada e pergunta a Marcos, profissional CPA, quem cria as regras do mercado de seguros e quem fiscaliza as seguradoras.
+P: Marcos explica corretamente que:
++ o CNSP cria as normas e a SUSEP fiscaliza as seguradoras.
+- o CMN cria as normas e o Banco Central fiscaliza as seguradoras. || Seguros não ficam com CMN e BC; ficam com CNSP e SUSEP.
+- a SUSEP cria as normas e o CNSP fiscaliza as seguradoras. || Os papéis estão invertidos: CNSP normatiza e SUSEP fiscaliza.
+- o CNPC cria as normas e a PREVIC fiscaliza as seguradoras. || CNPC e PREVIC cuidam da previdência fechada, não de seguros.
+G: No mercado de seguros, capitalização e previdência aberta, o CNSP é o órgão normativo e a SUSEP é a supervisora. A lógica se repete em todo o SFN: um conselho cria as regras e uma autarquia fiscaliza (CMN/BC, CMN/CVM, CNSP/SUSEP, CNPC/PREVIC).
+D: Seguros: CNSP normatiza, SUSEP fiscaliza.
+
+## 1.1.1 médio
+Q: Carla trabalha em uma empresa que oferece um fundo de pensão aos funcionários. Ela pergunta a quem cabe fiscalizar esse plano.
+P: O órgão que fiscaliza o fundo de pensão da empresa de Carla é:
++ a PREVIC, que supervisiona as entidades fechadas de previdência complementar.
+- a SUSEP, que supervisiona todos os planos de previdência complementar. || A SUSEP fiscaliza a previdência aberta (PGBL e VGBL), não a fechada.
+- o CNPC, que fiscaliza as entidades fechadas de previdência complementar. || O CNPC cria as normas; a fiscalização é da PREVIC.
+- a CVM, porque o fundo de pensão investe em ações e títulos privados. || Investir em ações não transfere a supervisão da entidade para a CVM.
+G: Fundo de pensão é entidade fechada de previdência complementar (EFPC): atende só empregados de uma empresa patrocinadora ou associados de um instituidor. O CNPC normatiza e a PREVIC fiscaliza. Já a previdência aberta, vendida a qualquer pessoa, fica com CNSP e SUSEP.
+D: Previdência fechada: CNPC normatiza, PREVIC fiscaliza.
+
+## 1.1.2 fácil
+Q: Um estudante pergunta a Ana, profissional CPA, qual instituição tem o poder exclusivo de emitir moeda no Brasil.
+P: Ana responde corretamente que a emissão de moeda é exclusiva:
++ do Banco Central do Brasil.
+- do Tesouro Nacional. || O Tesouro emite títulos públicos, não moeda.
+- da Casa da Moeda, por decisão própria. || A Casa da Moeda fabrica cédulas sob encomenda do Banco Central; não decide emitir.
+- do Conselho Monetário Nacional. || O CMN normatiza; a competência de emitir moeda é do Banco Central.
+G: A Constituição dá ao Banco Central a competência exclusiva de emitir moeda. A Casa da Moeda apenas fabrica cédulas e moedas por encomenda dele. O Tesouro Nacional capta recursos com títulos públicos, que é outra coisa.
+D: Emitir moeda = só o Banco Central.
+
+## 1.1.2 fácil
+Q: Um investidor quer saber qual órgão registra as ofertas públicas de ações e fiscaliza as companhias abertas.
+P: Esse papel é da:
++ CVM, supervisora do mercado de valores mobiliários.
+- B3, que registra as ofertas e pune as companhias abertas. || A B3 é a bolsa; o registro de ofertas e a fiscalização das companhias são da CVM.
+- Anbima, que fiscaliza as companhias abertas por lei. || A Anbima é autorreguladora privada; não tem poder legal de fiscalizar companhias.
+- Banco Central, que supervisiona todo o mercado de capitais. || O Banco Central cuida das instituições financeiras; valores mobiliários são da CVM.
+G: A CVM supervisiona o mercado de valores mobiliários: registra companhias abertas e ofertas públicas, fiscaliza fundos, gestores, analistas e consultores e exige a divulgação de fatos relevantes. Pode punir com advertência, multa, inabilitação, suspensão e cassação.
+D: Ações, debêntures, fundos e ofertas = CVM.
+
+## 1.1.2 médio
+Q: Um banco médio enfrenta falta de dinheiro em caixa por um dia, embora seus ativos sejam bons. Ele recorre a uma linha do Banco Central para cobrir a necessidade.
+P: Essa linha, em que o Banco Central atua como emprestador de última instância, é o:
++ redesconto.
+- depósito compulsório. || O compulsório é um recolhimento obrigatório dos bancos ao BC, não um empréstimo a eles.
+- mercado interbancário. || No interbancário, um banco empresta a outro; o BC não é a contraparte.
+- swap cambial. || Swap cambial é instrumento de proteção contra variação do dólar.
+G: No redesconto, o Banco Central empresta a instituições que estão com falta momentânea de liquidez, cobrando uma taxa. Por isso é chamado de emprestador de última instância. Tornar o redesconto mais caro é uma medida restritiva; mais barato, expansionista.
+D: Redesconto = BC empresta ao banco sem liquidez.
+
+## 1.1.2 médio
+Q: Um banco de pequeno porte tem problemas graves de gestão e risco de quebra. O Banco Central decide afastar os administradores e nomear um interventor para tentar recuperá-lo.
+P: Essa medida corresponde a:
++ um regime especial decretado pelo Banco Central.
+- uma decisão da CVM sobre a companhia em crise. || Regimes especiais de instituições financeiras são decretados pelo Banco Central, não pela CVM.
+- uma recuperação judicial pedida pelos próprios donos. || Instituições financeiras seguem regimes especiais próprios, conduzidos pelo BC.
+- uma garantia acionada automaticamente pelo FGC. || O FGC paga depositantes em caso de quebra; não administra o banco.
+G: Diante de problemas graves, o Banco Central pode decretar regimes especiais: intervenção, RAET (administração especial temporária) ou liquidação extrajudicial. Na intervenção, os administradores são afastados e um interventor assume. O FGC só entra para pagar os depositantes até o limite.
+D: Intervenção, RAET e liquidação extrajudicial = Banco Central.
+
+## 1.1.3 fácil
+Q: Pedro quer abrir conta e precisa de cheque especial, cartão e empréstimo. Também quer aplicar em CDB e ter uma área de crédito imobiliário na mesma instituição.
+P: O tipo de instituição que reúne essas várias carteiras é o:
++ banco múltiplo.
+- banco de investimento. || Banco de investimento não capta depósito à vista nem oferece conta corrente.
+- companhia hipotecária. || Companhia hipotecária só financia imóveis e não tem conta corrente.
+- agência de fomento. || Agência de fomento financia projetos regionais e não atende o público com conta.
+G: O banco múltiplo reúne em uma única instituição várias carteiras: comercial, de investimento, de crédito imobiliário, de crédito e financiamento, entre outras. Para ser banco múltiplo, precisa ter pelo menos duas carteiras, sendo uma delas comercial ou de investimento.
+D: Banco múltiplo = várias carteiras em uma só instituição.
+
+## 1.1.3 médio
+Q: Jorge é associado de uma cooperativa de crédito e ouviu falar de bancos cooperativos. Ele pergunta a Paula, profissional CPA, qual a diferença entre os dois.
+P: Paula explica corretamente que:
++ a cooperativa atende o associado na ponta, e o banco cooperativo dá liquidez e acesso a mercados ao sistema.
+- o banco cooperativo atende o associado na ponta, e a cooperativa só presta serviços de compensação. || É o contrário: a cooperativa atende o associado e o banco cooperativo dá estrutura ao sistema.
+- a cooperativa atende só pessoas jurídicas, e o banco cooperativo só pessoas físicas. || A diferença não está no tipo de cliente, e sim no papel de cada um no sistema.
+- os dois são a mesma instituição, com nomes diferentes conforme a região do país. || São instituições distintas, com papéis e autorizações diferentes.
+G: A cooperativa singular é quem se relaciona com o associado: capta, empresta e oferece serviços. O banco cooperativo é a estrutura que dá escala ao sistema cooperativo: liquidez, compensação, acesso ao mercado financeiro e produtos. As cooperativas são supervisionadas pelo Banco Central e os depósitos têm garantia do FGCoop.
+D: Cooperativa = ponta (associado). Banco cooperativo = estrutura (liquidez e mercado).
+
+## 1.1.3 médio
+Q: Uma empresa quer abrir capital e precisa de uma instituição para estruturar a oferta de ações e assessorar a operação.
+P: A instituição especializada nessa atividade, que não capta depósitos à vista, é o:
++ banco de investimento.
+- banco comercial. || Banco comercial foca em depósitos à vista e crédito de curto prazo.
+- cooperativa de crédito. || Cooperativas atendem associados e não estruturam ofertas de ações.
+- sociedade de crédito ao microempreendedor. || Atende pequenos negócios com crédito, sem atuação em mercado de capitais.
+G: O banco de investimento atua em ofertas de ações e debêntures, fusões e aquisições, administração de recursos e crédito de longo prazo. Não pode captar depósitos à vista; capta com depósitos a prazo e outras fontes.
+D: Banco de investimento = ofertas, fusões e longo prazo. Sem conta corrente.
+
+## 1.1.3 médio
+Q: Juliana usa uma carteira digital em que coloca dinheiro antes de pagar contas. Ela pergunta se esse saldo tem a garantia do FGC.
+P: O profissional CPA explica corretamente que o saldo da conta de pagamento:
++ não tem FGC, mas fica separado do patrimônio da empresa, em títulos públicos ou no Banco Central.
+- tem FGC até R$ 250 mil, como qualquer conta corrente de banco. || Conta de pagamento de instituição de pagamento não tem FGC.
+- não tem nenhuma proteção e pode ser usado pela empresa para pagar suas dívidas. || O dinheiro do cliente é patrimônio separado e não pode ser usado pela empresa.
+- tem FGCoop, porque instituições de pagamento são cooperativas. || Instituição de pagamento não é cooperativa e não tem FGCoop.
+G: Instituições de pagamento (como carteiras digitais) não são cobertas pelo FGC. Em compensação, a regulação exige que o saldo dos clientes seja patrimônio separado, aplicado em títulos públicos federais ou depositado no Banco Central. Assim, se a empresa quebrar, esse dinheiro não entra na massa falida.
+D: Conta de pagamento: sem FGC, mas dinheiro separado e protegido.
+
+## 1.1.3 fácil
+Q: Um cliente compra ações pela corretora X e pergunta se as ações ficam em nome da corretora ou dele.
+P: O profissional explica corretamente que as ações:
++ ficam em nome do investidor, na depositária da B3, e a corretora faz a custódia.
+- ficam em nome da corretora, que repassa os direitos ao investidor. || Os ativos ficam registrados em nome do próprio investidor.
+- ficam em nome da B3 até o investidor vendê-las. || A B3 é depositária, mas a titularidade é do investidor.
+- ficam em nome da empresa emissora até o pagamento de dividendos. || A emissora não guarda as ações dos investidores.
+G: A corretora leva a ordem à bolsa e presta o serviço de custódia, mas as ações ficam registradas em nome do investidor na depositária central da B3. Por isso, se a corretora quebrar, os ativos não se misturam ao patrimônio dela.
+D: Ativo em bolsa = registrado no CPF do investidor.
+
+## 1.1.4 fácil
+Q: Bianca tem R$ 400 mil em CDB de um único banco, que acaba de quebrar.
+P: Considerando a garantia do FGC, Bianca receberá:
++ até R$ 250 mil do FGC; o restante dependerá da liquidação do banco.
+- R$ 400 mil do FGC, porque o CDB é totalmente garantido. || O FGC tem limite de R$ 250 mil por CPF por conglomerado.
+- nada do FGC, porque o CDB não tem essa garantia. || CDB tem garantia do FGC até o limite.
+- R$ 1 milhão do FGC, que é o limite por instituição. || R$ 1 milhão é o teto a cada 4 anos para todas as garantias somadas, não o limite por instituição.
+G: O FGC garante até R$ 250 mil por CPF ou CNPJ por conglomerado financeiro, incluindo rendimentos até a data da quebra. Há também um teto de R$ 1 milhão a cada 4 anos para o total recebido do FGC. O que passar do limite vira crédito na liquidação do banco, sem garantia de recebimento.
+D: FGC: R$ 250 mil por conglomerado; teto de R$ 1 milhão a cada 4 anos.
+
+## 1.1.4 médio
+Q: Um investidor tem dinheiro em Tesouro Direto, LCI, debêntures e um fundo de renda fixa e pergunta quais têm garantia do FGC.
+P: Das aplicações citadas, tem garantia do FGC apenas a:
++ LCI.
+- debênture. || Debênture é dívida de empresa, sem FGC.
+- aplicação no fundo de renda fixa. || Fundos não têm FGC; os ativos são dos cotistas.
+- aplicação no Tesouro Direto. || Título público tem risco soberano e não é coberto pelo FGC.
+G: O FGC cobre produtos emitidos por instituições financeiras associadas: depósitos, poupança, CDB, RDB, LCI, LCA e letras de câmbio, entre outros. Não cobre Tesouro Direto (risco do governo), debêntures, CRI, CRA, COE, fundos e previdência.
+D: FGC = produto de banco (CDB, LCI, LCA, poupança). Fundo, Tesouro e debênture: não.
+
+## 1.1.4 médio
+Q: Um profissional recém-contratado pergunta o que a Anbima faz e se ela pode multar instituições.
+P: A resposta correta é que a Anbima:
++ é uma entidade privada que faz autorregulação por códigos, aplicáveis às instituições que aderem a eles.
+- é uma autarquia federal que fiscaliza e pune todas as instituições financeiras. || Autarquias são BC, CVM, SUSEP e PREVIC; a Anbima é privada.
+- é um departamento da CVM responsável pelas certificações profissionais. || A Anbima não faz parte da CVM.
+- é a bolsa de valores responsável pelos fundos de investimento no Brasil. || A bolsa é a B3; a Anbima é associação privada.
+G: A Anbima é uma associação privada que representa instituições do mercado. Ela faz autorregulação por meio de códigos (de distribuição, de fundos, de ética etc.), que valem para associadas e aderentes e podem gerar penalidades previstas nos próprios códigos. Também oferece certificações, como a CPA, e informações de mercado.
+D: Anbima = autorregulação privada + certificações.
+
+## 1.1.5 médio
+Q: Uma empresa paga um fornecedor por TED e, no mesmo dia, um cliente paga a empresa por Pix.
+P: Os sistemas do Banco Central que liquidam, respectivamente, a TED e o Pix são:
++ o STR e o SPI.
+- o SPI e o STR. || A ordem está invertida: TED é liquidada no STR e Pix no SPI.
+- a B3 e o Selic. || A B3 liquida ativos de bolsa e balcão; o Selic, títulos públicos.
+- o Selic e a B3. || Nenhum desses dois liquida TED ou Pix.
+G: O STR (Sistema de Transferência de Reservas) liquida transferências entre bancos, como a TED, em tempo real e pelo valor bruto. O SPI (Sistema de Pagamentos Instantâneos) liquida o Pix, 24 horas por dia. O Selic registra e liquida títulos públicos federais.
+D: TED = STR. Pix = SPI. Título público = Selic.
+
+## 1.2.1 fácil
+Q: Em uma palestra sobre economia, Paulo explica o papel do sistema financeiro para um grupo de estudantes.
+P: A função principal do sistema financeiro é:
++ levar recursos de quem tem sobra (poupadores) para quem precisa (tomadores).
+- garantir que todos os investimentos tenham retorno positivo. || O sistema financeiro não garante retorno de investimentos.
+- definir os preços de todos os produtos da economia. || Preços são formados pelos mercados de bens e serviços.
+- arrecadar tributos para financiar os gastos do governo. || Arrecadar tributos é papel do governo, não do sistema financeiro.
+G: O sistema financeiro faz a intermediação: capta recursos dos agentes superavitários (que poupam) e os direciona aos deficitários (que precisam investir ou consumir). Essa ponte acontece por bancos (crédito) ou diretamente pelo mercado de capitais (ações e debêntures).
+D: Sistema financeiro = ponte entre poupadores e tomadores.
+
+## 1.2.1 médio
+Q: Uma empresa precisa de recursos para um projeto de 10 anos e decide captar diretamente com investidores, sem tomar empréstimo bancário.
+P: Essa captação acontece no:
++ mercado de capitais, por exemplo com emissão de debêntures ou ações.
+- mercado monetário, com operações de curtíssimo prazo entre bancos. || O monetário cuida de liquidez de curtíssimo prazo.
+- mercado de crédito, com financiamento bancário de longo prazo. || No mercado de crédito, o banco é o intermediário; aqui a captação é direta.
+- mercado cambial, com a venda de moeda estrangeira. || O mercado cambial é de compra e venda de moedas.
+G: O mercado de capitais reúne operações de médio e longo prazo em que a empresa capta diretamente com investidores, como ações (sócios) e debêntures (credores). É a chamada desintermediação. O mercado de crédito, ao contrário, passa pelo banco.
+D: Captar direto com investidores, a longo prazo = mercado de capitais.
+
+## 1.2.3 fácil
+Q: Uma notícia diz que o governo teve superávit primário, mas déficit nominal no ano. Um cliente acha a informação contraditória.
+P: O profissional CPA explica corretamente que:
++ o primário exclui os juros da dívida; somando os juros, o resultado pode ficar negativo.
+- o primário inclui os juros da dívida, e o nominal exclui esses juros. || É o contrário: o nominal inclui juros; o primário não.
+- os dois resultados medem a mesma coisa, então a notícia está errada. || São medidas diferentes, e os dois podem ter sinais opostos.
+- o nominal considera só os gastos com pessoal, e o primário todos os demais. || A diferença entre eles é o pagamento de juros.
+G: Resultado primário = receitas − despesas, sem os juros da dívida. Resultado nominal = primário − juros. Se o governo arrecada mais do que gasta (superávit primário), mas paga muitos juros, o nominal pode ser deficitário.
+D: Primário: sem juros. Nominal: com juros.
+
+## 1.2.3 médio
+Q: Investidores passam a duvidar da capacidade do governo de controlar suas contas, e as taxas dos títulos públicos longos sobem.
+P: O efeito mais provável desse desequilíbrio fiscal sobre a economia é:
++ aumento do risco-país e de juros, com menos espaço para investimentos produtivos.
+- queda imediata dos juros longos e valorização dos títulos prefixados já emitidos. || Com mais risco, os juros sobem e os prefixados já emitidos perdem valor.
+- redução da inflação esperada, pela confiança maior no governo. || Desconfiança fiscal tende a elevar a inflação esperada.
+- valorização automática do real, por causa da entrada de capital estrangeiro. || A percepção de risco costuma afastar capital e desvalorizar o real.
+G: Quando o mercado percebe descontrole fiscal, exige prêmio de risco maior para financiar o governo. Os juros (sobretudo os longos) sobem, os títulos prefixados já emitidos caem de preço, o crédito encarece e o investimento produtivo diminui. O equilíbrio fiscal faz o caminho inverso.
+D: Risco fiscal → prêmio maior → juros longos sobem → títulos caem.
+
+## 1.2.3 médio
+Q: Um aluno pergunta quais regras ajudam a manter as contas públicas sob controle no Brasil.
+P: A combinação correta de instrumentos de responsabilidade fiscal é:
++ a Lei de Responsabilidade Fiscal, com limites de gasto e dívida, e o arcabouço fiscal, que limita o crescimento das despesas.
+- a política monetária do Copom, que controla a despesa pública por meio da Selic. || O Copom cuida da inflação, não das despesas do governo.
+- o depósito compulsório, que obriga o governo a guardar parte das receitas no Banco Central. || Compulsório é recolhimento dos bancos, não do governo.
+- o câmbio flutuante, que equilibra automaticamente receitas e despesas do governo. || O regime de câmbio não equilibra as contas públicas.
+G: A LRF estabelece limites para despesas com pessoal e dívida, metas fiscais e transparência para todos os entes. O arcabouço fiscal limita o crescimento das despesas a uma parcela do crescimento das receitas, com metas de resultado primário. Juntos, formam a estrutura de sustentabilidade fiscal.
+D: LRF (limites e transparência) + arcabouço fiscal (teto para o crescimento das despesas).
+
+## 1.2.4 fácil
+Q: A inflação está acima da meta e o Banco Central quer reduzir a quantidade de dinheiro na economia.
+P: Uma medida coerente com esse objetivo é:
++ vender títulos públicos no mercado aberto.
+- comprar títulos públicos no mercado aberto. || Comprar títulos injeta dinheiro na economia.
+- reduzir a alíquota do depósito compulsório. || Compulsório menor libera dinheiro para os bancos emprestarem.
+- baratear o redesconto para os bancos. || Redesconto mais barato facilita a liquidez, o oposto do desejado.
+G: Política monetária contracionista retira moeda da economia: o Banco Central vende títulos (recolhe dinheiro), aumenta o compulsório e encarece o redesconto, e o Copom eleva a Selic. A expansionista faz o contrário.
+D: Contracionista: vende título, sobe compulsório, encarece redesconto.
+
+## 1.2.4 médio
+Q: Um banco tem sobra de caixa no fim do dia, e o Banco Central faz com ele uma operação em que vende títulos hoje e se compromete a recomprá-los amanhã.
+P: Esse tipo de operação:
++ é uma compromissada que enxuga liquidez do sistema por um prazo curto.
+- é uma venda definitiva de títulos que aumenta a dívida pública em longo prazo. || É temporária: os títulos voltam ao BC no prazo combinado.
+- é um empréstimo de redesconto concedido ao banco que tem sobra de caixa. || Redesconto é para quem tem falta de liquidez, não sobra.
+- é uma operação de swap cambial para proteger o banco contra a alta do dólar. || Não envolve moeda estrangeira.
+G: Na compromissada, uma parte vende títulos com compromisso de recomprá-los em data futura. Quando o Banco Central vende títulos com compromisso de recompra, retira dinheiro do sistema por um período (enxuga liquidez). É um instrumento de curtíssimo prazo do mercado monetário, usado para manter a taxa Selic efetiva perto da meta.
+D: Compromissada do BC = enxuga ou injeta liquidez por pouco tempo.
+
+## 1.2.4 médio
+Q: Uma cliente pergunta quem decide a taxa Selic e com que frequência.
+P: O profissional explica corretamente que a meta da Selic é definida:
++ pelo Copom, formado pela diretoria do Banco Central, em 8 reuniões por ano.
+- pelo CMN, em reunião mensal, junto com a meta de inflação. || O CMN fixa a meta de inflação; a Selic é decidida pelo Copom.
+- pelo Tesouro Nacional, nos leilões semanais de títulos públicos. || Leilões do Tesouro formam preços dos títulos, mas não definem a meta da Selic.
+- pela B3, conforme a média dos empréstimos entre bancos. || A B3 apura a taxa DI; a meta da Selic é do Copom.
+G: O Copom (Comitê de Política Monetária), formado pelo presidente e pelos diretores do Banco Central, se reúne 8 vezes por ano, decide a meta da Selic e divulga comunicado e ata. A meta de inflação, que o Copom persegue, é fixada pelo CMN e medida pelo IPCA.
+D: Copom = meta Selic, 8 vezes por ano. CMN = meta de inflação.
+
+## 1.2.4 difícil
+Q: O Copom eleva a Selic de forma forte e inesperada. Um cliente tem um título prefixado comprado há um ano e pergunta o que acontece com ele.
+P: O efeito esperado sobre o título prefixado do cliente é:
++ o preço de mercado cai, e vender antes do vencimento pode gerar perda.
+- o preço de mercado sobe, porque o título passa a pagar a nova Selic. || Prefixado não acompanha a Selic; sua taxa é fixa.
+- nada muda, porque a taxa contratada está garantida em qualquer data. || A taxa só é garantida se o título for levado até o vencimento.
+- o título é automaticamente convertido em pós-fixado. || Não há conversão automática de indexador.
+G: Quando os juros sobem, o fluxo fixo do prefixado é descontado por uma taxa maior, e o preço de mercado cai. Quem segura até o vencimento recebe a taxa contratada; quem vende antes realiza a perda. Selic alta também encarece o crédito, desacelera a atividade e tende a valorizar o real.
+D: Juros sobem → prefixado cai. Taxa garantida só no vencimento.
+
+## 1.2.5 fácil
+Q: Um cliente pergunta se o governo define o preço do dólar no Brasil.
+P: A resposta correta é que o Brasil adota:
++ câmbio flutuante, com intervenções do Banco Central só para suavizar a volatilidade.
+- câmbio fixo, com o dólar definido pelo CMN a cada mês. || O Brasil não fixa o câmbio.
+- câmbio fixo, com o dólar definido pelo Banco Central todo dia útil. || A PTAX é uma média de referência, não um preço fixado.
+- câmbio livre, sem nenhuma atuação do Banco Central no mercado. || O BC pode atuar com leilões e swaps para reduzir oscilações bruscas.
+G: No câmbio flutuante, a taxa é formada pela oferta e demanda de moeda estrangeira. O Banco Central pode atuar (leilões de dólar à vista, swaps cambiais) para reduzir oscilações bruscas, sem perseguir um preço específico. A PTAX é só a taxa de referência que ele calcula.
+D: Câmbio flutuante: mercado define; BC só suaviza.
+
+## 1.2.5 médio
+Q: Diante de forte procura por proteção contra a alta do dólar, o Banco Central faz leilões de um instrumento que oferece essa proteção sem entregar moeda física.
+P: Esse instrumento é o:
++ swap cambial tradicional.
+- swap cambial reverso. || O reverso protege contra a queda do dólar.
+- leilão de compra de dólares à vista. || Comprar dólares aumenta a demanda e não protege contra a alta.
+- recolhimento de compulsório sobre câmbio. || Compulsório não é instrumento de proteção cambial para o mercado.
+G: No swap cambial tradicional, o Banco Central assume a ponta que perde quando o dólar sobe, oferecendo hedge ao mercado sem vender reservas. O swap reverso faz o oposto. O câmbio continua flutuante; o BC só atende a demanda por proteção.
+D: Swap tradicional = proteção contra a alta do dólar.
+
+## 1.2.5 médio
+Q: Uma empresa importadora usa a cotação divulgada diariamente pelo Banco Central como referência para seus contratos em dólar.
+P: Essa cotação de referência é a:
++ PTAX.
+- taxa DI. || A taxa DI é de juros entre bancos, não de câmbio.
+- taxa Selic. || A Selic é a taxa básica de juros.
+- TR. || A TR corrige poupança e FGTS, não câmbio.
+G: A PTAX é a taxa de câmbio de referência calculada pelo Banco Central a partir de consultas feitas aos dealers ao longo do dia. É usada em contratos, conversões e liquidação de derivativos. Não é um preço fixado pelo governo.
+D: PTAX = taxa de referência do dólar, calculada pelo BC.
+
+## 1.2.6 fácil
+Q: Um cliente quer saber qual índice é usado como inflação oficial do país e na meta de inflação.
+P: Esse índice é o:
++ IPCA, calculado pelo IBGE.
+- IGP-M, calculado pela FGV. || O IGP-M é muito usado em aluguel, mas não é a inflação oficial.
+- INCC, calculado pela FGV. || O INCC mede custos da construção civil.
+- IPC-Fipe, calculado pela Fipe. || O IPC-Fipe mede preços ao consumidor da cidade de São Paulo.
+G: O IPCA, do IBGE, mede a inflação das famílias com renda de 1 a 40 salários mínimos nas principais regiões e é o índice oficial da meta de inflação, fixada pelo CMN. O IGP-M (FGV) é composto em 60% por preços no atacado e reage mais ao dólar e às commodities.
+D: IPCA (IBGE) = inflação oficial e meta.
+
+## 1.2.6 médio
+Q: Em um ano de forte alta do dólar e das commodities, um inquilino percebe que o reajuste do seu aluguel foi bem maior que o IPCA.
+P: Isso ocorreu porque o contrato usa o IGP-M, que:
++ tem 60% de peso no atacado e reage mais ao dólar e às commodities.
+- mede só os preços dos aluguéis residenciais nas capitais do país. || O IGP-M não é índice de aluguel; mede preços amplos da economia.
+- é calculado pelo IBGE com a mesma cesta de produtos do IPCA. || O IGP-M é da FGV e tem composição diferente.
+- acompanha mês a mês a variação da Selic definida pelo Copom. || O IGP-M é índice de preços, não de juros.
+G: O IGP-M (FGV) combina IPA (preços ao produtor, 60%), IPC (consumidor, 30%) e INCC (construção, 10%). Como o atacado é sensível a câmbio e commodities, o IGP-M oscila mais que o IPCA. Reajuste = valor × (1 + índice).
+D: IGP-M = 60% atacado. Dólar sobe → IGP-M dispara.
+
+## 1.2.6 médio
+Q: O PIB nominal cresceu 9% no ano, e a inflação do período foi de 5%. Um cliente diz que a economia cresceu 9%.
+P: O profissional corrige corretamente que o crescimento econômico:
++ é medido pelo PIB real e ficou em torno de 4%.
+- é medido pelo PIB nominal e foi mesmo de 9%. || O nominal inclui o aumento de preços; crescimento se mede em termos reais.
+- é a soma do PIB nominal com a inflação, ou seja, 14%. || Inflação deve ser descontada, não somada.
+- só pode ser medido no fim de cada década. || O PIB é medido trimestralmente e anualmente.
+G: Crescimento econômico é a variação do PIB real, que retira o efeito da inflação. De forma exata: (1,09 ÷ 1,05) − 1 ≈ 3,8%. Pelo lado da demanda, PIB = consumo + investimento + gastos do governo + exportações − importações.
+D: Crescimento = PIB real, descontada a inflação.
+
+## 1.2.7 fácil
+Q: Um investidor precisa vender rapidamente um imóvel e só consegue comprador aceitando um desconto grande.
+P: O risco que se materializou nessa situação é o risco de:
++ liquidez.
+- crédito. || Risco de crédito é o devedor não pagar.
+- contraparte central. || Contraparte central é a B3 garantindo liquidações em bolsa.
+- câmbio. || Não há moeda estrangeira envolvida.
+G: Risco de liquidez é a dificuldade de vender um ativo rapidamente sem perda de valor. Imóveis, títulos sem mercado secundário ativo e cotas pouco negociadas têm liquidez menor. Por isso a reserva de emergência deve ficar em ativos de liquidez diária.
+D: Liquidez = vender rápido sem desconto.
+
+## 1.2.7 médio
+Q: Um cliente comprou uma debênture de uma empresa que, meses depois, deixou de pagar os juros.
+P: O risco que se materializou foi o risco de:
++ crédito.
+- mercado. || Risco de mercado é oscilação de preços, não calote.
+- liquidez. || Liquidez é a dificuldade de vender; aqui o problema é o não pagamento.
+- operacional. || Risco operacional envolve falhas de pessoas, processos ou sistemas.
+G: Risco de crédito é a possibilidade de o emissor ou devedor não pagar juros ou principal. Debêntures, CRI, CRA e CDB carregam risco de crédito do emissor (no CDB, mitigado pelo FGC até o limite). O rating é uma opinião sobre esse risco.
+D: Calote = risco de crédito.
+
+## 1.3.1 fácil
+Q: Uma aplicação de R$ 10.000 rende 1% ao mês, com juros compostos, por 2 meses.
+P: O valor ao final do período será de:
++ R$ 10.201,00.
+- R$ 10.200,00. || Esse seria o resultado com juros simples.
+- R$ 10.100,00. || Esse é o valor após um mês apenas.
+- R$ 10.020,00. || Valor sem relação com a taxa de 1% ao mês por 2 meses.
+G: Juros compostos: M = C × (1 + i)^n = 10.000 × 1,01² = 10.201. No segundo mês, os juros incidem também sobre os juros do primeiro mês (R$ 100 + R$ 101). Em juros simples seriam R$ 200 no total.
+D: Composto: M = C × (1 + i)^n. Juros sobre juros.
+
+## 1.3.1 médio
+Q: Um cliente diz que uma taxa de 1% ao mês equivale a 12% ao ano em uma aplicação com juros compostos.
+P: O profissional corrige corretamente que a taxa anual equivalente é de aproximadamente:
++ 12,68% ao ano.
+- 12% ao ano, porque basta multiplicar por 12. || Multiplicar por 12 vale para taxas proporcionais (juros simples).
+- 11,39% ao ano, porque os juros compostos reduzem a taxa. || Com juros compostos, a taxa anual fica acima de 12%.
+- 13,5% ao ano, somando 1,5% de capitalização. || Não há esse acréscimo fixo.
+G: Taxa equivalente composta: (1 + i anual) = (1 + i mensal)^12. Assim, 1,01^12 ≈ 1,1268, ou 12,68% ao ano. Multiplicar por 12 é a lógica dos juros simples (taxa proporcional).
+D: Equivalente (composto): (1 + i)^12. Proporcional (simples): i × 12.
+
+## 1.3.2 médio
+Q: Um investimento rendeu 10% no ano, e a inflação do período foi de 4%.
+P: O ganho real do investidor foi de aproximadamente:
++ 5,77%.
+- 6%. || Subtrair a inflação é só uma aproximação; o cálculo correto é pela divisão.
+- 14,4%. || A inflação deve ser descontada, não somada.
+- 2,5%. || Valor sem relação com a fórmula correta.
+G: Taxa real (Fisher): (1 + nominal) ÷ (1 + inflação) − 1 = 1,10 ÷ 1,04 − 1 ≈ 5,77%. Subtrair direto (10% − 4%) dá uma aproximação que exagera o ganho real.
+D: Real = (1 + nominal) ÷ (1 + inflação) − 1.
+
+## 1.3.3 médio
+Q: Uma empresa avalia um projeto com investimento de R$ 1 milhão. Trazidos a valor presente pelo custo de capital, os fluxos futuros somam R$ 1,2 milhão.
+P: Sobre esse projeto, é correto afirmar que:
++ o VPL é positivo, de R$ 200 mil, e o projeto cria valor.
+- o VPL é negativo, porque o investimento ocorre antes dos fluxos. || O VPL já considera o tempo; aqui ele é positivo.
+- o VPL é de R$ 1,2 milhão, porque considera só os fluxos futuros. || O VPL desconta o investimento inicial.
+- não é possível avaliar o projeto sem conhecer a TIR. || O VPL já basta para decidir.
+G: VPL = valor presente dos fluxos − investimento = 1,2 milhão − 1 milhão = R$ 200 mil. VPL positivo significa que o projeto rende mais que o custo de capital (TIR acima da taxa de desconto) e cria valor.
+D: VPL > 0 = cria valor. VPL = VP dos fluxos − investimento.
+
+## 1.3 médio
+Q: Uma família compara o financiamento de um imóvel pelos sistemas SAC e Price, com mesma taxa e prazo.
+P: É correto afirmar que, no SAC:
++ a amortização é constante, as parcelas caem com o tempo e o total de juros é menor.
+- a parcela é fixa do início ao fim e o total de juros é maior. || Isso descreve a tabela Price.
+- a amortização cresce com o tempo e as parcelas aumentam. || No SAC a amortização é constante e as parcelas diminuem.
+- não há cobrança de juros nas primeiras parcelas. || Há juros desde a primeira parcela, sobre o saldo devedor.
+G: No SAC, a amortização é constante (valor ÷ prazo), e os juros incidem sobre um saldo que cai rápido; por isso as parcelas diminuem e o total de juros é menor. Na Price, a parcela é fixa, a amortização começa pequena e cresce, e o total de juros é maior.
+D: SAC: amortização fixa, parcela cai. Price: parcela fixa, mais juros.
+
+## 1.4.4 médio
+Q: Dois investidores negociam ações na bolsa. Um deles pergunta o que acontece se a outra parte não pagar ou não entregar as ações.
+P: O profissional explica corretamente que a B3 atua como:
++ contraparte central, garantindo a liquidação e eliminando o risco de contraparte para o investidor.
+- seguradora, indenizando o investidor que perder dinheiro com a queda das ações. || A B3 não protege contra queda de preço.
+- fiscal da CVM, punindo o investidor que não pagar a operação. || A B3 não é fiscal da CVM.
+- banco emissor das ações, devolvendo o valor investido. || Quem emite ações é a companhia.
+G: Na contraparte central, a B3 se coloca entre comprador e vendedor e garante a liquidação, usando garantias depositadas pelos participantes. Assim o investidor não corre o risco de a outra ponta não cumprir. A B3 também atua como depositária central e câmara de compensação (clearing).
+D: Contraparte central = B3 no meio, garantindo a liquidação.
+
+## 1.4.10 médio
+Q: Roberto tem R$ 1,5 milhão aplicado e quer investir em um fundo restrito a investidores qualificados.
+P: Para ser considerado investidor qualificado, Roberto precisa:
++ ter mais de R$ 1 milhão em investimentos e assinar uma declaração dessa condição.
+- ter mais de R$ 10 milhões em investimentos e assinar declaração. || R$ 10 milhões é o critério do investidor profissional.
+- ter perfil arrojado no questionário de suitability. || Perfil não define a classificação de investidor qualificado.
+- ter renda mensal acima de R$ 50 mil, comprovada por holerite. || O critério é o valor investido, não a renda.
+G: Pela Resolução CVM 30, é qualificado quem tem mais de R$ 1 milhão em aplicações financeiras e atesta isso por escrito (há outras hipóteses, como certas certificações para recursos próprios). Profissional é quem tem mais de R$ 10 milhões, também com declaração.
+D: Qualificado: mais de R$ 1 milhão. Profissional: mais de R$ 10 milhões.
+
+## 1.4.12 fácil
+Q: Uma instituição vai divulgar a rentabilidade de um fundo em material publicitário.
+P: Pelo Código Anbima, é obrigatório:
++ incluir o aviso de que rentabilidade passada não é garantia de rentabilidade futura.
+- destacar só o período de melhor desempenho do fundo. || Escolher só o melhor período induz o investidor a erro.
+- prometer que o retorno passado se repetirá nos próximos anos. || Prometer retorno é proibido.
+- omitir as taxas, para não confundir o investidor. || As informações devem ser claras e completas.
+G: O Código de Distribuição da Anbima exige publicidade clara e equilibrada: períodos comparáveis, sem destacar só o melhor, com avisos obrigatórios como o de que rentabilidade passada não garante rentabilidade futura. Os princípios são boa-fé, transparência, diligência e lealdade.
+D: Publicidade: sem cherry picking e com o aviso de rentabilidade passada.
+
+## 1.4.2 médio
+Q: Um cliente pergunta como o Banco Central evita que a quebra de um banco contamine todo o sistema.
+P: O profissional explica corretamente que o Banco Central:
++ exige capital proporcional ao risco e liquidez mínima e monitora o risco sistêmico.
+- garante com recursos públicos todos os depósitos acima do limite do FGC, sem exceção. || O BC não garante depósitos; o FGC tem limite.
+- proíbe os bancos de emprestar em momentos de crise para evitar qualquer perda. || Emprestar é atividade normal dos bancos; o que se exige é capital e controle de risco.
+- define diariamente o preço das ações dos bancos negociadas na bolsa. || O BC não fixa preços de ações.
+G: A regulação prudencial (inspirada em Basileia) exige capital proporcional aos riscos, colchões de liquidez e limite de alavancagem. O Banco Central monitora o risco sistêmico (contágio) e pode usar medidas macroprudenciais, como o adicional contracíclico de capital, além de linhas de liquidez em crises.
+D: Basileia = capital proporcional ao risco + liquidez + limite de alavancagem.

@@ -1,0 +1,449 @@
+## 2.1.1.1.1 fácil
+Q: Fernanda quer montar sua reserva de emergência em título público e pede uma indicação a Rui, profissional CPA.
+P: O título mais adequado para esse objetivo é o:
++ Tesouro Selic, que acompanha os juros básicos e oscila pouco.
+- Tesouro Prefixado de longo prazo, que paga uma taxa fixa conhecida. || Prefixado longo oscila muito se vendido antes do vencimento.
+- Tesouro IPCA+ com vencimento em 2045, que protege contra a inflação. || Título longo atrelado ao IPCA oscila bastante antes do vencimento.
+- Tesouro Renda+, que paga parcelas mensais na aposentadoria. || O Renda+ é voltado à aposentadoria, não à reserva de emergência.
+G: A reserva precisa de liquidez e baixa oscilação. O Tesouro Selic (LFT) é pós-fixado na Selic, com variação de preço pequena, e pode ser vendido em qualquer dia útil. Prefixados e IPCA+ longos podem ter perdas relevantes se vendidos antes do vencimento.
+D: Reserva em título público = Tesouro Selic.
+
+## 2.1.1.1.1 fácil
+Q: Um cliente pergunta qual título público paga juros semestrais e é corrigido pela inflação.
+P: O título que tem essas duas características é:
++ o Tesouro IPCA+ com Juros Semestrais (NTN-B).
+- o Tesouro IPCA+ (NTN-B Principal). || A versão Principal não paga cupons; paga tudo no vencimento.
+- o Tesouro Prefixado com Juros Semestrais (NTN-F). || A NTN-F paga cupons, mas tem taxa fixa, sem correção pela inflação.
+- o Tesouro Selic (LFT). || A LFT é pós-fixada na Selic e não paga cupons.
+G: A NTN-B paga IPCA + taxa, com cupons semestrais de 6% ao ano sobre o valor corrigido pela inflação. A NTN-B Principal tem a mesma rentabilidade, mas paga tudo no vencimento. A NTN-F é prefixada com cupom de 10% ao ano.
+D: NTN-B = IPCA + cupom. NTN-B Principal = IPCA sem cupom. NTN-F = prefixado com cupom.
+
+## 2.1.1.1.1 médio
+Q: Um cliente comprou Tesouro IPCA+ 2035 com taxa de 6% ao ano. Dois anos depois, as taxas desse título caíram para 5% ao ano.
+P: Se ele vender o título agora, o mais provável é que:
++ obtenha rentabilidade acima da contratada, porque o preço subiu com a queda da taxa.
+- obtenha exatamente a rentabilidade contratada de 6% mais IPCA. || A taxa contratada só é garantida no vencimento; antes, vale o preço de mercado.
+- tenha prejuízo, porque a taxa de mercado ficou abaixo da contratada. || Taxa de mercado menor eleva o preço do título.
+- não consiga vender, porque o Tesouro só recompra no vencimento. || O Tesouro Direto tem liquidez diária, pelo preço de mercado.
+G: O preço dos títulos anda ao contrário das taxas. Quando a taxa de mercado cai, o preço sobe, e quem vende antes ganha acima do contratado. Se a taxa subisse, o preço cairia e a venda antecipada poderia dar perda. Mantido até o vencimento, rende o contratado.
+D: Taxa cai → preço sobe. Taxa sobe → preço cai.
+
+## 2.1.1.1.1 médio
+Q: Um investidor aplica R$ 30 mil no Tesouro Direto e pergunta quais custos e tributos terá.
+P: Os custos e tributos que podem incidir são:
++ custódia da B3, taxa da corretora (se houver), IR regressivo e IOF antes de 30 dias.
+- apenas a taxa de administração cobrada pelo Tesouro e IR fixo de 15%. || Não há taxa de administração do Tesouro, e o IR segue a tabela regressiva.
+- IR de 15% sobre todo o valor investido, cobrado no momento da compra. || O IR incide sobre o rendimento, no resgate ou no cupom.
+- nenhum custo, porque títulos públicos são isentos para pessoa física. || Títulos públicos não são isentos de IR.
+G: No Tesouro Direto incidem a taxa de custódia da B3 (sobre o valor aplicado, acima de um piso), a taxa da corretora se ela cobrar, IR pela tabela regressiva sobre o rendimento e IOF em resgates antes de 30 dias. Não há FGC: o risco é do Tesouro Nacional.
+D: Tesouro: custódia B3 + IR regressivo (+ IOF antes de 30 dias).
+
+## 2.1.1.1.2 médio
+Q: Clara quer juntar dinheiro para a faculdade do filho, que começa daqui a 10 anos, e receber o valor em parcelas mensais durante o curso.
+P: O título público pensado para esse objetivo é o:
++ Tesouro Educa+, corrigido pelo IPCA e pago em 60 parcelas mensais.
+- Tesouro Renda+, pago em 240 parcelas mensais na aposentadoria. || O Renda+ é voltado à aposentadoria.
+- Tesouro Selic, que paga todo o valor no vencimento. || A LFT não foi desenhada para pagar parcelas.
+- Tesouro Prefixado com Juros Semestrais, que paga cupons fixos. || Paga cupons semestrais, não parcelas mensais durante o curso.
+G: O Tesouro Educa+ acumula até a data escolhida e depois paga 60 parcelas mensais (5 anos), corrigidas pelo IPCA, para custear estudos. O Renda+ segue a mesma lógica, com 240 parcelas (20 anos), para a aposentadoria.
+D: Educa+ = 60 parcelas (estudos). Renda+ = 240 parcelas (aposentadoria).
+
+## 2.1.1.1.3 fácil
+Q: Um cliente quer saber o que é um CDB.
+P: O profissional explica corretamente que o CDB é:
++ um título emitido por banco para captar recursos, com garantia do FGC até o limite.
+- um título emitido pelo Tesouro Nacional, com risco do governo federal. || Títulos do Tesouro são títulos públicos, não CDB.
+- uma cota de fundo de investimento que aplica em títulos públicos. || CDB é título bancário, não cota de fundo.
+- uma ação preferencial de banco, que paga dividendos mensais. || CDB é renda fixa, não ação.
+G: O CDB (Certificado de Depósito Bancário) é um título de renda fixa emitido por bancos. Pode ser prefixado, pós-fixado (geralmente % do CDI) ou híbrido (IPCA + taxa). Tem IR pela tabela regressiva e garantia do FGC até R$ 250 mil por conglomerado.
+D: CDB = dívida do banco, com FGC.
+
+## 2.1.1.1.3 médio
+Q: Um CDB paga 100% do CDI, e uma LCI do mesmo banco paga 90% do CDI. O cliente vai aplicar por 200 dias.
+P: Considerando o IR, a melhor opção para o cliente pessoa física é:
++ a LCI, porque o CDB, com IR de 20%, renderia 80% do CDI líquido.
+- o CDB, porque 100% do CDI é sempre melhor que 90% do CDI. || É preciso comparar o rendimento líquido, depois do IR.
+- o CDB, porque a LCI tem IR de 22,5% nesse prazo. || A LCI é isenta de IR para pessoa física.
+- as duas empatam, porque os dois títulos têm o mesmo IR. || Só o CDB paga IR.
+G: Com 200 dias, o CDB paga IR de 20%: 100% × (1 − 0,20) = 80% do CDI líquido. A LCI é isenta para pessoa física, então rende 90% do CDI líquido. Compare sempre líquido com líquido: taxa × (1 − IR) contra a taxa isenta.
+D: Compare líquido: CDB × (1 − IR) contra LCI/LCA isenta.
+
+## 2.1.1.1.3 médio
+Q: Um cliente pergunta se pode usar uma LCA como reserva de emergência, já que ela é isenta e tem FGC.
+P: O profissional explica corretamente que a LCA:
++ tem carência mínima, por isso não serve para uma reserva que pode ser usada a qualquer hora.
+- é ideal para a reserva, porque tem liquidez diária garantida desde o primeiro dia. || LCI e LCA têm carência mínima obrigatória.
+- não pode ser comprada por pessoa física, só por empresas do agronegócio. || Pessoa física pode aplicar e é isenta.
+- perde a isenção de IR se for resgatada depois de terminada a carência. || A isenção não depende do momento do resgate.
+G: LCI e LCA são isentas de IR para pessoa física e têm FGC, mas exigem prazo mínimo de carência antes do resgate. Por isso não atendem uma reserva de emergência, que precisa de liquidez imediata. São boas para objetivos com prazo definido.
+D: LCI/LCA: isentas e com FGC, mas com carência. Não servem de reserva.
+
+## 2.1.1.1.4 médio
+Q: Um cliente compara uma LCA a 92% do CDI e um CRA a 98% do CDI, ambos isentos.
+P: O profissional explica corretamente que a diferença de taxa reflete principalmente:
++ o risco maior do CRA, emitido por securitizadora, sem FGC e dependente do lastro.
+- a garantia maior do CRA, que tem FGC ilimitado por investidor. || O CRA não tem FGC.
+- o IR mais alto cobrado na LCA, que precisa ser compensado na taxa. || Os dois são isentos para pessoa física.
+- a liquidez diária garantida do CRA, que a LCA não oferece. || CRA costuma ter baixa liquidez no secundário.
+G: A LCA é emitida por banco e tem FGC até o limite. O CRA é emitido por securitizadora, com lastro em recebíveis do agronegócio em patrimônio separado (regime fiduciário), sem FGC; o risco é o do devedor do lastro. Taxa maior costuma remunerar risco maior.
+D: LCA = banco + FGC. CRA = securitizadora, sem FGC, risco do lastro.
+
+## 2.1.1.1.5 médio
+Q: Uma empresa emitiu debêntures e nomeou um agente fiduciário. Um debenturista pergunta qual é o papel dele.
+P: O agente fiduciário:
++ representa e protege os interesses dos debenturistas, fiscalizando a emissão.
+- garante o pagamento das debêntures se a empresa não pagar. || O agente fiduciário não é garantidor.
+- define a taxa de juros que a empresa vai pagar aos debenturistas. || A taxa é definida na emissão, não pelo agente.
+- compra as debêntures que os investidores quiserem vender. || Ele não é formador de mercado.
+G: O agente fiduciário atua em nome dos debenturistas: acompanha o cumprimento das obrigações da emissora, fiscaliza garantias, convoca assembleias e age em caso de inadimplência. Ele não paga a dívida no lugar da empresa.
+D: Agente fiduciário protege os debenturistas, mas não garante o pagamento.
+
+## 2.1.1.1.5 médio
+Q: Um investidor compara duas debêntures da mesma empresa: uma com garantia real e outra subordinada.
+P: Se a empresa quebrar, a ordem de preferência no recebimento é:
++ a com garantia real recebe antes da subordinada.
+- a subordinada recebe antes, porque paga taxa maior. || Subordinada fica por último entre os credores.
+- as duas recebem juntas, na mesma proporção. || As garantias definem preferências diferentes.
+- nenhuma recebe, porque debênture não dá direito sobre os bens. || Debenturistas são credores e têm direito conforme a garantia.
+G: A ordem de prioridade das debêntures é: garantia real (bem específico) > garantia flutuante (privilégio geral sobre os ativos) > quirografária (sem garantia) > subordinada (recebe só antes dos acionistas). Quanto menor a garantia, maior a taxa exigida.
+D: Real > flutuante > quirografária > subordinada.
+
+## 2.1.1.1.6 médio
+Q: Uma pessoa física compra debêntures incentivadas de uma empresa de energia.
+P: Sobre a tributação dessa aplicação, é correto afirmar que:
++ os rendimentos são isentos de IR para pessoa física.
+- os rendimentos pagam IR pela tabela regressiva, como um CDB. || As incentivadas da Lei 12.431 são isentas para pessoa física.
+- os rendimentos pagam IR fixo de 15% na fonte. || Para pessoa física não há IR nessas debêntures.
+- a isenção só vale se a debênture for mantida por mais de 10 anos. || A isenção não depende de prazo mínimo de 10 anos.
+G: As debêntures incentivadas (Lei 12.431) financiam infraestrutura e são isentas de IR para pessoa física. Ainda assim, têm risco de crédito da emissora, risco de mercado e liquidez restrita, e não têm FGC.
+D: Debênture incentivada = isenta para pessoa física, mas com risco de crédito.
+
+## 2.1.1.1.6 difícil
+Q: Uma debênture conversível paga taxa menor que uma debênture simples da mesma empresa.
+P: Isso acontece porque a conversível:
++ dá ao investidor a opção de trocá-la por ações da própria emissora.
+- tem garantia do FGC, o que reduz o risco do investidor. || Debênture não tem FGC.
+- é emitida pelo Tesouro Nacional, com risco soberano. || É emitida pela empresa.
+- pode ser trocada por ações de outra companhia do mercado. || Troca por ações de outra empresa é a debênture permutável.
+G: A conversível embute uma opção: o investidor pode convertê-la em ações da própria emissora. Como essa opção tem valor, a empresa paga juros menores. A permutável dá o direito de troca por ações de outra companhia.
+D: Conversível = ações da emissora. Permutável = ações de outra empresa.
+
+## 2.1.1.1.7 médio
+Q: A agência de rating rebaixa a nota de uma empresa que tem debêntures negociadas no mercado.
+P: O efeito esperado sobre o preço dessas debêntures é:
++ queda, porque o mercado passa a exigir uma taxa maior pelo risco.
+- alta, porque a empresa terá de pagar juros maiores aos atuais investidores. || A taxa do título já emitido não muda; o preço é que se ajusta.
+- nenhum, porque o rating é só uma opinião sem efeito no preço. || Mesmo sendo opinião, o rating influencia a taxa exigida.
+- resgate automático das debêntures pela empresa. || Rebaixamento não gera resgate automático.
+G: O rating é uma opinião sobre o risco de crédito, não uma garantia. Quando ele cai, o mercado exige spread maior para carregar aquele risco; como o fluxo do título é fixo, o preço cai. BBB− é o último degrau do grau de investimento.
+D: Rating cai → spread sobe → preço cai.
+
+## 2.1.1.1.8 fácil
+Q: Com a Selic em 12% ao ano, um cliente pergunta quanto rende a poupança.
+P: O rendimento da poupança, nesse cenário, é de:
++ 0,5% ao mês mais TR.
+- 70% da Selic mais TR. || Essa regra vale quando a Selic está em 8,5% ao ano ou menos.
+- 100% do CDI, sem IR. || A poupança não acompanha o CDI.
+- 0,5% ao mês mais IPCA. || A correção é pela TR, não pelo IPCA.
+G: Para depósitos feitos desde 4/5/2012: com Selic acima de 8,5% ao ano, a poupança rende 0,5% ao mês + TR; com Selic até 8,5%, rende 70% da Selic + TR. O rendimento é creditado no aniversário mensal e é isento de IR para pessoa física.
+D: Selic > 8,5%: 0,5% a.m. + TR. Selic ≤ 8,5%: 70% da Selic + TR.
+
+## 2.1.1.1.9 médio
+Q: Uma cliente depositou dinheiro na poupança no dia 30 de janeiro e pergunta quando recebe o primeiro rendimento.
+P: O profissional explica corretamente que o aniversário dessa aplicação será:
++ no dia 1º de cada mês.
+- no dia 30 de cada mês, inclusive em fevereiro. || Depósitos em 29, 30 e 31 têm aniversário no dia 1º.
+- no último dia útil de cada mês. || A regra não é o último dia útil.
+- todos os dias, porque a poupança rende diariamente. || A poupança rende uma vez por mês, no aniversário.
+G: A poupança credita rendimento uma vez por mês, na data de aniversário do depósito. Depósitos feitos nos dias 29, 30 e 31 passam a ter aniversário no dia 1º do mês seguinte. Quem resgata antes do aniversário perde o rendimento daquele mês.
+D: Depósito em 29, 30 ou 31 → aniversário no dia 1º.
+
+## 2.1.1.1.10 médio
+Q: Um cliente pergunta para que serve a TR e a TLP.
+P: A resposta correta é:
++ a TR corrige poupança, FGTS e financiamento habitacional; a TLP é a taxa do BNDES.
+- a TR é a taxa dos empréstimos do BNDES; a TLP corrige a poupança e o FGTS. || Os papéis estão trocados.
+- as duas são índices oficiais de inflação calculados pelo IBGE. || Nenhuma é índice de inflação do IBGE.
+- as duas são fixadas pelo Copom, nas reuniões que definem a Selic. || O Copom fixa só a meta da Selic.
+G: A TR (Taxa Referencial), calculada pelo Banco Central, corrige a poupança, o FGTS e contratos do sistema de habitação. A TLP (Taxa de Longo Prazo) é usada nos financiamentos do BNDES e combina IPCA com uma taxa de juro real.
+D: TR = poupança, FGTS e habitação. TLP = BNDES.
+
+## 2.1.1.1.11 fácil
+Q: Um cliente vai resgatar um CDB aplicado há 400 dias.
+P: A alíquota de IR sobre o rendimento será de:
++ 17,5%.
+- 15%. || 15% vale para aplicações com mais de 720 dias.
+- 20%. || 20% vale para aplicações de 181 a 360 dias.
+- 22,5%. || 22,5% vale para aplicações de até 180 dias.
+G: Tabela regressiva da renda fixa: até 180 dias, 22,5%; de 181 a 360, 20%; de 361 a 720, 17,5%; acima de 720, 15%. O IR incide só sobre o rendimento e é retido na fonte.
+D: 22,5 / 20 / 17,5 / 15 nos cortes de 180, 360 e 720 dias.
+
+## 2.1.1.1.12 médio
+Q: Um cliente aplicou em um CDB com liquidez diária e precisou resgatar depois de 10 dias.
+P: Sobre a tributação desse resgate, é correto afirmar que:
++ incide IOF sobre o rendimento, e o IR de 22,5% incide sobre o que sobrar.
+- não incide IOF, porque o CDB é isento desse imposto. || O IOF incide em resgates antes de 30 dias.
+- incide IOF sobre o valor total aplicado, e não há IR. || O IOF incide sobre o rendimento, e o IR também é devido.
+- incide apenas IR de 15%, porque o prazo foi curto. || Prazo curto tem a alíquota mais alta: 22,5%.
+G: Em resgates antes de 30 dias, incide IOF sobre o rendimento, por uma tabela regressiva que vai de 96% (1º dia) a 0% (30º dia). Primeiro se calcula o IOF; depois, o IR de 22,5% sobre o rendimento que sobrou. Em poucos dias, o IOF consome quase todo o ganho.
+D: Antes de 30 dias: IOF primeiro, depois IR sobre o que sobrou.
+
+## 2.1.1.2 fácil
+Q: Um cliente pergunta qual a diferença entre ações ON e PN.
+P: A resposta correta é que:
++ a ON vota; a PN, em regra, não vota, mas tem prioridade em dividendos ou reembolso.
+- a PN dá direito a voto; a ON tem prioridade nos dividendos. || Os papéis estão invertidos.
+- a ON paga dividendos fixos todo ano; a PN paga dividendos variáveis. || O tipo de ação não define dividendo fixo.
+- as duas dão os mesmos direitos; só muda o código de negociação na bolsa. || Há diferenças de direitos entre elas.
+G: Ação ordinária (ON, código terminado em 3) dá direito a voto em assembleia. Ação preferencial (PN, final 4) em regra não vota, mas tem preferência na distribuição de dividendos ou no reembolso do capital. Units (final 11) são pacotes de ações.
+D: ON (3) vota. PN (4) tem preferência. Unit (11) é pacote.
+
+## 2.1.1.2 fácil
+Q: Uma empresa com ações negociadas a R$ 80 aprova um desdobramento de 1 para 4.
+P: Depois do desdobramento, um acionista que tinha 100 ações terá:
++ 400 ações valendo cerca de R$ 20 cada, com o mesmo valor total.
+- 400 ações valendo R$ 80 cada, quadruplicando seu patrimônio. || O preço é ajustado na mesma proporção.
+- 25 ações valendo R$ 320 cada. || Isso seria um grupamento, não um desdobramento.
+- 100 ações valendo R$ 20 cada, perdendo parte do patrimônio. || A quantidade aumenta, preservando o valor total.
+G: No desdobramento, cada ação vira várias, e o preço é ajustado na mesma proporção; o valor total do investimento não muda. A empresa costuma fazer isso para dar mais liquidez à ação. O grupamento é o inverso: menos ações, preço maior.
+D: Desdobramento: mais ações, preço menor, mesmo valor total.
+
+## 2.1.1.2 médio
+Q: Uma empresa anuncia dividendos com data com no dia 10. Um investidor compra as ações no dia 11.
+P: Sobre esse provento, o investidor:
++ não terá direito, porque comprou depois da data com.
+- terá direito, porque comprou antes do pagamento. || O direito depende de ter a ação no fim da data com.
+- terá direito a metade do valor anunciado. || Não há direito proporcional.
+- terá direito só se mantiver as ações por 30 dias. || Não existe prazo mínimo para o direito.
+G: Data com é o último dia em que quem tem a ação garante o direito ao provento. No dia seguinte (data ex), a ação passa a ser negociada sem o direito, e o preço costuma cair aproximadamente no valor do provento.
+D: Data com = último dia para ter direito. Data ex = sem o provento.
+
+## 2.1.1.2 médio
+Q: Uma empresa paga R$ 1.000 de juros sobre capital próprio (JCP) a um acionista pessoa física em 2026.
+P: O valor líquido recebido será de:
++ R$ 825, porque há retenção de 17,5% de IR na fonte.
+- R$ 1.000, porque JCP é isento como os dividendos. || JCP tem IR retido na fonte.
+- R$ 850, porque há retenção de 15% de IR na fonte. || A alíquota passou a 17,5% em 2026.
+- R$ 775, porque há retenção de 22,5% de IR na fonte. || 22,5% é alíquota da renda fixa de curto prazo.
+G: O JCP é uma forma de distribuir resultado que é dedutível para a empresa. Para o acionista, tem IR retido na fonte, de 17,5% desde 2026: R$ 1.000 × 0,825 = R$ 825. Já os dividendos são isentos, com retenção de 10% apenas sobre o que passar de R$ 50 mil por mês da mesma empresa.
+D: JCP: 17,5% na fonte. Dividendo: isento até R$ 50 mil por mês por empresa.
+
+## 2.1.1.2 médio
+Q: Uma empresa fez seu IPO, e a procura dos investidores foi três vezes maior que a quantidade de ações ofertadas.
+P: Nessa situação, o mais provável é que:
++ haja rateio entre os investidores, que recebem menos ações do que pediram.
+- todos recebam a quantidade pedida, com emissão de ações extras sem limite. || A oferta tem quantidade definida; o excesso de demanda leva ao rateio.
+- a oferta seja cancelada pela CVM por excesso de demanda. || Demanda alta não cancela a oferta.
+- o preço seja definido depois do início das negociações. || O preço é fixado antes, pelo bookbuilding.
+G: No IPO, o preço é definido pelo bookbuilding (coleta de intenções). Quando a demanda supera a oferta, há rateio. A demanda não atendida pode criar pressão compradora nos primeiros dias de negociação no mercado secundário.
+D: Demanda maior que a oferta = rateio.
+
+## 2.1.1.2 médio
+Q: Uma empresa listada faz uma nova oferta de ações. Os acionistas atuais recebem o direito de comprar as novas ações antes dos demais.
+P: Esse direito é chamado de:
++ direito de preferência na subscrição.
+- tag along na venda do controle. || Tag along é o direito de vender junto com o controlador.
+- bonificação em novas ações. || Bonificação distribui ações grátis.
+- direito de recesso do dissidente. || Recesso é sair da companhia com reembolso em certas deliberações.
+G: Na subscrição, o acionista tem preferência para comprar novas ações na proporção que já tem, evitando a diluição. Ele pode exercer, vender (ceder) o direito ou deixá-lo expirar. Se não participar, sua fatia na empresa diminui.
+D: Subscrição: pagar pelas novas ações (ou vender o direito).
+
+## 2.1.1.2.3 médio
+Q: O controlador de uma companhia listada no Novo Mercado vende o controle para outro grupo.
+P: Os acionistas minoritários dessa companhia têm direito de:
++ vender suas ações pelo mesmo preço pago ao controlador (tag along de 100%).
+- vender suas ações por 80% do preço pago ao controlador. || 80% é o mínimo legal; no Novo Mercado é 100%.
+- receber gratuitamente novas ações do comprador. || Não há essa previsão.
+- impedir a venda do controle por votação em assembleia. || Minoritários não podem barrar a venda do controle.
+G: Tag along é o direito do minoritário de vender suas ações junto com o controlador. A Lei das S.A. garante 80% do preço para ações ON; o Novo Mercado e o Nível 2 exigem 100%. Drag along é o oposto: obrigação de vender junto.
+D: Tag along: 80% na lei; 100% no Novo Mercado e Nível 2.
+
+## 2.1.1.2.3 médio
+Q: Um investidor quer aplicar em empresas com o mais alto padrão de governança da B3, que só podem emitir ações com direito a voto.
+P: O segmento de listagem com essas características é o:
++ Novo Mercado.
+- Nível 1. || O Nível 1 exige transparência e free float, mas aceita PN.
+- Nível 2. || O Nível 2 tem tag along de 100%, mas aceita PN.
+- Bovespa Mais. || É um segmento de acesso gradual, voltado a empresas menores.
+G: O Novo Mercado é o segmento mais exigente: só ações ON, tag along de 100%, conselheiros independentes e free float mínimo. O Nível 2 se parece, mas aceita PN. O Nível 1 exige basicamente transparência e free float mínimo.
+D: Novo Mercado = só ON + tag along 100% + independentes.
+
+## 2.1.1.2.2.3 fácil
+Q: Um cliente pergunta o que é o Ibovespa.
+P: O profissional explica corretamente que o Ibovespa é:
++ o principal índice da bolsa, formado pelas ações mais negociadas e revisto a cada 4 meses.
+- um fundo de investimento que replica as ações de bancos brasileiros. || Ibovespa é índice, não fundo.
+- a taxa de juros cobrada nas operações de compra de ações a prazo. || Não é taxa de juros.
+- a lista de empresas com maior lucro anual no Brasil. || O critério é negociação, não lucro.
+G: O Ibovespa é o principal indicador da bolsa brasileira. Reúne as ações mais negociadas, tem carteira revista a cada 4 meses e é um índice de retorno total (considera preço e proventos reinvestidos). IBrX-100 e IBrX-50 reúnem as 100 e as 50 mais negociadas.
+D: Ibovespa = mais negociadas; revisão a cada 4 meses.
+
+## 2.1.1.3 fácil
+Q: Em um mês, um investidor vendeu R$ 18 mil em ações (operações comuns) e teve R$ 3 mil de lucro.
+P: Sobre o IR desse lucro, é correto afirmar que:
++ está isento, porque o total vendido no mês não passou de R$ 20 mil.
+- paga 15% sobre R$ 3 mil, porque o lucro foi positivo. || Com vendas até R$ 20 mil no mês, o lucro em ações à vista é isento.
+- paga 20% sobre R$ 3 mil, porque é renda variável. || 20% é para day trade e FII.
+- paga 15% sobre R$ 18 mil vendidos. || O IR incide sobre o lucro, não sobre o valor vendido.
+G: Em operações comuns com ações no mercado à vista, o lucro é isento se o total das vendas no mês for de até R$ 20 mil. Acima disso, paga 15% sobre o lucro. A isenção não vale para day trade (20%), FII (20%), ETF e BDR (15%).
+D: Isenção de R$ 20 mil = sobre o total vendido no mês, só ações à vista.
+
+## 2.1.1.3 médio
+Q: Um investidor comprou e vendeu as mesmas ações no mesmo dia, pela mesma corretora, com lucro.
+P: Essa operação é tributada em:
++ 20% sobre o lucro, sem isenção, com DARF até o último dia útil do mês seguinte.
+- 15% sobre o lucro, com isenção para vendas até R$ 20 mil no mês. || Day trade não tem isenção e paga 20%.
+- 22,5% sobre o lucro, retido na fonte pela corretora. || Day trade não segue a tabela da renda fixa.
+- nada, porque a operação foi encerrada no mesmo dia. || O lucro de day trade é tributado.
+G: Day trade (compra e venda no mesmo dia, na mesma corretora) paga 20% sobre o lucro, sem isenção. A corretora retém 1% do ganho (dedo-duro), que é abatido no DARF. O prejuízo de day trade só compensa lucro de day trade.
+D: Day trade = 20%, sem isenção; prejuízo só compensa day trade.
+
+## 2.1.1.3 médio
+Q: Em março, um investidor teve prejuízo de R$ 5 mil em operações comuns com ações. Em junho, teve lucro de R$ 8 mil, com vendas de R$ 60 mil no mês.
+P: O IR devido em junho será calculado sobre:
++ R$ 3 mil, compensando o prejuízo de março.
+- R$ 8 mil, porque o prejuízo só vale no próprio mês. || Prejuízo pode ser compensado em meses seguintes, sem prazo.
+- R$ 13 mil, somando o prejuízo ao lucro. || O prejuízo reduz o lucro, não aumenta.
+- nada, porque houve prejuízo no ano. || A apuração é mensal, com compensação.
+G: Prejuízos em renda variável podem ser compensados com lucros futuros da mesma modalidade (operação comum com operação comum, day trade com day trade), sem prazo. Aqui: 8 mil − 5 mil = 3 mil, tributados a 15%.
+D: Prejuízo compensa lucro futuro da mesma modalidade, sem prazo.
+
+## 2.1.1.4 médio
+Q: Um cliente conservador se interessa por um COE com capital protegido atrelado ao índice da bolsa americana.
+P: O profissional deve explicar corretamente que o COE:
++ protege o capital só no vencimento e depende da saúde do banco emissor, sem FGC.
+- tem garantia do FGC e liquidez diária pelo valor investido. || COE não tem FGC e tem baixa liquidez.
+- garante o capital em qualquer data de resgate, sem risco algum. || A proteção vale no vencimento e há risco do emissor.
+- é isento de IR para pessoa física, como a LCI. || COE segue a tabela regressiva.
+G: O COE combina renda fixa (que protege o capital) com derivativos (que buscam o ganho). No COE de valor nominal protegido, o capital volta no vencimento; antes disso, vale o preço de mercado. É emitido por banco, sem FGC, e tributado pela tabela regressiva, retido na fonte.
+D: COE: proteção só no vencimento, sem FGC, risco do banco emissor.
+
+## 2.1.2 fácil
+Q: Uma cliente pergunta o que é um fundo de investimento.
+P: O profissional explica corretamente que o fundo é:
++ um condomínio de investidores, com gestão profissional, em que os ativos pertencem aos cotistas.
+- uma conta corrente remunerada pelo banco, com garantia do FGC. || Fundo não é conta e não tem FGC.
+- um empréstimo dos investidores ao gestor, que paga juros fixos a eles. || Os cotistas são donos do patrimônio, não credores do gestor.
+- um título emitido pelo banco administrador, com o risco desse banco. || Os ativos do fundo são separados do patrimônio do banco.
+G: Fundo é uma comunhão de recursos organizada como condomínio de natureza especial, regulada pela CVM (Resolução 175). O patrimônio é dos cotistas e fica separado do patrimônio do administrador e do gestor. A rentabilidade vem da variação da cota.
+D: Fundo = condomínio de cotistas, com gestão profissional; sem FGC.
+
+## 2.1.2 médio
+Q: Pela Resolução CVM 175, um fundo pode ter várias classes, cada uma com carteira e regras próprias.
+P: Uma consequência importante dessa estrutura para o investidor é que:
++ o patrimônio de cada classe é segregado, e o problema de uma classe não atinge as demais.
+- todas as classes respondem juntas pelas perdas de qualquer uma delas. || A segregação patrimonial impede isso.
+- o investidor de uma classe pode resgatar cotas de outra classe livremente. || Cada classe tem suas cotas e regras.
+- o gestor pode transferir ativos entre classes sem informar os cotistas. || Cada classe tem patrimônio próprio.
+G: A CVM 175 prevê classes com patrimônio segregado: as obrigações de uma classe não atingem as outras. Subclasses compartilham a mesma carteira, mas podem ter condições diferentes (prazos, taxas, público). Essa separação protege os cotistas.
+D: Classe = patrimônio segregado. Subclasse = mesma carteira, condições diferentes.
+
+## 2.1.2 médio
+Q: Ao entrar em um fundo, o cliente assina um documento em que declara conhecer o regulamento, os riscos e a possibilidade de perdas.
+P: Esse documento é o:
++ termo de adesão e ciência de risco.
+- prospecto da distribuição pública de cotas. || O prospecto é documento de oferta, não declaração do cotista.
+- relatório de classificação de risco do fundo. || Rating não é assinado pelo cotista.
+- contrato de custódia dos ativos da carteira. || Custódia é serviço entre fundo e custodiante.
+G: Antes de investir, o investidor deve ter acesso ao regulamento e à lâmina. Ao ingressar, assina o termo de adesão e ciência de risco, atestando que conhece a política de investimento, os riscos e a possibilidade de perdas.
+D: Antes: regulamento e lâmina. Na entrada: termo de adesão e ciência de risco.
+
+## 2.1.2 médio
+Q: Um cliente quer entender quem faz o quê em um fundo de investimento.
+P: Pela CVM 175, os prestadores de serviços essenciais e seus papéis são:
++ o administrador, que cuida da estrutura, da cota e das informações, e o gestor, que decide os investimentos.
+- o custodiante, que decide os investimentos, e o distribuidor, que calcula a cota. || Gestor decide os investimentos; administrador calcula a cota.
+- o auditor, que escolhe os ativos, e o cotista, que registra o fundo. || Nenhum deles tem essas funções.
+- o gestor, que guarda os ativos, e o custodiante, que vende as cotas. || Quem guarda os ativos é o custodiante; quem vende cotas é o distribuidor.
+G: Os prestadores essenciais são o administrador (registros, cálculo da cota, informações aos cotistas, regulamento, controles) e o gestor (gestão da carteira, liquidez, dever fiduciário). O custodiante guarda os ativos, e o distribuidor vende as cotas.
+D: Administrador = estrutura e cota. Gestor = carteira.
+
+## 2.1.2 médio
+Q: Um fundo de ações tem taxa de performance de 20% sobre o que superar o Ibovespa. No semestre, o fundo rendeu 12% e o Ibovespa 8%, e o fundo está acima da linha d'água.
+P: A taxa de performance incide sobre:
++ os 4 pontos que excederam o Ibovespa.
+- os 12% de rentabilidade total do fundo. || A performance só incide sobre o que superar o índice de referência.
+- os 8% de rentabilidade do Ibovespa. || O benchmark é a base de comparação, não da cobrança.
+- todo o patrimônio do fundo, como a taxa de administração. || Performance não é sobre o patrimônio total.
+G: A taxa de performance é cobrada sobre a rentabilidade que exceder o benchmark e só acima da linha d'água (o último valor de cota em que houve cobrança). Aqui, 20% sobre os 4 pontos acima do Ibovespa.
+D: Performance = taxa × (retorno − benchmark), acima da linha d'água.
+
+## 2.1.2 médio
+Q: Um cliente pediu resgate de um fundo de ações com conversão em D+1 e pagamento em D+3.
+P: Isso significa que:
++ o valor da cota é apurado 1 dia útil após o pedido, e o dinheiro cai 3 dias úteis após o pedido.
+- o dinheiro cai 1 dia útil após o pedido, e a cota é apurada em 3 dias úteis. || Os conceitos estão invertidos.
+- o cliente paga 1% de taxa no primeiro dia e 3% no terceiro dia. || D+1 e D+3 são prazos, não taxas.
+- o resgate só pode ser pedido entre o primeiro e o terceiro dia útil do mês. || Os prazos contam a partir do pedido.
+G: Conversão é a data da cota usada no resgate; liquidação é a data em que o dinheiro é pago. Fundos DI costumam ter D+0; fundos de ações costumam ter prazos maiores. Alguns fundos têm carência (prazo sem resgate) ou taxa de saída.
+D: Conversão = qual cota vale. Liquidação = quando o dinheiro cai.
+
+## 2.1.2.3 fácil
+Q: Um cliente quer um fundo que invista principalmente em ações.
+P: Pela CVM 175, a classe de ações deve ter, no mínimo:
++ 67% do patrimônio em ações e ativos relacionados.
+- 80% do patrimônio em ações e ativos relacionados. || 80% é o mínimo das classes de renda fixa e cambial.
+- 51% do patrimônio em ações e ativos relacionados. || O mínimo é 67%.
+- 95% do patrimônio em ações e ativos relacionados. || 95% é o mínimo da classe em cotas de outros fundos.
+G: Limites de composição: renda fixa, no mínimo 80% em ativos de renda fixa; ações, no mínimo 67%; cambial, no mínimo 80% atrelado a moeda estrangeira; multimercado, sem concentração obrigatória. Classe em cotas aplica ao menos 95% em cotas de outros fundos.
+D: RF 80% · Ações 67% · Cambial 80% · Multimercado sem concentração.
+
+## 2.1.2.3 médio
+Q: Um fundo de renda fixa tem 60% da carteira em debêntures e outros títulos de empresas.
+P: Por causa dessa composição, o fundo deve:
++ ter "Crédito Privado" no nome e alertar os investidores sobre o risco.
+- mudar obrigatoriamente para a classe multimercado. || Pode continuar como renda fixa, com o sufixo.
+- oferecer garantia do FGC aos cotistas. || Fundos não têm FGC.
+- reduzir a parcela de crédito privado para 30% em até 10 dias. || Não há essa obrigação.
+G: Fundos com mais de 50% do patrimônio em ativos de crédito privado precisam trazer "Crédito Privado" no nome e um alerta sobre o risco de perdas por inadimplência. Esses fundos podem ter resgate mais demorado e não servem para quem precisa de liquidez imediata.
+D: Mais de 50% em crédito privado = "Crédito Privado" no nome.
+
+## 2.1.3 médio
+Q: Um cliente tem um fundo de renda fixa de longo prazo e percebe uma redução no número de cotas em maio.
+P: Essa redução se deve:
++ ao come-cotas, que antecipa o IR à alíquota de 15% em maio e novembro.
+- a uma taxa de performance cobrada duas vezes por ano. || Performance é taxa do gestor, não IR.
+- à taxa de saída cobrada quando o fundo atinge 6 meses. || Não há taxa de saída automática.
+- ao IOF cobrado sobre o patrimônio todo semestre. || O IOF só incide em resgates antes de 30 dias.
+G: O come-cotas é a antecipação semestral do IR em fundos, cobrada em maio e novembro, reduzindo a quantidade de cotas. Nos fundos de longo prazo, a alíquota é de 15%; nos de curto prazo, 20%. Classes de ações não têm come-cotas.
+D: Come-cotas: maio e novembro; 15% longo prazo, 20% curto prazo.
+
+## 2.1.3 médio
+Q: Um investidor resgata cotas de um fundo de ações depois de 2 anos, com lucro.
+P: A tributação desse resgate é de:
++ 15% sobre o ganho, só no resgate, sem come-cotas.
+- 15% sobre o ganho, com come-cotas semestral. || Classes de ações não têm come-cotas.
+- 22,5% a 15% pela tabela regressiva, com come-cotas. || Fundos de ações têm alíquota única de 15%.
+- isento, porque o fundo aplica em ações. || Fundo de ações não tem a isenção de R$ 20 mil.
+G: Classes de ações (com pelo menos 67% em ações) pagam 15% sobre o ganho, apenas no resgate, sem come-cotas e sem IOF. Diferentemente das ações compradas diretamente, não têm a isenção de vendas até R$ 20 mil no mês.
+D: Fundo de ações: 15% só no resgate, sem come-cotas.
+
+## 2.1.4 fácil
+Q: Um cliente quer vender suas cotas de um fundo imobiliário e pergunta como pedir o resgate.
+P: O profissional explica corretamente que, no FII:
++ não há resgate; as cotas são vendidas na bolsa, pelo preço de mercado.
+- o resgate é feito com o administrador em D+30, pelo valor patrimonial. || FII é fundo fechado, sem resgate.
+- o resgate só é permitido depois de 5 anos de aplicação. || Não há resgate em nenhum prazo.
+- o resgate é automático quando os imóveis são vendidos. || A venda de imóveis não gera resgate de cotas.
+G: O FII é um fundo fechado: o investidor entra e sai negociando cotas na bolsa, por meio de uma corretora. O preço pode ser diferente do valor patrimonial (P/VP). Cotas pouco negociadas têm risco de liquidez.
+D: FII: sem resgate; compra e venda na bolsa.
+
+## 2.1.4 médio
+Q: Uma pessoa física recebe rendimentos mensais de um FII com mais de 100 cotistas, cotas negociadas em bolsa, e tem menos de 10% das cotas.
+P: Esses rendimentos são:
++ isentos de IR.
+- tributados em 20% na fonte. || Com os requisitos cumpridos, os rendimentos são isentos.
+- tributados em 15% pela tabela regressiva. || FII não segue a tabela regressiva.
+- isentos apenas se o cotista tiver mais de 10% das cotas. || Ter 10% ou mais faz perder a isenção.
+G: Os rendimentos de FII são isentos para pessoa física quando as cotas são negociadas em bolsa, o fundo tem 100 ou mais cotistas e o cotista tem menos de 10% das cotas. O ganho na venda das cotas paga 20%, sem isenção de R$ 20 mil.
+D: Rendimento de FII: isento com requisitos. Venda da cota: 20%.
+
+## 2.1.4 médio
+Q: Um FII de lajes corporativas tem 25% da área vaga, e os cotistas notam queda nos rendimentos.
+P: O risco que explica essa queda é o risco de:
++ vacância, que reduz a receita de aluguel do fundo.
+- crédito, porque o fundo deixou de pagar seus credores. || O problema é falta de inquilino, não calote do fundo.
+- liquidez, porque as cotas pararam de ser negociadas. || A queda é de receita, não de negociação.
+- câmbio, porque os aluguéis são pagos em dólar. || Não há relação com câmbio.
+G: Em FII de tijolo (imóveis), a vacância reduz a receita de aluguéis e ainda gera custos com a área vaga, como condomínio e IPTU. Em FII de papel (CRI), o principal risco é o de crédito dos devedores. Os rendimentos distribuídos caem junto.
+D: Tijolo: vacância e inquilino. Papel: crédito dos CRIs.
