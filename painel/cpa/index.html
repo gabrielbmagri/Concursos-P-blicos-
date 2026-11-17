@@ -125,7 +125,8 @@ tr:last-child td{border-bottom:0}
 .cbt-ord select{border:1px solid var(--cl);border-radius:6px;padding:5px 8px;font-size:13px;background:#fff;color:#1d2731;max-width:44vw}
 .cbt-ord .tg{display:flex;align-items:center;gap:5px;color:#1d2731;font-weight:600;white-space:nowrap;cursor:pointer}
 .cbt-ord .tg input{width:17px;height:17px;margin:0}
-@media(max-width:520px){.cbt-ord>label[for]{display:none}.cbt-ord{flex-wrap:nowrap;gap:6px}.cbt-ord select{max-width:34vw}.cbt-ord button{padding:5px 8px}}
+@media(max-width:520px){.cbt-ord>label[for]{display:none}.cbt-ord{flex-wrap:nowrap;gap:5px;padding:6px 8px}.cbt-ord select{max-width:30vw;padding:5px 4px}.cbt-ord button{padding:5px 7px;gap:4px}.cbt-ord .tg{gap:4px;font-size:12.5px}}
+@media(max-width:400px){.cbt-ord .al{display:none}}
 .cbt-ord .sp{flex:1}
 .cbt-ord button{display:flex;align-items:center;gap:6px;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650}
 .cbt-ord button svg{width:16px;height:16px}
@@ -695,9 +696,14 @@ function ordenarItens(arr,crit){
 }
 function reordenar(crit){
   const s=UI.ses;if(!s||s.tipo!=="bloco")return;const st=E.trs[s.key];if(!st)return;
-  const atual=s.itens[s.i]&&s.itens[s.i].id;
   ordenarItens(s.itens,crit);st.ordem=s.itens.map(it=>it.id);st.ord=crit;
-  s.i=Math.max(0,s.itens.findIndex(it=>it.id===atual));marcarPos();render();
+  irPrimeira();
+}
+/* vai para a 1ª questão da ordem atual (a 1ª pendente, se "Ocultar feitas" estiver ligado) */
+function irPrimeira(){
+  const s=UI.ses;if(!s||s.tipo!=="bloco")return;
+  let j=0;if(ocultaOn()){j=s.itens.findIndex(it=>!feitaQ(it));if(j<0)j=0}
+  s.i=j;marcarPos();render();topoQ();
 }
 /* ocultar feitas: navegação pula as questões já respondidas ou reveladas */
 const ocultaOn=()=>!!E.trOcultar;
@@ -832,7 +838,7 @@ function cbtShell(main,foot,opt){
   ${s.tipo==="sim"?`<div class="tm ${warn?"warn":""}"><small>${prova?"Tempo restante":"Tempo"}</small><b id="timer">${tempo}</b></div>`:""}</div>
   <div class="cbt-tb">${[["calc","Calculadora"],["notas","Bloco de notas"],["rasc","Rascunho"],["form","Fórmulas"]].map(([k,l])=>`<button class="${T[k]?"on":""}" data-a="tool" data-k="${k}" title="${l}">${ICO[k]}<span class="lb2">${l}</span></button>`).join("")}
   <span class="sp"></span><button data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button><button data-a="sair-ses" title="Salva e volta ao painel">Pausar</button></div>
-  ${s.tipo==="bloco"&&!s.fim?`<div class="cbt-ord"><label for="ord-sel">Ordenar</label><select id="ord-sel">${ORDS.map(([k,l])=>`<option value="${k}" ${((E.trs[s.key]||{}).ord||"assunto")===k?"selected":""}>${l}</option>`).join("")}</select><label class="tg"><input type="checkbox" id="ocultar-feitas" ${ocultaOn()?"checked":""}>Ocultar feitas</label><span class="sp"></span><button data-a="aleatoria" title="Ir para uma questão aleatória ainda não feita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Aleatória</button></div>`:""}
+  ${s.tipo==="bloco"&&!s.fim?`<div class="cbt-ord"><label for="ord-sel">Ordenar</label><select id="ord-sel">${ORDS.map(([k,l])=>`<option value="${k}" ${((E.trs[s.key]||{}).ord||"assunto")===k?"selected":""}>${l}</option>`).join("")}</select><label class="tg"><input type="checkbox" id="ocultar-feitas" ${ocultaOn()?"checked":""}>Ocultar feitas</label><span class="sp"></span><button data-a="primeira" title="Ir para a 1ª questão desta ordem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 6l-8 6 8 6z"/></svg>1ª</button><button data-a="aleatoria" title="Ir para uma questão aleatória ainda não feita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="al">Aleatória</span></button></div>`:""}
   ${main}
   ${foot?`<div class="cbt-f">${foot}</div>`:""}</div>`;
 }
@@ -1136,6 +1142,7 @@ document.addEventListener("click",e=>{
     case "treino-zera-ok":{const [b,f]=String(id).split("|");abrirBloco(b,f,true);return}
     case "ver-resp":verResposta();return;
     case "aleatoria":aleatoria();return;
+    case "primeira":irPrimeira();return;
     case "ant":if(UI.ses.tipo==="bloco"){const j=proxPendente(-1);if(j>=0){UI.ses.i=j;marcarPos();render();topoQ()}return}
       if(UI.ses.i>0){UI.ses.i--;marcarPos();render();topoQ()}return;
     case "fim":finalizar();return;
