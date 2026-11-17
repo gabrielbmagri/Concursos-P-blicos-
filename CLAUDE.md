@@ -32,5 +32,7 @@ Preferências do usuário quando ele volta de uma pausa:
 
 ## Questões, Ankis e simulados
 
+- Itens do Portal de Questões ANBIMA (marcados como confidenciais) nunca vão para `painel/` nem para o git: o usuário os anexa pelo painel e eles ficam só na conta dele. Use-os como referência de estilo e de temas para escrever questões próprias.
+
 - Método de questões e de Ankis: `painel/FORMATO-QUESTOES.md` e `painel/FORMATO-BARALHOS.md` (progressão pedagógica, fidelidade à banca, gabarito comentado que ensina, sem estatísticas inventadas).
 - Simulados da CPA: regras de 2026 (JCP 17,5%, FGC R$ 250 mil por conglomerado e R$ 1 milhão a cada 4 anos, Lei 14.754/2023, Lei 14.803/2024 etc.). A certa não pode ser visivelmente mais longa que os distratores, e não se repetem enunciados entre simulados.

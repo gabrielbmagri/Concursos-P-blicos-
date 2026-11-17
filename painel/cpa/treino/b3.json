@@ -778,6 +778,279 @@
 "D": "Churning envolve a conta de um cliente."
 },
 "dica": "Spoofing = oferta de fachada para mexer no preço."
+},
+{
+"pd": "3.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um casal monta o balanço patrimonial com: apartamento financiado, carro financiado, fundos de investimento, FGTS, fatura do cartão e empréstimo pessoal. Ele quer incluir o salário do mês que vem e um bônus que pode sair; ela quer usar o preço de compra dos bens.",
+"enunciado": "O procedimento correto para calcular o patrimônio líquido é:",
+"alt": [
+"somar os bens pelo preço de compra e incluir o salário e o bônus previstos como ativos.",
+"usar valores de mercado, contar o FGTS como ativo pouco líquido e subtrair todas as dívidas.",
+"usar a sobra média de caixa do mês como a medida do patrimônio do casal.",
+"avaliar os bens a mercado, mas registrar os financiamentos só pelas parcelas do mês seguinte."
+],
+"certa": "B",
+"gabarito": "Patrimônio líquido = ativos a valor de mercado (imóvel, carro, aplicações, FGTS como ativo de baixa liquidez) − passivos totais (saldos dos financiamentos, empréstimo, fatura). Salários e bônus futuros não entram, porque ainda não existem. Assim o número é realista e comparável ao longo do tempo.",
+"porque": {
+"A": "Valores de compra ficam desatualizados, e renda futura não é ativo.",
+"C": "Sobra de caixa é fluxo, não patrimônio.",
+"D": "O passivo é o saldo total das dívidas."
+},
+"dica": "Balanço: ativos a mercado − dívidas totais. Renda futura não entra."
+},
+{
+"pd": "3.1.3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Felipe vai financiar um carro de R$ 100 mil. Tem renda líquida de R$ 12 mil, despesas essenciais de R$ 9 mil e reserva de R$ 47 mil. Quer parcela de no máximo 20% da renda e manter reserva de pelo menos 3 meses de despesas.",
+"enunciado": "Os limites que ele deve respeitar na escolha da proposta são:",
+"alt": [
+"parcela de até R$ 1.800 e reserva mínima de R$ 36.000 depois da entrada.",
+"parcela de até R$ 2.400 e entrada máxima de R$ 47.000, usando toda a reserva.",
+"parcela de até R$ 3.000 e reserva mínima de R$ 27.000 depois da entrada.",
+"parcela de até R$ 2.400 e reserva mínima de R$ 27.000 depois de pagar a entrada."
+],
+"certa": "D",
+"gabarito": "Teto da parcela: 20% × 12.000 = R$ 2.400. Reserva mínima: 3 × 9.000 = R$ 27.000; como ele tem R$ 47 mil, a entrada pode ser de no máximo R$ 20 mil. Entre as propostas que cabem nesses limites, escolhe-se a de menor CET.",
+"porque": {
+"A": "20% de 12 mil é 2.400; 3 meses de 9 mil são 27 mil.",
+"B": "Ele quer preservar 3 meses de despesas na reserva.",
+"C": "20% de 12 mil é 2.400, não 3.000."
+},
+"dica": "Escolha de crédito: parcela que cabe no orçamento + reserva preservada + menor CET."
+},
+{
+"pd": "3.1.3.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Eduardo teve um gasto inesperado de R$ 7 mil e tem só R$ 1.200 de reserva. As opções são: rotativo do cartão com cheque especial, parcelar a fatura em 12 vezes, crédito pessoal em 48 parcelas ou consignado em 12 parcelas com CET menor.",
+"enunciado": "A opção com melhor equilíbrio entre custo e previsibilidade é:",
+"alt": [
+"o parcelamento da fatura em 12 vezes, para manter o cartão em uso.",
+"o crédito pessoal em 48 parcelas, pela parcela mais baixa.",
+"o consignado em 12 parcelas, com CET menor e prestação fixa descontada em folha.",
+"o rotativo com cheque especial, pela rapidez de liberação."
+],
+"certa": "C",
+"gabarito": "A decisão deve olhar o CET, o prazo e o impacto no orçamento. O consignado tem CET menor por causa do desconto em folha, e 12 parcelas fixas dão previsibilidade sem alongar demais a dívida. Rotativo e cheque especial são os mais caros.",
+"porque": {
+"A": "Costuma ter custo maior que o consignado.",
+"B": "Prazo longo aumenta o custo total.",
+"D": "São as linhas mais caras, com encargos que crescem rápido."
+},
+"dica": "Emergência sem reserva: menor CET com prazo curto e parcela fixa."
+},
+{
+"pd": "3.1.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Marina, 32 anos, quer juntar R$ 120 mil em 8 anos para a entrada de um imóvel, mas hoje só investe quando sobra mais de R$ 500 no mês.",
+"enunciado": "Uma ação adequada à fase de acumulação em que ela está é:",
+"alt": [
+"programar aportes mensais fixos, ligados aos objetivos.",
+"investir só o que sobrar no fim do mês, sem valor definido.",
+"colocar tudo em renda variável para acelerar o retorno.",
+"esperar os juros caírem para começar a investir."
+],
+"certa": "A",
+"gabarito": "Na fase de acumulação, o mais importante é a disciplina: aportes regulares e programados, ligados a cada objetivo, aproveitando os juros compostos. Poupar \"o que sobrar\" costuma resultar em pouco ou nada.",
+"porque": {
+"B": "Depender de sobras torna o plano imprevisível.",
+"C": "Objetivo com data definida pede previsibilidade.",
+"D": "Adiar o início reduz o efeito dos juros compostos."
+},
+"dica": "Acumulação = aportes regulares e programados."
+},
+{
+"pd": "3.1.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um casal quer independência financeira em 20 anos, mantendo o padrão de vida atual. Ele quer aplicar tudo no que rende mais; ela quer só aplicações conservadoras.",
+"enunciado": "Antes de escolher produtos, o profissional deve dimensionar o patrimônio necessário considerando:",
+"alt": [
+"o produto de maior rentabilidade disponível no mercado.",
+"a taxa real de retorno e o horizonte de 20 anos até a aposentadoria.",
+"o saldo atual e as despesas futuras em valores nominais.",
+"o histórico de rentabilidade da carteira atual do casal."
+],
+"certa": "B",
+"gabarito": "Para calcular a reserva-alvo, usa-se a taxa real (acima da inflação) e o horizonte até a aposentadoria, trazendo o consumo desejado a valores de hoje. Só depois de quantificar a meta se escolhem os produtos.",
+"porque": {
+"A": "O produto vem depois de quantificar a meta.",
+"C": "Valores nominais ignoram a inflação.",
+"D": "Rentabilidade passada não dimensiona a meta."
+},
+"dica": "Meta de aposentadoria: taxa real + horizonte. Produto vem depois."
+},
+{
+"pd": "3.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente está frustrado porque um fundo de longo prazo, adequado ao seu objetivo, não deu o resultado que ele esperava em poucos meses.",
+"enunciado": "A conduta mais adequada do profissional é:",
+"alt": [
+"dizer que oscilar é normal e evitar dar detalhes para não preocupar o cliente.",
+"trocar o investimento na hora, para deixar o cliente satisfeito com o resultado.",
+"relembrar o objetivo e o horizonte combinados e explicar o comportamento no curto prazo.",
+"orientar o cliente a avaliar o fundo só pelo resultado de cada mês isolado."
+],
+"certa": "C",
+"gabarito": "Quando o produto está adequado, mas a expectativa é de curto prazo, o papel do profissional é alinhar expectativas: retomar objetivo e horizonte e explicar o comportamento do investimento ao longo do tempo.",
+"porque": {
+"A": "O cliente precisa entender o comportamento do produto.",
+"B": "Mudar por impulso abandona o objetivo definido.",
+"D": "Produto de longo prazo não se avalia mês a mês."
+},
+"dica": "Expectativa desalinhada: retomar objetivo e horizonte, sem trocar por impulso."
+},
+{
+"pd": "3.1.6",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente acha que só precisa declarar no IR os valores em que houve imposto retido. Ele tem CDB, fundos, ações e resgatou parte de um VGBL.",
+"enunciado": "O profissional explica corretamente que ele deve informar:",
+"alt": [
+"bens, aplicações e rendimentos, inclusive os isentos e os de tributação exclusiva.",
+"só a movimentação da conta corrente no ano.",
+"só o salário e a previdência, sem as aplicações financeiras.",
+"só os rendimentos tributáveis, sem informar os isentos."
+],
+"certa": "A",
+"gabarito": "A declaração deve trazer todos os rendimentos (tributáveis, isentos e de tributação exclusiva) e todos os bens e direitos, inclusive aplicações financeiras. Isso garante a coerência entre a renda e a evolução do patrimônio.",
+"porque": {
+"B": "O que se declara são bens, direitos e rendimentos.",
+"C": "As aplicações também devem ser declaradas.",
+"D": "Isentos e exclusivos também são declarados."
+},
+"dica": "Declara tudo: tributável, isento, exclusivo e todos os bens."
+},
+{
+"pd": "3.4.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente ficou insatisfeito porque um resgate não foi atendido, já que o regulamento não permitia. A profissional cuida para conduzir bem a conversa, mesmo sem perda financeira para a instituição.",
+"enunciado": "O risco que ela quer evitar com um bom atendimento é o risco:",
+"alt": [
+"estratégico, ligado a decisões da alta gestão.",
+"operacional, ligado a falhas de sistemas e processos.",
+"de conformidade, ligado ao descumprimento de normas.",
+"de imagem, ligado à confiança e à reputação da instituição."
+],
+"certa": "D",
+"gabarito": "Risco de imagem (reputacional) é a perda de confiança de clientes e do mercado, mesmo sem prejuízo financeiro imediato. Conformidade é descumprir normas; estratégico, decisões de gestão que afetam o posicionamento; operacional, falhas de pessoas, processos ou sistemas.",
+"porque": {
+"A": "Risco estratégico envolve o posicionamento da empresa.",
+"B": "Não houve falha operacional.",
+"C": "A instituição cumpriu o regulamento."
+},
+"dica": "Imagem = reputação. Conformidade = norma. Estratégico = decisão da gestão."
+},
+{
+"pd": "3.4.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente antigo pede ao profissional \"um jeitinho\" para resgatar parte de um plano de previdência que ainda está em carência. O gestor comercial insiste em manter o relacionamento.",
+"enunciado": "A conduta esperada do profissional é:",
+"alt": [
+"liberar o resgate como exceção, para preservar o cliente.",
+"encerrar o atendimento, informando apenas que não é possível resgatar.",
+"registrar o pedido e não dar nenhuma explicação até receber orientação interna.",
+"explicar que a carência impede a liberação e buscar outras soluções para ajudar o cliente."
+],
+"certa": "D",
+"gabarito": "O profissional deve ser transparente sobre as regras do produto (a carência impede o resgate) e, em vez de encerrar a conversa, buscar alternativas adequadas ao problema do cliente, encaminhando pedidos excepcionais pelo fluxo correto.",
+"porque": {
+"A": "A regra contratual da carência não admite \"jeitinho\".",
+"B": "O profissional deve orientar e buscar alternativas.",
+"C": "O cliente tem direito a explicações claras."
+},
+"dica": "Regra do produto não tem \"jeitinho\": explicar e buscar alternativas."
+},
+{
+"pd": "3.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente conservador pede produtos de renda fixa de baixo risco. O gerente insiste que o analista ofereça primeiro um fundo da casa, com taxa alta e pouco aderente ao perfil.",
+"enunciado": "A conduta correta do analista é:",
+"alt": [
+"apresentar só as opções adequadas ao perfil e registrar o atendimento com transparência.",
+"seguir a orientação do gerente, porque a hierarquia define a recomendação.",
+"oferecer primeiro o fundo da casa e deixar a decisão com o cliente.",
+"listar todas as opções, mas destacar os diferenciais do fundo da casa."
+],
+"certa": "A",
+"gabarito": "O suitability e o dever de lealdade ao cliente prevalecem sobre metas comerciais e pressão hierárquica. O profissional apresenta o que é adequado ao perfil e registra o atendimento, o que protege o cliente e a própria instituição.",
+"porque": {
+"B": "A pressão interna não muda o dever com o cliente.",
+"C": "Oferecer o inadequado em destaque fere o suitability.",
+"D": "A meta comercial não pode se sobrepor à adequação."
+},
+"dica": "Pressão comercial não muda o suitability."
+},
+{
+"pd": "3.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente recebeu por telefone uma oferta de resgate antecipado de um produto, mas no aplicativo a função aparece como indisponível. Ele desconfia de venda inadequada.",
+"enunciado": "A atitude que deve prevalecer é:",
+"alt": [
+"explicar que o resgate antecipado depende de decisão interna e pedir que aguarde.",
+"confirmar as informações em fontes oficiais, esclarecer a regra do resgate e conferir se o produto é adequado ao perfil.",
+"confirmar que a oferta por telefone segue as regras e pedir que ele aguarde o aplicativo.",
+"dizer que deve ser uma falha momentânea do sistema e encerrar o atendimento."
+],
+"certa": "B",
+"gabarito": "Diante de informações divergentes, o profissional verifica a regra oficial do produto, explica com transparência as condições de resgate e confirma a adequação ao perfil. Isso preserva a confiança e a conformidade.",
+"porque": {
+"A": "O cliente precisa de uma resposta clara.",
+"C": "Não se confirma o que não foi verificado.",
+"D": "A divergência precisa ser apurada."
+},
+"dica": "Informação divergente: conferir na fonte oficial e explicar."
+},
+{
+"pd": "3.4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Por engano, chega ao e-mail da equipe o rascunho de um comunicado de uma companhia aberta, marcado como sigiloso, com informação relevante ainda não divulgada.",
+"enunciado": "A conduta esperada do profissional é:",
+"alt": [
+"avisar os clientes que têm ações da empresa, para protegê-los de perdas.",
+"apagar o arquivo e seguir a rotina, como se nada tivesse acontecido.",
+"reportar ao compliance, manter sigilo e não usar a informação até a divulgação.",
+"discutir o conteúdo com o gerente comercial para preparar os clientes da área."
+],
+"certa": "C",
+"gabarito": "Informação relevante não divulgada não pode ser usada nem repassada (art. 27-D da Lei 6.385). O profissional deve manter sigilo, reportar formalmente ao compliance e aguardar a divulgação oficial.",
+"porque": {
+"A": "Seria uso indevido de informação privilegiada.",
+"B": "O fato deve ser registrado e reportado.",
+"D": "Repassar a informação é ilícito."
+},
+"dica": "Recebeu informação privilegiada: sigilo, reporte ao compliance, não usar."
+},
+{
+"pd": "3.4.7",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Em uma corretora que paga bônus pelo volume operado, a equipe passa a fazer compras e vendas repetidas em contas pequenas, sem mudança de preço, gerando muita corretagem.",
+"enunciado": "A conduta esperada do profissional que percebe o padrão é:",
+"alt": [
+"registrar o caso e esperar a auditoria independente antes de agir.",
+"comunicar formalmente o compliance e sugerir suspender as campanhas até a apuração.",
+"considerar que os investidores decidiram operar mais e reforçar a educação financeira.",
+"ajustar a comunicação da equipe e acompanhar as campanhas até ter certeza."
+],
+"certa": "B",
+"gabarito": "Giro excessivo para gerar corretagem é churning, uma prática fraudulenta. O profissional deve reportar o indício ao compliance e agir preventivamente, sugerindo suspender incentivos que estimulem a prática até a apuração.",
+"porque": {
+"A": "A conduta esperada é preventiva e imediata.",
+"C": "O padrão indica operações geradas pela equipe.",
+"D": "Indício de churning deve ser reportado logo."
+},
+"dica": "Indício de churning: reportar ao compliance e frear os incentivos."
 }
 ]
 }

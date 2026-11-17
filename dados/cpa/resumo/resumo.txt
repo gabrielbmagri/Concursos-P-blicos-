@@ -25,6 +25,7 @@
 - Agência de fomento: financia o desenvolvimento regional; não capta do público.
 - SCMEPP: crédito a microempreendedores e pequenas empresas.
 - Cooperativa de crédito: o cooperado é dono e participa das sobras; em regra, só associado aplica; supervisão do Banco Central; garantia do FGCoop.
+- Banco cooperativo: dá infraestrutura, liquidez, compensação e acesso a mercados ao sistema cooperativo; quem atende o associado na ponta é a cooperativa singular.
 - Corretora e DTVM: intermediam a negociação (ambas podem operar na B3); levam a ordem à bolsa e fazem a custódia. Os ativos ficam em nome do investidor.
 - B3: bolsa, balcão, registro, depositária central e contraparte central.
 - Instituição de pagamento: carteira pré-paga = emissor de moeda eletrônica; maquininha = credenciador. Conta de pagamento não tem FGC, mas o dinheiro é patrimônio separado, aplicado em títulos públicos ou no Banco Central.
@@ -38,6 +39,7 @@
 
 ## Autorreguladores e FGC
 - Anbima: entidade privada; autorregulação por códigos para associadas e aderentes; certificações; informações de mercado.
+- Poder da Anbima: exige correção (ex.: publicidade irregular) e aplica penalidades do código (advertência, multa, suspensão do uso do selo, descredenciamento) só a associadas e aderentes. Não substitui a CVM nem o Banco Central.
 - Ancord: corretoras, distribuidoras e assessores. Apimec: analistas. Planejar: planejadores financeiros (CFP).
 - BSM: autorregulação da B3. MRP: ressarce o investidor por erro ou falha da corretora em operação na B3.
 - FGC: até R$ 250 mil por CPF ou CNPJ por conglomerado; teto de R$ 1 milhão a cada 4 anos. Conta conjunta: o valor é dividido entre os titulares.
@@ -65,6 +67,7 @@
 - Mercado de capitais: longo prazo; ações e debêntures; a empresa capta direto dos investidores (desintermediação).
 - Mercado cambial: compra e venda de moeda estrangeira.
 - Spread bancário: taxa do empréstimo − custo de captação (risco, custos, impostos e lucro).
+- Taxa do crédito: custo de captação do banco (Selic, liquidez, expectativas) + percepção de risco do mercado + risco do próprio cliente. Por isso muda mesmo sem mudar a empresa.
 
 ## Política fiscal
 - Funções: alocativa (bens públicos), distributiva (reduz desigualdades) e estabilizadora (suaviza os ciclos).
@@ -83,6 +86,7 @@
 - Objetivo: manter a inflação na meta.
 - Meta de inflação: fixada pelo CMN e medida pelo IPCA (IBGE). Meta contínua: 6 meses seguidos fora do intervalo de tolerância = carta aberta do Banco Central.
 - Copom: diretoria do Banco Central; 8 reuniões por ano; define a meta da Selic; publica comunicado e ata.
+- Operação compromissada: Banco Central vende títulos com recompra = enxuga liquidez; compra com revenda = injeta liquidez. Mantém a Selic efetiva perto da meta.
 - Selic meta: decidida pelo Copom. Selic efetiva: média das operações com títulos públicos. DI (CDI): média dos empréstimos de um dia entre bancos, apurada pela B3.
 - Selic alta: crédito mais caro, atividade mais fraca, entrada de capital estrangeiro, real mais forte, prefixados já comprados perdem valor.
 - Expectativas: inflação esperada alta tende a virar inflação. A comunicação do Copom mexe nos preços antes da decisão. A Selic atua no curto prazo; os juros longos dependem de expectativas e credibilidade.
@@ -96,6 +100,7 @@
 - Cupom cambial: juro em dólar no Brasil (DI − variação cambial esperada).
 - Câmbio real: câmbio nominal ajustado pela inflação dos dois países.
 - Dólar em alta: importados e insumos mais caros → inflação → juros podem subir.
+- Exportador × importador: dólar em alta melhora a receita de quem exporta (mais reais por dólar) e encarece as compras de quem importa.
 - Retorno do investidor estrangeiro: juro local ± variação cambial.
 
 ## Indicadores econômicos
@@ -217,9 +222,11 @@
 - Mercado fracionário: menos de 100 ações (código com F).
 - Companhia aberta: registro na CVM; pode ter só debêntures no mercado (aberta não é o mesmo que listada). Limitada: capital em quotas.
 - BDR: certificado de ação estrangeira negociado na B3; risco cambial; sem isenção de R$ 20 mil.
+- Valor justo do BDR: preço da ação lá fora × câmbio ÷ razão de conversão (ex.: US$ 300 × 5,20 ÷ 10 = R$ 156).
 - Renda variável: retorno incerto, pode haver perda; sem FGC.
 - Mercado primário: dinheiro vai para a empresa. Secundário: negócios entre investidores.
 - IPO: primeira oferta pública. Follow-on: nova oferta de empresa já listada. Preço por bookbuilding; demanda maior que a oferta = rateio.
+- Demanda alta no IPO: rateio; a demanda não atendida tende a pressionar o preço na abertura do secundário. Lote suplementar ajuda a estabilizar, mas não trava o preço.
 - Oferta primária: novas ações, dinheiro para a empresa, dilui. Secundária: sócio vende ações existentes, sem diluição.
 - OPA: oferta pública para comprar ações (fechar capital, troca de controle).
 - Bônus de subscrição: direito de comprar novas ações a preço e prazo definidos.
@@ -276,6 +283,7 @@
 - Responsabilidade limitada: o cotista perde no máximo o que subscreveu (patrimônio negativo pode levar à insolvência da classe). Ilimitada: o cotista pode ter de cobrir o patrimônio negativo.
 - Classe aberta: o cotista sai pelo resgate. Fechada: sem resgate; vende no secundário ou recebe por amortização ou no fim do prazo.
 - Cota: patrimônio líquido ÷ número de cotas. Rentabilidade = variação da cota.
+- Cálculo da cota: feito e divulgado todo dia pelo administrador, com o patrimônio da classe no fim do dia. O gestor decide a carteira; o auditor revisa as demonstrações.
 - Resgate: conversão (qual cota vale) × liquidação (quando o dinheiro cai). Prazos variam por classe (DI costuma ser D+0; ações, alguns dias).
 - Carência: prazo sem resgate após a aplicação. Taxa de saída: desestimula resgate antecipado e protege quem fica.
 - Amortização: devolve parte do valor das cotas sem cancelá-las. Resgate: cancela as cotas.
@@ -287,6 +295,7 @@
 - Documentos: regulamento e lâmina antes de investir; termo de adesão e ciência de risco na entrada. Divulgação de cota, patrimônio, carteira, demonstrações auditadas e fatos relevantes; comunicação eletrônica permitida.
 - Conta e ordem: o distribuidor aparece no registro, mas o investidor é o cotista e vota.
 - Vedações: prometer rendimento predeterminado. Rentabilidade sempre comparada ao benchmark do fundo e com os avisos obrigatórios.
+- Vedações ao fundo: conceder crédito e dar o patrimônio do fundo em garantia de terceiros. Usar o nome "fundo" sem registro na CVM = sinal de fraude.
 
 ## Fundos de investimento: classes e limites
 | Classe | Composição mínima |
@@ -337,6 +346,7 @@
 - Escolha do regime: até o primeiro resgate ou recebimento do benefício (Lei 14.803/2024).
 - Regressivo: cada aporte tem seu prazo; no resgate saem primeiro os mais antigos. Progressivo pode compensar para quem terá renda baixa na aposentadoria.
 - Fases: diferimento (contribui e acumula) → benefício (renda ou pagamento único).
+- Conversão em renda: o saldo vira reserva matemática da seguradora; o rendimento dessa reserva já está embutido no valor da renda. A fase de benefício é uma nova etapa contratual.
 - Taxas: administração (anual, sobre o patrimônio) e carregamento (sobre aportes ou resgates).
 - Tributação: sem come-cotas; IR só no resgate ou na renda.
 - Portabilidade: mesma modalidade (PGBL para PGBL, VGBL para VGBL), sem IR, direto entre entidades, respeitando carência.
@@ -349,6 +359,7 @@
 ## Crédito e financiamento
 - CET: custo efetivo total (juros + tarifas + IOF + seguros). É o número para comparar crédito.
 - Empréstimo: uso livre. Financiamento: bem específico, em geral como garantia. Leasing: o bem é do arrendador, com opção de compra no fim.
+- Leasing operacional × financiamento: no leasing operacional a empresa paga pelo uso e pode devolver o bem no fim, sem imobilizar capital; no financiamento, fica com a propriedade ao quitar.
 - CDC: crédito direto ao consumidor, com o bem em garantia; juros menores e prazos maiores que o crédito pessoal.
 - Alienação fiduciária: o cliente usa o bem, mas o credor é dono até a quitação.
 - Garantia real: bem (alienação, hipoteca). Garantia pessoal: pessoa (aval, fiança). Mais garantia = juros menores.
@@ -356,6 +367,7 @@
 - Custo típico (do menor ao maior): consignado → crédito pessoal → cheque especial e rotativo do cartão.
 - Cheque especial: teto de 8% ao mês (pessoa física e MEI); juros só sobre o valor usado, mais IOF.
 - Cartão de crédito: fatura integral = sem juros. Rotativo: só até a próxima fatura, depois parcelamento; encargos limitados a 100% da dívida original (Lei 14.690). Parcelado sem juros ocupa o limite. Melhor dia de compra: logo após o fechamento da fatura.
+- Parcelamento da fatura: novo contrato, com parcelas fixas, juros menores que os do rotativo e IOF. Cálculo: saldo com os juros do rotativo no mês, depois prestações pela tabela Price.
 - IOF no crédito: parcela diária (com teto de prazo) + adicional fixo; entra no CET.
 - Taxa de juros: reflete o risco do cliente (score, histórico, renda, garantias).
 - SCR: cadastro de dívidas no sistema financeiro (Banco Central); consulta pelo Registrato. Cadastro positivo: histórico de bom pagador, inclusão automática, pode pedir saída.
@@ -370,6 +382,8 @@
 - Conta-salário: portabilidade gratuita para o banco escolhido pelo empregado.
 - Conta corrente: tem FGC, mas o dinheiro parado não rende.
 - Boleto vencido: pode ser pago em qualquer banco, com multa e juros calculados automaticamente.
+- Boleto × Pix: o Pix é liquidado na hora; o boleto passa por compensação e, conforme o horário do pagamento, o crédito cai no mesmo dia ou no dia útil seguinte.
+- Canais de atendimento: agência, canais digitais e telefone; o cliente escolhe o mais adequado.
 - Pix: arranjo do Banco Central; instantâneo, 24 horas, gratuito para pessoa física (em regra); empresa pode pagar tarifa. Golpe: MED (Mecanismo Especial de Devolução).
 - Pix noturno: limite menor para pessoa física; aumento com prazo de segurança.
 - Pix Automático: autorização única para cobranças recorrentes, com controle e cancelamento.
@@ -381,11 +395,13 @@
 - VET: valor efetivo total (taxa + tarifas + tributos); é o número para comparar. PTAX é só referência.
 - IOF-câmbio: alíquota conforme a finalidade.
 - Conta global: converte antes e usa lá fora; tem IOF; sem FGC.
+- Conta internacional: saldo em várias moedas, cartão para o exterior e, às vezes, dados bancários locais (IBAN, ABA); as conversões continuam com IOF e spread, e as obrigações de declaração seguem valendo.
 - Investimento no exterior (pessoa física): 15% sobre os rendimentos, apurados na declaração anual (Lei 14.754/2023). Bens no exterior em Bens e Direitos.
 
 ## Seguros
 - Conceitos: prêmio (preço do seguro), sinistro (evento coberto), indenização, franquia (parte do prejuízo paga pelo segurado em sinistro parcial), carência, bônus (desconto na renovação sem sinistro).
 - Vida temporário: prazo definido, prêmio menor. Vida inteira: cobertura vitalícia, prêmio maior, liquidez para a sucessão.
+- Vida com acumulação (tradicional): proteção por morte + formação de reserva, com resgate no fim do prazo; prêmio maior que o do temporário.
 - Seguro de vida: beneficiário de livre escolha; fora do inventário; isento de IR. Cobertura por qualquer causa é mais ampla (e mais cara) que só acidental.
 - Capital segurado: necessidades da família (despesas, dívidas, objetivos) − recursos existentes.
 - Prestamista: quita a dívida se o devedor morrer ou ficar inválido; beneficiário é o credor. Venda casada é proibida.
@@ -421,6 +437,7 @@
 | Liquidez | ativos líquidos ÷ dívidas de curto prazo (acima de 1 é confortável) |
 | Cobertura de despesas | ativos líquidos ÷ despesas mensais (bens de uso não entram) |
 - Bens de uso: casa e carro do dia a dia. Bens de investimento: geram renda ou valorização.
+- Como montar: ativos a valor de mercado (não o preço de compra); FGTS entra como ativo de baixa liquidez; dívidas pelo saldo total; salários e bônus futuros não entram.
 - Patrimônio ilíquido: risco de faltar dinheiro para inventário e impostos.
 - Antes de recomendar: balanço patrimonial e fluxo de caixa do cliente.
 
@@ -441,6 +458,7 @@
 - Um investimento por objetivo: o prazo da meta define o produto. Data marcada = renda fixa com vencimento casado (ex.: Educa+, IPCA+).
 - Objetivo de curto prazo: previsibilidade. Longo prazo: tolera mais oscilação, com proteção da inflação.
 - Começar cedo: com juros compostos, aportes menores chegam ao mesmo valor.
+- Meta de aposentadoria: calcular com taxa real e horizonte antes de escolher produtos. Na fase de acumulação, aportes programados valem mais que "investir o que sobrar".
 - Fundo educacional: valor futuro + prazo + taxa + inflação → aporte mensal.
 - Aposentadoria: renda desejada − fontes previstas (INSS etc.) = déficit a cobrir com investimentos.
 - Independência financeira sem consumir o principal: patrimônio = gasto anual ÷ taxa real. Consumir o principal exige menos patrimônio, mas há risco de longevidade.
@@ -489,6 +507,7 @@
 - Produto da casa × de terceiros: recomendar o mais adequado, com transparência.
 - Reclamação de ordem não autorizada: conferir gravações e registros.
 - Educação continuada: normas e produtos mudam; o profissional precisa acompanhar.
+- Pedidos fora da regra: carência não tem "jeitinho"; explicar a regra e buscar alternativas. Informação divergente (telefone × aplicativo): confirmar na fonte oficial antes de responder.
 
 ## Ética Anbima e certificação
 - Princípios: integridade, transparência, diligência e lealdade ao cliente.
@@ -507,6 +526,7 @@
 | Regulatório | descumprir norma e ser punido pelo regulador |
 | Imagem (reputacional) | notícia negativa, perda de clientes |
 - Prevenção: segregação de funções, plano de continuidade de negócios e redundância.
+- Outros riscos: conformidade (descumprir normas internas ou externas) e estratégico (decisões da gestão que afetam o posicionamento da empresa).
 
 ## Prevenção à lavagem de dinheiro (PLD/FT)
 - Lavagem: crime (Lei 9.613/1998), reclusão de 3 a 10 anos e multa. O crime antecedente pode ser qualquer infração penal.
@@ -538,6 +558,7 @@
 - Uso de informação privilegiada (art. 27-D): usar ou repassar informação relevante ainda não divulgada; vale para qualquer pessoa. Repassar já é ilícito.
 - Insider primário: acesso direto pelo cargo. Secundário: recebeu de quem tinha acesso. Administrador com resultado em mãos: período de vedação.
 - Exercício irregular (art. 27-E): atuar como gestor, consultor ou analista sem registro na CVM.
+- Recebeu informação privilegiada por engano: manter sigilo, reportar ao compliance e não usar nem repassar até a divulgação oficial.
 - Condição artificial de demanda, oferta ou preço: volume falso entre contas ligadas.
 - Spoofing: oferta de fachada para mexer no preço. Layering: várias camadas de ofertas falsas.
 - Money pass: negócios artificiais para passar dinheiro de uma conta para outra.

@@ -402,7 +402,7 @@ function retomar(){
   if(fb.on&&!fb.carregou)return;
   retomou=true;
   const id=E.aberto;
-  if(id&&String(id).startsWith("treino:")){const m=String(id).slice(7).match(/^B(\d)-(novas|sims|todas)$/);if(m&&E.trs[m[0]])abrirBloco(m[1],m[2],false);return}
+  if(id&&String(id).startsWith("treino:")){const m=String(id).slice(7).match(/^B(\d)-(novas|sims|portal|todas)$/);if(m&&E.trs[m[0]])abrirBloco(m[1],m[2],false);return}
   const st=id&&E.sims[id];
   if(st&&!st.fin&&(simInfo(id)))abrirSim(id,null,true);
 }
@@ -458,10 +458,10 @@ async function doReset(){
 /* ==================== simulados ==================== */
 const listaSims=()=>{
   const ofi=IDX.map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao,n:s.n,k:s.k,pd:s.pd,arquivo:s.arquivo,extra:false}));
-  const ext=Object.values(EXTRA).sort((a,b)=>String(a.id).localeCompare(String(b.id))).map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao||"",n:s.q.length,k:s.q.map(q=>q.certa).join(""),pd:s.q.map(q=>q.pd),extra:true}));
+  const ext=Object.values(EXTRA).filter(s=>!s.portal).sort((a,b)=>String(a.id).localeCompare(String(b.id))).map(s=>({id:s.id,titulo:s.titulo,descricao:s.descricao||"",n:s.q.length,k:s.q.map(q=>q.certa).join(""),pd:s.q.map(q=>q.pd),extra:true}));
   return ofi.concat(ext);
 };
-const simInfo=id=>listaSims().find(s=>s.id===id)||(t=>t?{...t,titulo:`Treino do bloco ${t.b}`}:null)(TIDX.find(s=>s.id===id));
+const simInfo=id=>listaSims().find(s=>s.id===id)||(EXTRA[id]&&EXTRA[id].portal?{id,titulo:EXTRA[id].titulo,pd:EXTRA[id].q.map(q=>q.pd)}:null)||(t=>t?{...t,titulo:`Treino do bloco ${t.b}`}:null)(TIDX.find(s=>s.id===id));
 async function carregarSim(id){
   if(FULL[id])return FULL[id];
   if(EXTRA[id]){FULL[id]=EXTRA[id];return FULL[id]}
@@ -655,15 +655,16 @@ const pdCmp=(a,b)=>{const x=String(a).split(".").map(Number),y=String(b).split("
 function treinoConta(b){
   const t=TIDX.find(x=>x.b===b),novas=t?t.n:0;
   let sims=0;for(const s of IDX)for(const pd of s.pd||[])if(bloco(pd)===b)sims++;
+  let portal=0;for(const s of Object.values(EXTRA))if(s.portal)for(const q of s.q)if(bloco(q.pd)===b)portal++;
   let feitas=0,ok=0,vistas=0;for(const id in E.tr){const r=E.tr[id];if(!r||bloco(r.pd)!==b)continue;feitas++;if(r.ok)ok++;if(r.v)vistas++}
-  return {novas,sims,feitas,ok,vistas};
+  return {novas,sims,portal,feitas,ok,vistas};
 }
 function treinoHtml(){
   if(!TIDX.length&&!IDX.length)return "";
   return `<div class="card" style="margin-bottom:14px"><div class="sec-h"><h2>Treinar por bloco</h2><div class="sp"></div><span class="muted small">sem tempo · com botão "Ver resposta"</span></div>
-  <div class="tblocos">${Object.entries(BLOCOS).map(([b,x])=>{b=+b;const c=treinoConta(b),tot=c.novas+c.sims,pc=tot?Math.round(100*c.feitas/tot):0;
+  <div class="tblocos">${Object.entries(BLOCOS).map(([b,x])=>{b=+b;const c=treinoConta(b),tot=c.novas+c.sims+c.portal,pc=tot?Math.round(100*c.feitas/tot):0;
     return `<button class="tb b${b}" data-a="treino" data-b="${b}" data-n="${b}"><span class="k">Bloco ${b}</span><span class="nm">${esc(x.n)}</span>
-    <span class="ct">${c.novas} questões novas · ${c.sims} dos simulados</span>
+    <span class="ct">${c.novas} novas · ${c.sims} dos simulados${c.portal?` · ${c.portal} do Portal Anbima`:""}</span>
     <span class="pb"><b style="width:${pc}%"></b></span>
     <span class="ft"><span>${c.feitas?`${c.feitas} feitas · ${Math.round(100*c.ok/c.feitas)}% de acerto`:"ainda não começou"}</span><span class="go">${c.feitas?"Continuar":"Começar"}</span></span></button>`}).join("")}</div></div>`;
 }
@@ -672,8 +673,9 @@ async function abrirBloco(b,fonte,recomecar){
   b=+b;const key=tKey(b,fonte);
   try{
     const ids=[];
-    if(fonte!=="sims"){const t=TIDX.find(x=>x.b===b);if(t)ids.push(t.id)}
-    if(fonte!=="novas")for(const s of IDX)if((s.pd||[]).some(pd=>bloco(pd)===b))ids.push(s.id);
+    if(fonte==="novas"||fonte==="todas"){const t=TIDX.find(x=>x.b===b);if(t)ids.push(t.id)}
+    if(fonte==="sims"||fonte==="todas")for(const s of IDX)if((s.pd||[]).some(pd=>bloco(pd)===b))ids.push(s.id);
+    if(fonte==="portal"||fonte==="todas")for(const s of Object.values(EXTRA))if(s.portal&&s.q.some(q=>bloco(q.pd)===b))ids.push(s.id);
     await Promise.all(ids.map(carregarSim));
     const todos=[];
     for(const sid of ids)FULL[sid].q.forEach((x,i)=>{if(bloco(x.pd)===b)todos.push({id:qid(sid,i+1),x,n:i+1,sid})});
@@ -686,7 +688,7 @@ async function abrirBloco(b,fonte,recomecar){
     for(const it of todos)if(!st.ordem.includes(it.id))st.ordem.push(it.id); /* questões novas entram no fim */
     const itens=st.ordem.map(id=>mapa[id]).filter(Boolean);
     if(!itens.length){UI.err="Ainda não há questões para esse bloco.";render();return}
-    const nomeF={novas:"questões novas",sims:"questões dos simulados",todas:"todas as questões"}[fonte];
+    const nomeF={novas:"questões novas",sims:"questões dos simulados",portal:"Portal Anbima",todas:"todas as questões"}[fonte];
     UI.ses={tipo:"bloco",key,b,fonte,titulo:`Bloco ${b} · ${nomeF}`,modo:"estudo",itens,i:Math.min(st.atual||0,itens.length-1),fim:false,t0:Date.now()};
     E.aberto="treino:"+key;salvar();UI.modal=null;render();window.scrollTo(0,0);
   }catch(e){UI.err="Não consegui carregar as questões do bloco. Verifique a conexão.";render()}
@@ -699,7 +701,8 @@ function treinoModalHtml(m){
   return `<div class="modal" data-a="fecha-modal"><div class="card" data-stop="1"><h2>Bloco ${b} · ${esc(BLOCOS[b].n)}</h2><p class="muted small" style="margin:4px 0 0">Questões em ordem de estudo (por assunto, do fácil ao difícil), sem tempo, com correção na hora e botão "Ver resposta".</p>
   <div class="choice">${op("novas","Questões novas de treino","Feitas só para o treino; não gastam os simulados.",c.novas)}
   ${op("sims","Questões dos simulados","Todas as do bloco nos 15 simulados (as respostas daqui não mexem nos simulados).",c.sims)}
-  ${op("todas","Todas juntas","Novas e dos simulados, misturadas por assunto.",c.novas+c.sims)}</div>
+  ${op("portal","Questões oficiais do Portal Anbima","Itens do Portal de Questões ANBIMA Edu, guardados só na sua conta.",c.portal)}
+  ${op("todas","Todas juntas","Novas, dos simulados"+(c.portal?" e do Portal Anbima":"")+", misturadas por assunto.",c.novas+c.sims+c.portal)}</div>
   <div class="act"><button class="btn alt" data-a="fecha-modal">Fechar</button></div></div></div>`;
 }
 function blocoResultadoHtml(){
@@ -805,7 +808,7 @@ function sessaoHtml(){
   const alts=`<div class="cbt-alts">${x.alt.map((a,i)=>{const l=L[i];let c="";if(feito){c=l===x.certa?"right":l===resp?"wrong":""}else if(resp===l)c="sel";
       const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
       return `<button class="cbt-alt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""} aria-pressed="${resp===l}"><span class="rd"></span><span class="lt">${l.toLowerCase()})</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>`;
-  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}</div>
+  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${x.fonte?` · ${esc(x.fonte)}`:s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}</div>
     ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito?(rev&&!resp?`<div class="msg" style="margin-top:12px">Resposta revelada: a certa é a <b>${x.certa.toLowerCase()})</b>. A questão vai para a lista de erradas, para você refazer depois.</div>`:"")+gabaritoHtml(x,resp,it.id,true):""}`;
   const main=split?`<div class="cbt-m split"><div class="cbt-case" style="--qfs:${UI.fs}px"><div class="in3"><div class="cbt-lb">${x.caso?"Case":"Texto da questão"}</div>${caseHtml}</div></div><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`
     :`<div class="cbt-m"><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`;
@@ -1029,12 +1032,13 @@ async function anexar(texto){
   UI.err="";UI.msg="";
   try{
     const o=validarSim(JSON.parse(texto));
-    const usados=new Set(listaSims().map(s=>s.id));let k=1;while(usados.has("X"+String(k).padStart(2,"0")))k++;
-    o.id="X"+String(k).padStart(2,"0");o.titulo=o.titulo||`Simulado extra ${k}`;
+    if(o.portal){o.id="PORTAL";o.titulo=o.titulo||"Questões do Portal Anbima"} /* banco do portal: sempre o mesmo código, substitui a versão anterior */
+    else{const usados=new Set([...listaSims().map(s=>s.id),...Object.keys(EXTRA)]);let k=1;while(usados.has("X"+String(k).padStart(2,"0")))k++;
+    o.id="X"+String(k).padStart(2,"0");o.titulo=o.titulo||`Simulado extra ${k}`}
     EXTRA[o.id]=o;
     if(fb.on&&fb.user){const j=JSON.stringify(o);if(j.length>900000)throw new Error("O simulado é grande demais (máximo de cerca de 900 KB).");await fb.col.doc(o.id).set({json:j,em:Date.now()})}
     else LS.set("cpa-extra",EXTRA);
-    UI.anexo=false;UI.msg=`${o.titulo} anexado com ${o.q.length} questões.`;
+    UI.anexo=false;UI.msg=o.portal?`${o.q.length} questões do Portal Anbima guardadas na sua conta. Elas aparecem nos cards "Treinar por bloco".`:`${o.titulo} anexado com ${o.q.length} questões.`;
   }catch(e){UI.err="Não consegui anexar: "+(e instanceof SyntaxError?"o texto não é um JSON válido.":e.message)}
   render();
 }

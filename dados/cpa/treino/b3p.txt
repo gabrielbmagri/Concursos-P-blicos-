@@ -1,0 +1,129 @@
+## 3.1.4 médio
+Q: Um casal monta o balanço patrimonial com: apartamento financiado, carro financiado, fundos de investimento, FGTS, fatura do cartão e empréstimo pessoal. Ele quer incluir o salário do mês que vem e um bônus que pode sair; ela quer usar o preço de compra dos bens.
+P: O procedimento correto para calcular o patrimônio líquido é:
++ usar valores de mercado, contar o FGTS como ativo pouco líquido e subtrair todas as dívidas.
+- somar os bens pelo preço de compra e incluir o salário e o bônus previstos como ativos. || Valores de compra ficam desatualizados, e renda futura não é ativo.
+- avaliar os bens a mercado, mas registrar os financiamentos só pelas parcelas do mês seguinte. || O passivo é o saldo total das dívidas.
+- usar a sobra média de caixa do mês como a medida do patrimônio do casal. || Sobra de caixa é fluxo, não patrimônio.
+G: Patrimônio líquido = ativos a valor de mercado (imóvel, carro, aplicações, FGTS como ativo de baixa liquidez) − passivos totais (saldos dos financiamentos, empréstimo, fatura). Salários e bônus futuros não entram, porque ainda não existem. Assim o número é realista e comparável ao longo do tempo.
+D: Balanço: ativos a mercado − dívidas totais. Renda futura não entra.
+
+## 3.1.3.3 médio
+Q: Felipe vai financiar um carro de R$ 100 mil. Tem renda líquida de R$ 12 mil, despesas essenciais de R$ 9 mil e reserva de R$ 47 mil. Quer parcela de no máximo 20% da renda e manter reserva de pelo menos 3 meses de despesas.
+P: Os limites que ele deve respeitar na escolha da proposta são:
++ parcela de até R$ 2.400 e reserva mínima de R$ 27.000 depois de pagar a entrada.
+- parcela de até R$ 1.800 e reserva mínima de R$ 36.000 depois da entrada. || 20% de 12 mil é 2.400; 3 meses de 9 mil são 27 mil.
+- parcela de até R$ 2.400 e entrada máxima de R$ 47.000, usando toda a reserva. || Ele quer preservar 3 meses de despesas na reserva.
+- parcela de até R$ 3.000 e reserva mínima de R$ 27.000 depois da entrada. || 20% de 12 mil é 2.400, não 3.000.
+G: Teto da parcela: 20% × 12.000 = R$ 2.400. Reserva mínima: 3 × 9.000 = R$ 27.000; como ele tem R$ 47 mil, a entrada pode ser de no máximo R$ 20 mil. Entre as propostas que cabem nesses limites, escolhe-se a de menor CET.
+D: Escolha de crédito: parcela que cabe no orçamento + reserva preservada + menor CET.
+
+## 3.1.3.3 médio
+Q: Eduardo teve um gasto inesperado de R$ 7 mil e tem só R$ 1.200 de reserva. As opções são: rotativo do cartão com cheque especial, parcelar a fatura em 12 vezes, crédito pessoal em 48 parcelas ou consignado em 12 parcelas com CET menor.
+P: A opção com melhor equilíbrio entre custo e previsibilidade é:
++ o consignado em 12 parcelas, com CET menor e prestação fixa descontada em folha.
+- o rotativo com cheque especial, pela rapidez de liberação. || São as linhas mais caras, com encargos que crescem rápido.
+- o parcelamento da fatura em 12 vezes, para manter o cartão em uso. || Costuma ter custo maior que o consignado.
+- o crédito pessoal em 48 parcelas, pela parcela mais baixa. || Prazo longo aumenta o custo total.
+G: A decisão deve olhar o CET, o prazo e o impacto no orçamento. O consignado tem CET menor por causa do desconto em folha, e 12 parcelas fixas dão previsibilidade sem alongar demais a dívida. Rotativo e cheque especial são os mais caros.
+D: Emergência sem reserva: menor CET com prazo curto e parcela fixa.
+
+## 3.1.1 fácil
+Q: Marina, 32 anos, quer juntar R$ 120 mil em 8 anos para a entrada de um imóvel, mas hoje só investe quando sobra mais de R$ 500 no mês.
+P: Uma ação adequada à fase de acumulação em que ela está é:
++ programar aportes mensais fixos, ligados aos objetivos.
+- investir só o que sobrar no fim do mês, sem valor definido. || Depender de sobras torna o plano imprevisível.
+- colocar tudo em renda variável para acelerar o retorno. || Objetivo com data definida pede previsibilidade.
+- esperar os juros caírem para começar a investir. || Adiar o início reduz o efeito dos juros compostos.
+G: Na fase de acumulação, o mais importante é a disciplina: aportes regulares e programados, ligados a cada objetivo, aproveitando os juros compostos. Poupar "o que sobrar" costuma resultar em pouco ou nada.
+D: Acumulação = aportes regulares e programados.
+
+## 3.1.5 médio
+Q: Um casal quer independência financeira em 20 anos, mantendo o padrão de vida atual. Ele quer aplicar tudo no que rende mais; ela quer só aplicações conservadoras.
+P: Antes de escolher produtos, o profissional deve dimensionar o patrimônio necessário considerando:
++ a taxa real de retorno e o horizonte de 20 anos até a aposentadoria.
+- o histórico de rentabilidade da carteira atual do casal. || Rentabilidade passada não dimensiona a meta.
+- o saldo atual e as despesas futuras em valores nominais. || Valores nominais ignoram a inflação.
+- o produto de maior rentabilidade disponível no mercado. || O produto vem depois de quantificar a meta.
+G: Para calcular a reserva-alvo, usa-se a taxa real (acima da inflação) e o horizonte até a aposentadoria, trazendo o consumo desejado a valores de hoje. Só depois de quantificar a meta se escolhem os produtos.
+D: Meta de aposentadoria: taxa real + horizonte. Produto vem depois.
+
+## 3.2 fácil
+Q: Um cliente está frustrado porque um fundo de longo prazo, adequado ao seu objetivo, não deu o resultado que ele esperava em poucos meses.
+P: A conduta mais adequada do profissional é:
++ relembrar o objetivo e o horizonte combinados e explicar o comportamento no curto prazo.
+- trocar o investimento na hora, para deixar o cliente satisfeito com o resultado. || Mudar por impulso abandona o objetivo definido.
+- dizer que oscilar é normal e evitar dar detalhes para não preocupar o cliente. || O cliente precisa entender o comportamento do produto.
+- orientar o cliente a avaliar o fundo só pelo resultado de cada mês isolado. || Produto de longo prazo não se avalia mês a mês.
+G: Quando o produto está adequado, mas a expectativa é de curto prazo, o papel do profissional é alinhar expectativas: retomar objetivo e horizonte e explicar o comportamento do investimento ao longo do tempo.
+D: Expectativa desalinhada: retomar objetivo e horizonte, sem trocar por impulso.
+
+## 3.1.6 fácil
+Q: Um cliente acha que só precisa declarar no IR os valores em que houve imposto retido. Ele tem CDB, fundos, ações e resgatou parte de um VGBL.
+P: O profissional explica corretamente que ele deve informar:
++ bens, aplicações e rendimentos, inclusive os isentos e os de tributação exclusiva.
+- só os rendimentos tributáveis, sem informar os isentos. || Isentos e exclusivos também são declarados.
+- só a movimentação da conta corrente no ano. || O que se declara são bens, direitos e rendimentos.
+- só o salário e a previdência, sem as aplicações financeiras. || As aplicações também devem ser declaradas.
+G: A declaração deve trazer todos os rendimentos (tributáveis, isentos e de tributação exclusiva) e todos os bens e direitos, inclusive aplicações financeiras. Isso garante a coerência entre a renda e a evolução do patrimônio.
+D: Declara tudo: tributável, isento, exclusivo e todos os bens.
+
+## 3.4.4 médio
+Q: Um cliente ficou insatisfeito porque um resgate não foi atendido, já que o regulamento não permitia. A profissional cuida para conduzir bem a conversa, mesmo sem perda financeira para a instituição.
+P: O risco que ela quer evitar com um bom atendimento é o risco:
++ de imagem, ligado à confiança e à reputação da instituição.
+- de conformidade, ligado ao descumprimento de normas. || A instituição cumpriu o regulamento.
+- estratégico, ligado a decisões da alta gestão. || Risco estratégico envolve o posicionamento da empresa.
+- operacional, ligado a falhas de sistemas e processos. || Não houve falha operacional.
+G: Risco de imagem (reputacional) é a perda de confiança de clientes e do mercado, mesmo sem prejuízo financeiro imediato. Conformidade é descumprir normas; estratégico, decisões de gestão que afetam o posicionamento; operacional, falhas de pessoas, processos ou sistemas.
+D: Imagem = reputação. Conformidade = norma. Estratégico = decisão da gestão.
+
+## 3.4.3 médio
+Q: Um cliente antigo pede ao profissional "um jeitinho" para resgatar parte de um plano de previdência que ainda está em carência. O gestor comercial insiste em manter o relacionamento.
+P: A conduta esperada do profissional é:
++ explicar que a carência impede a liberação e buscar outras soluções para ajudar o cliente.
+- encerrar o atendimento, informando apenas que não é possível resgatar. || O profissional deve orientar e buscar alternativas.
+- liberar o resgate como exceção, para preservar o cliente. || A regra contratual da carência não admite "jeitinho".
+- registrar o pedido e não dar nenhuma explicação até receber orientação interna. || O cliente tem direito a explicações claras.
+G: O profissional deve ser transparente sobre as regras do produto (a carência impede o resgate) e, em vez de encerrar a conversa, buscar alternativas adequadas ao problema do cliente, encaminhando pedidos excepcionais pelo fluxo correto.
+D: Regra do produto não tem "jeitinho": explicar e buscar alternativas.
+
+## 3.4.2 médio
+Q: Um cliente conservador pede produtos de renda fixa de baixo risco. O gerente insiste que o analista ofereça primeiro um fundo da casa, com taxa alta e pouco aderente ao perfil.
+P: A conduta correta do analista é:
++ apresentar só as opções adequadas ao perfil e registrar o atendimento com transparência.
+- oferecer primeiro o fundo da casa e deixar a decisão com o cliente. || Oferecer o inadequado em destaque fere o suitability.
+- listar todas as opções, mas destacar os diferenciais do fundo da casa. || A meta comercial não pode se sobrepor à adequação.
+- seguir a orientação do gerente, porque a hierarquia define a recomendação. || A pressão interna não muda o dever com o cliente.
+G: O suitability e o dever de lealdade ao cliente prevalecem sobre metas comerciais e pressão hierárquica. O profissional apresenta o que é adequado ao perfil e registra o atendimento, o que protege o cliente e a própria instituição.
+D: Pressão comercial não muda o suitability.
+
+## 3.4.2 médio
+Q: Um cliente recebeu por telefone uma oferta de resgate antecipado de um produto, mas no aplicativo a função aparece como indisponível. Ele desconfia de venda inadequada.
+P: A atitude que deve prevalecer é:
++ confirmar as informações em fontes oficiais, esclarecer a regra do resgate e conferir se o produto é adequado ao perfil.
+- dizer que deve ser uma falha momentânea do sistema e encerrar o atendimento. || A divergência precisa ser apurada.
+- confirmar que a oferta por telefone segue as regras e pedir que ele aguarde o aplicativo. || Não se confirma o que não foi verificado.
+- explicar que o resgate antecipado depende de decisão interna e pedir que aguarde. || O cliente precisa de uma resposta clara.
+G: Diante de informações divergentes, o profissional verifica a regra oficial do produto, explica com transparência as condições de resgate e confirma a adequação ao perfil. Isso preserva a confiança e a conformidade.
+D: Informação divergente: conferir na fonte oficial e explicar.
+
+## 3.4.7 médio
+Q: Por engano, chega ao e-mail da equipe o rascunho de um comunicado de uma companhia aberta, marcado como sigiloso, com informação relevante ainda não divulgada.
+P: A conduta esperada do profissional é:
++ reportar ao compliance, manter sigilo e não usar a informação até a divulgação.
+- discutir o conteúdo com o gerente comercial para preparar os clientes da área. || Repassar a informação é ilícito.
+- apagar o arquivo e seguir a rotina, como se nada tivesse acontecido. || O fato deve ser registrado e reportado.
+- avisar os clientes que têm ações da empresa, para protegê-los de perdas. || Seria uso indevido de informação privilegiada.
+G: Informação relevante não divulgada não pode ser usada nem repassada (art. 27-D da Lei 6.385). O profissional deve manter sigilo, reportar formalmente ao compliance e aguardar a divulgação oficial.
+D: Recebeu informação privilegiada: sigilo, reporte ao compliance, não usar.
+
+## 3.4.7 médio
+Q: Em uma corretora que paga bônus pelo volume operado, a equipe passa a fazer compras e vendas repetidas em contas pequenas, sem mudança de preço, gerando muita corretagem.
+P: A conduta esperada do profissional que percebe o padrão é:
++ comunicar formalmente o compliance e sugerir suspender as campanhas até a apuração.
+- ajustar a comunicação da equipe e acompanhar as campanhas até ter certeza. || Indício de churning deve ser reportado logo.
+- considerar que os investidores decidiram operar mais e reforçar a educação financeira. || O padrão indica operações geradas pela equipe.
+- registrar o caso e esperar a auditoria independente antes de agir. || A conduta esperada é preventiva e imediata.
+G: Giro excessivo para gerar corretagem é churning, uma prática fraudulenta. O profissional deve reportar o indício ao compliance e agir preventivamente, sugerindo suspender incentivos que estimulem a prática até a apuração.
+D: Indício de churning: reportar ao compliance e frear os incentivos.

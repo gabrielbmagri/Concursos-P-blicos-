@@ -1,0 +1,89 @@
+## 1.1.3 médio
+Q: Um casal contratou um plano de previdência em uma seguradora e acha que ele funciona como o fundo de pensão da empresa onde um deles trabalha. Eles pedem a Luana, profissional CPA, que explique a diferença.
+P: Luana explica corretamente que o plano do casal é oferecido por uma entidade:
++ aberta, com fins lucrativos, que vende planos ao público em geral, sob supervisão da SUSEP.
+- fechada, sem fins lucrativos, restrita aos empregados de uma empresa, sob a PREVIC. || Isso descreve o fundo de pensão, não o plano vendido pela seguradora.
+- pública, que substitui a aposentadoria do INSS com benefício garantido pelo Estado. || Previdência complementar não substitui o INSS nem tem garantia estatal.
+- aberta, sem fins lucrativos, que só atende associados de sindicatos e conselhos. || Entidade aberta tem fins lucrativos e atende qualquer pessoa.
+G: Entidades abertas de previdência complementar (EAPC), em geral seguradoras, têm fins lucrativos, vendem planos (PGBL, VGBL) a qualquer pessoa e são supervisionadas pela SUSEP, com normas do CNSP. Entidades fechadas (EFPC, os fundos de pensão) não têm fins lucrativos, atendem só empregados de um patrocinador ou associados de um instituidor e ficam com PREVIC e CNPC.
+D: Aberta = seguradora, com lucro, público geral, SUSEP. Fechada = fundo de pensão, sem lucro, PREVIC.
+
+## 1.1.3 fácil
+Q: Um grupo de investidores iniciantes quer comprar ações e pergunta a Helena, profissional certificada, se pode enviar a ordem direto para a bolsa.
+P: Helena explica que a instituição que conecta o investidor à B3, registra e executa a ordem e faz a custódia dos ativos é:
++ a corretora de valores.
+- o Banco Central do Brasil. || O Banco Central não intermedeia ordens de investidores.
+- a Comissão de Valores Mobiliários. || A CVM regula e fiscaliza, mas não executa ordens.
+- a própria companhia emissora das ações. || A emissora não intermedeia negócios no mercado secundário.
+G: O investidor não negocia direto com a bolsa: a corretora (ou DTVM) é autorizada a levar as ordens à B3, registra e liquida as operações e presta o serviço de custódia, com os ativos em nome do investidor.
+D: Ordem na bolsa = corretora.
+
+## 1.2.4 médio
+Q: Após um período de falta de dinheiro no sistema, o Banco Central compra títulos públicos de bancos com o compromisso de revendê-los a eles alguns dias depois.
+P: O efeito dessa operação compromissada é:
++ injetar liquidez no sistema por um prazo curto.
+- retirar liquidez do sistema de forma definitiva. || A operação é temporária e, sendo compra, injeta dinheiro.
+- elevar a meta da Selic definida pelo Copom. || A compromissada ajusta a liquidez; a meta é decisão do Copom.
+- aumentar o depósito compulsório dos bancos. || Compulsório é outro instrumento, sem relação com a compra de títulos.
+G: Quando o Banco Central compra títulos com compromisso de revenda, entrega dinheiro aos bancos por alguns dias (injeta liquidez). Quando vende títulos com compromisso de recompra, recolhe dinheiro (enxuga liquidez). Essas operações de mercado aberto mantêm a Selic efetiva perto da meta.
+D: BC compra com revenda = injeta. BC vende com recompra = enxuga.
+
+## 1.2.5 médio
+Q: Uma exportadora vende café para os Estados Unidos e recebe em dólares. Nas últimas semanas, o dólar subiu bastante frente ao real.
+P: O efeito direto dessa alta do dólar para a exportadora é:
++ receber mais reais por cada dólar das vendas, o que melhora sua receita em reais.
+- receber menos reais por cada dólar, porque o real ficou mais valorizado. || Dólar em alta significa real desvalorizado, e não o contrário.
+- pagar mais caro por cada dólar das exportações, encarecendo as vendas. || Quem exporta recebe dólares; não precisa comprá-los.
+- não sentir efeito, porque o câmbio só afeta empresas que importam. || O câmbio afeta tanto exportadores quanto importadores.
+G: Com o dólar mais caro, cada dólar recebido vira mais reais: o exportador ganha competitividade e receita. O importador sofre o efeito oposto, porque precisa de mais reais para comprar a mesma quantidade de dólares, o que encarece as compras.
+D: Dólar sobe: bom para quem exporta, ruim para quem importa.
+
+## 1.2.4 médio
+Q: Uma empresária usa capital de giro com frequência e percebe que a taxa cobrada muda de um mês para outro, mesmo sem mudança na empresa dela. Ela pergunta ao profissional CPA o motivo.
+P: O profissional explica que a taxa do crédito varia principalmente por causa:
++ do custo de captação do banco, ligado à Selic e à liquidez, e da percepção de risco do mercado e da empresa.
+- apenas do histórico de pagamentos da empresária, sem relação com a política monetária. || O risco do tomador pesa, mas o custo do dinheiro também muda com a política monetária.
+- da inflação do mês anterior, repassada integralmente ao cliente pelo banco. || A taxa não é um repasse direto da inflação mensal.
+- de uma tabela fixa do Banco Central que define a taxa de cada empréstimo. || O Banco Central não tabela a taxa de cada operação de crédito.
+G: A taxa do crédito reflete o custo de captação do banco (influenciado pela Selic, pela liquidez e pelas expectativas), a percepção geral de risco e o risco do próprio tomador. Por isso ela oscila mesmo quando a situação da empresa não muda.
+D: Taxa do crédito = custo de captação + risco do mercado + risco do cliente.
+
+## 1.2.3 fácil
+Q: Um jovem conta ao profissional CPA que o governo aumentou impostos e gastos e passou a se endividar mais, e que sua renda não subiu no último ano.
+P: O efeito mais provável desse cenário fiscal na vida financeira do jovem é:
++ renda disponível menor, preços e juros mais altos e necessidade de mais cautela ao poupar e investir.
+- aumento automático do poder de compra, porque o gasto público compensa os impostos maiores. || Impostos maiores reduzem a renda disponível; o gasto público não compensa automaticamente.
+- nenhum efeito no dia a dia, porque política fiscal só afeta as contas do governo. || A política fiscal afeta preços, juros e renda das famílias.
+- crédito mais barato, porque o governo endividado obriga os bancos a reduzir juros. || Endividamento público tende a pressionar os juros para cima.
+G: Mais impostos reduzem a renda disponível; gasto e endividamento públicos elevados pressionam a inflação e os juros. Para quem está começando, isso pede prudência: reserva de emergência, controle de dívidas e cuidado com crédito caro.
+D: Fiscal frouxo → inflação e juros para cima; impostos maiores → menos renda disponível.
+
+## 1.1.4 médio
+Q: Um cliente mostra a Marcos, profissional CPA, um anúncio de um fundo de uma instituição aderente aos códigos da Anbima. O anúncio não traz alertas de risco e usa a rentabilidade passada como promessa. O cliente pergunta se a Anbima pode agir.
+P: Marcos explica corretamente que a Anbima:
++ pode exigir a correção da peça e aplicar sanções previstas no código, sem substituir a CVM.
+- não pode fazer nada, porque só a CVM tem regras sobre publicidade de fundos. || A Anbima tem regras próprias de publicidade para aderentes.
+- pode suspender o registro do fundo e aplicar multas como autoridade pública. || A Anbima é privada; registro e sanções estatais são da CVM.
+- só pode recomendar ajustes, sem nenhum mecanismo de punição ao aderente. || Os códigos preveem penalidades para quem descumpre.
+G: A Anbima é autorreguladora privada: seus códigos (inclusive regras de publicidade) valem para associadas e aderentes, e ela pode exigir ajustes e aplicar penalidades previstas, como advertência, multa e suspensão do uso do selo. Ela complementa, mas não substitui, a CVM e o Banco Central.
+D: Anbima: exige ajuste e pune aderentes pelo código. Não substitui a CVM.
+
+## 1.4.2 médio
+Q: Um diretor financeiro pergunta ao profissional CPA o que aconteceria se a quebra de um banco provocasse corridas a outros bancos e paralisasse pagamentos, como ocorreu em outro país.
+P: Esse tipo de risco, em que um problema isolado se espalha para o sistema, é o risco:
++ sistêmico.
+- de crédito. || Risco de crédito é um devedor específico não pagar.
+- operacional. || Risco operacional envolve falhas internas de pessoas, processos ou sistemas.
+- de mercado. || Risco de mercado é a oscilação de preços dos ativos.
+G: Risco sistêmico é o contágio: a crise de uma instituição se propaga pelas interligações entre bancos, cooperativas e sistemas de liquidação, afetando liquidez, crédito e pagamentos. O Banco Central atua com regras prudenciais e linhas de liquidez para conter esse efeito.
+D: Contágio que ameaça o sistema inteiro = risco sistêmico.
+
+## 1.3.1 médio
+Q: Em uma palestra, um empresário pergunta se o custo de um empréstimo com juros compostos depende mais da taxa ou do prazo, e se SAC e Price mudam alguma coisa.
+P: A explicação correta é que:
++ o prazo amplia o efeito da taxa, e o sistema de amortização muda o total de juros.
+- só a taxa define o custo; o prazo e o sistema de amortização não mudam nada. || Prazo e forma de amortizar mudam o saldo devedor e os juros pagos.
+- o prazo não altera o valor total da dívida quando a taxa de juros é fixa. || Mais tempo com saldo devedor significa mais juros.
+- SAC e Price sempre resultam exatamente no mesmo total de juros pagos. || O SAC amortiza mais rápido e paga menos juros no total.
+G: No regime composto há juros sobre juros, então o tempo amplia o efeito da taxa. O sistema de amortização (SAC ou Price) redistribui amortização e juros nas parcelas e altera o saldo médio devedor; por isso o SAC costuma ter juros totais menores que a Price.
+D: Composto: tempo amplia a taxa. SAC paga menos juros que Price.

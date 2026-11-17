@@ -9,3 +9,6 @@ educacional-*.json
 .env
 dados/vademecum/
 __pycache__/
+
+# itens do Portal de Questões ANBIMA (confidenciais): ficam só na conta do usuário
+dados/cpa/portal/

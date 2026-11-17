@@ -904,6 +904,195 @@
 "D": "Emprestar é atividade normal dos bancos; o que se exige é capital e controle de risco."
 },
 "dica": "Basileia = capital proporcional ao risco + liquidez + limite de alavancagem."
+},
+{
+"pd": "1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um casal contratou um plano de previdência em uma seguradora e acha que ele funciona como o fundo de pensão da empresa onde um deles trabalha. Eles pedem a Luana, profissional CPA, que explique a diferença.",
+"enunciado": "Luana explica corretamente que o plano do casal é oferecido por uma entidade:",
+"alt": [
+"fechada, sem fins lucrativos, restrita aos empregados de uma empresa, sob a PREVIC.",
+"aberta, com fins lucrativos, que vende planos ao público em geral, sob supervisão da SUSEP.",
+"aberta, sem fins lucrativos, que só atende associados de sindicatos e conselhos.",
+"pública, que substitui a aposentadoria do INSS com benefício garantido pelo Estado."
+],
+"certa": "B",
+"gabarito": "Entidades abertas de previdência complementar (EAPC), em geral seguradoras, têm fins lucrativos, vendem planos (PGBL, VGBL) a qualquer pessoa e são supervisionadas pela SUSEP, com normas do CNSP. Entidades fechadas (EFPC, os fundos de pensão) não têm fins lucrativos, atendem só empregados de um patrocinador ou associados de um instituidor e ficam com PREVIC e CNPC.",
+"porque": {
+"A": "Isso descreve o fundo de pensão, não o plano vendido pela seguradora.",
+"C": "Entidade aberta tem fins lucrativos e atende qualquer pessoa.",
+"D": "Previdência complementar não substitui o INSS nem tem garantia estatal."
+},
+"dica": "Aberta = seguradora, com lucro, público geral, SUSEP. Fechada = fundo de pensão, sem lucro, PREVIC."
+},
+{
+"pd": "1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um grupo de investidores iniciantes quer comprar ações e pergunta a Helena, profissional certificada, se pode enviar a ordem direto para a bolsa.",
+"enunciado": "Helena explica que a instituição que conecta o investidor à B3, registra e executa a ordem e faz a custódia dos ativos é:",
+"alt": [
+"a corretora de valores.",
+"a própria companhia emissora das ações.",
+"a Comissão de Valores Mobiliários.",
+"o Banco Central do Brasil."
+],
+"certa": "A",
+"gabarito": "O investidor não negocia direto com a bolsa: a corretora (ou DTVM) é autorizada a levar as ordens à B3, registra e liquida as operações e presta o serviço de custódia, com os ativos em nome do investidor.",
+"porque": {
+"B": "A emissora não intermedeia negócios no mercado secundário.",
+"C": "A CVM regula e fiscaliza, mas não executa ordens.",
+"D": "O Banco Central não intermedeia ordens de investidores."
+},
+"dica": "Ordem na bolsa = corretora."
+},
+{
+"pd": "1.2.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Após um período de falta de dinheiro no sistema, o Banco Central compra títulos públicos de bancos com o compromisso de revendê-los a eles alguns dias depois.",
+"enunciado": "O efeito dessa operação compromissada é:",
+"alt": [
+"retirar liquidez do sistema de forma definitiva.",
+"aumentar o depósito compulsório dos bancos.",
+"elevar a meta da Selic definida pelo Copom.",
+"injetar liquidez no sistema por um prazo curto."
+],
+"certa": "D",
+"gabarito": "Quando o Banco Central compra títulos com compromisso de revenda, entrega dinheiro aos bancos por alguns dias (injeta liquidez). Quando vende títulos com compromisso de recompra, recolhe dinheiro (enxuga liquidez). Essas operações de mercado aberto mantêm a Selic efetiva perto da meta.",
+"porque": {
+"A": "A operação é temporária e, sendo compra, injeta dinheiro.",
+"B": "Compulsório é outro instrumento, sem relação com a compra de títulos.",
+"C": "A compromissada ajusta a liquidez; a meta é decisão do Copom."
+},
+"dica": "BC compra com revenda = injeta. BC vende com recompra = enxuga."
+},
+{
+"pd": "1.2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma exportadora vende café para os Estados Unidos e recebe em dólares. Nas últimas semanas, o dólar subiu bastante frente ao real.",
+"enunciado": "O efeito direto dessa alta do dólar para a exportadora é:",
+"alt": [
+"receber menos reais por cada dólar, porque o real ficou mais valorizado.",
+"pagar mais caro por cada dólar das exportações, encarecendo as vendas.",
+"receber mais reais por cada dólar das vendas, o que melhora sua receita em reais.",
+"não sentir efeito, porque o câmbio só afeta empresas que importam."
+],
+"certa": "C",
+"gabarito": "Com o dólar mais caro, cada dólar recebido vira mais reais: o exportador ganha competitividade e receita. O importador sofre o efeito oposto, porque precisa de mais reais para comprar a mesma quantidade de dólares, o que encarece as compras.",
+"porque": {
+"A": "Dólar em alta significa real desvalorizado, e não o contrário.",
+"B": "Quem exporta recebe dólares; não precisa comprá-los.",
+"D": "O câmbio afeta tanto exportadores quanto importadores."
+},
+"dica": "Dólar sobe: bom para quem exporta, ruim para quem importa."
+},
+{
+"pd": "1.2.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresária usa capital de giro com frequência e percebe que a taxa cobrada muda de um mês para outro, mesmo sem mudança na empresa dela. Ela pergunta ao profissional CPA o motivo.",
+"enunciado": "O profissional explica que a taxa do crédito varia principalmente por causa:",
+"alt": [
+"da inflação do mês anterior, repassada integralmente ao cliente pelo banco.",
+"do custo de captação do banco, ligado à Selic e à liquidez, e da percepção de risco do mercado e da empresa.",
+"apenas do histórico de pagamentos da empresária, sem relação com a política monetária.",
+"de uma tabela fixa do Banco Central que define a taxa de cada empréstimo."
+],
+"certa": "B",
+"gabarito": "A taxa do crédito reflete o custo de captação do banco (influenciado pela Selic, pela liquidez e pelas expectativas), a percepção geral de risco e o risco do próprio tomador. Por isso ela oscila mesmo quando a situação da empresa não muda.",
+"porque": {
+"A": "A taxa não é um repasse direto da inflação mensal.",
+"C": "O risco do tomador pesa, mas o custo do dinheiro também muda com a política monetária.",
+"D": "O Banco Central não tabela a taxa de cada operação de crédito."
+},
+"dica": "Taxa do crédito = custo de captação + risco do mercado + risco do cliente."
+},
+{
+"pd": "1.2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um jovem conta ao profissional CPA que o governo aumentou impostos e gastos e passou a se endividar mais, e que sua renda não subiu no último ano.",
+"enunciado": "O efeito mais provável desse cenário fiscal na vida financeira do jovem é:",
+"alt": [
+"crédito mais barato, porque o governo endividado obriga os bancos a reduzir juros.",
+"aumento automático do poder de compra, porque o gasto público compensa os impostos maiores.",
+"renda disponível menor, preços e juros mais altos e necessidade de mais cautela ao poupar e investir.",
+"nenhum efeito no dia a dia, porque política fiscal só afeta as contas do governo."
+],
+"certa": "C",
+"gabarito": "Mais impostos reduzem a renda disponível; gasto e endividamento públicos elevados pressionam a inflação e os juros. Para quem está começando, isso pede prudência: reserva de emergência, controle de dívidas e cuidado com crédito caro.",
+"porque": {
+"A": "Endividamento público tende a pressionar os juros para cima.",
+"B": "Impostos maiores reduzem a renda disponível; o gasto público não compensa automaticamente.",
+"D": "A política fiscal afeta preços, juros e renda das famílias."
+},
+"dica": "Fiscal frouxo → inflação e juros para cima; impostos maiores → menos renda disponível."
+},
+{
+"pd": "1.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente mostra a Marcos, profissional CPA, um anúncio de um fundo de uma instituição aderente aos códigos da Anbima. O anúncio não traz alertas de risco e usa a rentabilidade passada como promessa. O cliente pergunta se a Anbima pode agir.",
+"enunciado": "Marcos explica corretamente que a Anbima:",
+"alt": [
+"pode suspender o registro do fundo e aplicar multas como autoridade pública.",
+"só pode recomendar ajustes, sem nenhum mecanismo de punição ao aderente.",
+"não pode fazer nada, porque só a CVM tem regras sobre publicidade de fundos.",
+"pode exigir a correção da peça e aplicar sanções previstas no código, sem substituir a CVM."
+],
+"certa": "D",
+"gabarito": "A Anbima é autorreguladora privada: seus códigos (inclusive regras de publicidade) valem para associadas e aderentes, e ela pode exigir ajustes e aplicar penalidades previstas, como advertência, multa e suspensão do uso do selo. Ela complementa, mas não substitui, a CVM e o Banco Central.",
+"porque": {
+"A": "A Anbima é privada; registro e sanções estatais são da CVM.",
+"B": "Os códigos preveem penalidades para quem descumpre.",
+"C": "A Anbima tem regras próprias de publicidade para aderentes."
+},
+"dica": "Anbima: exige ajuste e pune aderentes pelo código. Não substitui a CVM."
+},
+{
+"pd": "1.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um diretor financeiro pergunta ao profissional CPA o que aconteceria se a quebra de um banco provocasse corridas a outros bancos e paralisasse pagamentos, como ocorreu em outro país.",
+"enunciado": "Esse tipo de risco, em que um problema isolado se espalha para o sistema, é o risco:",
+"alt": [
+"sistêmico.",
+"de mercado.",
+"de crédito.",
+"operacional."
+],
+"certa": "A",
+"gabarito": "Risco sistêmico é o contágio: a crise de uma instituição se propaga pelas interligações entre bancos, cooperativas e sistemas de liquidação, afetando liquidez, crédito e pagamentos. O Banco Central atua com regras prudenciais e linhas de liquidez para conter esse efeito.",
+"porque": {
+"B": "Risco de mercado é a oscilação de preços dos ativos.",
+"C": "Risco de crédito é um devedor específico não pagar.",
+"D": "Risco operacional envolve falhas internas de pessoas, processos ou sistemas."
+},
+"dica": "Contágio que ameaça o sistema inteiro = risco sistêmico."
+},
+{
+"pd": "1.3.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Em uma palestra, um empresário pergunta se o custo de um empréstimo com juros compostos depende mais da taxa ou do prazo, e se SAC e Price mudam alguma coisa.",
+"enunciado": "A explicação correta é que:",
+"alt": [
+"o prazo não altera o valor total da dívida quando a taxa de juros é fixa.",
+"o prazo amplia o efeito da taxa, e o sistema de amortização muda o total de juros.",
+"SAC e Price sempre resultam exatamente no mesmo total de juros pagos.",
+"só a taxa define o custo; o prazo e o sistema de amortização não mudam nada."
+],
+"certa": "B",
+"gabarito": "No regime composto há juros sobre juros, então o tempo amplia o efeito da taxa. O sistema de amortização (SAC ou Price) redistribui amortização e juros nas parcelas e altera o saldo médio devedor; por isso o SAC costuma ter juros totais menores que a Price.",
+"porque": {
+"A": "Mais tempo com saldo devedor significa mais juros.",
+"C": "O SAC amortiza mais rápido e paga menos juros no total.",
+"D": "Prazo e forma de amortizar mudam o saldo devedor e os juros pagos."
+},
+"dica": "Composto: tempo amplia a taxa. SAC paga menos juros que Price."
 }
 ]
 }

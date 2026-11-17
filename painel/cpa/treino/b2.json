@@ -1408,6 +1408,573 @@
 "D": "Refinanciamentos podem ter prestamista."
 },
 "dica": "Prestamista: quita a dívida; beneficiário é o credor; sem venda casada."
+},
+{
+"pd": "2.1.1.1.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente pessoa física precisa receber exatamente R$ 50 mil líquidos e vai resgatar esse valor de uma LCA, sem custos de resgate.",
+"enunciado": "O valor bruto que ele deve resgatar é de:",
+"alt": [
+"R$ 50.000, porque a LCA é isenta de IR para pessoa física.",
+"R$ 58.824, para cobrir 15% de IR sobre o resgate.",
+"R$ 64.516, para cobrir 22,5% de IR sobre o resgate.",
+"R$ 60.606, para cobrir 17,5% de IR sobre o resgate."
+],
+"certa": "A",
+"gabarito": "LCI e LCA são isentas de IR para pessoa física, então o valor bruto resgatado é igual ao líquido. Se fosse um CDB, seria preciso resgatar mais para cobrir o IR pela tabela regressiva.",
+"porque": {
+"B": "A LCA não tem IR para pessoa física.",
+"C": "A LCA não tem IR para pessoa física.",
+"D": "A LCA não tem IR para pessoa física."
+},
+"dica": "Aplicação isenta: bruto = líquido."
+},
+{
+"pd": "2.1.1.1.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma LCA isenta paga 10% ao ano. Um CDB do mesmo banco, com prazo de 300 dias, paga uma taxa bruta maior.",
+"enunciado": "Para empatar com a LCA, o CDB precisaria pagar, bruto, cerca de:",
+"alt": [
+"12% ao ano.",
+"11,75% ao ano.",
+"12,5% ao ano.",
+"10% ao ano."
+],
+"certa": "C",
+"gabarito": "Para comparar um isento com um tributado, divide-se a taxa isenta por (1 − IR). Com 300 dias, o IR do CDB é de 20%: 10% ÷ 0,80 = 12,5%. Acima disso, o CDB rende mais; abaixo, a LCA vence.",
+"porque": {
+"A": "A conta é por divisão: 10 ÷ (1 − 0,20) = 12,5.",
+"B": "Esse cálculo usa 15% de IR, mas o prazo de 300 dias paga 20%.",
+"D": "O CDB tem IR; com a mesma taxa bruta, renderia menos que a LCA."
+},
+"dica": "Bruto equivalente = taxa isenta ÷ (1 − IR)."
+},
+{
+"pd": "2.1.1.1.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Vera comprou R$ 300 mil em CRI por meio da plataforma do seu banco e pergunta ao profissional CPA se o investimento tem garantia do FGC.",
+"enunciado": "A resposta correta é que o CRI:",
+"alt": [
+"tem FGC sem limite, porque o lastro são imóveis registrados em cartório.",
+"tem FGC até R$ 250 mil, porque foi comprado em uma instituição financeira.",
+"não tem FGC, mas o banco distribuidor devolve o valor se houver calote.",
+"não tem FGC; o retorno depende do pagamento dos recebíveis imobiliários que lastreiam o título."
+],
+"certa": "D",
+"gabarito": "O CRI é emitido por securitizadora, com lastro em recebíveis imobiliários separados em patrimônio próprio (regime fiduciário). Securitizadoras não fazem parte do FGC, e o banco que vende o título apenas o distribui. O risco é o dos devedores dos recebíveis.",
+"porque": {
+"A": "O CRI não tem garantia do FGC.",
+"B": "Comprar pelo banco não dá FGC a títulos de outros emissores.",
+"C": "O distribuidor não garante o pagamento."
+},
+"dica": "CRI e CRA: sem FGC, mesmo comprados no banco."
+},
+{
+"pd": "2.1.1.1.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente conservador comprou há 2 anos um Tesouro Prefixado que vence daqui a 3 anos. Ao ver o extrato, percebeu que o valor caiu e achou que tinha perdido dinheiro.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"a queda indica que o governo pode não pagar o título no vencimento.",
+"a marcação a mercado ajusta o preço todo dia; se ele levar o título até o vencimento, recebe a taxa contratada.",
+"só o Tesouro Selic sofre marcação a mercado; prefixados ficam estáveis até o vencimento.",
+"a queda vem de impostos e taxas descontados antecipadamente pelo Tesouro."
+],
+"certa": "B",
+"gabarito": "Os títulos são marcados a mercado: quando as taxas de juros sobem, o preço dos prefixados cai, e o extrato mostra isso. A perda só se realiza se o cliente vender antes; mantido até o vencimento, o título paga exatamente a taxa contratada.",
+"porque": {
+"A": "A oscilação reflete as taxas de mercado, não o risco de calote.",
+"C": "Prefixados oscilam mais que o Tesouro Selic.",
+"D": "IR e custódia não explicam a oscilação de preço no extrato."
+},
+"dica": "Oscilação no extrato = marcação a mercado. Até o vencimento, recebe o contratado."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa listada faz um follow-on com uma parcela primária e outra secundária. Cecília, acionista da empresa, não pretende comprar ações na oferta.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"as duas parcelas levam dinheiro para a empresa, mas só a secundária dilui Cecília.",
+"só a parcela primária leva dinheiro para a empresa e cria ações novas, diluindo Cecília.",
+"só a parcela secundária leva dinheiro para a empresa, mas as duas diluem Cecília.",
+"nenhuma parcela dilui Cecília, porque ela já era acionista antes da oferta."
+],
+"certa": "B",
+"gabarito": "Na oferta primária, a empresa emite ações novas e recebe o dinheiro; quem não compra na proporção da sua fatia é diluído. Na secundária, acionistas vendem ações já existentes: o dinheiro vai para eles, o número de ações não muda e não há diluição.",
+"porque": {
+"A": "A secundária não cria ações nem capta para a empresa.",
+"C": "A secundária vende ações existentes; o dinheiro vai para os vendedores.",
+"D": "A emissão de novas ações reduz a fatia de quem não acompanha."
+},
+"dica": "Primária: dinheiro para a empresa e diluição. Secundária: dinheiro para quem vende."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um investidor tem BDRs de uma empresa americana. Cada ação nos Estados Unidos equivale a 10 BDRs, a ação está cotada a US$ 300 e o dólar está em R$ 5,20.",
+"enunciado": "O valor justo de cada BDR é de:",
+"alt": [
+"R$ 156,00.",
+"R$ 576,92.",
+"R$ 1.560,00.",
+"R$ 30,00."
+],
+"certa": "A",
+"gabarito": "O valor justo do BDR é o preço da ação em reais dividido pela razão de conversão: US$ 300 × R$ 5,20 = R$ 1.560 por ação; ÷ 10 BDRs = R$ 156,00. O BDR tem risco cambial e não tem a isenção de R$ 20 mil.",
+"porque": {
+"B": "As operações foram invertidas.",
+"C": "Esse é o preço da ação inteira em reais, sem dividir pela razão de conversão.",
+"D": "Esse cálculo esqueceu de converter o preço para reais."
+},
+"dica": "BDR = preço lá fora × câmbio ÷ razão de conversão."
+},
+{
+"pd": "2.1.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma empresa fez um IPO em que a procura foi várias vezes maior que a oferta, com rateio entre os investidores. A oferta também previa lote suplementar.",
+"enunciado": "Sobre o início das negociações no mercado secundário, é correto afirmar que:",
+"alt": [
+"a liquidez é sempre maior durante o IPO do que no mercado secundário.",
+"o preço fica travado no valor do IPO, porque o lote suplementar impede oscilações.",
+"a demanda não atendida tende a pressionar o preço para cima na abertura das negociações.",
+"o rateio não tem nenhuma relação com o comportamento do preço depois."
+],
+"certa": "C",
+"gabarito": "Com demanda muito maior que a oferta, muitos investidores ficam sem as ações que queriam e tendem a comprar no secundário, pressionando o preço na abertura. O lote suplementar (ações extras) pode ser usado para atender demanda e ajudar a estabilizar, mas não fixa a cotação.",
+"porque": {
+"A": "É no secundário que a liquidez se forma, entre investidores.",
+"B": "O lote suplementar ajuda a estabilizar, mas não trava o preço.",
+"D": "Quem não recebeu ações tende a comprar no secundário."
+},
+"dica": "Rateio alto no IPO → pressão compradora no início do secundário."
+},
+{
+"pd": "2.1.1.2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma companhia quer entrar em um segmento especial de governança da B3 para atrair investidores, mas quer manter ações preferenciais (PN) no capital.",
+"enunciado": "Entre as opções abaixo, um segmento compatível com esse desejo é o:",
+"alt": [
+"Nível 2, que proíbe a emissão de ações preferenciais.",
+"Novo Mercado, que exige as mesmas regras do Nível 1.",
+"Novo Mercado, que permite PN desde que haja tag along de 100%.",
+"Nível 1, que exige mais transparência e permite ações PN."
+],
+"certa": "D",
+"gabarito": "Os segmentos especiais acrescentam obrigações às da lei. O Nível 1 exige mais transparência e free float mínimo e aceita PN. O Nível 2 também aceita PN, com tag along de 100%. O Novo Mercado só admite ações ON.",
+"porque": {
+"A": "O Nível 2 permite PN, com tag along de 100%.",
+"B": "O Novo Mercado é o segmento mais exigente.",
+"C": "O Novo Mercado só admite ações ON."
+},
+"dica": "PN pode no Nível 1 e no Nível 2. Novo Mercado: só ON."
+},
+{
+"pd": "2.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um influenciador anuncia um \"fundo inovador\" que vai prometer rendimento mínimo de 110% do CDI, emprestar dinheiro a empresas parceiras e dar os ativos do fundo como garantia em negócios privados.",
+"enunciado": "Pela Resolução CVM 175, essas práticas são:",
+"alt": [
+"vedadas só quanto à promessa de rendimento; o resto é permitido.",
+"todas vedadas: prometer rendimento, conceder crédito e dar o patrimônio do fundo em garantia.",
+"permitidas, desde que estejam previstas no regulamento do fundo.",
+"permitidas, se aprovadas pelos cotistas em assembleia."
+],
+"certa": "B",
+"gabarito": "A CVM 175 proíbe que prestadores prometam rendimento predeterminado e veda, em regra, que o fundo conceda crédito ou dê seus ativos em garantia de obrigações de terceiros. Promessas de retorno são também sinal clássico de fraude.",
+"porque": {
+"A": "Conceder crédito e dar garantia também são vedados.",
+"C": "Essas vedações não podem ser afastadas pelo regulamento.",
+"D": "A assembleia não pode autorizar o que a norma proíbe."
+},
+"dica": "Fundo não promete retorno, não empresta e não dá seu patrimônio em garantia."
+},
+{
+"pd": "2.1.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Pedro foi convidado a entrar em um \"Fundo de Investimento Plaza\", vendido no estande de um empreendimento imobiliário, com aplicação por contrato de mútuo. Antes de investir, quer saber onde conferir se é regular.",
+"enunciado": "O órgão onde Pedro deve verificar o registro do fundo e da oferta é a:",
+"alt": [
+"Prefeitura da cidade do empreendimento.",
+"Bolsa B3.",
+"Junta Comercial do estado.",
+"CVM."
+],
+"certa": "D",
+"gabarito": "Um fundo de investimento só pode funcionar depois de registrado na CVM, e uma oferta de investimento ao público também exige registro ou dispensa da CVM. Usar o nome \"fundo\" sem registro é sinal de alerta.",
+"porque": {
+"A": "A prefeitura não registra investimentos.",
+"B": "A B3 não é o órgão que registra fundos.",
+"C": "A Junta registra empresas, não fundos e ofertas de valores mobiliários."
+},
+"dica": "Fundo e oferta ao público = registro na CVM."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente aplicou em um fundo com cota de D+1 e viu, no dia seguinte, um valor de cota diferente do que aparecia no momento da aplicação. Ele pergunta quem calcula a cota.",
+"enunciado": "O profissional explica que a cota é:",
+"alt": [
+"calculada e divulgada diariamente pelo administrador, com base no patrimônio líquido da classe no fim do dia.",
+"estimada pelo distribuidor a partir das aplicações e resgates dos clientes.",
+"validada todos os dias pelo auditor independente antes de ser divulgada.",
+"definida pelo gestor durante o pregão, conforme as operações que ele faz."
+],
+"certa": "A",
+"gabarito": "O administrador é o responsável pelo cálculo e pela divulgação da cota, que resulta do patrimônio líquido da classe dividido pelo número de cotas, apurado ao fim de cada dia. Com cota D+1, vale a cota do dia útil seguinte ao pedido.",
+"porque": {
+"B": "O distribuidor só vende as cotas.",
+"C": "O auditor revisa as demonstrações, não a cota diária.",
+"D": "O gestor decide os investimentos; quem calcula a cota é o administrador."
+},
+"dica": "Cota = PL ÷ número de cotas, calculada pelo administrador."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um gestor de fundo multimercado comenta: \"Depois da decisão do Copom, zeramos as posições em dólar e aumentamos os prefixados\".",
+"enunciado": "Essa atividade corresponde ao papel do gestor de:",
+"alt": [
+"custodiar os títulos públicos comprados pelo fundo.",
+"registrar o fundo na CVM e atualizar o regulamento.",
+"ajustar a carteira às suas expectativas para a economia, buscando retorno.",
+"calcular a cota e apurar o resultado do fundo naquele dia."
+],
+"certa": "C",
+"gabarito": "O gestor toma as decisões de investimento: compra e vende ativos conforme a política do fundo e sua leitura do cenário, com dever fiduciário. O administrador cuida da estrutura, da cota e das informações; o custodiante guarda os ativos.",
+"porque": {
+"A": "A guarda dos ativos é do custodiante.",
+"B": "Registro e regulamento são atribuições do administrador.",
+"D": "Cálculo de cota é atribuição do administrador."
+},
+"dica": "Gestor = decide a carteira."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "O regulamento de um fundo diz que as perdas podem superar o capital aplicado e que os cotistas podem ter de aportar recursos adicionais.",
+"enunciado": "Sobre essa cláusula, é correto afirmar que:",
+"alt": [
+"a responsabilidade do cotista é sempre limitada, e a cláusula não tem validade.",
+"o cotista pode sair do fundo sem cobrir o prejuízo, pedindo resgate.",
+"o FGC cobre o patrimônio negativo do fundo até R$ 250 mil por cotista.",
+"a regra geral é a responsabilidade limitada, mas o regulamento pode prever a ilimitada, aceita pelo cotista."
+],
+"certa": "D",
+"gabarito": "Pela CVM 175, a responsabilidade do cotista é limitada ao valor subscrito, salvo se o regulamento prever responsabilidade ilimitada. Nesse caso, o cotista assina o termo de adesão e ciência de risco, ciente de que pode ter de aportar recursos para cobrir patrimônio negativo.",
+"porque": {
+"A": "A CVM 175 admite responsabilidade ilimitada quando prevista e aceita.",
+"B": "Em classe sem limitação, o cotista pode ter de cobrir o prejuízo.",
+"C": "Fundos não têm FGC."
+},
+"dica": "Regra: responsabilidade limitada. Exceção: ilimitada, prevista e aceita pelo cotista."
+},
+{
+"pd": "2.1.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Patrícia vê o mesmo fundo com duas classes: uma aberta, com resgate em D+X, e outra fechada, de longo prazo. Ela pode precisar de parte do dinheiro nos próximos 12 meses.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"as duas classes permitem resgate a qualquer momento, conforme o regulamento.",
+"a classe fechada elimina o risco de liquidez até o fim do prazo do fundo.",
+"na classe fechada ela pode não conseguir sair quando precisar, ou só vender as cotas com desconto.",
+"a classe fechada tem liquidez mais previsível, porque o fundo controla as saídas."
+],
+"certa": "C",
+"gabarito": "Na classe aberta, o cotista sai pelo resgate, com prazos definidos. Na fechada, não há resgate: o dinheiro volta por amortizações, no fim do prazo ou vendendo as cotas no secundário, com incerteza de prazo e preço. Para quem pode precisar do dinheiro em 12 meses, a aberta é mais adequada.",
+"porque": {
+"A": "A classe fechada não tem resgate.",
+"B": "Ela aumenta o risco de liquidez para quem precisa sair antes.",
+"D": "Sem resgate, a saída depende de vender cotas a outro investidor."
+},
+"dica": "Classe fechada: sem resgate; sair antes depende de vender as cotas."
+},
+{
+"pd": "2.1.4",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Maurício tem 500 cotas de um FII que tem 2 milhões de cotas. O fundo fará uma oferta de novas cotas a R$ 90, e depois dela o fundo terá 2,5 milhões de cotas. Ele quer manter a mesma participação.",
+"enunciado": "Pelo direito de preferência, Maurício deve investir:",
+"alt": [
+"R$ 11.250.",
+"R$ 56.250.",
+"R$ 12.500.",
+"R$ 45.000."
+],
+"certa": "A",
+"gabarito": "Participação atual: 500 ÷ 2.000.000 = 0,025%. Para mantê-la: 0,025% × 2.500.000 = 625 cotas. Faltam 125 cotas × R$ 90 = R$ 11.250. Quem não exerce a preferência é diluído.",
+"porque": {
+"B": "Esse é o valor de todas as 625 cotas, mas ele já tem 500.",
+"C": "Esse valor usa preço errado ou quantidade errada de cotas.",
+"D": "Esse é o valor das cotas que ele já tem, não das novas."
+},
+"dica": "Manter participação = comprar a mesma fatia das novas cotas."
+},
+{
+"pd": "2.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Lúcia, 66 anos, tem um VGBL e quer começar a receber uma renda mensal. Ela pergunta se o saldo continua aplicado e rendendo depois disso.",
+"enunciado": "O profissional explica corretamente que, ao converter o saldo em renda:",
+"alt": [
+"o saldo passa a render uma taxa fixa garantida igual em qualquer modalidade de renda.",
+"o saldo vira reserva administrada pela seguradora, e o resultado dos investimentos já está embutido no valor da renda.",
+"o saldo deixa de render e é apenas dividido em parcelas fixas, sem correção.",
+"o saldo continua no mesmo fundo, em nome dela, e a renda sai por resgates programados."
+],
+"certa": "B",
+"gabarito": "Na fase de benefício, ao contratar uma renda, o saldo acumulado vira reserva matemática da seguradora. Essa reserva segue aplicada, e seu resultado financeiro e atuarial já está considerado no valor e na atualização da renda contratada. A fase de benefício é uma etapa contratual diferente da acumulação.",
+"porque": {
+"A": "Cada modalidade tem cálculo atuarial próprio.",
+"C": "A reserva continua aplicada e isso entra no cálculo da renda.",
+"D": "Na conversão em renda, a reserva passa a ser da seguradora."
+},
+"dica": "Conversão em renda: o saldo vira reserva da seguradora; o rendimento já está na renda."
+},
+{
+"pd": "2.2",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Uma médica autônoma quer que, se algo lhe acontecer, os recursos de um plano vão direto aos filhos, com agilidade e sem depender de inventário.",
+"enunciado": "Uma característica dos planos de previdência que atende esse objetivo é:",
+"alt": [
+"a transferência automática do saldo para uma conta conjunta da família.",
+"a indicação de beneficiários, que recebem conforme as regras do plano, em geral fora do inventário.",
+"o pagamento só aos herdeiros previstos em lei, depois de concluído o inventário.",
+"a liberação dos recursos apenas por ordem judicial, como em qualquer aplicação."
+],
+"certa": "B",
+"gabarito": "PGBL e VGBL permitem indicar beneficiários livremente. Em caso de morte do titular, o saldo é pago a eles conforme as regras do plano, em geral sem passar pelo inventário, o que dá agilidade à sucessão.",
+"porque": {
+"A": "Não existe essa transferência automática.",
+"C": "Em previdência, o titular indica os beneficiários.",
+"D": "Os beneficiários indicados recebem pelas regras do plano."
+},
+"dica": "Previdência com beneficiário indicado = agilidade na sucessão."
+},
+{
+"pd": "2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Fábio quer renovar a frota de caminhões para contratos de 3 a 4 anos. Não quer imobilizar capital, quer trocar de veículos com facilidade e não quer manter os caminhões depois desse prazo.",
+"enunciado": "A alternativa mais adequada é:",
+"alt": [
+"o leasing operacional, que paga pelo uso e permite devolver os veículos no fim do contrato.",
+"o financiamento tradicional, que transfere a propriedade ao final do pagamento.",
+"o consórcio, que garante a entrega imediata dos caminhões.",
+"o capital de giro, que financia a compra definitiva da frota."
+],
+"certa": "A",
+"gabarito": "No leasing operacional, a empresa paga pelo uso do bem durante o contrato e pode devolvê-lo no fim, sem imobilizar capital. No financiamento, a empresa compra o bem e fica com a propriedade ao quitar.",
+"porque": {
+"B": "Ele não quer ficar com os caminhões nem imobilizar capital.",
+"C": "No consórcio, a entrega depende de sorteio ou lance.",
+"D": "Capital de giro financia o caixa do dia a dia."
+},
+"dica": "Quer usar e devolver = leasing operacional. Quer ser dono = financiamento."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma cliente tem fatura de R$ 5.000, paga R$ 1.000 e deixa R$ 4.000 no rotativo a 10% ao mês. Depois de 1 mês, o saldo é parcelado em 4 vezes fixas a 5% ao mês.",
+"enunciado": "O desembolso total da cliente até quitar tudo é de aproximadamente:",
+"alt": [
+"R$ 5.400.",
+"R$ 5.862.",
+"R$ 5.512.",
+"R$ 5.963."
+],
+"certa": "D",
+"gabarito": "Rotativo por 1 mês: 4.000 × 1,10 = 4.400. Parcelamento em 4 vezes a 5%: PMT = 4.400 × [0,05 ÷ (1 − 1,05^−4)] ≈ 1.240,85; × 4 = 4.963,41. Total: 1.000 + 4.963,41 ≈ R$ 5.963. Os encargos do rotativo e do parcelamento da fatura são limitados a 100% da dívida original.",
+"porque": {
+"A": "Esse cálculo esquece os juros do parcelamento.",
+"B": "O parcelamento é por prestações (Price), não por juros sobre o saldo inteiro.",
+"C": "Esse cálculo esquece o mês de juros no rotativo."
+},
+"dica": "Rotativo vira parcelamento: saldo com juros do mês, depois prestações (Price)."
+},
+{
+"pd": "2.3",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente financia R$ 50.000 pela tabela Price, a 2% ao mês, em 24 parcelas.",
+"enunciado": "O valor de cada prestação é de aproximadamente:",
+"alt": [
+"R$ 3.350,91.",
+"R$ 2.083,33.",
+"R$ 2.643,55.",
+"R$ 3.083,33."
+],
+"certa": "C",
+"gabarito": "Na Price, PMT = PV × [i ÷ (1 − (1 + i)^−n)] = 50.000 × [0,02 ÷ (1 − 1,02^−24)] ≈ R$ 2.643,55. A parcela é fixa; no início, a maior parte é juros, e a amortização cresce com o tempo.",
+"porque": {
+"A": "Esse valor divide o montante com juros compostos pelo número de parcelas.",
+"B": "Esse valor ignora os juros.",
+"D": "Esse valor soma a parcela de amortização com os juros do primeiro mês, como no SAC."
+},
+"dica": "Price: PMT = PV × i ÷ (1 − (1 + i)^−n). Parcela fixa."
+},
+{
+"pd": "2.3",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente usou R$ 800 do cheque especial por 5 dias e estranhou que o valor cobrado foi maior que os juros divulgados.",
+"enunciado": "O profissional explica que, além dos juros diários sobre o valor usado, há:",
+"alt": [
+"juros sobre todo o limite disponível, mesmo a parte não usada.",
+"uma multa fixa de 2% por usar o cheque especial antes do salário.",
+"uma tarifa mensal pelo limite, cobrada mesmo sem uso.",
+"IOF, com uma parte fixa na liberação e outra diária pelo tempo de uso."
+],
+"certa": "D",
+"gabarito": "No cheque especial, os juros incidem só sobre o valor usado e pelos dias de uso, com teto de 8% ao mês. Além disso, há IOF sobre o crédito: uma alíquota fixa na contratação e outra diária enquanto o saldo fica negativo.",
+"porque": {
+"A": "Os juros incidem só sobre o valor usado.",
+"B": "Não há multa por usar o limite.",
+"C": "A cobrança pelo limite não usado é vedada."
+},
+"dica": "Cheque especial: juros diários sobre o usado + IOF (fixo + diário)."
+},
+{
+"pd": "2.4.1",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Uma lojista recebeu um pagamento por boleto e o dinheiro não entrou no mesmo dia, ao contrário dos pagamentos por Pix. Ela quer entender a diferença para conciliar o caixa.",
+"enunciado": "A explicação correta é que:",
+"alt": [
+"o boleto é liquidado na hora, e o atraso só pode ser um erro interno da própria loja.",
+"o boleto passa por compensação; conforme o horário, o crédito cai no dia ou no dia útil seguinte.",
+"o atraso se deve aos juros que o banco cobra sobre o valor do boleto pago.",
+"o Pix depende de compensação, e o boleto é que é liquidado instantaneamente."
+],
+"certa": "B",
+"gabarito": "O Pix é liquidado em tempo real, 24 horas por dia. O boleto é compensado entre as instituições, e o crédito ao recebedor depende do horário de pagamento: pode cair no mesmo dia ou no dia útil seguinte. A conciliação deve considerar a data do crédito.",
+"porque": {
+"A": "O boleto depende de compensação entre instituições.",
+"C": "Não há juros sobre o boleto pago em dia.",
+"D": "É o contrário: o Pix é instantâneo."
+},
+"dica": "Pix: na hora. Boleto: compensação, crédito em D+0 ou D+1 útil."
+},
+{
+"pd": "2.4.1",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um cliente reclama de não conseguir atendimento humano no aplicativo e insiste em falar pessoalmente com o gerente.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"o atendimento presencial só pode ocorrer com autorização prévia do gerente da agência.",
+"o cliente só tem direito ao canal que escolheu na abertura da conta.",
+"o banco oferece agência, canais digitais e telefone, e o cliente escolhe o mais adequado.",
+"o canal digital substitui o presencial, e o cliente deve resolver tudo pelo aplicativo do banco."
+],
+"certa": "C",
+"gabarito": "As instituições devem oferecer atendimento por canais físicos, digitais e telefônicos, com segurança e informações claras. O cliente tem o direito de escolher o canal mais adequado à sua demanda.",
+"porque": {
+"A": "Não há essa exigência.",
+"B": "O cliente pode usar os canais disponíveis.",
+"D": "O cliente pode escolher o canal."
+},
+"dica": "O cliente escolhe o canal: agência, aplicativo ou telefone."
+},
+{
+"pd": "2.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um empresário quer abrir uma conta internacional para pagar fornecedores no exterior e receber em dólar.",
+"enunciado": "Uma característica correta dessas contas é:",
+"alt": [
+"ter saldo em várias moedas, cartão para o exterior e, às vezes, dados bancários locais.",
+"garantir dados bancários locais em todas as moedas, com transferências sempre sem tarifa.",
+"ficar livre de IOF e de spread cambial em todas as conversões de moeda.",
+"dispensar controles fiscais, por operar fora do sistema bancário brasileiro."
+],
+"certa": "A",
+"gabarito": "Contas internacionais oferecem saldo multimoeda, cartão para uso no exterior e, às vezes, dados bancários locais (como IBAN na Europa ou ABA nos Estados Unidos). As conversões têm IOF e spread, e as operações seguem a regulação cambial e as obrigações de declaração.",
+"porque": {
+"B": "Os recursos variam conforme o país e a moeda.",
+"C": "As conversões seguem com IOF e spread.",
+"D": "Seguem a regulação cambial e as obrigações fiscais."
+},
+"dica": "Conta internacional: multimoeda e cartão, mas com IOF, spread e declaração."
+},
+{
+"pd": "2.4.2",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente ouviu que transferências internacionais são sempre isentas de IOF e que investimentos no exterior só pagam IOF sobre o lucro.",
+"enunciado": "O profissional explica corretamente que o IOF nas operações de câmbio:",
+"alt": [
+"não incide em nenhuma transferência internacional, qualquer que seja a finalidade.",
+"varia conforme a finalidade e o enquadramento da operação, e as alíquotas podem mudar com o tempo.",
+"incide só sobre o lucro dos investimentos feitos no exterior.",
+"tem uma única alíquota para todas as remessas ao exterior."
+],
+"certa": "B",
+"gabarito": "O IOF-câmbio tem alíquotas diferentes conforme a finalidade (viagem, envio a familiares, investimento etc.) e o enquadramento cambial, e o governo pode alterá-las. Já o rendimento de investimentos no exterior é tributado pelo IR (15% na declaração anual para pessoa física).",
+"porque": {
+"A": "Há IOF em várias operações de câmbio.",
+"C": "O IOF-câmbio incide na operação de câmbio, não sobre o lucro.",
+"D": "As alíquotas variam conforme a finalidade."
+},
+"dica": "IOF-câmbio depende da finalidade. Ganho lá fora paga IR, não IOF."
+},
+{
+"pd": "2.5",
+"dif": "Médio",
+"nivel": "",
+"contexto": "Um cliente com seguro residencial básico teve aparelhos queimados por uma oscilação na rede elétrica durante uma tempestade, e a seguradora negou a indenização.",
+"enunciado": "O profissional explica corretamente que:",
+"alt": [
+"a cobertura básica cobre incêndio, raio e explosão; danos elétricos exigem cobertura adicional.",
+"a cobertura básica cobre danos elétricos, desde que não causados pelo clima.",
+"danos elétricos são cobertos automaticamente em aparelhos na garantia de fábrica.",
+"o seguro residencial básico cobre eletrônicos em qualquer situação."
+],
+"certa": "A",
+"gabarito": "No seguro residencial, a cobertura básica costuma abranger incêndio, queda de raio e explosão. Danos elétricos, vendaval, roubo e outros riscos são coberturas adicionais, contratadas à parte. Na renovação, vale revisar as coberturas.",
+"porque": {
+"B": "Danos elétricos são cobertura adicional.",
+"C": "Garantia do fabricante não amplia a apólice.",
+"D": "A cobertura básica é limitada."
+},
+"dica": "Residencial básico: incêndio, raio, explosão. Danos elétricos: adicional."
+},
+{
+"pd": "2.5",
+"dif": "Fácil",
+"nivel": "",
+"contexto": "Um pai, principal provedor da família, quer garantir os estudos dos filhos se morrer nos próximos 20 anos, com custo baixo.",
+"enunciado": "A modalidade mais adequada é o seguro de vida:",
+"alt": [
+"prestamista, que paga a indenização diretamente aos filhos.",
+"com acumulação, que substitui a necessidade de proteção por prazo definido.",
+"temporário, com prazo alinhado ao período em que os filhos dependem dele.",
+"inteira, que tem cobertura vitalícia e é a opção mais barata."
+],
+"certa": "C",
+"gabarito": "O seguro temporário cobre um prazo definido e tem prêmio menor, o que atende bem a necessidades com data para acabar, como a fase de dependência dos filhos. O seguro de vida inteira dá cobertura vitalícia, com prêmio maior.",
+"porque": {
+"A": "O prestamista quita dívidas e paga ao credor.",
+"B": "A necessidade é proteção barata por um prazo.",
+"D": "A vida inteira tem prêmio maior."
+},
+"dica": "Proteção barata por um período = seguro temporário."
 }
 ]
 }

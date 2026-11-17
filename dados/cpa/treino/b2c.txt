@@ -1,0 +1,269 @@
+## 2.1.1.1.3 fácil
+Q: Um cliente pessoa física precisa receber exatamente R$ 50 mil líquidos e vai resgatar esse valor de uma LCA, sem custos de resgate.
+P: O valor bruto que ele deve resgatar é de:
++ R$ 50.000, porque a LCA é isenta de IR para pessoa física.
+- R$ 58.824, para cobrir 15% de IR sobre o resgate. || A LCA não tem IR para pessoa física.
+- R$ 60.606, para cobrir 17,5% de IR sobre o resgate. || A LCA não tem IR para pessoa física.
+- R$ 64.516, para cobrir 22,5% de IR sobre o resgate. || A LCA não tem IR para pessoa física.
+G: LCI e LCA são isentas de IR para pessoa física, então o valor bruto resgatado é igual ao líquido. Se fosse um CDB, seria preciso resgatar mais para cobrir o IR pela tabela regressiva.
+D: Aplicação isenta: bruto = líquido.
+
+## 2.1.1.1.3 médio
+Q: Uma LCA isenta paga 10% ao ano. Um CDB do mesmo banco, com prazo de 300 dias, paga uma taxa bruta maior.
+P: Para empatar com a LCA, o CDB precisaria pagar, bruto, cerca de:
++ 12,5% ao ano.
+- 10% ao ano. || O CDB tem IR; com a mesma taxa bruta, renderia menos que a LCA.
+- 11,75% ao ano. || Esse cálculo usa 15% de IR, mas o prazo de 300 dias paga 20%.
+- 12% ao ano. || A conta é por divisão: 10 ÷ (1 − 0,20) = 12,5.
+G: Para comparar um isento com um tributado, divide-se a taxa isenta por (1 − IR). Com 300 dias, o IR do CDB é de 20%: 10% ÷ 0,80 = 12,5%. Acima disso, o CDB rende mais; abaixo, a LCA vence.
+D: Bruto equivalente = taxa isenta ÷ (1 − IR).
+
+## 2.1.1.1.5 fácil
+Q: Vera comprou R$ 300 mil em CRI por meio da plataforma do seu banco e pergunta ao profissional CPA se o investimento tem garantia do FGC.
+P: A resposta correta é que o CRI:
++ não tem FGC; o retorno depende do pagamento dos recebíveis imobiliários que lastreiam o título.
+- tem FGC até R$ 250 mil, porque foi comprado em uma instituição financeira. || Comprar pelo banco não dá FGC a títulos de outros emissores.
+- tem FGC sem limite, porque o lastro são imóveis registrados em cartório. || O CRI não tem garantia do FGC.
+- não tem FGC, mas o banco distribuidor devolve o valor se houver calote. || O distribuidor não garante o pagamento.
+G: O CRI é emitido por securitizadora, com lastro em recebíveis imobiliários separados em patrimônio próprio (regime fiduciário). Securitizadoras não fazem parte do FGC, e o banco que vende o título apenas o distribui. O risco é o dos devedores dos recebíveis.
+D: CRI e CRA: sem FGC, mesmo comprados no banco.
+
+## 2.1.1.1.1 médio
+Q: Um cliente conservador comprou há 2 anos um Tesouro Prefixado que vence daqui a 3 anos. Ao ver o extrato, percebeu que o valor caiu e achou que tinha perdido dinheiro.
+P: O profissional explica corretamente que:
++ a marcação a mercado ajusta o preço todo dia; se ele levar o título até o vencimento, recebe a taxa contratada.
+- a queda vem de impostos e taxas descontados antecipadamente pelo Tesouro. || IR e custódia não explicam a oscilação de preço no extrato.
+- só o Tesouro Selic sofre marcação a mercado; prefixados ficam estáveis até o vencimento. || Prefixados oscilam mais que o Tesouro Selic.
+- a queda indica que o governo pode não pagar o título no vencimento. || A oscilação reflete as taxas de mercado, não o risco de calote.
+G: Os títulos são marcados a mercado: quando as taxas de juros sobem, o preço dos prefixados cai, e o extrato mostra isso. A perda só se realiza se o cliente vender antes; mantido até o vencimento, o título paga exatamente a taxa contratada.
+D: Oscilação no extrato = marcação a mercado. Até o vencimento, recebe o contratado.
+
+## 2.1.1.2 médio
+Q: Uma empresa listada faz um follow-on com uma parcela primária e outra secundária. Cecília, acionista da empresa, não pretende comprar ações na oferta.
+P: O profissional explica corretamente que:
++ só a parcela primária leva dinheiro para a empresa e cria ações novas, diluindo Cecília.
+- só a parcela secundária leva dinheiro para a empresa, mas as duas diluem Cecília. || A secundária vende ações existentes; o dinheiro vai para os vendedores.
+- as duas parcelas levam dinheiro para a empresa, mas só a secundária dilui Cecília. || A secundária não cria ações nem capta para a empresa.
+- nenhuma parcela dilui Cecília, porque ela já era acionista antes da oferta. || A emissão de novas ações reduz a fatia de quem não acompanha.
+G: Na oferta primária, a empresa emite ações novas e recebe o dinheiro; quem não compra na proporção da sua fatia é diluído. Na secundária, acionistas vendem ações já existentes: o dinheiro vai para eles, o número de ações não muda e não há diluição.
+D: Primária: dinheiro para a empresa e diluição. Secundária: dinheiro para quem vende.
+
+## 2.1.1.2 médio
+Q: Um investidor tem BDRs de uma empresa americana. Cada ação nos Estados Unidos equivale a 10 BDRs, a ação está cotada a US$ 300 e o dólar está em R$ 5,20.
+P: O valor justo de cada BDR é de:
++ R$ 156,00.
+- R$ 30,00. || Esse cálculo esqueceu de converter o preço para reais.
+- R$ 1.560,00. || Esse é o preço da ação inteira em reais, sem dividir pela razão de conversão.
+- R$ 576,92. || As operações foram invertidas.
+G: O valor justo do BDR é o preço da ação em reais dividido pela razão de conversão: US$ 300 × R$ 5,20 = R$ 1.560 por ação; ÷ 10 BDRs = R$ 156,00. O BDR tem risco cambial e não tem a isenção de R$ 20 mil.
+D: BDR = preço lá fora × câmbio ÷ razão de conversão.
+
+## 2.1.1.2 médio
+Q: Uma empresa fez um IPO em que a procura foi várias vezes maior que a oferta, com rateio entre os investidores. A oferta também previa lote suplementar.
+P: Sobre o início das negociações no mercado secundário, é correto afirmar que:
++ a demanda não atendida tende a pressionar o preço para cima na abertura das negociações.
+- o preço fica travado no valor do IPO, porque o lote suplementar impede oscilações. || O lote suplementar ajuda a estabilizar, mas não trava o preço.
+- a liquidez é sempre maior durante o IPO do que no mercado secundário. || É no secundário que a liquidez se forma, entre investidores.
+- o rateio não tem nenhuma relação com o comportamento do preço depois. || Quem não recebeu ações tende a comprar no secundário.
+G: Com demanda muito maior que a oferta, muitos investidores ficam sem as ações que queriam e tendem a comprar no secundário, pressionando o preço na abertura. O lote suplementar (ações extras) pode ser usado para atender demanda e ajudar a estabilizar, mas não fixa a cotação.
+D: Rateio alto no IPO → pressão compradora no início do secundário.
+
+## 2.1.1.2.3 médio
+Q: Uma companhia quer entrar em um segmento especial de governança da B3 para atrair investidores, mas quer manter ações preferenciais (PN) no capital.
+P: Entre as opções abaixo, um segmento compatível com esse desejo é o:
++ Nível 1, que exige mais transparência e permite ações PN.
+- Novo Mercado, que permite PN desde que haja tag along de 100%. || O Novo Mercado só admite ações ON.
+- Novo Mercado, que exige as mesmas regras do Nível 1. || O Novo Mercado é o segmento mais exigente.
+- Nível 2, que proíbe a emissão de ações preferenciais. || O Nível 2 permite PN, com tag along de 100%.
+G: Os segmentos especiais acrescentam obrigações às da lei. O Nível 1 exige mais transparência e free float mínimo e aceita PN. O Nível 2 também aceita PN, com tag along de 100%. O Novo Mercado só admite ações ON.
+D: PN pode no Nível 1 e no Nível 2. Novo Mercado: só ON.
+
+## 2.1.2 fácil
+Q: Um influenciador anuncia um "fundo inovador" que vai prometer rendimento mínimo de 110% do CDI, emprestar dinheiro a empresas parceiras e dar os ativos do fundo como garantia em negócios privados.
+P: Pela Resolução CVM 175, essas práticas são:
++ todas vedadas: prometer rendimento, conceder crédito e dar o patrimônio do fundo em garantia.
+- permitidas, desde que estejam previstas no regulamento do fundo. || Essas vedações não podem ser afastadas pelo regulamento.
+- vedadas só quanto à promessa de rendimento; o resto é permitido. || Conceder crédito e dar garantia também são vedados.
+- permitidas, se aprovadas pelos cotistas em assembleia. || A assembleia não pode autorizar o que a norma proíbe.
+G: A CVM 175 proíbe que prestadores prometam rendimento predeterminado e veda, em regra, que o fundo conceda crédito ou dê seus ativos em garantia de obrigações de terceiros. Promessas de retorno são também sinal clássico de fraude.
+D: Fundo não promete retorno, não empresta e não dá seu patrimônio em garantia.
+
+## 2.1.2 fácil
+Q: Pedro foi convidado a entrar em um "Fundo de Investimento Plaza", vendido no estande de um empreendimento imobiliário, com aplicação por contrato de mútuo. Antes de investir, quer saber onde conferir se é regular.
+P: O órgão onde Pedro deve verificar o registro do fundo e da oferta é a:
++ CVM.
+- Junta Comercial do estado. || A Junta registra empresas, não fundos e ofertas de valores mobiliários.
+- Bolsa B3. || A B3 não é o órgão que registra fundos.
+- Prefeitura da cidade do empreendimento. || A prefeitura não registra investimentos.
+G: Um fundo de investimento só pode funcionar depois de registrado na CVM, e uma oferta de investimento ao público também exige registro ou dispensa da CVM. Usar o nome "fundo" sem registro é sinal de alerta.
+D: Fundo e oferta ao público = registro na CVM.
+
+## 2.1.2 médio
+Q: Um cliente aplicou em um fundo com cota de D+1 e viu, no dia seguinte, um valor de cota diferente do que aparecia no momento da aplicação. Ele pergunta quem calcula a cota.
+P: O profissional explica que a cota é:
++ calculada e divulgada diariamente pelo administrador, com base no patrimônio líquido da classe no fim do dia.
+- definida pelo gestor durante o pregão, conforme as operações que ele faz. || O gestor decide os investimentos; quem calcula a cota é o administrador.
+- estimada pelo distribuidor a partir das aplicações e resgates dos clientes. || O distribuidor só vende as cotas.
+- validada todos os dias pelo auditor independente antes de ser divulgada. || O auditor revisa as demonstrações, não a cota diária.
+G: O administrador é o responsável pelo cálculo e pela divulgação da cota, que resulta do patrimônio líquido da classe dividido pelo número de cotas, apurado ao fim de cada dia. Com cota D+1, vale a cota do dia útil seguinte ao pedido.
+D: Cota = PL ÷ número de cotas, calculada pelo administrador.
+
+## 2.1.2 médio
+Q: Um gestor de fundo multimercado comenta: "Depois da decisão do Copom, zeramos as posições em dólar e aumentamos os prefixados".
+P: Essa atividade corresponde ao papel do gestor de:
++ ajustar a carteira às suas expectativas para a economia, buscando retorno.
+- calcular a cota e apurar o resultado do fundo naquele dia. || Cálculo de cota é atribuição do administrador.
+- custodiar os títulos públicos comprados pelo fundo. || A guarda dos ativos é do custodiante.
+- registrar o fundo na CVM e atualizar o regulamento. || Registro e regulamento são atribuições do administrador.
+G: O gestor toma as decisões de investimento: compra e vende ativos conforme a política do fundo e sua leitura do cenário, com dever fiduciário. O administrador cuida da estrutura, da cota e das informações; o custodiante guarda os ativos.
+D: Gestor = decide a carteira.
+
+## 2.1.2 médio
+Q: O regulamento de um fundo diz que as perdas podem superar o capital aplicado e que os cotistas podem ter de aportar recursos adicionais.
+P: Sobre essa cláusula, é correto afirmar que:
++ a regra geral é a responsabilidade limitada, mas o regulamento pode prever a ilimitada, aceita pelo cotista.
+- a responsabilidade do cotista é sempre limitada, e a cláusula não tem validade. || A CVM 175 admite responsabilidade ilimitada quando prevista e aceita.
+- o FGC cobre o patrimônio negativo do fundo até R$ 250 mil por cotista. || Fundos não têm FGC.
+- o cotista pode sair do fundo sem cobrir o prejuízo, pedindo resgate. || Em classe sem limitação, o cotista pode ter de cobrir o prejuízo.
+G: Pela CVM 175, a responsabilidade do cotista é limitada ao valor subscrito, salvo se o regulamento prever responsabilidade ilimitada. Nesse caso, o cotista assina o termo de adesão e ciência de risco, ciente de que pode ter de aportar recursos para cobrir patrimônio negativo.
+D: Regra: responsabilidade limitada. Exceção: ilimitada, prevista e aceita pelo cotista.
+
+## 2.1.2 médio
+Q: Patrícia vê o mesmo fundo com duas classes: uma aberta, com resgate em D+X, e outra fechada, de longo prazo. Ela pode precisar de parte do dinheiro nos próximos 12 meses.
+P: O profissional explica corretamente que:
++ na classe fechada ela pode não conseguir sair quando precisar, ou só vender as cotas com desconto.
+- a classe fechada tem liquidez mais previsível, porque o fundo controla as saídas. || Sem resgate, a saída depende de vender cotas a outro investidor.
+- as duas classes permitem resgate a qualquer momento, conforme o regulamento. || A classe fechada não tem resgate.
+- a classe fechada elimina o risco de liquidez até o fim do prazo do fundo. || Ela aumenta o risco de liquidez para quem precisa sair antes.
+G: Na classe aberta, o cotista sai pelo resgate, com prazos definidos. Na fechada, não há resgate: o dinheiro volta por amortizações, no fim do prazo ou vendendo as cotas no secundário, com incerteza de prazo e preço. Para quem pode precisar do dinheiro em 12 meses, a aberta é mais adequada.
+D: Classe fechada: sem resgate; sair antes depende de vender as cotas.
+
+## 2.1.4 médio
+Q: Maurício tem 500 cotas de um FII que tem 2 milhões de cotas. O fundo fará uma oferta de novas cotas a R$ 90, e depois dela o fundo terá 2,5 milhões de cotas. Ele quer manter a mesma participação.
+P: Pelo direito de preferência, Maurício deve investir:
++ R$ 11.250.
+- R$ 12.500. || Esse valor usa preço errado ou quantidade errada de cotas.
+- R$ 56.250. || Esse é o valor de todas as 625 cotas, mas ele já tem 500.
+- R$ 45.000. || Esse é o valor das cotas que ele já tem, não das novas.
+G: Participação atual: 500 ÷ 2.000.000 = 0,025%. Para mantê-la: 0,025% × 2.500.000 = 625 cotas. Faltam 125 cotas × R$ 90 = R$ 11.250. Quem não exerce a preferência é diluído.
+D: Manter participação = comprar a mesma fatia das novas cotas.
+
+## 2.2 médio
+Q: Lúcia, 66 anos, tem um VGBL e quer começar a receber uma renda mensal. Ela pergunta se o saldo continua aplicado e rendendo depois disso.
+P: O profissional explica corretamente que, ao converter o saldo em renda:
++ o saldo vira reserva administrada pela seguradora, e o resultado dos investimentos já está embutido no valor da renda.
+- o saldo continua no mesmo fundo, em nome dela, e a renda sai por resgates programados. || Na conversão em renda, a reserva passa a ser da seguradora.
+- o saldo deixa de render e é apenas dividido em parcelas fixas, sem correção. || A reserva continua aplicada e isso entra no cálculo da renda.
+- o saldo passa a render uma taxa fixa garantida igual em qualquer modalidade de renda. || Cada modalidade tem cálculo atuarial próprio.
+G: Na fase de benefício, ao contratar uma renda, o saldo acumulado vira reserva matemática da seguradora. Essa reserva segue aplicada, e seu resultado financeiro e atuarial já está considerado no valor e na atualização da renda contratada. A fase de benefício é uma etapa contratual diferente da acumulação.
+D: Conversão em renda: o saldo vira reserva da seguradora; o rendimento já está na renda.
+
+## 2.2 fácil
+Q: Uma médica autônoma quer que, se algo lhe acontecer, os recursos de um plano vão direto aos filhos, com agilidade e sem depender de inventário.
+P: Uma característica dos planos de previdência que atende esse objetivo é:
++ a indicação de beneficiários, que recebem conforme as regras do plano, em geral fora do inventário.
+- o pagamento só aos herdeiros previstos em lei, depois de concluído o inventário. || Em previdência, o titular indica os beneficiários.
+- a liberação dos recursos apenas por ordem judicial, como em qualquer aplicação. || Os beneficiários indicados recebem pelas regras do plano.
+- a transferência automática do saldo para uma conta conjunta da família. || Não existe essa transferência automática.
+G: PGBL e VGBL permitem indicar beneficiários livremente. Em caso de morte do titular, o saldo é pago a eles conforme as regras do plano, em geral sem passar pelo inventário, o que dá agilidade à sucessão.
+D: Previdência com beneficiário indicado = agilidade na sucessão.
+
+## 2.3 fácil
+Q: Fábio quer renovar a frota de caminhões para contratos de 3 a 4 anos. Não quer imobilizar capital, quer trocar de veículos com facilidade e não quer manter os caminhões depois desse prazo.
+P: A alternativa mais adequada é:
++ o leasing operacional, que paga pelo uso e permite devolver os veículos no fim do contrato.
+- o financiamento tradicional, que transfere a propriedade ao final do pagamento. || Ele não quer ficar com os caminhões nem imobilizar capital.
+- o consórcio, que garante a entrega imediata dos caminhões. || No consórcio, a entrega depende de sorteio ou lance.
+- o capital de giro, que financia a compra definitiva da frota. || Capital de giro financia o caixa do dia a dia.
+G: No leasing operacional, a empresa paga pelo uso do bem durante o contrato e pode devolvê-lo no fim, sem imobilizar capital. No financiamento, a empresa compra o bem e fica com a propriedade ao quitar.
+D: Quer usar e devolver = leasing operacional. Quer ser dono = financiamento.
+
+## 2.3 médio
+Q: Uma cliente tem fatura de R$ 5.000, paga R$ 1.000 e deixa R$ 4.000 no rotativo a 10% ao mês. Depois de 1 mês, o saldo é parcelado em 4 vezes fixas a 5% ao mês.
+P: O desembolso total da cliente até quitar tudo é de aproximadamente:
++ R$ 5.963.
+- R$ 5.400. || Esse cálculo esquece os juros do parcelamento.
+- R$ 5.512. || Esse cálculo esquece o mês de juros no rotativo.
+- R$ 5.862. || O parcelamento é por prestações (Price), não por juros sobre o saldo inteiro.
+G: Rotativo por 1 mês: 4.000 × 1,10 = 4.400. Parcelamento em 4 vezes a 5%: PMT = 4.400 × [0,05 ÷ (1 − 1,05^−4)] ≈ 1.240,85; × 4 = 4.963,41. Total: 1.000 + 4.963,41 ≈ R$ 5.963. Os encargos do rotativo e do parcelamento da fatura são limitados a 100% da dívida original.
+D: Rotativo vira parcelamento: saldo com juros do mês, depois prestações (Price).
+
+## 2.3 médio
+Q: Um cliente financia R$ 50.000 pela tabela Price, a 2% ao mês, em 24 parcelas.
+P: O valor de cada prestação é de aproximadamente:
++ R$ 2.643,55.
+- R$ 3.083,33. || Esse valor soma a parcela de amortização com os juros do primeiro mês, como no SAC.
+- R$ 2.083,33. || Esse valor ignora os juros.
+- R$ 3.350,91. || Esse valor divide o montante com juros compostos pelo número de parcelas.
+G: Na Price, PMT = PV × [i ÷ (1 − (1 + i)^−n)] = 50.000 × [0,02 ÷ (1 − 1,02^−24)] ≈ R$ 2.643,55. A parcela é fixa; no início, a maior parte é juros, e a amortização cresce com o tempo.
+D: Price: PMT = PV × i ÷ (1 − (1 + i)^−n). Parcela fixa.
+
+## 2.3 fácil
+Q: Um cliente usou R$ 800 do cheque especial por 5 dias e estranhou que o valor cobrado foi maior que os juros divulgados.
+P: O profissional explica que, além dos juros diários sobre o valor usado, há:
++ IOF, com uma parte fixa na liberação e outra diária pelo tempo de uso.
+- uma multa fixa de 2% por usar o cheque especial antes do salário. || Não há multa por usar o limite.
+- juros sobre todo o limite disponível, mesmo a parte não usada. || Os juros incidem só sobre o valor usado.
+- uma tarifa mensal pelo limite, cobrada mesmo sem uso. || A cobrança pelo limite não usado é vedada.
+G: No cheque especial, os juros incidem só sobre o valor usado e pelos dias de uso, com teto de 8% ao mês. Além disso, há IOF sobre o crédito: uma alíquota fixa na contratação e outra diária enquanto o saldo fica negativo.
+D: Cheque especial: juros diários sobre o usado + IOF (fixo + diário).
+
+## 2.4.1 médio
+Q: Uma lojista recebeu um pagamento por boleto e o dinheiro não entrou no mesmo dia, ao contrário dos pagamentos por Pix. Ela quer entender a diferença para conciliar o caixa.
+P: A explicação correta é que:
++ o boleto passa por compensação; conforme o horário, o crédito cai no dia ou no dia útil seguinte.
+- o boleto é liquidado na hora, e o atraso só pode ser um erro interno da própria loja. || O boleto depende de compensação entre instituições.
+- o Pix depende de compensação, e o boleto é que é liquidado instantaneamente. || É o contrário: o Pix é instantâneo.
+- o atraso se deve aos juros que o banco cobra sobre o valor do boleto pago. || Não há juros sobre o boleto pago em dia.
+G: O Pix é liquidado em tempo real, 24 horas por dia. O boleto é compensado entre as instituições, e o crédito ao recebedor depende do horário de pagamento: pode cair no mesmo dia ou no dia útil seguinte. A conciliação deve considerar a data do crédito.
+D: Pix: na hora. Boleto: compensação, crédito em D+0 ou D+1 útil.
+
+## 2.4.1 fácil
+Q: Um cliente reclama de não conseguir atendimento humano no aplicativo e insiste em falar pessoalmente com o gerente.
+P: O profissional explica corretamente que:
++ o banco oferece agência, canais digitais e telefone, e o cliente escolhe o mais adequado.
+- o canal digital substitui o presencial, e o cliente deve resolver tudo pelo aplicativo do banco. || O cliente pode escolher o canal.
+- o atendimento presencial só pode ocorrer com autorização prévia do gerente da agência. || Não há essa exigência.
+- o cliente só tem direito ao canal que escolheu na abertura da conta. || O cliente pode usar os canais disponíveis.
+G: As instituições devem oferecer atendimento por canais físicos, digitais e telefônicos, com segurança e informações claras. O cliente tem o direito de escolher o canal mais adequado à sua demanda.
+D: O cliente escolhe o canal: agência, aplicativo ou telefone.
+
+## 2.4.2 médio
+Q: Um empresário quer abrir uma conta internacional para pagar fornecedores no exterior e receber em dólar.
+P: Uma característica correta dessas contas é:
++ ter saldo em várias moedas, cartão para o exterior e, às vezes, dados bancários locais.
+- ficar livre de IOF e de spread cambial em todas as conversões de moeda. || As conversões seguem com IOF e spread.
+- garantir dados bancários locais em todas as moedas, com transferências sempre sem tarifa. || Os recursos variam conforme o país e a moeda.
+- dispensar controles fiscais, por operar fora do sistema bancário brasileiro. || Seguem a regulação cambial e as obrigações fiscais.
+G: Contas internacionais oferecem saldo multimoeda, cartão para uso no exterior e, às vezes, dados bancários locais (como IBAN na Europa ou ABA nos Estados Unidos). As conversões têm IOF e spread, e as operações seguem a regulação cambial e as obrigações de declaração.
+D: Conta internacional: multimoeda e cartão, mas com IOF, spread e declaração.
+
+## 2.4.2 médio
+Q: Um cliente ouviu que transferências internacionais são sempre isentas de IOF e que investimentos no exterior só pagam IOF sobre o lucro.
+P: O profissional explica corretamente que o IOF nas operações de câmbio:
++ varia conforme a finalidade e o enquadramento da operação, e as alíquotas podem mudar com o tempo.
+- não incide em nenhuma transferência internacional, qualquer que seja a finalidade. || Há IOF em várias operações de câmbio.
+- tem uma única alíquota para todas as remessas ao exterior. || As alíquotas variam conforme a finalidade.
+- incide só sobre o lucro dos investimentos feitos no exterior. || O IOF-câmbio incide na operação de câmbio, não sobre o lucro.
+G: O IOF-câmbio tem alíquotas diferentes conforme a finalidade (viagem, envio a familiares, investimento etc.) e o enquadramento cambial, e o governo pode alterá-las. Já o rendimento de investimentos no exterior é tributado pelo IR (15% na declaração anual para pessoa física).
+D: IOF-câmbio depende da finalidade. Ganho lá fora paga IR, não IOF.
+
+## 2.5 médio
+Q: Um cliente com seguro residencial básico teve aparelhos queimados por uma oscilação na rede elétrica durante uma tempestade, e a seguradora negou a indenização.
+P: O profissional explica corretamente que:
++ a cobertura básica cobre incêndio, raio e explosão; danos elétricos exigem cobertura adicional.
+- a cobertura básica cobre danos elétricos, desde que não causados pelo clima. || Danos elétricos são cobertura adicional.
+- danos elétricos são cobertos automaticamente em aparelhos na garantia de fábrica. || Garantia do fabricante não amplia a apólice.
+- o seguro residencial básico cobre eletrônicos em qualquer situação. || A cobertura básica é limitada.
+G: No seguro residencial, a cobertura básica costuma abranger incêndio, queda de raio e explosão. Danos elétricos, vendaval, roubo e outros riscos são coberturas adicionais, contratadas à parte. Na renovação, vale revisar as coberturas.
+D: Residencial básico: incêndio, raio, explosão. Danos elétricos: adicional.
+
+## 2.5 fácil
+Q: Um pai, principal provedor da família, quer garantir os estudos dos filhos se morrer nos próximos 20 anos, com custo baixo.
+P: A modalidade mais adequada é o seguro de vida:
++ temporário, com prazo alinhado ao período em que os filhos dependem dele.
+- inteira, que tem cobertura vitalícia e é a opção mais barata. || A vida inteira tem prêmio maior.
+- com acumulação, que substitui a necessidade de proteção por prazo definido. || A necessidade é proteção barata por um prazo.
+- prestamista, que paga a indenização diretamente aos filhos. || O prestamista quita dívidas e paga ao credor.
+G: O seguro temporário cobre um prazo definido e tem prêmio menor, o que atende bem a necessidades com data para acabar, como a fase de dependência dos filhos. O seguro de vida inteira dá cobertura vitalícia, com prêmio maior.
+D: Proteção barata por um período = seguro temporário.
