@@ -123,7 +123,9 @@ tr:last-child td{border-bottom:0}
 .tb.tall{margin-top:12px;width:100%;min-height:0;background:linear-gradient(135deg,#0b3b29,#0f6b46 60%,#2ea36f)}
 .cbt-ord{display:flex;gap:8px;align-items:center;padding:6px 10px;background:#fff;border-bottom:1px solid var(--cl);font-size:13px;color:#5b6d7e;flex-wrap:wrap}
 .cbt-ord select{border:1px solid var(--cl);border-radius:6px;padding:5px 8px;font-size:13px;background:#fff;color:#1d2731;max-width:44vw}
-@media(max-width:520px){.cbt-ord label{display:none}.cbt-ord{flex-wrap:nowrap}}
+.cbt-ord .tg{display:flex;align-items:center;gap:5px;color:#1d2731;font-weight:600;white-space:nowrap;cursor:pointer}
+.cbt-ord .tg input{width:17px;height:17px;margin:0}
+@media(max-width:520px){.cbt-ord>label[for]{display:none}.cbt-ord{flex-wrap:nowrap;gap:6px}.cbt-ord select{max-width:34vw}.cbt-ord button{padding:5px 8px}}
 .cbt-ord .sp{flex:1}
 .cbt-ord button{display:flex;align-items:center;gap:6px;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650}
 .cbt-ord button svg{width:16px;height:16px}
@@ -697,11 +699,27 @@ function reordenar(crit){
   ordenarItens(s.itens,crit);st.ordem=s.itens.map(it=>it.id);st.ord=crit;
   s.i=Math.max(0,s.itens.findIndex(it=>it.id===atual));marcarPos();render();
 }
+/* ocultar feitas: navegação pula as questões já respondidas ou reveladas */
+const ocultaOn=()=>!!E.trOcultar;
+const feitaQ=it=>!!E.tr[it.id];
+function proxPendente(dir){
+  const s=UI.ses,n=s.itens.length;
+  for(let k=1;k<n;k++){const j=dir>0?(s.i+k)%n:(s.i-k+n)%n;
+    if(dir>0&&j<s.i&&!ocultaOn())return -1; /* sem ocultar não dá a volta */
+    if(dir<0&&j>s.i&&!ocultaOn())return -1;
+    if(!ocultaOn()||!feitaQ(s.itens[j]))return j}
+  return -1;
+}
+function setOcultar(on){
+  E.trOcultar=!!on;salvar();const s=UI.ses;
+  if(on&&s&&s.tipo==="bloco"&&feitaQ(s.itens[s.i])){const j=proxPendente(1);if(j>=0){s.i=j;marcarPos()}}
+  render();topoQ();
+}
 function aleatoria(){
   const s=UI.ses;if(!s||s.tipo!=="bloco")return;
   let pool=s.itens.map((it,i)=>i).filter(i=>i!==s.i&&!E.tr[s.itens[i].id]);
-  if(!pool.length)pool=s.itens.map((it,i)=>i).filter(i=>i!==s.i);
-  if(!pool.length)return;
+  if(!pool.length&&!ocultaOn())pool=s.itens.map((it,i)=>i).filter(i=>i!==s.i);
+  if(!pool.length){if(!feitaQ(s.itens[s.i]))return;finalizar();return} /* nada mais pendente: mostra o resumo */
   s.i=pool[Math.floor(Math.random()*pool.length)];marcarPos();render();topoQ();
 }
 async function abrirBloco(b,fonte,recomecar){
@@ -725,6 +743,7 @@ async function abrirBloco(b,fonte,recomecar){
     if(!itens.length){UI.err="Ainda não há questões para esse bloco.";render();return}
     const nomeF={novas:"questões novas",sims:"questões dos simulados",portal:"Portal Anbima",todas:"todas as questões"}[fonte];
     UI.ses={tipo:"bloco",key,b,fonte,titulo:b?`Bloco ${b} · ${nomeF}`:`Todos os blocos · ${nomeF}`,modo:"estudo",itens,i:Math.min(st.atual||0,itens.length-1),fim:false,t0:Date.now()};
+    if(ocultaOn()&&feitaQ(UI.ses.itens[UI.ses.i])){const j=proxPendente(1);if(j>=0)UI.ses.i=j}
     E.aberto="treino:"+key;salvar();UI.modal=null;render();window.scrollTo(0,0);
   }catch(e){UI.err="Não consegui carregar as questões do bloco. Verifique a conexão.";render()}
 }
@@ -813,7 +832,7 @@ function cbtShell(main,foot,opt){
   ${s.tipo==="sim"?`<div class="tm ${warn?"warn":""}"><small>${prova?"Tempo restante":"Tempo"}</small><b id="timer">${tempo}</b></div>`:""}</div>
   <div class="cbt-tb">${[["calc","Calculadora"],["notas","Bloco de notas"],["rasc","Rascunho"],["form","Fórmulas"]].map(([k,l])=>`<button class="${T[k]?"on":""}" data-a="tool" data-k="${k}" title="${l}">${ICO[k]}<span class="lb2">${l}</span></button>`).join("")}
   <span class="sp"></span><button data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button><button data-a="sair-ses" title="Salva e volta ao painel">Pausar</button></div>
-  ${s.tipo==="bloco"&&!s.fim?`<div class="cbt-ord"><label for="ord-sel">Ordenar</label><select id="ord-sel">${ORDS.map(([k,l])=>`<option value="${k}" ${((E.trs[s.key]||{}).ord||"assunto")===k?"selected":""}>${l}</option>`).join("")}</select><span class="sp"></span><button data-a="aleatoria" title="Ir para uma questão aleatória ainda não feita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Aleatória</button></div>`:""}
+  ${s.tipo==="bloco"&&!s.fim?`<div class="cbt-ord"><label for="ord-sel">Ordenar</label><select id="ord-sel">${ORDS.map(([k,l])=>`<option value="${k}" ${((E.trs[s.key]||{}).ord||"assunto")===k?"selected":""}>${l}</option>`).join("")}</select><label class="tg"><input type="checkbox" id="ocultar-feitas" ${ocultaOn()?"checked":""}>Ocultar feitas</label><span class="sp"></span><button data-a="aleatoria" title="Ir para uma questão aleatória ainda não feita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Aleatória</button></div>`:""}
   ${main}
   ${foot?`<div class="cbt-f">${foot}</div>`:""}</div>`;
 }
@@ -837,7 +856,7 @@ function sessaoHtml(){
     <div style="margin-top:16px;text-align:right"><button class="cbt-b" data-a="iniciar-exame" id="btn-ini" disabled>Iniciar exame</button></div></div></div></div>`,"");
   if(prova&&st&&st.final)return finalHtml();
   const it=s.itens[s.i],x=it.x,resp=respDe(it,s.i);
-  const rev=revelada(it),feito=(resp!=null||rev)&&!prova,ult=s.i===s.itens.length-1;
+  const rev=revelada(it),feito=(resp!=null||rev)&&!prova,ult=s.tipo==="bloco"?proxPendente(1)<0:s.i===s.itens.length-1;
   const nResp=s.tipo==="sim"?Object.keys(st.r).length:s.tipo==="bloco"?s.itens.filter(q=>E.tr[q.id]).length:Object.keys(s.resp).length;
   const split=(x.contexto||"").length>300||!!x.caso;
   const caseHtml=`${x.caso?`<div class="cbt-cs">${esc(x.caso.replace(/^Árvore de diálogo:\s*/,"Árvore de diálogo · "))}${x.etapa?` · etapa ${esc(x.etapa)}`:""}</div>`:""}<div class="ctx">${txt(x.contexto)}</div>`;
@@ -852,7 +871,7 @@ function sessaoHtml(){
   if(prova)foot=`<span class="nt">${nResp} de ${s.itens.length} respondidas · ao avançar, esta questão fica bloqueada</span><button class="cbt-b" data-a="prox">${ult?"Ir para a revisão final":"Próxima"} ›</button>`;
   else{
     const podeFim=ult||(s.tipo==="sim"&&nResp===s.itens.length);
-    foot=`${s.i>0?`<button class="cbt-b sec" data-a="ant">‹ Anterior</button>`:""}<span class="nt">${nResp} de ${s.itens.length} ${s.tipo==="bloco"?"feitas":"respondidas"}</span>
+    foot=`${(s.tipo==="bloco"?proxPendente(-1)>=0:s.i>0)?`<button class="cbt-b sec" data-a="ant">‹ Anterior</button>`:""}<span class="nt">${nResp} de ${s.itens.length} ${s.tipo==="bloco"?`feitas${ocultaOn()?` · ${s.itens.length-nResp} pendentes`:""}`:"respondidas"}</span>
     ${s.tipo==="bloco"&&!feito?`<button class="cbt-b sec" data-a="ver-resp">Ver resposta</button>`:""}
     ${!ult?`<button class="cbt-b ${podeFim||!feito?"sec":""}" data-a="prox">${feito?"Próxima":"Pular"} ›</button>`:""}${podeFim?`<button class="cbt-b" data-a="fim">${s.tipo==="bloco"?"Concluir":"Finalizar"}</button>`:""}`;
   }
@@ -895,6 +914,7 @@ function responder(l){
 function avancar(pular){
   const s=UI.ses;
   if(s.tipo==="sim"){const st=sesSt();if(s.modo==="prova"){st.vis[s.i+1]=1;if(s.i===s.itens.length-1){st.final=true;salvar();render();const o=$("#ov .cbt-m");if(o)o.scrollTop=0;return}}st.atual=s.i+2;salvar()}
+  if(s.tipo==="bloco"){const j=proxPendente(1);if(j>=0){s.i=j;marcarPos();render();topoQ()}else finalizar();return}
   if(s.i<s.itens.length-1){s.i++;marcarPos();render();topoQ()}
   else if(s.tipo==="ref"){s.fim=true;render()}
 }
@@ -1116,7 +1136,8 @@ document.addEventListener("click",e=>{
     case "treino-zera-ok":{const [b,f]=String(id).split("|");abrirBloco(b,f,true);return}
     case "ver-resp":verResposta();return;
     case "aleatoria":aleatoria();return;
-    case "ant":if(UI.ses.i>0){UI.ses.i--;marcarPos();render();topoQ()}return;
+    case "ant":if(UI.ses.tipo==="bloco"){const j=proxPendente(-1);if(j>=0){UI.ses.i=j;marcarPos();render();topoQ()}return}
+      if(UI.ses.i>0){UI.ses.i--;marcarPos();render();topoQ()}return;
     case "fim":finalizar();return;
     case "ver-rev":UI.ses.rev=true;UI.revF="todas";break;
     case "revf":UI.revF=t.dataset.k;break;
@@ -1133,6 +1154,7 @@ document.addEventListener("change",e=>{
   const t=e.target;
   if(t.id==="ciente"){const b=$("#btn-ini");if(b)b.disabled=!t.checked;return}
   if(t.id==="ord-sel"){reordenar(t.value);return}
+  if(t.id==="ocultar-feitas"){setOcultar(t.checked);return}
   if(t.id==="dt-prova"){E.prova=t.value||"";salvar();render()}
   if(t.id==="anx-file"&&t.files&&t.files[0]){const r=new FileReader();r.onload=()=>anexar(String(r.result));r.readAsText(t.files[0])}
 });
