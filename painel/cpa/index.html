@@ -130,6 +130,9 @@ tr:last-child td{border-bottom:0}
 .cbt-ord .sp{flex:1}
 .cbt-ord button{display:flex;align-items:center;gap:6px;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650}
 .cbt-ord button svg{width:16px;height:16px}
+.anav{display:flex;align-items:center;gap:8px;margin-top:8px;text-transform:none;letter-spacing:0;font-weight:500;font-size:13px}
+.anav select{flex:1;min-width:0;border:1px solid var(--cl);border-radius:6px;padding:5px 6px;font-size:13px;background:#fff;color:#1d2731}
+.anav button{flex:none;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650;white-space:nowrap}
 .tb .go{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 12px;font-weight:650;white-space:nowrap}
 .choice button .pr{display:block;font-size:12px;color:var(--ink3);margin-top:2px}
 .choice .row{display:flex;gap:6px;align-items:stretch}.choice .row button:first-child{flex:1}
@@ -699,6 +702,25 @@ function reordenar(crit){
   ordenarItens(s.itens,crit);st.ordem=s.itens.map(it=>it.id);st.ord=crit;
   irPrimeira();
 }
+/* navegação por assunto: menu com os assuntos da lista e botão "Próximo assunto" */
+const assuntosDaLista=()=>{const s=UI.ses,m=new Map();s.itens.forEach((it,i)=>{const a=assunto(it.x.pd);let o=m.get(a);if(!o){o={a,b:bloco(it.x.pd),i,n:0,f:0};m.set(a,o)}o.n++;if(feitaQ(it))o.f++});return [...m.values()]};
+function idxAssunto(a,depois){
+  const s=UI.ses;let alt=-1;
+  for(let j=depois==null?0:depois+1;j<s.itens.length;j++){const it=s.itens[j];if(assunto(it.x.pd)!==a)continue;if(alt<0)alt=j;if(!ocultaOn()||!feitaQ(it))return j}
+  return ocultaOn()?-1:alt;
+}
+function proxAssuntoIdx(){
+  const s=UI.ses,cur=assunto(s.itens[s.i].x.pd);
+  for(let j=s.i+1;j<s.itens.length;j++){const it=s.itens[j];if(assunto(it.x.pd)!==cur&&(!ocultaOn()||!feitaQ(it)))return j}
+  return -1;
+}
+function assuntoNavHtml(){
+  const s=UI.ses,cur=assunto(s.itens[s.i].x.pd),lista=assuntosDaLista(),j=proxAssuntoIdx();
+  const multiB=new Set(lista.map(o=>o.b)).size>1;
+  return `<div class="anav"><select id="ass-sel" aria-label="Escolher assunto">${lista.map(o=>`<option value="${esc(o.a)}" ${o.a===cur?"selected":""}>${multiB?`B${o.b} · `:""}${esc(o.a)} (${o.f}/${o.n})</option>`).join("")}</select>${j>=0?`<button data-a="prox-assunto" title="Ir para ${esc(assunto(s.itens[j].x.pd))}">Próximo assunto ›</button>`:""}</div>`;
+}
+function irAssunto(a){const s=UI.ses;if(!s||s.tipo!=="bloco")return;const j=idxAssunto(a);if(j<0){render();return}s.i=j;marcarPos();render();topoQ()}
+function proxAssunto(){const s=UI.ses;if(!s||s.tipo!=="bloco")return;const j=proxAssuntoIdx();if(j<0)return;s.i=j;marcarPos();render();topoQ()}
 /* vai para a 1ª questão da ordem atual (a 1ª pendente, se "Ocultar feitas" estiver ligado) */
 function irPrimeira(){
   const s=UI.ses;if(!s||s.tipo!=="bloco")return;
@@ -869,7 +891,7 @@ function sessaoHtml(){
   const alts=`<div class="cbt-alts">${x.alt.map((a,i)=>{const l=L[i];let c="";if(feito){c=l===x.certa?"right":l===resp?"wrong":""}else if(resp===l)c="sel";
       const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
       return `<button class="cbt-alt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""} aria-pressed="${resp===l}"><span class="rd"></span><span class="lt">${l.toLowerCase()})</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>`;
-  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="bloco"&&/^T/.test(it.sid)?" · Questão nova de treino":""}${x.fonte?` · ${esc(x.fonte)}`:s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}</div>
+  const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="bloco"&&/^T/.test(it.sid)?" · Questão nova de treino":""}${x.fonte?` · ${esc(x.fonte)}`:s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}${s.tipo==="bloco"?assuntoNavHtml():""}</div>
     ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito?(rev&&!resp?`<div class="msg" style="margin-top:12px">Resposta revelada: a certa é a <b>${x.certa.toLowerCase()})</b>. A questão vai para a lista de erradas, para você refazer depois.</div>`:"")+gabaritoHtml(x,resp,it.id,true):""}`;
   const main=split?`<div class="cbt-m split"><div class="cbt-case" style="--qfs:${UI.fs}px"><div class="in3"><div class="cbt-lb">${x.caso?"Case":"Texto da questão"}</div>${caseHtml}</div></div><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`
     :`<div class="cbt-m"><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`;
@@ -1143,6 +1165,7 @@ document.addEventListener("click",e=>{
     case "ver-resp":verResposta();return;
     case "aleatoria":aleatoria();return;
     case "primeira":irPrimeira();return;
+    case "prox-assunto":proxAssunto();return;
     case "ant":if(UI.ses.tipo==="bloco"){const j=proxPendente(-1);if(j>=0){UI.ses.i=j;marcarPos();render();topoQ()}return}
       if(UI.ses.i>0){UI.ses.i--;marcarPos();render();topoQ()}return;
     case "fim":finalizar();return;
@@ -1162,6 +1185,7 @@ document.addEventListener("change",e=>{
   if(t.id==="ciente"){const b=$("#btn-ini");if(b)b.disabled=!t.checked;return}
   if(t.id==="ord-sel"){reordenar(t.value);return}
   if(t.id==="ocultar-feitas"){setOcultar(t.checked);return}
+  if(t.id==="ass-sel"){irAssunto(t.value);return}
   if(t.id==="dt-prova"){E.prova=t.value||"";salvar();render()}
   if(t.id==="anx-file"&&t.files&&t.files[0]){const r=new FileReader();r.onload=()=>anexar(String(r.result));r.readAsText(t.files[0])}
 });
