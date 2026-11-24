@@ -940,6 +940,37 @@ html[data-tema="labs"] .sc.hi,html[data-tema="labs"] .sc.mid{background:var(--so
 html[data-tema="labs"] .sc.lo{background:var(--bg);color:var(--fg);border:1px solid var(--fg)}
 html[data-tema="labs"] .late,html[data-tema="labs"] .pill.late{background:transparent;color:var(--fg);font-weight:800;text-decoration:underline}
 html[data-tema="labs"] .ic.bad,html[data-tema="labs"] .ic.good,html[data-tema="labs"] .spc.sp-cad{border-color:var(--fg)}
+/* botões de nota (Certo/Errado e Anki), etiquetas de dificuldade e estados: sem cor, com contraste */
+html[data-tema="labs"] .gbtn{border:1px solid var(--fg);background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .g3,html[data-tema="labs"] .g4,html[data-tema="labs"] .g0{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .g1,html[data-tema="labs"] .g2{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .rb,html[data-tema="labs"] .rb.mv,html[data-tema="labs"] .rb.stu,html[data-tema="labs"] .rb.akk,html[data-tema="labs"] .rb.qbk,html[data-tema="labs"] .rb.perf-excelente,html[data-tema="labs"] .rb.perf-razoavel,html[data-tema="labs"] .rb.df-facil,html[data-tema="labs"] .rb.df-medio,html[data-tema="labs"] .rb.bbgood{background:var(--soft2);color:var(--fg)}
+html[data-tema="labs"] .rb.perf-ruim,html[data-tema="labs"] .rb.df-dificil,html[data-tema="labs"] .rb.bbbad{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}
+html[data-tema="labs"] .rb.akk:hover,html[data-tema="labs"] .rb.qbk:hover{background:var(--line)}
+html[data-tema="labs"] .qpd.cur{outline:3px solid var(--fg)}
+html[data-tema="labs"] .qopt.sel{border-color:var(--fg);background:var(--soft)}
+html[data-tema="labs"] .qopt.bad{border-style:dashed}
+html[data-tema="labs"] .row.stu .chk{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .row.stu .chk::after{background:var(--fg)}
+html[data-tema="labs"] .row.done .chk{background:var(--fg);border-color:var(--fg)}
+html[data-tema="labs"] .chk svg,html[data-tema="labs"] .row.done .chk svg{stroke:var(--bg)}
+html[data-tema="labs"] .ld{background:var(--fg)}
+html[data-tema="labs"] .pill.lockp,html[data-tema="labs"] .lkic{background:var(--fg3);color:var(--bg)}
+html[data-tema="labs"] .pill.lockp svg,html[data-tema="labs"] .lkic svg{stroke:var(--bg)}
+html[data-tema="labs"] .star{color:var(--fg)}
+html[data-tema="labs"] .rep .rps.reg h4{color:var(--fg)}
+html[data-tema="labs"] .js.warn,html[data-tema="labs"] .ntc.ok{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .ntc.off{background:var(--bg);border:1px dashed var(--fg)}
+html[data-tema="labs"] .sbbar{background:var(--fg3)}
+html[data-tema="labs"] .sbbar i{background:var(--fg)}
+html[data-tema="labs"] .sh-st.go{background:var(--soft)}
+html[data-tema="labs"] .sh-st .chip.go,html[data-tema="labs"] .updbar button{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .qa .pri span{color:var(--bg);opacity:.8}
+html[data-tema="labs"] .link{color:var(--fg)}
+html[data-tema="labs"] .chk.lkc svg{stroke:var(--fg2)}
+html[data-tema="labs"] .btn.conc .ck{background:rgba(127,127,127,.35)}
+html[data-tema="labs"] .btn.conc .ck svg{stroke:var(--bg)}
+html[data-tema="labs"] .btn.conc.ini .ck svg{stroke:none;fill:var(--bg)}
 html[data-tema="labs"] .hm i.fol{background:repeating-linear-gradient(45deg,var(--soft2),var(--soft2) 3px,var(--soft) 3px,var(--soft) 6px)}
 </style>
 

@@ -74,3 +74,7 @@ Veja `dados/REORGANIZAR.md`. Em resumo: edite `dados/plano.json` (metas por sema
 - A aba Jornada tem a ofensiva (dias seguidos, com 1 escudo a cada 7 dias seguidos, máximo 2), o XP, o personagem que evolui de Curioso do Edital até Servidor Público, as missões do dia e as conquistas. As folgas do plano (`dias_sem_estudo`) não quebram a ofensiva.
 - A aba Lembretes configura notificações push e e-mail. O servidor que envia os avisos está em `functions/` e o passo a passo para ligá-lo está em `functions/LEMBRETES.md`.
 
+
+## Sensor do tema Labs
+
+`node dados/sensor-labs.js [escuro|claro|ambos] [--rapido] [--desktop]` (precisa do pacote `playwright`) abre o painel em modo demonstração com o tema Labs e lista tudo que ficou ilegível (contraste baixo, ícone sem contraste) ou colorido. Ele faz duas varreduras: navega por todas as abas clicando em um botão de cada tipo (dois níveis) e monta um exemplo de cada seletor do CSS, o que pega botões que só aparecem com dados reais. Rode depois de mexer no CSS do Labs; a saída "Sensor limpo" indica que não há problemas.
