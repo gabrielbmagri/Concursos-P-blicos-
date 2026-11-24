@@ -19,6 +19,7 @@ O painel tem duas partes:
 | Fechamento da semana | Sábado 18:00: quanto falta. Domingo 18:00: resumo da semana, também por e-mail. |
 | Contagem da prova | A 100, 60, 30, 14, 7, 3, 2 e 1 dia da prova e no dia. Também por e-mail. |
 | Meta demorando | Quando uma meta em "estudando" passa do limite de horas. |
+| Dieta | 15 minutos antes de cada refeição do plano (05:30, 07:30, 12:00, 14:30, 17:45 e 21:00) que ainda não foi marcada em `/dieta/`. Domingo não avisa. Não é pausada por `pausaAte`. O plano fica em `functions/dieta.js` e espelha o da página. |
 
 Cada aviso se liga e desliga na aba Lembretes, e os horários são editáveis (horário de Brasília). Nenhum aviso se repete no mesmo dia.
 

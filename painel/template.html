@@ -3159,7 +3159,8 @@ const NTR=[
  ["meta_dia","Meta do dia","Se as metas de hoje não foram batidas.","21:00"],
  ["semana","Fechamento da semana","Sábado: o que falta para fechar a semana. Domingo: resumo da semana.","18:00"],
  ["prazos","Contagem da prova","Avisos a 100, 60, 30, 14, 7, 3 e 1 dia da prova.","08:00"],
- ["demora","Meta demorando","Quando uma meta em estudo passa do tempo limite abaixo.",""]
+ ["demora","Meta demorando","Quando uma meta em estudo passa do tempo limite abaixo.",""],
+ ["dieta","Dieta","15 minutos antes de cada refeição que você ainda não marcou. Domingo não avisa.",""]
 ];
 const ntCfg=()=>{const c=NT.config||{};return {push:c.push!==false,email:{ativo:!!(c.email&&c.email.ativo),addr:(c.email&&c.email.addr)||(fb.user&&fb.user.email)||"",manha:!c.email||c.email.manha!==false,semana:!c.email||c.email.semana!==false,prazos:!c.email||c.email.prazos!==false},horas:Object.fromEntries(NTR.map(r=>[r[0],(c.horas&&c.horas[r[0]])||r[3]])),regras:Object.fromEntries(NTR.map(r=>[r[0],!c.regras||c.regras[r[0]]!==false])),horasMeta:c.horasMeta||3,tokens:c.tokens||{}}};
 function ntSave(patch){
