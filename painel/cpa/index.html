@@ -425,6 +425,7 @@ function mesclarE(a,b){
   out.atualizado=Math.max(a.atualizado||0,b.atualizado||0);
   return JSON.parse(JSON.stringify(out));
 }
+const semAt=o=>{const c=Object.assign({},o);delete c.atualizado;return c};
 const estavel=o=>JSON.stringify(o,(k,v)=>v&&typeof v==="object"&&!Array.isArray(v)?Object.keys(v).sort().reduce((r,x)=>(r[x]=v[x],r),{}):v);
 const fbOk=()=>{const c=window.FIREBASE_CONFIG;return !!(window.firebase&&c&&c.apiKey&&!/COLE|SUA_|YOUR_/i.test(c.apiKey))};
 let saveT=null;
@@ -480,16 +481,21 @@ function initFirebase(){
         fb.unsub=fb.doc.onSnapshot(s=>{
           if(s.metadata.hasPendingWrites)return;
           const d=s.exists?s.data():null;
+          const jaCarregou=fb.carregou;let mudou=false;
           if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
           else{
             /* junta a nuvem com este aparelho; se este aparelho sabia de algo que a nuvem não tem, grava de volta */
-            const m=mesclarE(E,d),falta=estavel(m)!==estavel(mesclarE(d,d));
+            const antes=estavel(semAt(E)),m=mesclarE(E,d),falta=estavel(m)!==estavel(mesclarE(d,d));
             E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{},del:{}},m);LS.set("cpa-estado",E);
+            mudou=estavel(semAt(E))!==antes;
             if(falta)salvar(false);
           }
-          first=false;fb.status="firebase";fb.carregou=true;render();retomar();
+          first=false;fb.status="firebase";fb.carregou=true;
+          /* só redesenha a tela quando algo mudou de verdade e você não está dentro de uma sessão de questões (o eco do próprio salvamento não pode jogar a tela para o topo) */
+          if(!jaCarregou||(mudou&&!UI.ses))render();else paintSync();
+          retomar();
         },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
-        fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
+        fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});const igual=Object.keys(m).sort().join()===Object.keys(EXTRA).sort().join();EXTRA=m;if(!UI.ses&&!igual)render()},()=>{});
       }
       render();
     });
@@ -569,15 +575,29 @@ function stats(){
 function paintSync(){const el=$("#sync");if(el)el.outerHTML=syncHtml()}
 const syncHtml=()=>fb.on&&fb.user?`<span class="sync ${fb.status==="erro"?"err":""}" id="sync"><i></i>${fb.status==="erro"?"Erro ao salvar":"Salvo na nuvem"}</span>`:`<span class="sync" id="sync"><i style="background:var(--ink3)"></i>Salvo neste aparelho</span>`;
 
+/* ao redesenhar a mesma questão (marcar alternativa, salvar, atualizar), a rolagem fica onde estava */
+const SCROLLS="#ov, #ov .cbt-m, #ov .cbt-m>div, #ov .cbt-q, #ov .cbt-case, .ov, .ov .qwrap";
+function chaveRol(){const s=UI.ses;return s?[s.tipo,s.sid||s.key||"",s.i,s.fim?1:0,s.rev?1:0,s.final?1:0].join(":"):""}
+function guardaRolagem(){
+  if(!UI.ses)return null;
+  return {k:chaveRol(),p:[...document.querySelectorAll(SCROLLS)].map(e=>e.scrollTop)};
+}
+function devolveRolagem(r){
+  if(!r||r.k!==chaveRol())return;
+  const els=[...document.querySelectorAll(SCROLLS)];
+  if(els.length!==r.p.length)return;
+  els.forEach((e,i)=>{e.scrollTop=r.p[i]});
+}
 function render(){
   const app=$("#app");
   if(fb.on&&!fb.ready){app.innerHTML=`<div class="login"><div class="card muted">Carregando…</div></div>`;return}
   if(fb.on&&!fb.user){app.innerHTML=loginHtml();return}
-  const keepY=window.scrollY;
+  const keepY=window.scrollY,rol=guardaRolagem();
   app.innerHTML=painelHtml()+(UI.ses?sessaoHtml():"")+(UI.modal?modalHtml():"");
   document.body.style.overflow=UI.ses||UI.modal?"hidden":"";
   toolsSync();
   if(!UI.ses)window.scrollTo(0,keepY);
+  else devolveRolagem(rol);
 }
 function loginHtml(){
   return `<div class="login"><div class="logo" style="margin-bottom:16px"><b>CPA</b><h1>Simulados CPA<span>Certificação Anbima</span></h1></div>
