@@ -384,7 +384,7 @@ const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.par
 /* ==================== estado ==================== */
 /* E = {prova:"AAAA-MM-DD", sims:{S01:{modo,ini,fim,t,r:{"1":"B"},vis:{"1":1},atual,fin}}, ref:{"S01-05":[{d,ok}]}, salvos:{"S01-05":{em}}, fs} */
 let E=LS.get("cpa-estado",null)||{prova:"",sims:{},ref:{},salvos:{}};
-E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};E.tr=E.tr||{};E.trs=E.trs||{};
+E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};E.tr=E.tr||{};E.trs=E.trs||{};E.del=E.del||{};
 let IDX=[];          /* simulados oficiais (index.json) */
 let TIDX=[];         /* banco de treino por bloco (treino/index.json) */
 let EXTRA={};        /* simulados anexados: id -> objeto completo */
@@ -392,21 +392,64 @@ const FULL={};       /* cache de simulados completos */
 let UI={filtroAss:"atencao",msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
 const fb={on:false,user:null,ready:false,doc:null,col:null,status:"local",err:"",msg:"",email:"",busy:false};
 
+/* Mescla dois estados (este aparelho e a nuvem) sem perder nada: o que é só acréscimo (refazer, respostas, salvos) é somado;
+   o que foi apagado de propósito fica registrado em E.del (hora da exclusão) para não ressuscitar; o resto vale o mais novo. */
+function mesclarE(a,b){
+  a=a||{};b=b||{};
+  const novo=(a.atualizado||0)>=(b.atualizado||0)?a:b,velho=novo===a?b:a;
+  const out=Object.assign({},velho,novo);
+  const del={};[velho.del,novo.del].forEach(d=>{for(const k in (d||{}))del[k]=Math.max(del[k]||0,d[k])});out.del=del;
+  const vivo=(k,t)=>(t||0)>(del[k]||0);
+  const chaves=(x,y)=>[...new Set([...Object.keys(x||{}),...Object.keys(y||{})])];
+  /* refazer: histórico só cresce, soma as respostas dos dois lados */
+  out.ref={};
+  for(const id of chaves(a.ref,b.ref)){
+    const m=new Map();[...((a.ref||{})[id]||[]),...((b.ref||{})[id]||[])].forEach(r=>{if(r)m.set(r.d+"|"+r.ok,r)});
+    out.ref[id]=[...m.values()].sort((x,y)=>x.d-y.d);
+  }
+  /* simulados: tentativa mais nova vale; na mesma tentativa, soma as respostas */
+  out.sims={};
+  for(const id of chaves(a.sims,b.sims)){
+    const x=(a.sims||{})[id],y=(b.sims||{})[id];let c;
+    if(!x||!y)c=x||y;
+    else if((x.ini||0)!==(y.ini||0))c=(x.ini||0)>(y.ini||0)?x:y;
+    else{const f=x.fin||y.fin;c=Object.assign({},y,x,{r:Object.assign({},y.r,x.r),vis:Object.assign({},y.vis,x.vis),t:Math.max(x.t||0,y.t||0),atual:Math.max(x.atual||1,y.atual||1)});if(f){c.fin=true;c.fim=Math.max(x.fim||0,y.fim||0)}if(x.ciente||y.ciente)c.ciente=true}
+    if(c&&vivo("sims:"+id,c.ini))out.sims[id]=c;
+  }
+  /* treino por bloco e gabaritos salvos: soma; em empate vale a resposta mais recente */
+  out.tr={};
+  for(const id of chaves(a.tr,b.tr)){const x=(a.tr||{})[id],y=(b.tr||{})[id];const c=!x?y:!y?x:((x.d||0)>=(y.d||0)?x:y);if(c&&vivo("tr:"+id,c.d))out.tr[id]=c}
+  out.salvos={};
+  for(const id of chaves(a.salvos,b.salvos)){const x=(a.salvos||{})[id],y=(b.salvos||{})[id];const c=x||y;if(c&&vivo("salvos:"+id,c.em))out.salvos[id]=c}
+  out.trs=Object.assign({},velho.trs,novo.trs);
+  out.atualizado=Math.max(a.atualizado||0,b.atualizado||0);
+  return JSON.parse(JSON.stringify(out));
+}
+const estavel=o=>JSON.stringify(o,(k,v)=>v&&typeof v==="object"&&!Array.isArray(v)?Object.keys(v).sort().reduce((r,x)=>(r[x]=v[x],r),{}):v);
 const fbOk=()=>{const c=window.FIREBASE_CONFIG;return !!(window.firebase&&c&&c.apiKey&&!/COLE|SUA_|YOUR_/i.test(c.apiKey))};
 let saveT=null;
-function salvar(){
-  E.atualizado=Date.now();
+/* grava na nuvem mesclando com o que já está lá (transação), para um aparelho desatualizado nunca apagar o trabalho de outro */
+function gravar(){
+  const local=JSON.parse(JSON.stringify(E));
+  const ok=()=>{fb.status="firebase";paintSync()},erro=()=>{fb.status="erro";paintSync()};
+  if(!fb.fs||!fb.fs.runTransaction)return fb.doc.set(local,{merge:true}).then(ok).catch(erro);
+  return fb.fs.runTransaction(async tx=>{const s=await tx.get(fb.doc);const m=s.exists?mesclarE(local,s.data()):local;tx.set(fb.doc,m);return m})
+    .then(m=>{E=mesclarE(E,m);LS.set("cpa-estado",E);ok()})
+    .catch(()=>fb.doc.set(local,{merge:true}).then(ok).catch(erro));
+}
+function salvar(tocar){
+  if(tocar!==false)E.atualizado=Date.now();
   LS.set("cpa-estado",E);
   if(!fb.on||!fb.user)return;
   clearTimeout(saveT);
-  saveT=setTimeout(()=>{saveT=null;fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()})},600);
+  saveT=setTimeout(()=>{saveT=null;gravar()},600);
 }
 function salvarJa(){
   if(!saveT&&!UI.ses)return; /* nada pendente: não sobrescreve o que outra aba gravou */
   LS.set("cpa-estado",E);
   if(!fb.on||!fb.user||!fb.doc||!saveT)return;
   clearTimeout(saveT);saveT=null;
-  fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()});
+  fb.doc.set(JSON.parse(JSON.stringify(E)),{merge:true}).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()});
 }
 /* reabre o simulado que ficou aberto, na questão em que você parou */
 let retomou=false;
@@ -438,8 +481,12 @@ function initFirebase(){
           if(s.metadata.hasPendingWrites)return;
           const d=s.exists?s.data():null;
           if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
-          else if(E.atualizado&&d.atualizado&&E.atualizado>d.atualizado){salvar()} /* este aparelho tem a versão mais nova */
-          else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{}},d);LS.set("cpa-estado",E)}
+          else{
+            /* junta a nuvem com este aparelho; se este aparelho sabia de algo que a nuvem não tem, grava de volta */
+            const m=mesclarE(E,d),falta=estavel(m)!==estavel(mesclarE(d,d));
+            E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{},del:{}},m);LS.set("cpa-estado",E);
+            if(falta)salvar(false);
+          }
           first=false;fb.status="firebase";fb.carregou=true;render();retomar();
         },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
         fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
@@ -764,7 +811,7 @@ async function abrirBloco(b,fonte,recomecar){
     ordenarItens(todos,"assunto");
     const mapa=Object.fromEntries(todos.map(it=>[it.id,it]));
     let st=E.trs[key];
-    if(recomecar&&st){for(const id of st.ordem)delete E.tr[id];st=null}
+    if(recomecar&&st){for(const id of st.ordem){delete E.tr[id];E.del["tr:"+id]=Date.now()}st=null}
     if(!st)st=E.trs[key]={ordem:todos.map(it=>it.id),atual:0,ord:"assunto"};
     const naOrdem=new Set(st.ordem);for(const it of todos)if(!naOrdem.has(it.id))st.ordem.push(it.id); /* questões novas entram no fim */
     const itens=st.ordem.map(id=>mapa[id]).filter(Boolean);
@@ -1146,7 +1193,7 @@ document.addEventListener("click",e=>{
     case "continuar":abrirSim(id,null,true);return;
     case "rever":abrirSim(id,null,true).then(()=>{if(UI.ses){UI.ses.rev=true;UI.revF="todas";render()}});return;
     case "zerar":UI.modal={tipo:"conf",titulo:"Recomeçar o simulado?",texto:"As respostas dadas até agora neste simulado serão apagadas.",ok:"zerar-ok",btn:"Recomeçar",id};break;
-    case "zerar-ok":delete E.sims[id];try{const n=LS.get("cpa-notas",{});delete n[id];LS.set("cpa-notas",n);localStorage.removeItem("cpa-rasc-"+id)}catch(e){}if(E.aberto===id)delete E.aberto;salvar();UI.modal=null;break;
+    case "zerar-ok":delete E.sims[id];E.del["sims:"+id]=Date.now();try{const n=LS.get("cpa-notas",{});delete n[id];LS.set("cpa-notas",n);localStorage.removeItem("cpa-rasc-"+id)}catch(e){}if(E.aberto===id)delete E.aberto;salvar();UI.modal=null;break;
     case "remover":UI.modal={tipo:"conf",titulo:"Remover simulado anexado?",texto:"O simulado sai da lista. Você pode anexá-lo de novo depois.",ok:"remover-ok",btn:"Remover",id};break;
     case "remover-ok":delete EXTRA[id];if(fb.on&&fb.user)fb.col.doc(id).delete().catch(()=>{});else LS.set("cpa-extra",EXTRA);UI.modal=null;break;
     case "fecha-modal":UI.modal=null;break;
@@ -1174,8 +1221,8 @@ document.addEventListener("click",e=>{
     case "sair-ses":toolsFechar();if(UI.ses&&UI.ses.tipo==="bloco"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}
       if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
     case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
-    case "star":if(E.salvos[id])delete E.salvos[id];else E.salvos[id]={em:Date.now()};salvar();break;
-    case "unsave":delete E.salvos[id];salvar();break;
+    case "star":if(E.salvos[id]){delete E.salvos[id];E.del["salvos:"+id]=Date.now()}else E.salvos[id]={em:Date.now()};salvar();break;
+    case "unsave":delete E.salvos[id];E.del["salvos:"+id]=Date.now();salvar();break;
     default:return;
   }
   render();
