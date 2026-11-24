@@ -1,5 +1,5 @@
 <title>Atlas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -672,6 +672,236 @@ html[data-tema="olimpo"] .rvp-bar i{background:linear-gradient(90deg,#1d3f7a,#d4
 html[data-modo="escuro"] .rvp.all{background:linear-gradient(135deg,#16321f,#3a3016);border-color:#25563a}
 .next.rev{background:linear-gradient(120deg,#e4eaf5,#f1f4fa);border-color:#1d3f7a}.next.rev .l{color:#1d3f7a}.next.rev .muted{color:#3a4a6a}.next.tmr{background:linear-gradient(120deg,#f1f4ef,#f7f8f5);border-color:#9bb59f}.next.tmr .l{color:#2f6b4f}
 html[data-modo="escuro"] .next.rev{background:linear-gradient(120deg,#262b38,#2a3040);border-color:#4f7bd0}html[data-modo="escuro"] .next.rev .l{color:#9db8f0}html[data-modo="escuro"] .next.rev .muted{color:#b4c6ee}html[data-modo="escuro"] .next.tmr{background:linear-gradient(120deg,#222b25,#262c28);border-color:#3a443d}html[data-modo="escuro"] .next.tmr .l{color:#8fe5b4}
+
+/* ===== tema Labs: preto e branco, cantos retos, letras largas e caixa alta; versão dia (modo claro) e noite (modo escuro) ===== */
+html[data-tema="labs"]{color-scheme:light;--bg:#fff;--fg:#000;--fg2:#3b3b3b;--fg3:#737373;--line:#e2e2e2;--soft:#f2f2f2;--soft2:#e4e4e4;--blue:#000;--green:#000;--purple:#262626;--teal:#262626;--indigo:#262626;--pink:#262626;--slate:#262626;--orange:#525252;--amber:#525252;--gold:#000;--good:#16794a;--bad:#c4281c;--red:#c4281c;--good-t:#e6f4ec;--bad-t:#fbe9e7;--warn-t:#f2f2f2;--blue-t:#f2f2f2;--font:"Archivo","Helvetica Neue",Arial,sans-serif;--display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;--r:0px}
+html[data-tema="labs"][data-modo="escuro"]{color-scheme:dark;--bg:#000;--fg:#fff;--fg2:#c9c9c9;--fg3:#8c8c8c;--line:#2a2a2a;--soft:#111;--soft2:#1f1f1f;--blue:#fff;--green:#fff;--purple:#d6d6d6;--teal:#d6d6d6;--indigo:#d6d6d6;--pink:#d6d6d6;--slate:#d6d6d6;--orange:#b5b5b5;--amber:#b5b5b5;--gold:#fff;--good:#46d38a;--bad:#ff6b5e;--red:#ff5a4f;--good-t:#0e2217;--bad-t:#2a1411;--warn-t:#1a1a1a;--blue-t:#141414}
+html[data-tema="labs"] .top,
+html[data-tema="labs"] .drawer,
+html[data-tema="labs"] .drawer nav button,
+html[data-tema="labs"] .drawer nav a,
+html[data-tema="labs"] .bd,
+html[data-tema="labs"] .pill,
+html[data-tema="labs"] .st,
+html[data-tema="labs"] .xp-track,
+html[data-tema="labs"] .xp-fill,
+html[data-tema="labs"] .ms,
+html[data-tema="labs"] .next,
+html[data-tema="labs"] .cd,
+html[data-tema="labs"] .cd-b,
+html[data-tema="labs"] .cd-b u,
+html[data-tema="labs"] .ic,
+html[data-tema="labs"] .tw,
+html[data-tema="labs"] .gl-b,
+html[data-tema="labs"] .bbt,
+html[data-tema="labs"] .bbt em,
+html[data-tema="labs"] .bbseg,
+html[data-tema="labs"] .bbprog,
+html[data-tema="labs"] .bbprog i,
+html[data-tema="labs"] .bbcard,
+html[data-tema="labs"] .bbtxt,
+html[data-tema="labs"] .bbf,
+html[data-tema="labs"] .spc,
+html[data-tema="labs"] .spb,
+html[data-tema="labs"] .bbgrp .bi,
+html[data-tema="labs"] .bbgrp .vl,
+html[data-tema="labs"] .bbgrp .bn,
+html[data-tema="labs"] section .gi,
+html[data-tema="labs"] .bbq,
+html[data-tema="labs"] .bbalt li,
+html[data-tema="labs"] .bbgab,
+html[data-tema="labs"] .jcard,
+html[data-tema="labs"] .jc-t em,
+html[data-tema="labs"] .jc-bar,
+html[data-tema="labs"] .jc-bar i,
+html[data-tema="labs"] .jhero,
+html[data-tema="labs"] .js,
+html[data-tema="labs"] .mis-r,
+html[data-tema="labs"] .mis-bar,
+html[data-tema="labs"] .mis-bar i,
+html[data-tema="labs"] .pth,
+html[data-tema="labs"] .bdg,
+html[data-tema="labs"] .ntc,
+html[data-tema="labs"] .nti,
+html[data-tema="labs"] .nth input,
+html[data-tema="labs"] .kpi,
+html[data-tema="labs"] .bar2,
+html[data-tema="labs"] .bar2 i,
+html[data-tema="labs"] .chip,
+html[data-tema="labs"] .banner,
+html[data-tema="labs"] .vm-bar input,
+html[data-tema="labs"] .vm-bar select,
+html[data-tema="labs"] .vm-bt,
+html[data-tema="labs"] .vm-ih,
+html[data-tema="labs"] .vm-ia button,
+html[data-tema="labs"] .vm-chip,
+html[data-tema="labs"] .vm-a,
+html[data-tema="labs"] .vm-r,
+html[data-tema="labs"] .lei-c,
+html[data-tema="labs"] .row,
+html[data-tema="labs"] .chk,
+html[data-tema="labs"] .rt .ls b,
+html[data-tema="labs"] .rb,
+html[data-tema="labs"] .sc,
+html[data-tema="labs"] .card,
+html[data-tema="labs"] .hb-t,
+html[data-tema="labs"] .stk,
+html[data-tema="labs"] .mat,
+html[data-tema="labs"] .cv,
+html[data-tema="labs"] .cv i,
+html[data-tema="labs"] .pr,
+html[data-tema="labs"] .imp-box,
+html[data-tema="labs"] .file-btn,
+html[data-tema="labs"] .msg,
+html[data-tema="labs"] select,
+html[data-tema="labs"] .in,
+html[data-tema="labs"] .sheet,
+html[data-tema="labs"] .box,
+html[data-tema="labs"] .live div,
+html[data-tema="labs"] .btn,
+html[data-tema="labs"] .tip,
+html[data-tema="labs"] .soon,
+html[data-tema="labs"] .login input.in,
+html[data-tema="labs"] .login .msg,
+html[data-tema="labs"] .ak-bar,
+html[data-tema="labs"] .ak-bar i,
+html[data-tema="labs"] .ak-card,
+html[data-tema="labs"] .ak-a mark,
+html[data-tema="labs"] .ak-q mark,
+html[data-tema="labs"] .gbtn,
+html[data-tema="labs"] textarea.in,
+html[data-tema="labs"] .frow,
+html[data-tema="labs"] .frow .th,
+html[data-tema="labs"] .sbm,
+html[data-tema="labs"] .sbbar,
+html[data-tema="labs"] .sbbar i,
+html[data-tema="labs"] .vl,
+html[data-tema="labs"] .gi img,
+html[data-tema="labs"] .gi span,
+html[data-tema="labs"] .unlock,
+html[data-tema="labs"] .qopt,
+html[data-tema="labs"] .qres,
+html[data-tema="labs"] .rb.akk,
+html[data-tema="labs"] .rb.qbk,
+html[data-tema="labs"] .bz,
+html[data-tema="labs"] .bz .bc,
+html[data-tema="labs"] details.how,
+html[data-tema="labs"] .med,
+html[data-tema="labs"] #ptr,
+html[data-tema="labs"] .updbar,
+html[data-tema="labs"] .updbar button,
+html[data-tema="labs"] .upd-b,
+html[data-tema="labs"] .sheet.sh2,
+html[data-tema="labs"] .sh-grab,
+html[data-tema="labs"] .sh-st,
+html[data-tema="labs"] .sh-tabs em,
+html[data-tema="labs"] .qa>*,
+html[data-tema="labs"] .tpl li,
+html[data-tema="labs"] .lei,
+html[data-tema="labs"] details.sh-d,
+html[data-tema="labs"] .sh-obs,
+html[data-tema="labs"] .kv,
+html[data-tema="labs"] .mt2-r,
+html[data-tema="labs"] .mt2-r .ic,
+html[data-tema="labs"] .mt2-r .th,
+html[data-tema="labs"] .jmini,
+html[data-tema="labs"] .wsum,
+html[data-tema="labs"] .ws-bar,
+html[data-tema="labs"] .ws-fill,
+html[data-tema="labs"] .rvdock,
+html[data-tema="labs"] .rvp,
+html[data-tema="labs"] .rvp-xp,
+html[data-tema="labs"] .rvp-bar,
+html[data-tema="labs"] .rvp-bar i,
+html[data-tema="labs"] .xpt{border-radius:0}
+html[data-tema="labs"] body{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] :focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+html[data-tema="labs"] .top{background:none;border:0;border-bottom:1px solid var(--fg);border-radius:0;padding:22px 66px 16px 0;margin-bottom:18px}
+html[data-tema="labs"] .eyebrow,html[data-tema="labs"] .top .eyebrow{color:var(--fg3);letter-spacing:.22em;font-weight:600}
+html[data-tema="labs"] h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--fg);-webkit-text-fill-color:var(--fg);font-stretch:125%;font-weight:900;letter-spacing:-.005em}
+html[data-tema="labs"] .wk-t,html[data-tema="labs"] .big .bn,html[data-tema="labs"] .pfh h2,html[data-tema="labs"] .bbhd h3,html[data-tema="labs"] .jh-b h3,html[data-tema="labs"] .drawer .dh b{font-stretch:118%;letter-spacing:-.005em}
+html[data-tema="labs"] .splash i{border-color:var(--line);border-top-color:var(--fg);border-radius:50%}
+html[data-tema="labs"] .mbtn{background:var(--bg);border:1px solid var(--fg);border-radius:0;box-shadow:none}
+html[data-tema="labs"] .mbtn svg{fill:var(--fg)}
+html[data-tema="labs"] .dov,html[data-tema="labs"] .ov{background:rgba(0,0,0,.62)}
+html[data-tema="labs"] .drawer{border-radius:0;box-shadow:none;border-right:1px solid var(--fg)}
+html[data-tema="labs"] .drawer .dh{background:#000;color:#fff;border-bottom:1px solid #2a2a2a}
+html[data-tema="labs"] .drawer .dh b{text-shadow:none;text-transform:uppercase}
+html[data-tema="labs"] .drawer .dh span{text-shadow:none;letter-spacing:.22em;opacity:.7}
+html[data-tema="labs"] .drawer nav button,html[data-tema="labs"] .drawer nav a{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fg2)}
+html[data-tema="labs"] .drawer nav button:hover,html[data-tema="labs"] .drawer nav a:hover{background:var(--soft)}
+html[data-tema="labs"] .drawer nav button[aria-selected="true"]{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .tema-t span{letter-spacing:.2em}
+html[data-tema="labs"] .seg button{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+html[data-tema="labs"] .seg button[aria-selected="true"]{border-bottom-color:var(--fg)}
+html[data-tema="labs"] .bd,html[data-tema="labs"] .mbtn .mb{border-radius:0;background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .nav{border-radius:0;border-color:var(--fg)}
+html[data-tema="labs"] .pill{letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+html[data-tema="labs"] .pill.blue{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .pill.green{background:transparent;border:1px solid var(--good);color:var(--good)}
+html[data-tema="labs"] .pill.warn{background:transparent;border:1px solid var(--fg3);color:var(--fg2)}
+html[data-tema="labs"] .big{color:var(--fg)}
+html[data-tema="labs"] .st{border:1px solid var(--fg)}
+html[data-tema="labs"] .st span,html[data-tema="labs"] .st b{color:var(--fg)}
+html[data-tema="labs"] .st span{letter-spacing:.18em}
+html[data-tema="labs"] .xp-track{background:var(--soft2)}
+html[data-tema="labs"] .xp-fill,html[data-tema="labs"] .xp-fill.done{background:var(--fg);animation:none}
+html[data-tema="labs"] .xp-pct{color:var(--bg);text-shadow:none}
+html[data-tema="labs"] .xp-pct.out{color:var(--fg)}
+html[data-tema="labs"] .xp-tick{background:rgba(127,127,127,.4)}
+html[data-tema="labs"] .ms{border-color:var(--soft2);color:var(--fg3)}
+html[data-tema="labs"] .ms.on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .next,html[data-tema="labs"] .next.study,html[data-tema="labs"] .next.lockn,html[data-tema="labs"] .next.rev,html[data-tema="labs"] .next.tmr{background:var(--bg);border:1px solid var(--fg)}
+html[data-tema="labs"] .next.study{border-width:2px}
+html[data-tema="labs"] .next .muted,html[data-tema="labs"] .next .l,html[data-tema="labs"] .next.study .l,html[data-tema="labs"] .next.study .muted,html[data-tema="labs"] .next.lockn .l,html[data-tema="labs"] .next.lockn .muted{color:var(--fg3)}
+html[data-tema="labs"] .next .l{letter-spacing:.18em}
+html[data-tema="labs"] .next.rev .l,html[data-tema="labs"] .next.rev .muted,html[data-tema="labs"] .next.tmr .l,html[data-tema="labs"] .next.tmr .muted{color:var(--fg3)}
+html[data-tema="labs"][data-modo="escuro"] .next.rev .l,html[data-tema="labs"][data-modo="escuro"] .next.rev .muted{color:var(--fg3)}
+html[data-tema="labs"] .kpi,html[data-tema="labs"] .kpi.orange{background:var(--bg);color:var(--fg);border:1px solid var(--fg);box-shadow:none}
+html[data-tema="labs"] .kpi .lab,html[data-tema="labs"] .kpi.orange .lab{color:var(--fg3);letter-spacing:.18em}
+html[data-tema="labs"] .kpi .num{font-family:var(--display);font-stretch:112%;font-weight:800;letter-spacing:-.02em}
+html[data-tema="labs"] .kpi .num small,html[data-tema="labs"] .kpi .sub,html[data-tema="labs"] .kpi.orange .num small,html[data-tema="labs"] .kpi.orange .sub{color:var(--fg2)}
+html[data-tema="labs"] .sbars span,html[data-tema="labs"] .kpi.orange .sbars span{background:var(--fg)}
+html[data-tema="labs"] .sbars span.z{background:var(--soft2)}
+html[data-tema="labs"] .bar2,html[data-tema="labs"] .kpi.orange .bar2{background:var(--soft2)}
+html[data-tema="labs"] .bar2 i,html[data-tema="labs"] .kpi.orange .bar2 i,html[data-tema="labs"] .plan .bar2 i{background:var(--fg)}
+html[data-tema="labs"] .spark .pt,html[data-tema="labs"] .kpi.orange .spark .pt{background:var(--fg);border-radius:0}
+html[data-tema="labs"] .spark svg *{stroke:var(--fg)}
+html[data-tema="labs"] .cd{background:var(--fg);color:var(--bg);box-shadow:none}
+html[data-tema="labs"] .cd-b{background:rgba(127,127,127,.4)}
+html[data-tema="labs"] .cd-b u{background:var(--bg)}
+html[data-tema="labs"] .jcard,html[data-tema="labs"] .jhero,html[data-tema="labs"] .jmini,html[data-tema="labs"] .jcard.risk,html[data-tema="labs"] .jhero.risk,html[data-tema="labs"] .jmini.risk{background:var(--bg);border:1px solid var(--fg);box-shadow:none}
+html[data-tema="labs"] .jcard.risk,html[data-tema="labs"] .jhero.risk,html[data-tema="labs"] .jmini.risk{border-color:var(--bad)}
+html[data-tema="labs"] .jc-bar{background:var(--soft2)}
+html[data-tema="labs"] .jc-bar i{background:var(--fg)}
+html[data-tema="labs"] .jc-t em{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .rvp,html[data-tema="labs"] .rvp.all{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .rvp-xp{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .rvp-bar{background:var(--soft2)}
+html[data-tema="labs"] .rvp-bar i,html[data-tema="labs"] .ws-fill{background:var(--fg)}
+html[data-tema="labs"] .unlock{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .unlock .btn{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .xpt,html[data-tema="labs"] .xpt.big{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .xpt b,html[data-tema="labs"] .xpt.big b{color:var(--bg)}
+html[data-tema="labs"] .btn{background:var(--fg);color:var(--bg);border:1px solid var(--fg);text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:800}
+html[data-tema="labs"] .btn.alt{background:transparent;color:var(--fg)}
+html[data-tema="labs"] .btn.ghost{background:transparent;border-color:transparent;color:var(--red)}
+html[data-tema="labs"] .btn.conc,html[data-tema="labs"] .btn.conc.ini{background:var(--fg);color:var(--bg);box-shadow:none;animation:none}
+html[data-tema="labs"] .chip{text-transform:uppercase;letter-spacing:.12em;font-size:11.5px;font-weight:700}
+html[data-tema="labs"] .chip.pri,html[data-tema="labs"] .chip[aria-pressed="true"],html[data-tema="labs"] .bbt.on,html[data-tema="labs"] .bbseg button[aria-pressed="true"],html[data-tema="labs"] .bbpills .chip.bbon{background:var(--fg);border-color:var(--fg);color:var(--bg);box-shadow:none}
+html[data-tema="labs"] .bbt.on em{background:rgba(127,127,127,.35);color:var(--bg)}
+html[data-tema="labs"] .bbt,html[data-tema="labs"] .bbseg{border-color:var(--line)}
+html[data-tema="labs"] .bbdoc,html[data-tema="labs"] .bbdoc.pdf{background:var(--soft);color:var(--fg)}
+html[data-tema="labs"] .switch{background:var(--fg3)}
+html[data-tema="labs"] .switch[aria-checked="true"]{background:var(--fg)}
+html[data-tema="labs"] .switch[aria-checked="true"]::after{background:var(--bg)}
+html[data-tema="labs"] .chk{border-color:var(--fg);border-radius:0}
+html[data-tema="labs"] .row.part .chk{border-color:var(--fg)}
+html[data-tema="labs"] .bdg.on{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .med{background:var(--soft);border-color:var(--line)}
+html[data-tema="labs"] .med q{font-style:normal}
+html[data-tema="labs"] .pfnav,html[data-tema="labs"] .bbnav{background:var(--bg)}
+html[data-tema="labs"] .hm i.fol{background:repeating-linear-gradient(45deg,var(--soft2),var(--soft2) 3px,var(--soft) 3px,var(--soft) 6px)}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -3479,7 +3709,7 @@ function vmOpen(metaId,i){
 const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"],["vade","Vade Mecum"],["lembretes","Lembretes"]];
 function render(){
   try{sessionStorage.setItem("painel-tab",tab)}catch(e){}
-  {const t=temaAtual();const m=modoAtual();document.documentElement.dataset.tema=t;document.documentElement.dataset.modo=m;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',m==='escuro'?'#1b1c20':t==='olimpo'?'#14284f':'#087a40')}
+  {const t=temaAtual();const m=modoAtual();document.documentElement.dataset.tema=t;document.documentElement.dataset.modo=m;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',t==='labs'?(m==='escuro'?'#000000':'#ffffff'):m==='escuro'?'#1b1c20':t==='olimpo'?'#14284f':'#087a40')}
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
@@ -3495,7 +3725,7 @@ function render(){
     <div class="sw">${`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>`:`<div class="mgap ${tab==="semana"?"tight":""}"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${upd.novo?`<div class="updbar" role="status"><span>Nova versão disponível</span><button data-act="upd">Atualizar</button></div>`:""}
-  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}<a href="dieta/">Dieta</a></nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}<a href="dieta/">Dieta</a></nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()&&temaAtual()!=="labs"}">Clássico</button><button data-act="tema" data-v="labs" aria-pressed="${temaAtual()==="labs"}">Labs</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);
