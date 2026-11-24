@@ -389,7 +389,7 @@ let IDX=[];          /* simulados oficiais (index.json) */
 let TIDX=[];         /* banco de treino por bloco (treino/index.json) */
 let EXTRA={};        /* simulados anexados: id -> objeto completo */
 const FULL={};       /* cache de simulados completos */
-let UI={filtroAss:"atencao",msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
+let UI={msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
 const fb={on:false,user:null,ready:false,doc:null,col:null,status:"local",err:"",msg:"",email:"",busy:false};
 
 /* Mescla dois estados (este aparelho e a nuvem) sem perder nada: o que é só acréscimo (refazer, respostas, salvos) é somado;
@@ -609,7 +609,6 @@ function painelHtml(){
     <div class="card"><div class="sec-h"><h2>Onde melhorar</h2></div>${focoHtml(S)}</div>
     <div class="card"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
   </div>
-  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Por assunto</h2><div class="sp"></div><div class="seg">${[["atencao","Precisa de atenção"],["todos","Todos"]].map(([k,l])=>`<button class="${UI.filtroAss===k?"on":""}" data-a="fass" data-k="${k}">${l}</button>`).join("")}</div></div>${assuntosHtml(S)}</div>
   <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Simulados</h2><div class="sp"></div><button class="btn alt sm" data-a="anexo">${UI.anexo?"Fechar":"Anexar simulado"}</button></div>${UI.anexo?anexoHtml():""}${simsHtml(sims)}</div>
   <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Gabaritos salvos</h2><div class="sp"></div><span class="muted small">${Object.keys(E.salvos).length} salvos · toque na ☆ de uma questão para guardar</span></div>${salvosHtml()}</div>
   <div class="foot">Os gabaritos ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
@@ -657,14 +656,6 @@ function refazerHtml(S){
   const porBloco={1:0,2:0,3:0,4:0};S.pend.forEach(id=>{const t=parseQid(id),s=simInfo(t.sid);if(s)porBloco[bloco(s.pd[t.n-1])]=(porBloco[bloco(s.pd[t.n-1])]||0)+1});
   return `<div class="redo"><div class="v">${n}</div><div style="flex:1;min-width:160px"><b>${n===1?"questão errada pendente":"questões erradas pendentes"}</b><div class="muted small">${S.recup?`${S.recup} já ${S.recup===1?"foi recuperada":"foram recuperadas"} ao refazer. `:""}Acertou ao refazer, sai da lista.</div></div></div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" data-a="refazer" ${n?"":"disabled"}>Refazer ${n>20?"20 erradas":"todas"}</button>${Object.entries(porBloco).filter(([,v])=>v).map(([b,v])=>`<button class="btn alt sm" data-a="refazer" data-b="${b}">Bloco ${b} (${v})</button>`).join("")}</div>`;
-}
-function assuntosHtml(S){
-  let arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:Math.round(100*x.a/x.n)}));
-  if(!arr.length)return `<div class="empty">Ainda sem questões respondidas.</div>`;
-  if(UI.filtroAss==="atencao")arr=arr.filter(x=>x.p<70);
-  arr.sort((a,b)=>a.p-b.p||b.n-a.n);
-  if(!arr.length)return `<div class="empty">Todos os assuntos estão em 70% ou mais.</div>`;
-  return `<div class="tbl-wrap"><table><thead><tr><th>Assunto</th><th class="col-b">Bloco</th><th class="n">Acertos</th><th class="n">%</th></tr></thead><tbody>${arr.map(x=>`<tr><td>${esc(x.nome)}</td><td class="col-b"><span class="tag b${x.b}">${x.b}</span></td><td class="n">${x.a}/${x.n}</td><td class="n"><span class="minibar"><b class="b-${cls(x.p)}" style="width:${x.p}%"></b></span><b class="${cls(x.p)}">${x.p}%</b></td></tr>`).join("")}</tbody></table></div>`;
 }
 function simsHtml(sims){
   if(!sims.length)return `<div class="empty">Carregando simulados…</div>`;
@@ -1185,7 +1176,6 @@ document.addEventListener("click",e=>{
     case "reset":doReset();return;
     case "sair":fb.auth.signOut();return;
     case "semdata":E.prova="";salvar();break;
-    case "fass":UI.filtroAss=t.dataset.k;break;
     case "anexo":UI.anexo=!UI.anexo;break;
     case "anexar":anexar(($("#anx-txt")||{}).value||"");return;
     case "iniciar":UI.modal={tipo:"modo",id,titulo:(simInfo(id)||{}).titulo};break;
