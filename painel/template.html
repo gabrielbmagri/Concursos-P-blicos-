@@ -674,8 +674,8 @@ html[data-modo="escuro"] .rvp.all{background:linear-gradient(135deg,#16321f,#3a3
 html[data-modo="escuro"] .next.rev{background:linear-gradient(120deg,#262b38,#2a3040);border-color:#4f7bd0}html[data-modo="escuro"] .next.rev .l{color:#9db8f0}html[data-modo="escuro"] .next.rev .muted{color:#b4c6ee}html[data-modo="escuro"] .next.tmr{background:linear-gradient(120deg,#222b25,#262c28);border-color:#3a443d}html[data-modo="escuro"] .next.tmr .l{color:#8fe5b4}
 
 /* ===== tema Labs: preto e branco, cantos retos, letras largas e caixa alta; versão dia (modo claro) e noite (modo escuro) ===== */
-html[data-tema="labs"]{color-scheme:light;--bg:#fff;--fg:#000;--fg2:#3b3b3b;--fg3:#737373;--line:#e2e2e2;--soft:#f2f2f2;--soft2:#e4e4e4;--blue:#000;--green:#000;--purple:#262626;--teal:#262626;--indigo:#262626;--pink:#262626;--slate:#262626;--orange:#525252;--amber:#525252;--gold:#000;--good:#000;--bad:#000;--red:#000;--good-t:#f2f2f2;--bad-t:#fdf6b3;--warn-t:#f2f2f2;--blue-t:#f2f2f2;--font:"Archivo","Helvetica Neue",Arial,sans-serif;--display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;--r:0px;--acc:#fbed4f;--m-REG:#000;--m-POR:#2e2e2e;--m-LIN:#555;--m-TI:#7a7a7a;--m-CP:#1a1a1a;--m-ADM:#444;--m-CON:#6b6b6b;--m-ASR:#8f8f8f;--m-ING:#3a3a3a}
-html[data-tema="labs"][data-modo="escuro"]{color-scheme:dark;--bg:#000;--fg:#fff;--fg2:#c9c9c9;--fg3:#8c8c8c;--line:#2a2a2a;--soft:#111;--soft2:#1f1f1f;--blue:#fff;--green:#fff;--purple:#d6d6d6;--teal:#d6d6d6;--indigo:#d6d6d6;--pink:#d6d6d6;--slate:#d6d6d6;--orange:#b5b5b5;--amber:#b5b5b5;--gold:#fff;--good:#fff;--bad:#fbed4f;--red:#fbed4f;--good-t:#141414;--bad-t:#1d1b06;--warn-t:#1a1a1a;--blue-t:#141414;--m-REG:#fff;--m-POR:#cfcfcf;--m-LIN:#a3a3a3;--m-TI:#7d7d7d;--m-CP:#e8e8e8;--m-ADM:#b8b8b8;--m-CON:#8f8f8f;--m-ASR:#6b6b6b;--m-ING:#d9d9d9}
+html[data-tema="labs"]{color-scheme:light;--bg:#fff;--fg:#000;--fg2:#3b3b3b;--fg3:#737373;--line:#e2e2e2;--soft:#f2f2f2;--soft2:#e4e4e4;--blue:#000;--green:#000;--purple:#262626;--teal:#262626;--indigo:#262626;--pink:#262626;--slate:#262626;--orange:#525252;--amber:#525252;--gold:#000;--good:#16794a;--bad:#c4281c;--red:#c4281c;--good-t:#e6f4ec;--bad-t:#fbe9e7;--warn-t:#f2f2f2;--blue-t:#f2f2f2;--font:"Archivo","Helvetica Neue",Arial,sans-serif;--display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;--r:0px}
+html[data-tema="labs"][data-modo="escuro"]{color-scheme:dark;--bg:#000;--fg:#fff;--fg2:#c9c9c9;--fg3:#8c8c8c;--line:#2a2a2a;--soft:#111;--soft2:#1f1f1f;--blue:#fff;--green:#fff;--purple:#d6d6d6;--teal:#d6d6d6;--indigo:#d6d6d6;--pink:#d6d6d6;--slate:#d6d6d6;--orange:#b5b5b5;--amber:#b5b5b5;--gold:#fff;--good:#46d38a;--bad:#ff6b5e;--red:#ff5a4f;--good-t:#0e2217;--bad-t:#2a1411;--warn-t:#1a1a1a;--blue-t:#141414}
 html[data-tema="labs"] .top,
 html[data-tema="labs"] .drawer,
 html[data-tema="labs"] .drawer nav button,
@@ -850,6 +850,7 @@ html[data-tema="labs"] .xp-pct{color:var(--bg);text-shadow:none}
 html[data-tema="labs"] .xp-pct.out{color:var(--fg)}
 html[data-tema="labs"] .xp-tick{background:rgba(127,127,127,.4)}
 html[data-tema="labs"] .ms{border-color:var(--soft2);color:var(--fg3)}
+html[data-tema="labs"] .ms.on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
 html[data-tema="labs"] .next,html[data-tema="labs"] .next.study,html[data-tema="labs"] .next.lockn,html[data-tema="labs"] .next.rev,html[data-tema="labs"] .next.tmr{background:var(--bg);border:1px solid var(--fg)}
 html[data-tema="labs"] .next.study{border-width:2px}
 html[data-tema="labs"] .next .muted,html[data-tema="labs"] .next .l,html[data-tema="labs"] .next.study .l,html[data-tema="labs"] .next.study .muted,html[data-tema="labs"] .next.lockn .l,html[data-tema="labs"] .next.lockn .muted{color:var(--fg3)}
@@ -866,6 +867,7 @@ html[data-tema="labs"] .bar2,html[data-tema="labs"] .kpi.orange .bar2{background
 html[data-tema="labs"] .bar2 i,html[data-tema="labs"] .kpi.orange .bar2 i,html[data-tema="labs"] .plan .bar2 i{background:var(--fg)}
 html[data-tema="labs"] .spark .pt,html[data-tema="labs"] .kpi.orange .spark .pt{background:var(--fg);border-radius:0}
 html[data-tema="labs"] .spark svg *{stroke:var(--fg)}
+html[data-tema="labs"] .cd{background:var(--fg);color:var(--bg);box-shadow:none}
 html[data-tema="labs"] .cd-b{background:rgba(127,127,127,.4)}
 html[data-tema="labs"] .cd-b u{background:var(--bg)}
 html[data-tema="labs"] .jcard,html[data-tema="labs"] .jhero,html[data-tema="labs"] .jmini,html[data-tema="labs"] .jcard.risk,html[data-tema="labs"] .jhero.risk,html[data-tema="labs"] .jmini.risk{background:var(--bg);border:1px solid var(--fg);box-shadow:none}
@@ -874,6 +876,7 @@ html[data-tema="labs"] .jc-bar{background:var(--soft2)}
 html[data-tema="labs"] .jc-bar i{background:var(--fg)}
 html[data-tema="labs"] .jc-t em{background:var(--fg);color:var(--bg)}
 html[data-tema="labs"] .rvp,html[data-tema="labs"] .rvp.all{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .rvp-xp{background:var(--fg);color:var(--bg)}
 html[data-tema="labs"] .rvp-bar{background:var(--soft2)}
 html[data-tema="labs"] .rvp-bar i,html[data-tema="labs"] .ws-fill{background:var(--fg)}
 html[data-tema="labs"] .unlock{background:var(--fg);color:var(--bg)}
@@ -902,8 +905,7 @@ html[data-tema="labs"] .pfnav,html[data-tema="labs"] .bbnav{background:var(--bg)
 html[data-tema="labs"] .pill.blue,html[data-tema="labs"] .file-btn,html[data-tema="labs"] .tip,html[data-tema="labs"] .qopt.sel .lt,html[data-tema="labs"] .qa .pri,html[data-tema="labs"] .rvd-c,html[data-tema="labs"] .bbt.on,html[data-tema="labs"] .jc-t em,html[data-tema="labs"] .chip.pri,html[data-tema="labs"] .chip[aria-pressed="true"],html[data-tema="labs"] .bbseg button[aria-pressed="true"],html[data-tema="labs"] .bbpills .chip.bbon{color:var(--bg)}
 html[data-tema="labs"] .file-btn,html[data-tema="labs"] .tip,html[data-tema="labs"] .qa .pri,html[data-tema="labs"] .rvd-c{background:var(--fg)}
 html[data-tema="labs"] .qopt.sel .lt{background:var(--fg)}
-html[data-tema="labs"] .qopt.ok .lt,html[data-tema="labs"] .qopt.bad .lt,html[data-tema="labs"] .qpd.ok,html[data-tema="labs"] .qpd.er,html[data-tema="labs"] #ptr.go,html[data-tema="labs"] .bbalt li.ok b{color:var(--bg)}
-html[data-tema="labs"][data-modo="escuro"] .qopt.bad .lt,html[data-tema="labs"][data-modo="escuro"] .qpd.er{color:#000}
+html[data-tema="labs"][data-modo="escuro"] .qopt.ok .lt,html[data-tema="labs"][data-modo="escuro"] .qopt.bad .lt,html[data-tema="labs"][data-modo="escuro"] .qpd.ok,html[data-tema="labs"][data-modo="escuro"] .qpd.er,html[data-tema="labs"][data-modo="escuro"] #ptr.go,html[data-tema="labs"][data-modo="escuro"] .bbalt li.ok b{color:#000}
 /* mantra do dia */
 html[data-tema="labs"] .med{background:var(--bg);border:1px solid var(--fg);padding:18px 18px 16px 66px}
 html[data-tema="labs"] .med svg{color:var(--fg);width:34px;height:34px}
@@ -918,36 +920,20 @@ html[data-tema="labs"] .pth.cur{background:var(--bg);border-color:var(--fg);box-
 html[data-tema="labs"] .pth.done{background:var(--soft)}
 html[data-tema="labs"] .pth.lock .pa{filter:grayscale(1);opacity:.45}
 /* jornada em preto e branco */
+html[data-tema="labs"] .flame{color:var(--fg)}
 html[data-tema="labs"] .mis-r.ok{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .mis-r.ok .mis-i{background:var(--fg);border-color:var(--fg)}
 html[data-tema="labs"] .mis-i svg,html[data-tema="labs"] .bdg .bi2 svg{stroke:var(--bg)}
 html[data-tema="labs"] .mis-bar i{background:var(--fg)}
 html[data-tema="labs"] .pth.cur{border:2px solid var(--fg)}
 html[data-tema="labs"] .bdg.on{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .bdg.on .bi2{background:var(--fg)}
 html[data-tema="labs"] .bdg.on em{color:var(--fg)}
+html[data-tema="labs"] .hm i.hm1{background:#c8c8c8}html[data-tema="labs"] .hm i.hm2{background:#7a7a7a}html[data-tema="labs"] .hm i.hm3{background:#000}
+html[data-tema="labs"][data-modo="escuro"] .hm i.hm1{background:#4a4a4a}html[data-tema="labs"][data-modo="escuro"] .hm i.hm2{background:#9a9a9a}html[data-tema="labs"][data-modo="escuro"] .hm i.hm3{background:#fff}
 html[data-tema="labs"] h2{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.005em}
 html[data-tema="labs"] .sec-h h2{font:700 13px/1.2 var(--display);font-stretch:112%;letter-spacing:.2em;text-transform:uppercase}
 html[data-tema="labs"] .sec-h h2::before{background:var(--fg);border-radius:0}
-/* terceira cor: amarelo do site, só em poucos pontos (preto e branco seguem como base) */
-html[data-tema="labs"] .tag i,html[data-tema="labs"] .sbn .dot,html[data-tema="labs"] .heat .y i{background:var(--acc);box-shadow:inset 0 0 0 1px rgba(0,0,0,.5)}
-html[data-tema="labs"][data-modo="escuro"] .tag i,html[data-tema="labs"][data-modo="escuro"] .sbn .dot,html[data-tema="labs"][data-modo="escuro"] .heat .y i{box-shadow:none}
-html[data-tema="labs"] .tag.ring i{background:transparent;border-color:var(--acc)}
-html[data-tema="labs"] .hm i.hm1{background:rgba(251,237,79,.4)}html[data-tema="labs"] .hm i.hm2{background:rgba(251,237,79,.72)}html[data-tema="labs"] .hm i.hm3{background:var(--acc)}
-html[data-tema="labs"][data-modo="escuro"] .hm i.hm1{background:rgba(251,237,79,.3)}html[data-tema="labs"][data-modo="escuro"] .hm i.hm2{background:rgba(251,237,79,.6)}
-html[data-tema="labs"] .cell.hot{color:#000}
-html[data-tema="labs"] .flame{color:var(--acc);filter:drop-shadow(0 0 .6px #000)}
-html[data-tema="labs"][data-modo="escuro"] .flame{filter:none}
-html[data-tema="labs"] .cd,html[data-tema="labs"] .rvp-xp,html[data-tema="labs"] .ms.on{background:var(--acc);border-color:var(--acc);color:#000;box-shadow:none}
-html[data-tema="labs"] .mis-r.ok .mis-i{background:var(--acc);border-color:var(--acc)}
-html[data-tema="labs"] .mis-r.ok .mis-i svg{stroke:#000}
-html[data-tema="labs"] .bdg.on .bi2{background:var(--acc)}
-html[data-tema="labs"] .bdg.on .bi2 svg{stroke:#000}
-html[data-tema="labs"] .late,html[data-tema="labs"] .pill.late{background:var(--acc);color:#000;padding:1px 6px}
-html[data-tema="labs"] .sc.hi,html[data-tema="labs"] .sc.mid{background:var(--soft);color:var(--fg)}
-html[data-tema="labs"] .sc.lo{background:var(--bad-t);color:var(--fg)}
-html[data-tema="labs"] .ic.bad,html[data-tema="labs"] .spc.sp-cad{border-color:var(--acc)}
-html[data-tema="labs"] .ic.good{border-color:var(--fg)}
-html[data-tema="labs"] .pill.green{border-color:var(--fg);color:var(--fg)}
-html[data-tema="labs"] .gl .gs,html[data-tema="labs"] .gl.ok .gs{color:var(--fg)}
 html[data-tema="labs"] .hm i.fol{background:repeating-linear-gradient(45deg,var(--soft2),var(--soft2) 3px,var(--soft) 3px,var(--soft) 6px)}
 </style>
 
@@ -3269,7 +3255,6 @@ let JC=null;
 const jc=()=>{if(JC)return JC;const st=streakCalc();return JC={st,xp:xpCalc(st)}};
 const FLAME='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 3.5-1.5 5-3 7.5-1.2 2-.5 4 1 5-.2-1.800.8-3 2-4 .2 2.500 2 3.500 2 6a3.500 3.500 0 1 1-7 0c0-5 5.500-7 5-14.500z" fill="currentColor"/></svg>';
 const isLb=()=>temaAtual()==="labs";
-const HC=()=>isLb()?"251,237,79":"37,99,235";
 const avatarSvg=(lv,mood,px)=>isLb()?avatarLb(lv,mood,px):isOl()?avatarOl(lv,mood,px):avatarSvgC(lv,mood,px);
 function avatarSvgC(lv,mood,px){
   const bg=["#d5ddd9","#cde7d6","#b9e0c6","#a4d8b6","#8fd0a8","#fbe27a","#f6cd2a","#efb90a","#e2a200"][lv];
@@ -3438,7 +3423,7 @@ function jornadaHtml(){
   <div class="sec-h" style="margin-top:28px"><h3>Missões de hoje</h3></div><div class="mis">${miss.map(mrow).join("")}</div>
   <div class="sec-h" style="margin-top:28px"><h3>Últimas 12 semanas</h3><span class="muted" style="font-size:13px">Cada quadrado é um dia</span></div>
   <div class="hm" aria-label="Calendário de estudo">${cells.join("")}</div>
-  <div class="legend" style="margin-top:10px"><span style="--c:var(--soft2)"><i></i>Sem estudo</span><span style="--c:${isLb()?"rgba(251,237,79,.4)":"#9bd8b0"}"><i></i>Estudou</span><span style="--c:${isLb()?"rgba(251,237,79,.72)":"#3fae5a"}"><i></i>1h ou 40 questões</span><span style="--c:${isLb()?"#fbed4f":"#0b7a3c"}"><i></i>3h ou 100 questões</span></div>
+  <div class="legend" style="margin-top:10px"><span style="--c:var(--soft2)"><i></i>Sem estudo</span><span style="--c:#9bd8b0"><i></i>Estudou</span><span style="--c:#3fae5a"><i></i>1h ou 40 questões</span><span style="--c:#0b7a3c"><i></i>3h ou 100 questões</span></div>
   <div class="sec-h" style="margin-top:28px"><h3>Sua evolução</h3><span class="muted" style="font-size:13px">Deslize para o lado</span></div>
   <div class="path">${path}</div>
   <div class="sec-h" style="margin-top:28px"><h3>De onde vem o XP</h3><span class="muted" style="font-size:13px">${num(x.xp)} XP no total</span></div>
@@ -3604,7 +3589,7 @@ function perfHtml(){
   const DL=durList(),dmx=Math.max(1,...SUBJ.map(k=>avgDur(DL.filter(x=>x.m.k===k))||0));
   const dmRows=SUBJ.map(k=>{const a=DL.filter(x=>x.m.k===k),v=avgDur(a);return v==null?null:{l:SHORT[k],c:`var(--m-${k})`,f:v/dmx,v:fmtDur(v),s:a.length+(a.length===1?" meta":" metas"),tip:`${SHORT[k]}: média de ${fmtDur(v)} em ${a.length} metas`,m:v}}).filter(Boolean).sort((a,b)=>b.m-a.m);
   const dTop=DL.slice().sort((a,b)=>b.dur-a.dur).slice(0,8);
-  const hm=`<div class="heat" style="--n:${WK.length}"><div></div>${WK.map((w,i)=>`<div class="h">${i+1}</div>`).join("")}${SUBJ.map(k=>`<div class="y" style="--c:var(--m-${k})"><i></i><span>${SHORT[k]}</span><span class="sh">${k}</span></div>${A.heat[k].map((c,i)=>{const r=rate(c),nn=tot_(c);if(r==null)return `<div class="cell ${i===cw?"cur":""}" data-tip="${SHORT[k]} · semana ${i+1}: sem questões"></div>`;const al=.12+.88*Math.pow(r,1.3);return `<div class="cell ${al>.5?"hot":""} ${i===cw?"cur":""}" style="background:rgba(${HC()},${al.toFixed(2)})" data-tip="${SHORT[k]} · semana ${i+1}: ${pc(r)} em ${nn} questões">${Math.round(r*100)}</div>`}).join("")}`).join("")}</div>`;
+  const hm=`<div class="heat" style="--n:${WK.length}"><div></div>${WK.map((w,i)=>`<div class="h">${i+1}</div>`).join("")}${SUBJ.map(k=>`<div class="y" style="--c:var(--m-${k})"><i></i><span>${SHORT[k]}</span><span class="sh">${k}</span></div>${A.heat[k].map((c,i)=>{const r=rate(c),nn=tot_(c);if(r==null)return `<div class="cell ${i===cw?"cur":""}" data-tip="${SHORT[k]} · semana ${i+1}: sem questões"></div>`;const al=.12+.88*Math.pow(r,1.3);return `<div class="cell ${al>.5?"hot":""} ${i===cw?"cur":""}" style="background:rgba(37,99,235,${al.toFixed(2)})" data-tip="${SHORT[k]} · semana ${i+1}: ${pc(r)} em ${nn} questões">${Math.round(r*100)}</div>`}).join("")}`).join("")}</div>`;
   return `
   <section class="sec" style="margin-top:20px"><div class="grid2">
     <div class="card"><div class="card-h"><div><h3>Questões por semana</h3><p>Feitas contra as previstas nas metas</p></div><div class="legend"><span style="--c:var(--blue)"><i></i>Feitas</span><span style="--c:var(--soft2)"><i></i>Previstas</span></div></div><div class="chart" data-kind="weekQ"></div></div>
@@ -3617,7 +3602,7 @@ function perfHtml(){
     <div class="card"><div class="card-h"><div><h3>De onde vieram as questões</h3><p>Questões feitas por tipo de atividade</p></div></div>${n?barsHtml(tRows):'<div class="empty">Sem questões registradas.</div>'}</div>
     ${DL.length?`<div class="card"><div class="card-h"><div><h3>Tempo por matéria</h3><p>Média para concluir uma meta, da maior para a menor</p></div></div>${barsHtml(dmRows)}</div>
     <div class="card"><div class="card-h"><div><h3>Metas que mais demoraram</h3><p>Do primeiro toque em estudando até a conclusão</p></div></div><ul class="list">${dTop.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.m.a)}</div><div class="s">${tagHtml(x.m)}<span>Semana ${x.wi+1}</span></div></div><div class="res"><span class="sc na">${fmtDur(x.dur)}</span></div></li>`).join("")}</ul></div>`:`<div class="card wide"><div class="card-h"><div><h3>Tempo para concluir metas</h3></div></div><div class="empty">Quando você concluir metas que começou pelo modo estudando, aparecem aqui a média por matéria e as metas que mais demoraram.</div></div>`}
-    <div class="card wide"><div class="card-h"><div><h3>Mapa de acertos</h3><p>Matéria por semana. Quanto mais forte o azul, maior o acerto.</p></div><div class="legend"><span style="--c:rgba(${HC()},.2)"><i></i>0%</span><span style="--c:rgba(${HC()},1)"><i></i>100%</span></div></div>${hm}</div>
+    <div class="card wide"><div class="card-h"><div><h3>Mapa de acertos</h3><p>Matéria por semana. Quanto mais forte o azul, maior o acerto.</p></div><div class="legend"><span style="--c:rgba(37,99,235,.2)"><i></i>0%</span><span style="--c:rgba(37,99,235,1)"><i></i>100%</span></div></div>${hm}</div>
   </div></section>`;
 }
 
