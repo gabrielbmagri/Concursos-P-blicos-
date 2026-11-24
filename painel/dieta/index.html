@@ -99,7 +99,12 @@ button{font:inherit;color:inherit}
 .c svg{width:18px;height:18px;opacity:0;transition:opacity .2s}
 .meal.done .c{background:var(--fg)}
 .meal.done .c svg{opacity:1}
-.meal.done .t,.meal.done .f,.meal.done .f b{color:var(--mute)}
+.meal.done{padding:16px 0;align-items:center}
+.meal.done .f,.meal.done .m,.meal.done .nt,.meal.done .tag{display:none}
+.meal.done .t{font-size:20px;color:var(--mute);text-decoration:line-through}
+.meal.done .n{font-size:14px;color:var(--mute);text-decoration:line-through}
+.meal.done .c{width:28px;height:28px}
+.meal.done .c svg{width:15px;height:15px}
 .meal.pop .c{animation:pop .45s cubic-bezier(.2,.9,.3,1.4)}
 @keyframes pop{0%{transform:scale(.7)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
 .fine{margin:22px 0 0;font-size:12px;line-height:1.6;color:var(--mute)}
