@@ -605,13 +605,9 @@ function painelHtml(){
     <div class="card"><div class="sec-h"><h2>Desempenho por bloco</h2><div class="sp"></div><span class="muted small">linha = 70%</span></div>${blocosHtml(S)}</div>
     <div class="card"><div class="sec-h"><h2>Evolução nos simulados</h2></div>${graficoHtml(S)}</div>
   </div>
-  <div class="two">
-    <div class="card"><div class="sec-h"><h2>Onde melhorar</h2></div>${focoHtml(S)}</div>
-    <div class="card"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
-  </div>
+  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
   <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Simulados</h2><div class="sp"></div><button class="btn alt sm" data-a="anexo">${UI.anexo?"Fechar":"Anexar simulado"}</button></div>${UI.anexo?anexoHtml():""}${simsHtml(sims)}</div>
-  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Gabaritos salvos</h2><div class="sp"></div><span class="muted small">${Object.keys(E.salvos).length} salvos · toque na ☆ de uma questão para guardar</span></div>${salvosHtml()}</div>
-  <div class="foot">Os gabaritos ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
+  <div class="foot">Seus resultados ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
   </div>`;
 }
 function contagemHtml(S,sims){
@@ -643,14 +639,6 @@ function graficoHtml(S){
   const ult=h[h.length-1],u=Math.round(100*ult.a/ult.n);
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Nota por simulado">${grid}${area}${line}${dots}</svg></div><div class="small muted">Último: ${esc(ult.titulo)}, ${ult.a}/${ult.n} (${u}%) ${u>=70?"· aprovado":"· abaixo de 70%"}</div>`;
 }
-function focoHtml(S){
-  const arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:100*x.a/x.n})).filter(x=>x.n>=3&&x.p<75);
-  if(!S.resp)return `<div class="empty">Depois do primeiro simulado, aqui aparecem os 4 assuntos que mais pedem atenção.</div>`;
-  if(!arr.length)return `<div class="empty">Nenhum assunto abaixo de 75% com pelo menos 3 questões. Continue assim.</div>`;
-  /* prioridade: distância até 75% vezes o peso do bloco na prova */
-  arr.sort((a,b)=>(75-b.p)*BLOCOS[b.b].p*Math.sqrt(b.n)-(75-a.p)*BLOCOS[a.b].p*Math.sqrt(a.n));
-  return `<div class="focus">${arr.slice(0,4).map(x=>{const p=Math.round(x.p),e=x.n-x.a;return `<div class="fc ${cls(p)}"><b>${esc(x.nome)} · ${p}%</b><span>${e} ${e===1?"erro":"erros"} em ${x.n} questões · bloco ${x.b} vale ${Math.round(BLOCOS[x.b].p*100)}% da prova. Refaça as erradas deste assunto e releia os gabaritos.</span><div style="margin-top:6px"><button class="btn alt sm" data-a="refazer" data-ass="${esc(x.nome)}">Refazer erradas deste assunto</button></div></div>`}).join("")}</div>`;
-}
 function refazerHtml(S){
   const n=S.pend.length;
   const porBloco={1:0,2:0,3:0,4:0};S.pend.forEach(id=>{const t=parseQid(id),s=simInfo(t.sid);if(s)porBloco[bloco(s.pd[t.n-1])]=(porBloco[bloco(s.pd[t.n-1])]||0)+1});
@@ -673,16 +661,6 @@ function anexoHtml(){
   <textarea class="in" id="anx-txt" placeholder='{"titulo":"Simulado extra","q":[...]}'></textarea>
   <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center"><button class="btn sm" data-a="anexar">Anexar</button><label class="btn alt sm" style="display:inline-block">Escolher arquivo<input type="file" id="anx-file" accept=".json,application/json" hidden></label></div></div>`;
 }
-function salvosHtml(){
-  const ids=Object.keys(E.salvos).sort((a,b)=>(E.salvos[b].em||0)-(E.salvos[a].em||0));
-  if(!ids.length)return `<div class="empty">Nenhum gabarito salvo ainda. Durante a correção, toque na ☆ para guardar os que valem revisar antes da prova.</div>`;
-  const need=[...new Set(ids.map(i=>parseQid(i).sid))].filter(s=>!FULL[s]);
-  if(need.length){Promise.all(need.map(s=>carregarSim(s).catch(()=>null))).then(()=>render());return `<div class="empty">Carregando…</div>`}
-  const q=UI.busca.trim().toLowerCase();
-  const rows=ids.map(id=>{const t=parseQid(id),s=FULL[t.sid],x=s&&s.q[t.n-1];return x?{id,x,s}:null}).filter(Boolean).filter(r=>!q||(r.x.contexto+r.x.enunciado+r.x.gabarito+assunto(r.x.pd)).toLowerCase().includes(q));
-  return `<input class="in" id="busca" placeholder="Buscar nos gabaritos salvos" value="${esc(UI.busca)}" style="margin-bottom:10px">
-  <div class="saved">${rows.map(({id,x,s})=>`<details class="sv"><summary><span class="tag b${bloco(x.pd)}">${esc(assunto(x.pd))}</span><span class="q">${esc(x.enunciado)}<span class="muted small"> · ${esc(s.titulo)}, questão ${parseQid(id).n}</span></span></summary><div class="body">${questaoCorrigidaHtml(x,null,id)}<div style="margin-top:8px"><button class="btn ghost sm" data-a="unsave" data-id="${id}">Remover dos salvos</button></div></div></details>`).join("")||`<div class="empty">Nada encontrado.</div>`}</div>`;
-}
 function questaoCorrigidaHtml(x,resp,id){
   const k=x.certa;
   return `<div class="ctx" style="font-size:14.5px">${txt(x.contexto)}</div><div class="enun" style="font-size:14.5px">${txt(x.enunciado)}</div>
@@ -693,7 +671,7 @@ function questaoCorrigidaHtml(x,resp,id){
 function gabaritoHtml(x,resp,id,compacto){
   const k=x.certa,ok=resp===k;
   const outros=Object.entries(x.porque||{}).filter(([l])=>l!==resp);
-  return `<div class="gab"><h3>${resp==null?"":`<span class="res ${ok?"ok":"low"}">${ok?"Você acertou":`Você marcou ${resp}`}</span> ·`} Gabarito: ${k}<span style="flex:1"></span>${id?`<button class="star ${E.salvos[id]?"on":""}" data-a="star" data-id="${id}" title="Salvar este gabarito" aria-label="Salvar este gabarito">${E.salvos[id]?"★":"☆"}</button>`:""}</h3>
+  return `<div class="gab"><h3>${resp==null?"":`<span class="res ${ok?"ok":"low"}">${ok?"Você acertou":`Você marcou ${resp}`}</span> ·`} Gabarito: ${k}<span style="flex:1"></span></h3>
   <p>${txt(x.gabarito)}</p>
   ${!ok&&resp&&x.porque&&x.porque[resp]&&!compacto?`<p><b>Por que a ${resp} está errada:</b> ${txt(x.porque[resp])}</p>`:""}
   ${outros.length?`<details style="margin-top:6px"><summary class="small" style="cursor:pointer;color:var(--g7);font-weight:600">Por que as outras alternativas estão erradas</summary>${outros.map(([l,w])=>`<p class="small"><b>${l})</b> ${txt(w)}</p>`).join("")}</details>`:""}
@@ -1170,7 +1148,7 @@ document.addEventListener("click",e=>{
   const t=e.target.closest("[data-a]");if(!t)return;
   if(t.dataset.a==="fecha-modal"&&e.target.closest("[data-stop]")&&e.target!==t)return;
   const a=t.dataset.a,id=t.dataset.id;
-  if(a!=="anexar"&&a!=="star"){UI.msg="";UI.err=""}
+  if(a!=="anexar"){UI.msg="";UI.err=""}
   switch(a){
     case "login":doLogin();return;
     case "reset":doReset();return;
@@ -1211,8 +1189,6 @@ document.addEventListener("click",e=>{
     case "sair-ses":toolsFechar();if(UI.ses&&UI.ses.tipo==="bloco"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}
       if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
     case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
-    case "star":if(E.salvos[id]){delete E.salvos[id];E.del["salvos:"+id]=Date.now()}else E.salvos[id]={em:Date.now()};salvar();break;
-    case "unsave":delete E.salvos[id];E.del["salvos:"+id]=Date.now();salvar();break;
     default:return;
   }
   render();
