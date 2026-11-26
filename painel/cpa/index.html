@@ -130,6 +130,8 @@ tr:last-child td{border-bottom:0}
 .cbt-ord .sp{flex:1}
 .cbt-ord button{display:flex;align-items:center;gap:6px;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650}
 .cbt-ord button svg{width:16px;height:16px}
+.undo{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;padding:8px 12px;border:1px dashed #b5c6d6;border-radius:8px;font-size:13.5px;color:#5b6d7e;background:#fff}
+.undo button{border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 12px;font-size:13px;font-weight:650}
 .anav{display:flex;align-items:center;gap:8px;margin-top:8px;text-transform:none;letter-spacing:0;font-weight:500;font-size:13px}
 .anav select{flex:1;min-width:0;border:1px solid var(--cl);border-radius:6px;padding:5px 6px;font-size:13px;background:#fff;color:#1d2731}
 .anav button{flex:none;border:1px solid var(--cb);background:#fff;color:var(--cb);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:650;white-space:nowrap}
@@ -884,6 +886,7 @@ function sessaoHtml(){
     <div style="margin-top:16px;text-align:right"><button class="cbt-b" data-a="iniciar-exame" id="btn-ini" disabled>Iniciar exame</button></div></div></div></div>`,"");
   if(prova&&st&&st.final)return finalHtml();
   const it=s.itens[s.i],x=it.x,resp=respDe(it,s.i);
+  if(UI.desfazer&&(UI.desfazer.i!==s.i||UI.desfazer.id!==it.id))UI.desfazer=null;
   const rev=revelada(it),feito=(resp!=null||rev)&&!prova,ult=s.tipo==="bloco"?proxPendente(1)<0:s.i===s.itens.length-1;
   const nResp=s.tipo==="sim"?Object.keys(st.r).length:s.tipo==="bloco"?s.itens.filter(q=>E.tr[q.id]).length:Object.keys(s.resp).length;
   const split=(x.contexto||"").length>300||!!x.caso;
@@ -892,7 +895,7 @@ function sessaoHtml(){
       const w=feito&&c==="wrong"&&x.porque&&x.porque[l];
       return `<button class="cbt-alt ${c}" data-a="resp" data-l="${l}" ${feito?"disabled":""} aria-pressed="${resp===l}"><span class="rd"></span><span class="lt">${l.toLowerCase()})</span><span>${txt(a)}${w?`<div class="why"><b>Por que não:</b> ${txt(w)}</div>`:""}</span></button>`}).join("")}</div>`;
   const qBody=`<div class="cbt-lb">Questão ${s.i+1}${s.tipo==="bloco"&&/^T/.test(it.sid)?" · Questão nova de treino":""}${x.fonte?` · ${esc(x.fonte)}`:s.tipo==="ref"||(s.tipo==="bloco"&&!/^T/.test(it.sid))?` · ${esc(simInfo(it.sid)?simInfo(it.sid).titulo:"")}, questão ${it.n}`:""}${!prova?` · <span style="text-transform:none;letter-spacing:0;font-weight:600">Bloco ${bloco(x.pd)} · ${esc(assunto(x.pd))}${x.dif?` · ${esc(x.dif)}`:""}</span>`:""}${s.tipo==="bloco"?assuntoNavHtml():""}</div>
-    ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito?(rev&&!resp?`<div class="msg" style="margin-top:12px">Resposta revelada: a certa é a <b>${x.certa.toLowerCase()})</b>. A questão vai para a lista de erradas, para você refazer depois.</div>`:"")+gabaritoHtml(x,resp,it.id,true):""}`;
+    ${split?"":caseHtml}<div class="enun">${txt(x.enunciado)}</div>${alts}${feito&&resp&&UI.desfazer?`<div class="undo"><span>Tocou na alternativa errada sem querer?</span><button data-a="desfazer">Desfazer resposta</button></div>`:""}${feito?(rev&&!resp?`<div class="msg" style="margin-top:12px">Resposta revelada: a certa é a <b>${x.certa.toLowerCase()})</b>. A questão vai para a lista de erradas, para você refazer depois.</div>`:"")+gabaritoHtml(x,resp,it.id,true):""}`;
   const main=split?`<div class="cbt-m split"><div class="cbt-case" style="--qfs:${UI.fs}px"><div class="in3"><div class="cbt-lb">${x.caso?"Case":"Texto da questão"}</div>${caseHtml}</div></div><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`
     :`<div class="cbt-m"><div class="cbt-q" style="--qfs:${UI.fs}px">${qBody}</div></div>`;
   let foot;
@@ -934,8 +937,8 @@ function revisaoHtml(){
 }
 function responder(l){
   const s=UI.ses,it=s.itens[s.i];
-  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar()}
-  else if(s.tipo==="bloco"){if(E.tr[it.id])return;E.tr[it.id]={r:l,ok:l===it.x.certa,pd:it.x.pd,d:Date.now()};marcarPos()}
+  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar();if(s.modo==="estudo")UI.desfazer={i:s.i,id:it.id}}
+  else if(s.tipo==="bloco"){if(E.tr[it.id])return;E.tr[it.id]={r:l,ok:l===it.x.certa,pd:it.x.pd,d:Date.now()};marcarPos();UI.desfazer={i:s.i,id:it.id}}
   else{if(s.resp[it.id])return;s.resp[it.id]=l;(E.ref[it.id]=E.ref[it.id]||[]).push({d:Date.now(),ok:l===it.x.certa});salvar()}
   render();
 }
@@ -945,6 +948,13 @@ function avancar(pular){
   if(s.tipo==="bloco"){const j=proxPendente(1);if(j>=0){s.i=j;marcarPos();render();topoQ()}else finalizar();return}
   if(s.i<s.itens.length-1){s.i++;marcarPos();render();topoQ()}
   else if(s.tipo==="ref"){s.fim=true;render()}
+}
+/* desfazer: apaga a resposta que acabou de ser dada (toque errado), enquanto ainda está na questão */
+function desfazerResposta(){
+  const s=UI.ses,d=UI.desfazer;if(!s||!d||d.i!==s.i)return;
+  if(s.tipo==="sim"){const st=sesSt();if(st)delete st.r[s.i+1]}
+  else if(s.tipo==="bloco")delete E.tr[d.id];
+  UI.desfazer=null;salvar();render();
 }
 function verResposta(){
   const s=UI.ses,it=s&&s.itens[s.i];if(!it||s.tipo!=="bloco"||E.tr[it.id])return;
@@ -1163,6 +1173,7 @@ document.addEventListener("click",e=>{
     case "treino-zera":UI.modal={tipo:"conf",titulo:"Recomeçar este treino?",texto:"As respostas dadas nesta lista de questões serão apagadas e você começa do início.",ok:"treino-zera-ok",btn:"Recomeçar",id:t.dataset.b+"|"+t.dataset.f};break;
     case "treino-zera-ok":{const [b,f]=String(id).split("|");abrirBloco(b,f,true);return}
     case "ver-resp":verResposta();return;
+    case "desfazer":desfazerResposta();return;
     case "aleatoria":aleatoria();return;
     case "primeira":irPrimeira();return;
     case "prox-assunto":proxAssunto();return;
