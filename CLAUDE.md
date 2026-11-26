@@ -10,6 +10,8 @@ Repositório dos painéis de estudo. Fale sempre em português, de forma direta 
 
 ## Publicar
 
+**Antes de publicar:** rode `git fetch --all` e confira se algum branch `claude/*` tem commits que o seu não tem (`git log HEAD..origin/<branch>`). Várias sessões publicam o mesmo site; o deploy sobe a pasta `painel/` inteira e apaga o que outra sessão publicou. Junte (`git merge`) antes de publicar e mande o resultado para `main`.
+
 Hosting no projeto Firebase `educacional-511014`, sites `painel-de-metas` e `educacional-511014`, pasta pública `painel`. A conta de serviço é enviada pelo usuário na conversa (nunca grave a chave no repositório nem a mostre):
 
 ```
