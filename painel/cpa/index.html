@@ -385,29 +385,73 @@ const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.par
 /* ==================== estado ==================== */
 /* E = {prova:"AAAA-MM-DD", sims:{S01:{modo,ini,fim,t,r:{"1":"B"},vis:{"1":1},atual,fin}}, ref:{"S01-05":[{d,ok}]}, salvos:{"S01-05":{em}}, fs} */
 let E=LS.get("cpa-estado",null)||{prova:"",sims:{},ref:{},salvos:{}};
-E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};E.tr=E.tr||{};E.trs=E.trs||{};
+E.sims=E.sims||{};E.ref=E.ref||{};E.salvos=E.salvos||{};E.tr=E.tr||{};E.trs=E.trs||{};E.del=E.del||{};
 let IDX=[];          /* simulados oficiais (index.json) */
 let TIDX=[];         /* banco de treino por bloco (treino/index.json) */
 let EXTRA={};        /* simulados anexados: id -> objeto completo */
 const FULL={};       /* cache de simulados completos */
-let UI={filtroAss:"atencao",msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
+let UI={msg:"",err:"",anexo:false,busca:"",ses:null,modal:null,fs:LS.get("cpa-fs",16)};
 const fb={on:false,user:null,ready:false,doc:null,col:null,status:"local",err:"",msg:"",email:"",busy:false};
 
+/* Mescla dois estados (este aparelho e a nuvem) sem perder nada: o que é só acréscimo (refazer, respostas, salvos) é somado;
+   o que foi apagado de propósito fica registrado em E.del (hora da exclusão) para não ressuscitar; o resto vale o mais novo. */
+function mesclarE(a,b){
+  a=a||{};b=b||{};
+  const novo=(a.atualizado||0)>=(b.atualizado||0)?a:b,velho=novo===a?b:a;
+  const out=Object.assign({},velho,novo);
+  const del={};[velho.del,novo.del].forEach(d=>{for(const k in (d||{}))del[k]=Math.max(del[k]||0,d[k])});out.del=del;
+  const vivo=(k,t)=>(t||0)>(del[k]||0);
+  const chaves=(x,y)=>[...new Set([...Object.keys(x||{}),...Object.keys(y||{})])];
+  /* refazer: histórico só cresce, soma as respostas dos dois lados */
+  out.ref={};
+  for(const id of chaves(a.ref,b.ref)){
+    const m=new Map();[...((a.ref||{})[id]||[]),...((b.ref||{})[id]||[])].forEach(r=>{if(r)m.set(r.d+"|"+r.ok,r)});
+    out.ref[id]=[...m.values()].sort((x,y)=>x.d-y.d);
+  }
+  /* simulados: tentativa mais nova vale; na mesma tentativa, soma as respostas */
+  out.sims={};
+  for(const id of chaves(a.sims,b.sims)){
+    const x=(a.sims||{})[id],y=(b.sims||{})[id];let c;
+    if(!x||!y)c=x||y;
+    else if((x.ini||0)!==(y.ini||0))c=(x.ini||0)>(y.ini||0)?x:y;
+    else{const f=x.fin||y.fin;c=Object.assign({},y,x,{r:Object.assign({},y.r,x.r),vis:Object.assign({},y.vis,x.vis),t:Math.max(x.t||0,y.t||0),atual:Math.max(x.atual||1,y.atual||1)});if(f){c.fin=true;c.fim=Math.max(x.fim||0,y.fim||0)}if(x.ciente||y.ciente)c.ciente=true}
+    if(c&&vivo("sims:"+id,c.ini))out.sims[id]=c;
+  }
+  /* treino por bloco e gabaritos salvos: soma; em empate vale a resposta mais recente */
+  out.tr={};
+  for(const id of chaves(a.tr,b.tr)){const x=(a.tr||{})[id],y=(b.tr||{})[id];const c=!x?y:!y?x:((x.d||0)>=(y.d||0)?x:y);if(c&&vivo("tr:"+id,c.d))out.tr[id]=c}
+  out.salvos={};
+  for(const id of chaves(a.salvos,b.salvos)){const x=(a.salvos||{})[id],y=(b.salvos||{})[id];const c=x||y;if(c&&vivo("salvos:"+id,c.em))out.salvos[id]=c}
+  out.trs=Object.assign({},velho.trs,novo.trs);
+  out.atualizado=Math.max(a.atualizado||0,b.atualizado||0);
+  return JSON.parse(JSON.stringify(out));
+}
+const semAt=o=>{const c=Object.assign({},o);delete c.atualizado;return c};
+const estavel=o=>JSON.stringify(o,(k,v)=>v&&typeof v==="object"&&!Array.isArray(v)?Object.keys(v).sort().reduce((r,x)=>(r[x]=v[x],r),{}):v);
 const fbOk=()=>{const c=window.FIREBASE_CONFIG;return !!(window.firebase&&c&&c.apiKey&&!/COLE|SUA_|YOUR_/i.test(c.apiKey))};
 let saveT=null;
-function salvar(){
-  E.atualizado=Date.now();
+/* grava na nuvem mesclando com o que já está lá (transação), para um aparelho desatualizado nunca apagar o trabalho de outro */
+function gravar(){
+  const local=JSON.parse(JSON.stringify(E));
+  const ok=()=>{fb.status="firebase";paintSync()},erro=()=>{fb.status="erro";paintSync()};
+  if(!fb.fs||!fb.fs.runTransaction)return fb.doc.set(local,{merge:true}).then(ok).catch(erro);
+  return fb.fs.runTransaction(async tx=>{const s=await tx.get(fb.doc);const m=s.exists?mesclarE(local,s.data()):local;tx.set(fb.doc,m);return m})
+    .then(m=>{E=mesclarE(E,m);LS.set("cpa-estado",E);ok()})
+    .catch(()=>fb.doc.set(local,{merge:true}).then(ok).catch(erro));
+}
+function salvar(tocar){
+  if(tocar!==false)E.atualizado=Date.now();
   LS.set("cpa-estado",E);
   if(!fb.on||!fb.user)return;
   clearTimeout(saveT);
-  saveT=setTimeout(()=>{saveT=null;fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()})},600);
+  saveT=setTimeout(()=>{saveT=null;gravar()},600);
 }
 function salvarJa(){
   if(!saveT&&!UI.ses)return; /* nada pendente: não sobrescreve o que outra aba gravou */
   LS.set("cpa-estado",E);
   if(!fb.on||!fb.user||!fb.doc||!saveT)return;
   clearTimeout(saveT);saveT=null;
-  fb.doc.set(JSON.parse(JSON.stringify(E))).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()});
+  fb.doc.set(JSON.parse(JSON.stringify(E)),{merge:true}).then(()=>{fb.status="firebase";paintSync()}).catch(()=>{fb.status="erro";paintSync()});
 }
 /* reabre o simulado que ficou aberto, na questão em que você parou */
 let retomou=false;
@@ -438,12 +482,21 @@ function initFirebase(){
         fb.unsub=fb.doc.onSnapshot(s=>{
           if(s.metadata.hasPendingWrites)return;
           const d=s.exists?s.data():null;
+          const jaCarregou=fb.carregou;let mudou=false;
           if(!d){if(first&&(Object.keys(E.sims).length||E.prova||Object.keys(E.salvos).length))salvar()}
-          else if(E.atualizado&&d.atualizado&&E.atualizado>d.atualizado){salvar()} /* este aparelho tem a versão mais nova */
-          else{E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{}},d);LS.set("cpa-estado",E)}
-          first=false;fb.status="firebase";fb.carregou=true;render();retomar();
+          else{
+            /* junta a nuvem com este aparelho; se este aparelho sabia de algo que a nuvem não tem, grava de volta */
+            const antes=estavel(semAt(E)),m=mesclarE(E,d),falta=estavel(m)!==estavel(mesclarE(d,d));
+            E=Object.assign({prova:"",sims:{},ref:{},salvos:{},tr:{},trs:{},del:{}},m);LS.set("cpa-estado",E);
+            mudou=estavel(semAt(E))!==antes;
+            if(falta)salvar(false);
+          }
+          first=false;fb.status="firebase";fb.carregou=true;
+          /* só redesenha a tela quando algo mudou de verdade e você não está dentro de uma sessão de questões (o eco do próprio salvamento não pode jogar a tela para o topo) */
+          if(!jaCarregou||(mudou&&!UI.ses))render();else paintSync();
+          retomar();
         },e=>{fb.status="erro";fb.err="Não consegui sincronizar: "+(e.code||e.message);render()});
-        fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});EXTRA=m;render()},()=>{});
+        fb.unsub2=fb.col.onSnapshot(sn=>{const m={};sn.forEach(d=>{try{m[d.id]=JSON.parse(d.data().json)}catch(e){}});const igual=Object.keys(m).sort().join()===Object.keys(EXTRA).sort().join();EXTRA=m;if(!UI.ses&&!igual)render()},()=>{});
       }
       render();
     });
@@ -523,15 +576,29 @@ function stats(){
 function paintSync(){const el=$("#sync");if(el)el.outerHTML=syncHtml()}
 const syncHtml=()=>fb.on&&fb.user?`<span class="sync ${fb.status==="erro"?"err":""}" id="sync"><i></i>${fb.status==="erro"?"Erro ao salvar":"Salvo na nuvem"}</span>`:`<span class="sync" id="sync"><i style="background:var(--ink3)"></i>Salvo neste aparelho</span>`;
 
+/* ao redesenhar a mesma questão (marcar alternativa, salvar, atualizar), a rolagem fica onde estava */
+const SCROLLS="#ov, #ov .cbt-m, #ov .cbt-m>div, #ov .cbt-q, #ov .cbt-case, .ov, .ov .qwrap";
+function chaveRol(){const s=UI.ses;return s?[s.tipo,s.sid||s.key||"",s.i,s.fim?1:0,s.rev?1:0,s.final?1:0].join(":"):""}
+function guardaRolagem(){
+  if(!UI.ses)return null;
+  return {k:chaveRol(),p:[...document.querySelectorAll(SCROLLS)].map(e=>e.scrollTop)};
+}
+function devolveRolagem(r){
+  if(!r||r.k!==chaveRol())return;
+  const els=[...document.querySelectorAll(SCROLLS)];
+  if(els.length!==r.p.length)return;
+  els.forEach((e,i)=>{e.scrollTop=r.p[i]});
+}
 function render(){
   const app=$("#app");
   if(fb.on&&!fb.ready){app.innerHTML=`<div class="login"><div class="card muted">Carregando…</div></div>`;return}
   if(fb.on&&!fb.user){app.innerHTML=loginHtml();return}
-  const keepY=window.scrollY;
+  const keepY=window.scrollY,rol=guardaRolagem();
   app.innerHTML=painelHtml()+(UI.ses?sessaoHtml():"")+(UI.modal?modalHtml():"");
   document.body.style.overflow=UI.ses||UI.modal?"hidden":"";
   toolsSync();
   if(!UI.ses)window.scrollTo(0,keepY);
+  else devolveRolagem(rol);
 }
 function loginHtml(){
   return `<div class="login"><div class="logo" style="margin-bottom:16px"><b>CPA</b><h1>Simulados CPA<span>Certificação Anbima</span></h1></div>
@@ -559,14 +626,9 @@ function painelHtml(){
     <div class="card"><div class="sec-h"><h2>Desempenho por bloco</h2><div class="sp"></div><span class="muted small">linha = 70%</span></div>${blocosHtml(S)}</div>
     <div class="card"><div class="sec-h"><h2>Evolução nos simulados</h2></div>${graficoHtml(S)}</div>
   </div>
-  <div class="two">
-    <div class="card"><div class="sec-h"><h2>Onde melhorar</h2></div>${focoHtml(S)}</div>
-    <div class="card"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
-  </div>
-  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Por assunto</h2><div class="sp"></div><div class="seg">${[["atencao","Precisa de atenção"],["todos","Todos"]].map(([k,l])=>`<button class="${UI.filtroAss===k?"on":""}" data-a="fass" data-k="${k}">${l}</button>`).join("")}</div></div>${assuntosHtml(S)}</div>
+  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Refazer as erradas</h2></div>${refazerHtml(S)}</div>
   <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Simulados</h2><div class="sp"></div><button class="btn alt sm" data-a="anexo">${UI.anexo?"Fechar":"Anexar simulado"}</button></div>${UI.anexo?anexoHtml():""}${simsHtml(sims)}</div>
-  <div class="card" style="margin-top:14px"><div class="sec-h"><h2>Gabaritos salvos</h2><div class="sp"></div><span class="muted small">${Object.keys(E.salvos).length} salvos · toque na ☆ de uma questão para guardar</span></div>${salvosHtml()}</div>
-  <div class="foot">Os gabaritos ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
+  <div class="foot">Seus resultados ficam salvos ${fb.on&&fb.user?"na sua conta":"neste aparelho"}. <a href="../">Voltar ao painel de metas</a></div>
   </div>`;
 }
 function contagemHtml(S,sims){
@@ -598,27 +660,11 @@ function graficoHtml(S){
   const ult=h[h.length-1],u=Math.round(100*ult.a/ult.n);
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Nota por simulado">${grid}${area}${line}${dots}</svg></div><div class="small muted">Último: ${esc(ult.titulo)}, ${ult.a}/${ult.n} (${u}%) ${u>=70?"· aprovado":"· abaixo de 70%"}</div>`;
 }
-function focoHtml(S){
-  const arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:100*x.a/x.n})).filter(x=>x.n>=3&&x.p<75);
-  if(!S.resp)return `<div class="empty">Depois do primeiro simulado, aqui aparecem os 4 assuntos que mais pedem atenção.</div>`;
-  if(!arr.length)return `<div class="empty">Nenhum assunto abaixo de 75% com pelo menos 3 questões. Continue assim.</div>`;
-  /* prioridade: distância até 75% vezes o peso do bloco na prova */
-  arr.sort((a,b)=>(75-b.p)*BLOCOS[b.b].p*Math.sqrt(b.n)-(75-a.p)*BLOCOS[a.b].p*Math.sqrt(a.n));
-  return `<div class="focus">${arr.slice(0,4).map(x=>{const p=Math.round(x.p),e=x.n-x.a;return `<div class="fc ${cls(p)}"><b>${esc(x.nome)} · ${p}%</b><span>${e} ${e===1?"erro":"erros"} em ${x.n} questões · bloco ${x.b} vale ${Math.round(BLOCOS[x.b].p*100)}% da prova. Refaça as erradas deste assunto e releia os gabaritos.</span><div style="margin-top:6px"><button class="btn alt sm" data-a="refazer" data-ass="${esc(x.nome)}">Refazer erradas deste assunto</button></div></div>`}).join("")}</div>`;
-}
 function refazerHtml(S){
   const n=S.pend.length;
   const porBloco={1:0,2:0,3:0,4:0};S.pend.forEach(id=>{const t=parseQid(id),s=simInfo(t.sid);if(s)porBloco[bloco(s.pd[t.n-1])]=(porBloco[bloco(s.pd[t.n-1])]||0)+1});
   return `<div class="redo"><div class="v">${n}</div><div style="flex:1;min-width:160px"><b>${n===1?"questão errada pendente":"questões erradas pendentes"}</b><div class="muted small">${S.recup?`${S.recup} já ${S.recup===1?"foi recuperada":"foram recuperadas"} ao refazer. `:""}Acertou ao refazer, sai da lista.</div></div></div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn" data-a="refazer" ${n?"":"disabled"}>Refazer ${n>20?"20 erradas":"todas"}</button>${Object.entries(porBloco).filter(([,v])=>v).map(([b,v])=>`<button class="btn alt sm" data-a="refazer" data-b="${b}">Bloco ${b} (${v})</button>`).join("")}</div>`;
-}
-function assuntosHtml(S){
-  let arr=Object.entries(S.ass).map(([nome,x])=>({nome,...x,p:Math.round(100*x.a/x.n)}));
-  if(!arr.length)return `<div class="empty">Ainda sem questões respondidas.</div>`;
-  if(UI.filtroAss==="atencao")arr=arr.filter(x=>x.p<70);
-  arr.sort((a,b)=>a.p-b.p||b.n-a.n);
-  if(!arr.length)return `<div class="empty">Todos os assuntos estão em 70% ou mais.</div>`;
-  return `<div class="tbl-wrap"><table><thead><tr><th>Assunto</th><th class="col-b">Bloco</th><th class="n">Acertos</th><th class="n">%</th></tr></thead><tbody>${arr.map(x=>`<tr><td>${esc(x.nome)}</td><td class="col-b"><span class="tag b${x.b}">${x.b}</span></td><td class="n">${x.a}/${x.n}</td><td class="n"><span class="minibar"><b class="b-${cls(x.p)}" style="width:${x.p}%"></b></span><b class="${cls(x.p)}">${x.p}%</b></td></tr>`).join("")}</tbody></table></div>`;
 }
 function simsHtml(sims){
   if(!sims.length)return `<div class="empty">Carregando simulados…</div>`;
@@ -636,16 +682,6 @@ function anexoHtml(){
   <textarea class="in" id="anx-txt" placeholder='{"titulo":"Simulado extra","q":[...]}'></textarea>
   <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center"><button class="btn sm" data-a="anexar">Anexar</button><label class="btn alt sm" style="display:inline-block">Escolher arquivo<input type="file" id="anx-file" accept=".json,application/json" hidden></label></div></div>`;
 }
-function salvosHtml(){
-  const ids=Object.keys(E.salvos).sort((a,b)=>(E.salvos[b].em||0)-(E.salvos[a].em||0));
-  if(!ids.length)return `<div class="empty">Nenhum gabarito salvo ainda. Durante a correção, toque na ☆ para guardar os que valem revisar antes da prova.</div>`;
-  const need=[...new Set(ids.map(i=>parseQid(i).sid))].filter(s=>!FULL[s]);
-  if(need.length){Promise.all(need.map(s=>carregarSim(s).catch(()=>null))).then(()=>render());return `<div class="empty">Carregando…</div>`}
-  const q=UI.busca.trim().toLowerCase();
-  const rows=ids.map(id=>{const t=parseQid(id),s=FULL[t.sid],x=s&&s.q[t.n-1];return x?{id,x,s}:null}).filter(Boolean).filter(r=>!q||(r.x.contexto+r.x.enunciado+r.x.gabarito+assunto(r.x.pd)).toLowerCase().includes(q));
-  return `<input class="in" id="busca" placeholder="Buscar nos gabaritos salvos" value="${esc(UI.busca)}" style="margin-bottom:10px">
-  <div class="saved">${rows.map(({id,x,s})=>`<details class="sv"><summary><span class="tag b${bloco(x.pd)}">${esc(assunto(x.pd))}</span><span class="q">${esc(x.enunciado)}<span class="muted small"> · ${esc(s.titulo)}, questão ${parseQid(id).n}</span></span></summary><div class="body">${questaoCorrigidaHtml(x,null,id)}<div style="margin-top:8px"><button class="btn ghost sm" data-a="unsave" data-id="${id}">Remover dos salvos</button></div></div></details>`).join("")||`<div class="empty">Nada encontrado.</div>`}</div>`;
-}
 function questaoCorrigidaHtml(x,resp,id){
   const k=x.certa;
   return `<div class="ctx" style="font-size:14.5px">${txt(x.contexto)}</div><div class="enun" style="font-size:14.5px">${txt(x.enunciado)}</div>
@@ -656,7 +692,7 @@ function questaoCorrigidaHtml(x,resp,id){
 function gabaritoHtml(x,resp,id,compacto){
   const k=x.certa,ok=resp===k;
   const outros=Object.entries(x.porque||{}).filter(([l])=>l!==resp);
-  return `<div class="gab"><h3>${resp==null?"":`<span class="res ${ok?"ok":"low"}">${ok?"Você acertou":`Você marcou ${resp}`}</span> ·`} Gabarito: ${k}<span style="flex:1"></span>${id?`<button class="star ${E.salvos[id]?"on":""}" data-a="star" data-id="${id}" title="Salvar este gabarito" aria-label="Salvar este gabarito">${E.salvos[id]?"★":"☆"}</button>`:""}</h3>
+  return `<div class="gab"><h3>${resp==null?"":`<span class="res ${ok?"ok":"low"}">${ok?"Você acertou":`Você marcou ${resp}`}</span> ·`} Gabarito: ${k}<span style="flex:1"></span></h3>
   <p>${txt(x.gabarito)}</p>
   ${!ok&&resp&&x.porque&&x.porque[resp]&&!compacto?`<p><b>Por que a ${resp} está errada:</b> ${txt(x.porque[resp])}</p>`:""}
   ${outros.length?`<details style="margin-top:6px"><summary class="small" style="cursor:pointer;color:var(--g7);font-weight:600">Por que as outras alternativas estão erradas</summary>${outros.map(([l,w])=>`<p class="small"><b>${l})</b> ${txt(w)}</p>`).join("")}</details>`:""}
@@ -765,7 +801,7 @@ async function abrirBloco(b,fonte,recomecar){
     ordenarItens(todos,"assunto");
     const mapa=Object.fromEntries(todos.map(it=>[it.id,it]));
     let st=E.trs[key];
-    if(recomecar&&st){for(const id of st.ordem)delete E.tr[id];st=null}
+    if(recomecar&&st){for(const id of st.ordem){delete E.tr[id];E.del["tr:"+id]=Date.now()}st=null}
     if(!st)st=E.trs[key]={ordem:todos.map(it=>it.id),atual:0,ord:"assunto"};
     const naOrdem=new Set(st.ordem);for(const it of todos)if(!naOrdem.has(it.id))st.ordem.push(it.id); /* questões novas entram no fim */
     const itens=st.ordem.map(id=>mapa[id]).filter(Boolean);
@@ -1141,13 +1177,12 @@ document.addEventListener("click",e=>{
   const t=e.target.closest("[data-a]");if(!t)return;
   if(t.dataset.a==="fecha-modal"&&e.target.closest("[data-stop]")&&e.target!==t)return;
   const a=t.dataset.a,id=t.dataset.id;
-  if(a!=="anexar"&&a!=="star"){UI.msg="";UI.err=""}
+  if(a!=="anexar"){UI.msg="";UI.err=""}
   switch(a){
     case "login":doLogin();return;
     case "reset":doReset();return;
     case "sair":fb.auth.signOut();return;
     case "semdata":E.prova="";salvar();break;
-    case "fass":UI.filtroAss=t.dataset.k;break;
     case "anexo":UI.anexo=!UI.anexo;break;
     case "anexar":anexar(($("#anx-txt")||{}).value||"");return;
     case "iniciar":UI.modal={tipo:"modo",id,titulo:(simInfo(id)||{}).titulo};break;
@@ -1155,7 +1190,7 @@ document.addEventListener("click",e=>{
     case "continuar":abrirSim(id,null,true);return;
     case "rever":abrirSim(id,null,true).then(()=>{if(UI.ses){UI.ses.rev=true;UI.revF="todas";render()}});return;
     case "zerar":UI.modal={tipo:"conf",titulo:"Recomeçar o simulado?",texto:"As respostas dadas até agora neste simulado serão apagadas.",ok:"zerar-ok",btn:"Recomeçar",id};break;
-    case "zerar-ok":delete E.sims[id];try{const n=LS.get("cpa-notas",{});delete n[id];LS.set("cpa-notas",n);localStorage.removeItem("cpa-rasc-"+id)}catch(e){}if(E.aberto===id)delete E.aberto;salvar();UI.modal=null;break;
+    case "zerar-ok":delete E.sims[id];E.del["sims:"+id]=Date.now();try{const n=LS.get("cpa-notas",{});delete n[id];LS.set("cpa-notas",n);localStorage.removeItem("cpa-rasc-"+id)}catch(e){}if(E.aberto===id)delete E.aberto;salvar();UI.modal=null;break;
     case "remover":UI.modal={tipo:"conf",titulo:"Remover simulado anexado?",texto:"O simulado sai da lista. Você pode anexá-lo de novo depois.",ok:"remover-ok",btn:"Remover",id};break;
     case "remover-ok":delete EXTRA[id];if(fb.on&&fb.user)fb.col.doc(id).delete().catch(()=>{});else LS.set("cpa-extra",EXTRA);UI.modal=null;break;
     case "fecha-modal":UI.modal=null;break;
@@ -1184,8 +1219,6 @@ document.addEventListener("click",e=>{
     case "sair-ses":toolsFechar();if(UI.ses&&UI.ses.tipo==="bloco"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}
       if(UI.ses&&UI.ses.tipo==="sim"){if(!UI.ses.fim)marcarPos();delete E.aberto;salvar();salvarJa()}UI.ses=null;clearInterval(tickT);break;
     case "fonte":UI.fs=Math.max(13,Math.min(22,UI.fs+(+t.dataset.d)));LS.set("cpa-fs",UI.fs);break;
-    case "star":if(E.salvos[id])delete E.salvos[id];else E.salvos[id]={em:Date.now()};salvar();break;
-    case "unsave":delete E.salvos[id];salvar();break;
     default:return;
   }
   render();

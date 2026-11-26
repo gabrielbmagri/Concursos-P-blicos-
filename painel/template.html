@@ -1,5 +1,5 @@
 <title>Atlas</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Nunito:wght@800;900&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Pinyon+Script&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 /* Layout: página branca, linhas finas e tipografia como estrutura; blocos de cor sólida nos indicadores; cantos quase retos; tema único, sempre claro. */
@@ -45,6 +45,8 @@ h1{margin:2px 0 0;font:900 clamp(25px,6.6vw,54px)/1.05 var(--display);letter-spa
 .drawer .dh span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.95;text-shadow:0 1px 6px rgba(0,60,30,.35)}
 .drawer nav{padding:12px 12px 0;display:flex;flex-direction:column;gap:2px}
 .drawer nav button{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:13px 16px;border-radius:16px;font-size:16px;font-weight:600;color:var(--fg2)}
+.drawer nav a{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:13px 16px;border-radius:16px;font-size:16px;font-weight:600;color:var(--fg2);text-decoration:none}
+.drawer nav a:hover{background:var(--soft)}
 .drawer nav button:hover{background:var(--soft)}
 .drawer nav button[aria-selected="true"]{background:#e3f4ea;color:#0a5c3a;font-weight:800}
 @keyframes slidein{from{transform:translateX(-100%)}to{transform:none}}
@@ -670,6 +672,306 @@ html[data-tema="olimpo"] .rvp-bar i{background:linear-gradient(90deg,#1d3f7a,#d4
 html[data-modo="escuro"] .rvp.all{background:linear-gradient(135deg,#16321f,#3a3016);border-color:#25563a}
 .next.rev{background:linear-gradient(120deg,#e4eaf5,#f1f4fa);border-color:#1d3f7a}.next.rev .l{color:#1d3f7a}.next.rev .muted{color:#3a4a6a}.next.tmr{background:linear-gradient(120deg,#f1f4ef,#f7f8f5);border-color:#9bb59f}.next.tmr .l{color:#2f6b4f}
 html[data-modo="escuro"] .next.rev{background:linear-gradient(120deg,#262b38,#2a3040);border-color:#4f7bd0}html[data-modo="escuro"] .next.rev .l{color:#9db8f0}html[data-modo="escuro"] .next.rev .muted{color:#b4c6ee}html[data-modo="escuro"] .next.tmr{background:linear-gradient(120deg,#222b25,#262c28);border-color:#3a443d}html[data-modo="escuro"] .next.tmr .l{color:#8fe5b4}
+
+/* ===== tema Labs: preto e branco, cantos retos, letras largas e caixa alta; versão dia (modo claro) e noite (modo escuro) ===== */
+html[data-tema="labs"]{color-scheme:light;--bg:#fff;--fg:#000;--fg2:#3b3b3b;--fg3:#737373;--line:#e2e2e2;--soft:#f2f2f2;--soft2:#e4e4e4;--blue:#000;--green:#000;--purple:#262626;--teal:#262626;--indigo:#262626;--pink:#262626;--slate:#262626;--orange:#525252;--amber:#525252;--gold:#000;--good:#000;--bad:#737373;--red:#000;--good-t:#f2f2f2;--bad-t:#e4e4e4;--warn-t:#f2f2f2;--blue-t:#f2f2f2;--font:"Archivo","Helvetica Neue",Arial,sans-serif;--display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;--r:0px;--m-REG:#000;--m-POR:#2e2e2e;--m-LIN:#555;--m-TI:#7a7a7a;--m-CP:#1a1a1a;--m-ADM:#444;--m-CON:#6b6b6b;--m-ASR:#8f8f8f;--m-ING:#3a3a3a}
+html[data-tema="labs"][data-modo="escuro"]{color-scheme:dark;--bg:#000;--fg:#fff;--fg2:#c9c9c9;--fg3:#8c8c8c;--line:#2a2a2a;--soft:#111;--soft2:#1f1f1f;--blue:#fff;--green:#fff;--purple:#d6d6d6;--teal:#d6d6d6;--indigo:#d6d6d6;--pink:#d6d6d6;--slate:#d6d6d6;--orange:#b5b5b5;--amber:#b5b5b5;--gold:#fff;--good:#fff;--bad:#8c8c8c;--red:#fff;--good-t:#141414;--bad-t:#1f1f1f;--warn-t:#1a1a1a;--blue-t:#141414;--m-REG:#fff;--m-POR:#cfcfcf;--m-LIN:#a3a3a3;--m-TI:#7d7d7d;--m-CP:#e8e8e8;--m-ADM:#b8b8b8;--m-CON:#8f8f8f;--m-ASR:#6b6b6b;--m-ING:#d9d9d9}
+html[data-tema="labs"] .top,
+html[data-tema="labs"] .drawer,
+html[data-tema="labs"] .drawer nav button,
+html[data-tema="labs"] .drawer nav a,
+html[data-tema="labs"] .bd,
+html[data-tema="labs"] .pill,
+html[data-tema="labs"] .st,
+html[data-tema="labs"] .xp-track,
+html[data-tema="labs"] .xp-fill,
+html[data-tema="labs"] .ms,
+html[data-tema="labs"] .next,
+html[data-tema="labs"] .cd,
+html[data-tema="labs"] .cd-b,
+html[data-tema="labs"] .cd-b u,
+html[data-tema="labs"] .ic,
+html[data-tema="labs"] .tw,
+html[data-tema="labs"] .gl-b,
+html[data-tema="labs"] .bbt,
+html[data-tema="labs"] .bbt em,
+html[data-tema="labs"] .bbseg,
+html[data-tema="labs"] .bbprog,
+html[data-tema="labs"] .bbprog i,
+html[data-tema="labs"] .bbcard,
+html[data-tema="labs"] .bbtxt,
+html[data-tema="labs"] .bbf,
+html[data-tema="labs"] .spc,
+html[data-tema="labs"] .spb,
+html[data-tema="labs"] .bbgrp .bi,
+html[data-tema="labs"] .bbgrp .vl,
+html[data-tema="labs"] .bbgrp .bn,
+html[data-tema="labs"] section .gi,
+html[data-tema="labs"] .bbq,
+html[data-tema="labs"] .bbalt li,
+html[data-tema="labs"] .bbgab,
+html[data-tema="labs"] .jcard,
+html[data-tema="labs"] .jc-t em,
+html[data-tema="labs"] .jc-bar,
+html[data-tema="labs"] .jc-bar i,
+html[data-tema="labs"] .jhero,
+html[data-tema="labs"] .js,
+html[data-tema="labs"] .mis-r,
+html[data-tema="labs"] .mis-bar,
+html[data-tema="labs"] .mis-bar i,
+html[data-tema="labs"] .pth,
+html[data-tema="labs"] .bdg,
+html[data-tema="labs"] .ntc,
+html[data-tema="labs"] .nti,
+html[data-tema="labs"] .nth input,
+html[data-tema="labs"] .kpi,
+html[data-tema="labs"] .bar2,
+html[data-tema="labs"] .bar2 i,
+html[data-tema="labs"] .chip,
+html[data-tema="labs"] .banner,
+html[data-tema="labs"] .vm-bar input,
+html[data-tema="labs"] .vm-bar select,
+html[data-tema="labs"] .vm-bt,
+html[data-tema="labs"] .vm-ih,
+html[data-tema="labs"] .vm-ia button,
+html[data-tema="labs"] .vm-chip,
+html[data-tema="labs"] .vm-a,
+html[data-tema="labs"] .vm-r,
+html[data-tema="labs"] .lei-c,
+html[data-tema="labs"] .row,
+html[data-tema="labs"] .chk,
+html[data-tema="labs"] .rt .ls b,
+html[data-tema="labs"] .rb,
+html[data-tema="labs"] .sc,
+html[data-tema="labs"] .card,
+html[data-tema="labs"] .hb-t,
+html[data-tema="labs"] .stk,
+html[data-tema="labs"] .mat,
+html[data-tema="labs"] .cv,
+html[data-tema="labs"] .cv i,
+html[data-tema="labs"] .pr,
+html[data-tema="labs"] .imp-box,
+html[data-tema="labs"] .file-btn,
+html[data-tema="labs"] .msg,
+html[data-tema="labs"] select,
+html[data-tema="labs"] .in,
+html[data-tema="labs"] .sheet,
+html[data-tema="labs"] .box,
+html[data-tema="labs"] .live div,
+html[data-tema="labs"] .btn,
+html[data-tema="labs"] .tip,
+html[data-tema="labs"] .soon,
+html[data-tema="labs"] .login input.in,
+html[data-tema="labs"] .login .msg,
+html[data-tema="labs"] .ak-bar,
+html[data-tema="labs"] .ak-bar i,
+html[data-tema="labs"] .ak-card,
+html[data-tema="labs"] .ak-a mark,
+html[data-tema="labs"] .ak-q mark,
+html[data-tema="labs"] .gbtn,
+html[data-tema="labs"] textarea.in,
+html[data-tema="labs"] .frow,
+html[data-tema="labs"] .frow .th,
+html[data-tema="labs"] .sbm,
+html[data-tema="labs"] .sbbar,
+html[data-tema="labs"] .sbbar i,
+html[data-tema="labs"] .vl,
+html[data-tema="labs"] .gi img,
+html[data-tema="labs"] .gi span,
+html[data-tema="labs"] .unlock,
+html[data-tema="labs"] .qopt,
+html[data-tema="labs"] .qres,
+html[data-tema="labs"] .rb.akk,
+html[data-tema="labs"] .rb.qbk,
+html[data-tema="labs"] .bz,
+html[data-tema="labs"] .bz .bc,
+html[data-tema="labs"] details.how,
+html[data-tema="labs"] .med,
+html[data-tema="labs"] #ptr,
+html[data-tema="labs"] .updbar,
+html[data-tema="labs"] .updbar button,
+html[data-tema="labs"] .upd-b,
+html[data-tema="labs"] .sheet.sh2,
+html[data-tema="labs"] .sh-grab,
+html[data-tema="labs"] .sh-st,
+html[data-tema="labs"] .sh-tabs em,
+html[data-tema="labs"] .qa>*,
+html[data-tema="labs"] .tpl li,
+html[data-tema="labs"] .lei,
+html[data-tema="labs"] details.sh-d,
+html[data-tema="labs"] .sh-obs,
+html[data-tema="labs"] .kv,
+html[data-tema="labs"] .mt2-r,
+html[data-tema="labs"] .mt2-r .ic,
+html[data-tema="labs"] .mt2-r .th,
+html[data-tema="labs"] .jmini,
+html[data-tema="labs"] .wsum,
+html[data-tema="labs"] .ws-bar,
+html[data-tema="labs"] .ws-fill,
+html[data-tema="labs"] .rvdock,
+html[data-tema="labs"] .rvp,
+html[data-tema="labs"] .rvp-xp,
+html[data-tema="labs"] .rvp-bar,
+html[data-tema="labs"] .rvp-bar i,
+html[data-tema="labs"] .xpt{border-radius:0}
+html[data-tema="labs"] body{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] :focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+html[data-tema="labs"] .top{background:none;border:0;border-bottom:1px solid var(--fg);border-radius:0;padding:22px 66px 16px 0;margin-bottom:18px}
+html[data-tema="labs"] .eyebrow,html[data-tema="labs"] .top .eyebrow{color:var(--fg3);letter-spacing:.22em;font-weight:600}
+html[data-tema="labs"] h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--fg);-webkit-text-fill-color:var(--fg);font-stretch:125%;font-weight:900;letter-spacing:-.005em}
+html[data-tema="labs"] .wk-t,html[data-tema="labs"] .big .bn,html[data-tema="labs"] .pfh h2,html[data-tema="labs"] .bbhd h3,html[data-tema="labs"] .jh-b h3,html[data-tema="labs"] .drawer .dh b{font-stretch:118%;letter-spacing:-.005em}
+html[data-tema="labs"] .splash i{border-color:var(--line);border-top-color:var(--fg);border-radius:50%}
+html[data-tema="labs"] .mbtn{background:var(--bg);border:1px solid var(--fg);border-radius:0;box-shadow:none}
+html[data-tema="labs"] .mbtn svg{fill:var(--fg)}
+html[data-tema="labs"] .dov,html[data-tema="labs"] .ov{background:rgba(0,0,0,.62)}
+html[data-tema="labs"] .drawer{border-radius:0;box-shadow:none;border-right:1px solid var(--fg)}
+html[data-tema="labs"] .drawer .dh{background:#000;color:#fff;border-bottom:1px solid #2a2a2a}
+html[data-tema="labs"] .drawer .dh b{text-shadow:none;text-transform:uppercase}
+html[data-tema="labs"] .drawer .dh span{text-shadow:none;letter-spacing:.22em;opacity:.7}
+html[data-tema="labs"] .drawer nav button,html[data-tema="labs"] .drawer nav a{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--fg2)}
+html[data-tema="labs"] .drawer nav button:hover,html[data-tema="labs"] .drawer nav a:hover{background:var(--soft)}
+html[data-tema="labs"] .drawer nav button[aria-selected="true"]{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .tema-t span{letter-spacing:.2em}
+html[data-tema="labs"] .seg button{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+html[data-tema="labs"] .seg button[aria-selected="true"]{border-bottom-color:var(--fg)}
+html[data-tema="labs"] .bd,html[data-tema="labs"] .mbtn .mb{border-radius:0;background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .nav{border-radius:0;border-color:var(--fg)}
+html[data-tema="labs"] .pill{letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+html[data-tema="labs"] .pill.blue{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .pill.green{background:transparent;border:1px solid var(--good);color:var(--good)}
+html[data-tema="labs"] .pill.warn{background:transparent;border:1px solid var(--fg3);color:var(--fg2)}
+html[data-tema="labs"] .big{color:var(--fg)}
+html[data-tema="labs"] .st{border:1px solid var(--fg)}
+html[data-tema="labs"] .st span,html[data-tema="labs"] .st b{color:var(--fg)}
+html[data-tema="labs"] .st span{letter-spacing:.18em}
+html[data-tema="labs"] .xp-track{background:var(--soft2)}
+html[data-tema="labs"] .xp-fill,html[data-tema="labs"] .xp-fill.done{background:var(--fg);animation:none}
+html[data-tema="labs"] .xp-pct{color:var(--bg);text-shadow:none}
+html[data-tema="labs"] .xp-pct.out{color:var(--fg)}
+html[data-tema="labs"] .xp-tick{background:rgba(127,127,127,.4)}
+html[data-tema="labs"] .ms{border-color:var(--soft2);color:var(--fg3)}
+html[data-tema="labs"] .ms.on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .next,html[data-tema="labs"] .next.study,html[data-tema="labs"] .next.lockn,html[data-tema="labs"] .next.rev,html[data-tema="labs"] .next.tmr{background:var(--bg);border:1px solid var(--fg)}
+html[data-tema="labs"] .next.study{border-width:2px}
+html[data-tema="labs"] .next .muted,html[data-tema="labs"] .next .l,html[data-tema="labs"] .next.study .l,html[data-tema="labs"] .next.study .muted,html[data-tema="labs"] .next.lockn .l,html[data-tema="labs"] .next.lockn .muted{color:var(--fg3)}
+html[data-tema="labs"] .next .l{letter-spacing:.18em}
+html[data-tema="labs"] .next.rev .l,html[data-tema="labs"] .next.rev .muted,html[data-tema="labs"] .next.tmr .l,html[data-tema="labs"] .next.tmr .muted{color:var(--fg3)}
+html[data-tema="labs"][data-modo="escuro"] .next.rev .l,html[data-tema="labs"][data-modo="escuro"] .next.rev .muted{color:var(--fg3)}
+html[data-tema="labs"] .kpi,html[data-tema="labs"] .kpi.orange{background:var(--bg);color:var(--fg);border:1px solid var(--fg);box-shadow:none}
+html[data-tema="labs"] .kpi .lab,html[data-tema="labs"] .kpi.orange .lab{color:var(--fg3);letter-spacing:.18em}
+html[data-tema="labs"] .kpi .num{font-family:var(--display);font-stretch:112%;font-weight:800;letter-spacing:-.02em}
+html[data-tema="labs"] .kpi .num small,html[data-tema="labs"] .kpi .sub,html[data-tema="labs"] .kpi.orange .num small,html[data-tema="labs"] .kpi.orange .sub{color:var(--fg2)}
+html[data-tema="labs"] .sbars span,html[data-tema="labs"] .kpi.orange .sbars span{background:var(--fg)}
+html[data-tema="labs"] .sbars span.z{background:var(--soft2)}
+html[data-tema="labs"] .bar2,html[data-tema="labs"] .kpi.orange .bar2{background:var(--soft2)}
+html[data-tema="labs"] .bar2 i,html[data-tema="labs"] .kpi.orange .bar2 i,html[data-tema="labs"] .plan .bar2 i{background:var(--fg)}
+html[data-tema="labs"] .spark .pt,html[data-tema="labs"] .kpi.orange .spark .pt{background:var(--fg);border-radius:0}
+html[data-tema="labs"] .spark svg *{stroke:var(--fg)}
+html[data-tema="labs"] .cd{background:var(--fg);color:var(--bg);box-shadow:none}
+html[data-tema="labs"] .cd-b{background:rgba(127,127,127,.4)}
+html[data-tema="labs"] .cd-b u{background:var(--bg)}
+html[data-tema="labs"] .jcard,html[data-tema="labs"] .jhero,html[data-tema="labs"] .jmini,html[data-tema="labs"] .jcard.risk,html[data-tema="labs"] .jhero.risk,html[data-tema="labs"] .jmini.risk{background:var(--bg);border:1px solid var(--fg);box-shadow:none}
+html[data-tema="labs"] .jcard.risk,html[data-tema="labs"] .jhero.risk,html[data-tema="labs"] .jmini.risk{border-color:var(--bad)}
+html[data-tema="labs"] .jc-bar{background:var(--soft2)}
+html[data-tema="labs"] .jc-bar i{background:var(--fg)}
+html[data-tema="labs"] .jc-t em{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .rvp,html[data-tema="labs"] .rvp.all{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .rvp-xp{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .rvp-bar{background:var(--soft2)}
+html[data-tema="labs"] .rvp-bar i,html[data-tema="labs"] .ws-fill{background:var(--fg)}
+html[data-tema="labs"] .unlock{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .unlock .btn{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .xpt,html[data-tema="labs"] .xpt.big{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .xpt b,html[data-tema="labs"] .xpt.big b{color:var(--bg)}
+html[data-tema="labs"] .btn{background:var(--fg);color:var(--bg);border:1px solid var(--fg);text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:800}
+html[data-tema="labs"] .btn.alt{background:transparent;color:var(--fg)}
+html[data-tema="labs"] .btn.ghost{background:transparent;border-color:transparent;color:var(--red)}
+html[data-tema="labs"] .btn.conc,html[data-tema="labs"] .btn.conc.ini{background:var(--fg);color:var(--bg);box-shadow:none;animation:none}
+html[data-tema="labs"] .chip{text-transform:uppercase;letter-spacing:.12em;font-size:11.5px;font-weight:700}
+html[data-tema="labs"] .chip.pri,html[data-tema="labs"] .chip[aria-pressed="true"],html[data-tema="labs"] .bbt.on,html[data-tema="labs"] .bbseg button[aria-pressed="true"],html[data-tema="labs"] .bbpills .chip.bbon{background:var(--fg);border-color:var(--fg);color:var(--bg);box-shadow:none}
+html[data-tema="labs"] .bbt.on em{background:rgba(127,127,127,.35);color:var(--bg)}
+html[data-tema="labs"] .bbt,html[data-tema="labs"] .bbseg{border-color:var(--line)}
+html[data-tema="labs"] .bbdoc,html[data-tema="labs"] .bbdoc.pdf{background:var(--soft);color:var(--fg)}
+html[data-tema="labs"] .switch{background:var(--fg3)}
+html[data-tema="labs"] .switch[aria-checked="true"]{background:var(--fg)}
+html[data-tema="labs"] .switch[aria-checked="true"]::after{background:var(--bg)}
+html[data-tema="labs"] .chk{border-color:var(--fg);border-radius:0}
+html[data-tema="labs"] .row.part .chk{border-color:var(--fg)}
+html[data-tema="labs"] .bdg.on{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .med{background:var(--soft);border-color:var(--line)}
+html[data-tema="labs"] .med q{font-style:normal}
+html[data-tema="labs"] .pfnav,html[data-tema="labs"] .bbnav{background:var(--bg)}
+/* contraste: onde o fundo vira branco na noite, o texto acompanha */
+html[data-tema="labs"] .pill.blue,html[data-tema="labs"] .file-btn,html[data-tema="labs"] .tip,html[data-tema="labs"] .qopt.sel .lt,html[data-tema="labs"] .qa .pri,html[data-tema="labs"] .rvd-c,html[data-tema="labs"] .bbt.on,html[data-tema="labs"] .jc-t em,html[data-tema="labs"] .chip.pri,html[data-tema="labs"] .chip[aria-pressed="true"],html[data-tema="labs"] .bbseg button[aria-pressed="true"],html[data-tema="labs"] .bbpills .chip.bbon{color:var(--bg)}
+html[data-tema="labs"] .file-btn,html[data-tema="labs"] .tip,html[data-tema="labs"] .qa .pri,html[data-tema="labs"] .rvd-c{background:var(--fg)}
+html[data-tema="labs"] .qopt.sel .lt{background:var(--fg)}
+html[data-tema="labs"][data-modo="escuro"] .qopt.ok .lt,html[data-tema="labs"][data-modo="escuro"] .qopt.bad .lt,html[data-tema="labs"][data-modo="escuro"] .qpd.ok,html[data-tema="labs"][data-modo="escuro"] .qpd.er,html[data-tema="labs"][data-modo="escuro"] #ptr.go,html[data-tema="labs"][data-modo="escuro"] .bbalt li.ok b{color:#000}
+/* mantra do dia */
+html[data-tema="labs"] .med{background:var(--bg);border:1px solid var(--fg);padding:18px 18px 16px 66px}
+html[data-tema="labs"] .med svg{color:var(--fg);width:34px;height:34px}
+html[data-tema="labs"] .med q{font:800 19px/1.3 var(--display);font-stretch:110%;font-style:normal;text-transform:uppercase;letter-spacing:.01em;color:var(--fg);margin-top:6px}
+html[data-tema="labs"] .med small{color:var(--fg3);letter-spacing:.2em;font-weight:700}
+/* imagens em preto e branco */
+html[data-tema="labs"] .lg-mark,html[data-tema="labs"] .ava img{filter:grayscale(1)}
+html[data-tema="labs"][data-modo="escuro"] .login .lg-mark{filter:grayscale(1) invert(1)}
+html[data-tema="labs"] .jcard .ava,html[data-tema="labs"] .jh-a,html[data-tema="labs"] .jmini .ava,html[data-tema="labs"] .pth .pa{box-shadow:0 0 0 2px var(--fg)}
+html[data-tema="labs"] .pth{background:var(--bg);border-color:var(--line)}
+html[data-tema="labs"] .pth.cur{background:var(--bg);border-color:var(--fg);box-shadow:none}
+html[data-tema="labs"] .pth.done{background:var(--soft)}
+html[data-tema="labs"] .pth.lock .pa{filter:grayscale(1);opacity:.45}
+/* jornada em preto e branco */
+html[data-tema="labs"] .flame{color:var(--fg)}
+html[data-tema="labs"] .mis-r.ok{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .mis-r.ok .mis-i{background:var(--fg);border-color:var(--fg)}
+html[data-tema="labs"] .mis-i svg,html[data-tema="labs"] .bdg .bi2 svg{stroke:var(--bg)}
+html[data-tema="labs"] .mis-bar i{background:var(--fg)}
+html[data-tema="labs"] .pth.cur{border:2px solid var(--fg)}
+html[data-tema="labs"] .bdg.on{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .bdg.on .bi2{background:var(--fg)}
+html[data-tema="labs"] .bdg.on em{color:var(--fg)}
+html[data-tema="labs"] .hm i.hm1{background:#c8c8c8}html[data-tema="labs"] .hm i.hm2{background:#7a7a7a}html[data-tema="labs"] .hm i.hm3{background:#000}
+html[data-tema="labs"][data-modo="escuro"] .hm i.hm1{background:#4a4a4a}html[data-tema="labs"][data-modo="escuro"] .hm i.hm2{background:#9a9a9a}html[data-tema="labs"][data-modo="escuro"] .hm i.hm3{background:#fff}
+html[data-tema="labs"] h2{font-family:var(--display);font-weight:900;font-stretch:118%;text-transform:uppercase;letter-spacing:-.005em}
+html[data-tema="labs"] .sec-h h2{font:700 13px/1.2 var(--display);font-stretch:112%;letter-spacing:.2em;text-transform:uppercase}
+html[data-tema="labs"] .sec-h h2::before{background:var(--fg);border-radius:0}
+/* sem estímulo de cor: estados em preto, branco e cinza */
+html[data-tema="labs"] .cell.hot{color:var(--bg)}
+html[data-tema="labs"] .sc.hi,html[data-tema="labs"] .sc.mid{background:var(--soft);color:var(--fg)}
+html[data-tema="labs"] .sc.lo{background:var(--bg);color:var(--fg);border:1px solid var(--fg)}
+html[data-tema="labs"] .late,html[data-tema="labs"] .pill.late{background:transparent;color:var(--fg);font-weight:800;text-decoration:underline}
+html[data-tema="labs"] .ic.bad,html[data-tema="labs"] .ic.good,html[data-tema="labs"] .spc.sp-cad{border-color:var(--fg)}
+/* botões de nota (Certo/Errado e Anki), etiquetas de dificuldade e estados: sem cor, com contraste */
+html[data-tema="labs"] .gbtn{border:1px solid var(--fg);background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .g3,html[data-tema="labs"] .g4,html[data-tema="labs"] .g0{background:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .g1,html[data-tema="labs"] .g2{background:var(--bg);color:var(--fg)}
+html[data-tema="labs"] .rb,html[data-tema="labs"] .rb.mv,html[data-tema="labs"] .rb.stu,html[data-tema="labs"] .rb.akk,html[data-tema="labs"] .rb.qbk,html[data-tema="labs"] .rb.perf-excelente,html[data-tema="labs"] .rb.perf-razoavel,html[data-tema="labs"] .rb.df-facil,html[data-tema="labs"] .rb.df-medio,html[data-tema="labs"] .rb.bbgood{background:var(--soft2);color:var(--fg)}
+html[data-tema="labs"] .rb.perf-ruim,html[data-tema="labs"] .rb.df-dificil,html[data-tema="labs"] .rb.bbbad{background:var(--bg);color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}
+html[data-tema="labs"] .rb.akk:hover,html[data-tema="labs"] .rb.qbk:hover{background:var(--line)}
+html[data-tema="labs"] .qpd.cur{outline:3px solid var(--fg)}
+html[data-tema="labs"] .qopt.sel{border-color:var(--fg);background:var(--soft)}
+html[data-tema="labs"] .qopt.bad{border-style:dashed}
+html[data-tema="labs"] .row.stu .chk{background:var(--bg);border-color:var(--fg)}
+html[data-tema="labs"] .row.stu .chk::after{background:var(--fg)}
+html[data-tema="labs"] .row.done .chk{background:var(--fg);border-color:var(--fg)}
+html[data-tema="labs"] .chk svg,html[data-tema="labs"] .row.done .chk svg{stroke:var(--bg)}
+html[data-tema="labs"] .ld{background:var(--fg)}
+html[data-tema="labs"] .pill.lockp,html[data-tema="labs"] .lkic{background:var(--fg3);color:var(--bg)}
+html[data-tema="labs"] .pill.lockp svg,html[data-tema="labs"] .lkic svg{stroke:var(--bg)}
+html[data-tema="labs"] .star{color:var(--fg)}
+html[data-tema="labs"] .rep .rps.reg h4{color:var(--fg)}
+html[data-tema="labs"] .js.warn,html[data-tema="labs"] .ntc.ok{background:var(--soft);border-color:var(--fg)}
+html[data-tema="labs"] .ntc.off{background:var(--bg);border:1px dashed var(--fg)}
+html[data-tema="labs"] .sbbar{background:var(--fg3)}
+html[data-tema="labs"] .sbbar i{background:var(--fg)}
+html[data-tema="labs"] .sh-st.go{background:var(--soft)}
+html[data-tema="labs"] .sh-st .chip.go,html[data-tema="labs"] .updbar button{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+html[data-tema="labs"] .qa .pri span{color:var(--bg);opacity:.8}
+html[data-tema="labs"] .link{color:var(--fg)}
+html[data-tema="labs"] .chk.lkc svg{stroke:var(--fg2)}
+html[data-tema="labs"] .btn.conc .ck{background:rgba(127,127,127,.35)}
+html[data-tema="labs"] .btn.conc .ck svg{stroke:var(--bg)}
+html[data-tema="labs"] .btn.conc.ini .ck svg{stroke:none;fill:var(--bg)}
+html[data-tema="labs"] .hm i.fol{background:repeating-linear-gradient(45deg,var(--soft2),var(--soft2) 3px,var(--soft) 3px,var(--soft) 6px)}
 </style>
 
 <div class="wrap" id="app"></div>
@@ -2989,7 +3291,10 @@ function missionsCalc(){
 let JC=null;
 const jc=()=>{if(JC)return JC;const st=streakCalc();return JC={st,xp:xpCalc(st)}};
 const FLAME='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 3.5-1.5 5-3 7.5-1.2 2-.5 4 1 5-.2-1.800.8-3 2-4 .2 2.500 2 3.500 2 6a3.500 3.500 0 1 1-7 0c0-5 5.500-7 5-14.500z" fill="currentColor"/></svg>';
-const avatarSvg=(lv,mood,px)=>isOl()?avatarOl(lv,mood,px):avatarSvgC(lv,mood,px);
+const isLb=()=>temaAtual()==="labs";
+const HC=()=>isLb()?(modoAtual()==="escuro"?"255,255,255":"0,0,0"):"37,99,235";
+const HML=()=>isLb()?(modoAtual()==="escuro"?["#4a4a4a","#9a9a9a","#fff"]:["#c8c8c8","#7a7a7a","#000"]):["#9bd8b0","#3fae5a","#0b7a3c"];
+const avatarSvg=(lv,mood,px)=>isLb()?avatarLb(lv,mood,px):isOl()?avatarOl(lv,mood,px):avatarSvgC(lv,mood,px);
 function avatarSvgC(lv,mood,px){
   const bg=["#d5ddd9","#cde7d6","#b9e0c6","#a4d8b6","#8fd0a8","#fbe27a","#f6cd2a","#efb90a","#e2a200"][lv];
   const shirt=["#7d8b84","#4f7cc4","#4f7cc4","#2f6f9f","#2f6f9f","#c8431f","#1d3b5c","#1d3b5c","#14301f"][lv];
@@ -3046,12 +3351,35 @@ const modoAtual=()=>{const m=modoPref();return m==="auto"?(window.matchMedia&&ma
 if(window.matchMedia)try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{if(modoPref()==="auto")render()})}catch(e){}
 const LVN_O=["Acólito","Discípulo do Pórtico","Hoplita","Cavaleiro de Bronze","Cavaleiro de Prata","Cavaleiro de Ouro","Berserker","Herói do Olimpo","Servidor Público"];
 const LVD_O=["Serve no altar do saber e aprende o ritual da rotina.","Estuda no Pórtico: o obstáculo é o caminho.","Marcha em formação, com disciplina e escudo erguido.","Primeira armadura. Cada meta forja uma peça.","Armadura de prata: a constância virou hábito.","Veste de ouro: domina o edital e a pegadinha.","Fúria indomável: não recua diante de nenhuma questão.","Coroado de louros: o Olimpo reconhece o esforço.","Atlas da República: carrega o Estado nos ombros."];
-const lvNames=()=>isOl()?LVN_O:LVN;
-const lvDesc=i=>(isOl()?LVD_O:LVD)[i];
+const LVN_L=["Calouro do Box","Primeiro WOD","Rotina de Treino","Atleta Scaled","Atleta Rx","Competidor Open","Elite","Finisher","Servidor Público"];
+const LVD_L=["Entrou no box e aprende o movimento antes da carga.","Primeiro treino feito. O hábito começa aqui.","Treina todo dia, mesmo sem vontade.","Adapta a carga e não falta ao treino.","Faz o treino como está no quadro.","Compete com os melhores e mede cada resultado.","Ritmo de elite: poucas pausas, muita execução.","Cruza a linha de chegada com a prova resolvida.","Chegou lá: servidor público da Câmara."];
+const lvNames=()=>isLb()?LVN_L:isOl()?LVN_O:LVN;
+const lvDesc=i=>(isLb()?LVD_L:isOl()?LVD_O:LVD)[i];
 const MED=D.med;
-const medHoje=()=>MED[parseInt(hstr(ymd(today())),36)%MED.length];
+const MED_L=[["Peso certo, técnica limpa, repetição todo dia.","Técnica"],["Não precisa estar pronto. Precisa começar o aquecimento.","Rotina"],["Quem desiste no minuto 10 nunca conhece o minuto 11.","Mente"],["Constância vence a intensidade que dura uma semana.","Rotina"],["Cada meta é uma repetição. A aprovação é a soma delas.","Rotina"],["Respira, ajusta o ritmo e segue para a próxima estação.","Ritmo"],["O treino do dia só conta se você fizer.","Foco"],["Cansaço avisa. Desistir é decisão.","Mente"],["Ritmo sustentável ganha prova longa.","Ritmo"],["Faça o simples bem feito, todos os dias.","Técnica"],["Descanso faz parte do treino. Rotina também.","Rotina"],["A prova se decide nos dias comuns.","Rotina"],["Foco na estação à frente, não na linha de chegada.","Foco"],["Ninguém levanta o peso por você. Ninguém estuda por você.","Mente"],["Errou a questão? Ajustou a técnica. Siga.","Técnica"],["Meta pequena concluída vale mais que grande planejada.","Foco"],["Mais um round. Mais uma questão.","Ritmo"],["O corpo cumpre o que a cabeça decide cedo.","Mente"],["Revisar é o aquecimento que evita a lesão na prova.","Técnica"],["Disciplina é treinar quando a vontade não vem.","Rotina"],["Sem pressa e sem pausa.","Ritmo"],["Resultado é consequência de repetição.","Rotina"],["Treino difícil hoje, prova leve depois.","Mente"],["Mantenha o ritmo. A linha de chegada se aproxima.","Ritmo"],["Seja o atleta que o seu eu da prova vai agradecer.","Mente"],["Hoje é dia de aumentar a carga um pouquinho.","Foco"],["Quem mede evolui. Registre a meta de hoje.","Foco"],["A rotina é o seu melhor equipamento.","Rotina"],["Cada série termina. Cada edital também.","Mente"],["Sua única competição é o treino de ontem.","Foco"],["Fôlego curto, plano longo.","Ritmo"],["Técnica antes de velocidade. Base antes de simulado.","Técnica"],["O que pesa hoje fica leve com repetição.","Rotina"],["Suba o ritmo na reta final, não no começo.","Ritmo"]];
+const medHoje=()=>{const h=parseInt(hstr(ymd(today())),36);return isLb()?MED_L[h%MED_L.length]:MED[h%MED.length]};
+const BARRA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M1 12h22M4 8v8M7.500 5v14M16.500 5v14M20 8v8"/></svg>';
 const COLUNA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 18h14M7 18V9M11 18V9M13 18V9M17 18V9M4 9h16M6 6l6-3.500L18 6z"/></svg>';
-function medCard(){const m=medHoje();return `<section class="med" aria-label="Meditação do dia">${COLUNA}<small>Meditação do dia${m[2]?` · ${esc(m[2])}`:""}</small><q>${esc(m[0])}</q><small class="au">${esc(m[1])}</small></section>`}
+function medCard(){const m=medHoje();if(isLb())return `<section class="med" aria-label="Mantra do dia">${BARRA}<small>Mantra do dia · ${esc(m[1])}</small><q>${esc(m[0])}</q></section>`;return `<section class="med" aria-label="Meditação do dia">${COLUNA}<small>Meditação do dia${m[2]?` · ${esc(m[2])}`:""}</small><q>${esc(m[0])}</q><small class="au">${esc(m[1])}</small></section>`}
+/* Avatares do tema Labs: atleta em preto e branco; o equipamento muda a cada nível (box, corda, kettlebell, barra, wall ball, barra fixa, sled, medalha e pódio). */
+function avatarLb(lv,mood,px){
+  const F='style="fill:var(--bg)"',S='style="fill:none;stroke:var(--bg);stroke-width:6;stroke-linecap:round;stroke-linejoin:round"',T='style="fill:none;stroke:var(--bg);stroke-width:3;stroke-linecap:round"';
+  const body=a=>`<circle cx="60" cy="46" r="9" ${F}/><path d="M60 58V82M60 82L49 104M60 82L71 104${a}" ${S}/>`;
+  let g="";
+  switch(lv){
+    case 0:g=body("M60 62L46 80M60 62L74 80");break;
+    case 1:g=body("M60 62L44 76M60 62L76 76")+`<path d="M44 76C10 22 110 22 76 76" ${T}/>`;break;
+    case 2:g=body("M60 62L46 80M60 62L78 84")+`<circle cx="80" cy="94" r="8" ${F}/><path d="M74 88c0-9 12-9 12 0" ${T}/>`;break;
+    case 3:g=body("M60 62L42 38M60 62L78 38")+`<path d="M18 34H102" ${T}/><rect x="14" y="24" width="6" height="20" ${F}/><rect x="100" y="24" width="6" height="20" ${F}/><rect x="21" y="28" width="5" height="12" ${F}/><rect x="94" y="28" width="5" height="12" ${F}/>`;break;
+    case 4:g=body("M60 62L50 36M60 62L70 36")+`<circle cx="60" cy="24" r="11" ${F}/><path d="M49 24h22M60 13v22" style="fill:none;stroke:var(--fg);stroke-width:2"/>`;break;
+    case 5:g=body("M60 62L46 18M60 62L74 18")+`<path d="M24 18H96" ${T}/>`;break;
+    case 6:g=`<circle cx="44" cy="52" r="9" ${F}/><path d="M48 62L66 86M52 64L82 72M66 86L52 106M66 86L84 102" ${S}/><rect x="82" y="60" width="22" height="34" ${F}/><path d="M86 94h14" style="fill:none;stroke:var(--fg);stroke-width:2"/>`;break;
+    case 7:g=body("M60 62L42 42M60 62L78 42")+`<circle cx="60" cy="76" r="6" style="fill:var(--fg);stroke:var(--bg);stroke-width:2.500"/>`;break;
+    default:g=`<path d="M60 26L65.900 38.200L79.200 40L69.600 49.400L71.800 62.800L60 56.500L48.200 62.800L50.400 49.400L40.800 40L54.100 38.200Z" ${F}/><rect x="28" y="86" width="22" height="22" ${F}/><rect x="49" y="72" width="22" height="36" ${F}/><rect x="70" y="94" width="22" height="14" ${F}/>`;
+  }
+  if(mood==="cansado"&&lv<8)g+=`<path d="M78 38c3 5 5 7 5 10a5 5 0 0 1-10 0c0-3 2-5 5-10z" ${F}/>`;
+  return `<svg viewBox="0 0 120 120" width="${px}" height="${px}" role="img" aria-label="${esc(LVN_L[lv])}"><circle cx="60" cy="60" r="58" style="fill:var(--fg)"/><g>${g}</g></svg>`;
+}
 function avatarOl(lv,mood,px){
   const skin="#efc29a",dk="#2b2118",tired=mood==="cansado";
   const BG=[["#fbf3d9","#efe0ae"],["#e8eef8","#c9d6ee"],["#f4dccb","#e3b79a"],["#f2dcc2","#cf9a62"],["#e8edf4","#aeb9c9"],["#fff3c2","#f1c94e"],["#4a2229","#14090c"],["#d8ecfb","#8fc3ec"],["#14284f","#2c4d8f"]][lv];
@@ -3124,7 +3452,7 @@ function jornadaHtml(){
     ["Semanas perfeitas","4 semanas com todas as metas",wkDone>=4,`${Math.min(4,wkDone)}/4`],["Oito semanas perfeitas","8 semanas com todas as metas",wkDone>=8,`${Math.min(8,wkDone)}/8`],["Cobaia do Cebraspe","3 simulados feitos",Object.keys(SM).length>=3,`${Math.min(3,Object.keys(SM).length)}/3`]];
   const nOk=B.filter(b=>b[2]).length;
   return `<section class="sec" style="margin-top:20px"><h2>Jornada</h2>
-  <p class="lead" style="margin-bottom:0">${isOl()?"Estude todo dia, ganhe XP e suba de acólito a servidor público.":"Estude todo dia, ganhe XP e evolua de curioso a servidor público."}</p>
+  <p class="lead" style="margin-bottom:0">${isLb()?"Estude todo dia, ganhe XP e suba de calouro do box a servidor público.":isOl()?"Estude todo dia, ganhe XP e suba de acólito a servidor público.":"Estude todo dia, ganhe XP e evolua de curioso a servidor público."}</p>
   <div class="jhero ${st.risk?"risk":""}"><div class="jh-a">${avatarSvg(x.lv,mood,132)}</div>
     <div class="jh-b"><div class="jh-n">Nível ${x.lv+1} de ${LVS.length}</div><h3>${x.name}</h3><p>${lvDesc(x.lv)}</p>
       <div class="jc-bar big"><i style="width:${Math.round(x.pct*100)}%"></i></div>
@@ -3134,7 +3462,7 @@ function jornadaHtml(){
   <div class="sec-h" style="margin-top:28px"><h3>Missões de hoje</h3></div><div class="mis">${miss.map(mrow).join("")}</div>
   <div class="sec-h" style="margin-top:28px"><h3>Últimas 12 semanas</h3><span class="muted" style="font-size:13px">Cada quadrado é um dia</span></div>
   <div class="hm" aria-label="Calendário de estudo">${cells.join("")}</div>
-  <div class="legend" style="margin-top:10px"><span style="--c:var(--soft2)"><i></i>Sem estudo</span><span style="--c:#9bd8b0"><i></i>Estudou</span><span style="--c:#3fae5a"><i></i>1h ou 40 questões</span><span style="--c:#0b7a3c"><i></i>3h ou 100 questões</span></div>
+  <div class="legend" style="margin-top:10px"><span style="--c:var(--soft2)"><i></i>Sem estudo</span><span style="--c:${HML()[0]}"><i></i>Estudou</span><span style="--c:${HML()[1]}"><i></i>1h ou 40 questões</span><span style="--c:${HML()[2]}"><i></i>3h ou 100 questões</span></div>
   <div class="sec-h" style="margin-top:28px"><h3>Sua evolução</h3><span class="muted" style="font-size:13px">Deslize para o lado</span></div>
   <div class="path">${path}</div>
   <div class="sec-h" style="margin-top:28px"><h3>De onde vem o XP</h3><span class="muted" style="font-size:13px">${num(x.xp)} XP no total</span></div>
@@ -3157,7 +3485,8 @@ const NTR=[
  ["meta_dia","Meta do dia","Se as metas de hoje não foram batidas.","21:00"],
  ["semana","Fechamento da semana","Sábado: o que falta para fechar a semana. Domingo: resumo da semana.","18:00"],
  ["prazos","Contagem da prova","Avisos a 100, 60, 30, 14, 7, 3 e 1 dia da prova.","08:00"],
- ["demora","Meta demorando","Quando uma meta em estudo passa do tempo limite abaixo.",""]
+ ["demora","Meta demorando","Quando uma meta em estudo passa do tempo limite abaixo.",""],
+ ["dieta","Dieta","15 minutos antes de cada refeição que você ainda não marcou. Domingo não avisa.",""]
 ];
 const ntCfg=()=>{const c=NT.config||{};return {push:c.push!==false,email:{ativo:!!(c.email&&c.email.ativo),addr:(c.email&&c.email.addr)||(fb.user&&fb.user.email)||"",manha:!c.email||c.email.manha!==false,semana:!c.email||c.email.semana!==false,prazos:!c.email||c.email.prazos!==false},horas:Object.fromEntries(NTR.map(r=>[r[0],(c.horas&&c.horas[r[0]])||r[3]])),regras:Object.fromEntries(NTR.map(r=>[r[0],!c.regras||c.regras[r[0]]!==false])),horasMeta:c.horasMeta||3,tokens:c.tokens||{}}};
 function ntSave(patch){
@@ -3299,7 +3628,7 @@ function perfHtml(){
   const DL=durList(),dmx=Math.max(1,...SUBJ.map(k=>avgDur(DL.filter(x=>x.m.k===k))||0));
   const dmRows=SUBJ.map(k=>{const a=DL.filter(x=>x.m.k===k),v=avgDur(a);return v==null?null:{l:SHORT[k],c:`var(--m-${k})`,f:v/dmx,v:fmtDur(v),s:a.length+(a.length===1?" meta":" metas"),tip:`${SHORT[k]}: média de ${fmtDur(v)} em ${a.length} metas`,m:v}}).filter(Boolean).sort((a,b)=>b.m-a.m);
   const dTop=DL.slice().sort((a,b)=>b.dur-a.dur).slice(0,8);
-  const hm=`<div class="heat" style="--n:${WK.length}"><div></div>${WK.map((w,i)=>`<div class="h">${i+1}</div>`).join("")}${SUBJ.map(k=>`<div class="y" style="--c:var(--m-${k})"><i></i><span>${SHORT[k]}</span><span class="sh">${k}</span></div>${A.heat[k].map((c,i)=>{const r=rate(c),nn=tot_(c);if(r==null)return `<div class="cell ${i===cw?"cur":""}" data-tip="${SHORT[k]} · semana ${i+1}: sem questões"></div>`;const al=.12+.88*Math.pow(r,1.3);return `<div class="cell ${al>.5?"hot":""} ${i===cw?"cur":""}" style="background:rgba(37,99,235,${al.toFixed(2)})" data-tip="${SHORT[k]} · semana ${i+1}: ${pc(r)} em ${nn} questões">${Math.round(r*100)}</div>`}).join("")}`).join("")}</div>`;
+  const hm=`<div class="heat" style="--n:${WK.length}"><div></div>${WK.map((w,i)=>`<div class="h">${i+1}</div>`).join("")}${SUBJ.map(k=>`<div class="y" style="--c:var(--m-${k})"><i></i><span>${SHORT[k]}</span><span class="sh">${k}</span></div>${A.heat[k].map((c,i)=>{const r=rate(c),nn=tot_(c);if(r==null)return `<div class="cell ${i===cw?"cur":""}" data-tip="${SHORT[k]} · semana ${i+1}: sem questões"></div>`;const al=.12+.88*Math.pow(r,1.3);return `<div class="cell ${al>.5?"hot":""} ${i===cw?"cur":""}" style="background:rgba(${HC()},${al.toFixed(2)})" data-tip="${SHORT[k]} · semana ${i+1}: ${pc(r)} em ${nn} questões">${Math.round(r*100)}</div>`}).join("")}`).join("")}</div>`;
   return `
   <section class="sec" style="margin-top:20px"><div class="grid2">
     <div class="card"><div class="card-h"><div><h3>Questões por semana</h3><p>Feitas contra as previstas nas metas</p></div><div class="legend"><span style="--c:var(--blue)"><i></i>Feitas</span><span style="--c:var(--soft2)"><i></i>Previstas</span></div></div><div class="chart" data-kind="weekQ"></div></div>
@@ -3312,7 +3641,7 @@ function perfHtml(){
     <div class="card"><div class="card-h"><div><h3>De onde vieram as questões</h3><p>Questões feitas por tipo de atividade</p></div></div>${n?barsHtml(tRows):'<div class="empty">Sem questões registradas.</div>'}</div>
     ${DL.length?`<div class="card"><div class="card-h"><div><h3>Tempo por matéria</h3><p>Média para concluir uma meta, da maior para a menor</p></div></div>${barsHtml(dmRows)}</div>
     <div class="card"><div class="card-h"><div><h3>Metas que mais demoraram</h3><p>Do primeiro toque em estudando até a conclusão</p></div></div><ul class="list">${dTop.map(x=>`<li class="row" style="cursor:default"><div class="rt"><div class="t">${esc(x.m.a)}</div><div class="s">${tagHtml(x.m)}<span>Semana ${x.wi+1}</span></div></div><div class="res"><span class="sc na">${fmtDur(x.dur)}</span></div></li>`).join("")}</ul></div>`:`<div class="card wide"><div class="card-h"><div><h3>Tempo para concluir metas</h3></div></div><div class="empty">Quando você concluir metas que começou pelo modo estudando, aparecem aqui a média por matéria e as metas que mais demoraram.</div></div>`}
-    <div class="card wide"><div class="card-h"><div><h3>Mapa de acertos</h3><p>Matéria por semana. Quanto mais forte o azul, maior o acerto.</p></div><div class="legend"><span style="--c:rgba(37,99,235,.2)"><i></i>0%</span><span style="--c:rgba(37,99,235,1)"><i></i>100%</span></div></div>${hm}</div>
+    <div class="card wide"><div class="card-h"><div><h3>Mapa de acertos</h3><p>Matéria por semana. Quanto mais forte o azul, maior o acerto.</p></div><div class="legend"><span style="--c:rgba(${HC()},.2)"><i></i>0%</span><span style="--c:rgba(${HC()},1)"><i></i>100%</span></div></div>${hm}</div>
   </div></section>`;
 }
 
@@ -3476,7 +3805,7 @@ function vmOpen(metaId,i){
 const TABS=[["semana","Início"],["jornada","Jornada"],["revisoes","Revisões"],["simulados","Simulados"],["questoes","Questões"],["desempenho","Desempenho"],["plano","Plano"],["info","Informações"],["ankis","Ankis"],["biblioteca","Biblioteca"],["vade","Vade Mecum"],["lembretes","Lembretes"]];
 function render(){
   try{sessionStorage.setItem("painel-tab",tab)}catch(e){}
-  {const t=temaAtual();const m=modoAtual();document.documentElement.dataset.tema=t;document.documentElement.dataset.modo=m;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',m==='escuro'?'#1b1c20':t==='olimpo'?'#14284f':'#087a40')}
+  {const t=temaAtual();const m=modoAtual();document.documentElement.dataset.tema=t;document.documentElement.dataset.modo=m;const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',t==='labs'?(m==='escuro'?'#000000':'#ffffff'):m==='escuro'?'#1b1c20':t==='olimpo'?'#14284f':'#087a40')}
   if(fb.on&&(!fb.ready||(fb.user&&!fb.pReady&&fb.mode!=="setpass"))){$("#app").innerHTML='<div class="splash"><i></i></div>';return}
   if(fb.on&&(!fb.user||fb.mode==="setpass")){sheetId=null;$("#sheet").innerHTML="";$("#app").innerHTML=loginHtml();return}
   if(demo&&!Object.keys(DEMO).length)DEMO=genDemo();
@@ -3492,7 +3821,7 @@ function render(){
     <div class="sw">${`<span class="note">${demo?"Dados de exemplo, simulando "+fmtDay(DEMO_TODAY):label}</span>`}<button class="switch" role="switch" aria-checked="${demo}" aria-label="Dados de exemplo" data-act="demo"></button></div></header>`:`<div class="mgap ${tab==="semana"?"tight":""}"></div>`}
   <button class="mbtn" data-act="menu" aria-label="Abrir o menu" aria-expanded="${menu}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="19" r="2.2"/></svg>${dueNow?`<span class="mb">${dueNow}</span>`:""}</button>
   ${upd.novo?`<div class="updbar" role="status"><span>Nova versão disponível</span><button data-act="upd">Atualizar</button></div>`:""}
-  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}</nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()}">Clássico</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
+  ${body}${lbHtml()}${menu?`<div class="dov" data-act="menu-close"><aside class="drawer" role="dialog" aria-label="Menu"><div class="dh"><span>Câmara dos Deputados</span><b>Painel de metas</b></div><nav>${TABS.map(([k,l])=>`<button data-act="tab" data-v="${k}" aria-selected="${tab===k}">${l}${k==="revisoes"&&dueNow?`<span class="bd">${dueNow}</span>`:""}</button>`).join("")}<a href="dieta/">Dieta</a></nav><div class="tema-t"><span>Aparência</span><div class="bbseg" role="group" aria-label="Aparência"><button data-act="tema" data-v="olimpo" aria-pressed="${isOl()}">Olimpo</button><button data-act="tema" data-v="classico" aria-pressed="${!isOl()&&temaAtual()!=="labs"}">Clássico</button><button data-act="tema" data-v="labs" aria-pressed="${temaAtual()==="labs"}">Labs</button></div><span style="margin-top:10px">Modo</span><div class="bbseg" role="group" aria-label="Modo claro ou escuro"><button data-act="modo" data-v="claro" aria-pressed="${modoPref()==="claro"}">Claro</button><button data-act="modo" data-v="escuro" aria-pressed="${modoPref()==="escuro"}">Escuro</button><button data-act="modo" data-v="auto" aria-pressed="${modoPref()==="auto"}">Auto</button></div><button class="upd-b" data-act="upd">${upd.busy?"Atualizando…":"Atualizar o painel"}</button><small class="upd-v">Versão de ${buildTxt()||"desenvolvimento"}${upd.novo?" · há uma versão mais nova":""}</small></div></aside></div>`:""}`;
   const y=window.scrollY;
   $("#app").innerHTML=html;
   window.scrollTo(0,y);

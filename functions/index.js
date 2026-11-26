@@ -4,6 +4,7 @@ const { onSchedule } = require("firebase-functions/v2/scheduler");
 const { onDocumentWritten } = require("firebase-functions/v2/firestore");
 const { defineSecret } = require("firebase-functions/params");
 const { gerar, partes, emailHtml, FRASES } = require("./regras");
+const { gerarDieta } = require("./dieta");
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -33,8 +34,8 @@ async function enviarPush(uid, cfg, item) {
   const res = await admin.messaging().sendEachForMulticast({
     tokens: tokens.map(([, t]) => t),
     notification: { title: item.titulo, body: item.corpo },
-    data: { tag: item.tipo, link: LINK },
-    webpush: { notification: { icon: "/icon-192.png", badge: "/icon-192.png", tag: item.tipo }, fcmOptions: { link: LINK } }
+    data: { tag: item.tipo, link: item.link || LINK },
+    webpush: { notification: { icon: "/icon-192.png", badge: "/icon-192.png", tag: item.tipo }, fcmOptions: { link: item.link || LINK } }
   });
   const apagar = {};
   res.responses.forEach((r, i) => {
@@ -47,11 +48,13 @@ async function enviarPush(uid, cfg, item) {
 
 async function processar(uid, agora) {
   const base = db.collection(`usuarios/${uid}/notif`);
-  const [c, e, l] = await Promise.all([base.doc("config").get(), base.doc("estado").get(), base.doc("log").get()]);
+  const [c, e, l, d] = await Promise.all([base.doc("config").get(), base.doc("estado").get(), base.doc("log").get(), db.doc(`usuarios/${uid}/dieta/log`).get()]);
   await base.doc("servidor").set({ ultima: agora.ms }, { merge: true });
-  if (!c.exists || !e.exists) return 0;
+  if (!c.exists) return 0;
   const cfg = c.data(), log = l.exists ? l.data() : {};
-  const itens = gerar({ estado: e.data(), cfg, agora, log }).slice(0, MAX_POR_EXECUCAO);
+  const doEstudo = e.exists ? gerar({ estado: e.data(), cfg, agora, log }) : [];
+  const daDieta = gerarDieta({ dieta: d.exists ? d.data() : null, cfg, agora, log });
+  const itens = [...daDieta, ...doEstudo].slice(0, MAX_POR_EXECUCAO + daDieta.length);
   const novo = {};
   for (const it of itens) {
     try {

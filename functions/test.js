@@ -38,4 +38,15 @@ r = gerar({ estado: { ...base, estudando: { n: "Crase", desde: Date.parse("2026-
 assert.ok(r.some((x) => x.tipo === "demora"));
 r = gerar({ estado: base, cfg: {}, agora: ag("2026-11-10T13:30:00Z"), log: {} }); // 10:30, atrasado mas ainda dentro da janela longa
 assert.ok(r.some((x) => x.tipo === "manha"), "resumo do dia ainda sai às 10:30");
+const { gerarDieta } = require("./dieta");
+// Dieta: terça 11:50 em Brasília = 14:50 UTC; o aviso do almoço (12:00) sai às 11:45
+let dd = gerarDieta({ dieta: { days: {} }, cfg: {}, agora: ag("2026-11-10T14:50:00Z"), log: {} });
+assert.deepStrictEqual(dd.map((x) => x.tipo), ["dieta-m3"]);
+assert.ok(dd[0].titulo.includes("Almoço no trabalho") && dd[0].corpo.includes("120 g frango"));
+assert.strictEqual(gerarDieta({ dieta: { days: { "2026-11-10": { m3: 1 } } }, cfg: {}, agora: ag("2026-11-10T14:50:00Z"), log: {} }).length, 0, "refeição já marcada");
+assert.strictEqual(gerarDieta({ dieta: { days: {} }, cfg: {}, agora: ag("2026-11-10T14:50:00Z"), log: { "dieta|2026-11-10|m3": 1 } }).length, 0, "dedupe");
+assert.strictEqual(gerarDieta({ dieta: { days: {} }, cfg: { regras: { dieta: false } }, agora: ag("2026-11-10T14:50:00Z"), log: {} }).length, 0, "regra desligada");
+assert.strictEqual(gerarDieta({ dieta: { days: {} }, cfg: { pausaAte: "2026-12-01" }, agora: ag("2026-11-10T14:50:00Z"), log: {} }).length, 1, "pausa dos estudos não pausa a dieta");
+assert.strictEqual(gerarDieta({ dieta: { days: {} }, cfg: {}, agora: ag("2026-11-15T14:50:00Z"), log: {} }).length, 0, "domingo livre");
+assert.strictEqual(gerarDieta({ dieta: { days: {} }, cfg: {}, agora: ag("2026-11-10T16:00:00Z"), log: {} }).length, 0, "13:00 fora da janela");
 console.log("ok: regras dos lembretes");
