@@ -895,14 +895,14 @@ function cbtShell(main,foot,opt){
   return `<div class="cbt" id="ov"><div class="cbt-h"><div class="tt"><span class="t1">${esc(s.titulo)}</span><span class="t2">${s.tipo==="ref"?"Refazendo erradas":s.tipo==="bloco"?"Treino por bloco · sem tempo":prova?"Simulação do ambiente de prova":"Modo estudo"}</span></div>
   ${opt&&opt.qn?`<span class="qn">${opt.qn}</span>`:""}
   ${s.tipo==="sim"?`<div class="tm ${warn?"warn":""}"><small>${prova?"Tempo restante":"Tempo"}</small><b id="timer">${tempo}</b></div>`:""}</div>
-  <div class="cbt-tb">${[["calc","Calculadora"],["notas","Bloco de notas"],["rasc","Rascunho"],["form","Fórmulas"]].map(([k,l])=>`<button class="${T[k]?"on":""}" data-a="tool" data-k="${k}" title="${l}">${ICO[k]}<span class="lb2">${l}</span></button>`).join("")}${UI.desfazer?`<button class="undo-b" data-a="desfazer" title="Desfazer a última resposta" aria-label="Desfazer a última resposta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>`:""}
+  <div class="cbt-tb">${[["calc","Calculadora"],["notas","Bloco de notas"],["rasc","Rascunho"],["form","Fórmulas"]].map(([k,l])=>`<button class="${T[k]?"on":""}" data-a="tool" data-k="${k}" title="${l}">${ICO[k]}<span class="lb2">${l}</span></button>`).join("")}${UI.podeDesfazer?`<button class="undo-b" data-a="desfazer" title="Desfazer a última resposta" aria-label="Desfazer a última resposta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>`:""}
   <span class="sp"></span><button data-a="fonte" data-d="-1" aria-label="Diminuir letra">A−</button><button data-a="fonte" data-d="1" aria-label="Aumentar letra">A+</button><button data-a="sair-ses" title="Salva e volta ao painel">Pausar</button></div>
   ${s.tipo==="bloco"&&!s.fim?`<div class="cbt-ord"><label for="ord-sel">Ordenar</label><select id="ord-sel">${ORDS.map(([k,l])=>`<option value="${k}" ${((E.trs[s.key]||{}).ord||"assunto")===k?"selected":""}>${l}</option>`).join("")}</select><label class="tg"><input type="checkbox" id="ocultar-feitas" ${ocultaOn()?"checked":""}>Ocultar feitas</label><span class="sp"></span><button data-a="primeira" title="Ir para a 1ª questão desta ordem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 5v14M18 6l-8 6 8 6z"/></svg>1ª</button><button data-a="aleatoria" title="Ir para uma questão aleatória ainda não feita"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg><span class="al">Aleatória</span></button></div>`:""}
   ${main}
   ${foot?`<div class="cbt-f">${foot}</div>`:""}</div>`;
 }
 function sessaoHtml(){
-  const s=UI.ses;
+  const s=UI.ses;UI.podeDesfazer=false;
   if(s.fim&&s.tipo==="bloco")return blocoResultadoHtml();
   if(s.fim&&!s.rev)return resultadoHtml();
   if(s.rev)return revisaoHtml();
@@ -921,7 +921,6 @@ function sessaoHtml(){
     <div style="margin-top:16px;text-align:right"><button class="cbt-b" data-a="iniciar-exame" id="btn-ini" disabled>Iniciar exame</button></div></div></div></div>`,"");
   if(prova&&st&&st.final)return finalHtml();
   const it=s.itens[s.i],x=it.x,resp=respDe(it,s.i);
-  if(UI.desfazer&&(UI.desfazer.i!==s.i||UI.desfazer.id!==it.id))UI.desfazer=null;
   const rev=revelada(it),feito=(resp!=null||rev)&&!prova,ult=s.tipo==="bloco"?proxPendente(1)<0:s.i===s.itens.length-1;
   const nResp=s.tipo==="sim"?Object.keys(st.r).length:s.tipo==="bloco"?s.itens.filter(q=>E.tr[q.id]).length:Object.keys(s.resp).length;
   const split=(x.contexto||"").length>300||!!x.caso;
@@ -941,6 +940,7 @@ function sessaoHtml(){
     ${s.tipo==="bloco"&&!feito?`<button class="cbt-b sec" data-a="ver-resp">Ver resposta</button>`:""}
     ${!ult?`<button class="cbt-b ${podeFim||!feito?"sec":""}" data-a="prox">${feito?"Próxima":"Pular"} ›</button>`:""}${podeFim?`<button class="cbt-b" data-a="fim">${s.tipo==="bloco"?"Concluir":"Finalizar"}</button>`:""}`;
   }
+  UI.podeDesfazer=feito&&!!resp&&((s.tipo==="sim"&&s.modo==="estudo")||s.tipo==="bloco");
   return cbtShell(main,foot,{qn:`Questão ${s.i+1} de ${s.itens.length}`});
 }
 function finalHtml(){
@@ -972,8 +972,8 @@ function revisaoHtml(){
 }
 function responder(l){
   const s=UI.ses,it=s.itens[s.i];
-  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar();if(s.modo==="estudo")UI.desfazer={i:s.i,id:it.id}}
-  else if(s.tipo==="bloco"){if(E.tr[it.id])return;E.tr[it.id]={r:l,ok:l===it.x.certa,pd:it.x.pd,d:Date.now()};marcarPos();UI.desfazer={i:s.i,id:it.id}}
+  if(s.tipo==="sim"){const st=sesSt();if(s.modo==="estudo"&&st.r[s.i+1])return;st.r[s.i+1]=l;st.atual=s.i+1;salvar()}
+  else if(s.tipo==="bloco"){if(E.tr[it.id])return;E.tr[it.id]={r:l,ok:l===it.x.certa,pd:it.x.pd,d:Date.now()};marcarPos()}
   else{if(s.resp[it.id])return;s.resp[it.id]=l;(E.ref[it.id]=E.ref[it.id]||[]).push({d:Date.now(),ok:l===it.x.certa});salvar()}
   render();
 }
@@ -986,10 +986,11 @@ function avancar(pular){
 }
 /* desfazer: apaga a resposta que acabou de ser dada (toque errado), enquanto ainda está na questão */
 function desfazerResposta(){
-  const s=UI.ses,d=UI.desfazer;if(!s||!d||d.i!==s.i)return;
-  if(s.tipo==="sim"){const st=sesSt();if(st)delete st.r[s.i+1]}
-  else if(s.tipo==="bloco")delete E.tr[d.id];
-  UI.desfazer=null;salvar();render();
+  const s=UI.ses;if(!s)return;const it=s.itens[s.i];
+  if(s.tipo==="sim"&&s.modo==="estudo"){const st=sesSt();if(st)delete st.r[s.i+1]}
+  else if(s.tipo==="bloco"){if(E.tr[it.id]&&!E.tr[it.id].v)delete E.tr[it.id]}
+  else return;
+  salvar();render();
 }
 function verResposta(){
   const s=UI.ses,it=s&&s.itens[s.i];if(!it||s.tipo!=="bloco"||E.tr[it.id])return;
