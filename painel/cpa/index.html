@@ -330,6 +330,8 @@ textarea.in{min-height:120px;resize:vertical;font-family:ui-monospace,Menlo,Cons
 .form p{margin:3px 0}
 .form code{font-family:inherit;background:#f1f5f9;border-radius:4px;padding:1px 5px;white-space:nowrap}
 @media (max-width:640px){.tw{left:6px!important;right:6px;top:auto!important;bottom:calc(6px + env(safe-area-inset-bottom));width:auto!important;max-height:62vh}.tw-h{cursor:default}.rasc canvas{height:min(240px,calc(62vh - 110px))}.notas textarea{height:150px}}
+/* iPhone: campo com letra menor que 16 px faz o Safari dar zoom ao digitar */
+@supports (-webkit-touch-callout:none){input,select,textarea{font-size:16px!important}}
 </style>
 </head>
 <body>
