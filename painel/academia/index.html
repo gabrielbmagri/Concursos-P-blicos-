@@ -241,7 +241,8 @@ body{font-size:15px;padding-top:12px;padding-bottom:calc(84px + env(safe-area-in
 .prw{margin-top:0;gap:7px}
 .rec:empty{display:none}
 .ex[hidden]{display:none}
-.ex.saindo{opacity:0;transform:translateX(24px);transition:opacity .35s,transform .35s}
+.ex.saindo{opacity:0;height:0!important;padding-top:0;padding-bottom:0;border-bottom-color:transparent;overflow:hidden;transition:opacity .25s,height .35s ease,padding .35s ease,border-color .35s}
+html,body{overflow-x:clip}
 .vf{display:inline-flex;align-items:center;gap:7px;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);cursor:pointer}
 .vf[hidden]{display:none}
 .vf input{width:16px;height:16px;margin:0;accent-color:#fff}
@@ -541,8 +542,12 @@ function updateToday(popId){
     li.classList.toggle('done',on);
     if(popId===id&&on){li.classList.remove('pop');void li.offsetWidth;li.classList.add('pop')}
     var esconder=on&&!verFeitos;
-    if(esconder&&popId===id&&!li.hidden){li.classList.add('saindo');clearTimeout(sumindo[id]);sumindo[id]=setTimeout(function(){if(dayOf(curKey).d[id]&&!verFeitos){li.hidden=true;li.classList.remove('saindo')}},450)}
-    else if(!(esconder&&sumindo[id]&&li.classList.contains('saindo'))){li.hidden=esconder;if(!esconder){li.classList.remove('saindo');clearTimeout(sumindo[id])}}
+    if(esconder&&popId===id&&!li.hidden){
+      /* fecha a linha suavemente: fixa a altura atual e anima até zero (nada sai da tela) */
+      li.style.height=li.offsetHeight+'px';void li.offsetHeight;li.classList.add('saindo');
+      clearTimeout(sumindo[id]);sumindo[id]=setTimeout(function(){li.style.height='';li.classList.remove('saindo');if(dayOf(curKey).d[id]&&!verFeitos)li.hidden=true},380);
+    }
+    else if(!(esconder&&li.classList.contains('saindo'))){li.hidden=esconder;if(!esconder){li.classList.remove('saindo');li.style.height='';clearTimeout(sumindo[id])}}
     var inp=li.querySelector('input');if(inp&&document.activeElement!==inp)inp.value=dayOf(curKey).pr[id]||'';
     updateRec(id);
   });
