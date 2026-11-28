@@ -238,6 +238,11 @@ body{font-size:15px;padding-top:12px;padding-bottom:calc(84px + env(safe-area-in
 .srow .sr{margin-top:0}
 .prw{margin-top:0;gap:7px}
 .rec:empty{display:none}
+.ex[hidden]{display:none}
+.ex.saindo{opacity:0;transform:translateX(24px);transition:opacity .35s,transform .35s}
+.vf{display:inline-flex;align-items:center;gap:7px;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);cursor:pointer}
+.vf[hidden]{display:none}
+.vf input{width:16px;height:16px;margin:0;accent-color:#fff}
 .prw label{font-size:10px}
 .prw input{width:70px;padding:5px 8px;font-size:15px}
 .prw .kg{font-size:12px}
@@ -493,10 +498,13 @@ function buildToday(){
    '<p class="sub">'+DOWF[d.getDay()]+' · '+ddmm(curKey)+'</p>'+
    '<section class="stats" aria-label="Treino de hoje">'+
    '<div class="krow"><div class="kv"><span id="kNow">0</span><span class="ku">/ '+EX.length+' exercícios</span></div><div class="kp" id="kPct">0%</div></div>'+
-   '<div class="steps" id="steps">'+steps+'</div></section>'+
+   '<div class="steps" id="steps">'+steps+'</div>'+
+   '<label class="vf" id="vfBox" hidden><input type="checkbox" id="verFeitos"><span id="vfTxt">Ver feitos</span></label></section>'+
    '<div class="win" id="win" hidden><strong>Treino concluído</strong><span id="winTxt"></span></div>'+
    '<ol class="meals">'+EX.map(exHTML).join('')+'</ol>'+
    '<p class="fine">Toque no exercício para marcar como feito. No campo PR, anote a maior carga do dia em kg. A lista zera quando o dia vira, e tudo fica guardado no Histórico.</p>';
+  var vf=$('#verFeitos');vf.checked=verFeitos;
+  vf.addEventListener('change',function(){verFeitos=vf.checked;try{localStorage.setItem('academia-verfeitos',verFeitos?'1':'')}catch(e){}updateToday()});
   Array.prototype.forEach.call(v.querySelectorAll('.ex'),function(li){
     li.addEventListener('click',function(ev){if(ev.target.closest('.prw'))return;toggle(curKey,li.getAttribute('data-id'))});
   });
@@ -507,6 +515,8 @@ function buildToday(){
     inp.addEventListener('blur',function(){inp.value=dayOf(curKey).pr[id]||'';updateRec(id)});
   });
 }
+var verFeitos=false;try{verFeitos=!!localStorage.getItem('academia-verfeitos')}catch(e){}
+var sumindo={};
 function updateRec(id){
   var el=$('#rec-'+id);if(!el)return;
   var best=bestPR(id,curKey),last=lastPR(id,curKey),hoje=prNum(dayOf(curKey).pr[id]);
@@ -522,11 +532,15 @@ function updateToday(popId){
   $('#kPct').textContent=Math.round(n/EX.length*100)+'%';
   Array.prototype.forEach.call(document.querySelectorAll('#steps i'),function(el,i){el.classList.toggle('on',!!done[EX[i].id])});
   $('#win').hidden=n<EX.length;
+  $('#vfBox').hidden=n===0;$('#vfTxt').textContent='Ver feitos ('+n+')';
   if(n>=EX.length){var prs=EX.filter(function(e){return prNum(dayOf(curKey).pr[e.id])!=null}).length;$('#winTxt').textContent=prs?prs+' PR anotados hoje':'Anote os PRs nos exercícios'}
   Array.prototype.forEach.call(document.querySelectorAll('.ex'),function(li){
     var id=li.getAttribute('data-id'),on=!!done[id];
     li.classList.toggle('done',on);
     if(popId===id&&on){li.classList.remove('pop');void li.offsetWidth;li.classList.add('pop')}
+    var esconder=on&&!verFeitos;
+    if(esconder&&popId===id&&!li.hidden){li.classList.add('saindo');clearTimeout(sumindo[id]);sumindo[id]=setTimeout(function(){if(dayOf(curKey).d[id]&&!verFeitos){li.hidden=true;li.classList.remove('saindo')}},450)}
+    else if(!(esconder&&sumindo[id]&&li.classList.contains('saindo'))){li.hidden=esconder;if(!esconder){li.classList.remove('saindo');clearTimeout(sumindo[id])}}
     var inp=li.querySelector('input');if(inp&&document.activeElement!==inp)inp.value=dayOf(curKey).pr[id]||'';
     updateRec(id);
   });
