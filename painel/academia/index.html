@@ -221,7 +221,41 @@ button{font:inherit;color:inherit}
 .hx.done .c{background:var(--fg)}
 .hx.done .c svg{opacity:1}
 .hx input{width:78px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:0;padding:6px 8px;font:inherit;font-size:15px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
-@media (max-width:380px){.ex{grid-template-columns:44px minmax(0,1fr) 34px;gap:0 10px}.ex .nm{font-size:18px}}
+/* tamanhos compactos (iPhone): mais exercícios na tela */
+body{font-size:15px;padding-top:12px;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.hero{font-size:clamp(30px,9.5vw,46px);margin:0 0 6px;overflow-wrap:normal;word-break:keep-all}
+.sub{font-size:11px;padding:2px 0 12px}
+.stats{padding:8px 0 10px}
+#kNow{font-size:30px}
+.kp{font-size:16px}
+.ku{font-size:11px}
+.steps{margin:8px 0 2px}.steps i{height:5px}
+.ex{grid-template-columns:34px minmax(0,1fr) 30px;gap:0 10px;padding:12px 0}
+.ex .t{font-size:18px;margin-top:1px}
+.ex .nm{font-size:16px;line-height:1.25}
+.ex .sr{margin-top:3px;font-size:11px}
+.srow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px}
+.srow .sr{margin-top:0}
+.prw{margin-top:0;gap:7px}
+.rec:empty{display:none}
+.prw label{font-size:10px}
+.prw input{width:70px;padding:5px 8px;font-size:15px}
+.prw .kg{font-size:12px}
+.rec{margin-top:5px;font-size:10.5px}
+.novo{font-size:9px;padding:1px 5px}
+.ex .c{width:28px;height:28px}.ex .c svg{width:15px;height:15px}
+.win{padding:12px;margin-top:12px}.win strong{font-size:20px}
+.fine{font-size:11px;margin-top:14px}
+.navin button,.navin a{padding:11px 6px;font-size:11px;letter-spacing:.18em}
+.nav{padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+.toast{bottom:calc(64px + env(safe-area-inset-bottom,0px));padding:10px 12px;font-size:13px}
+.sum strong{font-size:24px}.sum div{padding:12px 0 12px 10px}
+.h2{margin:20px 0 8px;font-size:11px}
+.recs li{padding:10px 0;font-size:14px}.recs b{font-size:17px}
+.dayhead{padding:12px 0;grid-template-columns:54px minmax(0,1fr) auto}
+.dd{font-size:15px}.dm p{font-size:11px}
+.hx{padding:8px 0;font-size:14px}.hx input{width:68px;padding:4px 6px;font-size:14px}
+@media (max-width:380px){.ex{grid-template-columns:30px minmax(0,1fr) 28px;gap:0 8px}.ex .nm{font-size:15px}}
 </style>
 </head>
 <body>
@@ -447,8 +481,8 @@ function editing(){var a=document.activeElement;return a&&a.tagName==='INPUT'&&a
 function exHTML(e,i){
   return'<li class="ex" data-id="'+e.id+'">'+
     '<span class="t">'+pad(i+1)+'</span>'+
-    '<span><span class="nm" style="display:block">'+esc(e.n)+'</span><span class="sr" style="display:block">'+e.s+'</span>'+
-    '<span class="prw"><label for="pr-'+e.id+'">PR</label><input id="pr-'+e.id+'" data-id="'+e.id+'" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><span class="kg">kg</span></span>'+
+    '<span><span class="nm" style="display:block">'+esc(e.n)+'</span><span class="srow"><span class="sr">'+e.s+'</span>'+
+    '<span class="prw"><label for="pr-'+e.id+'">PR</label><input id="pr-'+e.id+'" data-id="'+e.id+'" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><span class="kg">kg</span></span></span>'+
     '<span class="rec" id="rec-'+e.id+'"></span></span>'+
     '<span class="c" role="button" aria-label="Marcar como feito">'+CHECK_SVG+'</span></li>';
 }
@@ -479,7 +513,7 @@ function updateRec(id){
   var t=[];
   if(last)t.push('Último: '+prTxt(last.v)+' kg ('+ddmm(last.k)+')');
   if(best)t.push('Recorde: '+prTxt(best.v)+' kg');
-  el.innerHTML=(t.length?t.join(' · '):'Sem PR anterior')+(hoje!=null&&(!best||hoje>best.v)?'<span class="novo">Novo recorde</span>':'');
+  el.innerHTML=t.join(' · ')+(hoje!=null&&(!best||hoje>best.v)?'<span class="novo">Novo recorde</span>':'');
 }
 function updateToday(popId){
   if(!$('#kNow'))return;
