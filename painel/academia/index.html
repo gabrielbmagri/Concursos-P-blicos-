@@ -230,7 +230,9 @@ body{font-size:15px;padding-top:12px;padding-bottom:calc(84px + env(safe-area-in
 .kp{font-size:16px}
 .ku{font-size:11px}
 .steps{margin:8px 0 2px}.steps i{height:5px}
-.ex{grid-template-columns:34px minmax(0,1fr) 30px;gap:0 10px;padding:12px 0}
+.ex{grid-template-columns:8px minmax(0,1fr) 30px;gap:0 12px;padding:12px 0}
+.ex .dot{width:7px;height:7px;border-radius:50%;background:var(--fg);margin-top:8px}
+.ex.done .dot{background:var(--mute)}
 .ex .t{font-size:18px;margin-top:1px}
 .ex .nm{font-size:16px;line-height:1.25}
 .ex .sr{margin-top:3px;font-size:11px}
@@ -260,7 +262,7 @@ body{font-size:15px;padding-top:12px;padding-bottom:calc(84px + env(safe-area-in
 .dayhead{padding:12px 0;grid-template-columns:54px minmax(0,1fr) auto}
 .dd{font-size:15px}.dm p{font-size:11px}
 .hx{padding:8px 0;font-size:14px}.hx input{width:68px;padding:4px 6px;font-size:14px}
-@media (max-width:380px){.ex{grid-template-columns:30px minmax(0,1fr) 28px;gap:0 8px}.ex .nm{font-size:15px}}
+@media (max-width:380px){.ex{grid-template-columns:7px minmax(0,1fr) 28px;gap:0 10px}.ex .nm{font-size:15px}}
 </style>
 </head>
 <body>
@@ -485,7 +487,7 @@ function editing(){var a=document.activeElement;return a&&a.tagName==='INPUT'&&a
 /* ---------- tela Hoje ---------- */
 function exHTML(e,i){
   return'<li class="ex" data-id="'+e.id+'">'+
-    '<span class="t">'+pad(i+1)+'</span>'+
+    '<span class="dot" aria-hidden="true"></span>'+
     '<span><span class="nm" style="display:block">'+esc(e.n)+'</span><span class="srow"><span class="sr">'+e.s+'</span>'+
     '<span class="prw"><label for="pr-'+e.id+'">PR</label><input id="pr-'+e.id+'" data-id="'+e.id+'" type="text" inputmode="decimal" autocomplete="off" placeholder="—"><span class="kg">kg</span></span></span>'+
     '<span class="rec" id="rec-'+e.id+'"></span></span>'+
